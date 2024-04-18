@@ -1,0 +1,30 @@
+{
+  "name": "@tenpamk2/sd-tag-defines",
+  "version": "1.0.0",
+  "description": "🔰 The esbuild &amp; TypeScript template for debugging by VSCode 🔰",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist",
+    "readme-ja.md"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build:base": "npx esbuild --bundle --platform=neutral --out-extension:.js=.mjs src/index.mts --outdir=dist",
+    "build": "npm run build:base -- --minify ",
+    "build:debug": "npm run build:base -- --sourcemap --keep-names",
+    "build:watch": "npm run build:base -- --sourcemap --keep-names --watch",
+    "postbuild": "tsc --project tsconfig.types.json",
+    "clean": "rimraf dist",
+    "test": "vitest"
+  },
+  "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  }
+}

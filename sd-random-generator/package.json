@@ -1,0 +1,34 @@
+{
+  "name": "@tenpamk2/sd-random-generator",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
+  "description": "🚧",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build:base": "npx esbuild --bundle --platform=node --out-extension:.js=.cjs src/index.mts --outdir=dist",
+    "build": "npm run build:base -- --minify ",
+    "build:debug": "npm run build:base -- --sourcemap --keep-names",
+    "build:watch": "npm run build:base -- --sourcemap --keep-names --watch",
+    "postbuild": "tsc --project tsconfig.types.json",
+    "test": "vitest"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "tenpaMk2"
+  ],
+  "dependencies": {
+    "@tenpamk2/sd-tag-defines": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "esbuild": "^0.20.2",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  }
+}
