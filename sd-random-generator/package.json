@@ -12,7 +12,8 @@
     "build:debug": "npm run build:base -- --sourcemap --keep-names",
     "build:watch": "npm run build:base -- --sourcemap --keep-names --watch",
     "postbuild": "tsc --project tsconfig.types.json",
-    "test": "vitest"
+    "test": "vitest",
+    "exe": "npm run build && node dist/index.cjs"
   },
   "publishConfig": {
     "access": "public"
