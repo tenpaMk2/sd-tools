@@ -18,7 +18,7 @@ export const machineSetting = {
 
 const portrait = {
   key: `portrait`,
-  fixedPrompt: `score_9, score_8_up, score_7_up, rating_explicit, 1girl, solo focus, 1boy, hetero,\n`,
+  fixedPrompt: `score_9, score_8_up, score_7_up, rating_questionable, 1girl, solo,\n`,
   batchGeneration: 20,
   optionsBodyJson: {
     ...checkpointAndVAEPreset.sdxl.ebaraPony,
@@ -37,13 +37,8 @@ const portrait = {
   },
   characters: [
     ...generateCharactersSetting({
-      characterKeys: [
-        `kaguya-sama-ai`,
-        `kaguya-sama-kaguya`,
-        `kaguya-sama-miko`,
-        `kaguya-sama-chika`,
-      ],
-      outfitKeys: [`sukumizu-thighhighs`],
+      characterKeys: [`lycoris-recoil-chisato`],
+      outfitKeys: [`cosplay`],
     }),
   ],
 } as const satisfies Setting;
