@@ -49,8 +49,11 @@ import { prismaIllyaIllyaBeastAm7coffeelove } from "./prisma-illya/prisma-illya-
 import { prismaIllyaMiyuBeastAm7coffeelove } from "./prisma-illya/prisma-illya-miyu-beast-am7coffeelove.mjs";
 import { pso2GeneOvernerd } from "./pso2/pso2-gene-overnerd.mjs";
 import { reZeroEmiliaEft } from "./re-zero/re-zero-emilia-eft.mjs";
+import { reZeroEmilia } from "./re-zero/re-zero-emilia.mjs";
 import { reZeroRamEft } from "./re-zero/re-zero-ram-eft.mjs";
+import { reZeroRam } from "./re-zero/re-zero-ram.mjs";
 import { reZeroRemEft } from "./re-zero/re-zero-rem-eft.mjs";
+import { reZeroRem } from "./re-zero/re-zero-rem.mjs";
 import { saijakuCelistiaEft } from "./saijaku/saijaku-celistia-eft.mjs";
 import { saijakuKrulciferEft } from "./saijaku/saijaku-krulcifer-eft.mjs";
 import { saijakuLisesharteEft } from "./saijaku/saijaku-lisesharte-eft.mjs";
@@ -153,8 +156,11 @@ export const characterTable = {
   "prisma-illya-miyu-beast-am7coffeelove": prismaIllyaMiyuBeastAm7coffeelove(),
   "pso2-gene-overnerd": pso2GeneOvernerd(),
   "re-zero-emilia-eft": reZeroEmiliaEft(),
+  "re-zero-emilia": reZeroEmilia(),
   "re-zero-ram-eft": reZeroRamEft(),
+  "re-zero-ram": reZeroRam(),
   "re-zero-rem-eft": reZeroRemEft(),
+  "re-zero-rem": reZeroRem(),
   "saijaku-celistia-eft": saijakuCelistiaEft(),
   "saijaku-krulcifer-eft": saijakuKrulciferEft(),
   "saijaku-lisesharte-eft": saijakuLisesharteEft(),
