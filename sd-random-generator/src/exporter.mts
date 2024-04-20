@@ -1,9 +1,9 @@
 import { mkdir, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { build } from "./builders/common.mjs";
+import { exportArray, exportAsDynamicPrompts } from "./libs/utility.mjs";
 import { PatternCollection } from "./prompt-define.mjs";
 import { globalSetting } from "./setting.mjs";
-import { exportArray, exportAsDynamicPrompts } from "./libs/utility.mjs";
 import { Tag } from "./tag-defines/adapter.mjs";
 import { LoraNameTag } from "./tag-defines/lora.mjs";
 
@@ -75,7 +75,7 @@ export const exportPrompts = async (
   for (const generationData of generationDatas) {
     await exportRecursively(
       generationData,
-      join(outputsDir, generationData.key),
+      join(__dirname, `..`, outputsDir, generationData.key),
     );
   }
 
