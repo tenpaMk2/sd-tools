@@ -37,7 +37,7 @@ const portrait = {
   },
   characters: [
     ...generateCharactersSetting({
-      characterKeys: [`lycoris-recoil-chisato`],
+      characterKeys: [`isekai-ojisan-alicia-nochekaiser`],
       outfitKeys: [`cosplay`],
     }),
   ],
