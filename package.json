@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sd-tools",
-  "description": "Mono repo for tenpaMk2's `sd-tools` .",
+  "description": "Mono repo for Stable Diffusion tools.",
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
   "license": "MIT",
   "workspaces": [

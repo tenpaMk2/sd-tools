@@ -1,9 +1,9 @@
 {
   "name": "@tenpamk2/sd-random-generator",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
-  "description": "🚧",
+  "description": "🎲 Image generator with random characters, outfits, backgrounds and poses via the API of SD web UI (or SD Forge) 🎲",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
