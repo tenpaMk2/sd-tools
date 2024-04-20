@@ -22,6 +22,7 @@ import { dumbbellGinaWiz } from "./dumbbell/dumbbell-gina-wiz.mjs";
 import { dumbbellHibikiWiz } from "./dumbbell/dumbbell-hibiki-wiz.mjs";
 import { dumbbellSatomiWiz } from "./dumbbell/dumbbell-satomi-wiz.mjs";
 import { isCeciliaOgTurles } from "./is/is-cecilia-og-turles.mjs";
+import { isekaiOjisanAliciaNochekaiser } from "./isekai-ojisan/isekai-ojisan-alicia-nochekaiser.mjs";
 import { kagejitsuAlphaNochekaiser } from "./kagejitsu/kagejitsu-alpha-nochekaiser.mjs";
 import { kagejitsuBetaNochekaiser } from "./kagejitsu/kagejitsu-beta-nochekaiser.mjs";
 import { kaguyaSamaAiNochekaiser } from "./kaguya-sama/kaguya-sama-ai-nochekaiser.mjs";
@@ -128,6 +129,7 @@ export const characterTable = {
   "dumbbell-hibiki-wiz": dumbbellHibikiWiz(),
   "dumbbell-satomi-wiz": dumbbellSatomiWiz(),
   "is-cecilia-og-turles": isCeciliaOgTurles(),
+  "isekai-ojisan-alicia-nochekaiser": isekaiOjisanAliciaNochekaiser(),
   "kagejitsu-alpha-nochekaiser": kagejitsuAlphaNochekaiser(),
   "kagejitsu-beta-nochekaiser": kagejitsuBetaNochekaiser(),
   "kaguya-sama-ai-nochekaiser": kaguyaSamaAiNochekaiser(),

@@ -666,6 +666,50 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `overnerd`,
   },
+  {
+    loraName: `alicia-edelsia-s1-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/399726/alicia-edelsia-uncle-from-another-world?modelVersionId=445807`,
+    ),
+    characterTriggerWordsTags: [`alicia edelsia`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
+  {
+    loraName: `mabel-ravveil-s1-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/399727/mabel-rayveil-uncle-from-another-world?modelVersionId=445809`,
+    ),
+    characterTriggerWordsTags: [`mabel rayveil`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
+  {
+    loraName: `tsundere-elf-s1-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/391246/sui-tsundere-elf-suzail-gierger-zegalnelv-zegilrea-granzelga-elga-uncle-from-another-world?modelVersionId=436486`,
+    ),
+    characterTriggerWordsTags: [`tsundere elf`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
+  {
+    loraName: `sumika-fujimiya-s1-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/398579/sumika-fujimiya-uncle-from-another-world?modelVersionId=444492`,
+    ),
+    characterTriggerWordsTags: [`sumika fujimiya`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
