@@ -1,7 +1,7 @@
 {
   "name": "@tenpamk2/sd-tag-defines",
   "version": "1.0.0",
-  "description": "🔰 The esbuild &amp; TypeScript template for debugging by VSCode 🔰",
+  "description": "🔖 Tag defines for my Stable Diffusion tools 🔖",
   "main": "dist/index.mjs",
   "types": "dist/index.d.mts",
   "files": [
