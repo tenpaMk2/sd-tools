@@ -1,6 +1,7 @@
 import { getKeys } from "../utility.mjs";
 import { HeadOutfitTags as HeadOutfitTag } from "./head-outfit.mjs";
 
+// TODO: Rename `BodyFeature` → `HeadFeature` .
 export const allDistinguishableBodyFeatureTags = {
   "aqua short tail": `aqua tail`,
   "black short tail": `black tail`,
@@ -26,6 +27,18 @@ export const allDistinguishableBodyFeatureTags = {
   "red long tail": `red tail`,
   "white long tail": `white tail`,
   "yellow long tail": `yellow tail`,
+  "aqua forehead gemstone": `aqua gemstone`,
+  "black forehead gemstone": `black gemstone`,
+  "blue forehead gemstone": `blue gemstone`,
+  "brown forehead gemstone": `brown gemstone`,
+  "green forehead gemstone": `green gemstone`,
+  "grey forehead gemstone": `grey gemstone`,
+  "orange forehead gemstone": `orange gemstone`,
+  "pink forehead gemstone": `pink gemstone`,
+  "purple forehead gemstone": `purple gemstone`,
+  "red forehead gemstone": `red gemstone`,
+  "white forehead gemstone": `white gemstone`,
+  "yellow forehead gemstone": `yellow gemstone`,
 } as const satisfies { [k in string]: string };
 
 const allEyesColorTags = [
@@ -146,6 +159,7 @@ export const allHeadFeatureTags = [
   `flipped hair`,
   `flower-shaped hair`,
   `folded ponytail`,
+  `forehead jewel`,
   `forehead`,
   `fox ears`,
   `frentch braid`,

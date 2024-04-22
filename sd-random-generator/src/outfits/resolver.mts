@@ -1,5 +1,5 @@
 import { OutfitAndExposureTag } from "@tenpamk2/sd-tag-defines";
-import { NormalEntry, LoraEntry } from "../prompt-define.mjs";
+import { LoraEntry, NormalEntry } from "../prompt-define.mjs";
 import { LoraOutfitTriggerWordsTag } from "../tag-defines/lora.mjs";
 import { babydoll } from "./common/babydoll.mjs";
 import { bikini } from "./common/bikini.mjs";
@@ -18,6 +18,10 @@ import { santaBikini } from "./common/santa-bikini.mjs";
 import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
 import { danmachiHestia } from "./danmachi/hestia.mjs";
+import { isekaiOjisanAlicia } from "./isekai-ojisan/alicia.mjs";
+import { isekaiOjisanMabel } from "./isekai-ojisan/mabel.mjs";
+import { isekaiOjisanSui } from "./isekai-ojisan/sui.mjs";
+import { isekaiOjisanSumika } from "./isekai-ojisan/sumika.mjs";
 import { kagejitsuShadowGarden } from "./kagejitsu/shadow-garden.mjs";
 import { kaguyaSamaShuuchiinAcademySchoolUniform } from "./kaguya-sama/shuuchiin-academy-school-uniform.mjs";
 import { mahoakoLocomusica } from "./mahoako/locomusica.mjs";
@@ -129,6 +133,10 @@ export const outfitTable = {
   "santa-bikini": santaBikini(),
   "sukumizu-thighhighs": sukumizuThighhighs(),
   "danmachi-nochekaiser-hestia": danmachiHestia(`nochekaiser`),
+  "isekai-ojisan-nochekaiser-alicia": isekaiOjisanAlicia(`nochekaiser`),
+  "isekai-ojisan-nochekaiser-mabel": isekaiOjisanMabel(`nochekaiser`),
+  "isekai-ojisan-nochekaiser-sui": isekaiOjisanSui(`nochekaiser`),
+  "isekai-ojisan-nochekaiser-sumika": isekaiOjisanSumika(`nochekaiser`),
   "kagejitsu-nochekaiser-shadow-garden-alpha":
     kagejitsuShadowGarden(`nochekaiser-alpha`),
   "kagejitsu-nochekaiser-shadow-garden-beta":

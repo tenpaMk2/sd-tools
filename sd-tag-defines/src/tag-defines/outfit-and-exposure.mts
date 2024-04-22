@@ -41,7 +41,7 @@ export const allDistinguishableOutfitTags = {
   "purple worn cardigan": `purple cardigan`,
   "red worn cardigan": `red cardigan`,
   "white worn cardigan": `white cardigan`,
-  "yellow worn cardigan`,": `yellow cardigan`,
+  "yellow worn cardigan": `yellow cardigan`,
   "around waist cardigan": `cardigan`,
   "aqua around waist cardigan": `aqua cardigan`,
   "black around waist cardigan": `black cardigan`,
@@ -54,8 +54,25 @@ export const allDistinguishableOutfitTags = {
   "purple around waist cardigan": `purple cardigan`,
   "red around waist cardigan": `red cardigan`,
   "white around waist cardigan": `white cardigan`,
-  "yellow around waist cardigan`,": `yellow cardigan`,
+  "yellow around waist cardigan": `yellow cardigan`,
+  "chest gem": `gem`,
+  "aqua chest gemstone": `aqua gemstone`,
+  "black chest gemstone": `black gemstone`,
+  "blue chest gemstone": `blue gemstone`,
+  "brown chest gemstone": `brown gemstone`,
+  "green chest gemstone": `green gemstone`,
+  "grey chest gemstone": `grey gemstone`,
+  "orange chest gemstone": `orange gemstone`,
+  "pink chest gemstone": `pink gemstone`,
+  "purple chest gemstone": `purple gemstone`,
+  "red chest gemstone": `red gemstone`,
+  "white chest gemstone": `white gemstone`,
+  "yellow chest gemstone": `yellow gemstone`,
+  "cable knit hat": `cable knit`,
+  "cable knit sweater": `cable knit`,
 } as const satisfies { [k in string]: string };
+
+// TODO: Add test for `,` included tags.
 
 export const allExposureTags = [
   ...getKeys(allDistinguishableExposureTags),
@@ -534,6 +551,21 @@ const allArmbandColorTags = [
   `yellow armband`,
 ] as const satisfies string[];
 
+const allCapeletColorTags = [
+  `aqua capelet`,
+  `black capelet`,
+  `blue capelet`,
+  `brown capelet`,
+  `green capelet`,
+  `grey capelet`,
+  `orange capelet`,
+  `pink capelet`,
+  `purple capelet`,
+  `red capelet`,
+  `white capelet`,
+  `yellow capelet`,
+] as const satisfies string[];
+
 export const allOutfitTags = [
   ...getKeys(allDistinguishableOutfitTags),
   `shirt`,
@@ -596,6 +628,8 @@ export const allOutfitTags = [
   ...allBodysuitColorTags,
   `armband`,
   ...allArmbandColorTags,
+  `capelet`,
+  ...allCapeletColorTags,
 
   `aiguillette`,
   `animal collar`,
@@ -630,6 +664,7 @@ export const allOutfitTags = [
   `checkered bikini`,
   `cheerleader`,
   `cherry blossom print`,
+  `chest jewel`,
   `china dress`,
   `chinese clothes`,
   `choker`,
@@ -639,6 +674,7 @@ export const allOutfitTags = [
   `clothing cutout`,
   `collared dress`,
   `collared shirt`,
+  `corset`,
   `cow print bikini`,
   `cow print gloves`,
   `cow print thighhighs`,
@@ -695,6 +731,7 @@ export const allOutfitTags = [
   `latex leotard`,
   `lingerie`,
   `loafers`,
+  `long skirt`,
   `long sleeves`,
   `lycoris uniform`,
   `magical girl`,
@@ -747,6 +784,7 @@ export const allOutfitTags = [
   `print dress`,
   `print gloves`,
   `print thighhighs`,
+  `puffy sleeves`,
   `pumps`,
   `rabbit ears`,
   `rabbit tail`,
@@ -762,6 +800,7 @@ export const allOutfitTags = [
   `school uniform`,
   `short dress`,
   `short necktie`,
+  `short shorts`,
   `short sleeves`,
   `shuuchiin academy school uniform`,
   `side slit`,
@@ -782,6 +821,7 @@ export const allOutfitTags = [
   `thigh strap`,
   `tight clothes`,
   `tokiwadai school uniform`,
+  `turtleneck bodysuit`,
   `two-tone dress`,
   `unbuttoned`,
   `underbust`,
@@ -794,6 +834,7 @@ export const allOutfitTags = [
   `white pantyhose`,
   `wide sleeves`,
   `wrist cuffs`,
+  `aran sweater`,
 ] as const satisfies readonly string[];
 export type OutfitTag = (typeof allOutfitTags)[number];
 

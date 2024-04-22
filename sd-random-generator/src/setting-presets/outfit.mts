@@ -221,6 +221,55 @@ const danmachiNochekaiserHestia = {
   ],
 } as const satisfies OutfitSetting;
 
+const isekaiOjisanNochekaiserAlicia = {
+  key: `isekai-ojisan-nochekaiser-alicia`,
+  backgrounds: [
+    ...backgroundsPreset.blueSky,
+    ...backgroundsPreset.grass,
+    ...backgroundsPreset.steamingBedSheetSpokenHeart,
+    ...backgroundsPreset.bedSheetWindow,
+    ...backgroundsPreset.colorfulHeartBackgrounds,
+    ...backgroundsPreset["karaoke-box"],
+  ],
+} as const satisfies OutfitSetting;
+
+const isekaiOjisanNochekaiserMabel = {
+  key: `isekai-ojisan-nochekaiser-mabel`,
+  backgrounds: [
+    ...backgroundsPreset.blueSky,
+    ...backgroundsPreset.grass,
+    ...backgroundsPreset.steamingBedSheetSpokenHeart,
+    ...backgroundsPreset.bedSheetWindow,
+    ...backgroundsPreset.colorfulHeartBackgrounds,
+    ...backgroundsPreset["karaoke-box"],
+  ],
+} as const satisfies OutfitSetting;
+
+const isekaiOjisanNochekaiserSui = {
+  key: `isekai-ojisan-nochekaiser-sui`,
+  backgrounds: [
+    ...backgroundsPreset.blueSky,
+    ...backgroundsPreset.grass,
+    ...backgroundsPreset.steamingBedSheetSpokenHeart,
+    ...backgroundsPreset.bedSheetWindow,
+    ...backgroundsPreset.colorfulHeartBackgrounds,
+    ...backgroundsPreset["karaoke-box"],
+  ],
+} as const satisfies OutfitSetting;
+
+const isekaiOjisanNochekaiserSumika = {
+  key: `isekai-ojisan-nochekaiser-sumika`,
+  backgrounds: [
+    ...backgroundsPreset.blueSky,
+    ...backgroundsPreset.city,
+    ...backgroundsPreset.cafe,
+    ...backgroundsPreset.steamingBedSheetSpokenHeart,
+    ...backgroundsPreset.bedSheetWindow,
+    ...backgroundsPreset.colorfulHeartBackgrounds,
+    ...backgroundsPreset["karaoke-box"],
+  ],
+} as const satisfies OutfitSetting;
+
 const kagejitsuNochekaiserShadowGardenAlpha = {
   key: `kagejitsu-nochekaiser-shadow-garden-alpha`,
   backgrounds: [
@@ -370,6 +419,10 @@ export const outfitsPreset = {
   "santa-bikini": [santaBikini],
   "sukumizu-thighhighs": [sukumizuThighhighs],
   "danmachi-nochekaiser-hestia": [danmachiNochekaiserHestia],
+  "isekai-ojisan-nochekaiser-alicia": [isekaiOjisanNochekaiserAlicia],
+  "isekai-ojisan-nochekaiser-mabel": [isekaiOjisanNochekaiserMabel],
+  "isekai-ojisan-nochekaiser-sui": [isekaiOjisanNochekaiserSui],
+  "isekai-ojisan-nochekaiser-sumika": [isekaiOjisanNochekaiserSumika],
   "kagejitsu-nochekaiser-shadow-garden-alpha": [
     kagejitsuNochekaiserShadowGardenAlpha,
   ],

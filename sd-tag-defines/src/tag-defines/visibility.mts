@@ -374,6 +374,18 @@ const allDistinguishableBodyFeatureVisibilities = {
   "red long tail": visibleType.longTail,
   "white long tail": visibleType.longTail,
   "yellow long tail": visibleType.longTail,
+  "aqua forehead gemstone": visibleType.face,
+  "black forehead gemstone": visibleType.face,
+  "blue forehead gemstone": visibleType.face,
+  "brown forehead gemstone": visibleType.face,
+  "green forehead gemstone": visibleType.face,
+  "grey forehead gemstone": visibleType.face,
+  "orange forehead gemstone": visibleType.face,
+  "pink forehead gemstone": visibleType.face,
+  "purple forehead gemstone": visibleType.face,
+  "red forehead gemstone": visibleType.face,
+  "white forehead gemstone": visibleType.face,
+  "yellow forehead gemstone": visibleType.face,
 } as const;
 
 const allDistinguishableHeadOutfitVisibilities = {
@@ -499,7 +511,7 @@ const allDistinguishableOutfitVisibilities = {
   "purple worn cardigan": visibleType.shirt,
   "red worn cardigan": visibleType.shirt,
   "white worn cardigan": visibleType.shirt,
-  "yellow worn cardigan`,": visibleType.shirt,
+  "yellow worn cardigan": visibleType.shirt,
   "around waist cardigan": visibleType.skirt,
   "aqua around waist cardigan": visibleType.skirt,
   "black around waist cardigan": visibleType.skirt,
@@ -512,7 +524,22 @@ const allDistinguishableOutfitVisibilities = {
   "purple around waist cardigan": visibleType.skirt,
   "red around waist cardigan": visibleType.skirt,
   "white around waist cardigan": visibleType.skirt,
-  "yellow around waist cardigan`,": visibleType.skirt,
+  "yellow around waist cardigan": visibleType.skirt,
+  "chest gem": visibleType.bowtie,
+  "aqua chest gemstone": visibleType.bowtie,
+  "black chest gemstone": visibleType.bowtie,
+  "blue chest gemstone": visibleType.bowtie,
+  "brown chest gemstone": visibleType.bowtie,
+  "green chest gemstone": visibleType.bowtie,
+  "grey chest gemstone": visibleType.bowtie,
+  "orange chest gemstone": visibleType.bowtie,
+  "pink chest gemstone": visibleType.bowtie,
+  "purple chest gemstone": visibleType.bowtie,
+  "red chest gemstone": visibleType.bowtie,
+  "white chest gemstone": visibleType.bowtie,
+  "yellow chest gemstone": visibleType.bowtie,
+  "cable knit hat": visibleType.hat,
+  "cable knit sweater": visibleType.shirt,
 } as const;
 
 const allShirtColorVisibilities = {
@@ -967,6 +994,21 @@ const allArmbandColorVisibilities = {
   "yellow armband": visibleType.armlet,
 } as const;
 
+const allCapeletColorVisibilities = {
+  "aqua capelet": visibleType.shirt,
+  "black capelet": visibleType.shirt,
+  "blue capelet": visibleType.shirt,
+  "brown capelet": visibleType.shirt,
+  "green capelet": visibleType.shirt,
+  "grey capelet": visibleType.shirt,
+  "orange capelet": visibleType.shirt,
+  "pink capelet": visibleType.shirt,
+  "purple capelet": visibleType.shirt,
+  "red capelet": visibleType.shirt,
+  "white capelet": visibleType.shirt,
+  "yellow capelet": visibleType.shirt,
+} as const;
+
 const allCardiganColorVisibilities = {
   "aqua cardigan": visibleType.shirt,
   "black cardigan": visibleType.shirt,
@@ -1304,6 +1346,8 @@ export const tagVisibilities = {
   ...allBodysuitColorVisibilities,
   armband: visibleType.armlet,
   ...allArmbandColorVisibilities,
+  capelet: visibleType.shirt,
+  ...allCapeletColorVisibilities,
 
   "ribbed sweater": visibleType.shirt,
   "striped sweater": visibleType.shirt,
@@ -1499,6 +1543,14 @@ export const tagVisibilities = {
   "cardigan around waist": visibleType["high-waist skirt"],
   unbuttoned: visibleType["center frills"],
   babydoll: visibleType.dress,
+  corset: visibleType.underbust,
+  "long skirt": visibleType.skirt,
+  "chest jewel": visibleType.bowtie,
+  "puffy sleeves": visibleType.shoulder,
+  "short shorts": visibleType.skirt,
+  "forehead jewel": visibleType.face,
+  "turtleneck bodysuit": visibleType.collar,
+  "aran sweater": visibleType.shirt,
 } as const satisfies {
   [K in CharacterFeatureTag | OutfitAndExposureTag]: Visibility;
 };
