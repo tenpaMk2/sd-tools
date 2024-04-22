@@ -20,7 +20,15 @@ export const allCheckpoints = [
     baseModel: `SD1.5`,
   },
   {
+    nameHash: `autismmixSDXL_autismmixConfetti.safetensors [ac006fdd7e]`,
+    baseModel: `Pony`,
+  },
+  {
     nameHash: `ebara_pony_1.bakedVAE.safetensors [b6ce8a2bf8]`,
+    baseModel: `Pony`,
+  },
+  {
+    nameHash: `ponyDiffusionV6XL_v6StartWithThisOne.safetensors [67ab2fd8ec]`,
     baseModel: `Pony`,
   },
 ] as const satisfies { nameHash: string; baseModel: BaseModel }[];

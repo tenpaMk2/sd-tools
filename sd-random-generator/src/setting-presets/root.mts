@@ -20,8 +20,16 @@ export const checkpointAndVAEPreset = {
     },
   },
   sdxl: {
+    autismmixConfetti: {
+      sd_model_checkpoint: `autismmixSDXL_autismmixConfetti.safetensors [ac006fdd7e]`,
+      sd_vae: `None`,
+    },
     ebaraPony: {
       sd_model_checkpoint: `ebara_pony_1.bakedVAE.safetensors [b6ce8a2bf8]`,
+      sd_vae: `None`,
+    },
+    pony: {
+      sd_model_checkpoint: `ponyDiffusionV6XL_v6StartWithThisOne.safetensors [67ab2fd8ec]`,
       sd_vae: `None`,
     },
   },
