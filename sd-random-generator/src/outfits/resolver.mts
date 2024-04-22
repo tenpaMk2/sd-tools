@@ -18,6 +18,7 @@ import { santaBikini } from "./common/santa-bikini.mjs";
 import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
 import { danmachiHestia } from "./danmachi/hestia.mjs";
+import { fateRinSweater } from "./fate/rin-sweater.mjs";
 import { isekaiOjisanAlicia } from "./isekai-ojisan/alicia.mjs";
 import { isekaiOjisanMabel } from "./isekai-ojisan/mabel.mjs";
 import { isekaiOjisanSui } from "./isekai-ojisan/sui.mjs";
@@ -133,6 +134,7 @@ export const outfitTable = {
   "santa-bikini": santaBikini(),
   "sukumizu-thighhighs": sukumizuThighhighs(),
   "danmachi-nochekaiser-hestia": danmachiHestia(`nochekaiser`),
+  "fate-little-jelly-rin-sweater": fateRinSweater(`little-jelly`),
   "isekai-ojisan-nochekaiser-alicia": isekaiOjisanAlicia(`nochekaiser`),
   "isekai-ojisan-nochekaiser-mabel": isekaiOjisanMabel(`nochekaiser`),
   "isekai-ojisan-nochekaiser-sui": isekaiOjisanSui(`nochekaiser`),

@@ -221,6 +221,19 @@ const danmachiNochekaiserHestia = {
   ],
 } as const satisfies OutfitSetting;
 
+const fateLittleJellyRinSweater = {
+  key: `fate-little-jelly-rin-sweater`,
+  backgrounds: [
+    ...backgroundsPreset.blueSky,
+    ...backgroundsPreset.city,
+    ...backgroundsPreset.nightRooftop,
+    ...backgroundsPreset.steamingBedSheetSpokenHeart,
+    ...backgroundsPreset.bedSheetWindow,
+    ...backgroundsPreset.colorfulHeartBackgrounds,
+    ...backgroundsPreset["karaoke-box"],
+  ],
+} as const satisfies OutfitSetting;
+
 const isekaiOjisanNochekaiserAlicia = {
   key: `isekai-ojisan-nochekaiser-alicia`,
   backgrounds: [
@@ -419,6 +432,7 @@ export const outfitsPreset = {
   "santa-bikini": [santaBikini],
   "sukumizu-thighhighs": [sukumizuThighhighs],
   "danmachi-nochekaiser-hestia": [danmachiNochekaiserHestia],
+  "fate-little-jelly-rin-sweater": [fateLittleJellyRinSweater],
   "isekai-ojisan-nochekaiser-alicia": [isekaiOjisanNochekaiserAlicia],
   "isekai-ojisan-nochekaiser-mabel": [isekaiOjisanNochekaiserMabel],
   "isekai-ojisan-nochekaiser-sui": [isekaiOjisanNochekaiserSui],

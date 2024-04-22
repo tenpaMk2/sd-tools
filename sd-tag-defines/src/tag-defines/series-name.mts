@@ -7,6 +7,8 @@ export const allSeriesName = [
   `dumbbell nan kilo moteru?`,
   `dungeon ni deai wo motomeru no wa machigatteiru darou ka`,
   `fate/kaleid liner prisma illya`,
+  `fate/stay night`,
+  `fate/unlimited blade works`,
   `gochuumon wa usagi desu ka?`,
   `gridman universe`,
   `hige wo soru\\. soshite joshikousei wo hirou\\.`,

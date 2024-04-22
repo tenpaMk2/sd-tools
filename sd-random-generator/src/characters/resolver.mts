@@ -21,6 +21,7 @@ import { dumbbellAyakaWiz } from "./dumbbell/dumbbell-ayaka-wiz.mjs";
 import { dumbbellGinaWiz } from "./dumbbell/dumbbell-gina-wiz.mjs";
 import { dumbbellHibikiWiz } from "./dumbbell/dumbbell-hibiki-wiz.mjs";
 import { dumbbellSatomiWiz } from "./dumbbell/dumbbell-satomi-wiz.mjs";
+import { fateRinLittleJelly } from "./fate/fate-rin-little-jelly.mjs";
 import { isCeciliaOgTurles } from "./is/is-cecilia-og-turles.mjs";
 import { isekaiOjisanAliciaNochekaiser } from "./isekai-ojisan/isekai-ojisan-alicia-nochekaiser.mjs";
 import { isekaiOjisanMabelNochekaiser } from "./isekai-ojisan/isekai-ojisan-mabel-nochekaiser.mjs";
@@ -131,6 +132,7 @@ export const characterTable = {
   "dumbbell-gina-wiz": dumbbellGinaWiz(),
   "dumbbell-hibiki-wiz": dumbbellHibikiWiz(),
   "dumbbell-satomi-wiz": dumbbellSatomiWiz(),
+  "fate-rin-little-jelly": fateRinLittleJelly(),
   "is-cecilia-og-turles": isCeciliaOgTurles(),
   "isekai-ojisan-alicia-nochekaiser": isekaiOjisanAliciaNochekaiser(),
   "isekai-ojisan-mabel-nochekaiser": isekaiOjisanMabelNochekaiser(),

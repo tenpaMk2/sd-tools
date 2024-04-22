@@ -710,6 +710,23 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
   },
+  {
+    loraName: `FateStayNightUBW_TohsakaRin`,
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/410579/tohsaka-rin-or-ponyxl-or-fatestay-night-unlimited-blade-works?modelVersionId=457675`,
+    ),
+    characterTriggerWordsTags: [`tohsakarin`],
+    outfitTriggerTags: [
+      `rinsweater`,
+      `rincoat`,
+      `rinschooluniform`,
+      `rinuniversity`,
+      `rinnightgown`,
+    ],
+    creator: `LittleJelly`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

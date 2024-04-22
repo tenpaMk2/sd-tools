@@ -635,6 +635,7 @@ export const allOutfitTags = [
   `animal collar`,
   `animal hands`,
   `apron`,
+  `aran sweater`,
   `argyle bikini`,
   `argyle sweater vest`,
   `argyle sweater`,
@@ -822,6 +823,7 @@ export const allOutfitTags = [
   `tight clothes`,
   `tokiwadai school uniform`,
   `turtleneck bodysuit`,
+  `turtleneck sweater`,
   `two-tone dress`,
   `unbuttoned`,
   `underbust`,
@@ -834,7 +836,6 @@ export const allOutfitTags = [
   `white pantyhose`,
   `wide sleeves`,
   `wrist cuffs`,
-  `aran sweater`,
 ] as const satisfies readonly string[];
 export type OutfitTag = (typeof allOutfitTags)[number];
 

@@ -85,6 +85,7 @@ export const allCharacterName = [
   `takimoto hifumi`,
   `tamaki iroha`,
   `tedeza rize`,
+  `tohsaka rin`,
   `tomoe mami`,
   `uehara ayaka`,
   `ujimatsu chiya`,
