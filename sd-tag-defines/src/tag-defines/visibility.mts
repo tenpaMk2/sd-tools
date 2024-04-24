@@ -1552,6 +1552,7 @@ export const tagVisibilities = {
   "turtleneck bodysuit": visibleType.collar,
   "aran sweater": visibleType.shirt,
   "turtleneck sweater": visibleType.collar,
+  "breast pocket": visibleType.bowtie,
 } as const satisfies {
   [K in CharacterFeatureTag | OutfitAndExposureTag]: Visibility;
 };

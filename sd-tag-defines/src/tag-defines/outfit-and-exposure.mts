@@ -650,6 +650,7 @@ export const allOutfitTags = [
   `bodystocking`,
   `bottomless`,
   `bra`,
+  `breast pocket`,
   `bridal garter`,
   `bridal gauntlets`,
   `bridal lingerie`,

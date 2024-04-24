@@ -200,6 +200,17 @@ const santaBikini = {
   ],
 } as const satisfies OutfitSetting;
 
+const schoolUniformBowtie = {
+  key: `school-uniform-bowtie`,
+  backgrounds: [
+    ...backgroundsPreset.classroom,
+    ...backgroundsPreset.blueSky,
+    ...backgroundsPreset.steamingBedSheetSpokenHeart,
+    ...backgroundsPreset.bedSheetWindow,
+    ...backgroundsPreset.colorfulHeartBackgrounds,
+  ],
+} as const satisfies OutfitSetting;
+
 const sukumizuThighhighs = {
   key: `sukumizu-thighhighs`,
   backgrounds: [
@@ -430,6 +441,7 @@ export const outfitsPreset = {
   "playboy-bunny": [playboyBunny],
   "revealing-miko": [revealingMiko],
   "santa-bikini": [santaBikini],
+  "school-uniform-bowtie": [schoolUniformBowtie],
   "sukumizu-thighhighs": [sukumizuThighhighs],
   "danmachi-nochekaiser-hestia": [danmachiNochekaiserHestia],
   "fate-little-jelly-rin-sweater": [fateLittleJellyRinSweater],

@@ -15,6 +15,7 @@ import { microBikini } from "./common/micro-bikini.mjs";
 import { playboyBunny } from "./common/playboy-bunny.mjs";
 import { revealingMiko } from "./common/revealing-miko.mjs";
 import { santaBikini } from "./common/santa-bikini.mjs";
+import { schoolUniformBowtie } from "./common/school-uniform-bowtie.mjs";
 import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
 import { danmachiHestia } from "./danmachi/hestia.mjs";
@@ -132,6 +133,7 @@ export const outfitTable = {
   "playboy-bunny": playboyBunny(),
   "revealing-miko": revealingMiko(),
   "santa-bikini": santaBikini(),
+  "school-uniform-bowtie": schoolUniformBowtie(),
   "sukumizu-thighhighs": sukumizuThighhighs(),
   "danmachi-nochekaiser-hestia": danmachiHestia(`nochekaiser`),
   "fate-little-jelly-rin-sweater": fateRinSweater(`little-jelly`),
