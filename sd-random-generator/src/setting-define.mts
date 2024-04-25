@@ -31,6 +31,10 @@ export const allCheckpoints = [
     nameHash: `ponyDiffusionV6XL_v6StartWithThisOne.safetensors [67ab2fd8ec]`,
     baseModel: `Pony`,
   },
+  {
+    nameHash: `chacolebaramixxl_v21.safetensors [41ba9bbce1]`,
+    baseModel: `Pony`,
+  },
 ] as const satisfies { nameHash: string; baseModel: BaseModel }[];
 export type Checkpoint = (typeof allCheckpoints)[number];
 

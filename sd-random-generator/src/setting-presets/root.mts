@@ -24,6 +24,10 @@ export const checkpointAndVAEPreset = {
       sd_model_checkpoint: `autismmixSDXL_autismmixConfetti.safetensors [ac006fdd7e]`,
       sd_vae: `None`,
     },
+    chacolEbara: {
+      sd_model_checkpoint: `chacolebaramixxl_v21.safetensors [41ba9bbce1]`,
+      sd_vae: `None`,
+    },
     ebaraPony: {
       sd_model_checkpoint: `ebara_pony_1.bakedVAE.safetensors [b6ce8a2bf8]`,
       sd_vae: `None`,
