@@ -1,5 +1,8 @@
 import { test } from "vitest";
-import { SeriesNameTag, allSeriesNameTags } from "../../src/index.mts";
+import {
+  SeriesNameTag,
+  allSeriesNameTags,
+} from "../../src/tag-defines/series-name.mjs";
 import { testComma, testDuplication } from "../libs/utility.mjs";
 
 test("series-name duplication test", () => {

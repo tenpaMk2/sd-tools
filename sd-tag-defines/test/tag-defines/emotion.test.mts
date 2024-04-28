@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { EmotionTag, allEmotionTags } from "../../src/index.mts";
+import { EmotionTag, allEmotionTags } from "../../src/tag-defines/emotion.mjs";
 import { testComma, testDuplication } from "../libs/utility.mts";
 
 test("emotion duplication test", () => {

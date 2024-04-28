@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { SpecialTag, allSpecialTags } from "../../src/index.mts";
+import { SpecialTag, allSpecialTags } from "../../src/tag-defines/special.mjs";
 import { testComma, testDuplication } from "../libs/utility.mjs";
 
 test("special duplication test", () => {

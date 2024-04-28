@@ -1,5 +1,8 @@
 import { test } from "vitest";
-import { CharacterNameTag, allCharacterNameTags } from "../../src/index.mts";
+import {
+  CharacterNameTag,
+  allCharacterNameTags,
+} from "../../src/tag-defines/character-name.mjs";
 import { testComma, testDuplication } from "../libs/utility.mts";
 
 test("character-name duplication test", () => {

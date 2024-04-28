@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { GlassesTag, allGlassesTags } from "../../src/index.mts";
+import { GlassesTag, allGlassesTags } from "../../src/tag-defines/glasses.mjs";
 import { testComma, testDuplication } from "../libs/utility.mts";
 
 test("glasses duplication test", () => {

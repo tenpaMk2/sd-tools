@@ -1,5 +1,8 @@
 import { test } from "vitest";
-import { HeadOutfitTag, allHeadOutfitTags } from "../../src/index.mts";
+import {
+  HeadOutfitTag,
+  allHeadOutfitTags,
+} from "../../src/tag-defines/head-outfit.mjs";
 import { testComma, testDuplication } from "../libs/utility.mts";
 
 test("head-outfit duplication test", () => {
