@@ -1,4 +1,4 @@
-export const allCharacterName = [
+export const allCharacterNameTags = [
   `aiz wallenstein`,
   `akemi homura`,
   `akoya matama`,
@@ -95,4 +95,4 @@ export const allCharacterName = [
   `yui kotegawa`,
   `zeta \\(kage no jitsuryokusha ni naritakute!\\)`,
 ] as const satisfies readonly string[];
-export type CharacterNameTag = (typeof allCharacterName)[number];
+export type CharacterNameTag = (typeof allCharacterNameTags)[number];

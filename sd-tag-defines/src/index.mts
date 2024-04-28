@@ -1,41 +1,51 @@
-export { PersonTag, Tag } from "./tag-defines/all.mjs";
 export { BackgroundTag, allBackgroundTags } from "./tag-defines/background.mjs";
 export {
-  BodyFeatureTag,
+  BodyTag,
+  allBodyTags,
+  allDistinguishableBodyTags,
+} from "./tag-defines/body.mjs";
+export {
   BreastSizeOrder,
-  BreastSizeTag,
-  CharacterFeatureTag,
-  HeadFeatureTag,
-  allBodyFeatureTags,
   allBreastSizeTags,
-  allDistinguishableBodyFeatureTags,
-  allHeadFeatureTags,
-} from "./tag-defines/character-feature.mjs";
+} from "./tag-defines/breast-size.mjs";
+export { CameraTag, allCameraTags } from "./tag-defines/camera.mjs";
 export {
   CharacterNameTag,
-  allCharacterName,
+  allCharacterNameTags as allCharacterNameTags,
 } from "./tag-defines/character-name.mjs";
 export { EmotionTag, allEmotionTags } from "./tag-defines/emotion.mjs";
 export {
-  HeadOutfitTags,
+  FaceTag,
+  allDistinguishableFaceTags,
+  allFaceTags,
+} from "./tag-defines/face.mjs";
+export { GlassesTag, allGlassesTags } from "./tag-defines/glasses.mjs";
+export { HairTag, allHairTags } from "./tag-defines/hair.mjs";
+export {
+  HeadOutfitTag as HeadOutfitTag,
   allDistinguishableHeadOutfitTags,
   allHeadOutfitTags,
 } from "./tag-defines/head-outfit.mjs";
 export {
-  ExposureTag,
-  OutfitAndExposureTag,
+  HoldingItemTag,
+  HoldingPoseTag,
+  allHoldingItemTags,
+  allHoldingPoseTags,
+} from "./tag-defines/holding.mjs";
+export {
   OutfitTag,
-  allDistinguishableExposureTags,
   allDistinguishableOutfitTags,
-  allExposureTags,
   allOutfitTags,
-} from "./tag-defines/outfit-and-exposure.mjs";
+} from "./tag-defines/outfit.mjs";
 export { PoseTag, allPoseTags } from "./tag-defines/pose.mjs";
-export { SeriesNameTag, allSeriesName } from "./tag-defines/series-name.mjs";
+export {
+  SeriesNameTag,
+  allSeriesNameTags as allSeriesNameTags,
+} from "./tag-defines/series-name.mjs";
 export { SpecialTag, allSpecialTags } from "./tag-defines/special.mjs";
 export {
   Visibility,
   VisibilityKeys,
   allVisibilityKeys,
   tagVisibilities,
-} from "./tag-defines/visibility.mjs";
+} from "./visibility.mjs";

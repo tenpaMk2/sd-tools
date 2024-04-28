@@ -1,4 +1,4 @@
-export const allSeriesName = [
+export const allSeriesNameTags = [
   `amagi brilliant park`,
   `assault lily`,
   `blend s`,
@@ -49,5 +49,4 @@ export const allSeriesName = [
   `toaru kagaku no railgun`,
   `working!!`,
 ] as const satisfies readonly string[];
-
-export type SeriesNameTag = (typeof allSeriesName)[number];
+export type SeriesNameTag = (typeof allSeriesNameTags)[number];

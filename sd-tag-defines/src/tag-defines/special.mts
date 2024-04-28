@@ -7,6 +7,7 @@ export const allSpecialTags = [
   `hanging breasts`,
   `pantyshot`,
   `sideboob`,
+  `stomach tattoo`,
   `taut clothes`,
   `thigh gap`,
   `underboob`,
