@@ -115,7 +115,10 @@ export const allBodyVisibilities = {
   "loli": preset.all,
   "mature female": preset.all,
   "pointy ears": preset.shortTail,
-  "tail": preset.shortTail,
+  "rabbit ears": preset.all,
+  "rabbit girl": preset.all,
+  "rabbit tail": preset.longTail,
+  "tail": preset.shortTail, // TODO: `short tail` and `long tail`
   "tan": preset.all,
   "thick thighs": preset.thighs,
   "toned": preset.all,
