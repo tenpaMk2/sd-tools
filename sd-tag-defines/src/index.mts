@@ -6,6 +6,7 @@ export {
 } from "./tag-defines/body.mjs";
 export {
   BreastSizeOrder,
+  BreastSizeTag,
   allBreastSizeTags,
 } from "./tag-defines/breast-size.mjs";
 export { CameraTag, allCameraTags } from "./tag-defines/camera.mjs";
