@@ -16,6 +16,7 @@ import {
   allSeriesNameTags,
   allSpecialTags,
 } from "../src/index.mts";
+import { isSetsEqual } from "./libs/utility.mts";
 
 const tagsList = {
   allBodyTags,
@@ -42,6 +43,20 @@ test("exclusive test", () => {
       ([otherTagsName]) => otherTagsName !== tagsName,
     );
     for (const [otherTagsName, otherTags] of otherEntries) {
+      // Allow duplication between `allBodyTags` and `allOutfitTags`.
+      if (
+        isSetsEqual(
+          new Set([tagsName, otherTagsName]),
+          new Set([`allBodyTags`, `allOutfitTags`]),
+        ) ||
+        isSetsEqual(
+          new Set([tagsName, otherTagsName]),
+          new Set([`allBodyTags`, `allHeadOutfitTags`]),
+        )
+      ) {
+        continue;
+      }
+
       for (const tag of tags) {
         expect(
           otherTags.includes(tag as never),
