@@ -1,79 +1,64 @@
 import { expect, test } from "vitest";
 import {
-  BodyFeatureTag,
-  ExposureTag,
-  HeadOutfitTags,
-  OutfitTag,
-  PoseTag,
-  allBodyFeatureTags,
-  allDistinguishableBodyFeatureTags,
-  allDistinguishableExposureTags,
-  allDistinguishableHeadOutfitTags,
-  allDistinguishableOutfitTags,
-  allExposureTags,
+  allBodyTags,
+  allBreastSizeTags,
+  allCameraTags,
+  allCharacterNameTags,
+  allEmotionTags,
+  allFaceTags,
+  allGlassesTags,
+  allHairTags,
   allHeadOutfitTags,
+  allHoldingItemTags,
+  allHoldingPoseTags,
   allOutfitTags,
   allPoseTags,
+  allSeriesNameTags,
   allSpecialTags,
-} from "../src/index.mjs";
+} from "../src/index.mts";
+import { isSetsEqual } from "./libs/utility.mts";
 
-test("allDistinguishableBodyFeatureTags", () => {
-  const values = Object.values(allDistinguishableBodyFeatureTags);
-  const valueSet = new Set(values);
-  for (const value of valueSet) {
-    expect(
-      allBodyFeatureTags.includes(value as BodyFeatureTag),
-      `"${value}" was unexpectedly found in allBodyFeatureTags`,
-    ).toBe(false);
-  }
-});
+const tagsList = {
+  allBodyTags,
+  allBreastSizeTags,
+  allCameraTags,
+  allCharacterNameTags,
+  allEmotionTags,
+  allFaceTags,
+  allGlassesTags,
+  allHairTags,
+  allHeadOutfitTags,
+  allHoldingItemTags,
+  allHoldingPoseTags,
+  allOutfitTags,
+  allPoseTags,
+  allSeriesNameTags,
+  allSpecialTags,
+} as const;
 
-test("allDistinguishableHeadOutfitTags", () => {
-  const values = Object.values(allDistinguishableHeadOutfitTags);
-  const valueSet = new Set(values);
-  for (const value of valueSet) {
-    expect(
-      allHeadOutfitTags.includes(value as HeadOutfitTags),
-      `"${value}" was unexpectedly found in allHeadOutfitTags`,
-    ).toBe(false);
-  }
-});
+test("exclusive test", () => {
+  const entries = Object.entries(tagsList);
+  for (const [tagsName, tags] of entries) {
+    const otherEntries = entries.filter(
+      ([otherTagsName]) => otherTagsName !== tagsName,
+    );
+    for (const [otherTagsName, otherTags] of otherEntries) {
+      // Allow duplication between `allOutfitTags` and `allHeadOutfitTags`.
+      if (
+        isSetsEqual(
+          new Set([tagsName, otherTagsName]),
+          new Set([`allOutfitTags`, `allHeadOutfitTags`]),
+        )
+      ) {
+        continue;
+      }
 
-test("allDistinguishableExposureTags", () => {
-  const values = Object.values(allDistinguishableExposureTags);
-  const valueSet = new Set(values);
-  for (const value of valueSet) {
-    expect(
-      allExposureTags.includes(value as ExposureTag),
-      `"${value}" was unexpectedly found in allExposureTags`,
-    ).toBe(false);
-  }
-});
-
-test("allDistinguishableOutfitTags", () => {
-  const values = Object.values(allDistinguishableOutfitTags);
-  const valueSet = new Set(values);
-  for (const value of valueSet) {
-    expect(
-      allOutfitTags.includes(value as OutfitTag),
-      `"${value}" was unexpectedly found in allOutfitTags`,
-    ).toBe(false);
-  }
-});
-
-test("allSpecialTags", () => {
-  for (const value of allSpecialTags) {
-    expect(
-      allOutfitTags.includes(value as OutfitTag),
-      `"${value}" was unexpectedly found in allOutfitTags`,
-    ).toBe(false);
-    expect(
-      allExposureTags.includes(value as ExposureTag),
-      `"${value}" was unexpectedly found in allExposureTags`,
-    ).toBe(false);
-    expect(
-      allPoseTags.includes(value as PoseTag),
-      `"${value}" was unexpectedly found in allPoseTags`,
-    ).toBe(false);
+      for (const tag of tags) {
+        expect(
+          otherTags.includes(tag as never),
+          `"${tag}" was unexpectedly found in \`${otherTagsName}\` .`,
+        ).toBe(false);
+      }
+    }
   }
 });
