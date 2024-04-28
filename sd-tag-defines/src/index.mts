@@ -12,7 +12,7 @@ export {
 export { CameraTag, allCameraTags } from "./tag-defines/camera.mjs";
 export {
   CharacterNameTag,
-  allCharacterNameTags as allCharacterNameTags,
+  allCharacterNameTags,
 } from "./tag-defines/character-name.mjs";
 export { EmotionTag, allEmotionTags } from "./tag-defines/emotion.mjs";
 export {
@@ -23,7 +23,7 @@ export {
 export { GlassesTag, allGlassesTags } from "./tag-defines/glasses.mjs";
 export { HairTag, allHairTags } from "./tag-defines/hair.mjs";
 export {
-  HeadOutfitTag as HeadOutfitTag,
+  HeadOutfitTag,
   allDistinguishableHeadOutfitTags,
   allHeadOutfitTags,
 } from "./tag-defines/head-outfit.mjs";
@@ -41,7 +41,7 @@ export {
 export { PoseTag, allPoseTags } from "./tag-defines/pose.mjs";
 export {
   SeriesNameTag,
-  allSeriesNameTags as allSeriesNameTags,
+  allSeriesNameTags,
 } from "./tag-defines/series-name.mjs";
 export { SpecialTag, allSpecialTags } from "./tag-defines/special.mjs";
 export {
