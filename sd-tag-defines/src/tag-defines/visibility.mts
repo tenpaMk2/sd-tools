@@ -676,6 +676,7 @@ const allSweaterColorVisibilities = {
   "green sweater": visibleType.shirt,
   "grey sweater": visibleType.shirt,
   "orange sweater": visibleType.shirt,
+  "pink sweater": visibleType.shirt,
   "purple sweater": visibleType.shirt,
   "red sweater": visibleType.shirt,
   "yellow sweater": visibleType.shirt,
@@ -1438,6 +1439,7 @@ export const tagVisibilities = {
   "open clothes": visibleType.shirt, // Visible from back. Assume when all fours.
   "open jacket": visibleType.shirt, // Visible from back. Assume when all fours.
   "open shirt": visibleType.shirt,
+  "open-chest sweater": visibleType.shirt,
   "pirate": visibleType.all,
   "pirate hat": visibleType.hat,
   "knee boots": visibleType.foot,

@@ -169,6 +169,17 @@ const microBikini = {
   ],
 } as const satisfies OutfitSetting;
 
+const openChestSweater = {
+  key: `open-chest-sweater`,
+  backgrounds: [
+    ...backgroundsPreset.bedroom,
+    ...backgroundsPreset.steamingBedSheetSpokenHeart,
+    ...backgroundsPreset.bedSheetWindow,
+    ...backgroundsPreset.colorfulHeartBackgrounds,
+    ...backgroundsPreset["karaoke-box"],
+  ],
+} as const satisfies OutfitSetting;
+
 const playboyBunny = {
   key: `playboy-bunny`,
   backgrounds: [
@@ -427,17 +438,18 @@ const sasuoniFirstHighSchoolUniform = (variation: `pantyhose` | `thighhighs`) =>
 
 export const outfitsPreset = {
   "test-outfit": [testOutfit],
-  babydoll: [babydoll],
-  bikini: [bikini],
+  "babydoll": [babydoll],
+  "bikini": [bikini],
   "bridal-lingerie": [bridalLingerie],
   "camisole-denim-shorts": [camisoleDenimShorts],
   "casual-miniskirt": [casualMiniskirt],
-  cheerleader: [cheerleader],
+  "cheerleader": [cheerleader],
   "china-dress": [chinaDress],
   "cow-print-bikini": [cowPrintBikini],
   "gym-uniform": [gymUniform],
   "maid-bikini": [maidBikini],
   "micro-bikini": [microBikini],
+  "open-chest-sweater": [openChestSweater],
   "playboy-bunny": [playboyBunny],
   "revealing-miko": [revealingMiko],
   "santa-bikini": [santaBikini],
@@ -490,7 +502,8 @@ export const outfitsPreset = {
   "sasuoni-eft-first-high-school-uniform-thighhighs": [
     sasuoniFirstHighSchoolUniform(`thighhighs`),
   ],
-  cosplay: [
+  "cosplay": [
+    babydoll,
     bikini,
     bridalLingerie,
     camisoleDenimShorts,
@@ -498,11 +511,14 @@ export const outfitsPreset = {
     cheerleader,
     chinaDress,
     cowPrintBikini,
+    gymUniform,
     maidBikini,
     microBikini,
+    openChestSweater,
     playboyBunny,
     revealingMiko,
     santaBikini,
+    schoolUniformBowtie,
     sukumizuThighhighs,
   ],
 } as const satisfies {

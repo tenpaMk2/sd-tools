@@ -12,6 +12,7 @@ import { cowPrintBikini } from "./common/cow-print-bikini.mjs";
 import { gymUniform } from "./common/gym-uniform.mjs";
 import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
+import { openChestSweater } from "./common/open-chest-sweater.mjs";
 import { playboyBunny } from "./common/playboy-bunny.mjs";
 import { revealingMiko } from "./common/revealing-miko.mjs";
 import { santaBikini } from "./common/santa-bikini.mjs";
@@ -119,17 +120,18 @@ export type OutfitDefine = Readonly<{
 
 export const outfitTable = {
   "test-outfit": testOutfit(),
-  babydoll: babydoll(),
-  bikini: bikini(),
+  "babydoll": babydoll(),
+  "bikini": bikini(),
   "bridal-lingerie": bridalLingerie(),
   "camisole-denim-shorts": camisoleDenimShorts(),
   "casual-miniskirt": casualMiniskirt(),
-  cheerleader: cheerleader(),
+  "cheerleader": cheerleader(),
   "china-dress": chinaDress(),
   "cow-print-bikini": cowPrintBikini(),
   "gym-uniform": gymUniform(),
   "maid-bikini": maidBikini(),
   "micro-bikini": microBikini(),
+  "open-chest-sweater": openChestSweater(),
   "playboy-bunny": playboyBunny(),
   "revealing-miko": revealingMiko(),
   "santa-bikini": santaBikini(),
@@ -177,9 +179,9 @@ export const outfitTable = {
 export type OutfitKey = keyof typeof outfitTable;
 
 export const UnderboobLevelOrder = {
-  invisible: 0,
+  "invisible": 0,
   "only from below": 1,
-  full: 2,
+  "full": 2,
 } as const satisfies {
   [k in OutfitDefine["specialVisibility"]["underboobLevel"]]: number;
 };
