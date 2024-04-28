@@ -1,5 +1,10 @@
 export { BackgroundTag, allBackgroundTags } from "./tag-defines/background.mjs";
 export {
+  BodyOutfitTag,
+  allBodyOutfitTags,
+  allDistinguishableOutfitTags,
+} from "./tag-defines/body-outfit.mjs";
+export {
   BodyTag,
   allBodyTags,
   allDistinguishableBodyTags,
@@ -33,11 +38,6 @@ export {
   allHoldingItemTags,
   allHoldingPoseTags,
 } from "./tag-defines/holding.mjs";
-export {
-  OutfitTag,
-  allDistinguishableOutfitTags,
-  allOutfitTags,
-} from "./tag-defines/outfit.mjs";
 export { PoseTag, allPoseTags } from "./tag-defines/pose.mjs";
 export {
   SeriesNameTag,

@@ -1,9 +1,9 @@
+import { BodyOutfitTag } from "./tag-defines/body-outfit.mjs";
 import { BodyTag } from "./tag-defines/body.mjs";
 import { FaceTag } from "./tag-defines/face.mjs";
 import { GlassesTag } from "./tag-defines/glasses.mjs";
 import { HairTag } from "./tag-defines/hair.mjs";
 import { HeadOutfitTag } from "./tag-defines/head-outfit.mjs";
-import { OutfitTag } from "./tag-defines/outfit.mjs";
 import { allBodyVisibilities } from "./visibility-defines/body.mjs";
 import { allFaceVisibilities } from "./visibility-defines/face.mjs";
 import { allGlassesVisibilities } from "./visibility-defines/glasses.mjs";
@@ -43,10 +43,10 @@ export const tagVisibilities = {
   ...allOutfitVisibilities,
 } as const satisfies {
   [K in
+    | BodyOutfitTag
     | BodyTag
     | FaceTag
     | GlassesTag
     | HairTag
-    | HeadOutfitTag
-    | OutfitTag]: Visibility;
+    | HeadOutfitTag]: Visibility;
 };

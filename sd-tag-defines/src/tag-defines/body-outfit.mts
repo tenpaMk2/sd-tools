@@ -518,7 +518,7 @@ export const allDistinguishableOutfitTags = {
   "cable knit sweater": `cable knit`,
 } as const satisfies { [k in string]: string };
 
-export const allOutfitTags = [
+export const allBodyOutfitTags = [
   ...allArmbandColorTags,
   ...allAscotColorTags,
   ...allBeltColorTags,
@@ -794,4 +794,4 @@ export const allOutfitTags = [
   `wide sleeves`,
   `wrist cuffs`,
 ] as const satisfies readonly string[];
-export type OutfitTag = (typeof allOutfitTags)[number];
+export type BodyOutfitTag = (typeof allBodyOutfitTags)[number];

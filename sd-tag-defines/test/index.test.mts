@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
 import {
+  allBodyOutfitTags,
   allBodyTags,
   allBreastSizeTags,
   allCameraTags,
@@ -11,7 +12,6 @@ import {
   allHeadOutfitTags,
   allHoldingItemTags,
   allHoldingPoseTags,
-  allOutfitTags,
   allPoseTags,
   allSeriesNameTags,
   allSpecialTags,
@@ -19,6 +19,7 @@ import {
 import { isSetsEqual } from "./libs/utility.mts";
 
 const tagsList = {
+  allBodyOutfitTags,
   allBodyTags,
   allBreastSizeTags,
   allCameraTags,
@@ -30,7 +31,6 @@ const tagsList = {
   allHeadOutfitTags,
   allHoldingItemTags,
   allHoldingPoseTags,
-  allOutfitTags,
   allPoseTags,
   allSeriesNameTags,
   allSpecialTags,
@@ -43,11 +43,11 @@ test("exclusive test", () => {
       ([otherTagsName]) => otherTagsName !== tagsName,
     );
     for (const [otherTagsName, otherTags] of otherEntries) {
-      // Allow duplication between `allBodyTags` and `allOutfitTags`.
+      // Allow duplication between `allBodyTags` and `allBodyOutfitTags`.
       if (
         isSetsEqual(
           new Set([tagsName, otherTagsName]),
-          new Set([`allBodyTags`, `allOutfitTags`]),
+          new Set([`allBodyTags`, `allBodyOutfitTags`]),
         ) ||
         isSetsEqual(
           new Set([tagsName, otherTagsName]),
