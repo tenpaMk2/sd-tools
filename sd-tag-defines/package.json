@@ -12,10 +12,10 @@
     "prebuild": "npm run clean",
     "build:base": "npx esbuild --bundle --platform=neutral --out-extension:.js=.mjs src/index.mts --outdir=dist",
     "build:esbuild": "npm run build:base -- --minify",
-    "build:declaration": "tsc --project tsconfig.types.json",
+    "build:declaration": "tsc",
     "build": "run-p build:esbuild build:declaration",
     "watch:esbuild": "npm run build:base -- --sourcemap --keep-names --watch",
-    "watch:declaration": "tsc --project tsconfig.types.json --watch",
+    "watch:declaration": "tsc --watch",
     "watch": "run-p watch:esbuild watch:declaration",
     "clean": "rimraf dist",
     "test": "vitest"
