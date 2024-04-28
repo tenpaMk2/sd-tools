@@ -5,7 +5,7 @@ export const mahoakoLocomusica = (variation: `notekaga`) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `hat`,
       `white hat`,
       `cabbie hat`,

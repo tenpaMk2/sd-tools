@@ -4,7 +4,7 @@ export const gymUniform = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `gym uniform`,
       `collarbone`,
       `gym shirt`,

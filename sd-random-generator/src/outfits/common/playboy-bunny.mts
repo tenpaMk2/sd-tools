@@ -4,7 +4,7 @@ export const playboyBunny = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `playboy bunny`,
       `rabbit ears`,
       `fake animal ears`,

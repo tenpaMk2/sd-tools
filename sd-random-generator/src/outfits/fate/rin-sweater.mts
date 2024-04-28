@@ -5,7 +5,7 @@ export const fateRinSweater = (variation: `little-jelly`) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`rinsweater`],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `sweater`,
       `red sweater`,
       `turtleneck sweater`,

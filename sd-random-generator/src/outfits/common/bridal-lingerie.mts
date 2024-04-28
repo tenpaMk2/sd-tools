@@ -6,7 +6,7 @@ export const bridalLingerie = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `nontraditional wedding dress`,
       `wedding dress`,
       `revealing clothes`,

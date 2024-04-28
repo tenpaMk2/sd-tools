@@ -4,7 +4,7 @@ export const prismaIllyaIllyaBeast = (variation: `am7coffeelove`) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`zzillaaa`],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       // TODO: Reconsider moving ears from the character define to here.
       `official alternate costume`,
       `fur-trimmed collar`,

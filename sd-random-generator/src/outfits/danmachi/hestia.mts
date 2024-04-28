@@ -5,7 +5,7 @@ export const danmachiHestia = (variation: `nochekaiser`) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `white dress`,
       `blue bowtie`,
       `pencil dress`,

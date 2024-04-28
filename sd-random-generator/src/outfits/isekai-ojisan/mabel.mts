@@ -4,7 +4,7 @@ export const isekaiOjisanMabel = (variation: `nochekaiser`) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `blue shirt`,
       `jacket`,
       `blue jacket`,

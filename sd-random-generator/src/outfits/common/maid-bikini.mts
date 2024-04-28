@@ -5,7 +5,7 @@ export const maidBikini = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `maid`,
       `maid headdress`,
       `detached collar`,

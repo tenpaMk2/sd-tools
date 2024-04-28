@@ -1,4 +1,4 @@
-import { OutfitAndExposureTag } from "@tenpamk2/sd-tag-defines";
+import { OutfitTag } from "../../tag-defines/adapter.mjs";
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../resolver.mjs";
 
@@ -15,7 +15,7 @@ const normal = [
   `red neck ribbon`,
   `short dress`,
   `loafers`,
-] as const satisfies OutfitAndExposureTag[];
+] as const satisfies OutfitTag[];
 
 const gyaru = [
   `shuuchiin academy school uniform`,
@@ -35,15 +35,15 @@ const gyaru = [
   `miniskirt`,
   `socks`,
   `black socks`,
-] as const satisfies OutfitAndExposureTag[];
+] as const satisfies OutfitTag[];
 
-const outfitAndExposureEntries = {
+const outfitEntries = {
   "ai-nochekaiser": [...gyaru, `sweater around waist`],
-  ai: [...gyaru],
+  "ai": [...gyaru],
   "chika-nochekaiser": [...normal, `socks`, `white socks`],
-  chika: [...normal, `socks`, `white socks`],
+  "chika": [...normal, `socks`, `white socks`],
   "kaguya-nochekaiser": [...normal, `socks`, `black socks`],
-  kaguya: [...normal, `socks`, `black socks`],
+  "kaguya": [...normal, `socks`, `black socks`],
   "miko-nochekaiser": [
     ...normal,
     `armband`,
@@ -51,22 +51,22 @@ const outfitAndExposureEntries = {
     `pantyhose`,
     `black pantyhose`,
   ],
-  miko: [
+  "miko": [
     ...normal,
     `armband`,
     `yellow armband`,
     `pantyhose`,
     `black pantyhose`,
   ],
-} as const satisfies { [k in string]: OutfitAndExposureTag[] };
+} as const satisfies { [k in string]: OutfitTag[] };
 
 export const kaguyaSamaShuuchiinAcademySchoolUniform = (
-  variation: keyof typeof outfitAndExposureEntries,
+  variation: keyof typeof outfitEntries,
 ) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: outfitAndExposureEntries[variation],
+    outfitEntries: outfitEntries[variation],
     specialVisibility: {
       armpits: false,
       hangingBreasts: false,

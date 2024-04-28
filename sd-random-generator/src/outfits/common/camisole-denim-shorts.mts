@@ -4,7 +4,7 @@ export const camisoleDenimShorts = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `camisole`,
       [
         { entries: [`aqua camisole`] },

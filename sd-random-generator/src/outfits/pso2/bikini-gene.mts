@@ -1,11 +1,10 @@
-import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../resolver.mjs";
 
 export const pso2BikiniGene = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `bikini`,
       `white bikini`,
       `breasts skindentation`,
@@ -15,7 +14,7 @@ export const pso2BikiniGene = () =>
       `bare arms`,
       `bare legs`,
       `barefoot`,
-      `shiny skin`,
+      // `shiny skin`,
       `thigh strap`,
     ],
     specialVisibility: {

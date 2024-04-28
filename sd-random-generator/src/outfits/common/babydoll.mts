@@ -5,7 +5,7 @@ export const babydoll = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `babydoll`,
       `underwear`,
       `underwear only`,

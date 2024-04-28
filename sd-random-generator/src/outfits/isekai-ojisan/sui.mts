@@ -5,7 +5,7 @@ export const isekaiOjisanSui = (variation: `nochekaiser`) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `dress`,
       `yellow dress`,
       `long sleeves`,

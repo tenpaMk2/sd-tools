@@ -1,11 +1,10 @@
 import { OutfitDefine } from "../resolver.mjs";
-import { upskirtPreset } from "./upskirt-preset.mjs";
 
 export const sukumizuThighhighs = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `revealing clothes`,
       `school swimsuit`,
       [
@@ -21,7 +20,7 @@ export const sukumizuThighhighs = () =>
       `thighhighs`,
       `thighs skindentation`,
       `skin tight`,
-      `shiny skin`,
+      // `shiny skin`,
       `no shoes`,
     ],
     specialVisibility: {

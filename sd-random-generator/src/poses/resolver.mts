@@ -1,7 +1,8 @@
-import { PoseTag, Visibility } from "@tenpamk2/sd-tag-defines";
+import { Visibility } from "@tenpamk2/sd-tag-defines";
 import { BackgroundType } from "../backgrounds/resolver.mjs";
 import { OutfitDefine } from "../outfits/resolver.mjs";
 import { NormalEntry } from "../prompt-define.mjs";
+import { PoseTag } from "../tag-defines/adapter.mjs";
 import { fromAboveFromSideLookingAhead } from "./common/from-above/from-side-looking-ahead.mjs";
 import { fromAboveFullBodyLying } from "./common/from-above/full-body-lying.mjs";
 import { fromAboveGrabbingOwnBreasts } from "./common/from-above/grabbing-own-breasts.mjs";
@@ -59,7 +60,7 @@ export type PoseSpecialVisibility = Omit<
 export const PoseUnderboobLevelOrder = {
   "from below": 0,
   "from horizontal": 1,
-  invisible: 2,
+  "invisible": 2,
 } as const satisfies {
   [k in PoseSpecialVisibility["underboobLevel"]]: number;
 };
@@ -78,11 +79,11 @@ export const poseTable = {
     "hands-on-own-chest": fromAboveHandsOnOwnChest,
     "lying-on-stomach": fromAboveLyingOnStomach,
     "lying-reaching-towards-viewer": fromAboveLyingReachingTowardsViewer,
-    lying: fromAboveLying,
+    "lying": fromAboveLying,
     "paw-pose": fromAbovePawPose,
-    shushing: fromAboveShushing,
-    standing: fromAboveStanding,
-    wariza: fromAboveWariza,
+    "shushing": fromAboveShushing,
+    "standing": fromAboveStanding,
+    "wariza": fromAboveWariza,
     "holding-bouquet": fromAboveHoldingBouquet,
     "on-bed-lying-on-stomach": fromAboveOnBedLyingOnStomach,
     "on-bed-lying-reaching-towards-viewer":
@@ -95,7 +96,7 @@ export const poseTable = {
     "from-side": fromBelowFromSide,
     "from-side-profile": fromBelowFromSideProfile,
     "paw-pose": fromBelowPawPose,
-    squatting: fromBelowSquatting,
+    "squatting": fromBelowSquatting,
     "upper-body": fromBelowUpperBody,
     "cheering-with-pom-poms": fromBelowCheeringWithPomPoms,
     "holding-bouquet": fromBelowHoldingBouquet,
@@ -104,19 +105,19 @@ export const poseTable = {
     "all-fours-from-behind": fromHorizontalAllFours,
     "all-fours": fromHorizontalAllFours,
     "arms-up": fromHorizontalArmsUp,
-    contrapposto: fromHorizontalContrapposto,
+    "contrapposto": fromHorizontalContrapposto,
     "double-v": fromHorizontalDoubleV,
     "from-side-looking-ahead": fromHorizontalFromSideLookingAhead,
     "hands-on-own-hips": fromHorizontalHandsOnOwnHips,
     "heart-hands": fromHorizontalHeartHands,
     "kneeling-spread-legs": fromHorizontalKneelingSpreadLegs,
     "paw-pose": fromHorizontalPawPose,
-    portrait: fromHorizontalPortrait,
+    "portrait": fromHorizontalPortrait,
     "singing-from-side": fromHorizontalSingingFromSide,
-    singing: fromHorizontalSinging,
+    "singing": fromHorizontalSinging,
     "the-pose-head-rest": fromHorizontalThePoseHeadRest,
     "twisted-torso": fromHorizontalTwistedTorso,
-    v: fromHorizontalV,
+    "v": fromHorizontalV,
     "holding-bouquet": fromHorizontalHoldingBouquet,
     "on-bed-all-fours-from-behind": fromHorizontalOnBedAllFoursFromBehind,
     "on-bed-all-fours": fromHorizontalOnBedAllFours,

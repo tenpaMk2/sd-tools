@@ -6,7 +6,7 @@ export const santaBikini = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `santa costume`,
       `santa hat`,
       `santa bikini`,

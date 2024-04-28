@@ -6,7 +6,7 @@ export const kagejitsuShadowGarden = (
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `bodysuit`,
       `skin tight`,
       `black bodysuit`,

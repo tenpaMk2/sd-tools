@@ -5,7 +5,7 @@ export const revealingMiko = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `revealing clothes`,
       `miko`,
       `nontraditional miko`,

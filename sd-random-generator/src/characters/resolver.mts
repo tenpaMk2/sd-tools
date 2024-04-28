@@ -1,11 +1,11 @@
 import {
   BreastSizeTag,
-  CharacterFeatureTag,
   CharacterNameTag,
   EmotionTag,
   SeriesNameTag,
 } from "@tenpamk2/sd-tag-defines";
 import { LoraEntry, NormalEntry } from "../prompt-define.mjs";
+import { CharacterFeatureTag } from "../tag-defines/adapter.mjs";
 import { LoraCharacterTriggerWordsTag } from "../tag-defines/lora.mjs";
 import { amaburiIsuzuLittleJelly } from "./amaburi/amaburi-isuzu-little-jelly.mjs";
 import { amaburiIsuzu } from "./amaburi/amaburi-isuzu.mjs";

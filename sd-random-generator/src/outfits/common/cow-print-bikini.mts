@@ -4,7 +4,7 @@ export const cowPrintBikini = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `cow print`,
       `cow print bikini`,
       `cow print gloves`,

@@ -4,7 +4,7 @@ export const prismaIllyaMiyuBeast = (variation: `am7coffeelove`) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`zzmiuaa`],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `jingle bell hair ornament`,
       `blue neck ribbon`,
       `white collar`,

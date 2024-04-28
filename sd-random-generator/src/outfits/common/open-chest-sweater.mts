@@ -5,7 +5,7 @@ export const openChestSweater = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `sweater`,
       [
         { entries: [`white sweater`] },

@@ -1,11 +1,10 @@
 import {
-  allDistinguishableBodyFeatureTags,
-  allDistinguishableExposureTags,
+  allDistinguishableBodyTags,
   allDistinguishableHeadOutfitTags,
   allDistinguishableOutfitTags,
 } from "@tenpamk2/sd-tag-defines";
-import { LoraNameTag } from "./tag-defines/lora.mjs";
 import { Tag } from "./tag-defines/adapter.mjs";
+import { LoraNameTag } from "./tag-defines/lora.mjs";
 
 type DistinguishableTags = Readonly<{ [k in string]: string }>;
 
@@ -39,11 +38,8 @@ class Token<T extends Tag | LoraNameTag> {
       case `normal`:
         // Resolve tag name if it's a distinguishable tag.
         const tag =
+          (allDistinguishableBodyTags as DistinguishableTags)[this.tag] ??
           (allDistinguishableHeadOutfitTags as DistinguishableTags)[this.tag] ??
-          (allDistinguishableBodyFeatureTags as DistinguishableTags)[
-            this.tag
-          ] ??
-          (allDistinguishableExposureTags as DistinguishableTags)[this.tag] ??
           (allDistinguishableOutfitTags as DistinguishableTags)[this.tag] ??
           this.tag;
 
@@ -143,13 +139,10 @@ export class Pattern<T extends Tag | LoraNameTag> {
           } as const;
         case `normal`:
           return {
-            tag: ((allDistinguishableHeadOutfitTags as DistinguishableTags)[
+            tag: ((allDistinguishableBodyTags as DistinguishableTags)[
               token.tag
             ] ??
-              (allDistinguishableBodyFeatureTags as DistinguishableTags)[
-                token.tag
-              ] ??
-              (allDistinguishableExposureTags as DistinguishableTags)[
+              (allDistinguishableHeadOutfitTags as DistinguishableTags)[
                 token.tag
               ] ??
               (allDistinguishableOutfitTags as DistinguishableTags)[

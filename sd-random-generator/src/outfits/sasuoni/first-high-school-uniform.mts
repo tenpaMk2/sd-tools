@@ -7,7 +7,7 @@ export const sasuoniFirstHighSchoolUniform = (
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `first high school uniform`,
       `dress`,
       `white dress`,

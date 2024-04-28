@@ -27,7 +27,7 @@ export const prismaIllyaChloeBeastAm7coffeelove = () =>
       `jingle bell hair ornament`,
       `dark skin`,
       `dark-skinned female`,
-      `stomach tattoo`, // TODO: stomach tattoo. Idea: hook `navel` tag.
+      // `stomach tattoo`, // TODO: stomach tattoo. Idea: hook `navel` tag.
       `fake animal ears`,
       `animal ears`,
       `dog ears`,

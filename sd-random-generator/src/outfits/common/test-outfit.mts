@@ -10,7 +10,7 @@ export const testOutfit = () =>
       ],
     },
     loraOutfitTriggerWordEntries: [`aachisato`],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `bikini`,
       [{ entries: [`black bikini`] }, { entries: [`white bikini`] }],
       `breasts skindentation`,

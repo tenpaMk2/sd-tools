@@ -1,5 +1,5 @@
-import { OutfitAndExposureTag } from "@tenpamk2/sd-tag-defines";
 import { LoraEntry, NormalEntry } from "../prompt-define.mjs";
+import { OutfitTag } from "../tag-defines/adapter.mjs";
 import { LoraOutfitTriggerWordsTag } from "../tag-defines/lora.mjs";
 import { babydoll } from "./common/babydoll.mjs";
 import { bikini } from "./common/bikini.mjs";
@@ -49,7 +49,7 @@ export type OutfitDefine = Readonly<{
   /**
    * Outfit and exposure defines such as `red shirt` , `collarbone` and `thigh gap` .
    */
-  outfitAndExposureEntries: NormalEntry<OutfitAndExposureTag>[];
+  outfitEntries: NormalEntry<OutfitTag>[];
   /**
    * Visibility of specific tags.
    */
@@ -101,7 +101,7 @@ export type OutfitDefine = Readonly<{
   /**
    * Outfit and exposure defines in the skirt for when `upskirt` is specified.
    */
-  upskirtEntries: NormalEntry<OutfitAndExposureTag>[]; // TODO: Reconsider as `null` .
+  upskirtEntries: NormalEntry<OutfitTag>[]; // TODO: Reconsider as `null` .
   /**
    * Outfit and exposure defines at foot for when footwear should be removed.
    */
@@ -109,12 +109,12 @@ export type OutfitDefine = Readonly<{
     /**
      * Exclude tags that is in the `outfitAndExposureTree` .
      */
-    excludeTags: readonly OutfitAndExposureTag[];
+    excludeTags: readonly OutfitTag[];
     /**
      * Tokens for when footwear is removed.
      * @example `[new Token(\`no shoes\`)]` , `[new Token(\`barefoor\`)]`
      */
-    additionalFootEntriesAfterRemoving: NormalEntry<OutfitAndExposureTag>[];
+    additionalFootEntriesAfterRemoving: NormalEntry<OutfitTag>[];
   } | null;
 }>;
 

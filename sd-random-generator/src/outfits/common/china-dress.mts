@@ -5,7 +5,7 @@ export const chinaDress = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `china dress`,
       `chinese clothes`,
       [

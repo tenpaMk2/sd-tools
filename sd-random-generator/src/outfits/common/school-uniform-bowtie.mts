@@ -5,7 +5,7 @@ export const schoolUniformBowtie = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `school uniform`,
       `shirt`,
       `white shirt`,

@@ -4,7 +4,7 @@ export const bikini = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `bikini`,
       [
         { entries: [`aqua bikini`] },
@@ -45,7 +45,7 @@ export const bikini = () =>
       // [{ entries: [`bikini skirt`] }, { entries: [] }],
       `bare legs`,
       `barefoot`,
-      `shiny skin`,
+      // `shiny skin`, // TODO: `shiny skin` to background?
     ],
     specialVisibility: {
       armpits: true,

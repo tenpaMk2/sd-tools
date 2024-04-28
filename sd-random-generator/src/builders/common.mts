@@ -1,35 +1,35 @@
+import {
+  BackgroundTag,
+  BreastSizeOrder,
+  BreastSizeTag,
+  CharacterNameTag,
+  EmotionTag,
+  SeriesNameTag,
+  SpecialTag,
+  VisibilityKeys,
+  allVisibilityKeys,
+  tagVisibilities,
+} from "@tenpamk2/sd-tag-defines";
+import { CollectedDatas } from "../collector.mjs";
 import { OutfitDefine, UnderboobLevelOrder } from "../outfits/resolver.mjs";
 import {
   PoseSpecialVisibility,
   PoseUnderboobLevelOrder,
 } from "../poses/resolver.mjs";
-import { CollectedDatas } from "../collector.mjs";
 import { Pattern, PatternCollection } from "../prompt-define.mjs";
 import {
-  BackgroundTag,
-  BreastSizeOrder,
-  BreastSizeTag,
   CharacterFeatureTag,
-  CharacterNameTag,
-  EmotionTag,
-  OutfitAndExposureTag,
+  OutfitTag,
   PoseTag,
-  SeriesNameTag,
-  SpecialTag,
-  allVisibilityKeys,
-  VisibilityKeys,
-  tagVisibilities,
-} from "@tenpamk2/sd-tag-defines";
+  Tag,
+} from "../tag-defines/adapter.mjs";
 import {
   LoraCharacterTriggerWordsTag,
   LoraNameTag,
   LoraOutfitTriggerWordsTag,
 } from "../tag-defines/lora.mjs";
-import { Tag } from "../tag-defines/adapter.mjs";
 
-const separateByVisibility = <
-  T extends CharacterFeatureTag | OutfitAndExposureTag,
->(
+const separateByVisibility = <T extends CharacterFeatureTag | OutfitTag>(
   pattern: Pattern<T>,
 ) => {
   const filter = (tag: T, part: VisibilityKeys) => tagVisibilities[tag][part];
@@ -46,7 +46,7 @@ const separateByVisibility = <
   return result;
 };
 
-const extractVisible = <T extends CharacterFeatureTag | OutfitAndExposureTag>(
+const extractVisible = <T extends CharacterFeatureTag | OutfitTag>(
   patternCollection: PatternCollection<T>,
   parts: VisibilityKeys[],
 ) => {
@@ -79,11 +79,11 @@ const buildSpecialVisibility = (
     visibleOutfitPatternCollection,
   }: {
     breastSize: BreastSizeTag;
-    upskirtPatternCollection: PatternCollection<OutfitAndExposureTag>;
+    upskirtPatternCollection: PatternCollection<OutfitTag>;
     emotionPatternCollection: PatternCollection<EmotionTag | SpecialTag>;
     backgroundPatternCollection: PatternCollection<BackgroundTag>;
     visibleFeaturePatternCollection: PatternCollection<CharacterFeatureTag>;
-    visibleOutfitPatternCollection: PatternCollection<OutfitAndExposureTag>;
+    visibleOutfitPatternCollection: PatternCollection<OutfitTag>;
   },
 ) => {
   const pcs = [] as PatternCollection<Tag>[];
@@ -152,7 +152,7 @@ const buildSpecialVisibility = (
 };
 
 const takeOffShoes = (
-  pc: PatternCollection<OutfitAndExposureTag>,
+  pc: PatternCollection<OutfitTag>,
   whenRemoveShoes: OutfitDefine["whenRemoveShoes"],
 ) => {
   if (!whenRemoveShoes) {
@@ -226,10 +226,10 @@ const buildCore = (
     PatternCollection.create<LoraOutfitTriggerWordsTag>(
       outfitData.outfit.loraOutfitTriggerWordEntries,
     );
-  const outfitAndExposure = PatternCollection.create<OutfitAndExposureTag>(
-    outfitData.outfit.outfitAndExposureEntries,
+  const outfitAndExposure = PatternCollection.create<OutfitTag>(
+    outfitData.outfit.outfitEntries,
   );
-  const upskirt = PatternCollection.create<OutfitAndExposureTag>(
+  const upskirt = PatternCollection.create<OutfitTag>(
     outfitData.outfit.upskirtEntries,
   );
   const shoesRemovedOutfits = outfitData.outfit.whenRemoveShoes
@@ -252,7 +252,7 @@ const buildCore = (
       poseVisibility,
     );
 
-    const outfitsOverride = PatternCollection.create<OutfitAndExposureTag>([
+    const outfitsOverride = PatternCollection.create<OutfitTag>([
       `underwear`,
       `bra`,
       `lace-trimmed bra`,
@@ -261,7 +261,7 @@ const buildCore = (
       `unbuttoned`,
     ]);
 
-    const visibleOutfits = extractVisible<OutfitAndExposureTag>(
+    const visibleOutfits = extractVisible<OutfitTag>(
       outfitsOverride,
       poseVisibility,
     );
@@ -273,7 +273,7 @@ const buildCore = (
       [{ entries: [`smile`] }, { entries: [`expressionless`] }],
     ]);
 
-    const upskirtOverride = PatternCollection.create<OutfitAndExposureTag>([]);
+    const upskirtOverride = PatternCollection.create<OutfitTag>([]);
 
     const specialVisibility = buildSpecialVisibility(
       {
@@ -319,7 +319,7 @@ const buildCore = (
     characterFeature,
     poseVisibility,
   );
-  const visibleOutfits = extractVisible<OutfitAndExposureTag>(
+  const visibleOutfits = extractVisible<OutfitTag>(
     backgroundData.background.removeShoes
       ? shoesRemovedOutfits
       : outfitAndExposure,

@@ -5,7 +5,7 @@ export const cheerleader = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
-    outfitAndExposureEntries: [
+    outfitEntries: [
       `cheerleader`,
       `sleeveless`,
       `crop top`,
@@ -22,8 +22,8 @@ export const cheerleader = () =>
         { entries: [`blue shirt`, `white skirt`] },
         { entries: [`red shirt`, `white skirt`] },
       ],
-      `sweat`,
-      `shiny skin`,
+      // `sweat`, // TODO: `sweat` to background or pose
+      // `shiny skin`, // TODO: `shiny skin` to background?
       `bare legs`,
       `shoes`,
       `sneakers`,
