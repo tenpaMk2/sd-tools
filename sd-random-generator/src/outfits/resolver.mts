@@ -185,3 +185,5 @@ export const UnderboobLevelOrder = {
 } as const satisfies {
   [k in OutfitDefine["specialVisibility"]["underboobLevel"]]: number;
 };
+
+// TODO: `valentine`
