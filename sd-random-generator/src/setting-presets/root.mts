@@ -20,6 +20,10 @@ export const checkpointAndVAEPreset = {
     },
   },
   sdxl: {
+    seventhAnime: {
+      sd_model_checkpoint: `7thAnimeXLPonyA_v10.safetensors`,
+      sd_vae: `None`,
+    },
     autismmixConfetti: {
       sd_model_checkpoint: `autismmixSDXL_autismmixConfetti.safetensors [ac006fdd7e]`,
       sd_vae: `None`,

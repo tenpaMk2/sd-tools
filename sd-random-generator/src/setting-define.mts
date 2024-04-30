@@ -20,6 +20,10 @@ export const allCheckpoints = [
     baseModel: `SD1.5`,
   },
   {
+    nameHash: `7thAnimeXLPonyA_v10.safetensors`,
+    baseModel: `Pony`,
+  },
+  {
     nameHash: `autismmixSDXL_autismmixConfetti.safetensors [ac006fdd7e]`,
     baseModel: `Pony`,
   },
