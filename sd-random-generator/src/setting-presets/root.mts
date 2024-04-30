@@ -3,19 +3,19 @@ import { Checkpoint, VAE } from "../setting-define.mjs";
 export const checkpointAndVAEPreset = {
   sd1: {
     vividorangemix: {
-      sd_model_checkpoint: `vividorangemix_v10.safetensors [ff4725f91c]`,
+      sd_model_checkpoint: `vividorangemix_v10.safetensors`,
       sd_vae: `blessed2.vae.safetensors`,
     },
     vividorangemixNSFW: {
-      sd_model_checkpoint: `vividorangemix_v10NSFW.safetensors [730dd31df7]`,
+      sd_model_checkpoint: `vividorangemix_v10NSFW.safetensors`,
       sd_vae: `blessed2.vae.safetensors`,
     },
     calico: {
-      sd_model_checkpoint: `calicomix_v75.safetensors [c5fc303196]`,
+      sd_model_checkpoint: `calicomix_v75.safetensors`,
       sd_vae: `None`,
     },
     calicoFlat: {
-      sd_model_checkpoint: `calicomixFlatani_v10.safetensors [053eb3f26a]`,
+      sd_model_checkpoint: `calicomixFlatani_v10.safetensors`,
       sd_vae: `None`,
     },
   },
@@ -25,19 +25,19 @@ export const checkpointAndVAEPreset = {
       sd_vae: `None`,
     },
     autismmixConfetti: {
-      sd_model_checkpoint: `autismmixSDXL_autismmixConfetti.safetensors [ac006fdd7e]`,
+      sd_model_checkpoint: `autismmixSDXL_autismmixConfetti.safetensors`,
       sd_vae: `None`,
     },
     chacolEbara: {
-      sd_model_checkpoint: `chacolebaramixxl_v21.safetensors [41ba9bbce1]`,
+      sd_model_checkpoint: `chacolebaramixxl_v21.safetensors`,
       sd_vae: `None`,
     },
     ebaraPony: {
-      sd_model_checkpoint: `ebara_pony_1.bakedVAE.safetensors [b6ce8a2bf8]`,
+      sd_model_checkpoint: `ebara_pony_1.bakedVAE.safetensors`,
       sd_vae: `None`,
     },
     pony: {
-      sd_model_checkpoint: `ponyDiffusionV6XL_v6StartWithThisOne.safetensors [67ab2fd8ec]`,
+      sd_model_checkpoint: `ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
       sd_vae: `None`,
     },
   },

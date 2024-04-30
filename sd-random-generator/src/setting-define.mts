@@ -7,16 +7,16 @@ export type BaseModel = `SD1.5` | `Pony` | `Animagine`;
 
 export const allCheckpoints = [
   {
-    nameHash: `vividorangemix_v10.safetensors [ff4725f91c]`,
+    nameHash: `vividorangemix_v10.safetensors`,
     baseModel: `SD1.5`,
   },
   {
-    nameHash: `vividorangemix_v10NSFW.safetensors [730dd31df7]`,
+    nameHash: `vividorangemix_v10NSFW.safetensors`,
     baseModel: `SD1.5`,
   },
-  { nameHash: `calicomix_v75.safetensors [c5fc303196]`, baseModel: `SD1.5` },
+  { nameHash: `calicomix_v75.safetensors`, baseModel: `SD1.5` },
   {
-    nameHash: `calicomixFlatani_v10.safetensors [053eb3f26a]`,
+    nameHash: `calicomixFlatani_v10.safetensors`,
     baseModel: `SD1.5`,
   },
   {
@@ -24,19 +24,19 @@ export const allCheckpoints = [
     baseModel: `Pony`,
   },
   {
-    nameHash: `autismmixSDXL_autismmixConfetti.safetensors [ac006fdd7e]`,
+    nameHash: `autismmixSDXL_autismmixConfetti.safetensors`,
     baseModel: `Pony`,
   },
   {
-    nameHash: `ebara_pony_1.bakedVAE.safetensors [b6ce8a2bf8]`,
+    nameHash: `ebara_pony_1.bakedVAE.safetensors`,
     baseModel: `Pony`,
   },
   {
-    nameHash: `ponyDiffusionV6XL_v6StartWithThisOne.safetensors [67ab2fd8ec]`,
+    nameHash: `ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
     baseModel: `Pony`,
   },
   {
-    nameHash: `chacolebaramixxl_v21.safetensors [41ba9bbce1]`,
+    nameHash: `chacolebaramixxl_v21.safetensors`,
     baseModel: `Pony`,
   },
 ] as const satisfies { nameHash: string; baseModel: BaseModel }[];
