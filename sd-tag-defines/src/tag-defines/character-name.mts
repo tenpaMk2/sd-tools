@@ -81,6 +81,7 @@ export const allCharacterNameTags = [
   `sui \\(isekai ojisan\\)`,
   `suzukaze aoba`,
   `sylphy \\(amaburi\\)`,
+  `sylphiette \\(mushoku tensei\\)`,
   `tachibana satomi`,
   `takimoto hifumi`,
   `tamaki iroha`,

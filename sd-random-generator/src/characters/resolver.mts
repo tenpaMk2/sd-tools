@@ -47,6 +47,7 @@ import { madomagiMamiEft } from "./madomagi/madomagi-mami-eft.mjs";
 import { madomagiSayakaEft } from "./madomagi/madomagi-sayaka-eft.mjs";
 import { madomagiYachiyoEft } from "./madomagi/madomagi-yachiyo-eft.mjs";
 import { mahoakoMatamaNotekaga } from "./mahoako/mahoako-matama-notekaga.mjs";
+import { mushokuTenseiSylphietteLittleJelly } from "./mushoku-tensei/mushoku-tensei-sylphiette-little-jelly.mjs";
 import { newGameAobaNarugo1992 } from "./new-game/new-game-aoba-narugo1992.mjs";
 import { newGameHifumiNarugo1992 } from "./new-game/new-game-hifumi-narugo1992.mjs";
 import { nonNonBiyoriHotaruNotekaga } from "./non-non-biyori/non-non-biyori-hotaru-notekaga.mjs";
@@ -158,6 +159,8 @@ export const characterTable = {
   "madomagi-sayaka-eft": madomagiSayakaEft(),
   "madomagi-yachiyo-eft": madomagiYachiyoEft(),
   "mahoako-matama-notekaga": mahoakoMatamaNotekaga(),
+  "mushoku-tensei-sylphiette-little-jelly":
+    mushokuTenseiSylphietteLittleJelly(),
   "new-game-aoba-narugo1992": newGameAobaNarugo1992(),
   "new-game-hifumi-narugo1992": newGameHifumiNarugo1992(),
   "non-non-biyori-hotaru-notekaga": nonNonBiyoriHotaruNotekaga(),

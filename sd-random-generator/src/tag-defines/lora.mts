@@ -727,6 +727,17 @@ export const allLoras = [
     ],
     creator: `LittleJelly`,
   },
+  {
+    loraName: `MushokuTensei_SylphietteXL`,
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/422738/sylphiette-or-ponyxl-or-mushoku-tensei-isekai-ittara-honki-dasu?modelVersionId=471005`,
+    ),
+    characterTriggerWordsTags: [`Sylphiette`],
+    outfitTriggerTags: [`SylphietteSchoolUniform`],
+    creator: `LittleJelly`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
