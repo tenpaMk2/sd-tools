@@ -15,3 +15,5 @@ export const allSpecialTags = [
   `zettai ryouiki`,
 ] as const satisfies readonly string[];
 export type SpecialTag = (typeof allSpecialTags)[number];
+
+// TODO: when `closed eyes` , exclude `color eyes` .

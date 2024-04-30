@@ -54,3 +54,5 @@ export const upskirtPreset = {
 } as const satisfies {
   [k in string]: NormalEntry<OutfitTag>[];
 };
+
+// TODO: Move this file to anywhere.
