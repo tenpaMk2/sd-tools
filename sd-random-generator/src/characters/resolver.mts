@@ -14,6 +14,7 @@ import { danmachiEinaEft } from "./danmachi/danmachi-eina-eft.mjs";
 import { danmachiHaruhimeEft } from "./danmachi/danmachi-haruhime-eft.mjs";
 import { danmachiHestiaEft } from "./danmachi/danmachi-hestia-eft.mjs";
 import { danmachiHestiaNochekaiser } from "./danmachi/danmachi-hestia-nochekaiser.mjs";
+import { danmachiHestia } from "./danmachi/danmachi-hestia.mjs";
 import { danmachiLiliEft } from "./danmachi/danmachi-lili-eft.mjs";
 import { danmachiRyuEft } from "./danmachi/danmachi-ryu-eft.mjs";
 import { dumbbellAkemiWiz } from "./dumbbell/dumbbell-akemi-wiz.mjs";
@@ -73,6 +74,7 @@ import { toLoveRuHarunaEft } from "./to-love-ru/to-love-ru-haruna-eft.mjs";
 import { toLoveRuLalaEft } from "./to-love-ru/to-love-ru-lala-eft.mjs";
 import { toLoveRuMeaEft } from "./to-love-ru/to-love-ru-mea-eft.mjs";
 import { toLoveRuMomoEft } from "./to-love-ru/to-love-ru-momo-eft.mjs";
+import { toLoveRuMomoLancelot } from "./to-love-ru/to-love-ru-momo-lancelot.mjs";
 import { toLoveRuNanaEft } from "./to-love-ru/to-love-ru-nana-eft.mjs";
 import { toLoveRuYamiEft } from "./to-love-ru/to-love-ru-yami-eft.mjs";
 import { toLoveRuYuiEft } from "./to-love-ru/to-love-ru-yui-eft.mjs";
@@ -126,6 +128,7 @@ export const characterTable = {
   "danmachi-haruhime-eft": danmachiHaruhimeEft(),
   "danmachi-hestia-eft": danmachiHestiaEft(),
   "danmachi-hestia-nochekaiser": danmachiHestiaNochekaiser(),
+  "danmachi-hestia": danmachiHestia(),
   "danmachi-lili-eft": danmachiLiliEft(),
   "danmachi-ryu-eft": danmachiRyuEft(),
   "dumbbell-akemi-wiz": dumbbellAkemiWiz(),
@@ -188,6 +191,7 @@ export const characterTable = {
   "to-love-ru-lala-eft": toLoveRuLalaEft(),
   "to-love-ru-mea-eft": toLoveRuMeaEft(),
   "to-love-ru-momo-eft": toLoveRuMomoEft(),
+  "to-love-ru-momo-lancelot": toLoveRuMomoLancelot(),
   "to-love-ru-nana-eft": toLoveRuNanaEft(),
   "to-love-ru-yami-eft": toLoveRuYamiEft(),
   "to-love-ru-yui-eft": toLoveRuYuiEft(),

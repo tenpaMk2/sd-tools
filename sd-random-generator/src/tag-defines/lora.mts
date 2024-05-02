@@ -738,6 +738,15 @@ export const allLoras = [
     outfitTriggerTags: [`SylphietteSchoolUniform`],
     creator: `LittleJelly`,
   },
+  {
+    loraName: `momodevilvXLPonyV1`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(`https://civitai.com/models/360361/momo-velia-deviluke`),
+    characterTriggerWordsTags: [`momodevil`],
+    outfitTriggerTags: [],
+    creator: `Lancelot69lol`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
