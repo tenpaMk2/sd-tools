@@ -9,7 +9,7 @@
     "watch:sd-tag-defines": "npm run -w sd-tag-defines watch",
     "watch:sd-random-generator": "npm run -w sd-random-generator watch",
     "watch": "run-p watch:sd-tag-defines watch:sd-random-generator",
-    "exe": "npm run -w sd-random-generator exe"
+    "exe": "npm run -w sd-random-generator exe --"
   },
   "workspaces": [
     "sd-tag-defines",
