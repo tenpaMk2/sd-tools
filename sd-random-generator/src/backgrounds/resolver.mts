@@ -33,13 +33,10 @@ export const backgroundTable = {
   "steaming-bed-sheet": {
     "backgroundType": `near-clean-floor`,
     "from-above": {
-      entries: [
-        `bed sheet`,
-        `sweat`,
-        `steam`,
-        `steaming body`,
-        // TODO: `on bed`
-      ],
+      entries: [`bed sheet`, `sweat`, `steam`, `steaming body`, `on bed`],
+    },
+    "from-horizontal": {
+      entries: [`bed sheet`, `sweat`, `steam`, `steaming body`, `on bed`],
     },
     "removeShoes": true,
   },
