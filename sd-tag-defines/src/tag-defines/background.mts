@@ -65,5 +65,7 @@ export const allBackgroundTags = [
   `white background`,
   `window`,
   `wooden floor`,
+  `on bed`,
+  `on couch`,
 ] as const satisfies readonly string[];
 export type BackgroundTag = (typeof allBackgroundTags)[number];
