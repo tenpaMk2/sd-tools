@@ -16,7 +16,12 @@
     "watch": "run-p watch:esbuild watch:declaration",
     "clean": "rimraf dist",
     "exe": "node dist/index.cjs",
-    "test": "vitest"
+    "test": "vitest",
+    "clean:sea": "rimraf dist-sea",
+    "build:sea:config": "mkdirp dist-sea && node --experimental-sea-config sea-config.json",
+    "build:sea:copy-node:mac": "cp $(command -v node) dist-sea/index && chmod a+w dist-sea/index",
+    "build:sea:postject:mac": "npx postject dist-sea/index NODE_SEA_BLOB dist-sea/sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2 --macho-segment-name NODE_SEA",
+    "build:sea:mac": "run-s clean:sea build:sea:config build:sea:copy-node:mac build:sea:postject:mac"
   },
   "publishConfig": {
     "access": "public"
@@ -30,6 +35,7 @@
   "devDependencies": {
     "@types/node": "^20.12.7",
     "esbuild": "^0.20.2",
+    "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
