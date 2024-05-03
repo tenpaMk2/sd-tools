@@ -33,7 +33,8 @@
     "tenpaMk2"
   ],
   "dependencies": {
-    "@tenpamk2/sd-tag-defines": "^1.0.0"
+    "@tenpamk2/sd-tag-defines": "^1.0.0",
+    "commander": "^12.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
