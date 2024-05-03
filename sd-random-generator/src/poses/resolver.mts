@@ -136,5 +136,3 @@ export type PoseKey = Readonly<{
   "from-below": keyof (typeof poseTable)["from-below"];
   "from-horizontal": keyof (typeof poseTable)["from-horizontal"];
 }>;
-
-// TODO: Karaoke
