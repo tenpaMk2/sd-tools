@@ -3,11 +3,9 @@ import { getKeys } from "../libs/utility.mjs";
 import { PoseKey, poseTable } from "../poses/resolver.mjs";
 import { PoseSetting } from "../setting-define.mjs";
 
-const defaultPreset = [
-  { key: `near-clean-floor-from-above-wariza` },
-  { key: `near-clean-floor-from-above-lying` },
-  { key: `standing-from-horizontal-contrapposto` },
-] as const satisfies PoseSetting[];
+const defaultPreset = getKeys(poseTable).map((key) => ({
+  key,
+})) satisfies PoseSetting[];
 
 const monoPosesPresetsMap = Object.fromEntries(
   getKeys(poseTable).reduce(

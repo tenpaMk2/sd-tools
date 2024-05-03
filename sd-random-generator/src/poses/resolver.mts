@@ -5,7 +5,14 @@ import { NormalEntry } from "../prompt-define.mjs";
 import { PoseTag } from "../tag-defines/adapter.mjs";
 import { nearCleanFloorFromAboveLying } from "./common/near-clean-floor-from-above-lying.mjs";
 import { nearCleanFloorFromAboveWariza } from "./common/near-clean-floor-from-above-wariza.mjs";
+import { nearCleanFloorFromHorizontalAllFoursFromBehind } from "./common/near-clean-floor-from-horizontal-all-fours-from-behind.mjs";
+import { nearCleanFloorFromHorizontalAllFours } from "./common/near-clean-floor-from-horizontal-all-fours.mjs";
+import { nearCleanFloorFromHorizontalKneelingSpreadLegs } from "./common/near-clean-floor-from-horizontal-kneeling-spread-legs.mjs";
+import { standingFromAboveFromSideLookingAhead } from "./common/standing-from-above-from-side-looking-ahead.mjs";
+import { standingFromAboveGrabbingOwnBreasts } from "./common/standing-from-above-grabbing-own-breasts.mjs";
+import { standingFromBelowSquatting } from "./common/standing-from-below-squatting.mjs";
 import { standingFromHorizontalContrapposto } from "./common/standing-from-horizontal-contrapposto.mjs";
+import { standingFromHorizontalHeartHands } from "./common/standing-from-horizontal-heart-hands.mjs";
 
 export type PoseSpecialVisibility = Omit<
   OutfitDefine["specialVisibility"],
@@ -35,7 +42,19 @@ export type PoseDefine = {
 export const poseTable = {
   "near-clean-floor-from-above-wariza": nearCleanFloorFromAboveWariza,
   "near-clean-floor-from-above-lying": nearCleanFloorFromAboveLying,
+  "near-clean-floor-from-horizontal-all-fours-from-behind":
+    nearCleanFloorFromHorizontalAllFoursFromBehind,
+  "near-clean-floor-from-horizontal-all-fours":
+    nearCleanFloorFromHorizontalAllFours,
+  "near-clean-floor-from-horizontal-kneeling-spread-legs":
+    nearCleanFloorFromHorizontalKneelingSpreadLegs,
+  "standing-standing-from-above-from-side-looking-ahead":
+    standingFromAboveFromSideLookingAhead,
+  "standing-from-above-grabbing-own-breasts":
+    standingFromAboveGrabbingOwnBreasts,
+  "standing-from-below-squatting": standingFromBelowSquatting,
   "standing-from-horizontal-contrapposto": standingFromHorizontalContrapposto,
+  "standing-from-horizontal-heart-hands": standingFromHorizontalHeartHands,
 } as const satisfies {
   [k: string]: PoseDefine;
 };

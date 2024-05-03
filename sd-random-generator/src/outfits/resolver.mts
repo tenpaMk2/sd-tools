@@ -1,6 +1,9 @@
 import { LoraEntry, NormalEntry } from "../prompt-define.mjs";
 import { OutfitTag } from "../tag-defines/adapter.mjs";
 import { LoraOutfitTriggerWordsTag } from "../tag-defines/lora.mjs";
+import { babydoll } from "./common/babydoll.mjs";
+import { bikini } from "./common/bikini.mjs";
+import { bridalLingerie } from "./common/bridal-lingerie.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
 import { kaguyaSamaShuuchiinAcademySchoolUniform } from "./kaguya-sama/shuuchiin-academy-school-uniform.mjs";
 
@@ -90,6 +93,9 @@ export type OutfitDefine = Readonly<{
 
 export const outfitTable = {
   "test-outfit": testOutfit(),
+  "babydoll": babydoll(),
+  "bikini": bikini(),
+  "bridal-lingerie": bridalLingerie(),
   "kaguya-sama-shuuchiin-academy-school-uniform-ai":
     kaguyaSamaShuuchiinAcademySchoolUniform(`ai`),
   "kaguya-sama-shuuchiin-academy-school-uniform-chika":

@@ -18,6 +18,9 @@ export const backgroundsPreset = {
     { key: `ocean` },
     { key: `steaming-bed-sheet` },
   ],
+  "babydoll": [{ key: `steaming-bed-sheet` }],
+  "bikini": [{ key: `steaming-bed-sheet` }],
+  "bridal-lingerie": [{ key: `steaming-bed-sheet` }],
   "kaguya-sama-shuuchiin-academy-school-uniform-ai": [
     { key: `cafe` },
     { key: `ocean` },
