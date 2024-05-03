@@ -17,7 +17,7 @@ export const machineSetting = {
 
 const portrait = {
   key: `portrait`,
-  fixedPrompt: `score_9, score_8_up, score_7_up, rating_questionable, 1girl, solo,\n`,
+  fixedPrompt: `score_9, score_8_up, score_7_up, rating_questionable, 1girl, solo, megami magazine,\n`,
   batchGeneration: 20,
   optionsBodyJson: {
     ...checkpointAndVAEPreset.sdxl.seventhAnime,
