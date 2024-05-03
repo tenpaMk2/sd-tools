@@ -1,7 +1,9 @@
-import { PoseDefine } from "../../resolver.mjs";
+import { PoseDefine } from "../resolver.mjs";
 
-export const fromHorizontalPortrait = {
-  entries: [`portrait`, `looking at viewer`],
+export const nearCleanFloorFromAboveLying = {
+  expectedBackgroundType: `near-clean-floor`,
+  cameraAngle: `from-above`,
+  entries: [`lying`, `on back`, `looking at viewer`],
   visibility: {
     frontHead: true,
     sideHead: true,
@@ -9,15 +11,15 @@ export const fromHorizontalPortrait = {
     frontBreast: true,
     sideBreast: true,
     backBreast: false,
-    frontMidriff: false,
-    sideMidriff: false,
+    frontMidriff: true,
+    sideMidriff: true,
     backMidriff: false,
-    frontHipAndThigh: false,
-    sideHipAndThigh: false,
+    frontHipAndThigh: true,
+    sideHipAndThigh: true,
     backHipAndThigh: false,
     foot: false,
-    wristAndHand: false,
-    aroundBody: false,
+    wristAndHand: true,
+    aroundBody: true,
   },
   specialVisibility: {
     armpits: false,
@@ -28,7 +30,9 @@ export const fromHorizontalPortrait = {
     backboob: false,
     underboobLevel: `from horizontal`,
     zettaiRyouiki: false,
-    insideOfThighs: false,
+    insideOfThighs: true,
     upskirt: false,
   },
 } as const satisfies PoseDefine;
+
+// TODO: Overwrite

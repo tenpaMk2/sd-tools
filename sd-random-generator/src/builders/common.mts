@@ -10,7 +10,13 @@ import {
   allVisibilityKeys,
   tagVisibilities,
 } from "@tenpamk2/sd-tag-defines";
-import { CollectedDatas } from "../collector.mjs";
+import {
+  BackgroundCollectedData,
+  CharacterCollectedData,
+  OutfitCollectedData,
+  PoseCollectedData,
+  RootCollectedData,
+} from "../collector.mjs";
 import { OutfitDefine, UnderboobLevelOrder } from "../outfits/resolver.mjs";
 import {
   PoseSpecialVisibility,
@@ -182,11 +188,11 @@ const takeOffShoes = (
 };
 
 const buildCore = (
-  rootData: CollectedDatas[number],
-  characterData: CollectedDatas[number]["characters"][number],
-  outfitData: CollectedDatas[number]["characters"][number]["outfits"][number],
-  backgroundData: CollectedDatas[number]["characters"][number]["outfits"][number]["backgrounds"][number],
-  poseData: CollectedDatas[number]["characters"][number]["outfits"][number]["backgrounds"][number]["poses"][number],
+  rootData: RootCollectedData,
+  characterData: CharacterCollectedData,
+  outfitData: OutfitCollectedData,
+  backgroundData: BackgroundCollectedData,
+  poseData: PoseCollectedData,
 ) => {
   const loraCharacter = PatternCollection.createLora(
     characterData.character.lora,
@@ -236,8 +242,9 @@ const buildCore = (
     ? takeOffShoes(outfitAndExposure, outfitData.outfit.whenRemoveShoes)
     : outfitAndExposure;
 
+  const cameraAngle = poseData.pose.cameraAngle;
   const background = PatternCollection.create<BackgroundTag>(
-    backgroundData.background.entries,
+    backgroundData.background[cameraAngle]!.entries,
   );
 
   const pose = PatternCollection.create<PoseTag>(poseData.pose.entries);
@@ -357,16 +364,16 @@ const buildCore = (
 };
 
 const buildPose = (
-  generationData: CollectedDatas[number],
-  characterData: CollectedDatas[number]["characters"][number],
-  outfitData: CollectedDatas[number]["characters"][number]["outfits"][number],
-  backgroundData: CollectedDatas[number]["characters"][number]["outfits"][number]["backgrounds"][number],
-  poseData: CollectedDatas[number]["characters"][number]["outfits"][number]["backgrounds"][number]["poses"][number],
+  rootData: RootCollectedData,
+  characterData: CharacterCollectedData,
+  outfitData: OutfitCollectedData,
+  backgroundData: BackgroundCollectedData,
+  poseData: PoseCollectedData,
 ) => ({
   key: poseData.key,
   probability: poseData.probability,
   patternCollection: buildCore(
-    generationData,
+    rootData,
     characterData,
     outfitData,
     backgroundData,
@@ -376,10 +383,10 @@ const buildPose = (
 });
 
 const buildBackground = (
-  rootData: CollectedDatas[number],
-  characterData: CollectedDatas[number]["characters"][number],
-  outfitData: CollectedDatas[number]["characters"][number]["outfits"][number],
-  backgroundData: CollectedDatas[number]["characters"][number]["outfits"][number]["backgrounds"][number],
+  rootData: RootCollectedData,
+  characterData: CharacterCollectedData,
+  outfitData: OutfitCollectedData,
+  backgroundData: BackgroundCollectedData,
 ) => {
   const poses = backgroundData.poses.map((pose) =>
     buildPose(rootData, characterData, outfitData, backgroundData, pose),
@@ -402,9 +409,9 @@ const buildBackground = (
 };
 
 const buildOutfit = (
-  rootData: CollectedDatas[number],
-  characterData: CollectedDatas[number]["characters"][number],
-  outfitData: CollectedDatas[number]["characters"][number]["outfits"][number],
+  rootData: RootCollectedData,
+  characterData: CharacterCollectedData,
+  outfitData: OutfitCollectedData,
 ) => {
   const backgrounds = outfitData.backgrounds.map((backgroundData) =>
     buildBackground(rootData, characterData, outfitData, backgroundData),
@@ -427,8 +434,8 @@ const buildOutfit = (
 };
 
 const buildCharacter = (
-  rootData: CollectedDatas[number],
-  characterData: CollectedDatas[number]["characters"][number],
+  rootData: RootCollectedData,
+  characterData: CharacterCollectedData,
 ) => {
   const outfits = characterData.outfits.map((outfitData) =>
     buildOutfit(rootData, characterData, outfitData),
@@ -450,7 +457,7 @@ const buildCharacter = (
   };
 };
 
-const buildRoot = (rootData: CollectedDatas[number]) => {
+const buildRoot = (rootData: RootCollectedData) => {
   const characters = rootData.characters.map((characterData) =>
     buildCharacter(rootData, characterData),
   );
@@ -475,4 +482,5 @@ const buildRoot = (rootData: CollectedDatas[number]) => {
   };
 };
 
-export const build = (rootDatas: CollectedDatas) => rootDatas.map(buildRoot);
+export const build = (rootDatas: RootCollectedData[]) =>
+  rootDatas.map(buildRoot);

@@ -1,6 +1,7 @@
 import { characterTable } from "./characters/resolver.mjs";
 import {
   BaseModel,
+  CharacterSetting,
   Checkpoint,
   Setting,
   allCheckpoints,
@@ -17,20 +18,22 @@ const searchSupportedBaseModels = (loraName: LoraNameTag): BaseModel[] => {
 };
 
 const validateCharacter = (
-  character: Setting["characters"][number],
+  character: CharacterSetting,
   baseModel: Checkpoint["baseModel"],
 ): void => {
-  const characterData = characterTable[character.key];
-  if (!characterData.lora) return;
+  for (const characterKey of character.keys) {
+    const characterData = characterTable[characterKey];
+    if (!characterData.lora) continue;
 
-  const loraName = characterData.lora.tag;
-  const supportedBaseModels = searchSupportedBaseModels(loraName);
+    const loraName = characterData.lora.tag;
+    const supportedBaseModels = searchSupportedBaseModels(loraName);
 
-  if (supportedBaseModels.includes(baseModel)) {
-    // Valid!!
-    return;
+    if (supportedBaseModels.includes(baseModel)) {
+      // Valid!!
+      continue;
+    }
+    throw new Error(`Base model ${baseModel} is not supported for ${loraName}`);
   }
-  throw new Error(`Base model ${baseModel} is not supported for ${loraName}`);
 };
 
 const searchBaseModel = (

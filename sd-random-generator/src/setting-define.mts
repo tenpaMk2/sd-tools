@@ -1,4 +1,4 @@
-import { BackgroundKey, BackgroundType } from "./backgrounds/resolver.mjs";
+import { BackgroundKey } from "./backgrounds/resolver.mjs";
 import { CharacterKey } from "./characters/resolver.mjs";
 import { OutfitKey } from "./outfits/resolver.mjs";
 import { PoseKey } from "./poses/resolver.mjs";
@@ -54,32 +54,27 @@ type Sampler = (typeof allSamplers)[number];
 const allUpscalers = [`4x-AnimeSharp`] as const satisfies string[];
 type Upscaler = (typeof allUpscalers)[number];
 
-export type PoseSetting<T extends BackgroundType> = Readonly<{
-  key: PoseKey[T];
+export type PoseSetting = Readonly<{
+  key: PoseKey;
   probability?: number;
 }>;
 
-export type BackgroundSetting<T extends BackgroundType> = Readonly<{
-  type: T;
-  key: BackgroundKey[T];
+export type BackgroundSetting = Readonly<{
+  key: BackgroundKey;
   probability?: number;
-  poses: PoseSetting<T>[];
+  poses?: PoseSetting[];
 }>;
 
 export type OutfitSetting = Readonly<{
   key: OutfitKey;
   probability?: number;
-  backgrounds: (
-    | BackgroundSetting<`from-horizontal`>
-    | BackgroundSetting<`from-below`>
-    | BackgroundSetting<`from-above`>
-  )[];
+  backgrounds?: BackgroundSetting[];
 }>;
 
 export type CharacterSetting = Readonly<{
-  key: CharacterKey;
+  keys: CharacterKey[];
   probability?: number;
-  outfits: OutfitSetting[];
+  outfits?: OutfitSetting[];
 }>;
 
 export type GlobalSetting = Readonly<{

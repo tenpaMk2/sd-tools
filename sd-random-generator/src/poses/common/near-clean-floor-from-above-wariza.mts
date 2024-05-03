@@ -1,7 +1,16 @@
-import { PoseDefine } from "../../resolver.mjs";
+import { PoseDefine } from "../resolver.mjs";
 
-export const fromHorizontalV = {
-  entries: [`cowboy shot`, `v`, `hand up`, `looking at viewer`],
+export const nearCleanFloorFromAboveWariza = {
+  expectedBackgroundType: `near-clean-floor`,
+  cameraAngle: `from-above`,
+  entries: [
+    `from above`,
+    `wariza`,
+    `hands on lap`,
+    `breasts`,
+    `looking at viewer`,
+    `looking up`,
+  ],
   visibility: {
     frontHead: true,
     sideHead: true,
@@ -15,7 +24,7 @@ export const fromHorizontalV = {
     frontHipAndThigh: true,
     sideHipAndThigh: true,
     backHipAndThigh: false,
-    foot: false,
+    foot: true,
     wristAndHand: true,
     aroundBody: true,
   },
@@ -26,9 +35,9 @@ export const fromHorizontalV = {
     cleavage: true,
     sideboob: false,
     backboob: false,
-    underboobLevel: `from horizontal`,
-    zettaiRyouiki: true,
-    insideOfThighs: true,
+    underboobLevel: `invisible`,
+    zettaiRyouiki: false,
+    insideOfThighs: false,
     upskirt: false,
   },
 } as const satisfies PoseDefine;

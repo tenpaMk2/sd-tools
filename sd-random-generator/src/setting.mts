@@ -3,7 +3,6 @@ import {
   checkpointAndVAEPreset,
   imageResolutionPreset,
 } from "./setting-presets/root.mjs";
-import { generateCharactersSetting } from "./setting-presets/utility.mjs";
 
 export const globalSetting = {
   promptExportingBatchSize: 1000,
@@ -21,7 +20,7 @@ const portrait = {
   fixedPrompt: `score_9, score_8_up, score_7_up, rating_questionable, 1girl, solo,\n`,
   batchGeneration: 20,
   optionsBodyJson: {
-    ...checkpointAndVAEPreset.sdxl.ebaraPony,
+    ...checkpointAndVAEPreset.sdxl.seventhAnime,
   },
   txt2imgBodyJson: {
     negative_prompt: `cameltoe, empty eyes, realistic`,
@@ -30,16 +29,20 @@ const portrait = {
     ...imageResolutionPreset.sdxl.portrait,
     cfg_scale: 5,
     denoising_strength: 0.2,
-    enable_hr: true,
+    enable_hr: false,
     hr_scale: 2,
     hr_upscaler: "4x-AnimeSharp",
     hr_second_pass_steps: 0,
   },
   characters: [
-    ...generateCharactersSetting({
-      characterKeys: [`isekai-ojisan-alicia-nochekaiser`],
-      outfitKeys: [`cosplay`],
-    }),
+    {
+      keys: [
+        `kaguya-sama-ai`,
+        `kaguya-sama-chika-nochekaiser`,
+        `kaguya-sama-kaguya`,
+        `kaguya-sama-miko`,
+      ],
+    },
   ],
 } as const satisfies Setting;
 
