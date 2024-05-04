@@ -1,7 +1,7 @@
 import { build } from "./builders/common.mjs";
-import { setting } from "./index.mjs";
 import { PatternCollection } from "./prompt-define.mjs";
 import { GenerationSetting } from "./setting-define.mjs";
+import { setting } from "./setting.mjs";
 import { Tag } from "./tag-defines/adapter.mjs";
 import { LoraNameTag } from "./tag-defines/lora.mjs";
 

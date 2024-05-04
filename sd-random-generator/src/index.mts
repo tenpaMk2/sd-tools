@@ -7,10 +7,8 @@ import { collect } from "./collector.mjs";
 import { exportPrompts } from "./exporter.mjs";
 import { generate } from "./generator.mjs";
 import { Setting } from "./setting-define.mjs";
-import { staticSetting } from "./setting.mjs";
+import { setSetting, setting, staticSetting } from "./setting.mjs";
 import { validateSettings } from "./validator.mjs";
-
-export let setting: Setting;
 
 const program = new Command();
 program.name(packageJson.name);
@@ -29,7 +27,8 @@ const readYAML = (yamlPath: string): Setting => {
 };
 
 const main = async () => {
-  setting = options.yaml ? readYAML(options.yaml) : staticSetting;
+  const newSetting = options.yaml ? readYAML(options.yaml) : staticSetting;
+  setSetting(newSetting);
 
   console.log(setting.generations.map(({ key }) => key));
   console.log(`Prompt build`);

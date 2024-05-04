@@ -57,6 +57,10 @@ export const staticSetting = {
   generations: [portrait, landscape],
 } as const satisfies Setting;
 
+export let setting: Setting;
+
+export const setSetting = (newSetting: Setting) => (setting = newSetting);
+
 // TODO: Move vitest ↓
 // console.assert(
 //   settings.some((s) => 0 < s.batchGeneration),

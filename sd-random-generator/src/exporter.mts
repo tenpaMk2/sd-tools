@@ -1,9 +1,9 @@
 import { mkdir, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { build } from "./builders/common.mjs";
-import { setting } from "./index.mjs";
 import { exportArray, exportAsDynamicPrompts } from "./libs/utility.mjs";
 import { PatternCollection } from "./prompt-define.mjs";
+import { setting } from "./setting.mjs";
 import { Tag } from "./tag-defines/adapter.mjs";
 import { LoraNameTag } from "./tag-defines/lora.mjs";
 
