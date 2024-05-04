@@ -1,9 +1,9 @@
 import { mkdir, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { build } from "./builders/common.mjs";
+import { setting } from "./index.mjs";
 import { exportArray, exportAsDynamicPrompts } from "./libs/utility.mjs";
 import { PatternCollection } from "./prompt-define.mjs";
-import { globalSetting } from "./setting.mjs";
 import { Tag } from "./tag-defines/adapter.mjs";
 import { LoraNameTag } from "./tag-defines/lora.mjs";
 
@@ -37,7 +37,7 @@ const exportRecursively = async (
   // Export random prompts when there are children.
 
   const randomPrompts = Array.from(
-    { length: globalSetting.maxExportingRandomPrompts },
+    { length: setting.exporting.maxExportingRandomPrompts },
     () => patternCollection.pickOnePrompt(),
   );
   randomPrompts.sort();
@@ -45,14 +45,14 @@ const exportRecursively = async (
     exportArray(
       join(
         parentDir,
-        `${key}-random-${globalSetting.maxExportingRandomPrompts}.txt`,
+        `${key}-random-${setting.exporting.maxExportingRandomPrompts}.txt`,
       ),
       randomPrompts,
     ),
     exportAsDynamicPrompts(
       join(
         parentDir,
-        `${key}-random-${globalSetting.maxExportingRandomPrompts}-dynamic-prompts.txt`,
+        `${key}-random-${setting.exporting.maxExportingRandomPrompts}-dynamic-prompts.txt`,
       ),
       randomPrompts,
     ),

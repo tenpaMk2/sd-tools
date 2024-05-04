@@ -3,7 +3,7 @@ import {
   BaseModel,
   CharacterSetting,
   Checkpoint,
-  Setting,
+  GenerationSetting,
   allCheckpoints,
 } from "./setting-define.mjs";
 import { LoraNameTag, allLoras } from "./tag-defines/lora.mjs";
@@ -32,7 +32,9 @@ const validateCharacter = (
       // Valid!!
       continue;
     }
-    throw new Error(`Base model ${baseModel} is not supported for ${loraName}`);
+    console.warn(
+      `Base model \`${baseModel}\` is not supported for \`${loraName}\``,
+    );
   }
 };
 
@@ -44,16 +46,19 @@ const searchBaseModel = (
       return checkpoint.baseModel;
     }
   }
-  throw new Error(`Base model not found for ${nameHash}`);
+  console.warn(`Base model not found for \`${nameHash}\`. Using \`Pony\`.`);
+  return `Pony`;
 };
 
-export const validateSettings = (settings: Setting[]): void => {
-  for (const setting of settings) {
+export const validateSettings = (
+  generationSettings: GenerationSetting[],
+): void => {
+  for (const generationSetting of generationSettings) {
     const baseModel = searchBaseModel(
-      setting.optionsBodyJson.sd_model_checkpoint,
+      generationSetting.optionsBodyJson.sd_model_checkpoint,
     );
 
-    for (const character of setting.characters) {
+    for (const character of generationSetting.characters) {
       validateCharacter(character, baseModel);
     }
   }

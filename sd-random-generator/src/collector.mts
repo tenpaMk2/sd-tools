@@ -5,9 +5,9 @@ import { PoseDefine, poseTable } from "./poses/resolver.mjs";
 import {
   BackgroundSetting,
   CharacterSetting,
+  GenerationSetting,
   OutfitSetting,
   PoseSetting,
-  Setting,
 } from "./setting-define.mjs";
 import { backgroundsPreset } from "./setting-presets/background.mjs";
 import { outfitsPreset } from "./setting-presets/outfit.mjs";
@@ -84,13 +84,13 @@ export type RootCollectedData = {
   probability: number;
   fixedPrompt: string;
   batchGeneration: number;
-  optionsBodyJson: Setting["optionsBodyJson"];
-  txt2imgBodyJson: Setting["txt2imgBodyJson"];
+  optionsBodyJson: GenerationSetting["optionsBodyJson"];
+  txt2imgBodyJson: GenerationSetting["txt2imgBodyJson"];
   characters: CharacterCollectedData[];
 };
 
-export const collect = (settings: Setting[]) =>
-  settings.map(
+export const collect = (generationSettings: GenerationSetting[]) =>
+  generationSettings.map(
     ({
       key,
       probability,

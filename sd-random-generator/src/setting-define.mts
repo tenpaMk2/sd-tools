@@ -77,31 +77,7 @@ export type CharacterSetting = Readonly<{
   outfits?: OutfitSetting[];
 }>;
 
-export type GlobalSetting = Readonly<{
-  /**
-   * The number of prompts to be exported at once.
-   * Increase or decrease this value to adjust the memory usage.
-   */
-  promptExportingBatchSize: number;
-
-  /**
-   * The maximum number of random prompts to be exported.
-   */
-  maxExportingRandomPrompts: number;
-
-  /**
-   * If `true`, the generation continues forever.
-   * After the last setting is generated, the first setting is used.
-   */
-  generateForever: boolean;
-}>;
-
-export type MachineSetting = Readonly<{
-  ip: string;
-  port: number;
-}>;
-
-export type Setting = Readonly<{
+export type GenerationSetting = Readonly<{
   key: string; // Generation name.
   probability?: number;
   fixedPrompt: string;
@@ -163,6 +139,34 @@ export type Setting = Readonly<{
     hr_second_pass_steps: 0 | 30;
   };
   characters: CharacterSetting[];
+}>;
+
+export type Setting = Readonly<{
+  exporting: {
+    /**
+     * The number of prompts to be exported at once.
+     * Increase or decrease this value to adjust the memory usage.
+     */
+    promptExportingBatchSize: number;
+
+    /**
+     * The maximum number of random prompts to be exported.
+     */
+    maxExportingRandomPrompts: number;
+  };
+
+  /**
+   * If `true`, the generation continues forever.
+   * After the last setting is generated, the first setting is used.
+   */
+  generateForever: boolean;
+
+  machine: {
+    ip: string;
+    port: number;
+  };
+
+  generations: GenerationSetting[];
 }>;
 
 // TODO: Change portrait image and landscape image. (Consider `dutch angle` )

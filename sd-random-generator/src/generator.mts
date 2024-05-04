@@ -1,13 +1,13 @@
 import { build } from "./builders/common.mjs";
+import { setting } from "./index.mjs";
 import { PatternCollection } from "./prompt-define.mjs";
-import { Setting } from "./setting-define.mjs";
-import { globalSetting, machineSetting } from "./setting.mjs";
+import { GenerationSetting } from "./setting-define.mjs";
 import { Tag } from "./tag-defines/adapter.mjs";
 import { LoraNameTag } from "./tag-defines/lora.mjs";
 
 const generateEachImage = async (
   fixedPrompt: string,
-  txt2imgBodyJson: Setting["txt2imgBodyJson"],
+  txt2imgBodyJson: GenerationSetting["txt2imgBodyJson"],
   patternCollection: PatternCollection<Tag | LoraNameTag>,
 ) => {
   const json = {
@@ -34,7 +34,7 @@ const generateEachImage = async (
   };
 
   const generationResponse = await fetch(
-    `http://${machineSetting.ip}:${machineSetting.port}/sdapi/v1/txt2img`,
+    `http://${setting.machine.ip}:${setting.machine.port}/sdapi/v1/txt2img`,
     {
       method: "POST",
       headers: {
@@ -58,7 +58,7 @@ const generateRoot = async (root: ReturnType<typeof build>[number]) => {
 
   // console.time("Option setting elapsed time");
   const optionsResponse = await fetch(
-    `http://${machineSetting.ip}:${machineSetting.port}/sdapi/v1/options`,
+    `http://${setting.machine.ip}:${setting.machine.port}/sdapi/v1/options`,
     {
       method: "POST",
       headers: {
@@ -93,7 +93,7 @@ const displayProgress = async (progress: number, eta: number) => {
 const startStatusPolling = () =>
   setInterval(async () => {
     const response = await fetch(
-      `http://${machineSetting.ip}:${machineSetting.port}/sdapi/v1/progress`,
+      `http://${setting.machine.ip}:${setting.machine.port}/sdapi/v1/progress`,
       {
         method: "GET",
         headers: {
@@ -113,6 +113,6 @@ export const generate = async (settings: ReturnType<typeof build>) => {
     for (const setting of settings) {
       await generateRoot(setting);
     }
-  } while (globalSetting.generateForever);
+  } while (setting.generateForever);
   clearInterval(intervalID);
 };

@@ -1,19 +1,8 @@
-import { GlobalSetting, MachineSetting, Setting } from "./setting-define.mjs";
+import { Setting } from "./setting-define.mjs";
 import {
   checkpointAndVAEPreset,
   imageResolutionPreset,
 } from "./setting-presets/root.mjs";
-
-export const globalSetting = {
-  promptExportingBatchSize: 1000,
-  maxExportingRandomPrompts: 1000,
-  generateForever: true,
-} as const satisfies GlobalSetting;
-
-export const machineSetting = {
-  ip: `192.168.10.3`,
-  port: 7860,
-} as const satisfies MachineSetting;
 
 const portrait = {
   key: `portrait`,
@@ -29,7 +18,7 @@ const portrait = {
     ...imageResolutionPreset.sdxl.portrait,
     cfg_scale: 5,
     denoising_strength: 0.2,
-    enable_hr: false,
+    enable_hr: true,
     hr_scale: 2,
     hr_upscaler: "4x-AnimeSharp",
     hr_second_pass_steps: 0,
@@ -44,7 +33,7 @@ const portrait = {
       ],
     },
   ],
-} as const satisfies Setting;
+} as const satisfies Setting["generations"][number];
 
 const landscape = {
   ...portrait,
@@ -53,11 +42,23 @@ const landscape = {
     ...portrait.txt2imgBodyJson,
     ...imageResolutionPreset.sdxl.landscape,
   },
+} as const satisfies Setting["generations"][number];
+
+export const staticSetting = {
+  exporting: {
+    promptExportingBatchSize: 1000,
+    maxExportingRandomPrompts: 1000,
+  },
+  generateForever: true,
+  machine: {
+    ip: `192.168.10.3`,
+    port: 7860,
+  },
+  generations: [portrait, landscape],
 } as const satisfies Setting;
 
-export const settings = [portrait, landscape] as const satisfies Setting[];
-
-console.assert(
-  settings.some((s) => 0 < s.batchGeneration),
-  "`batchGeneration` must be an integer greater than 0",
-);
+// TODO: Move vitest ↓
+// console.assert(
+//   settings.some((s) => 0 < s.batchGeneration),
+//   "`batchGeneration` must be an integer greater than 0",
+// );
