@@ -92,17 +92,17 @@ export type GenerationSetting = Readonly<{
      * Checkpoint (model).
      * Recommend to use preset values from `checkpointAndVAEPreset`.
      */
-    sd_model_checkpoint: Checkpoint["nameHash"];
+    sd_model_checkpoint: string;
     /**
      * VAE.
      * Recommend to use preset values from `checkpointAndVAEPreset`.
      */
-    sd_vae: VAE;
+    sd_vae: string;
     /**
      * Saved images format.
      * Default is `png` .
      */
-    samples_format?: `png` | `jpg` | `webp`;
+    samples_format?: string;
     /**
      * Saved images quality of jpg. (Only for jpg format)
      * Default is `80` .
@@ -115,7 +115,7 @@ export type GenerationSetting = Readonly<{
   };
   txt2imgBodyJson: {
     negative_prompt: string;
-    sampler_name: Sampler;
+    sampler_name: string;
     steps: number;
     /**
      * Image width.
@@ -127,16 +127,16 @@ export type GenerationSetting = Readonly<{
      * Recommend to use preset values from `imageResolutionPreset`.
      */
     height: number;
-    cfg_scale: 2 | 3 | 4 | 5 | 6 | 7;
+    cfg_scale: number;
     /**
      * The denoising strength.
      * Recommended values are `0.2` for Pony, `0.4` for SD1.5.
      */
-    denoising_strength: 0.0 | 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6;
+    denoising_strength: number;
     enable_hr: boolean;
-    hr_scale: 1.5 | 2 | 2.5;
-    hr_upscaler: Upscaler;
-    hr_second_pass_steps: 0 | 30;
+    hr_scale: number;
+    hr_upscaler: string;
+    hr_second_pass_steps: number;
   };
   characters: CharacterSetting[];
 }>;
@@ -168,6 +168,20 @@ export type Setting = Readonly<{
 
   generations: GenerationSetting[];
 }>;
+
+export type StrictSetting = Setting & {
+  generations: (Setting["generations"][number] & {
+    optionsBodyJson: Setting["generations"][number]["optionsBodyJson"] & {
+      sd_model_checkpoint: Checkpoint["nameHash"];
+      sd_vae: VAE;
+      samples_format?: `png` | `jpg` | `webp`;
+    };
+    txt2imgBodyJson: Setting["generations"][number]["txt2imgBodyJson"] & {
+      sampler_name: Sampler;
+      hr_upscaler: Upscaler;
+    };
+  })[];
+};
 
 // TODO: Change portrait image and landscape image. (Consider `dutch angle` )
 // TODO: Support 2 girls setting.

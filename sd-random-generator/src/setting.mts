@@ -1,4 +1,4 @@
-import { Setting } from "./setting-define.mjs";
+import { Setting, StrictSetting } from "./setting-define.mjs";
 import {
   checkpointAndVAEPreset,
   imageResolutionPreset,
@@ -55,7 +55,7 @@ export const staticSetting = {
     port: 7860,
   },
   generations: [portrait, landscape],
-} as const satisfies Setting;
+} as const satisfies StrictSetting;
 
 export let setting: Setting;
 

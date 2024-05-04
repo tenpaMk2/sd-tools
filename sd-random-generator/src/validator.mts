@@ -4,6 +4,7 @@ import {
   CharacterSetting,
   Checkpoint,
   GenerationSetting,
+  Setting,
   allCheckpoints,
 } from "./setting-define.mjs";
 import { LoraNameTag, allLoras } from "./tag-defines/lora.mjs";
@@ -39,7 +40,7 @@ const validateCharacter = (
 };
 
 const searchBaseModel = (
-  nameHash: Checkpoint["nameHash"],
+  nameHash: Setting["generations"][number]["optionsBodyJson"]["sd_model_checkpoint"],
 ): Checkpoint["baseModel"] => {
   for (const checkpoint of allCheckpoints) {
     if (checkpoint.nameHash === nameHash) {
