@@ -24,7 +24,7 @@ const validateCharacter = (
 ): void => {
   for (const characterKey of character.keys) {
     const characterData = characterTable[characterKey];
-    if (!characterData.lora) continue;
+    if (!characterData?.lora) continue; // Need `?.` because of custom characters.
 
     const loraName = characterData.lora.tag;
     const supportedBaseModels = searchSupportedBaseModels(loraName);

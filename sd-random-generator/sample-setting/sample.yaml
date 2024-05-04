@@ -7,6 +7,50 @@ generateForever: true
 machine:
   ip: "192.168.10.3"
   port: 7860
+customDefine:
+  characters:
+    test-character:
+      # 🇯🇵: キャラLoraを想定しています。それ以外のLoraは `fixedPrompt` に設定してください。
+      # 🇺🇸: Character Loras are assumed. All other Lora should be set in `fixedPrompt`.
+      lora:
+        # ex: `chika-fujiwara-s3-ponyxl-lora-nochekaiser`
+        tag: "character-lora-name"
+        # 🇯🇵: LoraのWeightを可変にできます。 `probability` を大きくすると、そのWeightでの生成確率が高まります。
+        # 🇺🇸: Lora's weight can be varied. Increasing `probability` will increase the probability of generation at that weight.
+        probabilityAndWeights:
+          - probability: 1
+            weight: 1
+          - probability: 1
+            weight: 0.8
+      # 🇯🇵: Lora固有のキャラクタトリガワードがあれば配列で指定してください。
+      # 🇺🇸: Specify Lora-specific character trigger words as Array, if needed.
+      loraCharacterTriggerWordEntries: []
+      seriesNameEntries:
+        - "anime series title name"
+      characterNameEntries:
+        - "character name"
+      characterFeatureEntries:
+        - "red eyes"
+        - "long hair"
+        - "black hair"
+        - "thick thighs"
+        # 🇯🇵: いくつかのタグは📦のタグと違い、部位の指定が必要です。(ドキュメント整備中)
+        # 🇺🇸: Some tags, unlike tags in 📦, require the specification of the part. (Docs are WIP.)
+        # 🇯🇵: これらのタグは指定ポーズで見える場合にのみ有効で、部位指定なしのタグに変換されます。
+        # 🇺🇸: These tags are valid only when visible in the specified pose and are converted to no part-specific tags.
+        - "red hair bow" # → `red bow`
+        # 🇯🇵: 未定義のタグは常に有効扱いです。
+        # 🇺🇸: Undefined tags are always valid.
+        - "undefined tag"
+      breastSize: "large breasts"
+      fang: false
+      emotionEntries:
+        - "blush"
+        - - entries:
+              - "smile"
+            probability: 2
+          - entries:
+              - "scowl"
 generations:
   - key: portrait
     fixedPrompt: |
@@ -33,4 +77,4 @@ generations:
     characters:
       - keys:
           - kaguya-sama-ai
-          - kaguya-sama-kaguya
+          - test-character

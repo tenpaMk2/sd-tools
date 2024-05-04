@@ -28,7 +28,9 @@ const main = async () => {
 
   validateSettings(setting.generations);
 
-  const collectedDatas = collect(setting.generations);
+  const collectedDatas = collect(setting.generations, {
+    customDefine: setting.customDefine,
+  });
 
   const generationDatas = build(collectedDatas);
 

@@ -42,6 +42,24 @@ const validate = (yaml: any) => {
   validateType(yaml?.machine?.port, [`number`], `yaml.machine.port`);
   validateArray(yaml?.generations, `yaml.generations`);
 
+  validateType(
+    yaml?.customDefine,
+    [`object`, `undefined`],
+    `yaml.customDefine`,
+  );
+  if (yaml.customDefine) {
+    validateType(
+      yaml.customDefine.characters,
+      [`object`, `undefined`],
+      `yaml.customDefine.characters`,
+    );
+    validateType(
+      yaml.customDefine.outfits,
+      [`object`, `undefined`],
+      `yaml.customDefine.outfits`,
+    );
+  }
+
   for (const [index, generation] of yaml.generations.entries()) {
     validateType(generation.key, [`string`], `generation[${index}].key`);
     validateType(

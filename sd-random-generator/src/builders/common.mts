@@ -38,12 +38,18 @@ import {
 const separateByVisibility = <T extends CharacterFeatureTag | OutfitTag>(
   pattern: Pattern<T>,
 ) => {
-  const filter = (tag: T, part: VisibilityKeys) => tagVisibilities[tag][part];
+  const filterCB = (tag: T, part: VisibilityKeys) => {
+    if (tag in tagVisibilities) {
+      return tagVisibilities[tag][part];
+    }
+    // The tag in Custom Define is always visible.
+    return true;
+  };
 
   const result = allVisibilityKeys.reduce(
     (prev, part) => ({
       ...prev,
-      [part]: pattern.filter(({ tag }) => filter(tag, part)),
+      [part]: pattern.filter(({ tag }) => filterCB(tag, part)),
     }),
     {},
   ) as {

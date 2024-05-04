@@ -8,10 +8,13 @@ import {
   GenerationSetting,
   OutfitSetting,
   PoseSetting,
+  Setting,
 } from "./setting-define.mjs";
 import { backgroundsPreset } from "./setting-presets/background.mjs";
 import { outfitsPreset } from "./setting-presets/outfit.mjs";
 import { posesPreset } from "./setting-presets/pose.mjs";
+
+type Option = { customDefine?: Setting["customDefine"] };
 
 export type PoseCollectedData = {
   key: string;
@@ -19,7 +22,7 @@ export type PoseCollectedData = {
   pose: PoseDefine;
 };
 
-const collectPose = ({ key, probability }: PoseSetting) =>
+const collectPose = ({ key, probability }: PoseSetting, option: Option = {}) =>
   ({
     key,
     probability: probability ?? 1,
@@ -33,7 +36,10 @@ export type BackgroundCollectedData = {
   poses: PoseCollectedData[];
 };
 
-const collectBackground = ({ key, probability, poses }: BackgroundSetting) => {
+const collectBackground = (
+  { key, probability, poses }: BackgroundSetting,
+  option: Option = {},
+) => {
   const background = backgroundTable[key];
 
   return {
@@ -56,13 +62,21 @@ export type OutfitCollectedData = {
   backgrounds: BackgroundCollectedData[];
 };
 
-const collectOutfit = ({ key, probability, backgrounds }: OutfitSetting) =>
-  ({
+const collectOutfit = (
+  { key, probability, backgrounds }: OutfitSetting,
+  option: Option = {},
+) => {
+  const outfit = outfitTable[key] ?? option.customDefine?.outfits?.[key];
+
+  if (!outfit) throw new Error(`Outfit \`${key}\` not found.`);
+
+  return {
     key,
     probability: probability ?? 1,
-    outfit: outfitTable[key],
+    outfit,
     backgrounds: (backgrounds ?? backgroundsPreset[key]).map(collectBackground),
-  }) satisfies OutfitCollectedData;
+  } satisfies OutfitCollectedData;
+};
 
 export type CharacterCollectedData = {
   key: string;
@@ -71,13 +85,26 @@ export type CharacterCollectedData = {
   outfits: OutfitCollectedData[];
 };
 
-const collectCharacter = ({ keys, probability, outfits }: CharacterSetting) =>
-  keys.map((key) => ({
-    key,
-    probability: probability ?? 1,
-    character: characterTable[key],
-    outfits: (outfits ?? outfitsPreset[key]).map(collectOutfit),
-  })) satisfies CharacterCollectedData[];
+const collectCharacter = (
+  { keys, probability, outfits }: CharacterSetting,
+  option: Option = {},
+) =>
+  keys.map((key) => {
+    const character =
+      characterTable[key] ?? option.customDefine?.characters?.[key];
+
+    if (!character) throw new Error(`Character \`${key}\` not found.`);
+
+    const targetOutfits =
+      outfits ?? outfitsPreset[key] ?? outfitsPreset.default;
+
+    return {
+      key,
+      probability: probability ?? 1,
+      character,
+      outfits: targetOutfits.map((o) => collectOutfit(o, option)),
+    };
+  }) satisfies CharacterCollectedData[];
 
 export type RootCollectedData = {
   key: string;
@@ -89,7 +116,10 @@ export type RootCollectedData = {
   characters: CharacterCollectedData[];
 };
 
-export const collect = (generationSettings: GenerationSetting[]) =>
+export const collect = (
+  generationSettings: GenerationSetting[],
+  option: Option = {},
+) =>
   generationSettings.map(
     ({
       key,
@@ -106,6 +136,6 @@ export const collect = (generationSettings: GenerationSetting[]) =>
       batchGeneration,
       optionsBodyJson,
       txt2imgBodyJson,
-      characters: characters.map(collectCharacter).flat(),
+      characters: characters.map((c) => collectCharacter(c, option)).flat(),
     }),
   ) satisfies RootCollectedData[];

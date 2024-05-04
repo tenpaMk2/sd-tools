@@ -1,6 +1,6 @@
 import { BackgroundKey } from "./backgrounds/resolver.mjs";
-import { CharacterKey } from "./characters/resolver.mjs";
-import { OutfitKey } from "./outfits/resolver.mjs";
+import { CharacterDefine, CharacterKey } from "./characters/resolver.mjs";
+import { OutfitDefine, OutfitKey } from "./outfits/resolver.mjs";
 import { PoseKey } from "./poses/resolver.mjs";
 
 export type BaseModel = `SD1.5` | `Pony` | `Animagine`;
@@ -164,6 +164,11 @@ export type Setting = Readonly<{
   machine: {
     ip: string;
     port: number;
+  };
+
+  customDefine?: {
+    characters?: { [k: string]: CharacterDefine };
+    outfits?: { [k: string]: OutfitDefine };
   };
 
   generations: GenerationSetting[];
