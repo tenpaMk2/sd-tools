@@ -1,14 +1,12 @@
 import { Command } from "commander";
-import { readFileSync } from "fs";
-import { parse } from "yaml";
 import packageJson from "../package.json";
 import { build } from "./builders/common.mjs";
 import { collect } from "./collector.mjs";
 import { exportPrompts } from "./exporter.mjs";
 import { generate } from "./generator.mjs";
-import { Setting } from "./setting-define.mjs";
 import { setSetting, setting, staticSetting } from "./setting.mjs";
 import { validateSettings } from "./validator.mjs";
+import { readSettingFromYAML } from "./yaml.mjs";
 
 const program = new Command();
 program.name(packageJson.name);
@@ -18,16 +16,10 @@ program.option(`-y, --yaml <path>`, `The path for the setting YAML file.`);
 program.parse();
 const options = program.opts();
 
-const readYAML = (yamlPath: string): Setting => {
-  const str = readFileSync(yamlPath, `utf8`);
-  const yaml = parse(str);
-
-  // TODO: validation
-  return yaml as Setting;
-};
-
 const main = async () => {
-  const newSetting = options.yaml ? readYAML(options.yaml) : staticSetting;
+  const newSetting = options.yaml
+    ? readSettingFromYAML(options.yaml)
+    : staticSetting;
   setSetting(newSetting);
 
   console.log(setting.generations.map(({ key }) => key));
