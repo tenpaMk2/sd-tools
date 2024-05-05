@@ -1,17 +1,13 @@
-import { build } from "./builders/common.mjs";
-import { PatternCollection } from "./prompt-define.mjs";
+import { RandomPicker } from "./builders/common.mjs";
 import { GenerationSetting } from "./setting-define.mjs";
 import { setting } from "./setting.mjs";
-import { Tag } from "./tag-defines/adapter.mjs";
-import { LoraNameTag } from "./tag-defines/lora.mjs";
 
 const generateEachImage = async (
-  fixedPrompt: string,
+  prompt: string,
   txt2imgBodyJson: GenerationSetting["txt2imgBodyJson"],
-  patternCollection: PatternCollection<Tag | LoraNameTag>,
 ) => {
   const json = {
-    prompt: fixedPrompt + patternCollection.pickOnePrompt(),
+    prompt,
     seed: -1,
     batch_size: 1,
     send_images: false,
@@ -48,12 +44,12 @@ const generateEachImage = async (
   console.log(infoJson.infotexts);
 };
 
-const generateRoot = async (root: ReturnType<typeof build>[number]) => {
+const generateRoot = async (randomPicker: RandomPicker) => {
   const json = {
     outdir_txt2img_samples: "outputs/",
     do_not_show_images: true,
     live_previews_enable: false,
-    ...root.optionsBodyJson,
+    ...randomPicker.rootData.optionsBodyJson,
   };
 
   // console.time("Option setting elapsed time");
@@ -70,14 +66,17 @@ const generateRoot = async (root: ReturnType<typeof build>[number]) => {
   // console.table(await optionsResponse.json());
   // console.timeEnd("Option setting elapsed time");
 
-  for (let i = 0; i < root.batchGeneration; i++) {
-    // console.time("Each generation elapsed time");
+  for (let i = 0; i < randomPicker.rootData.batchGeneration; i++) {
+    console.log(`Start picking...`);
+    console.time("picking");
+    const pickedPrompt = randomPicker.pickPrompt();
+    console.timeEnd("picking");
+    console.log(`End picking!!`);
+
     await generateEachImage(
-      root.fixedPrompt,
-      root.txt2imgBodyJson,
-      root.patternCollection,
+      `${randomPicker.rootData.fixedPrompt}${pickedPrompt}`,
+      randomPicker.rootData.txt2imgBodyJson,
     );
-    // console.timeEnd("Each generation elapsed time");
   }
 };
 
@@ -105,13 +104,13 @@ const startStatusPolling = () =>
     displayProgress(json.progress, json.eta_relative);
   }, 10000);
 
-export const generate = async (settings: ReturnType<typeof build>) => {
+export const generate = async (randomPickers: RandomPicker[]) => {
   console.log("Generating images...");
 
   const intervalID = startStatusPolling();
   do {
-    for (const setting of settings) {
-      await generateRoot(setting);
+    for (const randomPicker of randomPickers) {
+      await generateRoot(randomPicker);
     }
   } while (setting.generateForever);
   clearInterval(intervalID);

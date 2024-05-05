@@ -12,7 +12,7 @@ type DistinguishableTags = Readonly<{ [k in string]: string }>;
  * Token definition.
  * This definition is used for both normal tags and lora tags.
  */
-class Token<T extends Tag | LoraNameTag> {
+export class Token<T extends Tag | LoraNameTag> {
   readonly tag: T;
   readonly weight: number;
   readonly type: `normal` | `lora`;
@@ -353,7 +353,7 @@ export class PatternCollection<T extends Tag | LoraNameTag> {
     return this.patterns.length === 0;
   }
 
-  pickOnePrompt() {
+  pickOnePattern() {
     if (this.patterns.length === 0)
       throw new Error(`Unexpected error: Cannot pick because of no patterns.`);
 
@@ -361,13 +361,33 @@ export class PatternCollection<T extends Tag | LoraNameTag> {
     let sum = 0;
     for (const pattern of this.patterns) {
       sum += pattern.probability;
-      if (random <= sum) return pattern.toPrompt();
+      if (random <= sum) return pattern;
     }
     throw new Error(`Unexpected error: No item was picked.`);
   }
 
+  pickOnePrompt() {
+    return this.pickOnePattern().toPrompt();
+  }
+
   pickAllPrompts() {
     return this.patterns.map((p) => p.toPrompt());
+  }
+
+  static createTokensInstantly<T extends Tag>(
+    entries: NormalEntry<T>[],
+  ): Token<T>[] {
+    if (!entries || entries.length === 0) return [];
+
+    return this.create<T>(entries).pickOnePattern().tokens;
+  }
+
+  static createLoraTokensInstantly(
+    entries: LoraEntry | null,
+  ): Token<LoraNameTag>[] {
+    if (!entries) return [];
+
+    return this.createLora(entries).pickOnePattern().tokens;
   }
 
   // TODO: Fix dynamic prompts has no probability.

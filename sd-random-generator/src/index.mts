@@ -2,7 +2,6 @@ import { Command } from "commander";
 import packageJson from "../package.json";
 import { build } from "./builders/common.mjs";
 import { collect } from "./collector.mjs";
-import { exportPrompts } from "./exporter.mjs";
 import { generate } from "./generator.mjs";
 import { setSetting, setting, staticSetting } from "./setting.mjs";
 import { validateSettings } from "./validator.mjs";
@@ -32,16 +31,16 @@ const main = async () => {
     customDefine: setting.customDefine,
   });
 
-  const generationDatas = build(collectedDatas);
+  const randomPickers = build(collectedDatas);
 
-  console.log(generationDatas);
+  // console.log(randomPicker);
   console.timeEnd(`Prompt build`);
 
   // Export and generate image asynchronously at the same time.
   const promises = [
-    exportPrompts(generationDatas),
+    // exportPrompts(generationDatas),
     // exportAsCSV(join("outputs", "visibility.csv")),
-    generate(generationDatas),
+    generate(randomPickers),
   ];
   await Promise.all(promises);
 };

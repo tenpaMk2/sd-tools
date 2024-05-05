@@ -22,7 +22,7 @@ import {
   PoseSpecialVisibility,
   PoseUnderboobLevelOrder,
 } from "../poses/resolver.mjs";
-import { Pattern, PatternCollection } from "../prompt-define.mjs";
+import { PatternCollection, Token } from "../prompt-define.mjs";
 import {
   CharacterFeatureTag,
   OutfitTag,
@@ -35,458 +35,320 @@ import {
   LoraOutfitTriggerWordsTag,
 } from "../tag-defines/lora.mjs";
 
-const separateByVisibility = <T extends CharacterFeatureTag | OutfitTag>(
-  pattern: Pattern<T>,
+const setHeavyWeightOne = <T extends Tag | LoraNameTag>(
+  m: Map<T, Token<T>>,
+  token: Token<T>,
 ) => {
-  const filterCB = (tag: T, part: VisibilityKeys) => {
-    if (tag in tagVisibilities) {
-      return tagVisibilities[tag][part];
-    }
-    // The tag in Custom Define is always visible.
-    return true;
-  };
+  if (!m.has(token.tag)) {
+    m.set(token.tag, token);
+    return;
+  }
 
-  const result = allVisibilityKeys.reduce(
-    (prev, part) => ({
-      ...prev,
-      [part]: pattern.filter(({ tag }) => filterCB(tag, part)),
-    }),
-    {},
-  ) as {
-    [k in VisibilityKeys]: Pattern<T>;
-  };
-  return result;
+  if (m.get(token.tag)!.weight < token.weight) {
+    // If the tag is already in the map, replace it with the one with higher weight.
+    m.set(token.tag, token);
+  }
 };
 
 const extractVisible = <T extends CharacterFeatureTag | OutfitTag>(
-  patternCollection: PatternCollection<T>,
+  tokens: Token<T>[],
   parts: VisibilityKeys[],
 ) => {
-  const newPatterns = patternCollection.patterns.map((pattern) => {
-    const v = separateByVisibility<T>(pattern);
-    const specifiedPatterns = parts.map((part) => v[part]);
-    const concattedPattern = specifiedPatterns.reduce(
-      (previous, current) => previous.concat(current.tokens),
-      new Pattern<T>({
-        tokens: [],
-        probability: pattern.probability,
-      }),
-    );
+  const m = new Map<T, Token<T>>();
+  for (const token of tokens) {
+    for (const part of parts) {
+      if (!tagVisibilities[token.tag][part]) continue;
+      setHeavyWeightOne(m, token);
+    }
+  }
 
-    return concattedPattern;
-  });
-
-  return new PatternCollection<T>(newPatterns);
+  return [...m.values()];
 };
 
-const buildSpecialVisibility = (
+const createSpecialTokens = (
   outfit: OutfitDefine["specialVisibility"],
   pose: PoseSpecialVisibility,
   {
     breastSize,
-    upskirtPatternCollection,
-    emotionPatternCollection,
-    backgroundPatternCollection,
-    visibleFeaturePatternCollection,
-    visibleOutfitPatternCollection,
+    upskirtTokens,
+    emotionTokens,
+    backgroundTokens,
+    visibleFeatureTokens,
+    visibleOutfitTokens,
   }: {
     breastSize: BreastSizeTag;
-    upskirtPatternCollection: PatternCollection<OutfitTag>;
-    emotionPatternCollection: PatternCollection<EmotionTag | SpecialTag>;
-    backgroundPatternCollection: PatternCollection<BackgroundTag>;
-    visibleFeaturePatternCollection: PatternCollection<CharacterFeatureTag>;
-    visibleOutfitPatternCollection: PatternCollection<OutfitTag>;
+    upskirtTokens: Token<OutfitTag>[];
+    emotionTokens: Token<EmotionTag | SpecialTag>[];
+    backgroundTokens: Token<BackgroundTag>[];
+    visibleFeatureTokens: Token<CharacterFeatureTag>[];
+    visibleOutfitTokens: Token<OutfitTag>[];
   },
-) => {
-  const pcs = [] as PatternCollection<Tag>[];
-  const pushSpecial = (tag: SpecialTag) =>
-    pcs.push(PatternCollection.create<SpecialTag>([tag]));
+): Token<SpecialTag>[] => {
+  const m = new Map<SpecialTag, Token<SpecialTag>>();
+  const push = (tag: SpecialTag) => m.set(tag, new Token<SpecialTag>({ tag }));
 
   if (outfit.armpits && pose.armpits) {
-    pushSpecial(`armpits`);
+    push(`armpits`);
   }
   if (
     outfit.hangingBreasts &&
     pose.hangingBreasts &&
     BreastSizeOrder["medium breasts"] <= BreastSizeOrder[breastSize]
   ) {
-    pushSpecial(`hanging breasts`);
+    push(`hanging breasts`);
   }
   if (
     outfit.cleavage &&
     pose.cleavage &&
     BreastSizeOrder["medium breasts"] <= BreastSizeOrder[breastSize]
   ) {
-    pushSpecial(`cleavage`);
+    push(`cleavage`);
   }
   if (
     outfit.sideboob &&
     pose.sideboob &&
     BreastSizeOrder["small breasts"] <= BreastSizeOrder[breastSize]
   ) {
-    pushSpecial(`sideboob`);
+    push(`sideboob`);
   }
   if (
     outfit.backboob &&
     pose.backboob &&
     BreastSizeOrder["small breasts"] <= BreastSizeOrder[breastSize]
   ) {
-    pushSpecial(`backboob`);
+    push(`backboob`);
   }
   if (
     PoseUnderboobLevelOrder[pose.underboobLevel] <
     UnderboobLevelOrder[outfit.underboobLevel]
   ) {
-    pushSpecial(`underboob`);
+    push(`underboob`);
   }
   if (outfit.zettaiRyouiki && pose.zettaiRyouiki) {
-    pushSpecial(`zettai ryouiki`);
+    push(`zettai ryouiki`);
   }
   if (outfit.insideOfThighs && pose.insideOfThighs) {
-    pushSpecial(`ass visible through thighs`);
-    pushSpecial(`thigh gap`);
+    push(`ass visible through thighs`);
+    push(`thigh gap`);
   }
 
-  if (pose.upskirt && !upskirtPatternCollection.isEmpty()) {
-    pushSpecial(`upskirt`);
+  if (pose.upskirt && 0 < upskirtTokens.length) {
+    push(`upskirt`);
 
-    const pantyshotAdded = upskirtPatternCollection.combineIf<SpecialTag>(
-      (p) =>
-        p.tokens.some(
-          ({ tag }) => tag === `panties` || tag === `panties under pantyhose`,
-        ),
-      PatternCollection.create<SpecialTag>([`pantyshot`]),
-    );
-    pcs.push(pantyshotAdded);
+    if (
+      upskirtTokens.some(
+        ({ tag }) => tag === `panties` || tag === `panties under pantyhose`,
+      )
+    ) {
+      push(`pantyshot`);
+    }
   }
 
-  return PatternCollection.combine(pcs);
+  return [...m.values()];
 };
 
 const takeOffShoes = (
-  pc: PatternCollection<OutfitTag>,
+  tokens: Token<OutfitTag>[],
   whenRemoveShoes: OutfitDefine["whenRemoveShoes"],
 ) => {
   if (!whenRemoveShoes) {
     console.warn("`whenRemoveShoes` is `null` .");
-    return pc;
+    return tokens;
   }
 
-  const outfitsWhenRemoveShoes = PatternCollection.create(
+  const m = new Map<OutfitTag, Token<OutfitTag>>(tokens.map((t) => [t.tag, t]));
+
+  // Do nothing if shoes are not visible.
+  if (!whenRemoveShoes.excludeTags.every((tag) => m.has(tag))) return tokens;
+
+  // Remove shoes if shoes are visible.
+
+  for (const excludeTag of whenRemoveShoes.excludeTags) {
+    m.delete(excludeTag);
+  }
+
+  const additionalTokens = PatternCollection.create<OutfitTag>(
     whenRemoveShoes.additionalFootEntriesAfterRemoving,
-  );
+  ).pickOnePattern().tokens;
 
-  const added = pc.combineIf(
-    (p) =>
-      whenRemoveShoes.excludeTags.every((et) =>
-        p.tokens.some((token) => token.tag === et),
-      ),
-    outfitsWhenRemoveShoes,
-  );
+  for (const addtionalToken of additionalTokens) {
+    m.set(addtionalToken.tag, addtionalToken);
+  }
 
-  const result = added.map((p) =>
-    p.filter((token) =>
-      whenRemoveShoes.excludeTags.every((et) => et !== token.tag),
-    ),
-  );
-
-  return result;
+  return [...m.values()];
 };
 
-const buildCore = (
-  rootData: RootCollectedData,
-  characterData: CharacterCollectedData,
-  outfitData: OutfitCollectedData,
-  backgroundData: BackgroundCollectedData,
-  poseData: PoseCollectedData,
-) => {
-  const loraCharacter = PatternCollection.createLora(
+const buildCore = ({
+  characterData,
+  outfitData,
+  backgroundData,
+  poseData,
+}: {
+  characterData: CharacterCollectedData;
+  outfitData: OutfitCollectedData;
+  backgroundData: BackgroundCollectedData;
+  poseData: PoseCollectedData;
+}): Token<Tag | LoraNameTag>[] => {
+  const loraCharacterTokens = PatternCollection.createLoraTokensInstantly(
     characterData.character.lora,
   );
-  const loraCharacterTriggerWord =
-    PatternCollection.create<LoraCharacterTriggerWordsTag>(
+
+  const loraCharacterTriggerWordTokens =
+    PatternCollection.createTokensInstantly<LoraCharacterTriggerWordsTag>(
       characterData.character.loraCharacterTriggerWordEntries,
     );
-  const seriesName = PatternCollection.create<SeriesNameTag>(
-    characterData.character.seriesNameEntries,
-  );
-  const characterName = PatternCollection.create<CharacterNameTag>(
-    characterData.character.characterNameEntries,
-  );
-  const characterFeature = PatternCollection.create<CharacterFeatureTag>(
-    characterData.character.characterFeatureEntries,
-  );
-  const breastSize = PatternCollection.create<BreastSizeTag>([
-    characterData.character.breastSize,
-  ]);
-  const rawEmotion = PatternCollection.create<EmotionTag>(
+
+  const seriesNameTokens =
+    PatternCollection.createTokensInstantly<SeriesNameTag>(
+      characterData.character.seriesNameEntries,
+    );
+
+  const characterNameTokens =
+    PatternCollection.createTokensInstantly<CharacterNameTag>(
+      characterData.character.characterNameEntries,
+    );
+
+  const characterFeatureTokens =
+    PatternCollection.createTokensInstantly<CharacterFeatureTag>(
+      characterData.character.characterFeatureEntries,
+    );
+
+  const breastSizeTokens =
+    PatternCollection.createTokensInstantly<BreastSizeTag>([
+      characterData.character.breastSize,
+    ]);
+
+  const emotionTokens = PatternCollection.createTokensInstantly<EmotionTag>(
     characterData.character.emotionEntries,
   );
 
-  const emotion = rawEmotion.combineIf<SpecialTag>(
-    (p) =>
-      p.tokens.some(
-        ({ tag }) => tag === `open mouth` && characterData.character.fang,
-      ),
-    PatternCollection.create<SpecialTag>([`fang`]),
-  );
-
-  const loraOutfit = PatternCollection.createLora(
+  const loraOutfitTokens = PatternCollection.createLoraTokensInstantly(
     outfitData.outfit.lora ?? null,
   );
-  const loraOutfitTriggerWord =
-    PatternCollection.create<LoraOutfitTriggerWordsTag>(
+
+  const loraOutfitTriggerWordTokens =
+    PatternCollection.createTokensInstantly<LoraOutfitTriggerWordsTag>(
       outfitData.outfit.loraOutfitTriggerWordEntries,
     );
-  const outfitAndExposure = PatternCollection.create<OutfitTag>(
-    outfitData.outfit.outfitEntries,
-  );
-  const upskirt = PatternCollection.create<OutfitTag>(
+
+  const outfitAndExposureTokens =
+    PatternCollection.createTokensInstantly<OutfitTag>(
+      outfitData.outfit.outfitEntries,
+    );
+
+  const upskirtTokens = PatternCollection.createTokensInstantly<OutfitTag>(
     outfitData.outfit.upskirtEntries,
   );
-  const shoesRemovedOutfits = outfitData.outfit.whenRemoveShoes
-    ? takeOffShoes(outfitAndExposure, outfitData.outfit.whenRemoveShoes)
-    : outfitAndExposure;
 
   const cameraAngle = poseData.pose.cameraAngle;
-  const background = PatternCollection.create<BackgroundTag>(
-    backgroundData.background[cameraAngle]!.entries,
+  const backgroundTokens =
+    PatternCollection.createTokensInstantly<BackgroundTag>(
+      backgroundData.background[cameraAngle]!.entries,
+    );
+
+  const poseTokens = PatternCollection.createTokensInstantly<PoseTag>(
+    poseData.pose.entries,
   );
 
-  const pose = PatternCollection.create<PoseTag>(poseData.pose.entries);
+  const newEmotionTokens = emotionTokens.some(
+    ({ tag }) => tag === `open mouth` && characterData.character.fang,
+  )
+    ? [...emotionTokens, new Token<SpecialTag>({ tag: `fang` })]
+    : emotionTokens;
+
+  // TODO: bug ある場合はぬぐ
+  const shoesRemovedOutfitTokens = outfitData.outfit.whenRemoveShoes
+    ? takeOffShoes(outfitAndExposureTokens, outfitData.outfit.whenRemoveShoes)
+    : outfitAndExposureTokens;
+
   const poseVisibility = allVisibilityKeys.filter(
     (key) => poseData.pose.visibility[key],
   );
 
-  // TODO: temp
-  if (poseData.key === `undressing-from-side`) {
-    const visibleFeatures = extractVisible<CharacterFeatureTag>(
-      characterFeature,
-      poseVisibility,
-    );
-
-    const outfitsOverride = PatternCollection.create<OutfitTag>([
-      `underwear`,
-      `bra`,
-      `lace-trimmed bra`,
-      `collared shirt`,
-      `open clothes`,
-      `unbuttoned`,
-    ]);
-
-    const visibleOutfits = extractVisible<OutfitTag>(
-      outfitsOverride,
-      poseVisibility,
-    );
-
-    const emotionsOverride = PatternCollection.create<EmotionTag>([
-      `blush`,
-      `half-closed eyes`,
-      `heavy breathing`,
-      [{ entries: [`smile`] }, { entries: [`expressionless`] }],
-    ]);
-
-    const upskirtOverride = PatternCollection.create<OutfitTag>([]);
-
-    const specialVisibility = buildSpecialVisibility(
-      {
-        armpits: false,
-        hangingBreasts: false,
-        tautClothes: false,
-        cleavage: true,
-        sideboob: false,
-        backboob: false,
-        underboobLevel: `invisible`,
-        zettaiRyouiki: false,
-        insideOfThighs: false,
-      },
-      poseData.pose.specialVisibility,
-      {
-        breastSize: characterData.character.breastSize,
-        upskirtPatternCollection: upskirtOverride,
-        emotionPatternCollection: emotionsOverride,
-        backgroundPatternCollection: background,
-        visibleFeaturePatternCollection: visibleFeatures,
-        visibleOutfitPatternCollection: visibleOutfits,
-      },
-    );
-
-    return PatternCollection.combine<Tag | LoraNameTag>([
-      seriesName,
-      characterName,
-      loraCharacter,
-      loraCharacterTriggerWord,
-      visibleFeatures,
-      breastSize,
-      emotionsOverride,
-      loraOutfit,
-      loraOutfitTriggerWord,
-      visibleOutfits,
-      specialVisibility,
-      background,
-      pose,
-    ]);
-  }
-
-  const visibleFeatures = extractVisible<CharacterFeatureTag>(
-    characterFeature,
+  const visibleFeatureTokens = extractVisible<CharacterFeatureTag>(
+    characterFeatureTokens,
     poseVisibility,
   );
-  const visibleOutfits = extractVisible<OutfitTag>(
+
+  const visibleOutfitTokens = extractVisible<OutfitTag>(
     backgroundData.background.removeShoes
-      ? shoesRemovedOutfits
-      : outfitAndExposure,
+      ? shoesRemovedOutfitTokens
+      : outfitAndExposureTokens,
     poseVisibility,
   );
 
-  const specialVisibility = buildSpecialVisibility(
+  const specialTokens = createSpecialTokens(
     outfitData.outfit.specialVisibility,
     poseData.pose.specialVisibility,
     {
       breastSize: characterData.character.breastSize,
-      upskirtPatternCollection: upskirt,
-      emotionPatternCollection: emotion,
-      backgroundPatternCollection: background,
-      visibleFeaturePatternCollection: visibleFeatures,
-      visibleOutfitPatternCollection: visibleOutfits,
+      upskirtTokens,
+      emotionTokens: newEmotionTokens,
+      backgroundTokens,
+      visibleFeatureTokens,
+      visibleOutfitTokens,
     },
   );
 
-  return PatternCollection.combine<Tag | LoraNameTag>([
-    seriesName,
-    characterName,
-    loraCharacter,
-    loraCharacterTriggerWord,
-    visibleFeatures,
-    breastSize,
-    emotion,
-    loraOutfit,
-    loraOutfitTriggerWord,
-    visibleOutfits,
-    specialVisibility,
-    background,
-    pose,
-  ]);
-};
+  const m = new Map<Tag | LoraNameTag, Token<Tag | LoraNameTag>>();
+  for (const token of [
+    loraCharacterTokens,
+    loraCharacterTriggerWordTokens,
+    seriesNameTokens,
+    characterNameTokens,
+    visibleFeatureTokens,
+    breastSizeTokens,
+    loraOutfitTokens,
+    loraOutfitTriggerWordTokens,
+    visibleOutfitTokens,
+    specialTokens,
+    poseTokens,
+    backgroundTokens,
+    newEmotionTokens,
+  ].flat()) {
+    setHeavyWeightOne<Tag | LoraNameTag>(m, token);
+  }
 
-const buildPose = (
-  rootData: RootCollectedData,
-  characterData: CharacterCollectedData,
-  outfitData: OutfitCollectedData,
-  backgroundData: BackgroundCollectedData,
-  poseData: PoseCollectedData,
-) => ({
-  key: poseData.key,
-  probability: poseData.probability,
-  patternCollection: buildCore(
-    rootData,
-    characterData,
-    outfitData,
-    backgroundData,
-    poseData,
-  ),
-  children: [],
-});
-
-const buildBackground = (
-  rootData: RootCollectedData,
-  characterData: CharacterCollectedData,
-  outfitData: OutfitCollectedData,
-  backgroundData: BackgroundCollectedData,
-) => {
-  const poses = backgroundData.poses.map((pose) =>
-    buildPose(rootData, characterData, outfitData, backgroundData, pose),
-  );
-
-  const backgroundPatternCollection = PatternCollection.joinAll(
-    poses.map(({ patternCollection, probability }) => ({
-      patternCollection,
-      probability,
-    })),
-  );
-
-  console.log(`Build done: background: ${backgroundData.key}`);
-  return {
-    key: backgroundData.key,
-    probability: backgroundData.probability,
-    patternCollection: backgroundPatternCollection,
-    children: poses,
-  };
-};
-
-const buildOutfit = (
-  rootData: RootCollectedData,
-  characterData: CharacterCollectedData,
-  outfitData: OutfitCollectedData,
-) => {
-  const backgrounds = outfitData.backgrounds.map((backgroundData) =>
-    buildBackground(rootData, characterData, outfitData, backgroundData),
-  );
-
-  const outfitPatternCollection = PatternCollection.joinAll(
-    backgrounds.map(({ patternCollection, probability }) => ({
-      patternCollection,
-      probability,
-    })),
-  );
-
-  console.log(`Build done: outfit: ${outfitData.key}`);
-  return {
-    key: outfitData.key,
-    probability: outfitData.probability,
-    patternCollection: outfitPatternCollection,
-    children: backgrounds,
-  };
-};
-
-const buildCharacter = (
-  rootData: RootCollectedData,
-  characterData: CharacterCollectedData,
-) => {
-  const outfits = characterData.outfits.map((outfitData) =>
-    buildOutfit(rootData, characterData, outfitData),
-  );
-
-  const characterPatternCollection = PatternCollection.joinAll(
-    outfits.map(({ patternCollection, probability }) => ({
-      patternCollection,
-      probability,
-    })),
-  );
-
-  console.log(`Build done: character: ${characterData.key}`);
-  return {
-    key: characterData.key,
-    probability: characterData.probability,
-    patternCollection: characterPatternCollection,
-    children: outfits,
-  };
-};
-
-const buildRoot = (rootData: RootCollectedData) => {
-  const characters = rootData.characters.map((characterData) =>
-    buildCharacter(rootData, characterData),
-  );
-
-  const rootPatternCollection = PatternCollection.joinAll(
-    characters.map(({ patternCollection, probability: weight }) => ({
-      patternCollection,
-      probability: weight,
-    })),
-  );
-
-  console.log(`Build done: root: ${rootData.key}`);
-  return {
-    key: rootData.key,
-    probability: rootData.probability,
-    fixedPrompt: rootData.fixedPrompt,
-    batchGeneration: rootData.batchGeneration,
-    optionsBodyJson: rootData.optionsBodyJson,
-    txt2imgBodyJson: rootData.txt2imgBodyJson,
-    patternCollection: rootPatternCollection,
-    children: characters,
-  };
+  return [...m.values()];
 };
 
 export const build = (rootDatas: RootCollectedData[]) =>
-  rootDatas.map(buildRoot);
+  rootDatas.map((rootData) => new RandomPicker(rootData));
+
+export class RandomPicker {
+  constructor(readonly rootData: RootCollectedData) {}
+
+  private randomPick<T extends { probability: number }>(candidates: T[]) {
+    const total = candidates.reduce(
+      (prev, current) => prev + current.probability,
+      0,
+    );
+    const random = Math.random() * total;
+
+    let sum = 0;
+    for (const candidate of candidates) {
+      sum += candidate.probability;
+      if (random < sum) {
+        return candidate;
+      }
+    }
+
+    throw new Error(`Unexpected error: No candidate was picked.`);
+  }
+
+  pickPrompt() {
+    const characterData = this.randomPick(this.rootData.characters);
+    const outfitData = this.randomPick(characterData.outfits);
+    const backgroundData = this.randomPick(outfitData.backgrounds);
+    const poseData = this.randomPick(backgroundData.poses);
+
+    const tokens = buildCore({
+      characterData,
+      outfitData,
+      backgroundData,
+      poseData,
+    });
+
+    return tokens.join(`, `);
+  }
+}
