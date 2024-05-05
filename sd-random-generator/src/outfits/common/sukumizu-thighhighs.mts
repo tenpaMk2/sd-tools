@@ -22,6 +22,7 @@ export const sukumizuThighhighs = () =>
       `skin tight`,
       // `shiny skin`,
       `no shoes`,
+      // TODO: Reconsider `heart cutout` .
     ],
     specialVisibility: {
       armpits: true,
