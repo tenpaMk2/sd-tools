@@ -28,7 +28,15 @@ export const allCheckpoints = [
     baseModel: `Pony`,
   },
   {
+    nameHash: `chacolebaramixxl_v21.safetensors`,
+    baseModel: `Pony`,
+  },
+  {
     nameHash: `ebara_pony_1.bakedVAE.safetensors`,
+    baseModel: `Pony`,
+  },
+  {
+    nameHash: `hamefkawaiimix_typelight.safetensors`,
     baseModel: `Pony`,
   },
   {
@@ -36,8 +44,8 @@ export const allCheckpoints = [
     baseModel: `Pony`,
   },
   {
-    nameHash: `chacolebaramixxl_v21.safetensors`,
-    baseModel: `Pony`,
+    nameHash: `ponymagine91_gamma.safetensors`,
+    baseModel: `Pony`, // Also supports `Animagine` .
   },
 ] as const satisfies { nameHash: string; baseModel: BaseModel }[];
 export type Checkpoint = (typeof allCheckpoints)[number];
@@ -48,10 +56,20 @@ const allVAEs = [
 ] as const satisfies string[];
 export type VAE = (typeof allVAEs)[number];
 
-const allSamplers = [`Restart`, `Euler a`] as const satisfies string[];
+const allSamplers = [
+  `DPM++ 2M Karras`,
+  `Euler a`,
+  `Restart`,
+] as const satisfies string[];
 type Sampler = (typeof allSamplers)[number];
 
-const allUpscalers = [`4x-AnimeSharp`] as const satisfies string[];
+const allUpscalers = [
+  `Latent`,
+  `4x-AnimeSharp`,
+  `4x-UltraSharp`,
+  `R-ESRGAN 4x+`,
+  `R-ESRGAN 4x+ Anime6B`,
+] as const satisfies string[];
 type Upscaler = (typeof allUpscalers)[number];
 
 export type PoseSetting = Readonly<{
