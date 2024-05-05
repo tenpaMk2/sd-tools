@@ -354,7 +354,8 @@ export class PatternCollection<T extends Tag | LoraNameTag> {
   }
 
   pickOnePrompt() {
-    if (this.patterns.length === 0) return new Pattern<T>({ tokens: [] });
+    if (this.patterns.length === 0)
+      throw new Error(`Unexpected error: Cannot pick because of no patterns.`);
 
     const random = Math.random();
     let sum = 0;
