@@ -7,6 +7,8 @@ import { setSetting, setting, staticSetting } from "./setting.mjs";
 import { validateSettings } from "./validator.mjs";
 import { readSettingFromYAML } from "./yaml.mjs";
 
+// TODO: logging library
+
 const program = new Command();
 program.name(packageJson.name);
 program.description(packageJson.description);
