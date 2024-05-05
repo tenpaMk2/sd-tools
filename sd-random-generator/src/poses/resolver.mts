@@ -11,6 +11,7 @@ import { nearCleanFloorFromHorizontalAllFoursFromBehind } from "./common/near-cl
 import { nearCleanFloorFromHorizontalAllFours } from "./common/near-clean-floor-from-horizontal-all-fours.mjs";
 import { nearCleanFloorFromHorizontalKneelingSpreadLegs } from "./common/near-clean-floor-from-horizontal-kneeling-spread-legs.mjs";
 import { nearCleanFloorFromHorizontalThePoseHeadRest } from "./common/near-clean-floor-from-horizontal-the-pose-head-rest.mjs";
+import { sittingOnFromHorizontalSinging } from "./common/sitting-on-from-horizontal-singing.mjs";
 import { standingFromAboveFromSideLookingAhead } from "./common/standing-from-above-from-side-looking-ahead.mjs";
 import { standingFromAboveGrabbingOwnBreasts } from "./common/standing-from-above-grabbing-own-breasts.mjs";
 import { standingFromAboveHandsOnOwnChests } from "./common/standing-from-above-hands-on-own-chests.mjs";
@@ -65,7 +66,7 @@ export type PoseDefine = {
   specialVisibility: PoseSpecialVisibility;
 };
 
-export const poseTable = {
+export const commonPoseTable = {
   "near-clean-floor-from-above-lying-on-stomach":
     nearCleanFloorFromAboveLyingOnStomach,
   "near-clean-floor-from-above-lying-reaching-towards-viewer":
@@ -80,6 +81,7 @@ export const poseTable = {
     nearCleanFloorFromHorizontalKneelingSpreadLegs,
   "near-clean-floor-from-horizontal-the-pose-head-rest":
     nearCleanFloorFromHorizontalThePoseHeadRest,
+  "sitting-on-from-horizontal-singing": sittingOnFromHorizontalSinging,
   "standing-from-above-from-side-looking-ahead":
     standingFromAboveFromSideLookingAhead,
   "standing-from-above-grabbing-own-breasts":
@@ -109,13 +111,24 @@ export const poseTable = {
   "standing-from-horizontal-singing": standingFromHorizontalSinging,
   "standing-from-horizontal-twisted-torso": standingFromHorizontalTwistedTorso,
   "standing-from-horizontal-v": standingFromHorizontalV,
+} as const satisfies {
+  [k: string]: PoseDefine;
+};
 
+export const specialPoseTable = {
   "standing-from-above-holding-bouquet": standingFromAboveHoldingBouquet,
   "standing-from-below-cheering-with-pom-poms":
     standingFromBelowCheeringWithPomPoms,
   "standing-from-below-holding-bouquet": standingFromBelowHoldingBouquet,
   "standing-from-horizontal-holding-bouquet":
     standingFromHorizontalHoldingBouquet,
+} as const satisfies {
+  [k: string]: PoseDefine;
+};
+
+export const poseTable = {
+  ...commonPoseTable,
+  ...specialPoseTable,
 } as const satisfies {
   [k: string]: PoseDefine;
 };

@@ -46,7 +46,7 @@ const collectBackground = (
     key,
     probability: probability ?? 1,
     background,
-    poses: (poses ?? posesPreset[key])
+    poses: (poses ?? posesPreset[key] ?? posesPreset.default)
       .map(collectPose)
       .filter(({ pose }) => pose.cameraAngle in background)
       .filter(
