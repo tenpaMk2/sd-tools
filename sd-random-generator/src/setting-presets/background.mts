@@ -16,6 +16,8 @@ const defaultPreset = [
   { key: `colorful-backgrounds-near-clean-floor` },
   { key: `colorful-heart-backgrounds-near-clean-floor` },
   { key: `steaming-bed-sheet` },
+  { key: `karaoke-box-sitting-on`, probability: 0.2 },
+  { key: `karaoke-box-standing`, probability: 0.2 },
 ] as const satisfies BackgroundSetting[];
 
 export const backgroundsPreset = {

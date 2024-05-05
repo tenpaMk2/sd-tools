@@ -11,7 +11,6 @@ import { nearCleanFloorFromHorizontalAllFoursFromBehind } from "./common/near-cl
 import { nearCleanFloorFromHorizontalAllFours } from "./common/near-clean-floor-from-horizontal-all-fours.mjs";
 import { nearCleanFloorFromHorizontalKneelingSpreadLegs } from "./common/near-clean-floor-from-horizontal-kneeling-spread-legs.mjs";
 import { nearCleanFloorFromHorizontalThePoseHeadRest } from "./common/near-clean-floor-from-horizontal-the-pose-head-rest.mjs";
-import { sittingOnFromHorizontalSinging } from "./common/sitting-on-from-horizontal-singing.mjs";
 import { standingFromAboveFromSideLookingAhead } from "./common/standing-from-above-from-side-looking-ahead.mjs";
 import { standingFromAboveGrabbingOwnBreasts } from "./common/standing-from-above-grabbing-own-breasts.mjs";
 import { standingFromAboveHandsOnOwnChests } from "./common/standing-from-above-hands-on-own-chests.mjs";
@@ -32,14 +31,15 @@ import { standingFromHorizontalHandsOnOwnHips } from "./common/standing-from-hor
 import { standingFromHorizontalHeartHands } from "./common/standing-from-horizontal-heart-hands.mjs";
 import { standingFromHorizontalPawPose } from "./common/standing-from-horizontal-paw-pose.mjs";
 import { standingFromHorizontalPortrait } from "./common/standing-from-horizontal-portrait.mjs";
-import { standingFromHorizontalSingingFromSide } from "./common/standing-from-horizontal-singing-from-side.mjs";
-import { standingFromHorizontalSinging } from "./common/standing-from-horizontal-singing.mjs";
 import { standingFromHorizontalTwistedTorso } from "./common/standing-from-horizontal-twisted-torso.mjs";
 import { standingFromHorizontalV } from "./common/standing-from-horizontal-v.mjs";
+import { sittingOnFromHorizontalSinging } from "./special/sitting-on-from-horizontal-singing.mjs";
 import { standingFromAboveHoldingBouquet } from "./special/standing-from-above-holding-bouquet.mjs";
 import { standingFromBelowCheeringWithPomPoms } from "./special/standing-from-below-cheering-with-pom-poms.mjs";
 import { standingFromBelowHoldingBouquet } from "./special/standing-from-below-holding-bouquet.mjs";
 import { standingFromHorizontalHoldingBouquet } from "./special/standing-from-horizontal-holding-bouquet.mjs";
+import { standingFromHorizontalSingingFromSide } from "./special/standing-from-horizontal-singing-from-side.mjs";
+import { standingFromHorizontalSinging } from "./special/standing-from-horizontal-singing.mjs";
 
 export type PoseSpecialVisibility = Omit<
   OutfitDefine["specialVisibility"],
@@ -81,7 +81,6 @@ export const commonPoseTable = {
     nearCleanFloorFromHorizontalKneelingSpreadLegs,
   "near-clean-floor-from-horizontal-the-pose-head-rest":
     nearCleanFloorFromHorizontalThePoseHeadRest,
-  "sitting-on-from-horizontal-singing": sittingOnFromHorizontalSinging,
   "standing-from-above-from-side-looking-ahead":
     standingFromAboveFromSideLookingAhead,
   "standing-from-above-grabbing-own-breasts":
@@ -106,9 +105,6 @@ export const commonPoseTable = {
   "standing-from-horizontal-heart-hands": standingFromHorizontalHeartHands,
   "standing-from-horizontal-paw-pose": standingFromHorizontalPawPose,
   "standing-from-horizontal-portrait": standingFromHorizontalPortrait,
-  "standing-from-horizontal-singing-from-side":
-    standingFromHorizontalSingingFromSide,
-  "standing-from-horizontal-singing": standingFromHorizontalSinging,
   "standing-from-horizontal-twisted-torso": standingFromHorizontalTwistedTorso,
   "standing-from-horizontal-v": standingFromHorizontalV,
 } as const satisfies {
@@ -116,12 +112,16 @@ export const commonPoseTable = {
 };
 
 export const specialPoseTable = {
+  "sitting-on-from-horizontal-singing": sittingOnFromHorizontalSinging,
   "standing-from-above-holding-bouquet": standingFromAboveHoldingBouquet,
   "standing-from-below-cheering-with-pom-poms":
     standingFromBelowCheeringWithPomPoms,
   "standing-from-below-holding-bouquet": standingFromBelowHoldingBouquet,
   "standing-from-horizontal-holding-bouquet":
     standingFromHorizontalHoldingBouquet,
+  "standing-from-horizontal-singing-from-side":
+    standingFromHorizontalSingingFromSide,
+  "standing-from-horizontal-singing": standingFromHorizontalSinging,
 } as const satisfies {
   [k: string]: PoseDefine;
 };
