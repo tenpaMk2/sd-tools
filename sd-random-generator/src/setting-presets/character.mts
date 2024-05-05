@@ -9,21 +9,32 @@ const monoCharacterPresetsMap = Object.fromEntries(
   ),
 ) as { [k in CharacterKey]: CharacterSetting[] };
 
-const defaultPreset = [
-  {
-    keys: [
-      `kaguya-sama-ai`,
-      `kaguya-sama-chika`,
-      `kaguya-sama-kaguya`,
-      `kaguya-sama-miko`,
-    ],
-  },
-] as const satisfies CharacterSetting[];
+const defaultKeys = [
+  `danmachi-hestia`,
+  `fate-rin-little-jelly`,
+  `isekai-ojisan-alicia-nochekaiser`,
+  `isekai-ojisan-mabel-nochekaiser`,
+  `isekai-ojisan-sui-nochekaiser`,
+  `isekai-ojisan-sumika-nochekaiser`,
+  `kagejitsu-alpha-nochekaiser`,
+  `kagejitsu-beta-nochekaiser`,
+  `kaguya-sama-ai`,
+  `kaguya-sama-chika`,
+  `kaguya-sama-kaguya`,
+  `kaguya-sama-miko`,
+  `lycoris-recoil-chisato`,
+  `mushoku-tensei-sylphiette-little-jelly`,
+  `non-non-biyori-hotaru-notekaga`,
+  `re-zero-emilia`,
+  `re-zero-ram`,
+  `re-zero-rem`,
+  `to-love-ru-momo-lancelot`,
+] as const satisfies CharacterSetting["keys"];
 
 export const charactersPreset = {
   ...monoCharacterPresetsMap,
 
-  "default": defaultPreset,
+  "default": [{ keys: defaultKeys }],
 
   "all": [
     {
