@@ -79,9 +79,15 @@ export const backgroundsPreset = {
   ],
   "micro-bikini": [
     ...defaultPreset,
-    { key: `ocean` },
-    { key: `beach-standing` },
-    { key: `beach-near-clean-floor` },
+    { key: `ocean`, probability: defaultPreset.length / 3 },
+    { key: `beach-standing`, probability: defaultPreset.length / 3 },
+    { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
+  ],
+  "o-ring-bikini": [
+    ...defaultPreset,
+    { key: `ocean`, probability: defaultPreset.length / 3 },
+    { key: `beach-standing`, probability: defaultPreset.length / 3 },
+    { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
   ],
   "open-chest-sweater": defaultPreset,
   "playboy-bunny": [
