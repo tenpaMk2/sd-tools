@@ -895,6 +895,7 @@ export const allOutfitVisibilities = {
   "infinite stratos academy school uniform": preset.all,
   "jacket": preset.shirt,
   "jewelry": preset.all,
+  "juliet sleeves": preset.shoulder,
   "knee boots": preset.foot,
   "lace panties": preset.panties,
   "lace-trimmed bra": preset.bra,

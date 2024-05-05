@@ -698,6 +698,7 @@ export const allBodyOutfitTags = [
   `infinite stratos academy school uniform`,
   `jacket`,
   `jewelry`,
+  `juliet sleeves`,
   `knee boots`,
   `lace panties`,
   `lace-trimmed bra`,

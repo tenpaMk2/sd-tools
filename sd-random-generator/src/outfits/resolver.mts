@@ -29,6 +29,7 @@ import { isekaiOjisanSumika } from "./isekai-ojisan/sumika.mjs";
 import { kagejitsuShadowGarden } from "./kagejitsu/shadow-garden.mjs";
 import { kaguyaSamaShuuchiinAcademySchoolUniform } from "./kaguya-sama/shuuchiin-academy-school-uniform.mjs";
 import { konosubaMeguminDress } from "./konosuba/megumin-dress.mjs";
+import { konosubaYunyunShirt } from "./konosuba/yunyun-shirt.mjs";
 import { mahoakoLocomusica } from "./mahoako/locomusica.mjs";
 import { prismaIllyaChloeBeast } from "./prisma-illya/chloe-beast.mjs";
 import { prismaIllyaIllyaBeast } from "./prisma-illya/illya-beast.mjs";
@@ -172,6 +173,7 @@ export const characterOutfitTable = {
     kaguyaSamaShuuchiinAcademySchoolUniform(`miko`),
   "konosuba-megumin-dress-adventurer": konosubaMeguminDress(`adventurer`),
   "konosuba-megumin-dress-light": konosubaMeguminDress(`light`),
+  "konosuba-yunyun-shirt": konosubaYunyunShirt(),
   "mahoako-notekaga-locomusica": mahoakoLocomusica(`notekaga`),
   "prisma-illya-chloe-beast": prismaIllyaChloeBeast(`am7coffeelove`),
   "prisma-illya-illya-beast": prismaIllyaIllyaBeast(`am7coffeelove`),

@@ -301,6 +301,17 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "konosuba-yunyun-shirt": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "mahoako-notekaga-locomusica": [
     ...defaultPreset,
     { key: `city`, probability: defaultPreset.length },
