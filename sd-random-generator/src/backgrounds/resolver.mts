@@ -291,6 +291,32 @@ export const backgroundTable = {
     },
     "removeShoes": false,
   },
+  "blue-sky-confetti-for-cheering": {
+    "backgroundType": `standing`,
+    "from-below": {
+      entries: [`outdoors`, `blue sky`, `confetti`],
+    },
+    "from-horizontal": {
+      entries: [`outdoors`, `blue sky`, `confetti`],
+    },
+    "removeShoes": false,
+  },
+  "sun-sky": {
+    "backgroundType": `standing`,
+    "from-below": {
+      entries: [
+        `outdoors`,
+        [{ entries: [`blue sky`] }, { entries: [`sunset`, `orange sky`] }],
+      ],
+    },
+    "from-horizontal": {
+      entries: [
+        `outdoors`,
+        [{ entries: [`blue sky`] }, { entries: [`sunset`, `orange sky`] }],
+      ],
+    },
+    "removeShoes": false,
+  },
 } as const satisfies {
   [k in string]: BackgroundDefine;
 };

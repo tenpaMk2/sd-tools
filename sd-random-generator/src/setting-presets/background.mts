@@ -10,37 +10,282 @@ const monoBackgroundPresetsMap = Object.fromEntries(
   ),
 ) as { [k in BackgroundKey]: BackgroundSetting[] };
 
+const defaultPreset = [
+  { key: `colorful-backgrounds-standing` },
+  { key: `colorful-heart-backgrounds-standing` },
+  { key: `colorful-backgrounds-near-clean-floor` },
+  { key: `colorful-heart-backgrounds-near-clean-floor` },
+  { key: `steaming-bed-sheet` },
+] as const satisfies BackgroundSetting[];
+
 export const backgroundsPreset = {
   ...monoBackgroundPresetsMap,
-  "default": [{ key: `ocean` }], // TODO: Consider `default`
-  "test-outfit": [
-    { key: `cafe` },
-    { key: `ocean` },
-    { key: `steaming-bed-sheet` },
+
+  "default": defaultPreset,
+
+  "test-outfit": defaultPreset,
+  "babydoll": defaultPreset,
+  "bikini": [
+    ...defaultPreset,
+    { key: `ocean`, probability: defaultPreset.length / 3 },
+    { key: `beach-standing`, probability: defaultPreset.length / 3 },
+    { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
   ],
-  "babydoll": [{ key: `steaming-bed-sheet` }],
-  "bikini": [{ key: `steaming-bed-sheet` }],
-  "bridal-lingerie": [{ key: `steaming-bed-sheet` }],
-  "kaguya-sama-shuuchiin-academy-school-uniform-ai": [
-    { key: `cafe` },
+  "bridal-lingerie": [
+    ...defaultPreset,
+    { key: `wedding-near-clean-floor`, probability: defaultPreset.length / 2 },
+    { key: `wedding-standing`, probability: defaultPreset.length / 2 },
+  ],
+  "camisole-denim-shorts": [
+    ...defaultPreset,
+    { key: `city`, probability: defaultPreset.length },
+  ],
+  "casual-miniskirt": [
+    ...defaultPreset,
+    { key: `city`, probability: defaultPreset.length },
+  ],
+  "cheerleader": [
+    ...defaultPreset,
+    {
+      key: `blue-sky-confetti-for-cheering`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "china-dress": defaultPreset,
+  "cow-print-bikini": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "gym-uniform": [
+    ...defaultPreset,
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "maid-bikini": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "micro-bikini": [
+    ...defaultPreset,
     { key: `ocean` },
-    { key: `steaming-bed-sheet` },
+    { key: `beach-standing` },
+    { key: `beach-near-clean-floor` },
+  ],
+  "open-chest-sweater": defaultPreset,
+  "playboy-bunny": [
+    ...defaultPreset,
+    {
+      key: `casino`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "revealing-miko": defaultPreset,
+  "santa-bikini": [
+    ...defaultPreset,
+    {
+      key: `christmas-near-clean-floor`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `christmas-standing`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "school-uniform-bowtie": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "sukumizu-thighhighs": defaultPreset,
+  "danmachi-nochekaiser-hestia": defaultPreset,
+  "fate-little-jelly-rin-sweater": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `night-rooftop`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "isekai-ojisan-nochekaiser-alicia": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "isekai-ojisan-nochekaiser-mabel": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "isekai-ojisan-nochekaiser-sui": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "isekai-ojisan-nochekaiser-sumika": defaultPreset,
+  "kagejitsu-nochekaiser-shadow-garden-alpha": [
+    ...defaultPreset,
+    {
+      key: `night-moon`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `night-rooftop`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kagejitsu-nochekaiser-shadow-garden-beta": [
+    ...defaultPreset,
+    {
+      key: `night-moon`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `night-rooftop`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kaguya-sama-shuuchiin-academy-school-uniform-ai-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kaguya-sama-shuuchiin-academy-school-uniform-ai": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kaguya-sama-shuuchiin-academy-school-uniform-chika-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
   ],
   "kaguya-sama-shuuchiin-academy-school-uniform-chika": [
-    { key: `cafe` },
-    { key: `ocean` },
-    { key: `steaming-bed-sheet` },
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kaguya-sama-shuuchiin-academy-school-uniform-kaguya-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
   ],
   "kaguya-sama-shuuchiin-academy-school-uniform-kaguya": [
-    { key: `cafe` },
-    { key: `ocean` },
-    { key: `steaming-bed-sheet` },
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kaguya-sama-shuuchiin-academy-school-uniform-miko-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
   ],
   "kaguya-sama-shuuchiin-academy-school-uniform-miko": [
-    { key: `cafe` },
-    { key: `ocean` },
-    { key: `steaming-bed-sheet` },
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
   ],
+  "mahoako-notekaga-locomusica": [
+    ...defaultPreset,
+    { key: `city`, probability: defaultPreset.length },
+  ],
+  "prisma-illya-chloe-beast": defaultPreset,
+  "prisma-illya-illya-beast": defaultPreset,
+  "prisma-illya-miyu-beast": defaultPreset,
+  "pso2-bikini-gene": [
+    ...defaultPreset,
+    { key: `ocean`, probability: defaultPreset.length / 3 },
+    { key: `beach-standing`, probability: defaultPreset.length / 3 },
+    { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
+  ],
+  "sasuoni-eft-first-high-school-uniform-pantyhose": defaultPreset,
+  "sasuoni-eft-first-high-school-uniform-thighhighs": defaultPreset,
 } as const satisfies {
   [k in BackgroundKey | `default` | OutfitKey]: BackgroundSetting[];
 };

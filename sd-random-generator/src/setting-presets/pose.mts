@@ -36,15 +36,15 @@ export const posesPreset = {
     ...defaultPreset,
     {
       key: `standing-from-above-holding-bouquet`,
-      probability: defaultPreset.length,
+      probability: defaultPreset.length / 3,
     },
     {
       key: `standing-from-below-holding-bouquet`,
-      probability: defaultPreset.length,
+      probability: defaultPreset.length / 3,
     },
     {
       key: `standing-from-horizontal-holding-bouquet`,
-      probability: defaultPreset.length,
+      probability: defaultPreset.length / 3,
     },
   ],
   "wedding-near-clean-floor": defaultPreset,
@@ -59,6 +59,8 @@ export const posesPreset = {
   "karaoke-box-sitting-on": [{ key: `sitting-on-from-horizontal-singing` }],
   "night-rooftop": defaultPreset,
   "night-moon": defaultPreset,
+  "blue-sky-confetti-for-cheering": defaultPreset,
+  "sun-sky": defaultPreset,
 } as const satisfies {
   [k in PoseKey | `default` | BackgroundKey]: PoseSetting[];
 };
