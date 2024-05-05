@@ -115,6 +115,7 @@ export const allHeadOutfitTags = [
   `maid headdress`,
   `monocle hair ornament`,
   `musical note hair ornament`,
+  `no headwear`,
   `pirate hat`,
   `pom pom hair ornament`,
   `rabbit ears`,
@@ -131,6 +132,7 @@ export const allHeadOutfitTags = [
   `tress ribbon`,
   `two-tone hairband`,
   `veil`,
+  `witch hat`,
   `x hair ornament`,
 ] as const satisfies readonly string[];
 export type HeadOutfitTag = (typeof allHeadOutfitTags)[number];

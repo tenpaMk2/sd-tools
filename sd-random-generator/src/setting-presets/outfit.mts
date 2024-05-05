@@ -141,6 +141,17 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "konosuba-megumin": [
+    ...defaultPreset,
+    {
+      key: `konosuba-megumin-dress-adventurer`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `konosuba-megumin-dress-light`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "lycoris-recoil-chisato-eft": defaultPreset,
   "lycoris-recoil-chisato": defaultPreset,
   "lycoris-recoil-takina-eft": defaultPreset,

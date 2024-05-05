@@ -38,6 +38,7 @@ import { kaguyaSamaKaguyaNochekaiser } from "./kaguya-sama/kaguya-sama-kaguya-no
 import { kaguyaSamaKaguya } from "./kaguya-sama/kaguya-sama-kaguya.mjs";
 import { kaguyaSamaMikoNochekaiser } from "./kaguya-sama/kaguya-sama-miko-nochekaiser.mjs";
 import { kaguyaSamaMiko } from "./kaguya-sama/kaguya-sama-miko.mjs";
+import { konosubaMegumin } from "./konosuba/konosuba-megumin.mjs";
 import { lycorisRecoilChisatoEft } from "./lycoris-recoil/lycoris-recoil-chisato-eft.mjs";
 import { lycorisRecoilChisato } from "./lycoris-recoil/lycoris-recoil-chisato.mjs";
 import { lycorisRecoilTakinaEft } from "./lycoris-recoil/lycoris-recoil-takina-eft.mjs";
@@ -152,6 +153,7 @@ export const characterTable = {
   "kaguya-sama-kaguya": kaguyaSamaKaguya(),
   "kaguya-sama-miko-nochekaiser": kaguyaSamaMikoNochekaiser(),
   "kaguya-sama-miko": kaguyaSamaMiko(),
+  "konosuba-megumin": konosubaMegumin(),
   "lycoris-recoil-chisato-eft": lycorisRecoilChisatoEft(),
   "lycoris-recoil-chisato": lycorisRecoilChisato(),
   "lycoris-recoil-takina-eft": lycorisRecoilTakinaEft(),

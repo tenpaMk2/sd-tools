@@ -28,6 +28,7 @@ import { isekaiOjisanSui } from "./isekai-ojisan/sui.mjs";
 import { isekaiOjisanSumika } from "./isekai-ojisan/sumika.mjs";
 import { kagejitsuShadowGarden } from "./kagejitsu/shadow-garden.mjs";
 import { kaguyaSamaShuuchiinAcademySchoolUniform } from "./kaguya-sama/shuuchiin-academy-school-uniform.mjs";
+import { konosubaMeguminDress } from "./konosuba/megumin-dress.mjs";
 import { mahoakoLocomusica } from "./mahoako/locomusica.mjs";
 import { prismaIllyaChloeBeast } from "./prisma-illya/chloe-beast.mjs";
 import { prismaIllyaIllyaBeast } from "./prisma-illya/illya-beast.mjs";
@@ -142,7 +143,7 @@ export const commonOutfitTable = {
   [k: string]: OutfitDefine;
 };
 
-export const characterLoraOutfitTable = {
+export const characterOutfitTable = {
   "danmachi-nochekaiser-hestia": danmachiHestia(`nochekaiser`),
   "fate-little-jelly-rin-sweater": fateRinSweater(`little-jelly`),
   "isekai-ojisan-nochekaiser-alicia": isekaiOjisanAlicia(`nochekaiser`),
@@ -169,6 +170,8 @@ export const characterLoraOutfitTable = {
     kaguyaSamaShuuchiinAcademySchoolUniform(`miko-nochekaiser`),
   "kaguya-sama-shuuchiin-academy-school-uniform-miko":
     kaguyaSamaShuuchiinAcademySchoolUniform(`miko`),
+  "konosuba-megumin-dress-adventurer": konosubaMeguminDress(`adventurer`),
+  "konosuba-megumin-dress-light": konosubaMeguminDress(`light`),
   "mahoako-notekaga-locomusica": mahoakoLocomusica(`notekaga`),
   "prisma-illya-chloe-beast": prismaIllyaChloeBeast(`am7coffeelove`),
   "prisma-illya-illya-beast": prismaIllyaIllyaBeast(`am7coffeelove`),
@@ -185,7 +188,7 @@ export const characterLoraOutfitTable = {
 export const outfitTable = {
   "test-outfit": testOutfit(),
   ...commonOutfitTable,
-  ...characterLoraOutfitTable,
+  ...characterOutfitTable,
 } as const satisfies {
   [k: string]: OutfitDefine;
 };

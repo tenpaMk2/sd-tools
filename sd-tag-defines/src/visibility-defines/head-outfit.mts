@@ -136,6 +136,7 @@ export const allHeadOutfitVisibilities = {
   "maid headdress": preset.hair,
   "monocle hair ornament": preset.hair,
   "musical note hair ornament": preset.hair,
+  "no headwear": preset.hair,
   "pirate hat": preset.hair,
   "pom pom hair ornament": preset.hair,
   "rabbit ears": preset.hair,
@@ -152,6 +153,7 @@ export const allHeadOutfitVisibilities = {
   "tress ribbon": preset.hair,
   "two-tone hairband": preset.hair,
   "veil": preset.hair,
+  "witch hat": preset.hair,
   "x hair ornament": preset.hair,
 } as const satisfies {
   [key in HeadOutfitTag]: Visibility;

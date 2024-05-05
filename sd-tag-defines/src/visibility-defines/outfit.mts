@@ -316,6 +316,21 @@ const allCamisoleColorVisibilities = {
   "yellow camisole": preset.shirt,
 } as const satisfies { [key in BodyOutfitTag]?: Visibility };
 
+const allCapeColorVisibilities = {
+  "aqua cape": preset.shirt,
+  "black cape": preset.shirt,
+  "blue cape": preset.shirt,
+  "brown cape": preset.shirt,
+  "green cape": preset.shirt,
+  "grey cape": preset.shirt,
+  "orange cape": preset.shirt,
+  "pink cape": preset.shirt,
+  "purple cape": preset.shirt,
+  "red cape": preset.shirt,
+  "white cape": preset.shirt,
+  "yellow cape": preset.shirt,
+} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+
 const allCapeletColorVisibilities = {
   "aqua capelet": preset.shirt,
   "black capelet": preset.shirt,
@@ -329,6 +344,21 @@ const allCapeletColorVisibilities = {
   "red capelet": preset.shirt,
   "white capelet": preset.shirt,
   "yellow capelet": preset.shirt,
+} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+
+const allChokerColorVisibilities = {
+  "aqua choker": preset.collar,
+  "black choker": preset.collar,
+  "blue choker": preset.collar,
+  "brown choker": preset.collar,
+  "green choker": preset.collar,
+  "grey choker": preset.collar,
+  "orange choker": preset.collar,
+  "pink choker": preset.collar,
+  "purple choker": preset.collar,
+  "red choker": preset.collar,
+  "white choker": preset.collar,
+  "yellow choker": preset.collar,
 } as const satisfies { [key in BodyOutfitTag]?: Visibility };
 
 const allCollarColorVisibilities = {
@@ -723,7 +753,9 @@ export const allOutfitVisibilities = {
   ...allBowtieColorVisibilities,
   ...allBurumaColorVisibilities,
   ...allCamisoleColorVisibilities,
+  ...allCapeColorVisibilities,
   ...allCapeletColorVisibilities,
+  ...allChokerColorVisibilities,
   ...allCollarColorVisibilities,
   ...allDistinguishableOutfitVisibilities,
   ...allDressColorVisibilities,
@@ -759,7 +791,9 @@ export const allOutfitVisibilities = {
   "armor": preset.dress,
   "ascot": preset.bowtie,
   "ass": preset.hips,
+  "asymmetrical legwear": preset.thighhighs,
   "babydoll": preset.dress,
+  "bandaged leg": preset.thighhighs,
   "bare arms": preset.shoulder,
   "bare legs": preset.thighs,
   "bare shoulders": preset.shoulder,
@@ -789,6 +823,7 @@ export const allOutfitVisibilities = {
   "buttons": preset.dress,
   "cameltoe": preset.cameltoe,
   "camisole": preset.shirt,
+  "cape": preset.shirt,
   "capelet": preset.shirt,
   "cardigan around waist": preset["high-waist skirt"],
   "casual": preset.dress,

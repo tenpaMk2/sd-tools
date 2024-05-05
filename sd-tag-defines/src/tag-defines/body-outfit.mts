@@ -122,6 +122,21 @@ const allCamisoleColorTags = [
   `yellow camisole`,
 ] as const satisfies string[];
 
+const allCapeColorTags = [
+  `aqua cape`,
+  `black cape`,
+  `blue cape`,
+  `brown cape`,
+  `green cape`,
+  `grey cape`,
+  `orange cape`,
+  `pink cape`,
+  `purple cape`,
+  `red cape`,
+  `white cape`,
+  `yellow cape`,
+] as const satisfies string[];
+
 const allCapeletColorTags = [
   `aqua capelet`,
   `black capelet`,
@@ -135,6 +150,21 @@ const allCapeletColorTags = [
   `red capelet`,
   `white capelet`,
   `yellow capelet`,
+] as const satisfies string[];
+
+const allChokerColorTags = [
+  `aqua choker`,
+  `black choker`,
+  `blue choker`,
+  `brown choker`,
+  `green choker`,
+  `grey choker`,
+  `orange choker`,
+  `pink choker`,
+  `purple choker`,
+  `red choker`,
+  `white choker`,
+  `yellow choker`,
 ] as const satisfies string[];
 
 const allCollarColorTags = [
@@ -527,7 +557,9 @@ export const allBodyOutfitTags = [
   ...allBowtieColorTags,
   ...allBurumaColorTags,
   ...allCamisoleColorTags,
+  ...allCapeColorTags,
   ...allCapeletColorTags,
+  ...allChokerColorTags,
   ...allCollarColorTags,
   ...allDressColorTags,
   ...allFootwearColorTags,
@@ -563,7 +595,9 @@ export const allBodyOutfitTags = [
   `armor`,
   `ascot`,
   `ass`,
+  `asymmetrical legwear`,
   `babydoll`,
+  `bandaged leg`,
   `bare arms`,
   `bare legs`,
   `bare shoulders`,
@@ -592,6 +626,7 @@ export const allBodyOutfitTags = [
   `buttons`,
   `cameltoe`,
   `camisole`,
+  `cape`,
   `capelet`,
   `cardigan around waist`,
   `casual`,
