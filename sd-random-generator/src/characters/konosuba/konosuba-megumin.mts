@@ -17,5 +17,5 @@ export const konosubaMegumin = () =>
     ],
     breastSize: `small breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionEntries: emotionPreset.mesugaki,
   }) as const satisfies CharacterDefine;
