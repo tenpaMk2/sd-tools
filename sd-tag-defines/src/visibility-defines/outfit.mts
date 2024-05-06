@@ -2,21 +2,21 @@ import { BodyOutfitTag } from "../tag-defines/body-outfit.mjs";
 import { Visibility } from "../visibility.mjs";
 
 const all = {
-  frontHead: false,
-  sideHead: false,
-  backHead: false,
-  frontBreast: false,
-  sideBreast: false,
-  backBreast: false,
-  frontMidriff: false,
-  sideMidriff: false,
-  backMidriff: false,
-  frontHipAndThigh: false,
-  sideHipAndThigh: false,
-  backHipAndThigh: false,
-  foot: false,
-  wristAndHand: false,
-  aroundBody: false,
+  frontHead: true,
+  sideHead: true,
+  backHead: true,
+  frontBreast: true,
+  sideBreast: true,
+  backBreast: true,
+  frontMidriff: true,
+  sideMidriff: true,
+  backMidriff: true,
+  frontHipAndThigh: true,
+  sideHipAndThigh: true,
+  backHipAndThigh: true,
+  foot: true,
+  wristAndHand: true,
+  aroundBody: true,
 } as const satisfies Visibility;
 
 const invisible = {
