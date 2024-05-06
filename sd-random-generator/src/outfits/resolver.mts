@@ -20,6 +20,7 @@ import { santaBikini } from "./common/santa-bikini.mjs";
 import { schoolUniformBowtie } from "./common/school-uniform-bowtie.mjs";
 import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
+import { volleyballUniform } from "./common/volleyball-uniform.mjs";
 import { danmachiHestia } from "./danmachi/hestia.mjs";
 import { fateRinSweater } from "./fate/rin-sweater.mjs";
 import { isekaiOjisanAlicia } from "./isekai-ojisan/alicia.mjs";
@@ -140,6 +141,7 @@ export const commonOutfitTable = {
   "santa-bikini": santaBikini(),
   "school-uniform-bowtie": schoolUniformBowtie(),
   "sukumizu-thighhighs": sukumizuThighhighs(),
+  "volleyball-uniform": volleyballUniform(),
 } as const satisfies {
   [k: string]: OutfitDefine;
 };

@@ -35,11 +35,15 @@ import { standingFromHorizontalTwistedTorso } from "./common/standing-from-horiz
 import { standingFromHorizontalV } from "./common/standing-from-horizontal-v.mjs";
 import { sittingOnFromHorizontalSinging } from "./special/sitting-on-from-horizontal-singing.mjs";
 import { standingFromAboveHoldingBouquet } from "./special/standing-from-above-holding-bouquet.mjs";
+import { standingFromAboveHoldingVolleyball } from "./special/standing-from-above-holding-volleyball.mjs";
 import { standingFromBelowCheeringWithPomPoms } from "./special/standing-from-below-cheering-with-pom-poms.mjs";
 import { standingFromBelowHoldingBouquet } from "./special/standing-from-below-holding-bouquet.mjs";
+import { standingFromBelowHoldingVolleyball } from "./special/standing-from-below-holding-volleyball.mjs";
 import { standingFromHorizontalHoldingBouquet } from "./special/standing-from-horizontal-holding-bouquet.mjs";
+import { standingFromHorizontalHoldingVolleyball } from "./special/standing-from-horizontal-holding-volleyball.mjs";
 import { standingFromHorizontalSingingFromSide } from "./special/standing-from-horizontal-singing-from-side.mjs";
 import { standingFromHorizontalSinging } from "./special/standing-from-horizontal-singing.mjs";
+import { standingFromHorizontalVolleyballFromSide } from "./special/standing-from-horizontal-volleyball-from-side.mjs";
 
 export type PoseSpecialVisibility = Omit<
   OutfitDefine["specialVisibility"],
@@ -114,14 +118,20 @@ export const commonPoseTable = {
 export const specialPoseTable = {
   "sitting-on-from-horizontal-singing": sittingOnFromHorizontalSinging,
   "standing-from-above-holding-bouquet": standingFromAboveHoldingBouquet,
+  "standing-from-above-holding-volleyball": standingFromAboveHoldingVolleyball,
   "standing-from-below-cheering-with-pom-poms":
     standingFromBelowCheeringWithPomPoms,
   "standing-from-below-holding-bouquet": standingFromBelowHoldingBouquet,
+  "standing-from-below-holding-volleyball": standingFromBelowHoldingVolleyball,
   "standing-from-horizontal-holding-bouquet":
     standingFromHorizontalHoldingBouquet,
+  "standing-from-horizontal-holding-volleyball":
+    standingFromHorizontalHoldingVolleyball,
   "standing-from-horizontal-singing-from-side":
     standingFromHorizontalSingingFromSide,
   "standing-from-horizontal-singing": standingFromHorizontalSinging,
+  "standing-from-horizontal-volleyball-from-side":
+    standingFromHorizontalVolleyballFromSide,
 } as const satisfies {
   [k: string]: PoseDefine;
 };

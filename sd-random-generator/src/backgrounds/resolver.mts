@@ -317,6 +317,90 @@ export const backgroundTable = {
     },
     "removeShoes": false,
   },
+  "volleyball-gym-standing": {
+    "backgroundType": `standing`,
+    "from-above": {
+      entries: [
+        `indoors`,
+        `volleyball`,
+        `gym`,
+        `volleyball net`,
+        `wooden floor`,
+      ],
+    },
+    "from-below": {
+      entries: [
+        `indoors`,
+        `volleyball`,
+        `gym`,
+        `volleyball net`,
+        `blurry background`,
+      ],
+    },
+    "from-horizontal": {
+      entries: [
+        `indoors`,
+        `volleyball`,
+        `gym`,
+        `volleyball net`,
+        `wooden floor`,
+        `blurry background`,
+      ],
+    },
+    "removeShoes": false,
+  },
+  "volleyball-gym-near-clean-floor": {
+    "backgroundType": `near-clean-floor`,
+    "from-above": {
+      entries: [`indoors`, `volleyball`, `gym`, `wooden floor`],
+    },
+    "from-below": {
+      entries: [
+        `indoors`,
+        `volleyball`,
+        `gym`,
+        `volleyball net`,
+        `blurry background`,
+      ],
+    },
+    "from-horizontal": {
+      entries: [
+        `indoors`,
+        `volleyball`,
+        `gym`,
+        `volleyball net`,
+        `wooden floor`,
+        `blurry background`,
+      ],
+    },
+    "removeShoes": false,
+  },
+  "gym-storeroom-standing": {
+    "backgroundType": `standing`,
+    "from-above": {
+      entries: [`indoors`, `gym storeroom`, `vaulting horse`],
+    },
+    "from-below": {
+      entries: [`indoors`, `gym storeroom`, `vaulting horse`],
+    },
+    "from-horizontal": {
+      entries: [`indoors`, `gym storeroom`, `vaulting horse`],
+    },
+    "removeShoes": false,
+  },
+  "gym-storeroom-near-clean-floor": {
+    "backgroundType": `near-clean-floor`,
+    "from-above": {
+      entries: [`indoors`, `gym storeroom`, `mat`],
+    },
+    "from-below": {
+      entries: [`indoors`, `gym storeroom`, `vaulting horse`, `mat`],
+    },
+    "from-horizontal": {
+      entries: [`indoors`, `gym storeroom`, `vaulting horse`, `mat`],
+    },
+    "removeShoes": false,
+  },
 } as const satisfies {
   [k in string]: BackgroundDefine;
 };

@@ -23,6 +23,7 @@ const defaultKeys = [
   `kaguya-sama-kaguya`,
   `kaguya-sama-miko`,
   `konosuba-megumin`,
+  `konosuba-yunyun`,
   `lycoris-recoil-chisato`,
   `mushoku-tensei-sylphiette-little-jelly`,
   `non-non-biyori-hotaru-notekaga`,

@@ -69,7 +69,15 @@ export const backgroundsPreset = {
     ...defaultPreset,
     {
       key: `sun-sky`,
-      probability: defaultPreset.length,
+      probability: defaultPreset.length / 3,
+    },
+    {
+      key: `gym-storeroom-near-clean-floor`,
+      probability: defaultPreset.length / 3,
+    },
+    {
+      key: `gym-storeroom-standing`,
+      probability: defaultPreset.length / 3,
     },
   ],
   "maid-bikini": [
@@ -123,6 +131,17 @@ export const backgroundsPreset = {
     },
   ],
   "sukumizu-thighhighs": defaultPreset,
+  "volleyball-uniform": [
+    ...defaultPreset,
+    {
+      key: `volleyball-gym-near-clean-floor`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `volleyball-gym-standing`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "danmachi-nochekaiser-hestia": defaultPreset,
   "fate-little-jelly-rin-sweater": [
     ...defaultPreset,

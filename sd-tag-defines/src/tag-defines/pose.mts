@@ -40,6 +40,7 @@ export const allPoseTags = [
   `on side`,
   `on stomach`,
   `paw pose`,
+  `playing sports`,
   `profile`, // Hard classification
   `reaching towards viewer`,
   `shushing`,

@@ -29,12 +29,15 @@ export const allBackgroundTags = [
   `forest`,
   `garden`,
   `grass`,
+  `gym storeroom`,
+  `gym`,
   `heart background`,
   `heart`,
   `indoors`,
   `karaoke-box`,
   `karaoke`,
   `lamp`,
+  `mat`,
   `moon`,
   `mountain`,
   `night sky`,
@@ -65,6 +68,9 @@ export const allBackgroundTags = [
   `steaming body`,
   `sunset`,
   `sweat`,
+  `vaulting horse`,
+  `volleyball net`,
+  `volleyball`,
   `wedding`,
   `wet`,
   `white background`,
@@ -73,3 +79,5 @@ export const allBackgroundTags = [
   `yellow background`,
 ] as const satisfies readonly string[];
 export type BackgroundTag = (typeof allBackgroundTags)[number];
+
+// TODO: Add test that emits warn if array is not sorted.

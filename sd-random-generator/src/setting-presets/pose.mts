@@ -61,6 +61,28 @@ export const posesPreset = {
   "night-moon": defaultPreset,
   "blue-sky-confetti-for-cheering": defaultPreset,
   "sun-sky": defaultPreset,
+  "volleyball-gym-near-clean-floor": defaultPreset,
+  "volleyball-gym-standing": [
+    ...defaultPreset,
+    {
+      key: `standing-from-above-holding-volleyball`,
+      probability: defaultPreset.length / 3,
+    },
+    {
+      key: `standing-from-below-holding-volleyball`,
+      probability: defaultPreset.length / 3,
+    },
+    {
+      key: `standing-from-horizontal-holding-volleyball`,
+      probability: defaultPreset.length / 3,
+    },
+    {
+      key: `standing-from-horizontal-volleyball-from-side`,
+      probability: (defaultPreset.length / 3) * 2,
+    },
+  ],
+  "gym-storeroom-near-clean-floor": defaultPreset,
+  "gym-storeroom-standing": defaultPreset,
 } as const satisfies {
   [k in PoseKey | `default` | BackgroundKey]: PoseSetting[];
 };
