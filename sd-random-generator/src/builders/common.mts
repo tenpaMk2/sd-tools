@@ -83,8 +83,8 @@ const createSpecialTokens = (
     visibleFeatureTokens: Token<CharacterFeatureTag>[];
     visibleOutfitTokens: Token<OutfitTag>[];
   },
-): Token<SpecialTag>[] => {
-  const m = new Map<SpecialTag, Token<SpecialTag>>();
+): Token<SpecialTag | OutfitTag>[] => {
+  const m = new Map<SpecialTag | OutfitTag, Token<SpecialTag | OutfitTag>>();
   const push = (tag: SpecialTag) => m.set(tag, new Token<SpecialTag>({ tag }));
 
   if (outfit.armpits && pose.armpits) {
@@ -134,6 +134,10 @@ const createSpecialTokens = (
 
   if (pose.upskirt && 0 < upskirtTokens.length) {
     push(`upskirt`);
+
+    for (const token of upskirtTokens) {
+      m.set(token.tag, token);
+    }
 
     if (
       upskirtTokens.some(
