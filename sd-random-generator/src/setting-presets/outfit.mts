@@ -45,6 +45,53 @@ export const outfitsPreset = {
     ...defaultPreset,
     { key: `fate-little-jelly-rin-sweater`, probability: defaultPreset.length },
   ],
+  "is-cecilia-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `is-infinite-stratos-academy-school-uniform-cecilia`,
+      probability: defaultPreset.length / 4,
+    },
+    {
+      key: `is-pilot-suit-cecilia`,
+      probability: defaultPreset.length / 4,
+    },
+  ],
+  "is-charlotte-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `is-infinite-stratos-academy-school-uniform-charlotte`,
+      probability: defaultPreset.length / 4,
+    },
+    {
+      key: `is-pilot-suit-charlotte`,
+      probability: defaultPreset.length / 4,
+    },
+  ],
+  "is-houki-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `is-infinite-stratos-academy-school-uniform-houki`,
+      probability: defaultPreset.length / 4,
+    },
+    {
+      key: `is-pilot-suit-houki`,
+      probability: defaultPreset.length / 4,
+    },
+  ],
+  "is-lingyin-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `is-infinite-stratos-academy-school-uniform-lingyin`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-tatenashi-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `is-infinite-stratos-academy-school-uniform-tatenashi`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "is-cecilia-og-turles": defaultPreset,
   "isekai-ojisan-alicia-nochekaiser": [
     ...defaultPreset,

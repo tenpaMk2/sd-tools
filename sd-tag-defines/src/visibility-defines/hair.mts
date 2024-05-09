@@ -92,6 +92,7 @@ export const allHairVisibilities = {
   "center-flap bangs": preset.bangs,
   "colored inner hair": preset.hair,
   "cone hair bun": preset.hair,
+  "cowlick": preset.bangs,
   "crossed bangs": preset.bangs,
   "crown braid": preset.hair,
   "curly hair": preset.hair,

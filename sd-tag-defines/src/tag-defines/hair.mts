@@ -52,6 +52,7 @@ export const allHairTags = [
   `center-flap bangs`,
   `colored inner hair`,
   `cone hair bun`,
+  `cowlick`,
   `crossed bangs`,
   `crown braid`,
   `curly hair`,

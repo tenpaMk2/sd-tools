@@ -23,7 +23,12 @@ import { dumbbellGinaWiz } from "./dumbbell/dumbbell-gina-wiz.mjs";
 import { dumbbellHibikiWiz } from "./dumbbell/dumbbell-hibiki-wiz.mjs";
 import { dumbbellSatomiWiz } from "./dumbbell/dumbbell-satomi-wiz.mjs";
 import { fateRinLittleJelly } from "./fate/fate-rin-little-jelly.mjs";
+import { isCeciliaNochekaiser } from "./is/is-cecilia-nochekaiser.mjs";
 import { isCeciliaOgTurles } from "./is/is-cecilia-og-turles.mjs";
+import { isCharlotteNochekaiser } from "./is/is-charlotte-nochekaiser.mjs";
+import { isHoukiNochekaiser } from "./is/is-houki-nochekaiser.mjs";
+import { isLingyinNochekaiser } from "./is/is-lingyin-nochekaiser.mjs";
+import { isTatenashiNochekaiser } from "./is/is-tatenashi-nochekaiser.mjs";
 import { isekaiOjisanAliciaNochekaiser } from "./isekai-ojisan/isekai-ojisan-alicia-nochekaiser.mjs";
 import { isekaiOjisanMabelNochekaiser } from "./isekai-ojisan/isekai-ojisan-mabel-nochekaiser.mjs";
 import { isekaiOjisanSuiNochekaiser } from "./isekai-ojisan/isekai-ojisan-sui-nochekaiser.mjs";
@@ -139,6 +144,11 @@ export const characterTable = {
   "dumbbell-hibiki-wiz": dumbbellHibikiWiz(),
   "dumbbell-satomi-wiz": dumbbellSatomiWiz(),
   "fate-rin-little-jelly": fateRinLittleJelly(),
+  "is-cecilia-nochekaiser": isCeciliaNochekaiser(),
+  "is-charlotte-nochekaiser": isCharlotteNochekaiser(),
+  "is-houki-nochekaiser": isHoukiNochekaiser(),
+  "is-lingyin-nochekaiser": isLingyinNochekaiser(),
+  "is-tatenashi-nochekaiser": isTatenashiNochekaiser(),
   "is-cecilia-og-turles": isCeciliaOgTurles(),
   "isekai-ojisan-alicia-nochekaiser": isekaiOjisanAliciaNochekaiser(),
   "isekai-ojisan-mabel-nochekaiser": isekaiOjisanMabelNochekaiser(),

@@ -65,6 +65,15 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "denim-bikini": [
+    ...defaultPreset,
+    { key: `ocean`, probability: (defaultPreset.length / 3) * 2 },
+    { key: `beach-standing`, probability: (defaultPreset.length / 3) * 2 },
+    {
+      key: `beach-near-clean-floor`,
+      probability: (defaultPreset.length / 3) * 2,
+    },
+  ],
   "gym-uniform": [
     ...defaultPreset,
     {
@@ -142,6 +151,17 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "white-dress": [
+    ...defaultPreset,
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "danmachi-nochekaiser-hestia": defaultPreset,
   "fate-little-jelly-rin-sweater": [
     ...defaultPreset,
@@ -151,6 +171,82 @@ export const backgroundsPreset = {
     },
     {
       key: `night-rooftop`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-pilot-suit-cecilia": [
+    ...defaultPreset,
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-pilot-suit-charlotte": [
+    ...defaultPreset,
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-pilot-suit-houki": [
+    ...defaultPreset,
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-infinite-stratos-academy-school-uniform-cecilia": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-infinite-stratos-academy-school-uniform-charlotte": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-infinite-stratos-academy-school-uniform-houki": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-infinite-stratos-academy-school-uniform-lingyin": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-infinite-stratos-academy-school-uniform-tatenashi": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
       probability: defaultPreset.length / 2,
     },
   ],

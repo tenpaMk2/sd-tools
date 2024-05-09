@@ -9,6 +9,7 @@ import { casualMiniskirt } from "./common/casual-miniskirt.mjs";
 import { cheerleader } from "./common/cheerleader.mjs";
 import { chinaDress } from "./common/china-dress.mjs";
 import { cowPrintBikini } from "./common/cow-print-bikini.mjs";
+import { denimBikini } from "./common/denim-bikini.mjs";
 import { gymUniform } from "./common/gym-uniform.mjs";
 import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
@@ -21,8 +22,11 @@ import { schoolUniformBowtie } from "./common/school-uniform-bowtie.mjs";
 import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
 import { volleyballUniform } from "./common/volleyball-uniform.mjs";
+import { whiteDress } from "./common/white-dress.mjs";
 import { danmachiHestia } from "./danmachi/hestia.mjs";
 import { fateRinSweater } from "./fate/rin-sweater.mjs";
+import { isInfiniteStratosAcademySchoolUniform } from "./is/infinite-stratos-academy-school-uniform.mjs";
+import { isPilotSuit } from "./is/is-pilot-suit.mjs";
 import { isekaiOjisanAlicia } from "./isekai-ojisan/alicia.mjs";
 import { isekaiOjisanMabel } from "./isekai-ojisan/mabel.mjs";
 import { isekaiOjisanSui } from "./isekai-ojisan/sui.mjs";
@@ -131,6 +135,7 @@ export const commonOutfitTable = {
   "cheerleader": cheerleader(),
   "china-dress": chinaDress(),
   "cow-print-bikini": cowPrintBikini(),
+  "denim-bikini": denimBikini(),
   "gym-uniform": gymUniform(),
   "maid-bikini": maidBikini(),
   "micro-bikini": microBikini(),
@@ -142,6 +147,7 @@ export const commonOutfitTable = {
   "school-uniform-bowtie": schoolUniformBowtie(),
   "sukumizu-thighhighs": sukumizuThighhighs(),
   "volleyball-uniform": volleyballUniform(),
+  "white-dress": whiteDress(),
 } as const satisfies {
   [k: string]: OutfitDefine;
 };
@@ -149,6 +155,19 @@ export const commonOutfitTable = {
 export const characterOutfitTable = {
   "danmachi-nochekaiser-hestia": danmachiHestia(`nochekaiser`),
   "fate-little-jelly-rin-sweater": fateRinSweater(`little-jelly`),
+  "is-infinite-stratos-academy-school-uniform-cecilia":
+    isInfiniteStratosAcademySchoolUniform(`cecilia`),
+  "is-infinite-stratos-academy-school-uniform-charlotte":
+    isInfiniteStratosAcademySchoolUniform(`charlotte`),
+  "is-infinite-stratos-academy-school-uniform-houki":
+    isInfiniteStratosAcademySchoolUniform(`houki`),
+  "is-infinite-stratos-academy-school-uniform-lingyin":
+    isInfiniteStratosAcademySchoolUniform(`lingyin`),
+  "is-infinite-stratos-academy-school-uniform-tatenashi":
+    isInfiniteStratosAcademySchoolUniform(`tatenashi`),
+  "is-pilot-suit-cecilia": isPilotSuit(`cecilia`),
+  "is-pilot-suit-charlotte": isPilotSuit(`charlotte`),
+  "is-pilot-suit-houki": isPilotSuit(`houki`),
   "isekai-ojisan-nochekaiser-alicia": isekaiOjisanAlicia(`nochekaiser`),
   "isekai-ojisan-nochekaiser-mabel": isekaiOjisanMabel(`nochekaiser`),
   "isekai-ojisan-nochekaiser-sui": isekaiOjisanSui(`nochekaiser`),

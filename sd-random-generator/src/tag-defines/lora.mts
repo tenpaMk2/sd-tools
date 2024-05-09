@@ -747,6 +747,61 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Lancelot69lol`,
   },
+  {
+    loraName: `cecilia-alcott-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/431036/cecilia-alcott-infinite-stratos-is`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [`white military uniform`],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `charlotte-dunois-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/431037/charlotte-dunois-infinite-stratos-is`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [`white military uniform`],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `tatenashi-sarashiki-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/431107/tatenashi-sarashiki-infinite-stratos-is`,
+    ),
+    characterTriggerWordsTags: [`tatenashi sarashiki`],
+    outfitTriggerTags: [`white military uniform`],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `houki-shinonono-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/431040/houki-shinonono-infinite-stratos-is`,
+    ),
+    characterTriggerWordsTags: [`houki shinonono`],
+    outfitTriggerTags: [`white military uniform`],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `lingyin-huang-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/431065/lingyin-huang-infinite-stratos-is`,
+    ),
+    characterTriggerWordsTags: [`lingyin huang`],
+    outfitTriggerTags: [`white military uniform`],
+    creator: `nochekaiser`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

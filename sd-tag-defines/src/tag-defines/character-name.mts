@@ -74,6 +74,8 @@ export const allCharacterNameTags = [
   `sakura kyouko`,
   `salama \\(amaburi\\)`,
   `sanjouno haruhime`,
+  `sarashiki kanzashi`,
+  `sarashiki tatenashi`,
   `sento isuzu`,
   `shiba miyuki`,
   `shibata mizuki`,
