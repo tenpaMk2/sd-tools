@@ -50,6 +50,7 @@ export const upskirtPreset = {
     [{ entries: [`white panties`] }, { entries: [`black panties`] }],
   ],
   whitePanties: [`underwear`, `panties`, `crotch seam`, `white panties`],
+  pinkPanties: [`underwear`, `panties`, `crotch seam`, `pink panties`],
   redPanties: [`underwear`, `panties`, `crotch seam`, `red panties`],
 } as const satisfies {
   [k in string]: NormalEntry<OutfitTag>[];

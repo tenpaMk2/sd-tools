@@ -26,8 +26,11 @@ import { fateRinLittleJelly } from "./fate/fate-rin-little-jelly.mjs";
 import { isCeciliaNochekaiser } from "./is/is-cecilia-nochekaiser.mjs";
 import { isCeciliaOgTurles } from "./is/is-cecilia-og-turles.mjs";
 import { isCharlotteNochekaiser } from "./is/is-charlotte-nochekaiser.mjs";
+import { isChifuyuNochekaiser } from "./is/is-chifuyu-nochekaiser.mjs";
 import { isHoukiNochekaiser } from "./is/is-houki-nochekaiser.mjs";
+import { isLauraNochekaiser } from "./is/is-laura-nochekaiser.mjs";
 import { isLingyinNochekaiser } from "./is/is-lingyin-nochekaiser.mjs";
+import { isMayaNochekaiser } from "./is/is-maya-nochekaiser.mjs";
 import { isTatenashiNochekaiser } from "./is/is-tatenashi-nochekaiser.mjs";
 import { isekaiOjisanAliciaNochekaiser } from "./isekai-ojisan/isekai-ojisan-alicia-nochekaiser.mjs";
 import { isekaiOjisanMabelNochekaiser } from "./isekai-ojisan/isekai-ojisan-mabel-nochekaiser.mjs";
@@ -146,8 +149,11 @@ export const characterTable = {
   "fate-rin-little-jelly": fateRinLittleJelly(),
   "is-cecilia-nochekaiser": isCeciliaNochekaiser(),
   "is-charlotte-nochekaiser": isCharlotteNochekaiser(),
+  "is-chifuyu-nochekaiser": isChifuyuNochekaiser(),
   "is-houki-nochekaiser": isHoukiNochekaiser(),
+  "is-laura-nochekaiser": isLauraNochekaiser(),
   "is-lingyin-nochekaiser": isLingyinNochekaiser(),
+  "is-maya-nochekaiser": isMayaNochekaiser(),
   "is-tatenashi-nochekaiser": isTatenashiNochekaiser(),
   "is-cecilia-og-turles": isCeciliaOgTurles(),
   "isekai-ojisan-alicia-nochekaiser": isekaiOjisanAliciaNochekaiser(),

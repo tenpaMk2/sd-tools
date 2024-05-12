@@ -1,13 +1,20 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../resolver.mjs";
 
-type Variation = `cecilia` | `charlotte` | `houki` | `lingyin` | `tatenashi`;
+type Variation =
+  | `cecilia`
+  | `charlotte`
+  | `houki`
+  | `laura`
+  | `lingyin`
+  | `tatenashi`;
 
 const variationParts = {
   necktie: {
     cecilia: [`neck ribbon`, `blue neck ribbon`],
     charlotte: [`neck ribbon`, `blue neck ribbon`],
     houki: [`neck ribbon`, `blue neck ribbon`],
+    laura: [`necktie`, `blue necktie`, `short necktie`],
     lingyin: [`collarbone`],
     tatenashi: [`necktie`, `yellow necktie`, `green vest`],
   },
@@ -15,6 +22,7 @@ const variationParts = {
     cecilia: [`long sleeves`, `white sleeves`],
     charlotte: [`long sleeves`, `white sleeves`],
     houki: [`long sleeves`, `white sleeves`],
+    laura: [`long sleeves`, `white sleeves`],
     lingyin: [`bare shoulders`, `detached sleeves`, `white sleeves`],
     tatenashi: [`long sleeves`, `white sleeves`],
   },
@@ -22,20 +30,23 @@ const variationParts = {
     cecilia: [`white belt`],
     charlotte: [`white belt`],
     houki: [`white belt`],
+    laura: [`white belt`],
     lingyin: [`white belt`],
     tatenashi: [`green belt`],
   },
   skirt: {
-    cecilia: [],
-    charlotte: [`miniskirt`],
-    houki: [`miniskirt`],
-    lingyin: [`miniskirt`],
-    tatenashi: [`miniskirt`],
+    cecilia: [`skirt`, `white skirt`, `red trim skirt`],
+    charlotte: [`skirt`, `white skirt`, `miniskirt`, `red trim skirt`],
+    houki: [`skirt`, `white skirt`, `miniskirt`, `red trim skirt`],
+    laura: [`pants`, `white pants`, `red trim skirt`],
+    lingyin: [`skirt`, `white skirt`, `miniskirt`, `red trim skirt`],
+    tatenashi: [`skirt`, `white skirt`, `miniskirt`, `red trim skirt`],
   },
   legwear: {
     cecilia: [`pantyhose`, `black pantyhose`, `loafers`],
     charlotte: [`bare legs`, `shoes`],
     houki: [`thighhighs`, `white thighhighs`, `boots`, `knee boots`],
+    laura: [`boots`, `knee boots`],
     lingyin: [`socks`, `black socks`, `boots`],
     tatenashi: [`pantyhose`, `red pantyhose`, `loafers`],
   },
@@ -43,6 +54,7 @@ const variationParts = {
     cecilia: upskirtPreset.pantiesUnderPantyhose,
     charlotte: upskirtPreset.colorfulPanties,
     houki: upskirtPreset.colorfulPanties,
+    laura: [],
     lingyin: upskirtPreset.colorfulPanties,
     tatenashi: upskirtPreset.pantiesUnderPantyhose,
   },
@@ -62,6 +74,10 @@ const variationRemoveShoes = {
     additionalFootEntriesAfterRemoving: [`no shoes`],
   },
   houki: {
+    excludeTags: [`boots`, `knee boots`],
+    additionalFootEntriesAfterRemoving: [`no shoes`],
+  },
+  laura: {
     excludeTags: [`boots`, `knee boots`],
     additionalFootEntriesAfterRemoving: [`no shoes`],
   },
@@ -90,10 +106,7 @@ export const isInfiniteStratosAcademySchoolUniform = (variation: Variation) =>
       ...variationParts.sleeves[variation],
       `belt`,
       ...variationParts.belt[variation],
-      `skirt`,
-      `white skirt`,
       ...variationParts.skirt[variation],
-      `red trim skirt`,
       ...variationParts.legwear[variation],
     ],
     specialVisibility: {

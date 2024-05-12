@@ -316,6 +316,21 @@ const allPantiesColorTags = [
   `yellow panties`,
 ] as const satisfies string[];
 
+const allPantsColorTags = [
+  `aqua pants`,
+  `black pants`,
+  `blue pants`,
+  `brown pants`,
+  `green pants`,
+  `grey pants`,
+  `orange pants`,
+  `pink pants`,
+  `purple pants`,
+  `red pants`,
+  `white pants`,
+  `yellow pants`,
+] as const satisfies string[];
+
 const allPantyhoseColorTags = [
   `aqua pantyhose`,
   `black pantyhose`,
@@ -585,6 +600,7 @@ export const allBodyOutfitTags = [
   ...allNecktieColorTags,
   ...allOnePieceSwimsuitColorTags,
   ...allPantiesColorTags,
+  ...allPantsColorTags,
   ...allPantyhoseColorTags,
   ...allSailorCollarColorTags,
   ...allSerafukuColorTags,
@@ -691,6 +707,7 @@ export const allBodyOutfitTags = [
   `frilled apron`,
   `frilled bikini`,
   `frilled skirt`,
+  `frilled sleeves`,
   `frills`,
   `front-tie bikini top`,
   `fur collar`,
@@ -767,6 +784,7 @@ export const allBodyOutfitTags = [
   `open-chest sweater`,
   `panties under pantyhose`,
   `panties`,
+  `pants`,
   `pantyhose`,
   `partially unbuttoned`,
   `partially undressed`,
@@ -860,5 +878,8 @@ export const allBodyOutfitTags = [
   `swimsuit`,
   `bracelet`,
   `cutoffs`,
+  `skirt suit`,
+  `teacher`,
+  `formal`,
 ] as const satisfies readonly string[];
 export type BodyOutfitTag = (typeof allBodyOutfitTags)[number];

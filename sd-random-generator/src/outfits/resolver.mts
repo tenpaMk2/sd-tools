@@ -10,6 +10,7 @@ import { cheerleader } from "./common/cheerleader.mjs";
 import { chinaDress } from "./common/china-dress.mjs";
 import { cowPrintBikini } from "./common/cow-print-bikini.mjs";
 import { denimBikini } from "./common/denim-bikini.mjs";
+import { formalSuit } from "./common/formal-suit.mjs";
 import { gymUniform } from "./common/gym-uniform.mjs";
 import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
@@ -27,6 +28,7 @@ import { danmachiHestia } from "./danmachi/hestia.mjs";
 import { fateRinSweater } from "./fate/rin-sweater.mjs";
 import { isInfiniteStratosAcademySchoolUniform } from "./is/infinite-stratos-academy-school-uniform.mjs";
 import { isPilotSuit } from "./is/is-pilot-suit.mjs";
+import { isYellowDressMaya } from "./is/yellow-dress-maya.mjs";
 import { isekaiOjisanAlicia } from "./isekai-ojisan/alicia.mjs";
 import { isekaiOjisanMabel } from "./isekai-ojisan/mabel.mjs";
 import { isekaiOjisanSui } from "./isekai-ojisan/sui.mjs";
@@ -136,6 +138,7 @@ export const commonOutfitTable = {
   "china-dress": chinaDress(),
   "cow-print-bikini": cowPrintBikini(),
   "denim-bikini": denimBikini(),
+  "formal-suit": formalSuit(`chifuyu`),
   "gym-uniform": gymUniform(),
   "maid-bikini": maidBikini(),
   "micro-bikini": microBikini(),
@@ -161,6 +164,8 @@ export const characterOutfitTable = {
     isInfiniteStratosAcademySchoolUniform(`charlotte`),
   "is-infinite-stratos-academy-school-uniform-houki":
     isInfiniteStratosAcademySchoolUniform(`houki`),
+  "is-infinite-stratos-academy-school-uniform-laura":
+    isInfiniteStratosAcademySchoolUniform(`laura`),
   "is-infinite-stratos-academy-school-uniform-lingyin":
     isInfiniteStratosAcademySchoolUniform(`lingyin`),
   "is-infinite-stratos-academy-school-uniform-tatenashi":
@@ -168,6 +173,7 @@ export const characterOutfitTable = {
   "is-pilot-suit-cecilia": isPilotSuit(`cecilia`),
   "is-pilot-suit-charlotte": isPilotSuit(`charlotte`),
   "is-pilot-suit-houki": isPilotSuit(`houki`),
+  "is-yellow-dress-maya": isYellowDressMaya(),
   "isekai-ojisan-nochekaiser-alicia": isekaiOjisanAlicia(`nochekaiser`),
   "isekai-ojisan-nochekaiser-mabel": isekaiOjisanMabel(`nochekaiser`),
   "isekai-ojisan-nochekaiser-sui": isekaiOjisanSui(`nochekaiser`),

@@ -802,6 +802,50 @@ export const allLoras = [
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
   },
+  {
+    loraName: `laura-bodewig-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/406483/laura-bodewig-infinite-stratos-is-commission`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [`white military uniform`],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `laura-bodewig-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/406483/laura-bodewig-infinite-stratos-is-commission`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [`white military uniform`],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `maya-yamada-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/431075/maya-yamada-infinite-stratos-is`,
+    ),
+    characterTriggerWordsTags: [`maya yamada`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `chifuyu-orimura-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/431039/chifuyu-orimura-infinite-stratos-is`,
+    ),
+    characterTriggerWordsTags: [`chifuyu orimura`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

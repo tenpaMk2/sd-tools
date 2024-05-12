@@ -74,6 +74,14 @@ export const backgroundsPreset = {
       probability: (defaultPreset.length / 3) * 2,
     },
   ],
+  "formal-suit": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: (defaultPreset.length / 2) * 2,
+    },
+    { key: `classroom-window`, probability: (defaultPreset.length / 2) * 2 },
+  ],
   "gym-uniform": [
     ...defaultPreset,
     {
@@ -228,6 +236,17 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "is-infinite-stratos-academy-school-uniform-laura": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "is-infinite-stratos-academy-school-uniform-lingyin": [
     ...defaultPreset,
     {
@@ -240,6 +259,17 @@ export const backgroundsPreset = {
     },
   ],
   "is-infinite-stratos-academy-school-uniform-tatenashi": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-yellow-dress-maya": [
     ...defaultPreset,
     {
       key: `city`,

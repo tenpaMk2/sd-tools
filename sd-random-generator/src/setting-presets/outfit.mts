@@ -67,6 +67,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 4,
     },
   ],
+  "is-chifuyu-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `formal-suit`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "is-houki-nochekaiser": [
     ...defaultPreset,
     {
@@ -78,10 +85,24 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 4,
     },
   ],
+  "is-laura-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `is-infinite-stratos-academy-school-uniform-laura`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "is-lingyin-nochekaiser": [
     ...defaultPreset,
     {
       key: `is-infinite-stratos-academy-school-uniform-lingyin`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-maya-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `is-yellow-dress-maya`,
       probability: defaultPreset.length / 2,
     },
   ],

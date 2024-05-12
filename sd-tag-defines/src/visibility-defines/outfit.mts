@@ -512,6 +512,21 @@ const allPantiesColorVisibilities = {
   "yellow panties": preset.panties,
 } as const satisfies { [key in BodyOutfitTag]?: Visibility };
 
+const allPantsColorVisibilities = {
+  "aqua pants": preset.thighs,
+  "black pants": preset.thighs,
+  "blue pants": preset.thighs,
+  "brown pants": preset.thighs,
+  "green pants": preset.thighs,
+  "grey pants": preset.thighs,
+  "orange pants": preset.thighs,
+  "pink pants": preset.thighs,
+  "purple pants": preset.thighs,
+  "red pants": preset.thighs,
+  "white pants": preset.thighs,
+  "yellow pants": preset.thighs,
+} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+
 const allPantyhoseColorVisibilities = {
   "aqua pantyhose": preset.thighhighs,
   "black pantyhose": preset.thighhighs,
@@ -782,6 +797,7 @@ export const allOutfitVisibilities = {
   ...allNecktieColorVisibilities,
   ...allOnePieceSwimsuitColorVisibilities,
   ...allPantiesColorVisibilities,
+  ...allPantsColorVisibilities,
   ...allPantyhoseColorVisibilities,
   ...allSailorCollarColorVisibilities,
   ...allSerafukuColorVisibilities,
@@ -827,6 +843,7 @@ export const allOutfitVisibilities = {
   "bottomless": preset.skirt,
   "bowtie": preset.bowtie,
   "bra": preset.bra,
+  "bracelet": preset["wrist cuffs"],
   "breast pocket": preset.bowtie,
   "bridal garter": preset.skirt,
   "bridal gauntlets": preset.shoulder,
@@ -872,6 +889,7 @@ export const allOutfitVisibilities = {
   "cropped shirt": preset.shirt,
   "cross-laced footwear": preset.foot,
   "crotch seam": preset.cameltoe,
+  "cutoffs": preset.skirt,
   "denim shorts": preset.skirt,
   "denim": preset.skirt,
   "detached collar": preset.collar,
@@ -885,9 +903,11 @@ export const allOutfitVisibilities = {
   "fingerless gloves": preset["wrist cuffs"],
   "first high school uniform": preset.dress,
   "floral print": preset.dress,
+  "formal": preset.all,
   "frilled apron": preset.dress,
   "frilled bikini": preset.dress,
   "frilled skirt": preset.skirt,
+  "frilled sleeves": preset.shoulder, // `wrist cuffs` ?
   "frills": preset.all,
   "front-tie bikini top": preset.bowtie,
   "fur collar": preset.collar,
@@ -964,6 +984,7 @@ export const allOutfitVisibilities = {
   "open-chest sweater": preset.shirt,
   "panties under pantyhose": preset.panties,
   "panties": preset.panties,
+  "pants": preset.thighs,
   "pantyhose": preset.thighhighs,
   "partially unbuttoned": preset.bowtie,
   "partially undressed": preset.dress,
@@ -1016,6 +1037,7 @@ export const allOutfitVisibilities = {
   "side slit": preset["side hip"],
   "side-tie bikini bottom": preset["side hip"],
   "skin tight": preset.dress,
+  "skirt suit": preset.dress,
   "skirt": preset.skirt,
   "sleeveless dress": preset.dress,
   "sleeveless jacket": preset.shirt,
@@ -1032,7 +1054,9 @@ export const allOutfitVisibilities = {
   "sweater dress": preset.dress,
   "sweater vest": preset.shirt,
   "sweater": preset.shirt,
+  "swimsuit": preset.dress,
   "t-shirt": preset.shirt,
+  "teacher": preset.all,
   "thigh boots": preset.thighhighs,
   "thigh strap": preset.thighhighs,
   "thighhighs": preset.thighhighs,
@@ -1054,9 +1078,6 @@ export const allOutfitVisibilities = {
   "white cloak": preset.dress,
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],
-  "swimsuit": preset.dress,
-  "bracelet": preset["wrist cuffs"],
-  "cutoffs": preset.skirt,
 } as const satisfies {
   [key in BodyOutfitTag]: Visibility;
 };
