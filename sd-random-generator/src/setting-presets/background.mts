@@ -457,6 +457,28 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "lycoris-recoil-lycoris-uniform-chisato": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "lycoris-recoil-lycoris-uniform-takina": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "mahoako-notekaga-locomusica": [
     ...defaultPreset,
     { key: `city`, probability: defaultPreset.length },

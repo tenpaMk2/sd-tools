@@ -1,45 +1,42 @@
 import { emotionPreset } from "../emotion-preset.mjs";
 import { CharacterDefine } from "../resolver.mjs";
 
-type Variation = `no-lora` | `eft` | `nochekaiser`;
+type Variation = `eft` | `nochekaiser`;
 
 const loraVariation = {
-  "no-lora": null,
-  "eft": {
-    tag: `chisato-lycoreco-01`,
+  eft: {
+    tag: `takina-lycoreco-01`,
     probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
   },
-  "nochekaiser": {
-    tag: `chisato-nishikigi-s1-ponyxl-lora-nochekaiser`,
+  nochekaiser: {
+    tag: `takina-inoue-ponyxl-lora-nochekaiser`,
     probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
   },
 } as const satisfies { [k in Variation]: CharacterDefine["lora"] };
 
 const loraCharacterTriggerWordEntriesVariation = {
-  "no-lora": [],
-  "eft": [`chisato nishikigi`],
-  "nochekaiser": [`chisato nishikigi`],
+  eft: [`takina inoue`],
+  nochekaiser: [],
 } as const satisfies {
   [k in Variation]: CharacterDefine["loraCharacterTriggerWordEntries"];
 };
 
-export const lycorisRecoilChisato = (variation: Variation) =>
+export const lycorisRecoilTakina = (variation: Variation) =>
   ({
     lora: loraVariation[variation],
     loraCharacterTriggerWordEntries:
       loraCharacterTriggerWordEntriesVariation[variation],
     seriesNameEntries: [`lycoris recoil`],
-    characterNameEntries: [`nishikigi chisato`],
+    characterNameEntries: [`inoue takina`],
     characterFeatureEntries: [
-      `red eyes`,
-      `blonde hair`,
-      `short hair`,
-      ...(variation === `nochekaiser` ? ([`one side up`] as const) : []),
-      `bob cut`,
-      `hair ribbon`,
-      `red hair ribbon`,
+      `purple eyes`,
+      `tsurime`,
+      `black hair`,
+      `long hair`,
+      `straight hair`,
+      `sidelocks`,
     ],
-    breastSize: `large breasts`,
+    breastSize: `medium breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionEntries: emotionPreset.serious,
   }) as const satisfies CharacterDefine;

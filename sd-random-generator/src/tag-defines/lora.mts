@@ -846,6 +846,28 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  {
+    loraName: `chisato-nishikigi-s1-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/342789/chisato-nishikigi-lycoris-recoil`,
+    ),
+    characterTriggerWordsTags: [`chisato nishikigi`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `takina-inoue-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/342798/takina-inoue-lycoris-recoil`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

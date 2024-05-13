@@ -228,8 +228,22 @@ export const outfitsPreset = {
     },
   ],
   "lycoris-recoil-chisato-eft": defaultPreset,
+  "lycoris-recoil-chisato-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `lycoris-recoil-lycoris-uniform-chisato`,
+      probability: defaultPreset.length,
+    },
+  ],
   "lycoris-recoil-chisato": defaultPreset,
   "lycoris-recoil-takina-eft": defaultPreset,
+  "lycoris-recoil-takina-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `lycoris-recoil-lycoris-uniform-takina`,
+      probability: defaultPreset.length,
+    },
+  ],
   "madomagi-homura-eft": defaultPreset,
   "madomagi-iroha-eft": defaultPreset,
   "madomagi-kyouko-eft": defaultPreset,

@@ -48,9 +48,8 @@ import { kaguyaSamaMikoNochekaiser } from "./kaguya-sama/kaguya-sama-miko-nochek
 import { kaguyaSamaMiko } from "./kaguya-sama/kaguya-sama-miko.mjs";
 import { konosubaMegumin } from "./konosuba/konosuba-megumin.mjs";
 import { konosubaYunyun } from "./konosuba/konosuba-yunyun.mjs";
-import { lycorisRecoilChisatoEft } from "./lycoris-recoil/lycoris-recoil-chisato-eft.mjs";
 import { lycorisRecoilChisato } from "./lycoris-recoil/lycoris-recoil-chisato.mjs";
-import { lycorisRecoilTakinaEft } from "./lycoris-recoil/lycoris-recoil-takina-eft.mjs";
+import { lycorisRecoilTakina } from "./lycoris-recoil/lycoris-recoil-takina.mjs";
 import { madomagiHomuraEft } from "./madomagi/madomagi-homura-eft.mjs";
 import { madomagiIrohaEft } from "./madomagi/madomagi-iroha-eft.mjs";
 import { madomagiKyoukoEft } from "./madomagi/madomagi-kyouko-eft.mjs";
@@ -172,9 +171,11 @@ export const characterTable = {
   "kaguya-sama-miko": kaguyaSamaMiko(),
   "konosuba-megumin": konosubaMegumin(),
   "konosuba-yunyun": konosubaYunyun(),
-  "lycoris-recoil-chisato-eft": lycorisRecoilChisatoEft(),
-  "lycoris-recoil-chisato": lycorisRecoilChisato(),
-  "lycoris-recoil-takina-eft": lycorisRecoilTakinaEft(),
+  "lycoris-recoil-chisato-eft": lycorisRecoilChisato(`eft`),
+  "lycoris-recoil-chisato-nochekaiser": lycorisRecoilChisato(`nochekaiser`),
+  "lycoris-recoil-chisato": lycorisRecoilChisato(`no-lora`),
+  "lycoris-recoil-takina-eft": lycorisRecoilTakina(`eft`),
+  "lycoris-recoil-takina-nochekaiser": lycorisRecoilTakina(`nochekaiser`),
   "madomagi-homura-eft": madomagiHomuraEft(),
   "madomagi-iroha-eft": madomagiIrohaEft(),
   "madomagi-kyouko-eft": madomagiKyoukoEft(),
