@@ -1,6 +1,7 @@
 export const allPoseTags = [
   `all fours`,
   `arm up`,
+  `arms behind back`,
   `arms behind head`,
   `arms up`,
   `backlighting`, // Hard classification

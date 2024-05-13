@@ -22,6 +22,19 @@ export const outfitsPreset = {
   ...monoOutfitPresetsMap,
 
   "default": defaultPreset,
+  "temp": defaultPreset.map(({ key }) => ({
+    key,
+    backgrounds: [
+      {
+        key: `colorful-backgrounds-standing`,
+        poses: [
+          { key: `standing-from-above-arms-behind-back` },
+          { key: `standing-from-below-arms-behind-back` },
+          { key: `standing-from-horizontal-arms-behind-back` },
+        ],
+      },
+    ],
+  })),
 
   "amaburi-isuzu-little-jelly": defaultPreset,
   "amaburi-isuzu": defaultPreset,
@@ -330,5 +343,5 @@ export const outfitsPreset = {
   "to-love-ru-yami-eft": defaultPreset,
   "to-love-ru-yui-eft": defaultPreset,
 } as const satisfies {
-  [k in OutfitKey | `default` | CharacterKey]: OutfitSetting[];
+  [k in OutfitKey | `default` | `temp` | CharacterKey]: OutfitSetting[];
 };

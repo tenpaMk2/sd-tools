@@ -11,6 +11,7 @@ import { nearCleanFloorFromHorizontalAllFoursFromBehind } from "./common/near-cl
 import { nearCleanFloorFromHorizontalAllFours } from "./common/near-clean-floor-from-horizontal-all-fours.mjs";
 import { nearCleanFloorFromHorizontalKneelingSpreadLegs } from "./common/near-clean-floor-from-horizontal-kneeling-spread-legs.mjs";
 import { nearCleanFloorFromHorizontalThePoseHeadRest } from "./common/near-clean-floor-from-horizontal-the-pose-head-rest.mjs";
+import { standingArmsBehindBack } from "./common/standing-common-arms-behind-back.mjs";
 import { standingFromAboveFromSideLookingAhead } from "./common/standing-from-above-from-side-looking-ahead.mjs";
 import { standingFromAboveGrabbingOwnBreasts } from "./common/standing-from-above-grabbing-own-breasts.mjs";
 import { standingFromAboveHandsOnOwnChests } from "./common/standing-from-above-hands-on-own-chests.mjs";
@@ -85,6 +86,7 @@ export const commonPoseTable = {
     nearCleanFloorFromHorizontalKneelingSpreadLegs,
   "near-clean-floor-from-horizontal-the-pose-head-rest":
     nearCleanFloorFromHorizontalThePoseHeadRest,
+  "standing-from-above-arms-behind-back": standingArmsBehindBack(`from-above`),
   "standing-from-above-from-side-looking-ahead":
     standingFromAboveFromSideLookingAhead,
   "standing-from-above-grabbing-own-breasts":
@@ -93,12 +95,15 @@ export const commonPoseTable = {
   "standing-from-above-paw-pose": standingFromAbovePawPose,
   "standing-from-above-shushing": standingFromAboveShushing,
   "standing-from-above-standing": standingFromAboveStanding,
+  "standing-from-below-arms-behind-back": standingArmsBehindBack(`from-below`),
   "standing-from-below-arms-up": standingFromBelowArmsUp,
   "standing-from-below-from-side-profile": standingFromBelowFromSideProfile,
   "standing-from-below-from-side": standingFromBelowFromSide,
   "standing-from-below-paw-pose": standingFromBelowPawPose,
   "standing-from-below-squatting": standingFromBelowSquatting,
   "standing-from-below-upper-body": standingFromBelowUpperBody,
+  "standing-from-horizontal-arms-behind-back":
+    standingArmsBehindBack(`from-horizontal`),
   "standing-from-horizontal-arms-up": standingFromHorizontalArmsUp,
   "standing-from-horizontal-contrapposto": standingFromHorizontalContrapposto,
   "standing-from-horizontal-double-v": standingFromHorizontalDoubleV,
