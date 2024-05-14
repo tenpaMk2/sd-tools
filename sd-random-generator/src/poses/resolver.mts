@@ -12,6 +12,7 @@ import { nearCleanFloorFromHorizontalAllFours } from "./common/near-clean-floor-
 import { nearCleanFloorFromHorizontalKneelingSpreadLegs } from "./common/near-clean-floor-from-horizontal-kneeling-spread-legs.mjs";
 import { nearCleanFloorFromHorizontalThePoseHeadRest } from "./common/near-clean-floor-from-horizontal-the-pose-head-rest.mjs";
 import { standingArmsBehindBack } from "./common/standing-common-arms-behind-back.mjs";
+import { standingLeaningForwardVArms } from "./common/standing-common-leaning-forward-v-arms.mjs";
 import { standingFromAboveFromSideLookingAhead } from "./common/standing-from-above-from-side-looking-ahead.mjs";
 import { standingFromAboveGrabbingOwnBreasts } from "./common/standing-from-above-grabbing-own-breasts.mjs";
 import { standingFromAboveHandsOnOwnChests } from "./common/standing-from-above-hands-on-own-chests.mjs";
@@ -92,6 +93,8 @@ export const commonPoseTable = {
   "standing-from-above-grabbing-own-breasts":
     standingFromAboveGrabbingOwnBreasts,
   "standing-from-above-hands-on-own-chests": standingFromAboveHandsOnOwnChests,
+  "standing-from-above-leaning-forward-v-arms":
+    standingLeaningForwardVArms(`from-above`),
   "standing-from-above-paw-pose": standingFromAbovePawPose,
   "standing-from-above-shushing": standingFromAboveShushing,
   "standing-from-above-standing": standingFromAboveStanding,
@@ -99,6 +102,8 @@ export const commonPoseTable = {
   "standing-from-below-arms-up": standingFromBelowArmsUp,
   "standing-from-below-from-side-profile": standingFromBelowFromSideProfile,
   "standing-from-below-from-side": standingFromBelowFromSide,
+  "standing-from-below-leaning-forward-v-arms":
+    standingLeaningForwardVArms(`from-below`),
   "standing-from-below-paw-pose": standingFromBelowPawPose,
   "standing-from-below-squatting": standingFromBelowSquatting,
   "standing-from-below-upper-body": standingFromBelowUpperBody,
@@ -112,6 +117,8 @@ export const commonPoseTable = {
   "standing-from-horizontal-hands-on-own-hips":
     standingFromHorizontalHandsOnOwnHips,
   "standing-from-horizontal-heart-hands": standingFromHorizontalHeartHands,
+  "standing-from-horizontal-leaning-forward-v-arms":
+    standingLeaningForwardVArms(`from-horizontal`),
   "standing-from-horizontal-paw-pose": standingFromHorizontalPawPose,
   "standing-from-horizontal-portrait": standingFromHorizontalPortrait,
   "standing-from-horizontal-twisted-torso": standingFromHorizontalTwistedTorso,

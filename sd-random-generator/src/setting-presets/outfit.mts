@@ -28,9 +28,9 @@ export const outfitsPreset = {
       {
         key: `colorful-backgrounds-standing`,
         poses: [
-          { key: `standing-from-above-arms-behind-back` },
-          { key: `standing-from-below-arms-behind-back` },
-          { key: `standing-from-horizontal-arms-behind-back` },
+          { key: `standing-from-above-leaning-forward-v-arms` },
+          { key: `standing-from-below-leaning-forward-v-arms` },
+          { key: `standing-from-horizontal-leaning-forward-v-arms` },
         ],
       },
     ],

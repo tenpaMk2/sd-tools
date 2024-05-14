@@ -55,6 +55,7 @@ export const allPoseTags = [
   `twisted torso`,
   `undressing`,
   `upturned eyes`,
+  `v arms`,
   `v`,
   `wariza`,
 ] as const satisfies readonly string[];
