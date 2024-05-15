@@ -170,6 +170,34 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "blend-s-school-uniform-kaho": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
+  "blend-s-swimsuit-kaho": [
+    ...defaultPreset,
+    { key: `ocean`, probability: defaultPreset.length / 3 },
+    { key: `beach-standing`, probability: defaultPreset.length / 3 },
+    { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
+  ],
+  "blend-s-waitress-kaho": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "danmachi-nochekaiser-hestia": defaultPreset,
   "fate-little-jelly-rin-sweater": [
     ...defaultPreset,

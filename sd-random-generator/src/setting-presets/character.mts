@@ -10,6 +10,8 @@ const monoCharacterPresetsMap = Object.fromEntries(
 ) as { [k in CharacterKey]: CharacterSetting[] };
 
 const defaultKeys = [
+  `blend-s-kaho-ibukimakisiko-double-bun`, // TODO: Support probability.
+  `blend-s-kaho-ibukimakisiko`,
   `danmachi-hestia`,
   `fate-rin-little-jelly`,
   `is-cecilia-nochekaiser`,

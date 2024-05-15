@@ -105,6 +105,7 @@ export const allHeadOutfitTags = [
   `hairclip`,
   `hairpin`,
   `hat`,
+  `head scarf`,
   `headband`,
   `headdress`,
   `heart hair ornament`,

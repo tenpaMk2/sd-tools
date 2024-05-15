@@ -126,6 +126,7 @@ export const allHeadOutfitVisibilities = {
   "hairclip": preset.hair,
   "hairpin": preset.hair,
   "hat": preset.hair,
+  "head scarf": preset.hair,
   "headband": preset.hair,
   "headdress": preset.hair,
   "heart hair ornament": preset.hair,

@@ -209,6 +209,22 @@ const allArmbandColorVisibilities = {
   "yellow armband": preset.armlet,
 } as const satisfies { [key in BodyOutfitTag]?: Visibility };
 
+// TODO: `color waist apron`
+const allApronColorVisibilities = {
+  "aqua apron": preset.skirt,
+  "black apron": preset.skirt,
+  "blue apron": preset.skirt,
+  "brown apron": preset.skirt,
+  "green apron": preset.skirt,
+  "grey apron": preset.skirt,
+  "orange apron": preset.skirt,
+  "pink apron": preset.skirt,
+  "purple apron": preset.skirt,
+  "red apron": preset.skirt,
+  "white apron": preset.skirt,
+  "yellow apron": preset.skirt,
+} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+
 const allAscotColorVisibilities = {
   "aqua ascot": preset.bowtie,
   "black ascot": preset.bowtie,
@@ -776,6 +792,7 @@ const allDistinguishableOutfitVisibilities = {
 
 export const allOutfitVisibilities = {
   ...allArmbandColorVisibilities,
+  ...allApronColorVisibilities,
   ...allAscotColorVisibilities,
   ...allBeltColorVisibilities,
   ...allBikiniColorVisibilities,
@@ -1074,10 +1091,12 @@ export const allOutfitVisibilities = {
   "vest": preset.shirt,
   "volleyball uniform": preset.all,
   "waist apron": preset.skirt,
+  "waitress": preset.all,
   "wedding dress": preset.dress,
   "white cloak": preset.dress,
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],
+  "plaid bowtie": preset.bowtie,
 } as const satisfies {
   [key in BodyOutfitTag]: Visibility;
 };

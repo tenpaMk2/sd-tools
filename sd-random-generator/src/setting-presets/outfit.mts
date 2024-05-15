@@ -38,6 +38,19 @@ export const outfitsPreset = {
 
   "amaburi-isuzu-little-jelly": defaultPreset,
   "amaburi-isuzu": defaultPreset,
+  "blend-s-kaho-ibukimakisiko-double-bun": [
+    {
+      key: `blend-s-swimsuit-kaho`,
+    },
+  ],
+  "blend-s-kaho-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `blend-s-school-uniform-kaho`,
+      probability: defaultPreset.length / 4,
+    },
+    { key: `blend-s-waitress-kaho`, probability: defaultPreset.length / 4 },
+  ],
   "danmachi-aiz-eft": defaultPreset,
   "danmachi-eina-eft": defaultPreset,
   "danmachi-haruhime-eft": defaultPreset,

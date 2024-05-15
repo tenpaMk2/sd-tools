@@ -1,5 +1,20 @@
 import { getKeys } from "../utility.mjs";
 
+const allApronColorTags = [
+  `aqua apron`,
+  `black apron`,
+  `blue apron`,
+  `brown apron`,
+  `green apron`,
+  `grey apron`,
+  `orange apron`,
+  `pink apron`,
+  `purple apron`,
+  `red apron`,
+  `white apron`,
+  `yellow apron`,
+] as const satisfies string[];
+
 const allArmbandColorTags = [
   `aqua armband`,
   `black armband`,
@@ -579,6 +594,7 @@ export const allDistinguishableOutfitTags = {
 } as const satisfies { [k in string]: string };
 
 export const allBodyOutfitTags = [
+  ...allApronColorTags,
   ...allArmbandColorTags,
   ...allAscotColorTags,
   ...allBeltColorTags,
@@ -646,6 +662,7 @@ export const allBodyOutfitTags = [
   `bottomless`,
   `bowtie`,
   `bra`,
+  `bracelet`,
   `breast pocket`,
   `bridal garter`,
   `bridal gauntlets`,
@@ -691,6 +708,7 @@ export const allBodyOutfitTags = [
   `cropped shirt`,
   `cross-laced footwear`,
   `crotch seam`,
+  `cutoffs`,
   `denim shorts`,
   `denim`,
   `detached collar`,
@@ -704,6 +722,7 @@ export const allBodyOutfitTags = [
   `fingerless gloves`,
   `first high school uniform`,
   `floral print`,
+  `formal`,
   `frilled apron`,
   `frilled bikini`,
   `frilled skirt`,
@@ -797,6 +816,7 @@ export const allBodyOutfitTags = [
   `pilot suit`,
   `pirate`,
   `plaid bikini`,
+  `plaid bowtie`,
   `plaid skirt`,
   `plaid sweater`,
   `playboy bunny`,
@@ -837,6 +857,7 @@ export const allBodyOutfitTags = [
   `side slit`,
   `side-tie bikini bottom`,
   `skin tight`,
+  `skirt suit`,
   `skirt`,
   `sleeveless dress`,
   `sleeveless jacket`,
@@ -853,7 +874,9 @@ export const allBodyOutfitTags = [
   `sweater dress`,
   `sweater vest`,
   `sweater`,
+  `swimsuit`,
   `t-shirt`,
+  `teacher`,
   `thigh boots`,
   `thigh strap`,
   `thighhighs`,
@@ -871,15 +894,10 @@ export const allBodyOutfitTags = [
   `vest`,
   `volleyball uniform`,
   `waist apron`,
+  `waitress`,
   `wedding dress`,
   `white cloak`,
   `wide sleeves`,
   `wrist cuffs`,
-  `swimsuit`,
-  `bracelet`,
-  `cutoffs`,
-  `skirt suit`,
-  `teacher`,
-  `formal`,
 ] as const satisfies readonly string[];
 export type BodyOutfitTag = (typeof allBodyOutfitTags)[number];

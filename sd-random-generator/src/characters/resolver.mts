@@ -9,6 +9,7 @@ import { CharacterFeatureTag } from "../tag-defines/adapter.mjs";
 import { LoraCharacterTriggerWordsTag } from "../tag-defines/lora.mjs";
 import { amaburiIsuzuLittleJelly } from "./amaburi/amaburi-isuzu-little-jelly.mjs";
 import { amaburiIsuzu } from "./amaburi/amaburi-isuzu.mjs";
+import { blendSKaho } from "./blend-s/blend-s-kaho.mjs";
 import { danmachiAizEft } from "./danmachi/danmachi-aiz-eft.mjs";
 import { danmachiEinaEft } from "./danmachi/danmachi-eina-eft.mjs";
 import { danmachiHaruhimeEft } from "./danmachi/danmachi-haruhime-eft.mjs";
@@ -132,6 +133,10 @@ export type CharacterDefine = Readonly<{
 export const characterTable = {
   "amaburi-isuzu-little-jelly": amaburiIsuzuLittleJelly(),
   "amaburi-isuzu": amaburiIsuzu(),
+  "blend-s-kaho-ibukimakisiko-double-bun": blendSKaho(
+    `ibukimakisiko-double-bun`,
+  ),
+  "blend-s-kaho-ibukimakisiko": blendSKaho(`ibukimakisiko`),
   "danmachi-aiz-eft": danmachiAizEft(),
   "danmachi-eina-eft": danmachiEinaEft(),
   "danmachi-haruhime-eft": danmachiHaruhimeEft(),

@@ -1,6 +1,9 @@
 import { LoraEntry, NormalEntry } from "../prompt-define.mjs";
 import { OutfitTag } from "../tag-defines/adapter.mjs";
 import { LoraOutfitTriggerWordsTag } from "../tag-defines/lora.mjs";
+import { blendSSchoolUniform } from "./blend-s/school-uniform.mjs";
+import { blendSSwimsuit } from "./blend-s/swimsuit.mjs";
+import { blendSWaitress } from "./blend-s/waitress.mjs";
 import { babydoll } from "./common/babydoll.mjs";
 import { bikini } from "./common/bikini.mjs";
 import { bridalLingerie } from "./common/bridal-lingerie.mjs";
@@ -157,6 +160,9 @@ export const commonOutfitTable = {
 };
 
 export const characterOutfitTable = {
+  "blend-s-school-uniform-kaho": blendSSchoolUniform(`kaho`),
+  "blend-s-swimsuit-kaho": blendSSwimsuit(`kaho`),
+  "blend-s-waitress-kaho": blendSWaitress(`kaho`),
   "danmachi-nochekaiser-hestia": danmachiHestia(`nochekaiser`),
   "fate-little-jelly-rin-sweater": fateRinSweater(`little-jelly`),
   "is-infinite-stratos-academy-school-uniform-cecilia":

@@ -26,6 +26,7 @@ export const allCharacterNameTags = [
   `gina boyd`,
   `hayasaka ai`,
   `hestia \\(danmachi\\)`,
+  `hinata kaho`,
   `hoto cocoa`,
   `huang lingyin`,
   `ichijou hotaru`,

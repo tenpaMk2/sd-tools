@@ -868,6 +868,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  {
+    loraName: `hinata kaho_PONY_epoch-000020`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/431756/pony-xl-hinata-kaho-blend-s?modelVersionId=481006`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [`kaho-default`, `kaho-schooluniform`, `kaho-swim`],
+    creator: `Ibukimakisiko`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
