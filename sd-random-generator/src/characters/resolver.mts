@@ -10,6 +10,7 @@ import { LoraCharacterTriggerWordsTag } from "../tag-defines/lora.mjs";
 import { amaburiIsuzuLittleJelly } from "./amaburi/amaburi-isuzu-little-jelly.mjs";
 import { amaburiIsuzu } from "./amaburi/amaburi-isuzu.mjs";
 import { blendSKaho } from "./blend-s/blend-s-kaho.mjs";
+import { blendSMafuyu } from "./blend-s/blend-s-mafuyu.mjs";
 import { danmachiAizEft } from "./danmachi/danmachi-aiz-eft.mjs";
 import { danmachiEinaEft } from "./danmachi/danmachi-eina-eft.mjs";
 import { danmachiHaruhimeEft } from "./danmachi/danmachi-haruhime-eft.mjs";
@@ -137,6 +138,7 @@ export const characterTable = {
     `ibukimakisiko-double-bun`,
   ),
   "blend-s-kaho-ibukimakisiko": blendSKaho(`ibukimakisiko`),
+  "blend-s-mafuyu-ibukimakisiko": blendSMafuyu(`ibukimakisiko`),
   "danmachi-aiz-eft": danmachiAizEft(),
   "danmachi-eina-eft": danmachiEinaEft(),
   "danmachi-haruhime-eft": danmachiHaruhimeEft(),

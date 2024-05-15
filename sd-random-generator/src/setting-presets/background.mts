@@ -198,6 +198,13 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "blend-s-waitress-mafuyu": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "danmachi-nochekaiser-hestia": defaultPreset,
   "fate-little-jelly-rin-sweater": [
     ...defaultPreset,

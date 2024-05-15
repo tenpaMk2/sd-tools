@@ -51,6 +51,10 @@ export const outfitsPreset = {
     },
     { key: `blend-s-waitress-kaho`, probability: defaultPreset.length / 4 },
   ],
+  "blend-s-mafuyu-ibukimakisiko": [
+    ...defaultPreset,
+    { key: `blend-s-waitress-mafuyu`, probability: defaultPreset.length / 2 },
+  ],
   "danmachi-aiz-eft": defaultPreset,
   "danmachi-eina-eft": defaultPreset,
   "danmachi-haruhime-eft": defaultPreset,

@@ -163,6 +163,7 @@ export const characterOutfitTable = {
   "blend-s-school-uniform-kaho": blendSSchoolUniform(`kaho`),
   "blend-s-swimsuit-kaho": blendSSwimsuit(`kaho`),
   "blend-s-waitress-kaho": blendSWaitress(`kaho`),
+  "blend-s-waitress-mafuyu": blendSWaitress(`mafuyu`),
   "danmachi-nochekaiser-hestia": danmachiHestia(`nochekaiser`),
   "fate-little-jelly-rin-sweater": fateRinSweater(`little-jelly`),
   "is-infinite-stratos-academy-school-uniform-cecilia":
