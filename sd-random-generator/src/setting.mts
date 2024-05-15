@@ -6,10 +6,10 @@ import {
 
 const portrait = {
   key: `portrait`,
-  fixedPrompt: `score_9, score_8_up, score_7_up, rating_questionable, 1girl, solo, megami magazine,\n`,
+  fixedPrompt: `score_9, score_8_up, score_7_up, source_anime, 1girl, solo, megami magazine,\n`,
   batchGeneration: 20,
   optionsBodyJson: {
-    ...checkpointAndVAEPreset.sdxl.seventhAnime,
+    ...checkpointAndVAEPreset.sdxl.autismmixConfetti,
   },
   txt2imgBodyJson: {
     negative_prompt: `cameltoe, empty eyes, realistic`,
@@ -26,11 +26,12 @@ const portrait = {
   characters: [
     {
       keys: [
-        `kaguya-sama-ai`,
-        `kaguya-sama-chika-nochekaiser`,
-        `kaguya-sama-kaguya`,
-        `kaguya-sama-miko`,
+        `blend-s-mafuyu-ibukimakisiko`,
+        // `blend-s-kaho-ibukimakisiko`,
+        // `blend-s-kaho-ibukimakisiko-double-bun`,
       ],
+      // keys: charactersPreset.default[0].keys,
+      // outfits: outfitsPreset.temp,
     },
   ],
 } as const satisfies Setting["generations"][number];
@@ -55,6 +56,16 @@ export const staticSetting = {
     port: 7860,
   },
   generations: [portrait, landscape],
+  // generations: [
+  //   // checkpointAndVAEPreset.sdxl.seventhAnime,
+  //   checkpointAndVAEPreset.sdxl.autismmixConfetti,
+  //   checkpointAndVAEPreset.sdxl.ebaraPony,
+  // ]
+  //   .map((che) => [
+  //     { ...portrait, optionsBodyJson: che },
+  //     // { ...landscape, optionsBodyJson: che },
+  //   ])
+  //   .flat(),
 } as const satisfies StrictSetting;
 
 export let setting: Setting;
