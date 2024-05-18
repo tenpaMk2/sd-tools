@@ -1,13 +1,62 @@
 import { RandomPicker } from "./builders/common.mjs";
-import { GenerationSetting } from "./setting-define.mjs";
+import {
+  OptionCollectedData,
+  RootCollectedData,
+  Txt2imgCollectedData,
+} from "./collector.mjs";
+import { OptionSetting, Setting, Txt2ImgSetting } from "./setting-define.mjs";
 import { setting } from "./setting.mjs";
 
-const generateEachImage = async (
-  prompt: string,
-  txt2imgBodyJson: GenerationSetting["txt2imgBodyJson"],
+const displayProgress = async (progress: number, eta: number) => {
+  const etaSecond = `${Math.floor(eta)}`.padStart(4, ` `);
+  const barPole = `=`.repeat(Math.floor(progress * 20));
+  const barContent = `${barPole}>`.padEnd(20, ` `);
+  const bar = `[${barContent}]`;
+  const percentage = `${Math.floor(progress * 100)}`.padStart(3, ` `);
+  console.log(`${etaSecond} s: ${bar} ${percentage}%`);
+};
+
+const startStatusPolling = ({ ip, port }: Setting["machine"]) =>
+  setInterval(async () => {
+    const response = await fetch(`http://${ip}:${port}/sdapi/v1/progress`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await response.json();
+    displayProgress(json.progress, json.eta_relative);
+  }, 10000);
+
+const postOption = async (
+  optionsBodyJson: OptionSetting["optionsBodyJson"],
+  { ip, port }: Setting["machine"],
 ) => {
   const json = {
-    prompt,
+    outdir_txt2img_samples: "outputs/",
+    do_not_show_images: true,
+    live_previews_enable: false,
+    ...optionsBodyJson,
+  };
+
+  const optionsResponse = await fetch(`http://${ip}:${port}/sdapi/v1/options`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(json),
+  });
+};
+
+type Txt2ImgBodyJson = Txt2ImgSetting["txt2imgBodyJson"] & {
+  prompt: string;
+};
+
+const postTxt2img = async (
+  txt2imgBodyJson: Txt2ImgBodyJson,
+  { ip, port }: Setting["machine"],
+) => {
+  const json = {
     seed: -1,
     batch_size: 1,
     send_images: false,
@@ -29,88 +78,53 @@ const generateEachImage = async (
     ...txt2imgBodyJson,
   };
 
-  const generationResponse = await fetch(
-    `http://${setting.machine.ip}:${setting.machine.port}/sdapi/v1/txt2img`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(json),
+  const txt2imgResponse = await fetch(`http://${ip}:${port}/sdapi/v1/txt2img`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
     },
-  );
-  const resultJson = await generationResponse.json();
+    body: JSON.stringify(json),
+  });
+  const resultJson = await txt2imgResponse.json();
   const infoJson = JSON.parse(resultJson.info);
   console.log(infoJson.infotexts);
 };
 
-const generateRoot = async (randomPicker: RandomPicker) => {
-  const json = {
-    outdir_txt2img_samples: "outputs/",
-    do_not_show_images: true,
-    live_previews_enable: false,
-    ...randomPicker.rootData.optionsBodyJson,
-  };
-
-  // console.time("Option setting elapsed time");
-  const optionsResponse = await fetch(
-    `http://${setting.machine.ip}:${setting.machine.port}/sdapi/v1/options`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(json),
-    },
-  );
-  // console.table(await optionsResponse.json());
-  // console.timeEnd("Option setting elapsed time");
-
-  for (let i = 0; i < randomPicker.rootData.batchGeneration; i++) {
-    console.log(`Start picking...`);
-    console.time("picking");
-    const pickedPrompt = randomPicker.pickPrompt();
-    console.timeEnd("picking");
-    console.log(`End picking!!`);
-
-    await generateEachImage(
-      `${randomPicker.rootData.fixedPrompt}${pickedPrompt}`,
-      randomPicker.rootData.txt2imgBodyJson,
-    );
+const batchGenerate = async (
+  txt2img: Txt2imgCollectedData,
+  builder: RandomPicker,
+  machine: Setting["machine"],
+) => {
+  for (let i = 0; i < txt2img.batchGeneration; i++) {
+    const pickedPrompt = builder.pickPrompt();
+    const prompt = `${txt2img.fixedPrompt}${pickedPrompt}`;
+    await postTxt2img({ prompt, ...txt2img.txt2imgBodyJson }, machine);
   }
 };
 
-const displayProgress = async (progress: number, eta: number) => {
-  const etaSecond = `${Math.floor(eta)}`.padStart(4, ` `);
-  const barPole = `=`.repeat(Math.floor(progress * 20));
-  const barContent = `${barPole}>`.padEnd(20, ` `);
-  const bar = `[${barContent}]`;
-  const percentage = `${Math.floor(progress * 100)}`.padStart(3, ` `);
-  console.log(`${etaSecond} s: ${bar} ${percentage}%`);
+type OptionCollectedDataWithBuilder = OptionCollectedData & {
+  builder: RandomPicker;
 };
 
-const startStatusPolling = () =>
-  setInterval(async () => {
-    const response = await fetch(
-      `http://${setting.machine.ip}:${setting.machine.port}/sdapi/v1/progress`,
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      },
-    );
-    const json = await response.json();
-    displayProgress(json.progress, json.eta_relative);
-  }, 10000);
+export type GenerationData = Omit<
+  RootCollectedData,
+  "export" | "optionSettings"
+> & {
+  options: OptionCollectedDataWithBuilder[];
+};
 
-export const generate = async (randomPickers: RandomPicker[]) => {
+export const generate = async (generationData: GenerationData) => {
   console.log("Generating images...");
 
-  const intervalID = startStatusPolling();
+  const intervalID = startStatusPolling(generationData.machine);
+
   do {
-    for (const randomPicker of randomPickers) {
-      await generateRoot(randomPicker);
+    for (const option of generationData.options) {
+      await postOption(option.optionsBodyJson, generationData.machine);
+
+      for (const txt2img of option.txt2imgs) {
+        batchGenerate(txt2img, option.builder, generationData.machine);
+      }
     }
   } while (setting.generateForever);
   clearInterval(intervalID);

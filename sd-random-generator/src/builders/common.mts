@@ -13,9 +13,9 @@ import {
 import {
   BackgroundCollectedData,
   CharacterCollectedData,
+  OptionCollectedData,
   OutfitCollectedData,
   PoseCollectedData,
-  RootCollectedData,
 } from "../collector.mjs";
 import { OutfitDefine, UnderboobLevelOrder } from "../outfits/resolver.mjs";
 import {
@@ -316,11 +316,11 @@ const buildCore = ({
   return [...m.values()];
 };
 
-export const build = (rootDatas: RootCollectedData[]) =>
-  rootDatas.map((rootData) => new RandomPicker(rootData));
+export const build = (options: OptionCollectedData[]) =>
+  options.map((option) => new RandomPicker(option));
 
 export class RandomPicker {
-  constructor(readonly rootData: RootCollectedData) {}
+  constructor(readonly option: OptionCollectedData) {}
 
   private randomPick<T extends { probability: number }>(candidates: T[]) {
     const total = candidates.reduce(
@@ -341,7 +341,8 @@ export class RandomPicker {
   }
 
   pickPrompt() {
-    const characterData = this.randomPick(this.rootData.characters);
+    const txt2imgData = this.randomPick(this.option.txt2imgs);
+    const characterData = this.randomPick(txt2imgData.characters);
     const outfitData = this.randomPick(characterData.outfits);
     const backgroundData = this.randomPick(outfitData.backgrounds);
     const poseData = this.randomPick(backgroundData.poses);

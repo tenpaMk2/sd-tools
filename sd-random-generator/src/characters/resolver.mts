@@ -223,8 +223,6 @@ export const characterTable = {
   "to-love-ru-nana-eft": toLoveRuNanaEft(),
   "to-love-ru-yami-eft": toLoveRuYamiEft(),
   "to-love-ru-yui-eft": toLoveRuYuiEft(),
-} as const satisfies {
-  [k: string]: CharacterDefine;
-};
+} as const satisfies Record<string, CharacterDefine>;
 
 export type CharacterKey = keyof typeof characterTable;

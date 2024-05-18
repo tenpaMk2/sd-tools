@@ -1,4 +1,4 @@
-import { Setting, StrictSetting } from "./setting-define.mjs";
+import { Setting, Txt2ImgSetting } from "./setting-define.mjs";
 import {
   checkpointAndVAEPreset,
   imageResolutionPreset,
@@ -8,9 +8,6 @@ const portrait = {
   key: `portrait`,
   fixedPrompt: `score_9, score_8_up, score_7_up, source_anime, 1girl, solo, megami magazine,\n`,
   batchGeneration: 20,
-  optionsBodyJson: {
-    ...checkpointAndVAEPreset.sdxl.autismmixConfetti,
-  },
   txt2imgBodyJson: {
     negative_prompt: `cameltoe, empty eyes, realistic`,
     sampler_name: `Euler a`,
@@ -18,7 +15,7 @@ const portrait = {
     ...imageResolutionPreset.sdxl.portrait,
     cfg_scale: 5,
     denoising_strength: 0.2,
-    enable_hr: true,
+    enable_hr: false,
     hr_scale: 2,
     hr_upscaler: "4x-AnimeSharp",
     hr_second_pass_steps: 0,
@@ -34,7 +31,7 @@ const portrait = {
       // outfits: outfitsPreset.temp,
     },
   ],
-} as const satisfies Setting["generations"][number];
+} as const satisfies Txt2ImgSetting;
 
 const landscape = {
   ...portrait,
@@ -43,10 +40,10 @@ const landscape = {
     ...portrait.txt2imgBodyJson,
     ...imageResolutionPreset.sdxl.landscape,
   },
-} as const satisfies Setting["generations"][number];
+} as const satisfies Txt2ImgSetting;
 
 export const staticSetting = {
-  exporting: {
+  export: {
     promptExportingBatchSize: 1000,
     maxExportingRandomPrompts: 1000,
   },
@@ -55,18 +52,15 @@ export const staticSetting = {
     ip: `192.168.10.3`,
     port: 7860,
   },
-  generations: [portrait, landscape],
-  // generations: [
-  //   // checkpointAndVAEPreset.sdxl.seventhAnime,
-  //   checkpointAndVAEPreset.sdxl.autismmixConfetti,
-  //   checkpointAndVAEPreset.sdxl.ebaraPony,
-  // ]
-  //   .map((che) => [
-  //     { ...portrait, optionsBodyJson: che },
-  //     // { ...landscape, optionsBodyJson: che },
-  //   ])
-  //   .flat(),
-} as const satisfies StrictSetting;
+  optionSettings: [
+    {
+      optionsBodyJson: {
+        ...checkpointAndVAEPreset.sdxl.autismmixConfetti,
+      },
+      txt2imgSettings: [portrait, landscape],
+    },
+  ],
+} as const satisfies Setting;
 
 export let setting: Setting;
 

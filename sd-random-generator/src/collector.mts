@@ -1,99 +1,107 @@
 import { BackgroundDefine, backgroundTable } from "./backgrounds/resolver.mjs";
-import { CharacterDefine, characterTable } from "./characters/resolver.mjs";
+import {
+  CharacterDefine,
+  CharacterKey,
+  characterTable,
+} from "./characters/resolver.mjs";
 import { OutfitDefine, outfitTable } from "./outfits/resolver.mjs";
 import { PoseDefine, poseTable } from "./poses/resolver.mjs";
 import {
   BackgroundSetting,
   CharacterSetting,
-  GenerationSetting,
+  OptionSetting,
   OutfitSetting,
   PoseSetting,
   Setting,
+  Txt2ImgSetting,
 } from "./setting-define.mjs";
 import { backgroundsPreset } from "./setting-presets/background.mjs";
 import { outfitsPreset } from "./setting-presets/outfit.mjs";
 import { posesPreset } from "./setting-presets/pose.mjs";
 
-type Option = { customDefine?: Setting["customDefine"] };
-
-export type PoseCollectedData = {
-  key: string;
+export type PoseCollectedData = Omit<PoseSetting, "probability"> & {
   probability: number;
   pose: PoseDefine;
 };
 
-const collectPose = ({ key, probability }: PoseSetting, option: Option = {}) =>
-  ({
-    key,
-    probability: probability ?? 1,
-    pose: poseTable[key],
-  }) satisfies PoseCollectedData;
+const collectPose = ({ key, probability }: PoseSetting): PoseCollectedData => ({
+  key,
+  probability: probability ?? 1,
+  pose: poseTable[key],
+});
 
-export type BackgroundCollectedData = {
-  key: string;
+export type BackgroundCollectedData = Omit<
+  BackgroundSetting,
+  "probability" | "poses"
+> & {
   probability: number;
   background: BackgroundDefine;
   poses: PoseCollectedData[];
 };
 
-const collectBackground = (
-  { key, probability, poses }: BackgroundSetting,
-  option: Option = {},
-) => {
+const collectBackground = ({
+  key,
+  probability,
+  poses,
+}: BackgroundSetting): BackgroundCollectedData => {
   const background = backgroundTable[key];
+
+  const targetPoses = poses ?? posesPreset[key] ?? posesPreset.default;
 
   return {
     key,
     probability: probability ?? 1,
     background,
-    poses: (poses ?? posesPreset[key] ?? posesPreset.default)
+    poses: targetPoses
       .map(collectPose)
       .filter(({ pose }) => pose.cameraAngle in background)
       .filter(
         ({ pose }) => pose.expectedBackgroundType === background.backgroundType,
       ),
-  } satisfies BackgroundCollectedData;
+  };
 };
 
-export type OutfitCollectedData = {
-  key: string;
+export type OutfitCollectedData = Omit<
+  OutfitSetting,
+  "probability" | "backgrounds"
+> & {
   probability: number;
   outfit: OutfitDefine;
   backgrounds: BackgroundCollectedData[];
 };
 
-const collectOutfit = (
-  { key, probability, backgrounds }: OutfitSetting,
-  option: Option = {},
-) => {
-  const outfit = outfitTable[key] ?? option.customDefine?.outfits?.[key];
-
-  if (!outfit) throw new Error(`Outfit \`${key}\` not found.`);
+const collectOutfit = ({
+  key,
+  probability,
+  backgrounds,
+}: OutfitSetting): OutfitCollectedData => {
+  const outfit = outfitTable[key];
 
   return {
     key,
     probability: probability ?? 1,
     outfit,
     backgrounds: (backgrounds ?? backgroundsPreset[key]).map(collectBackground),
-  } satisfies OutfitCollectedData;
+  };
 };
 
-export type CharacterCollectedData = {
-  key: string;
+export type CharacterCollectedData = Omit<
+  CharacterSetting,
+  "keys" | "probability" | "outfits"
+> & {
+  key: CharacterKey;
   probability: number;
   character: CharacterDefine;
   outfits: OutfitCollectedData[];
 };
 
-const collectCharacter = (
-  { keys, probability, outfits }: CharacterSetting,
-  option: Option = {},
-) =>
+const collectCharacter = ({
+  keys,
+  probability,
+  outfits,
+}: CharacterSetting): CharacterCollectedData[] =>
   keys.map((key) => {
-    const character =
-      characterTable[key] ?? option.customDefine?.characters?.[key];
-
-    if (!character) throw new Error(`Character \`${key}\` not found.`);
+    const character = characterTable[key];
 
     const targetOutfits =
       outfits ?? outfitsPreset[key] ?? outfitsPreset.default;
@@ -102,40 +110,53 @@ const collectCharacter = (
       key,
       probability: probability ?? 1,
       character,
-      outfits: targetOutfits.map((o) => collectOutfit(o, option)),
+      outfits: targetOutfits.map(collectOutfit),
     };
-  }) satisfies CharacterCollectedData[];
+  });
 
-export type RootCollectedData = {
-  key: string;
+export type Txt2imgCollectedData = Omit<
+  Txt2ImgSetting,
+  "probability" | "characters"
+> & {
   probability: number;
-  fixedPrompt: string;
-  batchGeneration: number;
-  optionsBodyJson: GenerationSetting["optionsBodyJson"];
-  txt2imgBodyJson: GenerationSetting["txt2imgBodyJson"];
   characters: CharacterCollectedData[];
 };
 
-export const collect = (
-  generationSettings: GenerationSetting[],
-  option: Option = {},
-) =>
-  generationSettings.map(
-    ({
-      key,
-      probability,
-      fixedPrompt,
-      batchGeneration,
-      optionsBodyJson,
-      txt2imgBodyJson,
-      characters,
-    }) => ({
-      key,
-      probability: probability ?? 1,
-      fixedPrompt,
-      batchGeneration,
-      optionsBodyJson,
-      txt2imgBodyJson,
-      characters: characters.map((c) => collectCharacter(c, option)).flat(),
-    }),
-  ) satisfies RootCollectedData[];
+const collectTxt2imgData = ({
+  key,
+  probability,
+  fixedPrompt,
+  batchGeneration,
+  txt2imgBodyJson,
+  characters,
+}: Txt2ImgSetting): Txt2imgCollectedData => ({
+  key,
+  probability: probability ?? 1,
+  fixedPrompt,
+  batchGeneration,
+  txt2imgBodyJson,
+  characters: characters.map(collectCharacter).flat(),
+});
+
+export type OptionCollectedData = Omit<OptionSetting, "txt2imgSettings"> & {
+  txt2imgs: Txt2imgCollectedData[];
+};
+
+const collectOption = ({
+  optionsBodyJson,
+  txt2imgSettings,
+}: OptionSetting): OptionCollectedData => ({
+  optionsBodyJson,
+  txt2imgs: txt2imgSettings.map(collectTxt2imgData),
+});
+
+export type RootCollectedData = Omit<Setting, "optionSettings"> & {
+  options: OptionCollectedData[];
+};
+
+export const collect = (setting: Setting): RootCollectedData => ({
+  export: setting.export,
+  generateForever: setting.generateForever,
+  machine: setting.machine,
+  options: setting.optionSettings.map(collectOption),
+});

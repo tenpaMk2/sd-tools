@@ -2,10 +2,8 @@ import { characterTable } from "./characters/resolver.mjs";
 import {
   BaseModel,
   CharacterSetting,
-  Checkpoint,
-  GenerationSetting,
   Setting,
-  allCheckpoints,
+  checkpointInfo,
 } from "./setting-define.mjs";
 import { LoraNameTag, allLoras } from "./tag-defines/lora.mjs";
 
@@ -18,13 +16,15 @@ const searchSupportedBaseModels = (loraName: LoraNameTag): BaseModel[] => {
   return [];
 };
 
+// TODO: Define each type for the readbility of VSCode tooltip.
+
 const validateCharacter = (
   character: CharacterSetting,
-  baseModel: Checkpoint["baseModel"],
+  baseModel: BaseModel,
 ): void => {
   for (const characterKey of character.keys) {
     const characterData = characterTable[characterKey];
-    if (!characterData?.lora) continue; // Need `?.` because of custom characters.
+    if (!characterData?.lora) continue;
 
     const loraName = characterData.lora.tag;
     const supportedBaseModels = searchSupportedBaseModels(loraName);
@@ -39,28 +39,16 @@ const validateCharacter = (
   }
 };
 
-const searchBaseModel = (
-  nameHash: Setting["generations"][number]["optionsBodyJson"]["sd_model_checkpoint"],
-): Checkpoint["baseModel"] => {
-  for (const checkpoint of allCheckpoints) {
-    if (checkpoint.nameHash === nameHash) {
-      return checkpoint.baseModel;
-    }
-  }
-  console.warn(`Base model not found for \`${nameHash}\`. Using \`Pony\`.`);
-  return `Pony`;
-};
+export const validateSetting = (setting: Setting): void => {
+  for (const optionSetting of setting.optionSettings) {
+    const baseModel =
+      checkpointInfo[optionSetting.optionsBodyJson.sd_model_checkpoint]
+        .baseModel;
 
-export const validateSettings = (
-  generationSettings: GenerationSetting[],
-): void => {
-  for (const generationSetting of generationSettings) {
-    const baseModel = searchBaseModel(
-      generationSetting.optionsBodyJson.sd_model_checkpoint,
-    );
-
-    for (const character of generationSetting.characters) {
-      validateCharacter(character, baseModel);
+    for (const txt2imgSetting of optionSetting.txt2imgSettings) {
+      for (const character of txt2imgSetting.characters) {
+        validateCharacter(character, baseModel);
+      }
     }
   }
 };
