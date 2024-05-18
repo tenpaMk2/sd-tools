@@ -1,6 +1,5 @@
 import { OptionCollectedData, RootCollectedData } from "./collector.mjs";
 import { OptionSetting, Setting } from "./setting-define.mjs";
-import { setting } from "./setting.mjs";
 import { Txt2ImgBodyJson, Txt2imgGenerator } from "./txt2img-generator.mjs";
 
 const displayProgress = async (progress: number, eta: number) => {
@@ -121,6 +120,6 @@ export const generate = async (generationData: GenerationData) => {
         generationData.machine,
       );
     }
-  } while (setting.generateForever);
+  } while (generationData.generateForever);
   clearInterval(intervalID);
 };
