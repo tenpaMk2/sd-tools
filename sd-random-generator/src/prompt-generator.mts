@@ -16,24 +16,24 @@ import {
   OptionCollectedData,
   OutfitCollectedData,
   PoseCollectedData,
-} from "../collector.mjs";
-import { OutfitDefine, UnderboobLevelOrder } from "../outfits/resolver.mjs";
+} from "./collector.mjs";
+import { OutfitDefine, UnderboobLevelOrder } from "./outfits/resolver.mjs";
 import {
   PoseSpecialVisibility,
   PoseUnderboobLevelOrder,
-} from "../poses/resolver.mjs";
-import { PatternCollection, Token } from "../prompt-define.mjs";
+} from "./poses/resolver.mjs";
+import { PatternCollection, Token } from "./prompt-define.mjs";
 import {
   CharacterFeatureTag,
   OutfitTag,
   PoseTag,
   Tag,
-} from "../tag-defines/adapter.mjs";
+} from "./tag-defines/adapter.mjs";
 import {
   LoraCharacterTriggerWordsTag,
   LoraNameTag,
   LoraOutfitTriggerWordsTag,
-} from "../tag-defines/lora.mjs";
+} from "./tag-defines/lora.mjs";
 
 const setHeavyWeightOne = <T extends Tag | LoraNameTag>(
   m: Map<T, Token<T>>,
@@ -316,10 +316,7 @@ const buildCore = ({
   return [...m.values()];
 };
 
-export const build = (options: OptionCollectedData[]) =>
-  options.map((option) => new RandomPicker(option));
-
-export class RandomPicker {
+export class PromptGenerator {
   constructor(readonly option: OptionCollectedData) {}
 
   private randomPick<T extends { probability: number }>(candidates: T[]) {
@@ -340,7 +337,7 @@ export class RandomPicker {
     throw new Error(`Unexpected error: No candidate was picked.`);
   }
 
-  pickPrompt() {
+  generate() {
     const txt2imgData = this.randomPick(this.option.txt2imgs);
     const characterData = this.randomPick(txt2imgData.characters);
     const outfitData = this.randomPick(characterData.outfits);

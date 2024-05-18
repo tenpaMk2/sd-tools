@@ -1,8 +1,8 @@
 import { Command } from "commander";
 import packageJson from "../package.json";
-import { RandomPicker } from "./builders/common.mjs";
 import { collect } from "./collector.mjs";
-import { generate } from "./generator.mjs";
+import { generate } from "./image-generator.mjs";
+import { PromptGenerator } from "./prompt-generator.mjs";
 import { setSetting, setting, staticSetting } from "./setting.mjs";
 import { validateSetting } from "./validator.mjs";
 
@@ -27,7 +27,7 @@ const main = async () => {
     ...collectedData,
     options: collectedData.options.map((option) => ({
       ...option,
-      builder: new RandomPicker(option),
+      promptGenerator: new PromptGenerator(option),
     })),
   };
 

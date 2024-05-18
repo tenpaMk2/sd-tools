@@ -1,9 +1,9 @@
-import { RandomPicker } from "./builders/common.mjs";
 import {
   OptionCollectedData,
   RootCollectedData,
   Txt2imgCollectedData,
 } from "./collector.mjs";
+import { PromptGenerator } from "./prompt-generator.mjs";
 import { OptionSetting, Setting, Txt2ImgSetting } from "./setting-define.mjs";
 import { setting } from "./setting.mjs";
 
@@ -92,18 +92,18 @@ const postTxt2img = async (
 
 const batchGenerate = async (
   txt2img: Txt2imgCollectedData,
-  builder: RandomPicker,
+  builder: PromptGenerator,
   machine: Setting["machine"],
 ) => {
   for (let i = 0; i < txt2img.batchGeneration; i++) {
-    const pickedPrompt = builder.pickPrompt();
+    const pickedPrompt = builder.generate();
     const prompt = `${txt2img.fixedPrompt}${pickedPrompt}`;
     await postTxt2img({ prompt, ...txt2img.txt2imgBodyJson }, machine);
   }
 };
 
 type OptionCollectedDataWithBuilder = OptionCollectedData & {
-  builder: RandomPicker;
+  promptGenerator: PromptGenerator;
 };
 
 export type GenerationData = Omit<
@@ -123,7 +123,7 @@ export const generate = async (generationData: GenerationData) => {
       await postOption(option.optionsBodyJson, generationData.machine);
 
       for (const txt2img of option.txt2imgs) {
-        batchGenerate(txt2img, option.builder, generationData.machine);
+        batchGenerate(txt2img, option.promptGenerator, generationData.machine);
       }
     }
   } while (setting.generateForever);
