@@ -1,4 +1,4 @@
-import { OutfitDefine } from "../resolver.mjs";
+import { OutfitDefine } from "../outfits.mjs";
 
 export const prismaIllyaIllyaBeast = (variation: `am7coffeelove`) =>
   ({

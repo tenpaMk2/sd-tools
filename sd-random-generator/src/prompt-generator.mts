@@ -17,11 +17,11 @@ import {
   OutfitCollectedData,
   PoseCollectedData,
 } from "./collector.mjs";
-import { OutfitDefine, UnderboobLevelOrder } from "./outfits/resolver.mjs";
+import { OutfitDefine, UnderboobLevelOrder } from "./outfits/outfits.mjs";
 import {
   PoseSpecialVisibility,
   PoseUnderboobLevelOrder,
-} from "./poses/resolver.mjs";
+} from "./poses/poses.mjs";
 import { PatternCollection, Token } from "./prompt-define.mjs";
 import {
   CharacterFeatureTag,

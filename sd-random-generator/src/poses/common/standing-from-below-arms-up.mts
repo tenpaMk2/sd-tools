@@ -1,4 +1,4 @@
-import { PoseDefine } from "../resolver.mjs";
+import { PoseDefine } from "../poses.mjs";
 import { standingFromHorizontalArmsUp } from "./standing-from-horizontal-arms-up.mjs";
 
 export const standingFromBelowArmsUp = {

@@ -1,4 +1,4 @@
-import { CharacterKey, characterTable } from "../characters/resolver.mjs";
+import { CharacterKey, characterTable } from "../characters/characters.mjs";
 import { getKeys } from "../libs/utility.mjs";
 import { CharacterSetting } from "../setting-define.mjs";
 

@@ -1,5 +1,5 @@
+import { CharacterDefine } from "../characters.mjs";
 import { emotionPreset } from "../emotion-preset.mjs";
-import { CharacterDefine } from "../resolver.mjs";
 
 export const madomagiHomuraEft = () =>
   ({

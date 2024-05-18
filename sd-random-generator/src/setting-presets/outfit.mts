@@ -1,10 +1,10 @@
-import { CharacterKey } from "../characters/resolver.mjs";
+import { CharacterKey } from "../characters/characters.mjs";
 import { getKeys } from "../libs/utility.mjs";
 import {
   OutfitKey,
   commonOutfitTable,
   outfitTable,
-} from "../outfits/resolver.mjs";
+} from "../outfits/outfits.mjs";
 import { OutfitSetting } from "../setting-define.mjs";
 
 const monoOutfitPresetsMap = Object.fromEntries(

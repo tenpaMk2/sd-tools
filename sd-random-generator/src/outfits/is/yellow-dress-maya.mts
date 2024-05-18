@@ -1,5 +1,5 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
-import { OutfitDefine } from "../resolver.mjs";
+import { OutfitDefine } from "../outfits.mjs";
 
 export const isYellowDressMaya = () =>
   ({

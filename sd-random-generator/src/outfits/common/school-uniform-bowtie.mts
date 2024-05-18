@@ -1,4 +1,4 @@
-import { OutfitDefine } from "../resolver.mjs";
+import { OutfitDefine } from "../outfits.mjs";
 import { upskirtPreset } from "./upskirt-preset.mjs";
 
 export const schoolUniformBowtie = () =>

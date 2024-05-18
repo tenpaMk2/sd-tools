@@ -1,4 +1,4 @@
-import { PoseDefine } from "../resolver.mjs";
+import { PoseDefine } from "../poses.mjs";
 import { standingFromHorizontalSinging } from "./standing-from-horizontal-singing.mjs";
 
 export const standingFromHorizontalSingingFromSide = {

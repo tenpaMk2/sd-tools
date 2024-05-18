@@ -1,6 +1,6 @@
 import { Visibility } from "@tenpamk2/sd-tag-defines";
-import { BackgroundType, CameraAngle } from "../backgrounds/resolver.mjs";
-import { OutfitDefine } from "../outfits/resolver.mjs";
+import { BackgroundType, CameraAngle } from "../backgrounds/backgrounds.mjs";
+import { OutfitDefine } from "../outfits/outfits.mjs";
 import { NormalEntry } from "../prompt-define.mjs";
 import { PoseTag } from "../tag-defines/adapter.mjs";
 import { nearCleanFloorFromAboveLyingOnStomach } from "./common/near-clean-floor-from-above-lying-on-stomach.mjs";

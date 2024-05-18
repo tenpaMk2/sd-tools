@@ -1,11 +1,14 @@
-import { BackgroundDefine, backgroundTable } from "./backgrounds/resolver.mjs";
+import {
+  BackgroundDefine,
+  backgroundTable,
+} from "./backgrounds/backgrounds.mjs";
 import {
   CharacterDefine,
   CharacterKey,
   characterTable,
-} from "./characters/resolver.mjs";
-import { OutfitDefine, outfitTable } from "./outfits/resolver.mjs";
-import { PoseDefine, poseTable } from "./poses/resolver.mjs";
+} from "./characters/characters.mjs";
+import { OutfitDefine, outfitTable } from "./outfits/outfits.mjs";
+import { PoseDefine, poseTable } from "./poses/poses.mjs";
 import {
   BackgroundSetting,
   CharacterSetting,

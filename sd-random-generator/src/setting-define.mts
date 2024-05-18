@@ -1,7 +1,7 @@
-import { BackgroundKey } from "./backgrounds/resolver.mjs";
-import { CharacterKey } from "./characters/resolver.mjs";
-import { OutfitKey } from "./outfits/resolver.mjs";
-import { PoseKey } from "./poses/resolver.mjs";
+import { BackgroundKey } from "./backgrounds/backgrounds.mjs";
+import { CharacterKey } from "./characters/characters.mjs";
+import { OutfitKey } from "./outfits/outfits.mjs";
+import { PoseKey } from "./poses/poses.mjs";
 
 export const allCheckpoints = [
   `vividorangemix_v10.safetensors`,

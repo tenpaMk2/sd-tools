@@ -1,4 +1,4 @@
-import { PoseDefine } from "../resolver.mjs";
+import { PoseDefine } from "../poses.mjs";
 import { standingFromHorizontalHoldingVolleyball } from "./standing-from-horizontal-holding-volleyball.mjs";
 
 export const standingFromAboveHoldingVolleyball = {

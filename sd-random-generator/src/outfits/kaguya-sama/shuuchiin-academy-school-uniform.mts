@@ -1,6 +1,6 @@
 import { OutfitTag } from "../../tag-defines/adapter.mjs";
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
-import { OutfitDefine } from "../resolver.mjs";
+import { OutfitDefine } from "../outfits.mjs";
 
 const normal = [
   `shuuchiin academy school uniform`,

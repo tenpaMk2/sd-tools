@@ -1,6 +1,6 @@
-import { BackgroundKey, backgroundTable } from "../backgrounds/resolver.mjs";
+import { BackgroundKey, backgroundTable } from "../backgrounds/backgrounds.mjs";
 import { getKeys } from "../libs/utility.mjs";
-import { OutfitKey } from "../outfits/resolver.mjs";
+import { OutfitKey } from "../outfits/outfits.mjs";
 import { BackgroundSetting } from "../setting-define.mjs";
 
 const monoBackgroundPresetsMap = Object.fromEntries(

@@ -1,6 +1,6 @@
-import { BackgroundKey } from "../backgrounds/resolver.mjs";
+import { BackgroundKey } from "../backgrounds/backgrounds.mjs";
 import { getKeys } from "../libs/utility.mjs";
-import { PoseKey, commonPoseTable, poseTable } from "../poses/resolver.mjs";
+import { PoseKey, commonPoseTable, poseTable } from "../poses/poses.mjs";
 import { PoseSetting } from "../setting-define.mjs";
 
 const monoPosesPresetsMap = Object.fromEntries(

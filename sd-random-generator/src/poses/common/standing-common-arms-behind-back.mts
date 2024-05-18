@@ -1,4 +1,4 @@
-import { PoseDefine } from "../resolver.mjs";
+import { PoseDefine } from "../poses.mjs";
 
 type Variation = `from-above` | `from-below` | `from-horizontal`;
 

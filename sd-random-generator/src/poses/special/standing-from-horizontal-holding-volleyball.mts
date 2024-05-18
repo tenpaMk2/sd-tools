@@ -1,4 +1,4 @@
-import { PoseDefine } from "../resolver.mjs";
+import { PoseDefine } from "../poses.mjs";
 
 export const standingFromHorizontalHoldingVolleyball = {
   expectedBackgroundType: `standing`,

@@ -1,4 +1,4 @@
-import { characterTable } from "./characters/resolver.mjs";
+import { characterTable } from "./characters/characters.mjs";
 import {
   BaseModel,
   CharacterSetting,

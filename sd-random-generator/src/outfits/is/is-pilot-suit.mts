@@ -1,4 +1,4 @@
-import { OutfitDefine } from "../resolver.mjs";
+import { OutfitDefine } from "../outfits.mjs";
 
 type Variation = `cecilia` | `charlotte` | `houki`;
 
