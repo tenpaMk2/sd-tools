@@ -1,7 +1,7 @@
 import { collect } from "./collector.mjs";
 import { generate } from "./image-generator.mjs";
-import { PromptGenerator } from "./prompt-generator.mjs";
 import { setting } from "./setting.mjs";
+import { Txt2imgGenerator } from "./txt2img-generator.mjs";
 import { validateSetting } from "./validator.mjs";
 
 // TODO: logging library
@@ -14,7 +14,7 @@ const main = async () => {
     ...collectedData,
     options: collectedData.options.map((option) => ({
       ...option,
-      promptGenerator: new PromptGenerator(option),
+      txt2imgGenerator: new Txt2imgGenerator(option),
     })),
   };
 

@@ -23,6 +23,7 @@ import {
   PoseUnderboobLevelOrder,
 } from "./poses/poses.mjs";
 import { PatternCollection, Token } from "./prompt-define.mjs";
+import { Txt2ImgSetting } from "./setting-define.mjs";
 import {
   CharacterFeatureTag,
   OutfitTag,
@@ -316,10 +317,14 @@ const buildCore = ({
   return [...m.values()];
 };
 
-export class PromptGenerator {
+export type Txt2ImgBodyJson = Txt2ImgSetting["txt2imgBodyJson"] & {
+  prompt: string;
+};
+
+export class Txt2imgGenerator {
   constructor(readonly option: OptionCollectedData) {}
 
-  private randomPick<T extends { probability: number }>(candidates: T[]) {
+  private randomPick<T extends { probability: number }>(candidates: T[]): T {
     const total = candidates.reduce(
       (prev, current) => prev + current.probability,
       0,
@@ -337,7 +342,7 @@ export class PromptGenerator {
     throw new Error(`Unexpected error: No candidate was picked.`);
   }
 
-  generate() {
+  generate(): Txt2ImgBodyJson {
     const txt2imgData = this.randomPick(this.option.txt2imgs);
     const characterData = this.randomPick(txt2imgData.characters);
     const outfitData = this.randomPick(characterData.outfits);
@@ -351,6 +356,8 @@ export class PromptGenerator {
       poseData,
     });
 
-    return tokens.join(`, `);
+    const prompt = `${txt2imgData.fixedPrompt}${tokens.join(`, `)}`;
+
+    return { prompt, ...txt2imgData.txt2imgBodyJson };
   }
 }
