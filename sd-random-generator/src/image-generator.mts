@@ -24,6 +24,20 @@ const startStatusPolling = ({ ip, port }: Setting["machine"]) =>
     displayProgress(json.progress, json.eta_relative);
   }, 10000);
 
+const batchGenerate = async (
+  batchCount: number,
+  optionsBodyJson: GenerationData["options"][number]["optionsBodyJson"],
+  txt2imgGenerator: Txt2imgGenerator,
+  machine: Setting["machine"],
+) => {
+  for (let i = 0; i < batchCount; i++) {
+    await postOption(optionsBodyJson, machine);
+
+    const txt2imgBodyJson = txt2imgGenerator.generate();
+    await postTxt2img(txt2imgBodyJson, machine);
+  }
+};
+
 const postOption = async (
   optionsBodyJson: OptionSetting["optionsBodyJson"],
   { ip, port }: Setting["machine"],
@@ -82,14 +96,6 @@ const postTxt2img = async (
   console.log(infoJson.infotexts);
 };
 
-const batchGenerate = async (
-  txt2imgGenerator: Txt2imgGenerator,
-  machine: Setting["machine"],
-) => {
-  const txt2imgBodyJson = txt2imgGenerator.generate();
-  await postTxt2img(txt2imgBodyJson, machine);
-};
-
 type OptionCollectedDataWithBuilder = Omit<OptionCollectedData, "txt2imgs"> & {
   txt2imgGenerator: Txt2imgGenerator;
 };
@@ -108,11 +114,12 @@ export const generate = async (generationData: GenerationData) => {
 
   do {
     for (const option of generationData.options) {
-      await postOption(option.optionsBodyJson, generationData.machine);
-
-      for (const txt2img of option.txt2imgs) {
-        batchGenerate(option.txt2imgGenerator, generationData.machine);
-      }
+      batchGenerate(
+        option.batchGeneration,
+        option.optionsBodyJson,
+        option.txt2imgGenerator,
+        generationData.machine,
+      );
     }
   } while (setting.generateForever);
   clearInterval(intervalID);

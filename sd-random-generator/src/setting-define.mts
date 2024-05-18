@@ -83,12 +83,6 @@ export type Txt2ImgSetting = Readonly<{
   key: string; // Txt2img generation name.
   probability?: number;
   fixedPrompt: string;
-  /**
-   * The number of generations using the same setting.
-   * After this number of times an image is generated, the next setting is used to start the generation.
-   * Don't confuse with the batch size and batch count in Stable Diffusion web UI.
-   */
-  batchGeneration: number;
 
   txt2imgBodyJson: {
     negative_prompt: string;
@@ -145,6 +139,13 @@ export type OptionSetting = Readonly<{
      */
     webp_lossless?: boolean;
   };
+
+  /**
+   * The number of generations using the same setting.
+   * After this number of times an image is generated, the next setting is used to start the generation.
+   * Don't confuse with the batch size and batch count in Stable Diffusion web UI (or Forge).
+   */
+  batchGeneration: number;
 
   txt2imgSettings: Txt2ImgSetting[];
 }>;

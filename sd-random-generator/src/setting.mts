@@ -7,7 +7,6 @@ import {
 const portrait = {
   key: `portrait`,
   fixedPrompt: `score_9, score_8_up, score_7_up, source_anime, 1girl, solo, megami magazine,\n`,
-  batchGeneration: 20,
   txt2imgBodyJson: {
     negative_prompt: `cameltoe, empty eyes, realistic`,
     sampler_name: `Euler a`,
@@ -57,6 +56,7 @@ export const setting = {
       optionsBodyJson: {
         ...checkpointAndVAEPreset.sdxl.autismmixConfetti,
       },
+      batchGeneration: 100,
       txt2imgSettings: [portrait, landscape],
     },
   ],

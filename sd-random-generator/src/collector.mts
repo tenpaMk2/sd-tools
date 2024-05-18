@@ -129,14 +129,12 @@ const collectTxt2imgData = ({
   key,
   probability,
   fixedPrompt,
-  batchGeneration,
   txt2imgBodyJson,
   characters,
 }: Txt2ImgSetting): Txt2imgCollectedData => ({
   key,
   probability: probability ?? 1,
   fixedPrompt,
-  batchGeneration,
   txt2imgBodyJson,
   characters: characters.map(collectCharacter).flat(),
 });
@@ -147,9 +145,11 @@ export type OptionCollectedData = Omit<OptionSetting, "txt2imgSettings"> & {
 
 const collectOption = ({
   optionsBodyJson,
+  batchGeneration,
   txt2imgSettings,
 }: OptionSetting): OptionCollectedData => ({
   optionsBodyJson,
+  batchGeneration,
   txt2imgs: txt2imgSettings.map(collectTxt2imgData),
 });
 
