@@ -113,7 +113,7 @@ export const generate = async (generationData: GenerationData) => {
 
   do {
     for (const option of generationData.options) {
-      batchGenerate(
+      await batchGenerate(
         option.batchGeneration,
         option.optionsBodyJson,
         option.txt2imgGenerator,
