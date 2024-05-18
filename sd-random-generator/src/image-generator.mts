@@ -113,12 +113,14 @@ export const generate = async (generationData: GenerationData) => {
 
   do {
     for (const option of generationData.options) {
+      console.log(`Option \`${option.key}\`: Start.`);
       await batchGenerate(
         option.batchGeneration,
         option.optionsBodyJson,
         option.txt2imgGenerator,
         generationData.machine,
       );
+      console.log(`Option \`${option.key}\`: Done.`);
     }
   } while (generationData.generateForever);
   clearInterval(intervalID);

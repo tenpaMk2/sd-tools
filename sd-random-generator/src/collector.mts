@@ -139,15 +139,21 @@ const collectTxt2imgData = ({
   characters: characters.map(collectCharacter).flat(),
 });
 
-export type OptionCollectedData = Omit<OptionSetting, "txt2imgSettings"> & {
+export type OptionCollectedData = Omit<
+  OptionSetting,
+  "key" | "txt2imgSettings"
+> & {
+  key: string;
   txt2imgs: Txt2imgCollectedData[];
 };
 
 const collectOption = ({
+  key,
   optionsBodyJson,
   batchGeneration,
   txt2imgSettings,
 }: OptionSetting): OptionCollectedData => ({
+  key: key ?? "undefined",
   optionsBodyJson,
   batchGeneration,
   txt2imgs: txt2imgSettings.map(collectTxt2imgData),

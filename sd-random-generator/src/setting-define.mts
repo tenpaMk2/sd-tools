@@ -113,6 +113,7 @@ export type Txt2ImgSetting = Readonly<{
 }>;
 
 export type OptionSetting = Readonly<{
+  key?: string;
   optionsBodyJson: {
     /**
      * Checkpoint (model).
