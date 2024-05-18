@@ -1,15 +1,12 @@
 import { collect } from "./collector.mjs";
 import { generate } from "./image-generator.mjs";
 import { PromptGenerator } from "./prompt-generator.mjs";
-import { setSetting, setting, staticSetting } from "./setting.mjs";
+import { setting } from "./setting.mjs";
 import { validateSetting } from "./validator.mjs";
 
 // TODO: logging library
 
 const main = async () => {
-  const newSetting = staticSetting;
-  setSetting(newSetting);
-
   validateSetting(setting);
 
   const collectedData = collect(setting);

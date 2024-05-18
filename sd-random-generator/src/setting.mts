@@ -42,7 +42,7 @@ const landscape = {
   },
 } as const satisfies Txt2ImgSetting;
 
-export const staticSetting = {
+export const setting = {
   export: {
     promptExportingBatchSize: 1000,
     maxExportingRandomPrompts: 1000,
@@ -61,10 +61,6 @@ export const staticSetting = {
     },
   ],
 } as const satisfies Setting;
-
-export let setting: Setting;
-
-export const setSetting = (newSetting: Setting) => (setting = newSetting);
 
 // TODO: Move vitest ↓
 // console.assert(
