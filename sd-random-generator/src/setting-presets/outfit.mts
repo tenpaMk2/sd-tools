@@ -16,6 +16,7 @@ const monoOutfitPresetsMap = Object.fromEntries(
 
 const defaultPreset = getKeys(commonOutfitTable).map((key) => ({
   key,
+  probability: key === `bikini` ? 3 : 1,
 })) satisfies OutfitSetting[];
 
 export const outfitsPreset = {

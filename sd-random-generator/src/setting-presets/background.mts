@@ -15,7 +15,7 @@ const defaultPreset = [
   { key: `colorful-heart-backgrounds-standing` },
   { key: `colorful-backgrounds-near-clean-floor` },
   { key: `colorful-heart-backgrounds-near-clean-floor` },
-  { key: `steaming-bed-sheet` },
+  { key: `steaming-bed-sheet`, probability: 3 },
   { key: `karaoke-box-sitting-on`, probability: 0.2 },
   { key: `karaoke-box-standing`, probability: 0.2 },
 ] as const satisfies BackgroundSetting[];
@@ -29,9 +29,9 @@ export const backgroundsPreset = {
   "babydoll": defaultPreset,
   "bikini": [
     ...defaultPreset,
-    { key: `ocean`, probability: defaultPreset.length / 3 },
-    { key: `beach-standing`, probability: defaultPreset.length / 3 },
-    { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
+    { key: `ocean`, probability: defaultPreset.length },
+    { key: `beach-standing`, probability: defaultPreset.length },
+    { key: `beach-near-clean-floor`, probability: defaultPreset.length },
   ],
   "bridal-lingerie": [
     ...defaultPreset,

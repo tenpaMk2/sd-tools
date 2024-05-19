@@ -17,9 +17,9 @@ const colorfulBackgroundEntries = [
   `simple background`,
   [
     { entries: [`blue background`] },
-    { entries: [`pink background`] },
+    { entries: [`pink background`], probability: 2 },
     { entries: [`red background`] },
-    { entries: [`white background`] },
+    { entries: [`white background`], probability: 3 },
     { entries: [`yellow background`] },
   ],
 ] as const satisfies NormalEntry<BackgroundTag>[];
