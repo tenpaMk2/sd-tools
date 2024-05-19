@@ -7,7 +7,7 @@ export const sasuoniHonoka = (variation: Variation) =>
   ({
     lora: {
       tag: `honoka-mitsui-s2-ponyxl-lora-nochekaiser`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+      probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
     },
     loraCharacterTriggerWordEntries: [`honoka mitsui`],
     seriesNameEntries: [`mahouka koukou no rettousei`],

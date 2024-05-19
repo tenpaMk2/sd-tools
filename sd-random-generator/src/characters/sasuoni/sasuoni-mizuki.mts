@@ -7,7 +7,7 @@ export const sasuoniMizuki = (variation: Variation) =>
   ({
     lora: {
       tag: `mizuki-shibata-s2-ponyxl-lora-nochekaiser`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+      probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
     },
     loraCharacterTriggerWordEntries: [`mizuki shibata`],
     seriesNameEntries: [`mahouka koukou no rettousei`],

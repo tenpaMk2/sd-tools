@@ -7,7 +7,7 @@ export const sasuoniMayumi = (variation: Variation) =>
   ({
     lora: {
       tag: `mayumi-saegusa-s2-ponyxl-lora-nochekaiser`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+      probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
     },
     loraCharacterTriggerWordEntries: [`mayumi saegusa`],
     seriesNameEntries: [`mahouka koukou no rettousei`],

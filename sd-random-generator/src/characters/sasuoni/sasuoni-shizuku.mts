@@ -7,7 +7,7 @@ export const sasuoniShizuku = (variation: Variation) =>
   ({
     lora: {
       tag: `shizuku-kitayama-s2-ponyxl-lora-nochekaiser`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+      probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
     },
     loraCharacterTriggerWordEntries: [`shizuku kitayama`],
     seriesNameEntries: [`mahouka koukou no rettousei`],

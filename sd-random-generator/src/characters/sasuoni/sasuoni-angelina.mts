@@ -7,7 +7,7 @@ export const sasuoniAngelina = (variation: Variation) =>
   ({
     lora: {
       tag: `angelina-kudou-shields-s2-ponyxl-lora-nochekaiser`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+      probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
     },
     loraCharacterTriggerWordEntries: [],
     seriesNameEntries: [`mahouka koukou no rettousei`],
