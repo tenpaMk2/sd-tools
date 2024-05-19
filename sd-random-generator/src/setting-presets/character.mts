@@ -7,7 +7,7 @@ const monoCharacterPresetsMap = Object.fromEntries(
     (acc, key) => acc.set(key, [{ keys: [key] }]),
     new Map<CharacterKey, CharacterSetting[]>(),
   ),
-) as { [k in CharacterKey]: CharacterSetting[] };
+) as Record<CharacterKey, CharacterSetting[]>;
 
 const defaultKeys = [
   `blend-s-kaho-ibukimakisiko-double-bun`, // TODO: Support probability.
@@ -70,9 +70,10 @@ export const charactersPreset = {
       ],
     },
   ],
-} as const satisfies {
-  [k in CharacterKey | `default` | `all` | `kaguya-sama`]: CharacterSetting[];
-};
+} as const satisfies Record<
+  CharacterKey | `default` | `all` | `kaguya-sama`,
+  CharacterSetting[]
+>;
 
 // TODO: If there is a character-specific pose, define like below.
 //

@@ -8,7 +8,7 @@ const monoPosesPresetsMap = Object.fromEntries(
     (acc, key) => acc.set(key, [{ key }]),
     new Map<PoseKey, PoseSetting[]>(),
   ),
-) as { [k in PoseKey]: PoseSetting[] };
+) as Record<PoseKey, PoseSetting[]>;
 
 const defaultPreset = getKeys(commonPoseTable).map((key) => ({
   key,
@@ -84,6 +84,4 @@ export const posesPreset = {
   "gym-storeroom-near-clean-floor": defaultPreset,
   "gym-storeroom-standing": defaultPreset,
   "garden": defaultPreset,
-} as const satisfies {
-  [k in PoseKey | `default` | BackgroundKey]: PoseSetting[];
-};
+} as const satisfies Record<PoseKey | `default` | BackgroundKey, PoseSetting[]>;

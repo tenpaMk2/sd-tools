@@ -49,14 +49,16 @@ export const checkpointAndVAEPreset = {
       sd_vae: `None`,
     },
   },
-} as const satisfies {
-  [k in `sd1` | `sdxl`]: {
-    [k in string]: {
+} as const satisfies Record<
+  `sd1` | `sdxl`,
+  Record<
+    string,
+    {
       sd_model_checkpoint: Checkpoint;
       sd_vae: VAE;
-    };
-  };
-};
+    }
+  >
+>;
 
 export const imageResolutionPreset = {
   sd1: {
@@ -107,11 +109,13 @@ export const imageResolutionPreset = {
       height: 768,
     },
   },
-} as const satisfies {
-  [k in `sd1` | `sdxl`]: {
-    [k in `square` | `portrait` | `landscape` | `tall` | `widescreen`]: {
+} as const satisfies Record<
+  `sd1` | `sdxl`,
+  Record<
+    `square` | `portrait` | `landscape` | `tall` | `widescreen`,
+    {
       width: number;
       height: number;
-    };
-  };
-};
+    }
+  >
+>;

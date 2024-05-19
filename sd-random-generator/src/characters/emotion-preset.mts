@@ -27,7 +27,7 @@ const emotionPresetPiece = {
   ],
   grin: [`blush`, `smile`, `grin`],
   doyagao: [`blush`, `smug`, `doyagao`, `v-shaped eyebrows`, `puff of air`],
-} as const satisfies { [k in string]: NormalEntry<EmotionTag>[] };
+} as const satisfies Record<string, NormalEntry<EmotionTag>[]>;
 
 export const emotionPreset = {
   cute: [
@@ -109,4 +109,4 @@ export const emotionPreset = {
       { entries: emotionPresetPiece.naughtyFace },
     ],
   ],
-} as const satisfies { [k in string]: NormalEntry<EmotionTag>[] };
+} as const satisfies Record<string, NormalEntry<EmotionTag>[]>;

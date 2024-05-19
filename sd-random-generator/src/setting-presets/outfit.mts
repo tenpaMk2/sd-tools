@@ -12,7 +12,7 @@ const monoOutfitPresetsMap = Object.fromEntries(
     (acc, key) => acc.set(key, [{ key }]),
     new Map<OutfitKey, OutfitSetting[]>(),
   ),
-) as { [k in OutfitKey]: OutfitSetting[] };
+) as Record<OutfitKey, OutfitSetting[]>;
 
 const defaultPreset = getKeys(commonOutfitTable).map((key) => ({
   key,
@@ -401,6 +401,7 @@ export const outfitsPreset = {
   "to-love-ru-nana-eft": defaultPreset,
   "to-love-ru-yami-eft": defaultPreset,
   "to-love-ru-yui-eft": defaultPreset,
-} as const satisfies {
-  [k in OutfitKey | `default` | `temp` | CharacterKey]: OutfitSetting[];
-};
+} as const satisfies Record<
+  OutfitKey | `default` | `temp` | CharacterKey,
+  OutfitSetting[]
+>;

@@ -8,7 +8,7 @@ const monoBackgroundPresetsMap = Object.fromEntries(
     (acc, key) => acc.set(key, [{ key }]),
     new Map<BackgroundKey, BackgroundSetting[]>(),
   ),
-) as { [k in BackgroundKey]: BackgroundSetting[] };
+) as Record<BackgroundKey, BackgroundSetting[]>;
 
 const defaultPreset = [
   { key: `colorful-backgrounds-standing` },
@@ -534,6 +534,7 @@ export const backgroundsPreset = {
   ],
   "sasuoni-eft-first-high-school-uniform-pantyhose": defaultPreset,
   "sasuoni-eft-first-high-school-uniform-thighhighs": defaultPreset,
-} as const satisfies {
-  [k in BackgroundKey | `default` | OutfitKey]: BackgroundSetting[];
-};
+} as const satisfies Record<
+  BackgroundKey | `default` | OutfitKey,
+  BackgroundSetting[]
+>;
