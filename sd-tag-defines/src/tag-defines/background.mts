@@ -26,6 +26,7 @@ export const allBackgroundTags = [
   `day`,
   `falling petals`,
   `floor`,
+  `flower`,
   `forest`,
   `garden`,
   `grass`,

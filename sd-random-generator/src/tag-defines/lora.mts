@@ -890,6 +890,72 @@ export const allLoras = [
     outfitTriggerTags: [`mafuyu-default`, `mafuyu-casual`, `mafuyu-swim`],
     creator: `Ibukimakisiko`,
   },
+  {
+    loraName: `miyuki-shiba-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/452592/miyuki-snow-queen-shiba-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503917`,
+    ),
+    characterTriggerWordsTags: [`miyuki shiba`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `mayumi-saegusa-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/452537/mayumi-elfin-sniper-saegusa-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503861`,
+    ),
+    characterTriggerWordsTags: [`mayumi saegusa`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `angelina-kudou-shields-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/452502/angelina-lina-angie-sirius-kudou-shields-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503820`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `honoka-mitsui-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/452613/honoka-mitsui-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503940`,
+    ),
+    characterTriggerWordsTags: [`honoka mitsui`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `mizuki-shibata-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/452593/mizuki-shibata-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503918`,
+    ),
+    characterTriggerWordsTags: [`mizuki shibata`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
+  {
+    loraName: `shizuku-kitayama-s2-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/452594/shizuku-kitayama-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503919`,
+    ),
+    characterTriggerWordsTags: [`shizuku kitayama`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

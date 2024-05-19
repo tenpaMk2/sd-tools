@@ -337,6 +337,48 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "sasuoni-shiba-angelina-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sasuoni-first-high-school-uniform-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "sasuoni-shiba-honoka-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sasuoni-first-high-school-uniform-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "sasuoni-shiba-mayumi-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sasuoni-first-high-school-uniform-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "sasuoni-shiba-miyuki-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sasuoni-first-high-school-uniform-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "sasuoni-shiba-mizuki-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sasuoni-first-high-school-uniform-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "sasuoni-shiba-shizuku-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sasuoni-first-high-school-uniform-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "sasuoni-saegusa-mayumi-eft": [
     ...defaultPreset,
     {

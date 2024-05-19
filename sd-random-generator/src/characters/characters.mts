@@ -78,9 +78,15 @@ import { saijakuKrulciferEft } from "./saijaku/saijaku-krulcifer-eft.mjs";
 import { saijakuLisesharteEft } from "./saijaku/saijaku-lisesharte-eft.mjs";
 import { saijakuPhiluffyEft } from "./saijaku/saijaku-philuffy-eft.mjs";
 import { saijakuYorukaEft } from "./saijaku/saijaku-yoruka-eft.mjs";
+import { sasuoniAngelina } from "./sasuoni/sasuoni-angelina.mjs";
 import { sasuoniHonokaEft } from "./sasuoni/sasuoni-honoka-eft.mjs";
+import { sasuoniHonoka } from "./sasuoni/sasuoni-honoka.mjs";
 import { sasuoniMayumiEft } from "./sasuoni/sasuoni-mayumi-eft.mjs";
+import { sasuoniMayumi } from "./sasuoni/sasuoni-mayumi.mjs";
 import { sasuoniMiyukiEft } from "./sasuoni/sasuoni-miyuki-eft.mjs";
+import { sasuoniMiyuki } from "./sasuoni/sasuoni-miyuki.mjs";
+import { sasuoniMizuki } from "./sasuoni/sasuoni-mizuki.mjs";
+import { sasuoniShizuku } from "./sasuoni/sasuoni-shizuku.mjs";
 import { toLoveRuHarunaEft } from "./to-love-ru/to-love-ru-haruna-eft.mjs";
 import { toLoveRuLalaEft } from "./to-love-ru/to-love-ru-lala-eft.mjs";
 import { toLoveRuMeaEft } from "./to-love-ru/to-love-ru-mea-eft.mjs";
@@ -213,6 +219,12 @@ export const characterTable = {
   "saijaku-philuffy-eft": saijakuPhiluffyEft(),
   "saijaku-yoruka-eft": saijakuYorukaEft(),
   "sasuoni-shiba-miyuki-eft": sasuoniMiyukiEft(),
+  "sasuoni-shiba-angelina-nochekaiser": sasuoniAngelina(`nochekaiser`),
+  "sasuoni-shiba-honoka-nochekaiser": sasuoniHonoka(`nochekaiser`),
+  "sasuoni-shiba-mayumi-nochekaiser": sasuoniMayumi(`nochekaiser`),
+  "sasuoni-shiba-miyuki-nochekaiser": sasuoniMiyuki(`nochekaiser`),
+  "sasuoni-shiba-mizuki-nochekaiser": sasuoniMizuki(`nochekaiser`),
+  "sasuoni-shiba-shizuku-nochekaiser": sasuoniShizuku(`nochekaiser`),
   "sasuoni-saegusa-mayumi-eft": sasuoniMayumiEft(),
   "sasuoni-mitsui-honoka-eft": sasuoniHonokaEft(),
   "to-love-ru-haruna-eft": toLoveRuHarunaEft(),

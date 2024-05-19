@@ -41,6 +41,12 @@ const defaultKeys = [
   `re-zero-emilia`,
   `re-zero-ram`,
   `re-zero-rem`,
+  `sasuoni-shiba-angelina-nochekaiser`,
+  `sasuoni-shiba-honoka-nochekaiser`,
+  `sasuoni-shiba-mayumi-nochekaiser`,
+  `sasuoni-shiba-miyuki-nochekaiser`,
+  `sasuoni-shiba-mizuki-nochekaiser`,
+  `sasuoni-shiba-shizuku-nochekaiser`,
   `to-love-ru-momo-lancelot`,
 ] as const satisfies CharacterSetting["keys"];
 

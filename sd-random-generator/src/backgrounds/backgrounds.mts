@@ -401,8 +401,19 @@ export const backgroundTable = {
     },
     "removeShoes": false,
   },
-} as const satisfies {
-  [k in string]: BackgroundDefine;
-};
+  "garden": {
+    "backgroundType": `standing`,
+    "from-above": {
+      entries: [`outdoors`, `garden`, `flower`],
+    },
+    "from-below": {
+      entries: [`outdoors`, `garden`, `flower`, `blue sky`],
+    },
+    "from-horizontal": {
+      entries: [`outdoors`, `garden`, `flower`, `blue sky`],
+    },
+    "removeShoes": false,
+  },
+} as const satisfies Record<string, BackgroundDefine>;
 
 export type BackgroundKey = keyof typeof backgroundTable;

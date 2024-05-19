@@ -527,6 +527,11 @@ export const backgroundsPreset = {
     { key: `beach-standing`, probability: defaultPreset.length / 3 },
     { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
   ],
+  "sasuoni-first-high-school-uniform-nochekaiser": [
+    ...defaultPreset,
+    { key: `garden`, probability: defaultPreset.length / 2 },
+    { key: `city`, probability: defaultPreset.length / 2 },
+  ],
   "sasuoni-eft-first-high-school-uniform-pantyhose": defaultPreset,
   "sasuoni-eft-first-high-school-uniform-thighhighs": defaultPreset,
 } as const satisfies {

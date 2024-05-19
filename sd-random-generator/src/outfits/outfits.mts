@@ -155,9 +155,7 @@ export const commonOutfitTable = {
   "sukumizu-thighhighs": sukumizuThighhighs(),
   "volleyball-uniform": volleyballUniform(),
   "white-dress": whiteDress(),
-} as const satisfies {
-  [k: string]: OutfitDefine;
-};
+} as const satisfies Record<string, OutfitDefine>;
 
 export const characterOutfitTable = {
   "blend-s-school-uniform-kaho": blendSSchoolUniform(`kaho`),
@@ -222,17 +220,15 @@ export const characterOutfitTable = {
     sasuoniFirstHighSchoolUniform(`eft-pantyhose`),
   "sasuoni-eft-first-high-school-uniform-thighhighs":
     sasuoniFirstHighSchoolUniform(`eft-thighhighs`),
-} as const satisfies {
-  [k: string]: OutfitDefine;
-};
+  "sasuoni-first-high-school-uniform-nochekaiser":
+    sasuoniFirstHighSchoolUniform(`nochekaiser`),
+} as const satisfies Record<string, OutfitDefine>;
 
 export const outfitTable = {
   "test-outfit": testOutfit(),
   ...commonOutfitTable,
   ...characterOutfitTable,
-} as const satisfies {
-  [k: string]: OutfitDefine;
-};
+} as const satisfies Record<string, OutfitDefine>;
 
 export type OutfitKey = keyof typeof outfitTable;
 

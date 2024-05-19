@@ -4,6 +4,7 @@ export const allCharacterNameTags = [
   `akoya matama`,
   `alicia edelcia`,
   `alpha \\(kage no jitsuryokusha ni naritakute!\\)`,
+  `angelina kudou shields`,
   `aqua \\(konosuba\\)`,
   `beta \\(kage no jitsuryokusha ni naritakute!\\)`,
   `cecilia alcott`,

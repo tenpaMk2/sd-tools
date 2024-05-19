@@ -83,6 +83,7 @@ export const posesPreset = {
   ],
   "gym-storeroom-near-clean-floor": defaultPreset,
   "gym-storeroom-standing": defaultPreset,
+  "garden": defaultPreset,
 } as const satisfies {
   [k in PoseKey | `default` | BackgroundKey]: PoseSetting[];
 };
