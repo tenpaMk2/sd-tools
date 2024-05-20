@@ -15,6 +15,7 @@ export const allCheckpoints = [
   `hamefkawaiimix_typelight.safetensors`,
   `ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
   `ponymagine91_gamma.safetensors`,
+  `raemoraXL_v10.safetensors`,
 ] as const satisfies string[];
 export type Checkpoint = (typeof allCheckpoints)[number];
 
@@ -32,6 +33,7 @@ export const checkpointInfo = {
   "hamefkawaiimix_typelight.safetensors": { baseModel: `Pony` },
   "ponyDiffusionV6XL_v6StartWithThisOne.safetensors": { baseModel: `Pony` },
   "ponymagine91_gamma.safetensors": { baseModel: `Pony` }, // Also supports `Animagine` .
+  "raemoraXL_v10.safetensors": { baseModel: `Pony` },
 } as const satisfies Record<Checkpoint, { baseModel: BaseModel }>;
 
 const allVAEs = [

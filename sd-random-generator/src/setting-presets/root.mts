@@ -48,6 +48,10 @@ export const checkpointAndVAEPreset = {
       sd_model_checkpoint: `ponymagine91_gamma.safetensors`,
       sd_vae: `None`,
     },
+    raemora: {
+      sd_model_checkpoint: `raemoraXL_v10.safetensors`,
+      sd_vae: `None`,
+    },
   },
 } as const satisfies Record<
   `sd1` | `sdxl`,
