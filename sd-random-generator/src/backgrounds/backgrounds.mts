@@ -414,6 +414,32 @@ export const backgroundTable = {
     },
     "removeShoes": false,
   },
+  "poolside-standing": {
+    "backgroundType": `standing`,
+    "from-above": {
+      entries: [`outdoors`, `pool`, `poolside`, `wet`, `partially submerged`],
+    },
+    "from-below": {
+      entries: [`outdoors`, `pool`, `poolside`, `wet`, `blue sky`],
+    },
+    "from-horizontal": {
+      entries: [`outdoors`, `pool`, `poolside`, `wet`],
+    },
+    "removeShoes": false,
+  },
+  "poolside-near-clean-floor": {
+    "backgroundType": `near-clean-floor`,
+    "from-above": {
+      entries: [`outdoors`, `poolside`, `wet`],
+    },
+    "from-below": {
+      entries: [`outdoors`, `poolside`, `wet`, `blue sky`],
+    },
+    "from-horizontal": {
+      entries: [`outdoors`, `pool`, `poolside`, `wet`, `water`],
+    },
+    "removeShoes": false,
+  },
 } as const satisfies Record<string, BackgroundDefine>;
 
 export type BackgroundKey = keyof typeof backgroundTable;

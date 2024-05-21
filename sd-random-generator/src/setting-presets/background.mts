@@ -148,6 +148,17 @@ export const backgroundsPreset = {
     },
   ],
   "sukumizu-thighhighs": defaultPreset,
+  "sukumizu": [
+    ...defaultPreset,
+    {
+      key: `poolside-standing`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `poolside-near-clean-floor`,
+      probability: defaultPreset.length,
+    },
+  ],
   "volleyball-uniform": [
     ...defaultPreset,
     {

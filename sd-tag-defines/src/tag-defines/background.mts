@@ -72,6 +72,7 @@ export const allBackgroundTags = [
   `vaulting horse`,
   `volleyball net`,
   `volleyball`,
+  `water`,
   `wedding`,
   `wet`,
   `white background`,
