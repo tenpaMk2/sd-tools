@@ -17,6 +17,7 @@ import { formalSuit } from "./common/formal-suit.mjs";
 import { gymUniform } from "./common/gym-uniform.mjs";
 import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
+import { nakedTowel } from "./common/naked-towel.mjs";
 import { oRingBikini } from "./common/o-ring-bikini.mjs";
 import { openChestSweater } from "./common/open-chest-sweater.mjs";
 import { playboyBunny } from "./common/playboy-bunny.mjs";
@@ -147,6 +148,7 @@ export const commonOutfitTable = {
   "gym-uniform": gymUniform(),
   "maid-bikini": maidBikini(),
   "micro-bikini": microBikini(),
+  "naked-towel": nakedTowel(),
   "o-ring-bikini": oRingBikini(),
   "open-chest-sweater": openChestSweater(),
   "playboy-bunny": playboyBunny(),

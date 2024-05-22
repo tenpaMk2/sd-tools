@@ -47,6 +47,7 @@ export const allBackgroundTags = [
   `office`,
   `on bed`,
   `on couch`,
+  `onsen`,
   `orange sky`,
   `outdoors`,
   `palm tree`,

@@ -86,4 +86,6 @@ export const posesPreset = {
   "garden": defaultPreset,
   "poolside-near-clean-floor": defaultPreset,
   "poolside-standing": defaultPreset,
+  "onsen-standing": defaultPreset,
+  "onsen-near-clean-floor": defaultPreset,
 } as const satisfies Record<PoseKey | `default` | BackgroundKey, PoseSetting[]>;

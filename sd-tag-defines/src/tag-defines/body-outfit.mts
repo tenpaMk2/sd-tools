@@ -775,6 +775,7 @@ export const allBodyOutfitTags = [
   `military uniform`,
   `miniskirt`,
   `naked shirt`,
+  `naked towel`,
   `navel cutout`,
   `navel`,
   `neck bell`,
@@ -897,6 +898,7 @@ export const allBodyOutfitTags = [
   `waitress`,
   `wedding dress`,
   `white cloak`,
+  `white towel`,
   `wide sleeves`,
   `wrist cuffs`,
 ] as const satisfies readonly string[];

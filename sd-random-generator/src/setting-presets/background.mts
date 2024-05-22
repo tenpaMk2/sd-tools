@@ -110,6 +110,11 @@ export const backgroundsPreset = {
     { key: `beach-standing`, probability: defaultPreset.length / 3 },
     { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
   ],
+  "naked-towel": [
+    ...defaultPreset,
+    { key: `onsen-standing`, probability: defaultPreset.length },
+    { key: `onsen-near-clean-floor`, probability: defaultPreset.length },
+  ],
   "o-ring-bikini": [
     ...defaultPreset,
     { key: `ocean`, probability: defaultPreset.length / 3 },

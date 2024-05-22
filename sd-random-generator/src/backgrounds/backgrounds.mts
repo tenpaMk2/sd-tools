@@ -440,6 +440,32 @@ export const backgroundTable = {
     },
     "removeShoes": false,
   },
+  "onsen-standing": {
+    "backgroundType": `standing`,
+    "from-above": {
+      entries: [`outdoors`, `onsen`, `wet`, `steam`],
+    },
+    "from-below": {
+      entries: [`outdoors`, `onsen`, `wet`, `steam`, `blue sky`],
+    },
+    "from-horizontal": {
+      entries: [`outdoors`, `onsen`, `wet`, `steam`],
+    },
+    "removeShoes": false,
+  },
+  "onsen-near-clean-floor": {
+    "backgroundType": `near-clean-floor`,
+    "from-above": {
+      entries: [`outdoors`, `onsen`, `wet`, `steam`],
+    },
+    "from-below": {
+      entries: [`outdoors`, `onsen`, `wet`, `steam`, `blue sky`],
+    },
+    "from-horizontal": {
+      entries: [`outdoors`, `onsen`, `wet`, `steam`],
+    },
+    "removeShoes": false,
+  },
 } as const satisfies Record<string, BackgroundDefine>;
 
 export type BackgroundKey = keyof typeof backgroundTable;
