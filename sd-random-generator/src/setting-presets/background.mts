@@ -543,6 +543,20 @@ export const backgroundsPreset = {
     { key: `beach-standing`, probability: defaultPreset.length / 3 },
     { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
   ],
+  "rokudenashi-bikini-rumia": [
+    ...defaultPreset,
+    { key: `ocean`, probability: defaultPreset.length },
+    { key: `beach-standing`, probability: defaultPreset.length },
+    { key: `beach-near-clean-floor`, probability: defaultPreset.length },
+  ],
+  "rokudenashi-school-uniform-summer": [
+    ...defaultPreset,
+    { key: `garden`, probability: defaultPreset.length },
+  ],
+  "rokudenashi-school-uniform-winter": [
+    ...defaultPreset,
+    { key: `garden`, probability: defaultPreset.length },
+  ],
   "sasuoni-first-high-school-uniform-nochekaiser": [
     ...defaultPreset,
     { key: `garden`, probability: defaultPreset.length / 2 },

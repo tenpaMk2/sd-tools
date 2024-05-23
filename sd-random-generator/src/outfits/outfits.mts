@@ -48,6 +48,8 @@ import { prismaIllyaChloeBeast } from "./prisma-illya/chloe-beast.mjs";
 import { prismaIllyaIllyaBeast } from "./prisma-illya/illya-beast.mjs";
 import { prismaIllyaMiyuBeast } from "./prisma-illya/miyu-beast.mjs";
 import { pso2BikiniGene } from "./pso2/bikini-gene.mjs";
+import { rokudenashiBikini } from "./rokudenashi/bikini.mjs";
+import { rokudenashiSchoolUniform } from "./rokudenashi/school-uniform.mjs";
 import { sasuoniFirstHighSchoolUniform } from "./sasuoni/first-high-school-uniform.mjs";
 
 /**
@@ -220,6 +222,9 @@ export const characterOutfitTable = {
   "prisma-illya-illya-beast": prismaIllyaIllyaBeast(`am7coffeelove`),
   "prisma-illya-miyu-beast": prismaIllyaMiyuBeast(`am7coffeelove`),
   "pso2-bikini-gene": pso2BikiniGene(),
+  "rokudenashi-bikini-rumia": rokudenashiBikini(`rumia`),
+  "rokudenashi-school-uniform-summer": rokudenashiSchoolUniform(`summer`),
+  "rokudenashi-school-uniform-winter": rokudenashiSchoolUniform(`winter`),
   "sasuoni-eft-first-high-school-uniform-pantyhose":
     sasuoniFirstHighSchoolUniform(`eft-pantyhose`),
   "sasuoni-eft-first-high-school-uniform-thighhighs":

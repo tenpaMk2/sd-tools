@@ -106,5 +106,6 @@ export const allCharacterNameTags = [
   `yui kotegawa`,
   `yunyun \\(konosuba\\)`,
   `zeta \\(kage no jitsuryokusha ni naritakute!\\)`,
+  `rumia tingel`,
 ] as const satisfies readonly string[];
 export type CharacterNameTag = (typeof allCharacterNameTags)[number];

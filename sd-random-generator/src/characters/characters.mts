@@ -73,6 +73,7 @@ import { reZeroRamEft } from "./re-zero/re-zero-ram-eft.mjs";
 import { reZeroRam } from "./re-zero/re-zero-ram.mjs";
 import { reZeroRemEft } from "./re-zero/re-zero-rem-eft.mjs";
 import { reZeroRem } from "./re-zero/re-zero-rem.mjs";
+import { rokudenashiRumia } from "./rokudenashi/rokudenashi-rumia.mjs";
 import { saijakuCelistiaEft } from "./saijaku/saijaku-celistia-eft.mjs";
 import { saijakuKrulciferEft } from "./saijaku/saijaku-krulcifer-eft.mjs";
 import { saijakuLisesharteEft } from "./saijaku/saijaku-lisesharte-eft.mjs";
@@ -213,6 +214,7 @@ export const characterTable = {
   "re-zero-ram": reZeroRam(),
   "re-zero-rem-eft": reZeroRemEft(),
   "re-zero-rem": reZeroRem(),
+  "rokudenashi-rumia": rokudenashiRumia(`little-jelly`),
   "saijaku-celistia-eft": saijakuCelistiaEft(),
   "saijaku-krulcifer-eft": saijakuKrulciferEft(),
   "saijaku-lisesharte-eft": saijakuLisesharteEft(),

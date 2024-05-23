@@ -326,6 +326,21 @@ export const outfitsPreset = {
   "re-zero-ram": defaultPreset,
   "re-zero-rem-eft": defaultPreset,
   "re-zero-rem": defaultPreset,
+  "rokudenashi-rumia": [
+    ...defaultPreset,
+    {
+      key: `rokudenashi-bikini-rumia`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `rokudenashi-school-uniform-summer`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `rokudenashi-school-uniform-winter`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "saijaku-celistia-eft": defaultPreset,
   "saijaku-krulcifer-eft": defaultPreset,
   "saijaku-lisesharte-eft": defaultPreset,

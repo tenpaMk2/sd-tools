@@ -956,6 +956,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  {
+    loraName: `Rokuaka_RumiaTingelXL`,
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/470001/rumia-tingel-or-pony-xl-or-rokudenashi-majutsu-koushi-to-akashic-records?modelVersionId=523075`,
+    ),
+    characterTriggerWordsTags: [`RumiaTingel`],
+    outfitTriggerTags: [`RumiaSchool`, `RumiaBikini`],
+    creator: `LittleJelly`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
