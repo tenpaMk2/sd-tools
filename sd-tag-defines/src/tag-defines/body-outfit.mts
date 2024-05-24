@@ -905,5 +905,6 @@ export const allBodyOutfitTags = [
   `white towel`,
   `wide sleeves`,
   `wrist cuffs`,
+  `loose socks`,
 ] as const satisfies readonly string[];
 export type BodyOutfitTag = (typeof allBodyOutfitTags)[number];

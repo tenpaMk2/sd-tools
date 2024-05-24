@@ -564,6 +564,21 @@ export const backgroundsPreset = {
   ],
   "sasuoni-eft-first-high-school-uniform-pantyhose": defaultPreset,
   "sasuoni-eft-first-high-school-uniform-thighhighs": defaultPreset,
+  "to-love-ru-school-uniform-nana": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
 } as const satisfies Record<
   BackgroundKey | `default` | OutfitKey,
   BackgroundSetting[]

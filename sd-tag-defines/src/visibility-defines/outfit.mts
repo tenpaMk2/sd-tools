@@ -1103,6 +1103,7 @@ export const allOutfitVisibilities = {
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],
   "plaid bowtie": preset.bowtie,
+  "loose socks": preset.foot,
 } as const satisfies {
   [key in BodyOutfitTag]: Visibility;
 };

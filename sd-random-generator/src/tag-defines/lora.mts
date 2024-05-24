@@ -967,6 +967,17 @@ export const allLoras = [
     outfitTriggerTags: [`RumiaSchool`, `RumiaBikini`],
     creator: `LittleJelly`,
   },
+  {
+    loraName: `nanadevilXLPonyV1`,
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/401556/nana-asta-deviluke?modelVersionId=447746`,
+    ),
+    characterTriggerWordsTags: [`nanadevil`],
+    outfitTriggerTags: [],
+    creator: `Lancelot69lol`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

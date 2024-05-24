@@ -94,6 +94,7 @@ import { toLoveRuMeaEft } from "./to-love-ru/to-love-ru-mea-eft.mjs";
 import { toLoveRuMomoEft } from "./to-love-ru/to-love-ru-momo-eft.mjs";
 import { toLoveRuMomoLancelot } from "./to-love-ru/to-love-ru-momo-lancelot.mjs";
 import { toLoveRuNanaEft } from "./to-love-ru/to-love-ru-nana-eft.mjs";
+import { toLoveRuNana } from "./to-love-ru/to-love-ru-nana.mjs";
 import { toLoveRuYamiEft } from "./to-love-ru/to-love-ru-yami-eft.mjs";
 import { toLoveRuYuiEft } from "./to-love-ru/to-love-ru-yui-eft.mjs";
 
@@ -235,6 +236,7 @@ export const characterTable = {
   "to-love-ru-momo-eft": toLoveRuMomoEft(),
   "to-love-ru-momo-lancelot": toLoveRuMomoLancelot(),
   "to-love-ru-nana-eft": toLoveRuNanaEft(),
+  "to-love-ru-nana-lancelot": toLoveRuNana(`lancelot`),
   "to-love-ru-yami-eft": toLoveRuYamiEft(),
   "to-love-ru-yui-eft": toLoveRuYuiEft(),
 } as const satisfies Record<string, CharacterDefine>;

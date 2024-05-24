@@ -415,6 +415,13 @@ export const outfitsPreset = {
   "to-love-ru-momo-eft": defaultPreset,
   "to-love-ru-momo-lancelot": defaultPreset,
   "to-love-ru-nana-eft": defaultPreset,
+  "to-love-ru-nana-lancelot": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-nana`,
+      probability: defaultPreset.length,
+    },
+  ],
   "to-love-ru-yami-eft": defaultPreset,
   "to-love-ru-yui-eft": defaultPreset,
 } as const satisfies Record<
