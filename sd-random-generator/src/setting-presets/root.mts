@@ -48,8 +48,12 @@ export const checkpointAndVAEPreset = {
       sd_model_checkpoint: `ponymagine91_gamma.safetensors`,
       sd_vae: `None`,
     },
-    raemora: {
-      sd_model_checkpoint: `raemoraXL_v10.safetensors`,
+    momoiro: {
+      sd_model_checkpoint: `momoiropony_v14.safetensors`,
+      sd_vae: `None`,
+    },
+    tponynai: {
+      sd_model_checkpoint: `tPonynai3_v41OptimizedFromV4.safetensors`,
       sd_vae: `None`,
     },
   },

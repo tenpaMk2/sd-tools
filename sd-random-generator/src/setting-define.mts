@@ -4,36 +4,38 @@ import { OutfitKey } from "./outfits/outfits.mjs";
 import { PoseKey } from "./poses/poses.mjs";
 
 export const allCheckpoints = [
-  `vividorangemix_v10.safetensors`,
-  `vividorangemix_v10NSFW.safetensors`,
-  `calicomix_v75.safetensors`,
-  `calicomixFlatani_v10.safetensors`,
   `7thAnimeXLPonyA_v10.safetensors`,
   `autismmixSDXL_autismmixConfetti.safetensors`,
+  `calicomix_v75.safetensors`,
+  `calicomixFlatani_v10.safetensors`,
   `chacolebaramixxl_v21.safetensors`,
   `ebara_pony_1.bakedVAE.safetensors`,
   `hamefkawaiimix_typelight.safetensors`,
+  `momoiropony_v14.safetensors`,
   `ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
   `ponymagine91_gamma.safetensors`,
-  `raemoraXL_v10.safetensors`,
+  `tPonynai3_v41OptimizedFromV4.safetensors`,
+  `vividorangemix_v10.safetensors`,
+  `vividorangemix_v10NSFW.safetensors`,
 ] as const satisfies string[];
 export type Checkpoint = (typeof allCheckpoints)[number];
 
 export type BaseModel = `SD1.5` | `Pony` | `Animagine`;
 
 export const checkpointInfo = {
-  "vividorangemix_v10.safetensors": { baseModel: `SD1.5` },
-  "vividorangemix_v10NSFW.safetensors": { baseModel: `SD1.5` },
-  "calicomix_v75.safetensors": { baseModel: `SD1.5` },
-  "calicomixFlatani_v10.safetensors": { baseModel: `SD1.5` },
   "7thAnimeXLPonyA_v10.safetensors": { baseModel: `Pony` },
   "autismmixSDXL_autismmixConfetti.safetensors": { baseModel: `Pony` },
+  "calicomix_v75.safetensors": { baseModel: `SD1.5` },
+  "calicomixFlatani_v10.safetensors": { baseModel: `SD1.5` },
   "chacolebaramixxl_v21.safetensors": { baseModel: `Pony` },
   "ebara_pony_1.bakedVAE.safetensors": { baseModel: `Pony` },
   "hamefkawaiimix_typelight.safetensors": { baseModel: `Pony` },
+  "momoiropony_v14.safetensors": { baseModel: `Pony` },
   "ponyDiffusionV6XL_v6StartWithThisOne.safetensors": { baseModel: `Pony` },
   "ponymagine91_gamma.safetensors": { baseModel: `Pony` }, // Also supports `Animagine` .
-  "raemoraXL_v10.safetensors": { baseModel: `Pony` },
+  "tPonynai3_v41OptimizedFromV4.safetensors": { baseModel: `Pony` },
+  "vividorangemix_v10.safetensors": { baseModel: `SD1.5` },
+  "vividorangemix_v10NSFW.safetensors": { baseModel: `SD1.5` },
 } as const satisfies Record<Checkpoint, { baseModel: BaseModel }>;
 
 const allVAEs = [
