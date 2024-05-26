@@ -424,6 +424,7 @@ export const outfitsPreset = {
   ],
   "to-love-ru-yami-eft": defaultPreset,
   "to-love-ru-yui-eft": defaultPreset,
+  "working-popura": defaultPreset,
 } as const satisfies Record<
   OutfitKey | `default` | `temp` | CharacterKey,
   OutfitSetting[]

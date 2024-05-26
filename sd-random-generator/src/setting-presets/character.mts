@@ -44,6 +44,7 @@ const defaultKeys = [
   `sasuoni-shiba-honoka-nochekaiser`,
   `sasuoni-shiba-mizuki-nochekaiser`,
   `to-love-ru-momo-lancelot`,
+  `working-popura`,
 ] as const satisfies CharacterSetting["keys"];
 
 export const charactersPreset = {

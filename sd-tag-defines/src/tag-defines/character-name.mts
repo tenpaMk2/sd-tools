@@ -69,6 +69,7 @@ export const allCharacterNameTags = [
   `philuffy aingram`,
   `ram \\(re:zero\\)`,
   `rem \\(re:zero\\)`,
+  `rumia tingel`,
   `ryu lion`,
   `saegusa mayumi`,
   `sairenji haruna`,
@@ -94,6 +95,7 @@ export const allCharacterNameTags = [
   `tachibana satomi`,
   `takimoto hifumi`,
   `tamaki iroha`,
+  `taneshima popura`,
   `tedeza rize`,
   `tohsaka rin`,
   `tomoe mami`,
@@ -106,6 +108,5 @@ export const allCharacterNameTags = [
   `yui kotegawa`,
   `yunyun \\(konosuba\\)`,
   `zeta \\(kage no jitsuryokusha ni naritakute!\\)`,
-  `rumia tingel`,
 ] as const satisfies readonly string[];
 export type CharacterNameTag = (typeof allCharacterNameTags)[number];

@@ -978,6 +978,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Lancelot69lol`,
   },
+  {
+    loraName: `taneshima popura_PONY_last`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/463900/pony-xl-taneshima-popura-working`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [`popura-default`, `popura-schooluniform`],
+    creator: `Ibukimakisiko`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

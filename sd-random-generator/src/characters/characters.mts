@@ -97,6 +97,7 @@ import { toLoveRuNanaEft } from "./to-love-ru/to-love-ru-nana-eft.mjs";
 import { toLoveRuNana } from "./to-love-ru/to-love-ru-nana.mjs";
 import { toLoveRuYamiEft } from "./to-love-ru/to-love-ru-yami-eft.mjs";
 import { toLoveRuYuiEft } from "./to-love-ru/to-love-ru-yui-eft.mjs";
+import { workingPopura } from "./working/working-popura.mjs";
 
 /**
  * Character define.
@@ -239,6 +240,7 @@ export const characterTable = {
   "to-love-ru-nana-lancelot": toLoveRuNana(`lancelot`),
   "to-love-ru-yami-eft": toLoveRuYamiEft(),
   "to-love-ru-yui-eft": toLoveRuYuiEft(),
+  "working-popura": workingPopura(`ibukimakisiko`),
 } as const satisfies Record<string, CharacterDefine>;
 
 export type CharacterKey = keyof typeof characterTable;
