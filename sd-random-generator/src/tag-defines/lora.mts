@@ -1008,6 +1008,17 @@ export const allLoras = [
     ],
     creator: `Flujoru`,
   },
+  {
+    loraName: `MahiruShiinaXLpony001`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/463329/mahiru-shiina-otonari-no-tenshi-sama-ni-itsunomanika-dame-ningen-ni-sareteita-ken-xl-pony-lora?modelVersionId=515633`,
+    ),
+    characterTriggerWordsTags: [`MahiruShiina`],
+    outfitTriggerTags: [],
+    creator: `jibunsagasinotabi`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

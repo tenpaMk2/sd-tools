@@ -83,6 +83,7 @@ export const allCharacterNameTags = [
   `sento isuzu`,
   `shiba miyuki`,
   `shibata mizuki`,
+  `shiina mahiru \\(otonari no tenshi-sama\\)`,
   `shinomiya kaguya`,
   `shinonono houki`,
   `shirogane kei`,

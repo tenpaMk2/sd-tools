@@ -416,6 +416,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "tenshi-sama-mahiru": [
+    ...defaultPreset,
+    {
+      key: `tenshi-sama-blazer`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "to-love-ru-haruna-eft": defaultPreset,
   "to-love-ru-lala-eft": defaultPreset,
   "to-love-ru-mea-eft": defaultPreset,
