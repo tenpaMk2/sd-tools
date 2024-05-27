@@ -66,6 +66,7 @@ import { nonNonBiyoriHotaruNotekaga } from "./non-non-biyori/non-non-biyori-hota
 import { prismaIllyaChloeBeastAm7coffeelove } from "./prisma-illya/prisma-illya-chloe-beast-am7coffeelove.mjs";
 import { prismaIllyaIllyaBeastAm7coffeelove } from "./prisma-illya/prisma-illya-illya-beast-am7coffeelove.mjs";
 import { prismaIllyaMiyuBeastAm7coffeelove } from "./prisma-illya/prisma-illya-miyu-beast-am7coffeelove.mjs";
+import { prismaIllyaIllya } from "./prisma-illya/prisma-illya.mjs";
 import { pso2GeneOvernerd } from "./pso2/pso2-gene-overnerd.mjs";
 import { reZeroEmiliaEft } from "./re-zero/re-zero-emilia-eft.mjs";
 import { reZeroEmilia } from "./re-zero/re-zero-emilia.mjs";
@@ -208,6 +209,7 @@ export const characterTable = {
     prismaIllyaChloeBeastAm7coffeelove(),
   "prisma-illya-illya-beast-am7coffeelove":
     prismaIllyaIllyaBeastAm7coffeelove(),
+  "prisma-illya-illya": prismaIllyaIllya(`flujoru`),
   "prisma-illya-miyu-beast-am7coffeelove": prismaIllyaMiyuBeastAm7coffeelove(),
   "pso2-gene-overnerd": pso2GeneOvernerd(),
   "re-zero-emilia-eft": reZeroEmiliaEft(),

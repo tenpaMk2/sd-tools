@@ -989,6 +989,25 @@ export const allLoras = [
     outfitTriggerTags: [`popura-default`, `popura-schooluniform`],
     creator: `Ibukimakisiko`,
   },
+  {
+    loraName: `illya.pony`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/472636/pony-xl-illyasviel-von-einzbern-fatekaleid-liner-prisma-illya?modelVersionId=525776`,
+    ),
+    characterTriggerWordsTags: [`illya`],
+    outfitTriggerTags: [
+      `ruby`,
+      `sapphire`,
+      `zwei`,
+      `saber`,
+      `assassine`,
+      `lancer`,
+      `rider`,
+    ],
+    creator: `Flujoru`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

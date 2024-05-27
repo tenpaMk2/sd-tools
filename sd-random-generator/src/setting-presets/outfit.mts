@@ -313,6 +313,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "prisma-illya-illya": [
+    ...defaultPreset,
+    {
+      key: `prisma-illya-magical-girl-illya`,
+      probability: defaultPreset.length,
+    },
+  ],
   "pso2-gene-overnerd": [
     ...defaultPreset,
     {

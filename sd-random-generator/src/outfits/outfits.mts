@@ -46,6 +46,7 @@ import { lycorisRecoilLycorisUniform } from "./lycoris-recoil/lycoris-uniform.mj
 import { mahoakoLocomusica } from "./mahoako/locomusica.mjs";
 import { prismaIllyaChloeBeast } from "./prisma-illya/chloe-beast.mjs";
 import { prismaIllyaIllyaBeast } from "./prisma-illya/illya-beast.mjs";
+import { prismaIllyaMagicalGirlIllya } from "./prisma-illya/magical-girl-illya.mjs";
 import { prismaIllyaMiyuBeast } from "./prisma-illya/miyu-beast.mjs";
 import { pso2BikiniGene } from "./pso2/bikini-gene.mjs";
 import { rokudenashiBikini } from "./rokudenashi/bikini.mjs";
@@ -221,6 +222,7 @@ export const characterOutfitTable = {
   "mahoako-notekaga-locomusica": mahoakoLocomusica(`notekaga`),
   "prisma-illya-chloe-beast": prismaIllyaChloeBeast(`am7coffeelove`),
   "prisma-illya-illya-beast": prismaIllyaIllyaBeast(`am7coffeelove`),
+  "prisma-illya-magical-girl-illya": prismaIllyaMagicalGirlIllya(`flujoru`),
   "prisma-illya-miyu-beast": prismaIllyaMiyuBeast(`am7coffeelove`),
   "pso2-bikini-gene": pso2BikiniGene(),
   "rokudenashi-bikini-rumia": rokudenashiBikini(`rumia`),

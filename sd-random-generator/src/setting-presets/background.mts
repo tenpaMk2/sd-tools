@@ -536,6 +536,13 @@ export const backgroundsPreset = {
   ],
   "prisma-illya-chloe-beast": defaultPreset,
   "prisma-illya-illya-beast": defaultPreset,
+  "prisma-illya-magical-girl-illya": [
+    ...defaultPreset,
+    { key: `night-moon`, probability: defaultPreset.length / 2 },
+    { key: `night-rooftop`, probability: defaultPreset.length / 2 },
+    { key: `grass-blue-sky`, probability: defaultPreset.length / 2 },
+    { key: `garden`, probability: defaultPreset.length / 2 },
+  ],
   "prisma-illya-miyu-beast": defaultPreset,
   "pso2-bikini-gene": [
     ...defaultPreset,
