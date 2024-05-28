@@ -38,11 +38,13 @@ const defaultKeys = [
   `mahoako-matama-notekaga`,
   `mushoku-tensei-sylphiette-little-jelly`,
   `non-non-biyori-hotaru-notekaga`,
+  `prisma-illya-illya`,
   `re-zero-emilia`,
   `re-zero-ram`,
   `re-zero-rem`,
   `sasuoni-shiba-honoka-nochekaiser`,
   `sasuoni-shiba-mizuki-nochekaiser`,
+  `tenshi-sama-mahiru`,
   `to-love-ru-momo-lancelot`,
   `working-popura`,
 ] as const satisfies CharacterSetting["keys"];
