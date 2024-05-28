@@ -1019,6 +1019,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `jibunsagasinotabi`,
   },
+  {
+    loraName: `tokishikko dana_PONY_epoch-000020`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/479322/pony-xl-tokishikko-dana-futoku-no-guild?modelVersionId=533059`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [`tokishikko-default`, `tokishikko-inner`],
+    creator: `Ibukimakisiko`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

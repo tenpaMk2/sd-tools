@@ -1039,6 +1039,7 @@ export const allOutfitVisibilities = {
   "race queen": preset.all,
   "rei no himo": preset.bra,
   "revealing clothes": preset.all,
+  "ribbed sleeves": preset.shoulder,
   "ribbed sweater": preset.shirt,
   "ribbon choker": preset.collar,
   "sailor collar": preset.collar,

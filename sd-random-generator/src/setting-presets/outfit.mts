@@ -76,6 +76,13 @@ export const outfitsPreset = {
     ...defaultPreset,
     { key: `fate-little-jelly-rin-sweater`, probability: defaultPreset.length },
   ],
+  "futoku-no-guild-tokishikko": [
+    ...defaultPreset,
+    {
+      key: `futoku-no-guild-tokishikko-dress`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "is-cecilia-nochekaiser": [
     ...defaultPreset,
     {

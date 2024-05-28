@@ -14,6 +14,7 @@ const defaultKeys = [
   `blend-s-kaho-ibukimakisiko`,
   `danmachi-hestia`,
   `fate-rin-little-jelly`,
+  `futoku-no-guild-tokishikko`,
   `is-cecilia-nochekaiser`,
   `is-charlotte-nochekaiser`,
   `is-houki-nochekaiser`,

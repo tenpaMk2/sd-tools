@@ -9,6 +9,7 @@ export const allSeriesNameTags = [
   `fate/kaleid liner prisma illya`,
   `fate/stay night`,
   `fate/unlimited blade works`,
+  `futoku no guild`,
   `gochuumon wa usagi desu ka?`,
   `gridman universe`,
   `hige wo soru\\. soshite joshikousei wo hirou\\.`,

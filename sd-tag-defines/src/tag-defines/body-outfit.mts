@@ -841,6 +841,7 @@ export const allBodyOutfitTags = [
   `race queen`,
   `rei no himo`,
   `revealing clothes`,
+  `ribbed sleeves`,
   `ribbed sweater`,
   `ribbon choker`,
   `sailor collar`,

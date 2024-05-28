@@ -240,6 +240,21 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "futoku-no-guild-tokishikko-dress": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "is-pilot-suit-cecilia": [
     ...defaultPreset,
     {
