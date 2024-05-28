@@ -10,7 +10,7 @@ export const prismaIllyaIllya = (variation: Variation) =>
       probabilityAndWeights: [
         // { probability: 1, weight: 1.0 },
         // { probability: 1, weight: 0.8 },
-        { probability: 1, weight: 0.5 },
+        { probability: 1, weight: 0.6 },
       ],
     },
     loraCharacterTriggerWordEntries: [`illya`],
