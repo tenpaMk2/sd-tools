@@ -129,6 +129,13 @@ export const backgroundsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "race-queen": [
+    ...defaultPreset,
+    {
+      key: `race-confetti`,
+      probability: defaultPreset.length,
+    },
+  ],
   "revealing-miko": defaultPreset,
   "santa-bikini": [
     ...defaultPreset,

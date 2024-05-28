@@ -70,6 +70,7 @@ export const allBackgroundTags = [
   `steaming body`,
   `sunset`,
   `sweat`,
+  `tire`,
   `vaulting horse`,
   `volleyball net`,
   `volleyball`,

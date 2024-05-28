@@ -21,6 +21,7 @@ import { nakedTowel } from "./common/naked-towel.mjs";
 import { oRingBikini } from "./common/o-ring-bikini.mjs";
 import { openChestSweater } from "./common/open-chest-sweater.mjs";
 import { playboyBunny } from "./common/playboy-bunny.mjs";
+import { raceQueen } from "./common/race-queen.mjs";
 import { revealingMiko } from "./common/revealing-miko.mjs";
 import { santaBikini } from "./common/santa-bikini.mjs";
 import { schoolUniformBowtie } from "./common/school-uniform-bowtie.mjs";
@@ -158,6 +159,7 @@ export const commonOutfitTable = {
   "open-chest-sweater": openChestSweater(),
   "playboy-bunny": playboyBunny(),
   "revealing-miko": revealingMiko(),
+  "race-queen": raceQueen(),
   "santa-bikini": santaBikini(),
   "school-uniform-bowtie": schoolUniformBowtie(),
   "sukumizu-thighhighs": sukumizuThighhighs(),

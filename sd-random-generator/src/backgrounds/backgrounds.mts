@@ -466,6 +466,19 @@ export const backgroundTable = {
     },
     "removeShoes": false,
   },
+  "race-confetti": {
+    "backgroundType": `standing`,
+    "from-above": {
+      entries: [`outdoors`, `road`, `tire`, `confetti`],
+    },
+    "from-below": {
+      entries: [`outdoors`, `blue sky`, `confetti`],
+    },
+    "from-horizontal": {
+      entries: [`outdoors`, `road`, `tire`, `confetti`, `blue sky`],
+    },
+    "removeShoes": false,
+  },
 } as const satisfies Record<string, BackgroundDefine>;
 
 export type BackgroundKey = keyof typeof backgroundTable;

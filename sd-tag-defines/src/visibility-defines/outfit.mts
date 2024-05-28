@@ -791,8 +791,8 @@ const allDistinguishableOutfitVisibilities = {
 } as const satisfies { [key in BodyOutfitTag]?: Visibility };
 
 export const allOutfitVisibilities = {
-  ...allArmbandColorVisibilities,
   ...allApronColorVisibilities,
+  ...allArmbandColorVisibilities,
   ...allAscotColorVisibilities,
   ...allBeltColorVisibilities,
   ...allBikiniColorVisibilities,
@@ -889,6 +889,7 @@ export const allOutfitVisibilities = {
   "cleavage cutout": preset.bowtie,
   "cloak": preset.dress,
   "clothes around waist": preset["high-waist skirt"],
+  "clothes writing": preset["center frills"],
   "clothing cutout": preset["clothing cutout"], // TODO: `cleavage clothing cutout`
   "collar": preset.collar,
   "collarbone": preset.bowtie,
@@ -927,8 +928,8 @@ export const allOutfitVisibilities = {
   "frilled skirt": preset.skirt,
   "frilled sleeves": preset.shoulder, // `wrist cuffs` ?
   "frills": preset.all,
-  "front-tie top": preset.bowtie,
   "front-tie bikini top": preset.bowtie,
+  "front-tie top": preset.bowtie,
   "fur collar": preset.collar,
   "fur-trimmed bikini": preset.dress,
   "fur-trimmed collar": preset.collar,
@@ -957,12 +958,15 @@ export const allOutfitVisibilities = {
   "knee pads": preset.thighs,
   "lace panties": preset.panties,
   "lace-trimmed bra": preset.bra,
+  "latex bikini": preset.dress,
   "latex leotard": preset.dress,
+  "latex shorts": preset.skirt,
   "leotard": preset.dress,
   "lingerie": preset.dress,
   "loafers": preset.foot,
   "long skirt": preset.skirt,
   "long sleeves": preset.shoulder,
+  "loose socks": preset.foot,
   "lycoris uniform": preset.all,
   "magical girl": preset.dress,
   "maid apron": preset.dress,
@@ -1017,6 +1021,7 @@ export const allOutfitVisibilities = {
   "pilot suit": preset.dress,
   "pirate": preset.all,
   "plaid bikini": preset.dress,
+  "plaid bowtie": preset.bowtie,
   "plaid skirt": preset.skirt,
   "plaid sweater": preset.shirt,
   "playboy bunny": preset.dress,
@@ -1031,6 +1036,7 @@ export const allOutfitVisibilities = {
   "puffy sleeves": preset.shoulder,
   "pumps": preset.foot,
   "rabbit tail": preset.shortTail,
+  "race queen": preset.all,
   "rei no himo": preset.bra,
   "revealing clothes": preset.all,
   "ribbed sweater": preset.shirt,
@@ -1102,8 +1108,6 @@ export const allOutfitVisibilities = {
   "white towel": preset.dress,
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],
-  "plaid bowtie": preset.bowtie,
-  "loose socks": preset.foot,
 } as const satisfies {
   [key in BodyOutfitTag]: Visibility;
 };
