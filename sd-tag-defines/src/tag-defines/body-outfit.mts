@@ -497,6 +497,21 @@ const allSweaterVestColorTags = [
   `yellow sweater vest`,
 ] as const satisfies string[];
 
+const allTankTopColorTags = [
+  `aqua tank top`,
+  `black tank top`,
+  `blue tank top`,
+  `brown tank top`,
+  `green tank top`,
+  `grey tank top`,
+  `orange tank top`,
+  `pink tank top`,
+  `purple tank top`,
+  `red tank top`,
+  `white tank top`,
+  `yellow tank top`,
+] as const satisfies string[];
+
 const allThighhighsColorTags = [
   `black thighhighs`,
   `blue thighhighs`,
@@ -627,6 +642,7 @@ export const allBodyOutfitTags = [
   ...allSocksColorTags,
   ...allSweaterColorTags,
   ...allSweaterVestColorTags,
+  ...allTankTopColorTags,
   ...allThighhighsColorTags,
   ...allVestColorTags,
   ...getKeys(allDistinguishableOutfitTags),
@@ -715,6 +731,7 @@ export const allBodyOutfitTags = [
   `denim`,
   `detached collar`,
   `detached sleeves`,
+  `dolphin shorts`,
   `dragon print`,
   `dress shirt`,
   `dress`,
@@ -887,6 +904,7 @@ export const allBodyOutfitTags = [
   `sweater`,
   `swimsuit`,
   `t-shirt`,
+  `tank top`,
   `teacher`,
   `thigh boots`,
   `thigh strap`,

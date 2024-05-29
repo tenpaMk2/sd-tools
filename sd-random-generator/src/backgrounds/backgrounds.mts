@@ -479,6 +479,66 @@ export const backgroundTable = {
     },
     "removeShoes": false,
   },
+  "bedroom-standing": {
+    "backgroundType": `standing`,
+    "from-above": {
+      entries: [`indoors`, `carpet`, `pink carpet`, `bed`],
+    },
+    "from-below": {
+      entries: [`indoors`, `ceiling`, `ceiling light`],
+    },
+    "from-horizontal": {
+      entries: [`indoors`, `carpet`, `pink carpet`, `bed`, `window`],
+    },
+    "removeShoes": true,
+  },
+  "bedroom-near-clean-floor": {
+    "backgroundType": `near-clean-floor`,
+    "from-above": {
+      entries: [`indoors`, `carpet`, `pink carpet`, `bed`],
+    },
+    "from-below": {
+      entries: [`indoors`, `ceiling`, `ceiling light`],
+    },
+    "from-horizontal": {
+      entries: [`indoors`, `carpet`, `pink carpet`, `bed`, `window`],
+    },
+    "removeShoes": true,
+  },
+  // "bedroom-sitting-on": {
+  //   "backgroundType": `sitting-on`,
+  //   "from-above": {
+  //     entries: [
+  //       `indoors`,
+  //       `carpet`,
+  //       `pink carpet`,
+  //       `bed`,
+  //       `on floor`,
+  //       // [{ entries: [`on floor`] }, { entries: [`on bed`] }], // TODO: bug
+  //     ],
+  //   },
+  //   "from-below": {
+  //     entries: [
+  //       `indoors`,
+  //       `ceiling`,
+  //       `ceiling light`,
+  //       `on floor`,
+  //       // [{ entries: [`on floor`] }, { entries: [`on bed`] }],
+  //     ],
+  //   },
+  //   "from-horizontal": {
+  //     entries: [
+  //       `indoors`,
+  //       `carpet`,
+  //       `pink carpet`,
+  //       `bed`,
+  //       `window`,
+  //       `on floor`,
+  //       // [{ entries: [`on floor`] }, { entries: [`on bed`] }],
+  //     ],
+  //   },
+  //   "removeShoes": true,
+  // },
 } as const satisfies Record<string, BackgroundDefine>;
 
 export type BackgroundKey = keyof typeof backgroundTable;

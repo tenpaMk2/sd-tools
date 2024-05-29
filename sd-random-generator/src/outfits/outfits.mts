@@ -27,6 +27,7 @@ import { santaBikini } from "./common/santa-bikini.mjs";
 import { schoolUniformBowtie } from "./common/school-uniform-bowtie.mjs";
 import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { sukumizu } from "./common/sukumizu.mjs";
+import { tankTopDolphinShorts } from "./common/tank-top-dolphin-shorts.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
 import { volleyballUniform } from "./common/volleyball-uniform.mjs";
 import { whiteDress } from "./common/white-dress.mjs";
@@ -165,6 +166,7 @@ export const commonOutfitTable = {
   "school-uniform-bowtie": schoolUniformBowtie(),
   "sukumizu-thighhighs": sukumizuThighhighs(),
   "sukumizu": sukumizu(),
+  "tank-top-dolphin-shorts": tankTopDolphinShorts(),
   "volleyball-uniform": volleyballUniform(),
   "white-dress": whiteDress(),
 } as const satisfies Record<string, OutfitDefine>;

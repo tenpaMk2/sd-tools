@@ -694,6 +694,21 @@ const allSweaterVestColorVisibilities = {
   "yellow sweater vest": preset.shirt,
 } as const satisfies { [key in BodyOutfitTag]?: Visibility };
 
+const allTankTopColorVisibilities = {
+  "aqua tank top": preset.shirt,
+  "black tank top": preset.shirt,
+  "blue tank top": preset.shirt,
+  "brown tank top": preset.shirt,
+  "green tank top": preset.shirt,
+  "grey tank top": preset.shirt,
+  "orange tank top": preset.shirt,
+  "pink tank top": preset.shirt,
+  "purple tank top": preset.shirt,
+  "red tank top": preset.shirt,
+  "white tank top": preset.shirt,
+  "yellow tank top": preset.shirt,
+} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+
 const allThighhighsColorVisibilities = {
   "black thighhighs": preset.thighhighs,
   "blue thighhighs": preset.thighhighs,
@@ -825,6 +840,7 @@ export const allOutfitVisibilities = {
   ...allSocksColorVisibilities,
   ...allSweaterColorVisibilities,
   ...allSweaterVestColorVisibilities,
+  ...allTankTopColorVisibilities,
   ...allThighhighsColorVisibilities,
   ...allVestColorVisibilities,
   "aiguillette": preset.bowtie,
@@ -913,6 +929,7 @@ export const allOutfitVisibilities = {
   "denim": preset.skirt,
   "detached collar": preset.collar,
   "detached sleeves": preset["wrist cuffs"],
+  "dolphin shorts": preset.skirt,
   "dragon print": preset.dress,
   "dress shirt": preset.shirt,
   "dress": preset.dress,
@@ -1085,6 +1102,7 @@ export const allOutfitVisibilities = {
   "sweater": preset.shirt,
   "swimsuit": preset.dress,
   "t-shirt": preset.shirt,
+  "tank top": preset.shirt,
   "teacher": preset.all,
   "thigh boots": preset.thighhighs,
   "thigh strap": preset.thighhighs,

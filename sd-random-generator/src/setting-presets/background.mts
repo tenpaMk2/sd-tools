@@ -171,6 +171,21 @@ export const backgroundsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "tank-top-dolphin-shorts": [
+    ...defaultPreset,
+    {
+      key: `bedroom-near-clean-floor`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `bedroom-standing`,
+      probability: defaultPreset.length,
+    },
+    // {
+    //   key: `bedroom-sitting-on`,
+    //   probability: defaultPreset.length,
+    // },
+  ],
   "volleyball-uniform": [
     ...defaultPreset,
     {
