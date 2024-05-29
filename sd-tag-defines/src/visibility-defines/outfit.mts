@@ -192,6 +192,10 @@ const preset = {
     ...invisible,
     wristAndHand: true,
   },
+  "mouth veil": {
+    ...invisible,
+    frontHead: true,
+  },
 } as const satisfies { [k: string]: Visibility };
 
 const allArmbandColorVisibilities = {
@@ -918,6 +922,7 @@ export const allOutfitVisibilities = {
   "cow print gloves": preset["wrist cuffs"],
   "cow print thighhighs": preset.thighhighs,
   "cow print": preset.dress,
+  "criss-cross halter": preset.bowtie,
   "crop top overhang": preset.bowtie,
   "crop top": preset.shirt,
   "cropped jacket": preset.shirt,
@@ -960,6 +965,8 @@ export const allOutfitVisibilities = {
   "hakama skirt": preset.skirt,
   "hakama": preset.shirt,
   "halterneck": preset.collar,
+  "harem outfit": preset.dress,
+  "harem pants": preset.skirt,
   "high-low skirt": preset.skirt,
   "high-waist skirt": preset["high-waist skirt"],
   "hip vent": preset["side hip"],
@@ -995,6 +1002,7 @@ export const allOutfitVisibilities = {
   "military jacket": preset.shirt,
   "military uniform": preset.all,
   "miniskirt": preset.skirt,
+  "mouth veil": preset["mouth veil"],
   "naked shirt": preset.shirt,
   "naked towel": preset.dress,
   "navel cutout": preset.navel,

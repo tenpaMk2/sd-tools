@@ -97,6 +97,13 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 3,
     },
   ],
+  "harem-outfit": [
+    ...defaultPreset,
+    {
+      key: `red-curtains-bed`,
+      probability: defaultPreset.length,
+    },
+  ],
   "maid-bikini": [
     ...defaultPreset,
     {

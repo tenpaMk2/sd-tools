@@ -539,6 +539,19 @@ export const backgroundTable = {
   //   },
   //   "removeShoes": true,
   // },
+  "red-curtains-bed": {
+    "backgroundType": `near-clean-floor`,
+    "from-above": {
+      entries: [`bed sheet`, `red curtains`, `pillow`],
+    },
+    "from-below": {
+      entries: [`bed`, `red curtains`],
+    },
+    "from-horizontal": {
+      entries: [`bed sheet`, `red curtains`, `pillow`, `lamp`],
+    },
+    "removeShoes": true,
+  },
 } as const satisfies Record<string, BackgroundDefine>;
 
 export type BackgroundKey = keyof typeof backgroundTable;

@@ -92,4 +92,5 @@ export const posesPreset = {
   "bedroom-near-clean-floor": defaultPreset,
   "bedroom-standing": defaultPreset,
   // "bedroom-sitting-on": defaultPreset,
+  "red-curtains-bed": defaultPreset,
 } as const satisfies Record<PoseKey | `default` | BackgroundKey, PoseSetting[]>;

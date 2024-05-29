@@ -15,6 +15,7 @@ import { cowPrintBikini } from "./common/cow-print-bikini.mjs";
 import { denimBikini } from "./common/denim-bikini.mjs";
 import { formalSuit } from "./common/formal-suit.mjs";
 import { gymUniform } from "./common/gym-uniform.mjs";
+import { haremOutfit } from "./common/harem-outfit.mjs";
 import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
 import { nakedTowel } from "./common/naked-towel.mjs";
@@ -154,6 +155,7 @@ export const commonOutfitTable = {
   "denim-bikini": denimBikini(),
   "formal-suit": formalSuit(`chifuyu`),
   "gym-uniform": gymUniform(),
+  "harem-outfit": haremOutfit(),
   "maid-bikini": maidBikini(),
   "micro-bikini": microBikini(),
   "naked-towel": nakedTowel(),

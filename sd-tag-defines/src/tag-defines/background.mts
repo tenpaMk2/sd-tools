@@ -78,6 +78,7 @@ export const allBackgroundTags = [
   `pool`,
   `poolside`,
   `red background`,
+  `red curtains`,
   `road`,
   `rock`,
   `rooftop`,
