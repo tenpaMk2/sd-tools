@@ -204,7 +204,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "white-dress": [
+  "sundress": [
     ...defaultPreset,
     {
       key: `sun-sky`,

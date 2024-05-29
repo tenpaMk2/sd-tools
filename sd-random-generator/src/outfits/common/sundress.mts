@@ -1,11 +1,12 @@
 import { OutfitDefine } from "../outfits.mjs";
 import { upskirtPreset } from "./upskirt-preset.mjs";
 
-export const whiteDress = () =>
+export const sundress = () =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
     outfitEntries: [
+      `sundress`,
       `collarbone`,
       `dress`,
       `white dress`,

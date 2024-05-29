@@ -28,10 +28,10 @@ import { santaBikini } from "./common/santa-bikini.mjs";
 import { schoolUniformBowtie } from "./common/school-uniform-bowtie.mjs";
 import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { sukumizu } from "./common/sukumizu.mjs";
+import { sundress } from "./common/sundress.mjs";
 import { tankTopDolphinShorts } from "./common/tank-top-dolphin-shorts.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
 import { volleyballUniform } from "./common/volleyball-uniform.mjs";
-import { whiteDress } from "./common/white-dress.mjs";
 import { danmachiHestia } from "./danmachi/hestia.mjs";
 import { fateRinSweater } from "./fate/rin-sweater.mjs";
 import { futokuNoGuildTokishikkoDress } from "./futoku-no-guild/tokishikko-dress.mjs";
@@ -170,7 +170,7 @@ export const commonOutfitTable = {
   "sukumizu": sukumizu(),
   "tank-top-dolphin-shorts": tankTopDolphinShorts(),
   "volleyball-uniform": volleyballUniform(),
-  "white-dress": whiteDress(),
+  "sundress": sundress(),
 } as const satisfies Record<string, OutfitDefine>;
 
 export const characterOutfitTable = {

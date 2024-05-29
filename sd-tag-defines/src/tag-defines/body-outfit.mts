@@ -902,6 +902,7 @@ export const allBodyOutfitTags = [
   `striped bikini`,
   `striped sweater`,
   `suit`,
+  `sundress`,
   `sweater around waist`,
   `sweater dress`,
   `sweater vest`,

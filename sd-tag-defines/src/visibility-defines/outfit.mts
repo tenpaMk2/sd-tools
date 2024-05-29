@@ -1104,6 +1104,7 @@ export const allOutfitVisibilities = {
   "striped bikini": preset.dress,
   "striped sweater": preset.shirt,
   "suit": preset.shirt,
+  "sundress": preset.dress,
   "sweater around waist": preset["high-waist skirt"],
   "sweater dress": preset.dress,
   "sweater vest": preset.shirt,
