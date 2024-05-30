@@ -30,6 +30,7 @@ import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { sukumizu } from "./common/sukumizu.mjs";
 import { sundress } from "./common/sundress.mjs";
 import { tankTopDolphinShorts } from "./common/tank-top-dolphin-shorts.mjs";
+import { tennisUniform } from "./common/tennis-uniform.mjs";
 import { testOutfit } from "./common/test-outfit.mjs";
 import { volleyballUniform } from "./common/volleyball-uniform.mjs";
 import { danmachiHestia } from "./danmachi/hestia.mjs";
@@ -169,6 +170,7 @@ export const commonOutfitTable = {
   "sukumizu-thighhighs": sukumizuThighhighs(),
   "sukumizu": sukumizu(),
   "tank-top-dolphin-shorts": tankTopDolphinShorts(),
+  "tennis-uniform": tennisUniform(),
   "volleyball-uniform": volleyballUniform(),
   "sundress": sundress(),
 } as const satisfies Record<string, OutfitDefine>;

@@ -47,6 +47,7 @@ import { standingFromHorizontalHoldingVolleyball } from "./special/standing-from
 import { standingFromHorizontalSingingFromSide } from "./special/standing-from-horizontal-singing-from-side.mjs";
 import { standingFromHorizontalSinging } from "./special/standing-from-horizontal-singing.mjs";
 import { standingFromHorizontalVolleyballFromSide } from "./special/standing-from-horizontal-volleyball-from-side.mjs";
+import { standingHoldingTennis } from "./special/standing-holding-tennis.mjs";
 
 export type PoseSpecialVisibility = Omit<
   OutfitDefine["specialVisibility"],
@@ -135,13 +136,17 @@ export const commonPoseTable = {
 export const specialPoseTable = {
   "sitting-on-from-horizontal-singing": sittingOnFromHorizontalSinging,
   "standing-from-above-holding-bouquet": standingFromAboveHoldingBouquet,
+  "standing-from-above-holding-tennis": standingHoldingTennis(`from-above`),
   "standing-from-above-holding-volleyball": standingFromAboveHoldingVolleyball,
   "standing-from-below-cheering-with-pom-poms":
     standingFromBelowCheeringWithPomPoms,
   "standing-from-below-holding-bouquet": standingFromBelowHoldingBouquet,
   "standing-from-below-holding-volleyball": standingFromBelowHoldingVolleyball,
+  "standing-from-below-holding-tennis": standingHoldingTennis(`from-below`),
   "standing-from-horizontal-holding-bouquet":
     standingFromHorizontalHoldingBouquet,
+  "standing-from-horizontal-holding-tennis":
+    standingHoldingTennis(`from-horizontal`),
   "standing-from-horizontal-holding-volleyball":
     standingFromHorizontalHoldingVolleyball,
   "standing-from-horizontal-singing-from-side":

@@ -193,6 +193,17 @@ export const backgroundsPreset = {
     //   probability: defaultPreset.length,
     // },
   ],
+  "tennis-uniform": [
+    ...defaultPreset,
+    {
+      key: `tennis-court-near-clean-floor`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `tennis-court-standing`,
+      probability: defaultPreset.length,
+    },
+  ],
   "volleyball-uniform": [
     ...defaultPreset,
     {
