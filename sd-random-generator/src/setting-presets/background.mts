@@ -124,6 +124,7 @@ export const backgroundsPreset = {
   ],
   "nun": [
     ...defaultPreset,
+    // TODO: church
     // { key: `onsen-standing`, probability: defaultPreset.length },
     // { key: `onsen-near-clean-floor`, probability: defaultPreset.length },
   ],
@@ -221,6 +222,7 @@ export const backgroundsPreset = {
     },
   ],
   "sundress": [
+    // TODO: sun-flower
     ...defaultPreset,
     {
       key: `sun-sky`,
