@@ -962,6 +962,7 @@ export const allOutfitVisibilities = {
   "gloves": preset["wrist cuffs"],
   "gym shirt": preset.shirt,
   "gym uniform": preset.dress,
+  "habit": preset.all,
   "hakama skirt": preset.skirt,
   "hakama": preset.shirt,
   "halterneck": preset.collar,
@@ -1019,6 +1020,7 @@ export const allOutfitVisibilities = {
   "nontraditional miko": preset.dress,
   "nontraditional wedding dress": preset.dress,
   "number print": preset.shirt, // Assume front and back of shirt.
+  "nun": preset.all,
   "o-ring bikini": preset.dress,
   "o-ring bottom": preset.panties,
   "o-ring top": preset.bowtie,

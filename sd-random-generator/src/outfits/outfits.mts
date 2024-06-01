@@ -19,6 +19,7 @@ import { haremOutfit } from "./common/harem-outfit.mjs";
 import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
 import { nakedTowel } from "./common/naked-towel.mjs";
+import { nun } from "./common/nun.mjs";
 import { oRingBikini } from "./common/o-ring-bikini.mjs";
 import { openChestSweater } from "./common/open-chest-sweater.mjs";
 import { playboyBunny } from "./common/playboy-bunny.mjs";
@@ -160,6 +161,7 @@ export const commonOutfitTable = {
   "maid-bikini": maidBikini(),
   "micro-bikini": microBikini(),
   "naked-towel": nakedTowel(),
+  "nun": nun(),
   "o-ring-bikini": oRingBikini(),
   "open-chest-sweater": openChestSweater(),
   "playboy-bunny": playboyBunny(),
