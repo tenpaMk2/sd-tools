@@ -175,6 +175,10 @@ export const commonOutfitTable = {
   "tennis-uniform": tennisUniform(),
   "volleyball-uniform": volleyballUniform(),
   "sundress": sundress(),
+  // TODO: competition swimsuit
+  // TODO: track uniform, track and field
+  // TODO: dirndl
+  // TODO: gun man
 } as const satisfies Record<string, OutfitDefine>;
 
 export const characterOutfitTable = {
