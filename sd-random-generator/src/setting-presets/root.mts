@@ -36,6 +36,10 @@ export const checkpointAndVAEPreset = {
       sd_model_checkpoint: `ebara_pony_1.bakedVAE.safetensors`,
       sd_vae: `None`,
     },
+    ebaraPony2: {
+      sd_model_checkpoint: `ebara_pony_2.safetensors`,
+      sd_vae: `None`,
+    },
     hamefkawaii: {
       sd_model_checkpoint: `hamefkawaiimix_typelight.safetensors`,
       sd_vae: `None`,
