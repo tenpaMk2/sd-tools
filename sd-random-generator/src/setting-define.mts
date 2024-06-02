@@ -15,6 +15,7 @@ export const allCheckpoints = [
   `ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
   `ponymagine91_gamma.safetensors`,
   `tPonynai3_v41OptimizedFromV4.safetensors`,
+  `tPonynai3_v51WeightOptimized.safetensors`,
   `vividorangemix_v10.safetensors`,
   `vividorangemix_v10NSFW.safetensors`,
 ] as const satisfies string[];
@@ -34,6 +35,7 @@ export const checkpointInfo = {
   "ponyDiffusionV6XL_v6StartWithThisOne.safetensors": { baseModel: `Pony` },
   "ponymagine91_gamma.safetensors": { baseModel: `Pony` }, // Also supports `Animagine` .
   "tPonynai3_v41OptimizedFromV4.safetensors": { baseModel: `Pony` },
+  "tPonynai3_v51WeightOptimized.safetensors": { baseModel: `Pony` },
   "vividorangemix_v10.safetensors": { baseModel: `SD1.5` },
   "vividorangemix_v10NSFW.safetensors": { baseModel: `SD1.5` },
 } as const satisfies Record<Checkpoint, { baseModel: BaseModel }>;

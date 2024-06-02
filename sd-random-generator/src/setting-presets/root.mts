@@ -53,7 +53,7 @@ export const checkpointAndVAEPreset = {
       sd_vae: `None`,
     },
     tponynai: {
-      sd_model_checkpoint: `tPonynai3_v41OptimizedFromV4.safetensors`,
+      sd_model_checkpoint: `tPonynai3_v51WeightOptimized.safetensors`,
       sd_vae: `None`,
     },
   },
