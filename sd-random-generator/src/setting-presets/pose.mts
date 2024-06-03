@@ -99,4 +99,5 @@ export const posesPreset = {
     { key: `standing-from-below-holding-tennis` },
     { key: `standing-from-horizontal-holding-tennis` },
   ],
+  "office": defaultPreset,
 } as const satisfies Record<PoseKey | `default` | BackgroundKey, PoseSetting[]>;

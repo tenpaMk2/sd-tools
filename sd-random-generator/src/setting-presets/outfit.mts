@@ -296,6 +296,13 @@ export const outfitsPreset = {
     },
   ],
   "mushoku-tensei-sylphiette-little-jelly": defaultPreset,
+  "new-game-aoba-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `new-game-suit-aoba`,
+      probability: defaultPreset.length,
+    },
+  ],
   "new-game-aoba-narugo1992": defaultPreset,
   "new-game-hifumi-narugo1992": defaultPreset,
   "non-non-biyori-hotaru-notekaga": defaultPreset,

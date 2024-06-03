@@ -1030,6 +1030,15 @@ export const allLoras = [
     outfitTriggerTags: [`tokishikko-default`, `tokishikko-inner`],
     creator: `Ibukimakisiko`,
   },
+  {
+    loraName: `aoba-suzukaze-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(`https://civitai.com/models/354199/aoba-suzukaze-new-game`),
+    characterTriggerWordsTags: [`aoba suzukaze`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

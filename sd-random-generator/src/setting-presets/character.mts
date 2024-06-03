@@ -38,6 +38,7 @@ const defaultKeys = [
   `lycoris-recoil-takina-nochekaiser`,
   `mahoako-matama-notekaga`,
   `mushoku-tensei-sylphiette-little-jelly`,
+  `new-game-aoba-nochekaiser`,
   `non-non-biyori-hotaru-notekaga`,
   `prisma-illya-illya`,
   `re-zero-emilia`,

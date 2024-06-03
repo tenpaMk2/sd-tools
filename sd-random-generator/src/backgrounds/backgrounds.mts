@@ -575,6 +575,19 @@ export const backgroundTable = {
     },
     "removeShoes": false,
   },
+  "office": {
+    "backgroundType": `standing`,
+    "from-above": {
+      entries: [`indoors`, `office`, `floor`],
+    },
+    "from-below": {
+      entries: [`indoors`, `office`, `ceiling`],
+    },
+    "from-horizontal": {
+      entries: [`indoors`, `office`, `window`, `blurry background`],
+    },
+    "removeShoes": false,
+  },
 } as const satisfies Record<string, BackgroundDefine>;
 
 export type BackgroundKey = keyof typeof backgroundTable;

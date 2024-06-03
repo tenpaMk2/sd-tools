@@ -50,6 +50,7 @@ import { konosubaMeguminDress } from "./konosuba/megumin-dress.mjs";
 import { konosubaYunyunShirt } from "./konosuba/yunyun-shirt.mjs";
 import { lycorisRecoilLycorisUniform } from "./lycoris-recoil/lycoris-uniform.mjs";
 import { mahoakoLocomusica } from "./mahoako/locomusica.mjs";
+import { newGameSuitAoba } from "./new-game/suit-aoba.mjs";
 import { prismaIllyaChloeBeast } from "./prisma-illya/chloe-beast.mjs";
 import { prismaIllyaIllyaBeast } from "./prisma-illya/illya-beast.mjs";
 import { prismaIllyaMagicalGirlIllya } from "./prisma-illya/magical-girl-illya.mjs";
@@ -180,6 +181,7 @@ export const commonOutfitTable = {
   // TODO: dirndl
   // TODO: gun man
   // TODO: naked apron
+  // TODO: naked shirt, dress shirt
 } as const satisfies Record<string, OutfitDefine>;
 
 export const characterOutfitTable = {
@@ -239,6 +241,7 @@ export const characterOutfitTable = {
   "lycoris-recoil-lycoris-uniform-takina":
     lycorisRecoilLycorisUniform(`takina`),
   "mahoako-notekaga-locomusica": mahoakoLocomusica(`notekaga`),
+  "new-game-suit-aoba": newGameSuitAoba(),
   "prisma-illya-chloe-beast": prismaIllyaChloeBeast(`am7coffeelove`),
   "prisma-illya-illya-beast": prismaIllyaIllyaBeast(`am7coffeelove`),
   "prisma-illya-magical-girl-illya": prismaIllyaMagicalGirlIllya(`flujoru`),
