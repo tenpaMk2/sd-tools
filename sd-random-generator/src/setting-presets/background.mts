@@ -597,6 +597,11 @@ export const backgroundsPreset = {
     { key: `city`, probability: defaultPreset.length },
     { key: `office`, probability: defaultPreset.length },
   ],
+  "new-game-shirt-hifumi": [
+    ...defaultPreset,
+    { key: `city`, probability: defaultPreset.length },
+    { key: `office`, probability: defaultPreset.length },
+  ],
   "mahoako-notekaga-locomusica": [
     ...defaultPreset,
     { key: `city`, probability: defaultPreset.length },

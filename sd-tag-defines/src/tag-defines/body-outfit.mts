@@ -726,6 +726,7 @@ export const allBodyOutfitTags = [
   `crop top`,
   `cropped jacket`,
   `cropped shirt`,
+  `cross tie`,
   `cross-laced footwear`,
   `crotch seam`,
   `cutoffs`,

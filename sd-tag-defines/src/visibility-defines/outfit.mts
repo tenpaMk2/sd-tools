@@ -928,6 +928,7 @@ export const allOutfitVisibilities = {
   "crop top": preset.shirt,
   "cropped jacket": preset.shirt,
   "cropped shirt": preset.shirt,
+  "cross tie": preset.bowtie,
   "cross-laced footwear": preset.foot,
   "crotch seam": preset.cameltoe,
   "cutoffs": preset.skirt,

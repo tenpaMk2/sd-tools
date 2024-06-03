@@ -50,6 +50,7 @@ import { konosubaMeguminDress } from "./konosuba/megumin-dress.mjs";
 import { konosubaYunyunShirt } from "./konosuba/yunyun-shirt.mjs";
 import { lycorisRecoilLycorisUniform } from "./lycoris-recoil/lycoris-uniform.mjs";
 import { mahoakoLocomusica } from "./mahoako/locomusica.mjs";
+import { newGameShirtHifumi } from "./new-game/shirt-hifumi.mjs";
 import { newGameSuitAoba } from "./new-game/suit-aoba.mjs";
 import { prismaIllyaChloeBeast } from "./prisma-illya/chloe-beast.mjs";
 import { prismaIllyaIllyaBeast } from "./prisma-illya/illya-beast.mjs";
@@ -242,6 +243,7 @@ export const characterOutfitTable = {
     lycorisRecoilLycorisUniform(`takina`),
   "mahoako-notekaga-locomusica": mahoakoLocomusica(`notekaga`),
   "new-game-suit-aoba": newGameSuitAoba(),
+  "new-game-shirt-hifumi": newGameShirtHifumi(),
   "prisma-illya-chloe-beast": prismaIllyaChloeBeast(`am7coffeelove`),
   "prisma-illya-illya-beast": prismaIllyaIllyaBeast(`am7coffeelove`),
   "prisma-illya-magical-girl-illya": prismaIllyaMagicalGirlIllya(`flujoru`),

@@ -62,6 +62,7 @@ import { madomagiYachiyoEft } from "./madomagi/madomagi-yachiyo-eft.mjs";
 import { mahoakoMatamaNotekaga } from "./mahoako/mahoako-matama-notekaga.mjs";
 import { mushokuTenseiSylphietteLittleJelly } from "./mushoku-tensei/mushoku-tensei-sylphiette-little-jelly.mjs";
 import { newGameAoba } from "./new-game/aoba.mjs";
+import { newGameHifumi } from "./new-game/hifumi.mjs";
 import { newGameAobaNarugo1992 } from "./new-game/new-game-aoba-narugo1992.mjs";
 import { newGameHifumiNarugo1992 } from "./new-game/new-game-hifumi-narugo1992.mjs";
 import { nonNonBiyoriHotaruNotekaga } from "./non-non-biyori/non-non-biyori-hotaru-notekaga.mjs";
@@ -209,6 +210,7 @@ export const characterTable = {
   "new-game-aoba-narugo1992": newGameAobaNarugo1992(),
   "new-game-aoba-nochekaiser": newGameAoba(`nochekaiser`),
   "new-game-hifumi-narugo1992": newGameHifumiNarugo1992(),
+  "new-game-hifumi-nochekaiser": newGameHifumi(`nochekaiser`),
   "non-non-biyori-hotaru-notekaga": nonNonBiyoriHotaruNotekaga(),
   "prisma-illya-chloe-beast-am7coffeelove":
     prismaIllyaChloeBeastAm7coffeelove(),

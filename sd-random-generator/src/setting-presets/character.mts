@@ -39,6 +39,7 @@ const defaultKeys = [
   `mahoako-matama-notekaga`,
   `mushoku-tensei-sylphiette-little-jelly`,
   `new-game-aoba-nochekaiser`,
+  `new-game-hifumi-nochekaiser`,
   `non-non-biyori-hotaru-notekaga`,
   `prisma-illya-illya`,
   `re-zero-emilia`,

@@ -300,11 +300,18 @@ export const outfitsPreset = {
     ...defaultPreset,
     {
       key: `new-game-suit-aoba`,
-      probability: defaultPreset.length,
+      probability: defaultPreset.length / 2,
     },
   ],
   "new-game-aoba-narugo1992": defaultPreset,
   "new-game-hifumi-narugo1992": defaultPreset,
+  "new-game-hifumi-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `new-game-shirt-hifumi`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "non-non-biyori-hotaru-notekaga": defaultPreset,
   "prisma-illya-chloe-beast-am7coffeelove": [
     ...defaultPreset,

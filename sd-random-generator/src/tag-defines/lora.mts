@@ -1039,6 +1039,15 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  {
+    loraName: `hifumi-takimoto-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(`https://civitai.com/models/354005/hifumi-takimoto-new-game`),
+    characterTriggerWordsTags: [`hifumi takemoto`], // Typo by nochekaiser
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
