@@ -306,6 +306,21 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "higehiro-school-uniform-sayu": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "is-pilot-suit-cecilia": [
     ...defaultPreset,
     {

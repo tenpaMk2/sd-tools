@@ -26,6 +26,7 @@ import { dumbbellHibikiWiz } from "./dumbbell/dumbbell-hibiki-wiz.mjs";
 import { dumbbellSatomiWiz } from "./dumbbell/dumbbell-satomi-wiz.mjs";
 import { fateRinLittleJelly } from "./fate/fate-rin-little-jelly.mjs";
 import { futokuNoGuildTokishikko } from "./futoku-no-guild/tokishikko.mjs";
+import { higehiroSayu } from "./higehiro/sayu.mjs";
 import { isCeciliaNochekaiser } from "./is/is-cecilia-nochekaiser.mjs";
 import { isCeciliaOgTurles } from "./is/is-cecilia-og-turles.mjs";
 import { isCharlotteNochekaiser } from "./is/is-charlotte-nochekaiser.mjs";
@@ -170,6 +171,7 @@ export const characterTable = {
   "dumbbell-satomi-wiz": dumbbellSatomiWiz(),
   "fate-rin-little-jelly": fateRinLittleJelly(),
   "futoku-no-guild-tokishikko": futokuNoGuildTokishikko(`ibukimakisiko`),
+  "higehiro-sayu": higehiroSayu(`nochekaiser`),
   "is-cecilia-nochekaiser": isCeciliaNochekaiser(),
   "is-charlotte-nochekaiser": isCharlotteNochekaiser(),
   "is-chifuyu-nochekaiser": isChifuyuNochekaiser(),

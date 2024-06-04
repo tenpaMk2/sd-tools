@@ -68,6 +68,7 @@ export const allCharacterNameTags = [
   `nanami yachiyo`,
   `natsu megumi`,
   `nishikigi chisato`,
+  `ogiwara sayu`,
   `orimura chifuyu`,
   `philuffy aingram`,
   `ram \\(re:zero\\)`,

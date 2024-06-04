@@ -97,6 +97,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "higehiro-sayu": [
+    ...defaultPreset,
+    {
+      key: `higehiro-school-uniform-sayu`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "is-cecilia-nochekaiser": [
     ...defaultPreset,
     {

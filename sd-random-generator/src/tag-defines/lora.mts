@@ -1070,6 +1070,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  {
+    loraName: `sayu-ogiwara-s1-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/398568/sayu-ogiwara-higehiro-after-being-rejected-i-shaved-and-took-in-a-high-school-runaway`,
+    ),
+    characterTriggerWordsTags: [`sayu ogiwara`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
