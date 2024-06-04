@@ -11,6 +11,7 @@ const monoCharacterPresetsMap = Object.fromEntries(
 
 const defaultKeys = [
   // `amaburi-isuzu-h-madoka`,
+  `amaburi-isuzu-nochekaiser`,
   `blend-s-kaho-ibukimakisiko-double-bun`, // TODO: Support probability.
   `blend-s-kaho-ibukimakisiko`,
   `danmachi-hestia`,

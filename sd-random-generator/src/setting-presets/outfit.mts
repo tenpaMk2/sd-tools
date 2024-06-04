@@ -45,6 +45,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "amaburi-isuzu-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `amaburi-uniform-isuzu`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "amaburi-isuzu": defaultPreset,
   "blend-s-kaho-ibukimakisiko-double-bun": [
     {

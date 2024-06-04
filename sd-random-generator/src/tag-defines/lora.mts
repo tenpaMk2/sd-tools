@@ -1059,6 +1059,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `h_madoka`,
   },
+  {
+    loraName: `isuzu-sento-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/367371/isuzu-sento-amagi-brilliant-park`,
+    ),
+    characterTriggerWordsTags: [`isuzu sento`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

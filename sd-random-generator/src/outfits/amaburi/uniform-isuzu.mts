@@ -7,11 +7,14 @@ export const amaburiUniformIsuzu = () =>
     loraOutfitTriggerWordEntries: [],
     outfitEntries: [
       `uniform`,
+      `military`,
+      `military uniform`,
       `aiguillette`,
       `bowtie`,
       `white bowtie`,
       `jacket`,
       `red jacket`,
+      `buttons`,
       `long sleeves`,
       `skirt`,
       `black skirt`,
@@ -22,6 +25,10 @@ export const amaburiUniformIsuzu = () =>
       `white thighhighs`,
       `thighs skindentation`,
       `boots`,
+      `brown footwear`,
+      `ankle boots`,
+      `lace-up boots`,
+      `cross-laced footwear`,
     ],
     specialVisibility: {
       armpits: false,
@@ -37,7 +44,13 @@ export const amaburiUniformIsuzu = () =>
     liftType: `skirt`,
     upskirtEntries: upskirtPreset.colorfulPanties,
     whenRemoveShoes: {
-      excludeTags: [`boots`],
+      excludeTags: [
+        `boots`,
+        `brown footwear`,
+        `ankle boots`,
+        `lace-up boots`,
+        `cross-laced footwear`,
+      ],
       additionalFootEntriesAfterRemoving: [`no shoes`],
     },
   }) as const satisfies OutfitDefine;

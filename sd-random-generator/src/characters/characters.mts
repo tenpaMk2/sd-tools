@@ -146,8 +146,9 @@ export type CharacterDefine = Readonly<{
 // TODO: stomach tattoo. Idea: hook `navel` tag.
 
 export const characterTable = {
-  "amaburi-isuzu-little-jelly": amaburiIsuzuLittleJelly(),
   "amaburi-isuzu-h-madoka": amaburiIsuzu(`h_madoka`),
+  "amaburi-isuzu-little-jelly": amaburiIsuzuLittleJelly(),
+  "amaburi-isuzu-nochekaiser": amaburiIsuzu(`nochekaiser`),
   "amaburi-isuzu": amaburiIsuzu(`no-lora`),
   "blend-s-kaho-ibukimakisiko-double-bun": blendSKaho(
     `ibukimakisiko-double-bun`,
