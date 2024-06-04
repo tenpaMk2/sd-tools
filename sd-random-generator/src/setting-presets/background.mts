@@ -233,6 +233,17 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "amaburi-uniform-isuzu": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "blend-s-school-uniform-kaho": [
     ...defaultPreset,
     {

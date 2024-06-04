@@ -1,10 +1,20 @@
 import { CharacterDefine } from "../characters.mjs";
 import { emotionPreset } from "../emotion-preset.mjs";
 
-export const amaburiIsuzu = () =>
+type Variation = `no-lora` | `h_madoka`;
+
+export const amaburiIsuzu = (variation: Variation) =>
   ({
-    lora: null,
-    loraCharacterTriggerWordEntries: [],
+    lora:
+      variation === `h_madoka`
+        ? {
+            tag: `sento_isuzu_xl_pony_v1`,
+            probabilityAndWeights: [{ probability: 1, weight: 0.9 }],
+          }
+        : null,
+    loraCharacterTriggerWordEntries: [
+      ...(variation === `h_madoka` ? ([`aaisuzu`] as const) : []),
+    ],
     seriesNameEntries: [`amagi brilliant park`],
     characterNameEntries: [`sento isuzu`],
     characterFeatureEntries: [

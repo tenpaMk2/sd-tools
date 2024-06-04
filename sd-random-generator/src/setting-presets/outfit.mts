@@ -38,6 +38,13 @@ export const outfitsPreset = {
   })),
 
   "amaburi-isuzu-little-jelly": defaultPreset,
+  "amaburi-isuzu-h-madoka": [
+    ...defaultPreset,
+    {
+      key: `amaburi-uniform-isuzu`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "amaburi-isuzu": defaultPreset,
   "blend-s-kaho-ibukimakisiko-double-bun": [
     {

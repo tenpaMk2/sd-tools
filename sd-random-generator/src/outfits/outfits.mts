@@ -1,6 +1,7 @@
 import { LoraEntry, NormalEntry } from "../prompt-define.mjs";
 import { OutfitTag } from "../tag-defines/adapter.mjs";
 import { LoraOutfitTriggerWordsTag } from "../tag-defines/lora.mjs";
+import { amaburiUniformIsuzu } from "./amaburi/uniform-isuzu.mjs";
 import { blendSSchoolUniform } from "./blend-s/school-uniform.mjs";
 import { blendSSwimsuit } from "./blend-s/swimsuit.mjs";
 import { blendSWaitress } from "./blend-s/waitress.mjs";
@@ -186,6 +187,7 @@ export const commonOutfitTable = {
 } as const satisfies Record<string, OutfitDefine>;
 
 export const characterOutfitTable = {
+  "amaburi-uniform-isuzu": amaburiUniformIsuzu(),
   "blend-s-school-uniform-kaho": blendSSchoolUniform(`kaho`),
   "blend-s-swimsuit-kaho": blendSSwimsuit(`kaho`),
   "blend-s-waitress-kaho": blendSWaitress(`kaho`),

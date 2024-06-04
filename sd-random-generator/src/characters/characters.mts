@@ -147,7 +147,8 @@ export type CharacterDefine = Readonly<{
 
 export const characterTable = {
   "amaburi-isuzu-little-jelly": amaburiIsuzuLittleJelly(),
-  "amaburi-isuzu": amaburiIsuzu(),
+  "amaburi-isuzu-h-madoka": amaburiIsuzu(`h_madoka`),
+  "amaburi-isuzu": amaburiIsuzu(`no-lora`),
   "blend-s-kaho-ibukimakisiko-double-bun": blendSKaho(
     `ibukimakisiko-double-bun`,
   ),
