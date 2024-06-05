@@ -1081,6 +1081,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  {
+    loraName: `Izumi Noel`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/416294/izumi-noel-from-studio-apartment-good-lighting-angel-included`,
+    ),
+    characterTriggerWordsTags: [`sayu ogiwara`],
+    outfitTriggerTags: [],
+    creator: `ZedoTasco`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

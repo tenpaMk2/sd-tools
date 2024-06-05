@@ -465,6 +465,10 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "tenshi-tsuki-noel": [
+    ...defaultPreset,
+    // TODO: other outfits
+  ],
   "to-love-ru-haruna-eft": defaultPreset,
   "to-love-ru-lala-eft": defaultPreset,
   "to-love-ru-mea-eft": defaultPreset,

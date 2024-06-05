@@ -51,6 +51,7 @@ const defaultKeys = [
   `sasuoni-shiba-honoka-nochekaiser`,
   `sasuoni-shiba-mizuki-nochekaiser`,
   `tenshi-sama-mahiru`,
+  `tenshi-tsuki-noel`,
   `to-love-ru-momo-lancelot`,
   `working-popura`,
 ] as const satisfies CharacterSetting["keys"];

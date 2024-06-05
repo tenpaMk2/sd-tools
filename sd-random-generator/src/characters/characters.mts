@@ -94,6 +94,7 @@ import { sasuoniMiyuki } from "./sasuoni/sasuoni-miyuki.mjs";
 import { sasuoniMizuki } from "./sasuoni/sasuoni-mizuki.mjs";
 import { sasuoniShizuku } from "./sasuoni/sasuoni-shizuku.mjs";
 import { tenshiSamaMahiru } from "./tenshi-sama/tenshi-sama-mahiru.mjs";
+import { tenshiTsukiNoel } from "./tenshi-tsuki/noel.mjs";
 import { toLoveRuHarunaEft } from "./to-love-ru/to-love-ru-haruna-eft.mjs";
 import { toLoveRuLalaEft } from "./to-love-ru/to-love-ru-lala-eft.mjs";
 import { toLoveRuMeaEft } from "./to-love-ru/to-love-ru-mea-eft.mjs";
@@ -245,6 +246,7 @@ export const characterTable = {
   "sasuoni-saegusa-mayumi-eft": sasuoniMayumiEft(),
   "sasuoni-mitsui-honoka-eft": sasuoniHonokaEft(),
   "tenshi-sama-mahiru": tenshiSamaMahiru(`jibunsagasinotabi`),
+  "tenshi-tsuki-noel": tenshiTsukiNoel(`zedotasco`),
   "to-love-ru-haruna-eft": toLoveRuHarunaEft(),
   "to-love-ru-lala-eft": toLoveRuLalaEft(),
   "to-love-ru-mea-eft": toLoveRuMeaEft(),
