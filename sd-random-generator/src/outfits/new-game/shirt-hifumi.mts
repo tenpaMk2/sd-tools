@@ -12,6 +12,7 @@ export const newGameShirtHifumi = () =>
       `long sleeves`,
       `skirt`,
       `red skirt`,
+      `miniskirt`,
       `thighhighs`,
       `black thighhighs`,
       `thighs skindentation`,

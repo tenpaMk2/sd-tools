@@ -317,6 +317,13 @@ export const outfitsPreset = {
     },
   ],
   "mushoku-tensei-sylphiette-little-jelly": defaultPreset,
+  "new-game-aoba-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `new-game-suit-aoba`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "new-game-aoba-nochekaiser": [
     ...defaultPreset,
     {
@@ -325,6 +332,14 @@ export const outfitsPreset = {
     },
   ],
   "new-game-aoba-narugo1992": defaultPreset,
+  "new-game-hajime-eternal2kpp": [...defaultPreset],
+  "new-game-hifumi-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `new-game-shirt-hifumi`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "new-game-hifumi-narugo1992": defaultPreset,
   "new-game-hifumi-nochekaiser": [
     ...defaultPreset,
@@ -333,6 +348,10 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "new-game-kou-eternal2kpp": [...defaultPreset],
+  "new-game-nene-eternal2kpp": [...defaultPreset],
+  "new-game-rin-eternal2kpp": [...defaultPreset],
+  "new-game-yun-eternal2kpp": [...defaultPreset],
   "non-non-biyori-hotaru-notekaga": defaultPreset,
   "prisma-illya-chloe-beast-am7coffeelove": [
     ...defaultPreset,

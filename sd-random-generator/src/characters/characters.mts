@@ -63,9 +63,14 @@ import { madomagiYachiyoEft } from "./madomagi/madomagi-yachiyo-eft.mjs";
 import { mahoakoMatamaNotekaga } from "./mahoako/mahoako-matama-notekaga.mjs";
 import { mushokuTenseiSylphietteLittleJelly } from "./mushoku-tensei/mushoku-tensei-sylphiette-little-jelly.mjs";
 import { newGameAoba } from "./new-game/aoba.mjs";
+import { newGameHajime } from "./new-game/hajime.mjs";
 import { newGameHifumi } from "./new-game/hifumi.mjs";
+import { newGameKou } from "./new-game/kou.mjs";
+import { newGameNene } from "./new-game/nene.mjs";
 import { newGameAobaNarugo1992 } from "./new-game/new-game-aoba-narugo1992.mjs";
 import { newGameHifumiNarugo1992 } from "./new-game/new-game-hifumi-narugo1992.mjs";
+import { newGameRin } from "./new-game/rin.mjs";
+import { newGameYun } from "./new-game/yun.mjs";
 import { nonNonBiyoriHotaruNotekaga } from "./non-non-biyori/non-non-biyori-hotaru-notekaga.mjs";
 import { prismaIllyaChloeBeastAm7coffeelove } from "./prisma-illya/prisma-illya-chloe-beast-am7coffeelove.mjs";
 import { prismaIllyaIllyaBeastAm7coffeelove } from "./prisma-illya/prisma-illya-illya-beast-am7coffeelove.mjs";
@@ -212,10 +217,17 @@ export const characterTable = {
   "mahoako-matama-notekaga": mahoakoMatamaNotekaga(),
   "mushoku-tensei-sylphiette-little-jelly":
     mushokuTenseiSylphietteLittleJelly(),
+  "new-game-aoba-eternal2kpp": newGameAoba(`eternal2kpp`),
   "new-game-aoba-narugo1992": newGameAobaNarugo1992(),
   "new-game-aoba-nochekaiser": newGameAoba(`nochekaiser`),
+  "new-game-hajime-eternal2kpp": newGameHajime(`eternal2kpp`),
+  "new-game-hifumi-eternal2kpp": newGameHifumi(`eternal2kpp`),
   "new-game-hifumi-narugo1992": newGameHifumiNarugo1992(),
   "new-game-hifumi-nochekaiser": newGameHifumi(`nochekaiser`),
+  "new-game-kou-eternal2kpp": newGameKou(`eternal2kpp`),
+  "new-game-nene-eternal2kpp": newGameNene(`eternal2kpp`),
+  "new-game-rin-eternal2kpp": newGameRin(`eternal2kpp`),
+  "new-game-yun-eternal2kpp": newGameYun(`eternal2kpp`),
   "non-non-biyori-hotaru-notekaga": nonNonBiyoriHotaruNotekaga(),
   "prisma-illya-chloe-beast-am7coffeelove":
     prismaIllyaChloeBeastAm7coffeelove(),

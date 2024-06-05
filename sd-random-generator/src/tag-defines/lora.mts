@@ -1092,6 +1092,83 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `ZedoTasco`,
   },
+  {
+    loraName: `Aoba_Suzukaze`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/494354/new-game-or-aoba-suzukaze-pdxl?modelVersionId=549604`,
+    ),
+    characterTriggerWordsTags: [`Aoba Suzukaze`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Hifumi_Takimoto`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/494374/new-game-or-hifumi-takimoto-pdxl?modelVersionId=549625`,
+    ),
+    characterTriggerWordsTags: [`Hifumi Takimoto`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Hajime_Shinoda`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/494389/new-game-or-hajime-shinoda-pdxl?modelVersionId=549641`,
+    ),
+    characterTriggerWordsTags: [`Hajime Shinoda`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Yun_Iijima`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/494687/new-game-or-yun-iijima-pdxl?modelVersionId=549975`,
+    ),
+    characterTriggerWordsTags: [`Yun Iijima`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Kou_Yagami`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/494513/new-game-or-kou-yagami-pdxl?modelVersionId=549780`,
+    ),
+    characterTriggerWordsTags: [`Kou Yagami`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Rin_Tooyama`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/494498/new-game-or-rin-tooyama-pdxl?modelVersionId=549764`,
+    ),
+    characterTriggerWordsTags: [`Rin Tooyama`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Nene_Sakura`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/494552/new-game-or-nene-sakura-pdxl?modelVersionId=549820`,
+    ),
+    characterTriggerWordsTags: [`Nene Sakura`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
