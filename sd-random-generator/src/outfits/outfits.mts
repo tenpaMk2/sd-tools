@@ -28,6 +28,7 @@ import { raceQueen } from "./common/race-queen.mjs";
 import { revealingMiko } from "./common/revealing-miko.mjs";
 import { santaBikini } from "./common/santa-bikini.mjs";
 import { schoolUniformBowtie } from "./common/school-uniform-bowtie.mjs";
+import { sportsBikini } from "./common/sports-bikini.mjs";
 import { sukumizuThighhighs } from "./common/sukumizu-thighhighs.mjs";
 import { sukumizu } from "./common/sukumizu.mjs";
 import { sundress } from "./common/sundress.mjs";
@@ -173,6 +174,7 @@ export const commonOutfitTable = {
   "race-queen": raceQueen(),
   "santa-bikini": santaBikini(),
   "school-uniform-bowtie": schoolUniformBowtie(),
+  "sports-bikini": sportsBikini(),
   "sukumizu-thighhighs": sukumizuThighhighs(),
   "sukumizu": sukumizu(),
   "tank-top-dolphin-shorts": tankTopDolphinShorts(),

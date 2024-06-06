@@ -944,5 +944,12 @@ export const allBodyOutfitTags = [
   `white towel`,
   `wide sleeves`,
   `wrist cuffs`,
+  `sports bikini`,
+  `sports bra`,
+  `blue sports bra`,
+  `red sports bra`,
+  `yellow sports bra`,
+  `orange sports bra`,
+  `white sports bra`, // TODO: sort
 ] as const satisfies readonly string[];
 export type BodyOutfitTag = (typeof allBodyOutfitTags)[number];

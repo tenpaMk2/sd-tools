@@ -172,6 +172,13 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "sports-bikini": [
+    ...defaultPreset,
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length,
+    },
+  ],
   "sukumizu-thighhighs": defaultPreset,
   "sukumizu": [
     ...defaultPreset,

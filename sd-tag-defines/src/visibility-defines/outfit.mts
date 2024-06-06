@@ -1146,6 +1146,13 @@ export const allOutfitVisibilities = {
   "white towel": preset.dress,
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],
+  "sports bikini": preset.dress,
+  "sports bra": preset.bra,
+  "blue sports bra": preset.bra,
+  "red sports bra": preset.bra,
+  "yellow sports bra": preset.bra,
+  "orange sports bra": preset.bra,
+  "white sports bra": preset.bra,
 } as const satisfies {
   [key in BodyOutfitTag]: Visibility;
 };
