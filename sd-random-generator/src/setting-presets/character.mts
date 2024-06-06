@@ -14,7 +14,13 @@ const defaultKeys = [
   `amaburi-isuzu-nochekaiser`,
   `blend-s-kaho-ibukimakisiko-double-bun`, // TODO: Support probability.
   `blend-s-kaho-ibukimakisiko`,
+  `danmachi-aiz-eternal2kpp`,
+  `danmachi-eina-eternal2kpp`,
+  `danmachi-haruhime-eternal2kpp`,
+  `danmachi-hestia-eternal2kpp`,
   `danmachi-hestia`,
+  `danmachi-lili-eternal2kpp`,
+  `danmachi-ryu-eternal2kpp`,
   `fate-rin-little-jelly`,
   `futoku-no-guild-tokishikko`,
   `higehiro-sayu`,

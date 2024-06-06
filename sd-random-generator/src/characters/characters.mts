@@ -11,14 +11,19 @@ import { amaburiIsuzuLittleJelly } from "./amaburi/amaburi-isuzu-little-jelly.mj
 import { amaburiIsuzu } from "./amaburi/amaburi-isuzu.mjs";
 import { blendSKaho } from "./blend-s/blend-s-kaho.mjs";
 import { blendSMafuyu } from "./blend-s/blend-s-mafuyu.mjs";
+import { danmachiAiz } from "./danmachi/aiz.mjs";
 import { danmachiAizEft } from "./danmachi/danmachi-aiz-eft.mjs";
 import { danmachiEinaEft } from "./danmachi/danmachi-eina-eft.mjs";
 import { danmachiHaruhimeEft } from "./danmachi/danmachi-haruhime-eft.mjs";
 import { danmachiHestiaEft } from "./danmachi/danmachi-hestia-eft.mjs";
 import { danmachiHestiaNochekaiser } from "./danmachi/danmachi-hestia-nochekaiser.mjs";
-import { danmachiHestia } from "./danmachi/danmachi-hestia.mjs";
 import { danmachiLiliEft } from "./danmachi/danmachi-lili-eft.mjs";
 import { danmachiRyuEft } from "./danmachi/danmachi-ryu-eft.mjs";
+import { danmachiEina } from "./danmachi/eina.mjs";
+import { danmachiHaruhime } from "./danmachi/haruhime.mjs";
+import { danmachiHestia } from "./danmachi/hestia.mjs";
+import { danmachiLili } from "./danmachi/lili.mjs";
+import { danmachiRyu } from "./danmachi/ryu.mjs";
 import { dumbbellAkemiWiz } from "./dumbbell/dumbbell-akemi-wiz.mjs";
 import { dumbbellAyakaWiz } from "./dumbbell/dumbbell-ayaka-wiz.mjs";
 import { dumbbellGinaWiz } from "./dumbbell/dumbbell-gina-wiz.mjs";
@@ -163,13 +168,19 @@ export const characterTable = {
   "blend-s-kaho-ibukimakisiko": blendSKaho(`ibukimakisiko`),
   "blend-s-mafuyu-ibukimakisiko": blendSMafuyu(`ibukimakisiko`),
   "danmachi-aiz-eft": danmachiAizEft(),
+  "danmachi-aiz-eternal2kpp": danmachiAiz(`eternal2kpp`),
   "danmachi-eina-eft": danmachiEinaEft(),
+  "danmachi-eina-eternal2kpp": danmachiEina(`eternal2kpp`),
   "danmachi-haruhime-eft": danmachiHaruhimeEft(),
+  "danmachi-haruhime-eternal2kpp": danmachiHaruhime(`eternal2kpp`),
   "danmachi-hestia-eft": danmachiHestiaEft(),
+  "danmachi-hestia-eternal2kpp": danmachiHestia(`eternal2kpp`),
   "danmachi-hestia-nochekaiser": danmachiHestiaNochekaiser(),
-  "danmachi-hestia": danmachiHestia(),
+  "danmachi-hestia": danmachiHestia(`no-lora`),
   "danmachi-lili-eft": danmachiLiliEft(),
+  "danmachi-lili-eternal2kpp": danmachiLili(`eternal2kpp`),
   "danmachi-ryu-eft": danmachiRyuEft(),
+  "danmachi-ryu-eternal2kpp": danmachiRyu(`eternal2kpp`),
   "dumbbell-akemi-wiz": dumbbellAkemiWiz(),
   "dumbbell-ayaka-wiz": dumbbellAyakaWiz(),
   "dumbbell-gina-wiz": dumbbellGinaWiz(),

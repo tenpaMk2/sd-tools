@@ -1,25 +1,32 @@
 import { CharacterDefine } from "../characters.mjs";
 import { emotionPreset } from "../emotion-preset.mjs";
 
-export const danmachiHestia = () =>
+type Variation = `eternal2kpp`;
+
+export const danmachiEina = (variation: Variation) =>
   ({
-    lora: null,
+    lora: {
+      tag: `Eina_Tulle`,
+      probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
+    },
     loraCharacterTriggerWordEntries: [],
     seriesNameEntries: [
       `dungeon ni deai wo motomeru no wa machigatteiru darou ka`,
     ],
-    characterNameEntries: [`hestia \\(danmachi\\)`],
+    characterNameEntries: [`eina tulle`],
     characterFeatureEntries: [
-      `blue eyes`,
-      `black hair`,
-      `long hair`,
-      `twintails`,
+      `green eyes`,
+      `tareme`,
+      `glasses`,
+      `rimless eyewear`,
+      `brown hair`,
+      `short hair`,
+      `bob cut`,
       `blunt bangs`,
+      `blunt ends`,
       `sidelocks`,
-      `ahoge`,
-      `hair bow`,
-      `white hair bow`,
-      `thick thighs`,
+      `pointy ears`,
+      `elf`,
     ],
     breastSize: `large breasts`,
     fang: false,

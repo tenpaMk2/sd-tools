@@ -1169,6 +1169,72 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
   },
+  {
+    loraName: `Hestia`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/498816/danmachi-or-hestia-pdxl?modelVersionId=554481`,
+    ),
+    characterTriggerWordsTags: [`Hestia`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Liliruca_Arde`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/498803/danmachi-or-liliruca-arde-pdxl?modelVersionId=554466`,
+    ),
+    characterTriggerWordsTags: [],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Ryuu_Lion`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/498752/danmachi-or-ryuu-lion-pdxl?modelVersionId=554414`,
+    ),
+    characterTriggerWordsTags: [`Ryuu Lion`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Ais_Wallenstein`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/498903/danmachi-or-ais-wallenstein-pdxl?modelVersionId=554574`,
+    ),
+    characterTriggerWordsTags: [`Ais Wallenstein`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Eina_Tulle`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/498849/danmachi-or-eina-tulle-pdxl?modelVersionId=554519`,
+    ),
+    characterTriggerWordsTags: [`Ais Wallenstein`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Haruhime_Sanjouno`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/498837/danmachi-or-haruhime-sanjouno-pdxl?modelVersionId=554505`,
+    ),
+    characterTriggerWordsTags: [`Haruhime Sanjouno`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
