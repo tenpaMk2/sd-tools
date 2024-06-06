@@ -6,6 +6,7 @@ import { PoseKey } from "./poses/poses.mjs";
 export const allCheckpoints = [
   `7thAnimeXLPonyA_v10.safetensors`,
   `autismmixSDXL_autismmixConfetti.safetensors`,
+  `autismmixSDXL_autismmixDPO.safetensors`,
   `calicomix_v75.safetensors`,
   `calicomixFlatani_v10.safetensors`,
   `chacolebaramixxl_v21.safetensors`,
@@ -27,6 +28,7 @@ export type BaseModel = `SD1.5` | `Pony` | `Animagine`;
 export const checkpointInfo = {
   "7thAnimeXLPonyA_v10.safetensors": { baseModel: `Pony` },
   "autismmixSDXL_autismmixConfetti.safetensors": { baseModel: `Pony` },
+  "autismmixSDXL_autismmixDPO.safetensors": { baseModel: `Pony` },
   "calicomix_v75.safetensors": { baseModel: `SD1.5` },
   "calicomixFlatani_v10.safetensors": { baseModel: `SD1.5` },
   "chacolebaramixxl_v21.safetensors": { baseModel: `Pony` },
