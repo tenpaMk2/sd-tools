@@ -395,10 +395,13 @@ export const outfitsPreset = {
     },
   ],
   "re-zero-emilia-eft": defaultPreset,
+  "re-zero-emilia-eternal2kpp": defaultPreset,
   "re-zero-emilia": defaultPreset,
   "re-zero-ram-eft": defaultPreset,
+  "re-zero-ram-eternal2kpp": defaultPreset,
   "re-zero-ram": defaultPreset,
   "re-zero-rem-eft": defaultPreset,
+  "re-zero-rem-eternal2kpp": defaultPreset,
   "re-zero-rem": defaultPreset,
   "rokudenashi-rumia": [
     ...defaultPreset,

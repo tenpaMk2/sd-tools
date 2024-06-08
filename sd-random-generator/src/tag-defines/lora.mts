@@ -1235,6 +1235,35 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
   },
+  {
+    loraName: `Rem`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/80978/rezero-characters-pack-or-sd-15-pdxl?modelVersionId=538783`,
+    ),
+    characterTriggerWordsTags: [`Rem`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Ram`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(`https://civitai.com/models/80978?modelVersionId=548306`),
+    characterTriggerWordsTags: [`Ram`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Emilia`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(`https://civitai.com/models/80978?modelVersionId=538640`),
+    characterTriggerWordsTags: [`Emilia`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
