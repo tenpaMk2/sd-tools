@@ -3,26 +3,6 @@ import { CharacterKey } from "./characters/characters.mjs";
 import { OutfitKey } from "./outfits/outfits.mjs";
 import { PoseKey } from "./poses/poses.mjs";
 
-export const allCheckpoints = [
-  `7thAnimeXLPonyA_v10.safetensors`,
-  `autismmixSDXL_autismmixConfetti.safetensors`,
-  `autismmixSDXL_autismmixDPO.safetensors`,
-  `calicomix_v75.safetensors`,
-  `calicomixFlatani_v10.safetensors`,
-  `chacolebaramixxl_v21.safetensors`,
-  `ebara_pony_1.bakedVAE.safetensors`,
-  `ebara_pony_2.1.safetensors`,
-  `hamefkawaiimix_typelight.safetensors`,
-  `momoiropony_v14.safetensors`,
-  `ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
-  `ponymagine91_gamma.safetensors`,
-  `tPonynai3_v41OptimizedFromV4.safetensors`,
-  `tPonynai3_v51WeightOptimized.safetensors`,
-  `vividorangemix_v10.safetensors`,
-  `vividorangemix_v10NSFW.safetensors`,
-] as const satisfies string[];
-export type Checkpoint = (typeof allCheckpoints)[number];
-
 export type BaseModel = `SD1.5` | `Pony` | `Animagine`;
 
 export const checkpointInfo = {
@@ -42,7 +22,9 @@ export const checkpointInfo = {
   "tPonynai3_v51WeightOptimized.safetensors": { baseModel: `Pony` },
   "vividorangemix_v10.safetensors": { baseModel: `SD1.5` },
   "vividorangemix_v10NSFW.safetensors": { baseModel: `SD1.5` },
-} as const satisfies Record<Checkpoint, { baseModel: BaseModel }>;
+} as const satisfies Record<string, { baseModel: BaseModel }>;
+
+export type Checkpoint = keyof typeof checkpointInfo;
 
 const allVAEs = [
   `None`,
