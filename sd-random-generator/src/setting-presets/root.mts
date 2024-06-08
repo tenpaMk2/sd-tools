@@ -41,7 +41,7 @@ export const checkpointAndVAEPreset = {
       sd_vae: `None`,
     },
     ebaraPony2: {
-      sd_model_checkpoint: `ebara_pony_2.safetensors`,
+      sd_model_checkpoint: `ebara_pony_2.1.safetensors`,
       sd_vae: `None`,
     },
     hamefkawaii: {
