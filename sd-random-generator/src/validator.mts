@@ -1,4 +1,5 @@
 import { characterTable } from "./characters/characters.mjs";
+import { log } from "./logger.mjs";
 import {
   BaseModel,
   CharacterSetting,
@@ -40,6 +41,8 @@ const validateCharacter = (
 };
 
 export const validateSetting = (setting: Setting): void => {
+  log(`Validating...`);
+
   for (const optionSetting of setting.optionSettings) {
     const baseModel =
       checkpointInfo[optionSetting.optionsBodyJson.sd_model_checkpoint]

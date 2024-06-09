@@ -1,14 +1,14 @@
 import { collect } from "./collector.mjs";
 import { generate } from "./image-generator.mjs";
+import { log } from "./logger.mjs";
 import { setting } from "./setting.mjs";
 import { Txt2imgGenerator } from "./txt2img-generator.mjs";
 import { validateSetting } from "./validator.mjs";
 
-// TODO: logging library
-
 const main = async () => {
   validateSetting(setting);
 
+  log(`Collecting...`);
   const collectedData = collect(setting);
   const generationData = {
     ...collectedData,

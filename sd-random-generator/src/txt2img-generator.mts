@@ -36,6 +36,7 @@ import {
   LoraOutfitTriggerWordsTag,
 } from "./tag-defines/lora.mjs";
 
+// TODO: bug: `Rem` LoraとTriggerWordsの `Rem` が重複してると削除される。
 const setHeavyWeightOne = <T extends Tag | LoraNameTag>(
   m: Map<T, Token<T>>,
   token: Token<T>,
@@ -318,6 +319,12 @@ const buildCore = ({
 };
 
 export type Txt2ImgBodyJson = Txt2ImgSetting["txt2imgBodyJson"] & {
+  _key: {
+    character: string;
+    outfit: string;
+    background: string;
+    pose: string;
+  };
   prompt: string;
 };
 
@@ -349,6 +356,13 @@ export class Txt2imgGenerator {
     const backgroundData = this.randomPick(outfitData.backgrounds);
     const poseData = this.randomPick(backgroundData.poses);
 
+    const _key = {
+      character: characterData.key,
+      outfit: outfitData.key,
+      background: backgroundData.key,
+      pose: poseData.key,
+    };
+
     const tokens = buildCore({
       characterData,
       outfitData,
@@ -358,6 +372,6 @@ export class Txt2imgGenerator {
 
     const prompt = `${txt2imgData.fixedPrompt}${tokens.join(`, `)}`;
 
-    return { prompt, ...txt2imgData.txt2imgBodyJson };
+    return { _key, prompt, ...txt2imgData.txt2imgBodyJson };
   }
 }

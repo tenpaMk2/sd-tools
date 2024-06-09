@@ -1,39 +1,53 @@
 import { OptionCollectedData, RootCollectedData } from "./collector.mjs";
+import { ProgressBar, log } from "./logger.mjs";
 import { OptionSetting, Setting } from "./setting-define.mjs";
 import { Txt2ImgBodyJson, Txt2imgGenerator } from "./txt2img-generator.mjs";
 
-const displayProgress = async (progress: number, eta: number) => {
-  const etaSecond = `${Math.floor(eta)}`.padStart(4, ` `);
-  const barPole = `=`.repeat(Math.floor(progress * 20));
-  const barContent = `${barPole}>`.padEnd(20, ` `);
-  const bar = `[${barContent}]`;
-  const percentage = `${Math.floor(progress * 100)}`.padStart(3, ` `);
-  console.log(`${etaSecond} s: ${bar} ${percentage}%`);
-};
+class StatusPoller {
+  readonly progressBar: ProgressBar;
+  readonly intervalID: NodeJS.Timeout;
 
-const startStatusPolling = ({ ip, port }: Setting["machine"]) =>
-  setInterval(async () => {
-    const response = await fetch(`http://${ip}:${port}/sdapi/v1/progress`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const json = await response.json();
-    displayProgress(json.progress, json.eta_relative);
-  }, 10000);
+  constructor({ ip, port }: Setting["machine"]) {
+    this.progressBar = new ProgressBar();
+
+    this.intervalID = setInterval(async () => {
+      const response = await fetch(`http://${ip}:${port}/sdapi/v1/progress`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const json = await response.json();
+      this.progressBar.update(json.progress, json.eta_relative);
+    }, 10000);
+  }
+
+  stop() {
+    this.progressBar.stop();
+    clearInterval(this.intervalID);
+  }
+}
 
 const batchGenerate = async (
-  batchCount: number,
-  optionsBodyJson: GenerationData["options"][number]["optionsBodyJson"],
-  txt2imgGenerator: Txt2imgGenerator,
+  option: GenerationData["options"][number],
   machine: Setting["machine"],
 ) => {
-  for (let i = 0; i < batchCount; i++) {
-    await postOption(optionsBodyJson, machine);
+  log(`Generating option \`${option.key}\` batch...`);
 
-    const txt2imgBodyJson = txt2imgGenerator.generate();
+  await postOption(option.optionsBodyJson, machine);
+
+  for (let i = 0; i < option.batchGeneration; i++) {
+    const txt2imgBodyJson = option.txt2imgGenerator.generate();
+
+    log(`Generating batch No. ${i} with the following keys...`);
+    log(`  character : \`${txt2imgBodyJson._key.character}\``);
+    log(`  outfit    : \`${txt2imgBodyJson._key.outfit}\``);
+    log(`  background: \`${txt2imgBodyJson._key.background}\``);
+    log(`  pose      : \`${txt2imgBodyJson._key.pose}\``);
+
+    const statusPoller = new StatusPoller(machine);
     await postTxt2img(txt2imgBodyJson, machine);
+    statusPoller.stop();
   }
 };
 
@@ -41,6 +55,10 @@ const postOption = async (
   optionsBodyJson: OptionSetting["optionsBodyJson"],
   { ip, port }: Setting["machine"],
 ) => {
+  log(`Posting options...`);
+  log(`  \`sd_model_checkpoint\`: \`${optionsBodyJson.sd_model_checkpoint}\``);
+  log(`  \`sd_vae\`             : \`${optionsBodyJson.sd_vae}\``);
+
   const json = {
     outdir_txt2img_samples: "outputs/",
     do_not_show_images: true,
@@ -48,7 +66,7 @@ const postOption = async (
     ...optionsBodyJson,
   };
 
-  const optionsResponse = await fetch(`http://${ip}:${port}/sdapi/v1/options`, {
+  await fetch(`http://${ip}:${port}/sdapi/v1/options`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -83,16 +101,13 @@ const postTxt2img = async (
     ...txt2imgBodyJson,
   };
 
-  const txt2imgResponse = await fetch(`http://${ip}:${port}/sdapi/v1/txt2img`, {
+  await fetch(`http://${ip}:${port}/sdapi/v1/txt2img`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(json),
   });
-  const resultJson = await txt2imgResponse.json();
-  const infoJson = JSON.parse(resultJson.info);
-  console.log(infoJson.infotexts);
 };
 
 type OptionCollectedDataWithBuilder = Omit<OptionCollectedData, "txt2imgs"> & {
@@ -107,21 +122,11 @@ export type GenerationData = Omit<
 };
 
 export const generate = async (generationData: GenerationData) => {
-  console.log("Generating images...");
-
-  const intervalID = startStatusPolling(generationData.machine);
+  log("Generating images...");
 
   do {
     for (const option of generationData.options) {
-      console.log(`Option \`${option.key}\`: Start.`);
-      await batchGenerate(
-        option.batchGeneration,
-        option.optionsBodyJson,
-        option.txt2imgGenerator,
-        generationData.machine,
-      );
-      console.log(`Option \`${option.key}\`: Done.`);
+      await batchGenerate(option, generationData.machine);
     }
   } while (generationData.generateForever);
-  clearInterval(intervalID);
 };

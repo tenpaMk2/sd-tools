@@ -6,7 +6,7 @@ import {
 
 const portrait = {
   key: `portrait`,
-  fixedPrompt: `score_9, score_8_up, score_7_up, source_anime, 1girl, solo, megami magazine,\n`,
+  fixedPrompt: `score_9, score_8_up, score_7_up, 1girl, solo,\n`,
   txt2imgBodyJson: {
     negative_prompt: `cameltoe, empty eyes, realistic`,
     sampler_name: `Euler a`,
@@ -14,7 +14,7 @@ const portrait = {
     ...imageResolutionPreset.sdxl.portrait,
     cfg_scale: 5,
     denoising_strength: 0.2,
-    enable_hr: false,
+    enable_hr: true,
     hr_scale: 2,
     hr_upscaler: "4x-AnimeSharp",
     hr_second_pass_steps: 0,
@@ -22,12 +22,81 @@ const portrait = {
   characters: [
     {
       keys: [
-        `blend-s-mafuyu-ibukimakisiko`,
+        // ...charactersPreset.default[0].keys,
+        // `re-zero-emilia-eternal2kpp`,
+        // `re-zero-ram-eternal2kpp`,
+        `re-zero-rem-eternal2kpp`,
+        // `danmachi-aiz-eternal2kpp`,
+        // `danmachi-eina-eternal2kpp`,
+        // `danmachi-haruhime-eternal2kpp`,
+        // `danmachi-hestia-eternal2kpp`,
+        // `danmachi-lili-eternal2kpp`,
+        // `danmachi-ryu-eternal2kpp`,
+        // `new-game-nene-eternal2kpp`,
+        // `new-game-rin-eternal2kpp`,
+        // `new-game-kou-eternal2kpp`,
+        // `new-game-yun-eternal2kpp`,
+        // `new-game-hajime-eternal2kpp`,
+        // `new-game-hifumi-eternal2kpp`,
+        // `new-game-aoba-eternal2kpp`,
+        // `tenshi-tsuki-noel`,
+        // `higehiro-sayu`,
+        // `amaburi-isuzu-h-madoka`,
+        // `amaburi-isuzu-nochekaiser`,
+        // `new-game-aoba-nochekaiser`,
+        // `new-game-hifumi-nochekaiser`,
+        // `futoku-no-guild-tokishikko`,
+        // `tenshi-sama-mahiru`,
+        // `prisma-illya-illya`,
+        // `working-popura`,
+        // `sasuoni-shiba-honoka-nochekaiser`,
+        // `sasuoni-shiba-mizuki-nochekaiser`,
+        // `blend-s-mafuyu-ibukimakisiko`,
         // `blend-s-kaho-ibukimakisiko`,
         // `blend-s-kaho-ibukimakisiko-double-bun`,
       ],
-      // keys: charactersPreset.default[0].keys,
-      // outfits: outfitsPreset.temp,
+      // outfits: [
+      //   // { key: `nun` },
+      //   // { key: `tennis-uniform` },
+      //   // { key: `harem-outfit` },
+      //   // { key: `race-queen` },
+      //   // { key: `prisma-illya-magical-girl-illya` },
+      //   // { key: `rokudenashi-bikini-rumia` },
+      //   // { key: `rokudenashi-school-uniform-summer` },
+      //   // { key: `rokudenashi-school-uniform-winter` },
+      //   // { key: `new-game-suit-aoba` },
+      //   { key: `sports-bikini` },
+      // ],
+      // outfits: (
+      //   [
+      //     // `race-queen`,
+      //     // `sukumizu`,
+      //     // `naked-towel`,
+      //     // `bikini`,
+      //     // `china-dress`,
+      //     // `denim-bikini`,
+      //     // `gym-uniform`,
+      //     // `school-uniform-bowtie`,
+      //   ] as OutfitKey[]
+      // ).map((key) => ({
+      //   key,
+      //   backgrounds: [
+      //     {
+      //       key: `colorful-heart-backgrounds-standing`,
+      //       poses: [
+      //         {
+      //           key: `standing-from-above-from-behind-leaning-forward`,
+      //         },
+      //         {
+      //           key: `standing-from-below-from-behind-leaning-forward`,
+      //         },
+      //         {
+      //           key: `standing-from-horizontal-from-behind-leaning-forward`,
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // })),
     },
   ],
 } as const satisfies Txt2ImgSetting;
@@ -35,6 +104,7 @@ const portrait = {
 const landscape = {
   ...portrait,
   key: `landscape`,
+  probability: 0.5,
   txt2imgBodyJson: {
     ...portrait.txt2imgBodyJson,
     ...imageResolutionPreset.sdxl.landscape,
@@ -52,13 +122,18 @@ export const setting = {
     port: 7860,
   },
   optionSettings: [
-    {
+    ...[
+      // checkpointAndVAEPreset.sdxl.autismmixDPO,
+      // checkpointAndVAEPreset.sdxl.autismmixConfetti,
+      checkpointAndVAEPreset.sdxl.ebaraPony2,
+      // checkpointAndVAEPreset.sdxl.tponynai,
+    ].map((sdxl) => ({
       optionsBodyJson: {
-        ...checkpointAndVAEPreset.sdxl.autismmixConfetti,
+        ...sdxl,
       },
       batchGeneration: 100,
       txt2imgSettings: [portrait, landscape],
-    },
+    })),
   ],
 } as const satisfies Setting;
 
