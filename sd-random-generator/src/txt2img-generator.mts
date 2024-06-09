@@ -320,8 +320,8 @@ const buildCore = ({
     visibleOutfitTokens,
     specialTokens,
     poseTokens,
-    backgroundTokens,
     newEmotionTokens,
+    backgroundTokens,
   ].flat()) {
     setHeavyWeightOne<Tag>(m, token);
   }
