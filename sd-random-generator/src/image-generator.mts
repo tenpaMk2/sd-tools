@@ -26,6 +26,11 @@ class StatusPoller {
     this.progressBar.stop();
     clearInterval(this.intervalID);
   }
+
+  complete() {
+    this.progressBar.update(this.progressBar.maxProgress, 0);
+    this.stop();
+  }
 }
 
 const batchGenerate = async (
@@ -47,7 +52,7 @@ const batchGenerate = async (
 
     const statusPoller = new StatusPoller(machine);
     await postTxt2img(txt2imgBodyJson, machine);
-    statusPoller.stop();
+    statusPoller.complete();
   }
 };
 

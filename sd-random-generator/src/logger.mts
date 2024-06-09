@@ -12,6 +12,7 @@ export const warn = (str: string) => {
 };
 
 export class ProgressBar {
+  readonly maxProgress = 1;
   readonly progress: SingleBar;
 
   constructor() {
@@ -23,7 +24,7 @@ export class ProgressBar {
       barIncompleteChar: "\u2591",
     });
 
-    this.progress.start(1, 0, {
+    this.progress.start(this.maxProgress, 0, {
       etaSecond: "N/A",
     });
   }
