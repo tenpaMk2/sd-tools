@@ -10,43 +10,25 @@ type DistinguishableTags = Readonly<{ [k in string]: string }>;
 
 /**
  * Token definition.
- * This definition is used for both normal tags and lora tags.
  */
-export class Token<T extends Tag | LoraNameTag> {
+export class Token<T extends Tag> {
   readonly tag: T;
   readonly weight: number;
-  readonly type: `normal` | `lora`;
-  constructor({
-    tag,
-    weight,
-    type,
-  }: {
-    tag: T;
-    weight?: number;
-    type?: `normal` | `lora`;
-  }) {
-    this.tag = tag;
-    this.weight = weight ?? 1.0;
-    this.type = type ?? `normal`;
 
-    // Vadidation
-    if (this.weight < 0) throw new Error(`Invalid weight: ${this.weight}`);
+  constructor({ tag, weight }: { tag: T; weight?: number }) {
+    this.tag = tag;
+    this.weight = weight ?? 1.0; // `weight` can be negative.
   }
 
   toString() {
-    switch (this.type) {
-      case `normal`:
-        // Resolve tag name if it's a distinguishable tag.
-        const tag =
-          (allDistinguishableBodyTags as DistinguishableTags)[this.tag] ??
-          (allDistinguishableHeadOutfitTags as DistinguishableTags)[this.tag] ??
-          (allDistinguishableOutfitTags as DistinguishableTags)[this.tag] ??
-          this.tag;
+    // Resolve tag name if it's a distinguishable tag.
+    const tag =
+      (allDistinguishableBodyTags as DistinguishableTags)[this.tag] ??
+      (allDistinguishableHeadOutfitTags as DistinguishableTags)[this.tag] ??
+      (allDistinguishableOutfitTags as DistinguishableTags)[this.tag] ??
+      this.tag;
 
-        return this.weight === 1.0 ? tag : `${tag}:${this.weight}`;
-      case `lora`:
-        return `<lora:${this.tag}:${this.weight}>`;
-    }
+    return this.weight === 1.0 ? tag : `${tag}:${this.weight}`;
   }
 }
 
@@ -58,17 +40,10 @@ export type NormalEntry<T extends Tag> =
   | { tag: T; weight: number }
   | { probability?: number; entries: NormalEntry<T>[] }[];
 
-/**
- * Type of entries for Lora token define.
- */
-export type LoraEntry = {
-  tag: LoraNameTag;
-  probabilityAndWeights: { probability: number; weight: number }[];
-};
-
-export class Pattern<T extends Tag | LoraNameTag> {
+export class Pattern<T extends Tag> {
   readonly tokens: Token<T>[];
   readonly probability: number;
+
   constructor({
     tokens,
     probability,
@@ -98,8 +73,6 @@ export class Pattern<T extends Tag | LoraNameTag> {
     }
 
     const uniques = tokens.reduce((previous, current) => {
-      if (current.type === `lora`)
-        return previous.set(`Lora💩${current.tag}` as T, current); // Avoid duplication of Tag and LoraNameTag.
       if (!previous.has(current.tag)) return previous.set(current.tag, current);
 
       const existing = previous.get(current.tag)!;
@@ -128,33 +101,22 @@ export class Pattern<T extends Tag | LoraNameTag> {
   }
 
   toPrompt() {
-    const resolvedTokens = this.tokens.map((token) => {
-      switch (token.type) {
-        case `lora`:
-          return {
-            tag: token.tag,
-            weight: token.weight,
-            type: `lora`,
-            token,
-          } as const;
-        case `normal`:
-          return {
-            tag: ((allDistinguishableBodyTags as DistinguishableTags)[
+    const resolvedTokens = this.tokens.map(
+      (token) =>
+        ({
+          tag: ((allDistinguishableBodyTags as DistinguishableTags)[
+            token.tag
+          ] ??
+            (allDistinguishableHeadOutfitTags as DistinguishableTags)[
               token.tag
             ] ??
-              (allDistinguishableHeadOutfitTags as DistinguishableTags)[
-                token.tag
-              ] ??
-              (allDistinguishableOutfitTags as DistinguishableTags)[
-                token.tag
-              ] ??
-              token.tag) as T,
-            weight: token.weight,
-            type: `normal`,
-            token,
-          } as const;
-      }
-    });
+            (allDistinguishableOutfitTags as DistinguishableTags)[token.tag] ??
+            token.tag) as T,
+          weight: token.weight,
+          type: `normal`,
+          token,
+        }) as const,
+    );
     const isDuplicate =
       new Set(resolvedTokens.map((t) => t.tag)).size !== resolvedTokens.length;
 
@@ -163,8 +125,6 @@ export class Pattern<T extends Tag | LoraNameTag> {
     }
 
     const uniques = resolvedTokens.reduce((previous, current) => {
-      if (current.type === `lora`)
-        return previous.set(`Lora💩${current.tag}` as T, current); // Avoid duplication of Tag and LoraNameTag.
       if (!previous.has(current.tag)) return previous.set(current.tag, current);
 
       const existing = previous.get(current.tag)!;
@@ -186,7 +146,7 @@ export class Pattern<T extends Tag | LoraNameTag> {
   }
 }
 
-export class PatternCollection<T extends Tag | LoraNameTag> {
+export class PatternCollection<T extends Tag> {
   constructor(readonly patterns: Pattern<T>[]) {
     const totalProbability = patterns.reduce(
       (prev, current) => prev + current.probability,
@@ -202,21 +162,6 @@ export class PatternCollection<T extends Tag | LoraNameTag> {
             probability: probability / totalProbability,
           }),
       );
-  }
-
-  static createLora(entries: LoraEntry | null) {
-    if (entries === null) {
-      return new PatternCollection<LoraNameTag>([]);
-    }
-
-    const patterns = entries.probabilityAndWeights.map(
-      ({ probability, weight }) =>
-        new Pattern<LoraNameTag>({
-          tokens: [new Token({ tag: entries.tag, weight, type: `lora` })],
-          probability,
-        }),
-    );
-    return new PatternCollection<LoraNameTag>(patterns);
   }
 
   static create<T extends Tag>(
@@ -261,9 +206,7 @@ export class PatternCollection<T extends Tag | LoraNameTag> {
     return new PatternCollection<T>(this.patterns.map(callback));
   }
 
-  combineWith<U extends Tag | LoraNameTag>(
-    patternCollection: PatternCollection<U>,
-  ) {
+  combineWith<U extends Tag>(patternCollection: PatternCollection<U>) {
     if (patternCollection.patterns.length === 0) return this;
 
     const combination = this.patterns
@@ -280,9 +223,7 @@ export class PatternCollection<T extends Tag | LoraNameTag> {
     return new PatternCollection<T | U>(combination);
   }
 
-  static combine<T extends Tag | LoraNameTag>(
-    patternCollections: PatternCollection<T>[],
-  ) {
+  static combine<T extends Tag>(patternCollections: PatternCollection<T>[]) {
     if (patternCollections.length === 0) return new PatternCollection<T>([]);
 
     return patternCollections.reduce((previousCollection, currentCollection) =>
@@ -290,7 +231,7 @@ export class PatternCollection<T extends Tag | LoraNameTag> {
     );
   }
 
-  static joinAll<T extends Tag | LoraNameTag>(
+  static joinAll<T extends Tag>(
     pairs: { probability: number; patternCollection: PatternCollection<T> }[],
   ) {
     const totalProbability = pairs.reduce(
@@ -382,15 +323,62 @@ export class PatternCollection<T extends Tag | LoraNameTag> {
     return this.create<T>(entries).pickOnePattern().tokens;
   }
 
-  static createLoraTokensInstantly(
-    entries: LoraEntry | null,
-  ): Token<LoraNameTag>[] {
-    if (!entries) return [];
+  // TODO: Fix dynamic prompts has no probability.
+}
 
-    return this.createLora(entries).pickOnePattern().tokens;
+/**
+ * Lora string definition.
+ */
+export class LoraString {
+  readonly tag: LoraNameTag;
+  readonly weight: number;
+
+  constructor({ tag, weight }: { tag: LoraNameTag; weight?: number }) {
+    this.tag = tag;
+    this.weight = weight ?? 1.0; // `weight` can be negative.
   }
 
-  // TODO: Fix dynamic prompts has no probability.
+  toString() {
+    return `<lora:${this.tag}:${this.weight}>`;
+  }
+}
+
+/**
+ * Type of entries for Lora token define.
+ */
+export type LoraEntry = {
+  tag: LoraNameTag;
+  probabilityAndWeights: { probability: number; weight: number }[];
+};
+
+/**
+ * Lora picker.
+ */
+export class LoraPicker {
+  constructor(readonly entry: LoraEntry) {
+    for (const { probability } of entry.probabilityAndWeights) {
+      if (probability < 0)
+        throw new Error(`Error: Probability must be positive.`);
+    }
+  }
+
+  pick(): LoraString {
+    const totalProbability = this.entry.probabilityAndWeights.reduce(
+      (prev, current) => prev + current.probability,
+      0,
+    );
+
+    if (totalProbability === 0)
+      throw new Error(`Error: Cannot pick because of no patterns.`);
+
+    const random = Math.random();
+    let sum = 0;
+    for (const { probability, weight } of this.entry.probabilityAndWeights) {
+      sum += probability;
+      if (random <= sum) return new LoraString({ tag: this.entry.tag, weight });
+    }
+    throw new Error(`Error: No item was picked.`);
+  }
 }
 
 // const pc1 = PatternCollection.createLora({

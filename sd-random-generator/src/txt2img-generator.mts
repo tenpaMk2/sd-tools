@@ -22,7 +22,12 @@ import {
   PoseSpecialVisibility,
   PoseUnderboobLevelOrder,
 } from "./poses/poses.mjs";
-import { PatternCollection, Token } from "./prompt-define.mjs";
+import {
+  LoraPicker,
+  LoraString,
+  PatternCollection,
+  Token,
+} from "./prompt-define.mjs";
 import { Txt2ImgSetting } from "./setting-define.mjs";
 import {
   CharacterFeatureTag,
@@ -32,12 +37,11 @@ import {
 } from "./tag-defines/adapter.mjs";
 import {
   LoraCharacterTriggerWordsTag,
-  LoraNameTag,
   LoraOutfitTriggerWordsTag,
 } from "./tag-defines/lora.mjs";
 
 // TODO: bug: `Rem` LoraとTriggerWordsの `Rem` が重複してると削除される。
-const setHeavyWeightOne = <T extends Tag | LoraNameTag>(
+const setHeavyWeightOne = <T extends Tag>(
   m: Map<T, Token<T>>,
   token: Token<T>,
 ) => {
@@ -184,6 +188,11 @@ const takeOffShoes = (
   return [...m.values()];
 };
 
+type PromptMaterial = {
+  tokens: Token<Tag>[];
+  loraStrings: LoraString[];
+};
+
 const buildCore = ({
   characterData,
   outfitData,
@@ -194,10 +203,13 @@ const buildCore = ({
   outfitData: OutfitCollectedData;
   backgroundData: BackgroundCollectedData;
   poseData: PoseCollectedData;
-}): Token<Tag | LoraNameTag>[] => {
-  const loraCharacterTokens = PatternCollection.createLoraTokensInstantly(
-    characterData.character.lora,
-  );
+}): PromptMaterial => {
+  const loraStrings: LoraString[] = [];
+
+  if (characterData.character.lora) {
+    const loraPicker = new LoraPicker(characterData.character.lora);
+    loraStrings.push(loraPicker.pick());
+  }
 
   const loraCharacterTriggerWordTokens =
     PatternCollection.createTokensInstantly<LoraCharacterTriggerWordsTag>(
@@ -228,9 +240,10 @@ const buildCore = ({
     characterData.character.emotionEntries,
   );
 
-  const loraOutfitTokens = PatternCollection.createLoraTokensInstantly(
-    outfitData.outfit.lora ?? null,
-  );
+  if (outfitData.outfit.lora) {
+    const loraPicker = new LoraPicker(outfitData.outfit.lora);
+    loraStrings.push(loraPicker.pick());
+  }
 
   const loraOutfitTriggerWordTokens =
     PatternCollection.createTokensInstantly<LoraOutfitTriggerWordsTag>(
@@ -296,15 +309,13 @@ const buildCore = ({
     },
   );
 
-  const m = new Map<Tag | LoraNameTag, Token<Tag | LoraNameTag>>();
+  const m = new Map<Tag, Token<Tag>>();
   for (const token of [
-    loraCharacterTokens,
     loraCharacterTriggerWordTokens,
     seriesNameTokens,
     characterNameTokens,
     visibleFeatureTokens,
     breastSizeTokens,
-    loraOutfitTokens,
     loraOutfitTriggerWordTokens,
     visibleOutfitTokens,
     specialTokens,
@@ -312,10 +323,10 @@ const buildCore = ({
     backgroundTokens,
     newEmotionTokens,
   ].flat()) {
-    setHeavyWeightOne<Tag | LoraNameTag>(m, token);
+    setHeavyWeightOne<Tag>(m, token);
   }
 
-  return [...m.values()];
+  return { tokens: [...m.values()], loraStrings };
 };
 
 export type Txt2ImgBodyJson = Txt2ImgSetting["txt2imgBodyJson"] & {
@@ -363,14 +374,18 @@ export class Txt2imgGenerator {
       pose: poseData.key,
     };
 
-    const tokens = buildCore({
+    const promptMaterial = buildCore({
       characterData,
       outfitData,
       backgroundData,
       poseData,
     });
 
-    const prompt = `${txt2imgData.fixedPrompt}${tokens.join(`, `)}`;
+    const prompt =
+      txt2imgData.fixedPrompt +
+      promptMaterial.tokens.join(`,\n`) +
+      `\n` +
+      promptMaterial.loraStrings.join(`\n`);
 
     return { _key, prompt, ...txt2imgData.txt2imgBodyJson };
   }
