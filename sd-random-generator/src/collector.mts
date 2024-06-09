@@ -19,6 +19,7 @@ import {
   Txt2ImgSetting,
 } from "./setting-define.mjs";
 import { backgroundsPreset } from "./setting-presets/background.mjs";
+import { charactersPreset } from "./setting-presets/character.mjs";
 import { outfitsPreset } from "./setting-presets/outfit.mjs";
 import { posesPreset } from "./setting-presets/pose.mjs";
 
@@ -129,13 +130,17 @@ const collectTxt2imgData = ({
   fixedPrompt,
   txt2imgBodyJson,
   characters,
-}: Txt2ImgSetting): Txt2imgCollectedData => ({
-  key,
-  probability: probability ?? 1,
-  fixedPrompt,
-  txt2imgBodyJson,
-  characters: characters.map(collectCharacter),
-});
+}: Txt2ImgSetting): Txt2imgCollectedData => {
+  const targetCharacters = characters ?? charactersPreset.default;
+
+  return {
+    key,
+    probability: probability ?? 1,
+    fixedPrompt,
+    txt2imgBodyJson,
+    characters: targetCharacters.map(collectCharacter),
+  };
+};
 
 export type OptionCollectedData = Omit<
   OptionSetting,

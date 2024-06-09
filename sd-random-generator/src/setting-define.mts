@@ -101,7 +101,7 @@ export type Txt2ImgSetting = Readonly<{
     hr_upscaler: Upscaler;
     hr_second_pass_steps: number;
   };
-  characters: CharacterSetting[];
+  characters?: CharacterSetting[];
 }>;
 
 export type OptionSetting = Readonly<{

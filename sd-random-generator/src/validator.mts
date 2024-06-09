@@ -46,7 +46,7 @@ export const validateSetting = (setting: Setting): void => {
         .baseModel;
 
     for (const txt2imgSetting of optionSetting.txt2imgSettings) {
-      for (const character of txt2imgSetting.characters) {
+      for (const character of txt2imgSetting.characters ?? []) {
         validateCharacter(character, baseModel);
       }
     }
