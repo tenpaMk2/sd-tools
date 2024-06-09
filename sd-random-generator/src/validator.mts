@@ -1,5 +1,5 @@
 import { characterTable } from "./characters/characters.mjs";
-import { log } from "./logger.mjs";
+import { log, warn } from "./logger.mjs";
 import {
   BaseModel,
   CharacterSetting,
@@ -23,21 +23,18 @@ const validateCharacter = (
   character: CharacterSetting,
   baseModel: BaseModel,
 ): void => {
-  for (const characterKey of character.keys) {
-    const characterData = characterTable[characterKey];
-    if (!characterData?.lora) continue;
+  const characterData = characterTable[character.key];
+  if (!characterData?.lora) return;
 
-    const loraName = characterData.lora.tag;
-    const supportedBaseModels = searchSupportedBaseModels(loraName);
+  const loraName = characterData.lora.tag;
+  const supportedBaseModels = searchSupportedBaseModels(loraName);
 
-    if (supportedBaseModels.includes(baseModel)) {
-      // Valid!!
-      continue;
-    }
-    console.warn(
-      `Base model \`${baseModel}\` is not supported for \`${loraName}\``,
-    );
+  if (supportedBaseModels.includes(baseModel)) {
+    // Valid!!
+    return;
   }
+
+  warn(`Base model \`${baseModel}\` is not supported for \`${loraName}\``);
 };
 
 export const validateSetting = (setting: Setting): void => {

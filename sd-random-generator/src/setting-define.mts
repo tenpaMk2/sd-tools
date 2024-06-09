@@ -66,7 +66,7 @@ export type OutfitSetting = Readonly<{
 }>;
 
 export type CharacterSetting = Readonly<{
-  keys: CharacterKey[];
+  key: CharacterKey;
   probability?: number;
   outfits?: OutfitSetting[];
 }>;

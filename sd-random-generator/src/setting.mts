@@ -20,11 +20,11 @@ const portrait = {
     hr_second_pass_steps: 0,
   },
   characters: [
-    {
-      keys: [
+    ...(
+      [
         // ...charactersPreset.default[0].keys,
-        // `re-zero-emilia-eternal2kpp`,
-        // `re-zero-ram-eternal2kpp`,
+        `re-zero-emilia-eternal2kpp`,
+        `re-zero-ram-eternal2kpp`,
         `re-zero-rem-eternal2kpp`,
         // `danmachi-aiz-eternal2kpp`,
         // `danmachi-eina-eternal2kpp`,
@@ -54,19 +54,9 @@ const portrait = {
         // `blend-s-mafuyu-ibukimakisiko`,
         // `blend-s-kaho-ibukimakisiko`,
         // `blend-s-kaho-ibukimakisiko-double-bun`,
-      ],
-      // outfits: [
-      //   // { key: `nun` },
-      //   // { key: `tennis-uniform` },
-      //   // { key: `harem-outfit` },
-      //   // { key: `race-queen` },
-      //   // { key: `prisma-illya-magical-girl-illya` },
-      //   // { key: `rokudenashi-bikini-rumia` },
-      //   // { key: `rokudenashi-school-uniform-summer` },
-      //   // { key: `rokudenashi-school-uniform-winter` },
-      //   // { key: `new-game-suit-aoba` },
-      //   { key: `sports-bikini` },
-      // ],
+      ] as const
+    ).map((key) => ({
+      key,
       // outfits: (
       //   [
       //     // `race-queen`,
@@ -77,27 +67,27 @@ const portrait = {
       //     // `denim-bikini`,
       //     // `gym-uniform`,
       //     // `school-uniform-bowtie`,
-      //   ] as OutfitKey[]
+      //   ] as const
       // ).map((key) => ({
       //   key,
-      //   backgrounds: [
-      //     {
-      //       key: `colorful-heart-backgrounds-standing`,
-      //       poses: [
-      //         {
-      //           key: `standing-from-above-from-behind-leaning-forward`,
-      //         },
-      //         {
-      //           key: `standing-from-below-from-behind-leaning-forward`,
-      //         },
-      //         {
-      //           key: `standing-from-horizontal-from-behind-leaning-forward`,
-      //         },
-      //       ],
-      //     },
-      //   ],
+      //   // backgrounds: [
+      //   //   {
+      //   //     key: `colorful-heart-backgrounds-standing`,
+      //   //     poses: [
+      //   //       {
+      //   //         key: `standing-from-above-from-behind-leaning-forward`,
+      //   //       },
+      //   //       {
+      //   //         key: `standing-from-below-from-behind-leaning-forward`,
+      //   //       },
+      //   //       {
+      //   //         key: `standing-from-horizontal-from-behind-leaning-forward`,
+      //   //       },
+      //   //     ],
+      //   //   },
+      //   // ],
       // })),
-    },
+    })),
   ],
 } as const satisfies Txt2ImgSetting;
 

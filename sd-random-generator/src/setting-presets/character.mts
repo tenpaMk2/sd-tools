@@ -4,7 +4,7 @@ import { CharacterSetting } from "../setting-define.mjs";
 
 const monoCharacterPresetsMap = Object.fromEntries(
   getKeys(characterTable).reduce(
-    (acc, key) => acc.set(key, [{ keys: [key] }]),
+    (acc, key) => acc.set(key, [{ key }]),
     new Map<CharacterKey, CharacterSetting[]>(),
   ),
 ) as Record<CharacterKey, CharacterSetting[]>;
@@ -65,28 +65,23 @@ const defaultKeys = [
   `tenshi-tsuki-noel`,
   `to-love-ru-momo-lancelot`,
   `working-popura`,
-] as const satisfies CharacterSetting["keys"];
+] as const satisfies CharacterKey[];
 
 export const charactersPreset = {
   ...monoCharacterPresetsMap,
 
-  "default": [{ keys: defaultKeys }],
+  "default": defaultKeys.map((key) => ({ key })),
 
-  "all": [
-    {
-      keys: getKeys(characterTable),
-    },
-  ],
-  "kaguya-sama": [
-    {
-      keys: [
-        `kaguya-sama-ai`,
-        `kaguya-sama-chika`,
-        `kaguya-sama-kaguya`,
-        `kaguya-sama-miko`,
-      ],
-    },
-  ],
+  "all": getKeys(characterTable).map((key) => ({ key })),
+
+  "kaguya-sama": (
+    [
+      `kaguya-sama-ai`,
+      `kaguya-sama-chika`,
+      `kaguya-sama-kaguya`,
+      `kaguya-sama-miko`,
+    ] as const
+  ).map((key) => ({ key })),
 } as const satisfies Record<
   CharacterKey | `default` | `all` | `kaguya-sama`,
   CharacterSetting[]

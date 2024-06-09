@@ -99,23 +99,21 @@ export type CharacterCollectedData = Omit<
 };
 
 const collectCharacter = ({
-  keys,
+  key,
   probability,
   outfits,
-}: CharacterSetting): CharacterCollectedData[] =>
-  keys.map((key) => {
-    const character = characterTable[key];
+}: CharacterSetting): CharacterCollectedData => {
+  const character = characterTable[key];
 
-    const targetOutfits =
-      outfits ?? outfitsPreset[key] ?? outfitsPreset.default;
+  const targetOutfits = outfits ?? outfitsPreset[key] ?? outfitsPreset.default;
 
-    return {
-      key,
-      probability: probability ?? 1,
-      character,
-      outfits: targetOutfits.map(collectOutfit),
-    };
-  });
+  return {
+    key,
+    probability: probability ?? 1,
+    character,
+    outfits: targetOutfits.map(collectOutfit),
+  };
+};
 
 export type Txt2imgCollectedData = Omit<
   Txt2ImgSetting,
@@ -136,7 +134,7 @@ const collectTxt2imgData = ({
   probability: probability ?? 1,
   fixedPrompt,
   txt2imgBodyJson,
-  characters: characters.map(collectCharacter).flat(),
+  characters: characters.map(collectCharacter),
 });
 
 export type OptionCollectedData = Omit<
