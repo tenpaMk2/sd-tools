@@ -7,7 +7,7 @@ const lora = {
   "no-lora": null,
   "eternal2kpp": {
     tag: `Emilia`,
-    probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
+    probabilityAndWeights: [{ probability: 1, weight: 0.7 }],
   },
 } as const satisfies Record<Variation, CharacterDefine["lora"]>;
 
