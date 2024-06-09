@@ -35,12 +35,14 @@
   "dependencies": {
     "@tenpamk2/sd-tag-defines": "^1.0.0",
     "@types/lodash": "^4.17.0",
+    "cli-progress": "^3.12.0",
     "commander": "^12.0.0",
     "lodash": "^4.17.21",
     "picocolors": "^1.0.1",
     "yaml": "^2.4.2"
   },
   "devDependencies": {
+    "@types/cli-progress": "^3.11.5",
     "@types/node": "^20.12.7",
     "esbuild": "^0.20.2",
     "mkdirp": "^3.0.1",
