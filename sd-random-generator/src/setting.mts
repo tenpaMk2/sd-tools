@@ -57,36 +57,36 @@ const portrait = {
       ] as const
     ).map((key) => ({
       key,
-      // outfits: (
-      //   [
-      //     // `race-queen`,
-      //     // `sukumizu`,
-      //     // `naked-towel`,
-      //     // `bikini`,
-      //     // `china-dress`,
-      //     // `denim-bikini`,
-      //     // `gym-uniform`,
-      //     // `school-uniform-bowtie`,
-      //   ] as const
-      // ).map((key) => ({
-      //   key,
-      //   // backgrounds: [
-      //   //   {
-      //   //     key: `colorful-heart-backgrounds-standing`,
-      //   //     poses: [
-      //   //       {
-      //   //         key: `standing-from-above-from-behind-leaning-forward`,
-      //   //       },
-      //   //       {
-      //   //         key: `standing-from-below-from-behind-leaning-forward`,
-      //   //       },
-      //   //       {
-      //   //         key: `standing-from-horizontal-from-behind-leaning-forward`,
-      //   //       },
-      //   //     ],
-      //   //   },
-      //   // ],
-      // })),
+      outfits: (
+        [
+          // `race-queen`,
+          // `sukumizu`,
+          // `naked-towel`,
+          // `bikini`,
+          // `china-dress`,
+          // `denim-bikini`,
+          // `gym-uniform`,
+          // `school-uniform-bowtie`,
+        ] as const
+      ).map((key) => ({
+        key,
+        // backgrounds: [
+        //   {
+        //     key: `colorful-heart-backgrounds-standing`,
+        //     poses: [
+        //       {
+        //         key: `standing-from-above-from-behind-leaning-forward`,
+        //       },
+        //       {
+        //         key: `standing-from-below-from-behind-leaning-forward`,
+        //       },
+        //       {
+        //         key: `standing-from-horizontal-from-behind-leaning-forward`,
+        //       },
+        //     ],
+        //   },
+        // ],
+      })),
     })),
   ],
 } as const satisfies Txt2ImgSetting;

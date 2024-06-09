@@ -50,18 +50,27 @@ const collectBackground = ({
 }: BackgroundSetting): BackgroundCollectedData => {
   const background = backgroundTable[key];
 
-  const targetPoses = poses ?? posesPreset[key] ?? posesPreset.default;
+  const targetPoses =
+    poses?.length === 0
+      ? posesPreset.default
+      : poses ?? posesPreset[key] ?? posesPreset.default;
+
+  const filteredPoses = targetPoses
+    .map(collectPose)
+    .filter(({ pose }) => pose.cameraAngle in background)
+    .filter(
+      ({ pose }) => pose.expectedBackgroundType === background.backgroundType,
+    );
+
+  if (filteredPoses.length === 0) {
+    throw new Error(`Error: No valid poses for background ${key}`);
+  }
 
   return {
     key,
     probability: probability ?? 1,
     background,
-    poses: targetPoses
-      .map(collectPose)
-      .filter(({ pose }) => pose.cameraAngle in background)
-      .filter(
-        ({ pose }) => pose.expectedBackgroundType === background.backgroundType,
-      ),
+    poses: filteredPoses,
   };
 };
 
@@ -81,11 +90,16 @@ const collectOutfit = ({
 }: OutfitSetting): OutfitCollectedData => {
   const outfit = outfitTable[key];
 
+  const targetBackgrounds =
+    backgrounds?.length === 0
+      ? backgroundsPreset.default
+      : backgrounds ?? backgroundsPreset[key] ?? backgroundsPreset.default;
+
   return {
     key,
     probability: probability ?? 1,
     outfit,
-    backgrounds: (backgrounds ?? backgroundsPreset[key]).map(collectBackground),
+    backgrounds: targetBackgrounds.map(collectBackground),
   };
 };
 
@@ -106,7 +120,10 @@ const collectCharacter = ({
 }: CharacterSetting): CharacterCollectedData => {
   const character = characterTable[key];
 
-  const targetOutfits = outfits ?? outfitsPreset[key] ?? outfitsPreset.default;
+  const targetOutfits =
+    outfits?.length === 0
+      ? outfitsPreset.default
+      : outfits ?? outfitsPreset[key] ?? outfitsPreset.default;
 
   return {
     key,
@@ -131,7 +148,10 @@ const collectTxt2imgData = ({
   txt2imgBodyJson,
   characters,
 }: Txt2ImgSetting): Txt2imgCollectedData => {
-  const targetCharacters = characters ?? charactersPreset.default;
+  const targetCharacters =
+    characters?.length === 0
+      ? charactersPreset.default
+      : characters ?? charactersPreset.default;
 
   return {
     key,
