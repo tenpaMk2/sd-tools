@@ -1264,6 +1264,28 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
   },
+  {
+    loraName: `Kaguya_Shinomiya`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/484411/kaguya-sama-wa-kokurasetai-or-kaguya-shinomiya-pdxl?modelVersionId=538731`,
+    ),
+    characterTriggerWordsTags: [`Kaguya Shinomiya`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Chika_Fujiwara`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/484301/kaguya-sama-wa-kokurasetai-or-chika-fujiwara-pdxl?modelVersionId=538606`,
+    ),
+    characterTriggerWordsTags: [`Chika Fujiwara`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

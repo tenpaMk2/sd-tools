@@ -37,8 +37,8 @@ const defaultKeys = [
   `kagejitsu-alpha-nochekaiser`,
   `kagejitsu-beta-nochekaiser`,
   `kaguya-sama-ai`,
-  `kaguya-sama-chika`,
-  `kaguya-sama-kaguya`,
+  `kaguya-sama-chika-eternal2kpp`,
+  `kaguya-sama-kaguya-eternal2kpp`,
   `kaguya-sama-miko`,
   `konosuba-megumin`,
   `konosuba-yunyun`,
@@ -70,20 +70,11 @@ const defaultKeys = [
 export const charactersPreset = {
   ...monoCharacterPresetsMap,
 
-  "default": defaultKeys.map((key) => ({ key })),
+  default: defaultKeys.map((key) => ({ key })),
 
-  "all": getKeys(characterTable).map((key) => ({ key })),
-
-  "kaguya-sama": (
-    [
-      `kaguya-sama-ai`,
-      `kaguya-sama-chika`,
-      `kaguya-sama-kaguya`,
-      `kaguya-sama-miko`,
-    ] as const
-  ).map((key) => ({ key })),
+  all: getKeys(characterTable).map((key) => ({ key })),
 } as const satisfies Record<
-  CharacterKey | `default` | `all` | `kaguya-sama`,
+  CharacterKey | `default` | `all`,
   CharacterSetting[]
 >;
 

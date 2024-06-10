@@ -1,14 +1,28 @@
 import { CharacterDefine } from "../characters.mjs";
 import { emotionPreset } from "../emotion-preset.mjs";
 
-/**
- * No Lora version of the character.
- * Use it with pre-trained checkmodel such as Pony.
- */
-export const kaguyaSamaChika = () =>
+type Variation = `no-lora` | `eternal2kpp`;
+
+const lora = {
+  "no-lora": null,
+  "eternal2kpp": {
+    tag: `Chika_Fujiwara`,
+    probabilityAndWeights: [{ probability: 1, weight: 0.7 }],
+  },
+} as const satisfies Record<Variation, CharacterDefine["lora"]>;
+
+const loraCharacterTriggerWordEntries = {
+  "no-lora": [],
+  "eternal2kpp": [`Chika Fujiwara`],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine["loraCharacterTriggerWordEntries"]
+>;
+
+export const kaguyaSamaChika = (variation: Variation) =>
   ({
-    lora: null,
-    loraCharacterTriggerWordEntries: [],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [
       `kaguya-sama wa kokurasetai ~tensai-tachi no renai zunousen~`,
     ],
@@ -22,7 +36,6 @@ export const kaguyaSamaChika = () =>
       `blunt bangs`,
       `hair bow`,
       `black hair bow`,
-      `thick thighs`,
     ],
     breastSize: `large breasts`,
     fang: false,

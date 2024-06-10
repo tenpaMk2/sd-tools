@@ -206,10 +206,12 @@ export const characterTable = {
   "kagejitsu-beta-nochekaiser": kagejitsuBetaNochekaiser(),
   "kaguya-sama-ai-nochekaiser": kaguyaSamaAiNochekaiser(),
   "kaguya-sama-ai": kaguyaSamaAi(),
+  "kaguya-sama-chika-eternal2kpp": kaguyaSamaChika(`eternal2kpp`),
+  "kaguya-sama-chika-no-lora": kaguyaSamaChika(`no-lora`),
   "kaguya-sama-chika-nochekaiser": kaguyaSamaChikaNochekaiser(),
-  "kaguya-sama-chika": kaguyaSamaChika(),
+  "kaguya-sama-kaguya-eternal2kpp": kaguyaSamaKaguya(`eternal2kpp`),
+  "kaguya-sama-kaguya-no-lora": kaguyaSamaKaguya(`no-lora`),
   "kaguya-sama-kaguya-nochekaiser": kaguyaSamaKaguyaNochekaiser(),
-  "kaguya-sama-kaguya": kaguyaSamaKaguya(),
   "kaguya-sama-miko-nochekaiser": kaguyaSamaMikoNochekaiser(),
   "kaguya-sama-miko": kaguyaSamaMiko(),
   "konosuba-megumin": konosubaMegumin(),
@@ -286,3 +288,9 @@ export const characterTable = {
 } as const satisfies Record<string, CharacterDefine>;
 
 export type CharacterKey = keyof typeof characterTable;
+
+// TODO: Naming rule.
+//  - `no-lora` is for the character that has no lora.
+//  - `creater-name` is for the character that has the lora by the creater.
+
+// TODO: Show character and Lora URL lists.
