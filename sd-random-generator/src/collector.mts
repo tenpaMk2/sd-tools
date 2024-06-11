@@ -7,6 +7,7 @@ import {
   CharacterKey,
   characterTable,
 } from "./characters/characters.mjs";
+import { isNullrishOrEmptyArray } from "./libs/utility.mjs";
 import { OutfitDefine, outfitTable } from "./outfits/outfits.mjs";
 import { PoseDefine, poseTable } from "./poses/poses.mjs";
 import {
@@ -50,10 +51,9 @@ const collectBackground = ({
 }: BackgroundSetting): BackgroundCollectedData => {
   const background = backgroundTable[key];
 
-  const targetPoses =
-    poses?.length === 0
-      ? posesPreset.default
-      : poses ?? posesPreset[key] ?? posesPreset.default;
+  const targetPoses = isNullrishOrEmptyArray(poses)
+    ? posesPreset[key] ?? posesPreset.default
+    : poses;
 
   const filteredPoses = targetPoses
     .map(collectPose)
@@ -90,10 +90,9 @@ const collectOutfit = ({
 }: OutfitSetting): OutfitCollectedData => {
   const outfit = outfitTable[key];
 
-  const targetBackgrounds =
-    backgrounds?.length === 0
-      ? backgroundsPreset.default
-      : backgrounds ?? backgroundsPreset[key] ?? backgroundsPreset.default;
+  const targetBackgrounds = isNullrishOrEmptyArray(backgrounds)
+    ? backgroundsPreset[key] ?? backgroundsPreset.default
+    : backgrounds;
 
   return {
     key,
@@ -120,10 +119,9 @@ const collectCharacter = ({
 }: CharacterSetting): CharacterCollectedData => {
   const character = characterTable[key];
 
-  const targetOutfits =
-    outfits?.length === 0
-      ? outfitsPreset.default
-      : outfits ?? outfitsPreset[key] ?? outfitsPreset.default;
+  const targetOutfits = isNullrishOrEmptyArray(outfits)
+    ? outfitsPreset[key] ?? outfitsPreset.default
+    : outfits;
 
   return {
     key,
@@ -148,10 +146,9 @@ const collectTxt2imgData = ({
   txt2imgBodyJson,
   characters,
 }: Txt2ImgSetting): Txt2imgCollectedData => {
-  const targetCharacters =
-    characters?.length === 0
-      ? charactersPreset.default
-      : characters ?? charactersPreset.default;
+  const targetCharacters = isNullrishOrEmptyArray(characters)
+    ? charactersPreset.default
+    : characters;
 
   return {
     key,

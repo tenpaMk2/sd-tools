@@ -77,3 +77,10 @@ export const exportAsDynamicPrompts = async (path: string, array: any[]) => {
   }
   ws.end();
 };
+
+export const isNullrishOrEmptyArray = (
+  value: unknown,
+): value is null | undefined | [] =>
+  value === null ||
+  value === undefined ||
+  (Array.isArray(value) && value.length === 0);
