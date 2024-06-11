@@ -500,6 +500,18 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "spy-family-yor-thorn-princess": [
+    {
+      key: `spy-family-thorn-princess`,
+    },
+  ],
+  "spy-family-yor": [
+    ...defaultPreset,
+    {
+      key: `spy-family-red-sweater`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "tenshi-sama-mahiru": [
     ...defaultPreset,
     {

@@ -1286,6 +1286,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
   },
+  {
+    loraName: `Yor_Forger`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/487426/spy-x-family-or-yor-forger-pdxl?modelVersionId=542026`,
+    ),
+    characterTriggerWordsTags: [`Yor Forger`, `yor briar`, `Thorn Princess`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

@@ -63,6 +63,8 @@ import { pso2BikiniGene } from "./pso2/bikini-gene.mjs";
 import { rokudenashiBikini } from "./rokudenashi/bikini.mjs";
 import { rokudenashiSchoolUniform } from "./rokudenashi/school-uniform.mjs";
 import { sasuoniFirstHighSchoolUniform } from "./sasuoni/first-high-school-uniform.mjs";
+import { spyFamilyRedSweater } from "./spy-family/red-sweater.mjs";
+import { spyFamilyThornPrincess } from "./spy-family/thorn-princess.mjs";
 import { tenshiSamaBlazer } from "./tenshi-sama/blazer.mjs";
 import { toLoveRuSchoolUniform } from "./to-love-ru/school-uniform.mjs";
 
@@ -264,6 +266,8 @@ export const characterOutfitTable = {
     sasuoniFirstHighSchoolUniform(`eft-thighhighs`),
   "sasuoni-first-high-school-uniform-nochekaiser":
     sasuoniFirstHighSchoolUniform(`nochekaiser`),
+  "spy-family-red-sweater": spyFamilyRedSweater(),
+  "spy-family-thorn-princess": spyFamilyThornPrincess(),
   "tenshi-sama-blazer": tenshiSamaBlazer(`mahiru`),
   "to-love-ru-school-uniform-nana": toLoveRuSchoolUniform(`nana`),
 } as const satisfies Record<string, OutfitDefine>;

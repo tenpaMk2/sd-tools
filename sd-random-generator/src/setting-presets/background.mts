@@ -676,6 +676,28 @@ export const backgroundsPreset = {
   ],
   "sasuoni-eft-first-high-school-uniform-pantyhose": defaultPreset,
   "sasuoni-eft-first-high-school-uniform-thighhighs": defaultPreset,
+  "spy-family-red-sweater": [
+    ...defaultPreset,
+    {
+      key: `bedroom-near-clean-floor`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `bedroom-standing`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "spy-family-thorn-princess": [
+    ...defaultPreset,
+    {
+      key: `night-moon`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `night-rooftop`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "tenshi-sama-blazer": [
     ...defaultPreset,
     {

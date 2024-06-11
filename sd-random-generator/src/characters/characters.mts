@@ -103,6 +103,7 @@ import { sasuoniMiyukiEft } from "./sasuoni/sasuoni-miyuki-eft.mjs";
 import { sasuoniMiyuki } from "./sasuoni/sasuoni-miyuki.mjs";
 import { sasuoniMizuki } from "./sasuoni/sasuoni-mizuki.mjs";
 import { sasuoniShizuku } from "./sasuoni/sasuoni-shizuku.mjs";
+import { spyFamilyYor } from "./spy-family/yor.mjs";
 import { tenshiSamaMahiru } from "./tenshi-sama/tenshi-sama-mahiru.mjs";
 import { tenshiTsukiNoel } from "./tenshi-tsuki/noel.mjs";
 import { toLoveRuHarunaEft } from "./to-love-ru/to-love-ru-haruna-eft.mjs";
@@ -265,7 +266,7 @@ export const characterTable = {
   "saijaku-philuffy-eft": saijakuPhiluffyEft(),
   "saijaku-yoruka-eft": saijakuYorukaEft(),
   "sasuoni-shiba-miyuki-eft": sasuoniMiyukiEft(),
-  "sasuoni-shiba-angelina-nochekaiser": sasuoniAngelina(`nochekaiser`),
+  "sasuoni-shiba-angelina-nochekaiser": sasuoniAngelina(`nochekaiser`), // TODO: typo
   "sasuoni-shiba-honoka-nochekaiser": sasuoniHonoka(`nochekaiser`),
   "sasuoni-shiba-mayumi-nochekaiser": sasuoniMayumi(`nochekaiser`),
   "sasuoni-shiba-miyuki-nochekaiser": sasuoniMiyuki(`nochekaiser`),
@@ -273,6 +274,8 @@ export const characterTable = {
   "sasuoni-shiba-shizuku-nochekaiser": sasuoniShizuku(`nochekaiser`),
   "sasuoni-saegusa-mayumi-eft": sasuoniMayumiEft(),
   "sasuoni-mitsui-honoka-eft": sasuoniHonokaEft(),
+  "spy-family-yor-thorn-princess": spyFamilyYor(`eternal2kpp-thorn-princess`),
+  "spy-family-yor": spyFamilyYor(`eternal2kpp`),
   "tenshi-sama-mahiru": tenshiSamaMahiru(`jibunsagasinotabi`),
   "tenshi-tsuki-noel": tenshiTsukiNoel(`zedotasco`),
   "to-love-ru-haruna-eft": toLoveRuHarunaEft(),

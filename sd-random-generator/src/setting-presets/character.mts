@@ -61,6 +61,7 @@ const defaultKeys = [
   `re-zero-rem-eternal2kpp`,
   `sasuoni-shiba-honoka-nochekaiser`,
   `sasuoni-shiba-mizuki-nochekaiser`,
+  `spy-family-yor`,
   `tenshi-sama-mahiru`,
   `tenshi-tsuki-noel`,
   `to-love-ru-momo-lancelot`,
