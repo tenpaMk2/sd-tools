@@ -22,7 +22,7 @@ export const eromangaSenseiElf = (variation: Variation) =>
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`eromanga sensei`],
-    characterNameEntries: [],
+    characterNameEntries: [`yamada elf`],
     characterFeatureEntries: [
       `brown eyes`,
       `blonde hair`,
