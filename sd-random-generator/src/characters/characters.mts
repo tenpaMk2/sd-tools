@@ -29,6 +29,9 @@ import { dumbbellAyakaWiz } from "./dumbbell/dumbbell-ayaka-wiz.mjs";
 import { dumbbellGinaWiz } from "./dumbbell/dumbbell-gina-wiz.mjs";
 import { dumbbellHibikiWiz } from "./dumbbell/dumbbell-hibiki-wiz.mjs";
 import { dumbbellSatomiWiz } from "./dumbbell/dumbbell-satomi-wiz.mjs";
+import { eromangaSenseiElf } from "./eromanga-sensei/elf.mjs";
+import { eromangaSenseiMegumi } from "./eromanga-sensei/megumi.mjs";
+import { eromangaSenseiSagiri } from "./eromanga-sensei/sagiri.mjs";
 import { fateRinLittleJelly } from "./fate/fate-rin-little-jelly.mjs";
 import { futokuNoGuildTokishikko } from "./futoku-no-guild/tokishikko.mjs";
 import { higehiroSayu } from "./higehiro/sayu.mjs";
@@ -187,6 +190,9 @@ export const characterTable = {
   "dumbbell-gina-wiz": dumbbellGinaWiz(),
   "dumbbell-hibiki-wiz": dumbbellHibikiWiz(),
   "dumbbell-satomi-wiz": dumbbellSatomiWiz(),
+  "eromanga-sensei-elf-eternal2kpp": eromangaSenseiElf(`eternal2kpp`),
+  "eromanga-sensei-megumi-eternal2kpp": eromangaSenseiMegumi(`eternal2kpp`),
+  "eromanga-sensei-sagiri-eternal2kpp": eromangaSenseiSagiri(`eternal2kpp`),
   "fate-rin-little-jelly": fateRinLittleJelly(),
   "futoku-no-guild-tokishikko": futokuNoGuildTokishikko(`ibukimakisiko`),
   "higehiro-sayu": higehiroSayu(`nochekaiser`),

@@ -92,6 +92,9 @@ export const outfitsPreset = {
   "dumbbell-gina-wiz": defaultPreset,
   "dumbbell-hibiki-wiz": defaultPreset,
   "dumbbell-satomi-wiz": defaultPreset,
+  "eromanga-sensei-elf-eternal2kpp": defaultPreset,
+  "eromanga-sensei-megumi-eternal2kpp": defaultPreset,
+  "eromanga-sensei-sagiri-eternal2kpp": defaultPreset,
   "fate-rin-little-jelly": [
     ...defaultPreset,
     { key: `fate-little-jelly-rin-sweater`, probability: defaultPreset.length },

@@ -6,6 +6,7 @@ export const allSeriesNameTags = [
   `boku no hero academia`,
   `dumbbell nan kilo moteru?`,
   `dungeon ni deai wo motomeru no wa machigatteiru darou ka`,
+  `eromanga sensei`,
   `fate/kaleid liner prisma illya`,
   `fate/stay night`,
   `fate/unlimited blade works`,

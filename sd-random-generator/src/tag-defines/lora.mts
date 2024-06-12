@@ -1297,6 +1297,39 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
   },
+  {
+    loraName: `Sagiri_Izumi`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/502815/eromanga-sensei-or-sagiri-izumi-pdxl?modelVersionId=558869`,
+    ),
+    characterTriggerWordsTags: [`Sagiri Izumi`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Megumi_Jinno`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/502836/eromanga-sensei-or-megumi-jinno-pdxl?modelVersionId=558887`,
+    ),
+    characterTriggerWordsTags: [`Megumi Jinno`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Elf_Yamada`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/502864/eromanga-sensei-or-elf-yamada-pdxl?modelVersionId=558920`,
+    ),
+    characterTriggerWordsTags: [`Elf Yamada`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
