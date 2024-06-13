@@ -43,6 +43,7 @@ export const allSeriesNameTags = [
   `saijaku muhai no bahamut`,
   `seiken gakuin no maken tsukai`,
   `shy \\(series\\)`,
+  `slow loop`,
   `sono bisque doll wa koi wo suru`,
   `spy x family`,
   `ssss\\.dynazenon`,

@@ -503,6 +503,30 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "slow-loop-hiyori-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `slow-loop-school-uniform-hiyori`,
+      probability: defaultPreset.length / 2,
+    },
+    // TODO: Add others.
+  ],
+  "slow-loop-koharu-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `slow-loop-school-uniform-koharu`,
+      probability: defaultPreset.length / 2,
+    },
+    // TODO: Add others.
+  ],
+  "slow-loop-koi-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `slow-loop-school-uniform-koi`,
+      probability: defaultPreset.length / 2,
+    },
+    // TODO: Add others.
+  ],
   "spy-family-yor-thorn-princess": [
     {
       key: `spy-family-thorn-princess`,

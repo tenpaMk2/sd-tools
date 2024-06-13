@@ -106,6 +106,9 @@ import { sasuoniMiyukiEft } from "./sasuoni/sasuoni-miyuki-eft.mjs";
 import { sasuoniMiyuki } from "./sasuoni/sasuoni-miyuki.mjs";
 import { sasuoniMizuki } from "./sasuoni/sasuoni-mizuki.mjs";
 import { sasuoniShizuku } from "./sasuoni/sasuoni-shizuku.mjs";
+import { slowLoopHiyori } from "./slow-loop/hiyori.mjs";
+import { slowLoopKoharu } from "./slow-loop/koharu.mjs";
+import { slowLoopKoi } from "./slow-loop/koi.mjs";
 import { spyFamilyYor } from "./spy-family/yor.mjs";
 import { tenshiSamaMahiru } from "./tenshi-sama/tenshi-sama-mahiru.mjs";
 import { tenshiTsukiNoel } from "./tenshi-tsuki/noel.mjs";
@@ -280,6 +283,9 @@ export const characterTable = {
   "sasuoni-shiba-shizuku-nochekaiser": sasuoniShizuku(`nochekaiser`),
   "sasuoni-saegusa-mayumi-eft": sasuoniMayumiEft(),
   "sasuoni-mitsui-honoka-eft": sasuoniHonokaEft(),
+  "slow-loop-hiyori-ibukimakisiko": slowLoopHiyori(`ibukimakisiko`),
+  "slow-loop-koharu-ibukimakisiko": slowLoopKoharu(`ibukimakisiko`),
+  "slow-loop-koi-ibukimakisiko": slowLoopKoi(`ibukimakisiko`),
   "spy-family-yor-thorn-princess": spyFamilyYor(`eternal2kpp-thorn-princess`),
   "spy-family-yor": spyFamilyYor(`eternal2kpp`),
   "tenshi-sama-mahiru": tenshiSamaMahiru(`jibunsagasinotabi`),

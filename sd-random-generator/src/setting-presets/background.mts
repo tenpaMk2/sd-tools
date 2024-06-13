@@ -676,6 +676,51 @@ export const backgroundsPreset = {
   ],
   "sasuoni-eft-first-high-school-uniform-pantyhose": defaultPreset,
   "sasuoni-eft-first-high-school-uniform-thighhighs": defaultPreset,
+  "slow-loop-school-uniform-hiyori": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
+  "slow-loop-school-uniform-koharu": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
+  "slow-loop-school-uniform-koi": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "spy-family-red-sweater": [
     ...defaultPreset,
     {

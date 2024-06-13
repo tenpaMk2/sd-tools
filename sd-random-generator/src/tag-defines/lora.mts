@@ -1330,6 +1330,47 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
   },
+  {
+    loraName: `minagi_koharu_PONY_epoch-000020`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/458236/pony-xl-minagi-koharu-slow-loop?modelVersionId=510028`,
+    ),
+    characterTriggerWordsTags: [`minagi koharu`],
+    outfitTriggerTags: [
+      `koharu-default`,
+      `koharu-casual`,
+      `koharu-schooluniform`,
+    ],
+    creator: `Ibukimakisiko`,
+  },
+  {
+    loraName: `minagi_hiyori_PONY_epoch-000020`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/456435/pony-xl-minagi-hiyori-slow-loop?modelVersionId=508106`,
+    ),
+    characterTriggerWordsTags: [`minagi hiyori`],
+    outfitTriggerTags: [
+      `hiyori-default`,
+      `hiyori-maid`,
+      `hiyori-schooluniform`,
+    ],
+    creator: `Ibukimakisiko`,
+  },
+  {
+    loraName: `yoshinaga koi_PONY_last`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/462141/pony-xl-yoshinaga-koi-slow-loop?modelVersionId=514275`,
+    ),
+    characterTriggerWordsTags: [`yoshinaga koi`],
+    outfitTriggerTags: [`yoshinagakoi-casual`, `yoshinagakoi-schooluniform`],
+    creator: `Ibukimakisiko`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
