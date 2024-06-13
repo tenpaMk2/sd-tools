@@ -1,12 +1,25 @@
 import { CharacterDefine } from "../characters.mjs";
 
-export const nonNonBiyoriHotaruNotekaga = () =>
+type Variation = `notekaga`;
+
+const lora = {
+  notekaga: {
+    tag: `ichijou_hotaru-pony-v1`,
+    probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+  },
+} as const satisfies Record<Variation, CharacterDefine["lora"]>;
+
+const loraCharacterTriggerWordEntries = {
+  notekaga: [`ichijou hotaru`],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine["loraCharacterTriggerWordEntries"]
+>;
+
+export const nonNonBiyoriHotaru = (variation: Variation) =>
   ({
-    lora: {
-      tag: `ichijou_hotaru-pony-v1`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
-    },
-    loraCharacterTriggerWordEntries: [`ichijou hotaru`],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`non non biyori`],
     characterNameEntries: [`ichijou hotaru`],
     characterFeatureEntries: [

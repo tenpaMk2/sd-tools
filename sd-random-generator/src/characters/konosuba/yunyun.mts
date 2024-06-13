@@ -1,9 +1,22 @@
 import { CharacterDefine } from "../characters.mjs";
 
-export const konosubaYunyun = () =>
+type Variation = `no-lora`;
+
+const lora = {
+  "no-lora": null,
+} as const satisfies Record<Variation, CharacterDefine[`lora`]>;
+
+const loraCharacterTriggerWordEntries = {
+  "no-lora": [],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine[`loraCharacterTriggerWordEntries`]
+>;
+
+export const konosubaYunyun = (variation: Variation) =>
   ({
-    lora: null,
-    loraCharacterTriggerWordEntries: [],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`kono subarashii sekai ni shukufuku wo!`],
     characterNameEntries: [`yunyun \\(konosuba\\)`],
     characterFeatureEntries: [

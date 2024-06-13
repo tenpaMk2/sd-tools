@@ -23,7 +23,7 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine["loraCharacterTriggerWordEntries"]
 >;
 
-const parts = {
+const characterFeatureEntries = {
   ahoge: {
     "no-lora": [`antenna hair`],
     "h_madoka": [`antenna hair`],
@@ -49,7 +49,7 @@ export const amaburiIsuzu = (variation: Variation) =>
       `hair between eyes`,
       `hair intakes`,
       `sidelocks`,
-      ...parts.ahoge[variation],
+      ...characterFeatureEntries.ahoge[variation],
       `hair bow`,
       `white hair bow`,
       `thick thighs`,

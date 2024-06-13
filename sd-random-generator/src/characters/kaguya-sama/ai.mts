@@ -1,13 +1,22 @@
 import { CharacterDefine } from "../characters.mjs";
 
-/**
- * No Lora version of the character.
- * Use it with pre-trained checkmodel such as Pony.
- */
-export const kaguyaSamaAi = () =>
+type Variation = `no-lora`;
+
+const lora = {
+  "no-lora": null,
+} as const satisfies Record<Variation, CharacterDefine[`lora`]>;
+
+const loraCharacterTriggerWordEntries = {
+  "no-lora": [],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine[`loraCharacterTriggerWordEntries`]
+>;
+
+export const kaguyaSamaAi = (variation: Variation) =>
   ({
-    lora: null,
-    loraCharacterTriggerWordEntries: [],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [
       `kaguya-sama wa kokurasetai ~tensai-tachi no renai zunousen~`,
     ],

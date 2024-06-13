@@ -21,12 +21,12 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine["loraCharacterTriggerWordEntries"]
 >;
 
-const parts = {
-  eyebrows: {
+const characterFeatureEntries = {
+  "eyebrows": {
     nochekaiser: [`eyebrows`],
     eternal2kpp: [],
   },
-  hairOrnament: {
+  "hair-ornament": {
     nochekaiser: [`hair ornament`],
     eternal2kpp: [`hair ornament`],
   },
@@ -42,11 +42,11 @@ export const newGameAoba = (variation: Variation) =>
     seriesNameEntries: [`new game!`],
     characterNameEntries: [`suzukaze aoba`],
     characterFeatureEntries: [
-      ...parts.eyebrows[variation],
+      ...characterFeatureEntries.eyebrows[variation],
       `purple eyes`,
       `long hair`,
       `purple hair`,
-      ...parts.hairOrnament[variation],
+      ...characterFeatureEntries["hair-ornament"][variation],
       `twintails`,
     ],
     breastSize: `medium breasts`,

@@ -2,13 +2,24 @@ import { CharacterDefine } from "../characters.mjs";
 
 type Variation = `lancelot`;
 
+const lora = {
+  lancelot: {
+    tag: `nanadevilXLPonyV1`,
+    probabilityAndWeights: [{ probability: 1, weight: 0.9 }],
+  },
+} as const satisfies Record<Variation, CharacterDefine["lora"]>;
+
+const loraCharacterTriggerWordEntries = {
+  lancelot: [`nanadevil`],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine["loraCharacterTriggerWordEntries"]
+>;
+
 export const toLoveRuNana = (variation: Variation) =>
   ({
-    lora: {
-      tag: `nanadevilXLPonyV1`,
-      probabilityAndWeights: [{ probability: 1, weight: 0.9 }],
-    },
-    loraCharacterTriggerWordEntries: [`nanadevil`],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`to love-ru`, `to love-ru darkness`],
     characterNameEntries: [`nana asta deviluke`],
     characterFeatureEntries: [

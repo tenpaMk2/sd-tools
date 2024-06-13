@@ -21,8 +21,8 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine["loraCharacterTriggerWordEntries"]
 >;
 
-const parts = {
-  hairColor: {
+const characterFeatureEntries = {
+  "hair-color": {
     nochekaiser: [`purple hair`],
     eternal2kpp: [`brown hair`],
   },
@@ -39,7 +39,7 @@ export const newGameHifumi = (variation: Variation) =>
     characterNameEntries: [`takimoto hifumi`],
     characterFeatureEntries: [
       `blue eyes`,
-      ...parts.hairColor[variation],
+      ...characterFeatureEntries["hair-color"][variation],
       `long hair`,
       `ponytail`,
       `blunt bangs`,

@@ -1,12 +1,25 @@
 import { CharacterDefine } from "../characters.mjs";
 
-export const isekaiOjisanSuiNochekaiser = () =>
+type Variation = `nochekaiser`;
+
+const lora = {
+  nochekaiser: {
+    tag: `tsundere-elf-s1-ponyxl-lora-nochekaiser`,
+    probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+  },
+} as const satisfies Record<Variation, CharacterDefine[`lora`]>;
+
+const loraCharacterTriggerWordEntries = {
+  nochekaiser: [`tsundere elf`],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine[`loraCharacterTriggerWordEntries`]
+>;
+
+export const isekaiOjisanSui = (variation: Variation) =>
   ({
-    lora: {
-      tag: `tsundere-elf-s1-ponyxl-lora-nochekaiser`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
-    },
-    loraCharacterTriggerWordEntries: [`tsundere elf`],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`isekai ojisan`],
     characterNameEntries: [`sui \\(isekai ojisan\\)`],
     characterFeatureEntries: [

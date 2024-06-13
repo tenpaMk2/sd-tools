@@ -1,12 +1,25 @@
 import { CharacterDefine } from "../characters.mjs";
 
-export const kagejitsuAlphaNochekaiser = () =>
+type Variation = `nochekaiser`;
+
+const lora = {
+  nochekaiser: {
+    tag: `shadow-alpha-ponyxl-lora-nochekaiser`,
+    probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+  },
+} as const satisfies Record<Variation, CharacterDefine[`lora`]>;
+
+const loraCharacterTriggerWordEntries = {
+  nochekaiser: [`alpha`],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine[`loraCharacterTriggerWordEntries`]
+>;
+
+export const kagejitsuAlpha = (variation: Variation) =>
   ({
-    lora: {
-      tag: `shadow-alpha-ponyxl-lora-nochekaiser`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
-    },
-    loraCharacterTriggerWordEntries: [`alpha`],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`kage no jitsuryokusha ni naritakute!`],
     characterNameEntries: [`alpha \\(kage no jitsuryokusha ni naritakute!\\)`],
     characterFeatureEntries: [

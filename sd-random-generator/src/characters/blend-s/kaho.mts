@@ -2,6 +2,16 @@ import { CharacterDefine } from "../characters.mjs";
 
 type Variation = `ibukimakisiko` | `ibukimakisiko-double-bun`;
 
+const characterFeatureEntries = {
+  "hair-style": {
+    "ibukimakisiko": [`long hair`, `twintails`],
+    "ibukimakisiko-double-bun": [`short hair`, `double bun`],
+  },
+} as const satisfies Record<
+  string,
+  Record<Variation, CharacterDefine["characterFeatureEntries"]>
+>;
+
 export const blendSKaho = (variation: Variation) =>
   ({
     lora: {
@@ -14,8 +24,7 @@ export const blendSKaho = (variation: Variation) =>
     characterFeatureEntries: [
       `blue eyes`,
       `blonde hair`,
-      variation === `ibukimakisiko-double-bun` ? `short hair` : `long hair`,
-      variation === `ibukimakisiko-double-bun` ? `double bun` : `twintails`,
+      ...characterFeatureEntries["hair-style"][variation],
       `hair between eyes`,
     ],
     breastSize: `large breasts`,

@@ -1,39 +1,37 @@
 import { CharacterDefine } from "../characters.mjs";
 
-type Variation = `lancelot`;
-
+type Variation = `notekaga`;
 const lora = {
-  lancelot: {
-    tag: `momodevilvXLPonyV1`,
-    probabilityAndWeights: [{ probability: 1, weight: 0.7 }],
+  notekaga: {
+    tag: `akoya_matama-pony-v1`,
+    probabilityAndWeights: [{ probability: 1, weight: 0.9 }],
   },
 } as const satisfies Record<Variation, CharacterDefine["lora"]>;
 
 const loraCharacterTriggerWordEntries = {
-  lancelot: [`momodevil`],
+  notekaga: [`akoya matama`],
 } as const satisfies Record<
   Variation,
   CharacterDefine["loraCharacterTriggerWordEntries"]
 >;
 
-export const toLoveRuMomo = (variation: Variation) =>
+export const mahoakoMatama = (variation: Variation) =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
-    seriesNameEntries: [`to love-ru`, `to love-ru darkness`],
-    characterNameEntries: [`momo velia deviluke`],
+    seriesNameEntries: [`mahou shoujo ni akogarete`],
+    characterNameEntries: [`akoya matama`, `loco musica`],
     characterFeatureEntries: [
-      `purple eyes`,
-      `pink hair`,
-      `short hair`,
-      `bob cut`,
+      `aqua eyes`,
+      `eyelashes`,
+      `multicolored hair`,
+      `streaked hair`,
+      `brown hair`,
+      `aqua hair`,
+      `two side up`,
       `hair between eyes`,
-      `hair ornament`,
-      `hair flower`,
-      `tail`,
-      `demon tail`,
     ],
     breastSize: `large breasts`,
-    fang: false,
+    fang: true,
     emotionType: `cute`,
   }) as const satisfies CharacterDefine;

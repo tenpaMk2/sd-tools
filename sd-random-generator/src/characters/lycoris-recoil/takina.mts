@@ -2,7 +2,7 @@ import { CharacterDefine } from "../characters.mjs";
 
 type Variation = `eft` | `nochekaiser`;
 
-const loraVariation = {
+const lora = {
   eft: {
     tag: `takina-lycoreco-01`,
     probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
@@ -11,20 +11,20 @@ const loraVariation = {
     tag: `takina-inoue-ponyxl-lora-nochekaiser`,
     probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
   },
-} as const satisfies { [k in Variation]: CharacterDefine["lora"] };
+} as const satisfies Record<Variation, CharacterDefine[`lora`]>;
 
-const loraCharacterTriggerWordEntriesVariation = {
+const loraCharacterTriggerWordEntries = {
   eft: [`takina inoue`],
   nochekaiser: [],
-} as const satisfies {
-  [k in Variation]: CharacterDefine["loraCharacterTriggerWordEntries"];
-};
+} as const satisfies Record<
+  Variation,
+  CharacterDefine[`loraCharacterTriggerWordEntries`]
+>;
 
 export const lycorisRecoilTakina = (variation: Variation) =>
   ({
-    lora: loraVariation[variation],
-    loraCharacterTriggerWordEntries:
-      loraCharacterTriggerWordEntriesVariation[variation],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`lycoris recoil`],
     characterNameEntries: [`inoue takina`],
     characterFeatureEntries: [

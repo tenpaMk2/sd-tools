@@ -1,12 +1,25 @@
 import { CharacterDefine } from "../characters.mjs";
 
-export const pso2GeneOvernerd = () =>
+type Variation = `overnerd`;
+
+const lora = {
+  overnerd: {
+    tag: `gene_bikini`,
+    probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+  },
+} as const satisfies Record<Variation, CharacterDefine["lora"]>;
+
+const loraCharacterTriggerWordEntries = {
+  overnerd: [],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine["loraCharacterTriggerWordEntries"]
+>;
+
+export const pso2Gene = (variation: Variation) =>
   ({
-    lora: {
-      tag: `gene_bikini`,
-      probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
-    },
-    loraCharacterTriggerWordEntries: [],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`phantasy star online 2`],
     characterNameEntries: [`gene \\(pso2\\)`],
     characterFeatureEntries: [

@@ -1,15 +1,28 @@
 import { CharacterDefine } from "../characters.mjs";
 
-export const isCeciliaNochekaiser = () =>
+type Variation = `nochekaiser`;
+
+const lora = {
+  nochekaiser: {
+    tag: `cecilia-alcott-s2-ponyxl-lora-nochekaiser`,
+    probabilityAndWeights: [
+      { probability: 1, weight: 0.8 },
+      { probability: 1, weight: 0.6 },
+    ],
+  },
+} as const satisfies Record<Variation, CharacterDefine[`lora`]>;
+
+const loraCharacterTriggerWordEntries = {
+  nochekaiser: [],
+} as const satisfies Record<
+  Variation,
+  CharacterDefine[`loraCharacterTriggerWordEntries`]
+>;
+
+export const isCecilia = (variation: Variation) =>
   ({
-    lora: {
-      tag: `cecilia-alcott-s2-ponyxl-lora-nochekaiser`,
-      probabilityAndWeights: [
-        { probability: 1, weight: 0.8 },
-        { probability: 1, weight: 0.6 },
-      ],
-    },
-    loraCharacterTriggerWordEntries: [],
+    lora: lora[variation],
+    loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`infinite stratos`],
     characterNameEntries: [`cecilia alcott`],
     characterFeatureEntries: [

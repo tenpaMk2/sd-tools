@@ -44,6 +44,7 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "amaburi-isuzu-no-lora": defaultPreset,
   "amaburi-isuzu-nochekaiser": [
     ...defaultPreset,
     {
@@ -51,7 +52,6 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
-  "amaburi-isuzu": defaultPreset,
   "blend-s-kaho-ibukimakisiko-double-bun": [
     {
       key: `blend-s-swimsuit-kaho`,
@@ -73,7 +73,7 @@ export const outfitsPreset = {
   "danmachi-eina-eternal2kpp": [...defaultPreset],
   "danmachi-haruhime-eternal2kpp": [...defaultPreset],
   "danmachi-hestia-eternal2kpp": [...defaultPreset],
-  "danmachi-hestia": [
+  "danmachi-hestia-no-lora": [
     ...defaultPreset,
     { key: `danmachi-nochekaiser-hestia`, probability: defaultPreset.length },
   ],
@@ -86,14 +86,14 @@ export const outfitsPreset = {
     ...defaultPreset,
     { key: `fate-little-jelly-rin-sweater`, probability: defaultPreset.length },
   ],
-  "futoku-no-guild-tokishikko": [
+  "futoku-no-guild-tokishikko-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `futoku-no-guild-tokishikko-dress`,
       probability: defaultPreset.length / 2,
     },
   ],
-  "higehiro-sayu": [
+  "higehiro-sayu-nochekaiser": [
     ...defaultPreset,
     {
       key: `higehiro-school-uniform-sayu`,
@@ -207,7 +207,7 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "kaguya-sama-ai": [
+  "kaguya-sama-ai-no-lora": [
     ...defaultPreset,
     {
       key: `kaguya-sama-shuuchiin-academy-school-uniform-ai`,
@@ -249,7 +249,7 @@ export const outfitsPreset = {
   //     probability: defaultPreset.length,
   //   },
   // ],
-  "konosuba-megumin": [
+  "konosuba-megumin-no-lora": [
     ...defaultPreset,
     {
       key: `konosuba-megumin-dress-adventurer`,
@@ -260,7 +260,7 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "konosuba-yunyun": [
+  "konosuba-yunyun-no-lora": [
     ...defaultPreset,
     {
       key: `konosuba-yunyun-shirt`,
@@ -275,7 +275,7 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "lycoris-recoil-chisato": defaultPreset,
+  "lycoris-recoil-chisato-no-lora": defaultPreset,
   "lycoris-recoil-takina-eft": defaultPreset,
   "lycoris-recoil-takina-nochekaiser": [
     ...defaultPreset,
@@ -347,7 +347,7 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "prisma-illya-illya": [
+  "prisma-illya-illya-flujoru": [
     ...defaultPreset,
     {
       key: `prisma-illya-magical-girl-illya`,
@@ -362,12 +362,12 @@ export const outfitsPreset = {
     },
   ],
   "re-zero-emilia-eternal2kpp": defaultPreset,
-  "re-zero-emilia": defaultPreset,
+  "re-zero-emilia-no-lora": defaultPreset,
   "re-zero-ram-eternal2kpp": defaultPreset,
-  "re-zero-ram": defaultPreset,
+  "re-zero-ram-no-lora": defaultPreset,
   "re-zero-rem-eternal2kpp": defaultPreset,
-  "re-zero-rem": defaultPreset,
-  "rokudenashi-rumia": [
+  "re-zero-rem-no-lora": defaultPreset,
+  "rokudenashi-rumia-little-jelly": [
     ...defaultPreset,
     {
       key: `rokudenashi-bikini-rumia`,
@@ -382,42 +382,42 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "sasuoni-shiba-angelina-nochekaiser": [
+  "sasuoni-angelina-nochekaiser": [
     ...defaultPreset,
     {
       key: `sasuoni-first-high-school-uniform-nochekaiser`,
       probability: defaultPreset.length / 2,
     },
   ],
-  "sasuoni-shiba-honoka-nochekaiser": [
+  "sasuoni-honoka-nochekaiser": [
     ...defaultPreset,
     {
       key: `sasuoni-first-high-school-uniform-nochekaiser`,
       probability: defaultPreset.length / 2,
     },
   ],
-  "sasuoni-shiba-mayumi-nochekaiser": [
+  "sasuoni-mayumi-nochekaiser": [
     ...defaultPreset,
     {
       key: `sasuoni-first-high-school-uniform-nochekaiser`,
       probability: defaultPreset.length / 2,
     },
   ],
-  "sasuoni-shiba-miyuki-nochekaiser": [
+  "sasuoni-miyuki-nochekaiser": [
     ...defaultPreset,
     {
       key: `sasuoni-first-high-school-uniform-nochekaiser`,
       probability: defaultPreset.length / 2,
     },
   ],
-  "sasuoni-shiba-mizuki-nochekaiser": [
+  "sasuoni-mizuki-nochekaiser": [
     ...defaultPreset,
     {
       key: `sasuoni-first-high-school-uniform-nochekaiser`,
       probability: defaultPreset.length / 2,
     },
   ],
-  "sasuoni-shiba-shizuku-nochekaiser": [
+  "sasuoni-shizuku-nochekaiser": [
     ...defaultPreset,
     {
       key: `sasuoni-first-high-school-uniform-nochekaiser`,
@@ -448,35 +448,30 @@ export const outfitsPreset = {
     },
     // TODO: Add others.
   ],
-  "spy-family-yor-thorn-princess": [
+  "spy-family-yor-eternal2kpp-thorn-princess": [
     {
       key: `spy-family-thorn-princess`,
     },
   ],
-  "spy-family-yor": [
+  "spy-family-yor-eternal2kpp": [
     ...defaultPreset,
     {
       key: `spy-family-red-sweater`,
       probability: defaultPreset.length / 2,
     },
   ],
-  "tenshi-sama-mahiru": [
+  "tenshi-sama-mahiru-jibunsagasinotabi": [
     ...defaultPreset,
     {
       key: `tenshi-sama-blazer`,
       probability: defaultPreset.length / 2,
     },
   ],
-  "tenshi-tsuki-noel": [
+  "tenshi-tsuki-noel-zedotasco": [
     ...defaultPreset,
     // TODO: other outfits
   ],
-  "to-love-ru-haruna-eft": defaultPreset,
-  "to-love-ru-lala-eft": defaultPreset,
-  "to-love-ru-mea-eft": defaultPreset,
-  "to-love-ru-momo-eft": defaultPreset,
   "to-love-ru-momo-lancelot": defaultPreset,
-  "to-love-ru-nana-eft": defaultPreset,
   "to-love-ru-nana-lancelot": [
     ...defaultPreset,
     {
@@ -484,9 +479,7 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "to-love-ru-yami-eft": defaultPreset,
-  "to-love-ru-yui-eft": defaultPreset,
-  "working-popura": defaultPreset,
+  "working-popura-ibukimakisiko": defaultPreset,
 } as const satisfies Record<
   OutfitKey | `default` | `temp` | CharacterKey,
   OutfitSetting[]
