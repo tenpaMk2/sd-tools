@@ -77,8 +77,6 @@ import { toLoveRuMomo } from "./to-love-ru/to-love-ru-momo-lancelot.mjs";
 import { toLoveRuNana } from "./to-love-ru/to-love-ru-nana.mjs";
 import { workingPopura } from "./working/working-popura.mjs";
 
-// TODO: Remove SD1.5 Lora characters.
-
 export type EmotionType =
   | `cute`
   | `serious`
