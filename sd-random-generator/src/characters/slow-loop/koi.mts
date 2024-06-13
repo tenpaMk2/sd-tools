@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `ibukimakisiko`;
 
@@ -34,5 +33,5 @@ export const slowLoopKoi = (variation: Variation) =>
     ],
     breastSize: `small breasts`,
     fang: false,
-    emotionEntries: emotionPreset.deadpanned,
+    emotionType: `emotionless`,
   }) as const satisfies CharacterDefine;

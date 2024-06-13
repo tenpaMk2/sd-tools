@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `no-lora` | `eternal2kpp`;
 
@@ -31,5 +30,5 @@ export const danmachiHestia = (variation: Variation) =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

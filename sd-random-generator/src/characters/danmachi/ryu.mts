@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `eternal2kpp`;
 
@@ -27,5 +26,5 @@ export const danmachiRyu = (variation: Variation) =>
     ],
     breastSize: `medium breasts`,
     fang: false,
-    emotionEntries: emotionPreset.uptight,
+    emotionType: `tsundere`,
   }) as const satisfies CharacterDefine;

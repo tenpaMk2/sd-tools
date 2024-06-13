@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `nochekaiser`;
 
@@ -27,5 +26,5 @@ export const sasuoniMiyuki = (variation: Variation) =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.serious,
+    emotionType: `serious`,
   }) as const satisfies CharacterDefine;

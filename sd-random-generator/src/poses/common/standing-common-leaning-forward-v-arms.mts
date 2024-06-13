@@ -1,3 +1,4 @@
+import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine } from "../poses.mjs";
 
 type Variation = `from-above` | `from-below` | `from-horizontal`;
@@ -67,4 +68,5 @@ export const standingLeaningForwardVArms = (variation: Variation) =>
       aroundBody: true,
     },
     specialVisibility: variationParts.specialVisibility[variation],
+    emotionProbabilitiesAtPose: emotionPreset["all-flat"],
   }) as const satisfies PoseDefine;

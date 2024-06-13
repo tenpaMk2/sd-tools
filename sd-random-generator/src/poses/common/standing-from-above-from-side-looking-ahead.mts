@@ -1,3 +1,4 @@
+import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine } from "../poses.mjs";
 
 export const standingFromAboveFromSideLookingAhead = {
@@ -40,4 +41,5 @@ export const standingFromAboveFromSideLookingAhead = {
     insideOfThighs: false,
     upskirt: false,
   },
+  emotionProbabilitiesAtPose: emotionPreset["all-flat"],
 } as const satisfies PoseDefine;

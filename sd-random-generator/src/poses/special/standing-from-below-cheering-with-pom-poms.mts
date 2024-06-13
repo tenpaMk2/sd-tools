@@ -1,3 +1,4 @@
+import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine } from "../poses.mjs";
 
 export const standingFromBelowCheeringWithPomPoms = {
@@ -42,4 +43,5 @@ export const standingFromBelowCheeringWithPomPoms = {
     insideOfThighs: false,
     upskirt: true,
   },
+  emotionProbabilitiesAtPose: emotionPreset["all-flat"],
 } as const satisfies PoseDefine;

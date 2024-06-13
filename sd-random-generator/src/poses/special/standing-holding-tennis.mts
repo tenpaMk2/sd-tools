@@ -1,4 +1,5 @@
 import { PoseTag } from "../../tag-defines/adapter.mjs";
+import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine, PoseSpecialVisibility } from "../poses.mjs";
 
 type Variation = `from-above` | `from-below` | `from-horizontal`;
@@ -59,4 +60,5 @@ export const standingHoldingTennis = (variation: Variation) =>
       insideOfThighs: false,
       upskirt: upskirt[variation],
     },
+    emotionProbabilitiesAtPose: emotionPreset["all-flat"],
   }) as const satisfies PoseDefine;

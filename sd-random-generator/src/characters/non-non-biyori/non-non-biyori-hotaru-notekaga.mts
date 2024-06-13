@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const nonNonBiyoriHotaruNotekaga = () =>
   ({
@@ -20,5 +19,5 @@ export const nonNonBiyoriHotaruNotekaga = () =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

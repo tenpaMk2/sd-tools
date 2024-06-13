@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `little-jelly`;
 
@@ -23,5 +22,5 @@ export const rokudenashiRumia = (variation: Variation) =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

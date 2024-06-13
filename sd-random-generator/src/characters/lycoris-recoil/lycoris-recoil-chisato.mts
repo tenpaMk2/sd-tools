@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `no-lora` | `eft` | `nochekaiser`;
 
@@ -41,5 +40,5 @@ export const lycorisRecoilChisato = (variation: Variation) =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const prismaIllyaIllyaBeastAm7coffeelove = () =>
   ({
@@ -32,5 +31,5 @@ export const prismaIllyaIllyaBeastAm7coffeelove = () =>
     ],
     breastSize: `small breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

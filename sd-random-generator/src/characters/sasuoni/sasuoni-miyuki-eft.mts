@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const sasuoniMiyukiEft = () =>
   ({
@@ -28,5 +27,5 @@ export const sasuoniMiyukiEft = () =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

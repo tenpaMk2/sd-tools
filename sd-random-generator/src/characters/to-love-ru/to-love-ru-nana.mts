@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `lancelot`;
 
@@ -21,5 +20,5 @@ export const toLoveRuNana = (variation: Variation) =>
     ],
     breastSize: `small breasts`,
     fang: true,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `mesugaki`,
   }) as const satisfies CharacterDefine;

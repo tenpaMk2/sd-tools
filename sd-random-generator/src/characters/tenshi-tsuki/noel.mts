@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `zedotasco`;
 
@@ -21,5 +20,5 @@ export const tenshiTsukiNoel = (variation: Variation) =>
     ],
     breastSize: `medium breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

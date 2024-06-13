@@ -41,4 +41,8 @@ export const sittingOnFromHorizontalSinging = {
     insideOfThighs: true,
     upskirt: false,
   },
+  emotionProbabilitiesAtPose: {
+    "embarrassed-scowl": 3,
+    "doyagao": 1,
+  },
 } as const satisfies PoseDefine;

@@ -1,3 +1,4 @@
+import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine } from "../poses.mjs";
 
 export const standingFromHorizontalHeartHands = {
@@ -39,4 +40,5 @@ export const standingFromHorizontalHeartHands = {
     insideOfThighs: true,
     upskirt: false,
   },
+  emotionProbabilitiesAtPose: emotionPreset["all-flat"],
 } as const satisfies PoseDefine;

@@ -10,6 +10,7 @@ import {
   allVisibilityKeys,
   tagVisibilities,
 } from "@tenpamk2/sd-tag-defines";
+import { EmotionType } from "./characters/characters.mjs";
 import {
   BackgroundCollectedData,
   CharacterCollectedData,
@@ -17,8 +18,12 @@ import {
   OutfitCollectedData,
   PoseCollectedData,
 } from "./collector.mjs";
+import { emotionProbabilitiesAtEmotionType } from "./emotions/emotion-probabilities-at-emotion-type.mjs";
+import { EmotionKey, emotionTable } from "./emotions/emotions.mjs";
+import { getKeys, pickRandomly } from "./libs/utility.mjs";
 import { OutfitDefine, UnderboobLevelOrder } from "./outfits/outfits.mjs";
 import {
+  PoseDefine,
   PoseSpecialVisibility,
   PoseUnderboobLevelOrder,
 } from "./poses/poses.mjs";
@@ -39,6 +44,33 @@ import {
   LoraCharacterTriggerWordsTag,
   LoraOutfitTriggerWordsTag,
 } from "./tag-defines/lora.mjs";
+
+const pickEmotionTokens = (
+  emotionProbabilitiesAtPose: PoseDefine["emotionProbabilitiesAtPose"],
+  emotionType: EmotionType,
+): Token<EmotionTag>[] => {
+  const emotionProbabilityWeight = new Map<
+    EmotionKey,
+    { key: EmotionKey; probability: number }
+  >();
+  for (const key of getKeys(emotionProbabilitiesAtPose)) {
+    const probabilityOfPose = emotionProbabilitiesAtPose[key]!;
+    const probabilityOfEmotionType =
+      emotionProbabilitiesAtEmotionType[emotionType][key];
+
+    emotionProbabilityWeight.set(key, {
+      key,
+      probability: probabilityOfPose * probabilityOfEmotionType,
+    });
+  }
+  const emotion = pickRandomly([...emotionProbabilityWeight.values()]);
+  const emotionDefine = emotionTable[emotion.key];
+  const emotionTokens = PatternCollection.createTokensInstantly<EmotionTag>(
+    emotionDefine.entries,
+  );
+
+  return emotionTokens;
+};
 
 // TODO: bug: `Rem` LoraとTriggerWordsの `Rem` が重複してると削除される。
 const setHeavyWeightOne = <T extends Tag>(
@@ -236,10 +268,6 @@ const buildCore = ({
       characterData.character.breastSize,
     ]);
 
-  const emotionTokens = PatternCollection.createTokensInstantly<EmotionTag>(
-    characterData.character.emotionEntries,
-  );
-
   if (outfitData.outfit.lora) {
     const loraPicker = new LoraPicker(outfitData.outfit.lora);
     loraStrings.push(loraPicker.pick());
@@ -269,6 +297,12 @@ const buildCore = ({
     poseData.pose.entries,
   );
 
+  const emotionTokens = pickEmotionTokens(
+    poseData.pose.emotionProbabilitiesAtPose,
+    characterData.character.emotionType,
+  );
+
+  // Reconsider moving `fang` to `SpecialTag`.
   const newEmotionTokens = emotionTokens.some(
     ({ tag }) => tag === `open mouth` && characterData.character.fang,
   )

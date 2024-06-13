@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `no-lora` | `eternal2kpp`;
 
@@ -37,5 +36,5 @@ export const reZeroRam = (variation: Variation) =>
     ],
     breastSize: `small breasts`,
     fang: false,
-    emotionEntries: emotionPreset.serious,
+    emotionType: `serious`,
   }) as const satisfies CharacterDefine;

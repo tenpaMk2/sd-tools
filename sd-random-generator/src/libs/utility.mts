@@ -84,3 +84,19 @@ export const isNullrishOrEmptyArray = (
   value === null ||
   value === undefined ||
   (Array.isArray(value) && value.length === 0);
+
+// TODO: Use this in other places.
+export const pickRandomly = <T extends { probability: number }>(items: T[]) => {
+  if (items.length === 0)
+    throw new Error(`Unexpected error: Cannot pick because of no items.`);
+
+  const total = items.reduce((acc, item) => acc + item.probability, 0);
+
+  const random = Math.random();
+  let sum = 0;
+  for (const item of items) {
+    sum += item.probability;
+    if (random <= sum / total) return item;
+  }
+  throw new Error(`Unexpected error: No item was picked.`);
+};

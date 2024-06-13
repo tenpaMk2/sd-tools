@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const pso2GeneOvernerd = () =>
   ({
@@ -23,5 +22,5 @@ export const pso2GeneOvernerd = () =>
     ],
     breastSize: `large breasts`,
     fang: true,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

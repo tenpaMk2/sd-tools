@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `nochekaiser` | `eternal2kpp`;
 
@@ -52,5 +51,5 @@ export const newGameAoba = (variation: Variation) =>
     ],
     breastSize: `medium breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

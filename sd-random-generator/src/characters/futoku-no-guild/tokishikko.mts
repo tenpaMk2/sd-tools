@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `ibukimakisiko`;
 
@@ -28,5 +27,5 @@ export const futokuNoGuildTokishikko = (variation: Variation) =>
     ],
     breastSize: `small breasts`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

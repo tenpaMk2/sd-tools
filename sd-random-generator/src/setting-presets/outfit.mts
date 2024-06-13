@@ -29,15 +29,14 @@ export const outfitsPreset = {
       {
         key: `colorful-backgrounds-standing`,
         poses: [
-          { key: `standing-from-above-leaning-forward-v-arms` },
-          { key: `standing-from-below-leaning-forward-v-arms` },
-          { key: `standing-from-horizontal-leaning-forward-v-arms` },
+          // { key: `standing-from-above-leaning-forward-v-arms` },
+          // { key: `standing-from-below-leaning-forward-v-arms` },
+          { key: `standing-from-horizontal-contrapposto` },
         ],
       },
     ],
   })),
 
-  "amaburi-isuzu-little-jelly": defaultPreset,
   "amaburi-isuzu-h-madoka": [
     ...defaultPreset,
     {
@@ -70,28 +69,16 @@ export const outfitsPreset = {
     ...defaultPreset,
     { key: `blend-s-waitress-mafuyu`, probability: defaultPreset.length / 2 },
   ],
-  "danmachi-aiz-eft": defaultPreset,
   "danmachi-aiz-eternal2kpp": [...defaultPreset],
-  "danmachi-eina-eft": defaultPreset,
   "danmachi-eina-eternal2kpp": [...defaultPreset],
-  "danmachi-haruhime-eft": defaultPreset,
   "danmachi-haruhime-eternal2kpp": [...defaultPreset],
-  "danmachi-hestia-eft": defaultPreset,
   "danmachi-hestia-eternal2kpp": [...defaultPreset],
-  "danmachi-hestia-nochekaiser": defaultPreset,
   "danmachi-hestia": [
     ...defaultPreset,
     { key: `danmachi-nochekaiser-hestia`, probability: defaultPreset.length },
   ],
-  "danmachi-lili-eft": defaultPreset,
   "danmachi-lili-eternal2kpp": [...defaultPreset],
-  "danmachi-ryu-eft": defaultPreset,
   "danmachi-ryu-eternal2kpp": [...defaultPreset],
-  "dumbbell-akemi-wiz": defaultPreset,
-  "dumbbell-ayaka-wiz": defaultPreset,
-  "dumbbell-gina-wiz": defaultPreset,
-  "dumbbell-hibiki-wiz": defaultPreset,
-  "dumbbell-satomi-wiz": defaultPreset,
   "eromanga-sensei-elf-eternal2kpp": defaultPreset,
   "eromanga-sensei-megumi-eternal2kpp": defaultPreset,
   "eromanga-sensei-sagiri-eternal2kpp": defaultPreset,
@@ -181,7 +168,6 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "is-cecilia-og-turles": defaultPreset,
   "isekai-ojisan-alicia-nochekaiser": [
     ...defaultPreset,
     {
@@ -221,24 +207,10 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "kaguya-sama-ai-nochekaiser": [
-    ...defaultPreset,
-    {
-      key: `kaguya-sama-shuuchiin-academy-school-uniform-ai-nochekaiser`,
-      probability: defaultPreset.length,
-    },
-  ],
   "kaguya-sama-ai": [
     ...defaultPreset,
     {
       key: `kaguya-sama-shuuchiin-academy-school-uniform-ai`,
-      probability: defaultPreset.length,
-    },
-  ],
-  "kaguya-sama-chika-nochekaiser": [
-    ...defaultPreset,
-    {
-      key: `kaguya-sama-shuuchiin-academy-school-uniform-chika-nochekaiser`,
       probability: defaultPreset.length,
     },
   ],
@@ -256,13 +228,6 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "kaguya-sama-kaguya-nochekaiser": [
-    ...defaultPreset,
-    {
-      key: `kaguya-sama-shuuchiin-academy-school-uniform-kaguya-nochekaiser`,
-      probability: defaultPreset.length,
-    },
-  ],
   "kaguya-sama-kaguya-eternal2kpp": [
     ...defaultPreset,
     {
@@ -277,20 +242,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "kaguya-sama-miko-nochekaiser": [
-    ...defaultPreset,
-    {
-      key: `kaguya-sama-shuuchiin-academy-school-uniform-miko-nochekaiser`,
-      probability: defaultPreset.length,
-    },
-  ],
-  "kaguya-sama-miko": [
-    ...defaultPreset,
-    {
-      key: `kaguya-sama-shuuchiin-academy-school-uniform-miko`,
-      probability: defaultPreset.length,
-    },
-  ],
+  // "kaguya-sama-miko": [
+  //   ...defaultPreset,
+  //   {
+  //     key: `kaguya-sama-shuuchiin-academy-school-uniform-miko`,
+  //     probability: defaultPreset.length,
+  //   },
+  // ],
   "konosuba-megumin": [
     ...defaultPreset,
     {
@@ -326,12 +284,6 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "madomagi-homura-eft": defaultPreset,
-  "madomagi-iroha-eft": defaultPreset,
-  "madomagi-kyouko-eft": defaultPreset,
-  "madomagi-mami-eft": defaultPreset,
-  "madomagi-sayaka-eft": defaultPreset,
-  "madomagi-yachiyo-eft": defaultPreset,
   "mahoako-matama-notekaga": [
     ...defaultPreset,
     {
@@ -354,7 +306,6 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "new-game-aoba-narugo1992": defaultPreset,
   "new-game-hajime-eternal2kpp": [...defaultPreset],
   "new-game-hifumi-eternal2kpp": [
     ...defaultPreset,
@@ -363,7 +314,6 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "new-game-hifumi-narugo1992": defaultPreset,
   "new-game-hifumi-nochekaiser": [
     ...defaultPreset,
     {
@@ -411,13 +361,10 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "re-zero-emilia-eft": defaultPreset,
   "re-zero-emilia-eternal2kpp": defaultPreset,
   "re-zero-emilia": defaultPreset,
-  "re-zero-ram-eft": defaultPreset,
   "re-zero-ram-eternal2kpp": defaultPreset,
   "re-zero-ram": defaultPreset,
-  "re-zero-rem-eft": defaultPreset,
   "re-zero-rem-eternal2kpp": defaultPreset,
   "re-zero-rem": defaultPreset,
   "rokudenashi-rumia": [
@@ -433,18 +380,6 @@ export const outfitsPreset = {
     {
       key: `rokudenashi-school-uniform-winter`,
       probability: defaultPreset.length / 2,
-    },
-  ],
-  "saijaku-celistia-eft": defaultPreset,
-  "saijaku-krulcifer-eft": defaultPreset,
-  "saijaku-lisesharte-eft": defaultPreset,
-  "saijaku-philuffy-eft": defaultPreset,
-  "saijaku-yoruka-eft": defaultPreset,
-  "sasuoni-shiba-miyuki-eft": [
-    ...defaultPreset,
-    {
-      key: `sasuoni-eft-first-high-school-uniform-pantyhose`,
-      probability: defaultPreset.length,
     },
   ],
   "sasuoni-shiba-angelina-nochekaiser": [
@@ -487,20 +422,6 @@ export const outfitsPreset = {
     {
       key: `sasuoni-first-high-school-uniform-nochekaiser`,
       probability: defaultPreset.length / 2,
-    },
-  ],
-  "sasuoni-saegusa-mayumi-eft": [
-    ...defaultPreset,
-    {
-      key: `sasuoni-eft-first-high-school-uniform-pantyhose`,
-      probability: defaultPreset.length,
-    },
-  ],
-  "sasuoni-mitsui-honoka-eft": [
-    ...defaultPreset,
-    {
-      key: `sasuoni-eft-first-high-school-uniform-thighhighs`,
-      probability: defaultPreset.length,
     },
   ],
   "slow-loop-hiyori-ibukimakisiko": [

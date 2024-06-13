@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `eternal2kpp`;
 
@@ -30,5 +29,5 @@ export const danmachiHaruhime = (variation: Variation) =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.serious,
+    emotionType: `serious`,
   }) as const satisfies CharacterDefine;

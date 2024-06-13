@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const isHoukiNochekaiser = () =>
   ({
@@ -23,5 +22,5 @@ export const isHoukiNochekaiser = () =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.uptight,
+    emotionType: `tsundere`,
   }) as const satisfies CharacterDefine;

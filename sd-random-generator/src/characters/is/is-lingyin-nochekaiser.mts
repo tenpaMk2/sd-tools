@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const isLingyinNochekaiser = () =>
   ({
@@ -26,5 +25,5 @@ export const isLingyinNochekaiser = () =>
     ],
     breastSize: `small breasts`,
     fang: true,
-    emotionEntries: emotionPreset.mesugaki,
+    emotionType: `mesugaki`,
   }) as const satisfies CharacterDefine;

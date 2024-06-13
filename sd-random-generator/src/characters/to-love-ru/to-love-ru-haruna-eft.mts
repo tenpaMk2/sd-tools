@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const toLoveRuHarunaEft = () =>
   ({
@@ -19,5 +18,5 @@ export const toLoveRuHarunaEft = () =>
     ],
     breastSize: `flat chest`,
     fang: false,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

@@ -10,8 +10,8 @@ const monoCharacterPresetsMap = Object.fromEntries(
 ) as Record<CharacterKey, CharacterSetting[]>;
 
 const defaultKeys = [
-  // `amaburi-isuzu-h-madoka`,
-  `amaburi-isuzu-nochekaiser`,
+  // // `amaburi-isuzu-h-madoka`,
+  // `amaburi-isuzu-nochekaiser`,
   `blend-s-kaho-ibukimakisiko-double-bun`, // TODO: Support probability.
   `blend-s-kaho-ibukimakisiko`,
   `danmachi-aiz-eternal2kpp`,
@@ -42,7 +42,7 @@ const defaultKeys = [
   `kaguya-sama-ai`,
   `kaguya-sama-chika-eternal2kpp`,
   `kaguya-sama-kaguya-eternal2kpp`,
-  `kaguya-sama-miko`,
+  // `kaguya-sama-miko`,
   `konosuba-megumin`,
   `konosuba-yunyun`,
   `lycoris-recoil-chisato-nochekaiser`,

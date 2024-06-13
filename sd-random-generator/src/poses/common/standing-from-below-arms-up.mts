@@ -1,3 +1,4 @@
+import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine } from "../poses.mjs";
 import { standingFromHorizontalArmsUp } from "./standing-from-horizontal-arms-up.mjs";
 
@@ -14,4 +15,5 @@ export const standingFromBelowArmsUp = {
     underboobLevel: `from below`,
     upskirt: true,
   },
+  emotionProbabilitiesAtPose: emotionPreset["all-flat"],
 } as const satisfies PoseDefine;

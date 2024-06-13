@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const mahoakoMatamaNotekaga = () =>
   ({
@@ -22,5 +21,5 @@ export const mahoakoMatamaNotekaga = () =>
     ],
     breastSize: `large breasts`,
     fang: true,
-    emotionEntries: emotionPreset.cute,
+    emotionType: `cute`,
   }) as const satisfies CharacterDefine;

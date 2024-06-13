@@ -1,3 +1,4 @@
+import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine } from "../poses.mjs";
 
 export const standingFromBelowHoldingBouquet = {
@@ -40,4 +41,5 @@ export const standingFromBelowHoldingBouquet = {
     insideOfThighs: false,
     upskirt: false,
   },
+  emotionProbabilitiesAtPose: emotionPreset["all-flat"],
 } as const satisfies PoseDefine;

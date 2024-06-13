@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const isLauraNochekaiser = () =>
   ({
@@ -25,5 +24,5 @@ export const isLauraNochekaiser = () =>
     ],
     breastSize: `medium breasts`,
     fang: false,
-    emotionEntries: emotionPreset.serious,
+    emotionType: `serious`,
   }) as const satisfies CharacterDefine;

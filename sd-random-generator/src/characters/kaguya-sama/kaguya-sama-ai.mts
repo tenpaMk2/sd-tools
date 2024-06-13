@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 /**
  * No Lora version of the character.
@@ -29,5 +28,5 @@ export const kaguyaSamaAi = () =>
     ],
     breastSize: `medium breasts`,
     fang: false,
-    emotionEntries: emotionPreset.deadpanned,
+    emotionType: `emotionless`,
   }) as const satisfies CharacterDefine;

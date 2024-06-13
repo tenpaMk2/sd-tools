@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const isekaiOjisanSumikaNochekaiser = () =>
   ({
@@ -25,5 +24,5 @@ export const isekaiOjisanSumikaNochekaiser = () =>
     ],
     breastSize: `large breasts`,
     fang: false,
-    emotionEntries: emotionPreset.uptight,
+    emotionType: `tsundere`,
   }) as const satisfies CharacterDefine;

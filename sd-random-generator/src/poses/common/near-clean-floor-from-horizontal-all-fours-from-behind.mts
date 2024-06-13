@@ -1,3 +1,4 @@
+import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine } from "../poses.mjs";
 
 export const nearCleanFloorFromHorizontalAllFoursFromBehind = {
@@ -40,4 +41,5 @@ export const nearCleanFloorFromHorizontalAllFoursFromBehind = {
     insideOfThighs: false,
     upskirt: true,
   },
+  emotionProbabilitiesAtPose: emotionPreset["all-flat"],
 } as const satisfies PoseDefine;

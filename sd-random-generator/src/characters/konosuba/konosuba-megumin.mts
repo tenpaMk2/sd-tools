@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 export const konosubaMegumin = () =>
   ({
@@ -17,5 +16,5 @@ export const konosubaMegumin = () =>
     ],
     breastSize: `small breasts`,
     fang: false,
-    emotionEntries: emotionPreset.mesugaki,
+    emotionType: `mesugaki`,
   }) as const satisfies CharacterDefine;

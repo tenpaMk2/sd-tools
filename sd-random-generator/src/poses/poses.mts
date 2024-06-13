@@ -1,5 +1,6 @@
 import { Visibility } from "@tenpamk2/sd-tag-defines";
 import { BackgroundType, CameraAngle } from "../backgrounds/backgrounds.mjs";
+import { EmotionKey } from "../emotions/emotions.mjs";
 import { OutfitDefine } from "../outfits/outfits.mjs";
 import { NormalEntry } from "../prompt-define.mjs";
 import { PoseTag } from "../tag-defines/adapter.mjs";
@@ -72,6 +73,7 @@ export type PoseDefine = {
   entries: NormalEntry<PoseTag>[];
   visibility: Visibility;
   specialVisibility: PoseSpecialVisibility;
+  emotionProbabilitiesAtPose: Partial<Record<EmotionKey, number>>;
 };
 
 export const commonPoseTable = {

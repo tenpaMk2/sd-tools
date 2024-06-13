@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `ibukimakisiko`;
 
@@ -33,5 +32,5 @@ export const slowLoopHiyori = (variation: Variation) =>
     ],
     breastSize: `small breasts`,
     fang: false,
-    emotionEntries: emotionPreset.serious,
+    emotionType: `serious`,
   }) as const satisfies CharacterDefine;

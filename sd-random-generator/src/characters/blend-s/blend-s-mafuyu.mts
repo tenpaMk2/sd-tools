@@ -1,5 +1,4 @@
 import { CharacterDefine } from "../characters.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 
 type Variation = `ibukimakisiko`;
 
@@ -24,5 +23,5 @@ export const blendSMafuyu = (variation: Variation) =>
     ],
     breastSize: `flat chest`,
     fang: false,
-    emotionEntries: emotionPreset.deadpanned,
+    emotionType: `emotionless`,
   }) as const satisfies CharacterDefine;

@@ -34,18 +34,18 @@ export const posesPreset = {
   "city": defaultPreset,
   "wedding-standing": [
     ...defaultPreset,
-    {
-      key: `standing-from-above-holding-bouquet`,
-      probability: defaultPreset.length / 3,
-    },
-    {
-      key: `standing-from-below-holding-bouquet`,
-      probability: defaultPreset.length / 3,
-    },
-    {
-      key: `standing-from-horizontal-holding-bouquet`,
-      probability: defaultPreset.length / 3,
-    },
+    // {
+    //   key: `standing-from-above-holding-bouquet`,
+    //   probability: defaultPreset.length / 3,
+    // },
+    // {
+    //   key: `standing-from-below-holding-bouquet`,
+    //   probability: defaultPreset.length / 3,
+    // },
+    // {
+    //   key: `standing-from-horizontal-holding-bouquet`,
+    //   probability: defaultPreset.length / 3,
+    // },
   ],
   "wedding-near-clean-floor": defaultPreset,
   "christmas-standing": defaultPreset,
@@ -53,8 +53,9 @@ export const posesPreset = {
   "classroom-chalkboard": defaultPreset,
   "classroom-window": defaultPreset,
   "karaoke-box-standing": [
-    { key: `standing-from-horizontal-singing` },
-    { key: `standing-from-horizontal-singing-from-side` },
+    { key: `standing-from-horizontal-contrapposto` }, // temp
+    // { key: `standing-from-horizontal-singing` },
+    // { key: `standing-from-horizontal-singing-from-side` },
   ],
   "karaoke-box-sitting-on": [{ key: `sitting-on-from-horizontal-singing` }],
   "night-rooftop": defaultPreset,
@@ -64,22 +65,22 @@ export const posesPreset = {
   "volleyball-gym-near-clean-floor": defaultPreset,
   "volleyball-gym-standing": [
     ...defaultPreset,
-    {
-      key: `standing-from-above-holding-volleyball`,
-      probability: defaultPreset.length / 3,
-    },
-    {
-      key: `standing-from-below-holding-volleyball`,
-      probability: defaultPreset.length / 3,
-    },
-    {
-      key: `standing-from-horizontal-holding-volleyball`,
-      probability: defaultPreset.length / 3,
-    },
-    {
-      key: `standing-from-horizontal-volleyball-from-side`,
-      probability: (defaultPreset.length / 3) * 2,
-    },
+    // {
+    //   key: `standing-from-above-holding-volleyball`,
+    //   probability: defaultPreset.length / 3,
+    // },
+    // {
+    //   key: `standing-from-below-holding-volleyball`,
+    //   probability: defaultPreset.length / 3,
+    // },
+    // {
+    //   key: `standing-from-horizontal-holding-volleyball`,
+    //   probability: defaultPreset.length / 3,
+    // },
+    // {
+    //   key: `standing-from-horizontal-volleyball-from-side`,
+    //   probability: (defaultPreset.length / 3) * 2,
+    // },
   ],
   "gym-storeroom-near-clean-floor": defaultPreset,
   "gym-storeroom-standing": defaultPreset,
@@ -95,9 +96,10 @@ export const posesPreset = {
   "red-curtains-bed": defaultPreset,
   "tennis-court-near-clean-floor": defaultPreset,
   "tennis-court-standing": [
-    { key: `standing-from-above-holding-tennis` },
-    { key: `standing-from-below-holding-tennis` },
-    { key: `standing-from-horizontal-holding-tennis` },
+    { key: `standing-from-horizontal-contrapposto` }, // temp
+    // { key: `standing-from-above-holding-tennis` },
+    // { key: `standing-from-below-holding-tennis` },
+    // { key: `standing-from-horizontal-holding-tennis` },
   ],
   "office": defaultPreset,
 } as const satisfies Record<PoseKey | `default` | BackgroundKey, PoseSetting[]>;
