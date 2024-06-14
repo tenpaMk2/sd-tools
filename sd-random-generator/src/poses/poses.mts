@@ -133,6 +133,7 @@ export const commonPoseTable = {
   "standing-from-horizontal-portrait": standingFromHorizontalPortrait,
   "standing-from-horizontal-twisted-torso": standingFromHorizontalTwistedTorso,
   "standing-from-horizontal-v": standingFromHorizontalV,
+  // TODO: `head tilt`
 } as const satisfies Record<string, PoseDefine>;
 
 export const specialPoseTable = {
@@ -156,6 +157,7 @@ export const specialPoseTable = {
   "standing-from-horizontal-singing": standingFromHorizontalSinging,
   "standing-from-horizontal-volleyball-from-side":
     standingFromHorizontalVolleyballFromSide,
+  // TODO: `drank`
 } as const satisfies Record<string, PoseDefine>;
 
 export const poseTable = {
