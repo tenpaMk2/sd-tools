@@ -11,6 +11,7 @@ export const allCharacterNameTags = [
   `celistia ralgris`,
   `charlotte dunois`,
   `chiba erika`,
+  `chitanda eru`,
   `chloe von einzbern \\(beast style\\)`,
   `chloe von einzbern`,
   `chris \\(konosuba\\)`,

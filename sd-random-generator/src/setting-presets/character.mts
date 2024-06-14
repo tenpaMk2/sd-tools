@@ -27,6 +27,7 @@ const defaultPreset = [
   { key: `fate-rin-little-jelly` },
   { key: `futoku-no-guild-tokishikko-ibukimakisiko` },
   { key: `higehiro-sayu-nochekaiser` },
+  { key: `hyouka-eru-chenkin` },
   { key: `is-cecilia-nochekaiser` },
   { key: `is-charlotte-nochekaiser` },
   { key: `is-houki-nochekaiser` },

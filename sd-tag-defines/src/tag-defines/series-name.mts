@@ -16,6 +16,7 @@ export const allSeriesNameTags = [
   `gochuumon wa usagi desu ka?`,
   `gridman universe`,
   `hige wo soru\\. soshite joshikousei wo hirou\\.`,
+  `hyouka`,
   `infinite stratos`,
   `isekai nonbiri nouka`,
   `isekai ojisan`,

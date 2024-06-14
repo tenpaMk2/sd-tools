@@ -104,6 +104,17 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "hyouka-eru-chenkin": [
+    ...defaultPreset,
+    {
+      key: `hyouka-white-bikini`,
+      probability: defaultPreset.length / 0.5,
+    },
+    {
+      key: `hyouka-school-uniform`,
+      probability: defaultPreset.length / 0.5,
+    },
+  ],
   "is-cecilia-nochekaiser": [
     ...defaultPreset,
     {

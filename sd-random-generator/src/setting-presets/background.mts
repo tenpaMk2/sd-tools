@@ -313,6 +313,23 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "hyouka-white-bikini": [
+    ...defaultPreset,
+    { key: `ocean`, probability: defaultPreset.length },
+    { key: `beach-standing`, probability: defaultPreset.length },
+    { key: `beach-near-clean-floor`, probability: defaultPreset.length },
+  ],
+  "hyouka-school-uniform": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "higehiro-school-uniform-sayu": [
     ...defaultPreset,
     {

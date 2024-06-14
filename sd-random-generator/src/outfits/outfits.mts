@@ -40,6 +40,8 @@ import { danmachiHestia } from "./danmachi/hestia.mjs";
 import { fateRinSweater } from "./fate/rin-sweater.mjs";
 import { futokuNoGuildTokishikkoDress } from "./futoku-no-guild/tokishikko-dress.mjs";
 import { higehiroSchoolUniform } from "./higehiro/school-uniform.mjs";
+import { hyoukaSchoolUniform } from "./hyouka/school-uniform.mjs";
+import { hyoukaWhiteBikini } from "./hyouka/white-bikini.mjs";
 import { isInfiniteStratosAcademySchoolUniform } from "./is/infinite-stratos-academy-school-uniform.mjs";
 import { isPilotSuit } from "./is/is-pilot-suit.mjs";
 import { isYellowDressMaya } from "./is/yellow-dress-maya.mjs";
@@ -203,6 +205,8 @@ export const characterOutfitTable = {
   "futoku-no-guild-tokishikko-dress":
     futokuNoGuildTokishikkoDress(`ibukimakisiko`),
   "higehiro-school-uniform-sayu": higehiroSchoolUniform(`sayu`),
+  "hyouka-white-bikini": hyoukaWhiteBikini(),
+  "hyouka-school-uniform": hyoukaSchoolUniform(),
   "is-infinite-stratos-academy-school-uniform-cecilia":
     isInfiniteStratosAcademySchoolUniform(`cecilia`),
   "is-infinite-stratos-academy-school-uniform-charlotte":

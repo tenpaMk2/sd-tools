@@ -1382,6 +1382,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
   },
+  {
+    loraName: `chitanda_eru_pony`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/513468/chitanda-eru-hyouka?modelVersionId=570635`,
+    ),
+    characterTriggerWordsTags: [`chitanda_eru`],
+    outfitTriggerTags: [],
+    creator: `Chenkin`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

@@ -22,6 +22,7 @@ import { eromangaSenseiSagiri } from "./eromanga-sensei/sagiri.mjs";
 import { fateRin } from "./fate/rin.mjs";
 import { futokuNoGuildTokishikko } from "./futoku-no-guild/tokishikko.mjs";
 import { higehiroSayu } from "./higehiro/sayu.mjs";
+import { hyoukaEru } from "./hyouka/eru.mjs";
 import { isCecilia } from "./is/cecilia.mjs";
 import { isCharlotte } from "./is/charlotte.mjs";
 import { isChifuyu } from "./is/chifuyu.mjs";
@@ -150,6 +151,7 @@ export const characterTable = {
   "futoku-no-guild-tokishikko-ibukimakisiko":
     futokuNoGuildTokishikko(`ibukimakisiko`),
   "higehiro-sayu-nochekaiser": higehiroSayu(`nochekaiser`),
+  "hyouka-eru-chenkin": hyoukaEru(`chenkin`),
   "is-cecilia-nochekaiser": isCecilia(`nochekaiser`),
   "is-charlotte-nochekaiser": isCharlotte(`nochekaiser`),
   "is-chifuyu-nochekaiser": isChifuyu(`nochekaiser`),
