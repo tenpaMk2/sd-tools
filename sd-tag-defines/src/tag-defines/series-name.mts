@@ -1,6 +1,8 @@
 export const allSeriesNameTags = [
   `amagi brilliant park`,
   `assault lily`,
+  `atelier \\(series\\)`,
+  `atelier ryza`,
   `blend s`,
   `bocchi the rock!`,
   `boku no hero academia`,

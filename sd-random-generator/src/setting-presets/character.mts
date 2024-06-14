@@ -12,6 +12,7 @@ const monoCharacterPresetsMap = Object.fromEntries(
 const defaultPreset = [
   // // `amaburi-isuzu-h-madoka`,
   // `amaburi-isuzu-nochekaiser`,
+  { key: `atelier-ryza-nochekaiser` },
   { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
   { key: `blend-s-kaho-ibukimakisiko` },
   { key: `danmachi-aiz-eternal2kpp` },

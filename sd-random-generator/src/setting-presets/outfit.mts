@@ -52,6 +52,10 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "atelier-ryza-nochekaiser": [
+    ...defaultPreset,
+    // TODO: Add others.
+  ],
   "blend-s-kaho-ibukimakisiko-double-bun": [
     {
       key: `blend-s-swimsuit-kaho`,

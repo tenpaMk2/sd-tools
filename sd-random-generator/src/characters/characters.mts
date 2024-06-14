@@ -7,6 +7,7 @@ import { LoraEntry, NormalEntry } from "../prompt-define.mjs";
 import { CharacterFeatureTag } from "../tag-defines/adapter.mjs";
 import { LoraCharacterTriggerWordsTag } from "../tag-defines/lora.mjs";
 import { amaburiIsuzu } from "./amaburi/isuzu.mjs";
+import { atelierRyza } from "./atelier/ryza.mjs";
 import { blendSKaho } from "./blend-s/kaho.mjs";
 import { blendSMafuyu } from "./blend-s/mafuyu.mjs";
 import { danmachiAiz } from "./danmachi/aiz.mjs";
@@ -129,6 +130,7 @@ export const characterTable = {
   "amaburi-isuzu-h-madoka": amaburiIsuzu(`h_madoka`),
   "amaburi-isuzu-no-lora": amaburiIsuzu(`no-lora`),
   "amaburi-isuzu-nochekaiser": amaburiIsuzu(`nochekaiser`),
+  "atelier-ryza-nochekaiser": atelierRyza(`nochekaiser`),
   "blend-s-kaho-ibukimakisiko-double-bun": blendSKaho(
     `ibukimakisiko-double-bun`,
   ),

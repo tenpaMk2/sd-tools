@@ -78,6 +78,7 @@ export const allCharacterNameTags = [
   `orimura chifuyu`,
   `philuffy aingram`,
   `ram \\(re:zero\\)`,
+  `reisalin stout`,
   `rem \\(re:zero\\)`,
   `rumia tingel`,
   `ryu lion`,

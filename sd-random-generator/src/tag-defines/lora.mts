@@ -1371,6 +1371,17 @@ export const allLoras = [
     outfitTriggerTags: [`yoshinagakoi-casual`, `yoshinagakoi-schooluniform`],
     creator: `Ibukimakisiko`,
   },
+  {
+    loraName: `reisalin-stout-s1-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/354022/reisalin-ryza-stout-atelier-ryza-ever-darkness-and-the-secret-hideout-the-animation-ryza-no-atelier-tokoyami-no-joou-to-himitsu-no-kakurega`,
+    ),
+    characterTriggerWordsTags: [`reisalin stout`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];
