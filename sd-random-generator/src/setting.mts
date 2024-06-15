@@ -23,6 +23,8 @@ const portrait = {
     ...(
       [
         // ...charactersPreset.default[0].keys,
+        // `hyouka-eru-chenkin`,
+        // `atelier-ryza-nochekaiser`,
         // `slow-loop-hiyori-ibukimakisiko`,
         // `slow-loop-koharu-ibukimakisiko`,
         // `slow-loop-koi-ibukimakisiko`,
