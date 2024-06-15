@@ -130,5 +130,8 @@ dist
 .pnp.*
 
 # Custom
-.vscode
 .DS_Store
+.vscode
+dist/
+dist-sea/
+outputs/
