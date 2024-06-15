@@ -1,7 +1,9 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const mahoakoLocomusica = (variation: `notekaga`) =>
+type Variation = `notekaga`;
+
+export const mahoakoOutfitLocomusica = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

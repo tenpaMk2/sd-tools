@@ -1,23 +1,25 @@
-import { OutfitTag } from "../../tag-defines/adapter.mjs";
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `chisato` | `takina`;
+type Variation = `chisato-nochekaiser` | `takina-nochekaiser`;
 
 const variationParts = {
-  "neck ribbon": {
-    chisato: [`blue neck ribbon`],
-    takina: [`green neck ribbon`],
+  "neck-ribbon": {
+    "chisato-nochekaiser": [`blue neck ribbon`],
+    "takina-nochekaiser": [`green neck ribbon`],
   },
   "dress": {
-    chisato: [`red dress`],
-    takina: [`blue dress`],
+    "chisato-nochekaiser": [`red dress`],
+    "takina-nochekaiser": [`blue dress`],
   },
   "belt": {
-    chisato: [`red belt`],
-    takina: [`blue belt`],
+    "chisato-nochekaiser": [`red belt`],
+    "takina-nochekaiser": [`blue belt`],
   },
-} as const satisfies { [k: string]: { [k in Variation]: OutfitTag[] } };
+} as const satisfies Record<
+  string,
+  Record<Variation, OutfitDefine["outfitEntries"]>
+>;
 
 export const lycorisRecoilLycorisUniform = (variation: Variation) =>
   ({
@@ -29,7 +31,7 @@ export const lycorisRecoilLycorisUniform = (variation: Variation) =>
       `collared shirt`,
       `white collar`,
       `neck ribbon`,
-      ...variationParts["neck ribbon"][variation],
+      ...variationParts["neck-ribbon"][variation],
       `blue neck ribbon`,
       ...variationParts["dress"][variation],
       `grey dress`,

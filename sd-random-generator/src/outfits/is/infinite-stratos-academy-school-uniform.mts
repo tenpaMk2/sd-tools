@@ -2,94 +2,123 @@ import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
 type Variation =
-  | `cecilia`
-  | `charlotte`
-  | `houki`
-  | `laura`
-  | `lingyin`
-  | `tatenashi`;
+  | `cecilia-nochekaiser`
+  | `charlotte-nochekaiser`
+  | `houki-nochekaiser`
+  | `laura-nochekaiser`
+  | `lingyin-nochekaiser`
+  | `tatenashi-nochekaiser`;
 
-const variationParts = {
+const outfitEntries = {
   necktie: {
-    cecilia: [`neck ribbon`, `blue neck ribbon`],
-    charlotte: [`neck ribbon`, `blue neck ribbon`],
-    houki: [`neck ribbon`, `blue neck ribbon`],
-    laura: [`necktie`, `blue necktie`, `short necktie`],
-    lingyin: [`collarbone`],
-    tatenashi: [`necktie`, `yellow necktie`, `green vest`],
+    "cecilia-nochekaiser": [`neck ribbon`, `blue neck ribbon`],
+    "charlotte-nochekaiser": [`neck ribbon`, `blue neck ribbon`],
+    "houki-nochekaiser": [`neck ribbon`, `blue neck ribbon`],
+    "laura-nochekaiser": [`necktie`, `blue necktie`, `short necktie`],
+    "lingyin-nochekaiser": [`collarbone`],
+    "tatenashi-nochekaiser": [`necktie`, `yellow necktie`, `green vest`],
   },
   sleeves: {
-    cecilia: [`long sleeves`, `white sleeves`],
-    charlotte: [`long sleeves`, `white sleeves`],
-    houki: [`long sleeves`, `white sleeves`],
-    laura: [`long sleeves`, `white sleeves`],
-    lingyin: [`bare shoulders`, `detached sleeves`, `white sleeves`],
-    tatenashi: [`long sleeves`, `white sleeves`],
+    "cecilia-nochekaiser": [`long sleeves`, `white sleeves`],
+    "charlotte-nochekaiser": [`long sleeves`, `white sleeves`],
+    "houki-nochekaiser": [`long sleeves`, `white sleeves`],
+    "laura-nochekaiser": [`long sleeves`, `white sleeves`],
+    "lingyin-nochekaiser": [
+      `bare shoulders`,
+      `detached sleeves`,
+      `white sleeves`,
+    ],
+    "tatenashi-nochekaiser": [`long sleeves`, `white sleeves`],
   },
   belt: {
-    cecilia: [`white belt`],
-    charlotte: [`white belt`],
-    houki: [`white belt`],
-    laura: [`white belt`],
-    lingyin: [`white belt`],
-    tatenashi: [`green belt`],
+    "cecilia-nochekaiser": [`white belt`],
+    "charlotte-nochekaiser": [`white belt`],
+    "houki-nochekaiser": [`white belt`],
+    "laura-nochekaiser": [`white belt`],
+    "lingyin-nochekaiser": [`white belt`],
+    "tatenashi-nochekaiser": [`green belt`],
   },
   skirt: {
-    cecilia: [`skirt`, `white skirt`, `red trim skirt`],
-    charlotte: [`skirt`, `white skirt`, `miniskirt`, `red trim skirt`],
-    houki: [`skirt`, `white skirt`, `miniskirt`, `red trim skirt`],
-    laura: [`pants`, `white pants`, `red trim skirt`],
-    lingyin: [`skirt`, `white skirt`, `miniskirt`, `red trim skirt`],
-    tatenashi: [`skirt`, `white skirt`, `miniskirt`, `red trim skirt`],
+    "cecilia-nochekaiser": [`skirt`, `white skirt`, `red trim skirt`],
+    "charlotte-nochekaiser": [
+      `skirt`,
+      `white skirt`,
+      `miniskirt`,
+      `red trim skirt`,
+    ],
+    "houki-nochekaiser": [
+      `skirt`,
+      `white skirt`,
+      `miniskirt`,
+      `red trim skirt`,
+    ],
+    "laura-nochekaiser": [`pants`, `white pants`, `red trim skirt`],
+    "lingyin-nochekaiser": [
+      `skirt`,
+      `white skirt`,
+      `miniskirt`,
+      `red trim skirt`,
+    ],
+    "tatenashi-nochekaiser": [
+      `skirt`,
+      `white skirt`,
+      `miniskirt`,
+      `red trim skirt`,
+    ],
   },
   legwear: {
-    cecilia: [`pantyhose`, `black pantyhose`, `loafers`],
-    charlotte: [`bare legs`, `shoes`],
-    houki: [`thighhighs`, `white thighhighs`, `boots`, `knee boots`],
-    laura: [`boots`, `knee boots`],
-    lingyin: [`socks`, `black socks`, `boots`],
-    tatenashi: [`pantyhose`, `red pantyhose`, `loafers`],
+    "cecilia-nochekaiser": [`pantyhose`, `black pantyhose`, `loafers`],
+    "charlotte-nochekaiser": [`bare legs`, `shoes`],
+    "houki-nochekaiser": [
+      `thighhighs`,
+      `white thighhighs`,
+      `boots`,
+      `knee boots`,
+    ],
+    "laura-nochekaiser": [`boots`, `knee boots`],
+    "lingyin-nochekaiser": [`socks`, `black socks`, `boots`],
+    "tatenashi-nochekaiser": [`pantyhose`, `red pantyhose`, `loafers`],
   },
-  upskirtEntries: {
-    cecilia: upskirtPreset.pantiesUnderPantyhose,
-    charlotte: upskirtPreset.colorfulPanties,
-    houki: upskirtPreset.colorfulPanties,
-    laura: [],
-    lingyin: upskirtPreset.colorfulPanties,
-    tatenashi: upskirtPreset.pantiesUnderPantyhose,
-  },
-} as const satisfies {
-  [k: string]: {
-    [k in Variation]: OutfitDefine["outfitEntries"];
-  };
-};
+} as const satisfies Record<
+  string,
+  Record<Variation, OutfitDefine["outfitEntries"]>
+>;
 
-const variationRemoveShoes = {
-  cecilia: {
+const upskirtEntries = {
+  "cecilia-nochekaiser": upskirtPreset.pantiesUnderPantyhose,
+  "charlotte-nochekaiser": upskirtPreset.colorfulPanties,
+  "houki-nochekaiser": upskirtPreset.colorfulPanties,
+  "laura-nochekaiser": [],
+  "lingyin-nochekaiser": upskirtPreset.colorfulPanties,
+  "tatenashi-nochekaiser": upskirtPreset.pantiesUnderPantyhose,
+} as const satisfies Record<Variation, OutfitDefine["outfitEntries"]>;
+
+const whenRemoveShoes = {
+  "cecilia-nochekaiser": {
     excludeTags: [`loafers`],
     additionalFootEntriesAfterRemoving: [`no shoes`],
   },
-  charlotte: {
+  "charlotte-nochekaiser": {
     excludeTags: [`shoes`],
     additionalFootEntriesAfterRemoving: [`no shoes`],
   },
-  houki: {
+  "houki-nochekaiser": {
     excludeTags: [`boots`, `knee boots`],
     additionalFootEntriesAfterRemoving: [`no shoes`],
   },
-  laura: {
+  "laura-nochekaiser": {
     excludeTags: [`boots`, `knee boots`],
     additionalFootEntriesAfterRemoving: [`no shoes`],
   },
-  lingyin: {
+  "lingyin-nochekaiser": {
     excludeTags: [`boots`],
     additionalFootEntriesAfterRemoving: [`no shoes`],
   },
-  tatenashi: {
+  "tatenashi-nochekaiser": {
     excludeTags: [`loafers`],
     additionalFootEntriesAfterRemoving: [`no shoes`],
   },
-} as const satisfies { [k in Variation]: OutfitDefine["whenRemoveShoes"] };
+} as const satisfies Record<Variation, OutfitDefine["whenRemoveShoes"]>;
 
 export const isInfiniteStratosAcademySchoolUniform = (variation: Variation) =>
   ({
@@ -99,18 +128,18 @@ export const isInfiniteStratosAcademySchoolUniform = (variation: Variation) =>
       `infinite stratos academy school uniform`,
       `school uniform`,
       `black collar`,
-      ...variationParts.necktie[variation],
+      ...outfitEntries.necktie[variation],
       `uniform`,
       `military uniform`,
       `white shirt`,
-      ...variationParts.sleeves[variation],
+      ...outfitEntries.sleeves[variation],
       `belt`,
-      ...variationParts.belt[variation],
-      ...variationParts.skirt[variation],
-      ...variationParts.legwear[variation],
+      ...outfitEntries.belt[variation],
+      ...outfitEntries.skirt[variation],
+      ...outfitEntries.legwear[variation],
     ],
     specialVisibility: {
-      armpits: variation === `lingyin`,
+      armpits: variation === `lingyin-nochekaiser`,
       hangingBreasts: false,
       tautClothes: true,
       cleavage: false,
@@ -121,6 +150,6 @@ export const isInfiniteStratosAcademySchoolUniform = (variation: Variation) =>
       insideOfThighs: false,
     },
     liftType: `skirt`,
-    upskirtEntries: variationParts.upskirtEntries[variation],
-    whenRemoveShoes: variationRemoveShoes[variation],
+    upskirtEntries: upskirtEntries[variation],
+    whenRemoveShoes: whenRemoveShoes[variation],
   }) as const satisfies OutfitDefine;

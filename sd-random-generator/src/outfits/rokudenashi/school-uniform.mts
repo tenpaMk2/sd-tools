@@ -2,16 +2,16 @@ import { OutfitTag } from "../../tag-defines/adapter.mjs";
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `summer` | `winter`;
+type Variation = `summer-little-jelly` | `winter-little-jelly`;
 
 const variationParts = {
   capelet: {
-    summer: [],
-    winter: [`capelet`, `blue capelet`],
+    "summer-little-jelly": [],
+    "winter-little-jelly": [`capelet`, `blue capelet`],
   },
   wrist: {
-    summer: [],
-    winter: [`single wrist cuff`],
+    "summer-little-jelly": [],
+    "winter-little-jelly": [`single wrist cuff`],
   },
 } as const satisfies Record<string, Record<Variation, OutfitTag[]>>;
 

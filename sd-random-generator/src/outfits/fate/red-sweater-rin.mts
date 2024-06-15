@@ -1,10 +1,19 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const fateRinSweater = (variation: `little-jelly`) =>
+type Variation = `little-jelly`;
+
+const loraOutfitTriggerWordEntries = {
+  "little-jelly": [`rinsweater`],
+} as const satisfies Record<
+  Variation,
+  OutfitDefine[`loraOutfitTriggerWordEntries`]
+>;
+
+export const fateRedSweaterRin = (variation: Variation) =>
   ({
     lora: null,
-    loraOutfitTriggerWordEntries: [`rinsweater`],
+    loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],
     outfitEntries: [
       `sweater`,
       `red sweater`,

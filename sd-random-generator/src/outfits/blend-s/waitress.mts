@@ -1,23 +1,23 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `kaho` | `mafuyu`;
+type Variation = `kaho-ibukimakisiko` | `mafuyu-ibukimakisiko`;
 
 const variationLoraOutfitTriggerWordEntries = {
-  kaho: [`kaho-default`],
-  mafuyu: [`mafuyu-default`],
+  "kaho-ibukimakisiko": [`kaho-default`],
+  "mafuyu-ibukimakisiko": [`mafuyu-default`],
 } as const satisfies {
   [k in Variation]: OutfitDefine["loraOutfitTriggerWordEntries"];
 };
 
 const variationOutfitEntries = {
   shirtColor: {
-    kaho: [`blue shirt`],
-    mafuyu: [`yellow shirt`],
+    "kaho-ibukimakisiko": [`blue shirt`],
+    "mafuyu-ibukimakisiko": [`yellow shirt`],
   },
   skirtColor: {
-    kaho: [`blue skirt`],
-    mafuyu: [`yellow skirt`],
+    "kaho-ibukimakisiko": [`blue skirt`],
+    "mafuyu-ibukimakisiko": [`yellow skirt`],
   },
 } as const satisfies {
   [k: string]: {

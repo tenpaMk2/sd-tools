@@ -1,12 +1,15 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `koharu` | `hiyori` | `koi`;
+type Variation =
+  | `koharu-ibukimakisiko`
+  | `hiyori-ibukimakisiko`
+  | `koi-ibukimakisiko`;
 
 const loraOutfitTriggerWordEntries = {
-  koharu: [`koharu-schooluniform`],
-  hiyori: [`hiyori-schooluniform`],
-  koi: [`yoshinagakoi-schooluniform`],
+  "koharu-ibukimakisiko": [`koharu-schooluniform`],
+  "hiyori-ibukimakisiko": [`hiyori-schooluniform`],
+  "koi-ibukimakisiko": [`yoshinagakoi-schooluniform`],
 } as const satisfies Record<
   Variation,
   OutfitDefine["loraOutfitTriggerWordEntries"]
@@ -14,12 +17,12 @@ const loraOutfitTriggerWordEntries = {
 
 const outfitEntries = {
   collar: {
-    koharu: [`bowtie`, `black bowtie`],
-    hiyori: [`necktie`, `black necktie`, `striped necktie`],
-    koi: [`necktie`, `black necktie`, `striped necktie`],
+    "koharu-ibukimakisiko": [`bowtie`, `black bowtie`],
+    "hiyori-ibukimakisiko": [`necktie`, `black necktie`, `striped necktie`],
+    "koi-ibukimakisiko": [`necktie`, `black necktie`, `striped necktie`],
   },
   upper: {
-    koharu: [
+    "koharu-ibukimakisiko": [
       [
         {
           entries: [
@@ -34,8 +37,8 @@ const outfitEntries = {
         { entries: [`sweater vest`, `yellow sweater vest`, `short sleeves`] },
       ],
     ],
-    hiyori: [`blazer`, `blue jacket`, `long sleeves`],
-    koi: [
+    "hiyori-ibukimakisiko": [`blazer`, `blue jacket`, `long sleeves`],
+    "koi-ibukimakisiko": [
       [
         {
           entries: [
@@ -55,9 +58,9 @@ const outfitEntries = {
     ],
   },
   socks: {
-    koharu: [`thighhighs`, `white thighhighs`],
-    hiyori: [`socks`, `black socks`],
-    koi: [`socks`, `black socks`],
+    "koharu-ibukimakisiko": [`thighhighs`, `white thighhighs`],
+    "hiyori-ibukimakisiko": [`socks`, `black socks`],
+    "koi-ibukimakisiko": [`socks`, `black socks`],
   },
 } as const satisfies Record<
   string,
@@ -66,9 +69,9 @@ const outfitEntries = {
 
 const specialVisibility = {
   zettaiRyouiki: {
-    koharu: true,
-    hiyori: false,
-    koi: false,
+    "koharu-ibukimakisiko": true,
+    "hiyori-ibukimakisiko": false,
+    "koi-ibukimakisiko": false,
   },
 } as const satisfies Record<
   `zettaiRyouiki`,

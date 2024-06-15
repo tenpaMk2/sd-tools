@@ -1,7 +1,7 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `nana`;
+type Variation = `nana-lancelot`;
 
 export const toLoveRuSchoolUniform = (variation: Variation) =>
   ({

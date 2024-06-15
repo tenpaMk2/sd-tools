@@ -1,7 +1,7 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `sayu`;
+type Variation = `sayu-nochekaiser`;
 
 export const higehiroSchoolUniform = (variation: Variation) =>
   ({

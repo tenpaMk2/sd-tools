@@ -1,6 +1,8 @@
 import { OutfitDefine } from "../outfits.mjs";
 
-export const isekaiOjisanMabel = (variation: `nochekaiser`) =>
+type Variation = `nochekaiser`;
+
+export const isekaiOjisanOutfitMabel = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

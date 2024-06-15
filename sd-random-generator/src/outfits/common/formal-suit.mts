@@ -1,7 +1,17 @@
 import { OutfitDefine } from "../outfits.mjs";
 import { upskirtPreset } from "./upskirt-preset.mjs";
 
-type Variation = `chifuyu`;
+type Variation = `common` | `chifuyu`;
+
+const outfitEntries = {
+  teacher: {
+    common: [],
+    chifuyu: [`teacher`],
+  },
+} as const satisfies Record<
+  string,
+  Record<Variation, OutfitDefine[`outfitEntries`]>
+>;
 
 export const formalSuit = (variation: Variation) =>
   ({
@@ -10,7 +20,7 @@ export const formalSuit = (variation: Variation) =>
     outfitEntries: [
       `formal`,
       `suit`,
-      ...(variation === `chifuyu` ? ([`teacher`] as const) : []),
+      ...outfitEntries.teacher[variation],
       `white shirt`,
       `collared shirt`,
       `necktie`,

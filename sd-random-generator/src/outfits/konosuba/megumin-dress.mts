@@ -1,14 +1,28 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const konosubaMeguminDress = (variation: `light` | `adventurer`) =>
+type Variation = `light-no-lora` | `adventurer-no-lora`;
+
+const outfitEntries = {
+  head: {
+    "light-no-lora": [`no headwear`],
+    "adventurer-no-lora": [`hat`, `brown hat`, `witch hat`],
+  },
+  equipment: {
+    "light-no-lora": [],
+    "adventurer-no-lora": [`fingerless gloves`, `cape`, `brown cape`],
+  },
+} as const satisfies Record<
+  string,
+  Record<Variation, OutfitDefine["outfitEntries"]>
+>;
+
+export const konosubaOutfitMegumin = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
     outfitEntries: [
-      ...(variation === `light`
-        ? ([`no headwear`] as const)
-        : ([`hat`, `brown hat`, `witch hat`] as const)),
+      ...outfitEntries.head[variation],
       `choker`,
       `black choker`,
       `collarbone`,
@@ -18,9 +32,7 @@ export const konosubaMeguminDress = (variation: `light` | `adventurer`) =>
       `off-shoulder dress`,
       `bare shoulders`,
       `long sleeves`,
-      ...(variation === `light`
-        ? []
-        : ([`fingerless gloves`, `cape`, `brown cape`] as const)),
+      ...outfitEntries.equipment[variation],
       `belt`,
       `brown belt`,
       `short dress`,

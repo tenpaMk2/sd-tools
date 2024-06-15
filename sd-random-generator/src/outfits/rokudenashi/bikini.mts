@@ -1,6 +1,6 @@
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `rumia`;
+type Variation = `rumia-little-jelly`;
 
 export const rokudenashiBikini = (variation: Variation) =>
   ({

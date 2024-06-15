@@ -3,7 +3,7 @@ import { OutfitDefine } from "../outfits.mjs";
 
 type Variation = `ibukimakisiko`;
 
-export const futokuNoGuildTokishikkoDress = (variation: Variation) =>
+export const futokuNoGuildOutfitTokishikko = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`tokishikko-default`],

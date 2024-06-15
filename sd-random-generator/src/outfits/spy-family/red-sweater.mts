@@ -1,7 +1,9 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const spyFamilyRedSweater = () =>
+type Variation = `eternal2kpp`;
+
+export const spyFamilyRedSweater = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

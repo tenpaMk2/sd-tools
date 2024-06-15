@@ -240,7 +240,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
-  "amaburi-uniform-isuzu": [
+  "amaburi-red-uniform-isuzu-h-madoka": [
     ...defaultPreset,
     {
       key: `cafe`,
@@ -251,7 +251,29 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
-  "blend-s-school-uniform-kaho": [
+  "amaburi-red-uniform-isuzu-no-lora": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
+  "amaburi-red-uniform-isuzu-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
+  "blend-s-school-uniform-kaho-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `cafe`,
@@ -266,28 +288,29 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
-  "blend-s-swimsuit-kaho": [
+  "blend-s-swimsuit-kaho-ibukimakisiko": [
     ...defaultPreset,
     { key: `ocean`, probability: defaultPreset.length / 3 },
     { key: `beach-standing`, probability: defaultPreset.length / 3 },
     { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
   ],
-  "blend-s-waitress-kaho": [
+  "blend-s-waitress-kaho-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `cafe`,
       probability: defaultPreset.length / 1,
     },
   ],
-  "blend-s-waitress-mafuyu": [
+  "blend-s-waitress-mafuyu-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `cafe`,
       probability: defaultPreset.length / 1,
     },
   ],
-  "danmachi-nochekaiser-hestia": defaultPreset,
-  "fate-little-jelly-rin-sweater": [
+  "danmachi-white-dress-hestia-eternal2kpp": defaultPreset,
+  "danmachi-white-dress-hestia-no-lora": defaultPreset,
+  "fate-red-sweater-rin-little-jelly": [
     ...defaultPreset,
     {
       key: `city`,
@@ -298,7 +321,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "futoku-no-guild-tokishikko-dress": [
+  "futoku-no-guild-outfit-tokishikko-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `grass`,
@@ -313,13 +336,28 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "hyouka-white-bikini": [
+  "higehiro-school-uniform-sayu-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `city`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "hyouka-school-uniform-eru-chenkin": [
     ...defaultPreset,
     { key: `ocean`, probability: defaultPreset.length },
     { key: `beach-standing`, probability: defaultPreset.length },
     { key: `beach-near-clean-floor`, probability: defaultPreset.length },
   ],
-  "hyouka-school-uniform": [
+  "hyouka-white-bikini-eru-chenkin": [
     ...defaultPreset,
     {
       key: `classroom-chalkboard`,
@@ -330,43 +368,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "higehiro-school-uniform-sayu": [
-    ...defaultPreset,
-    {
-      key: `city`,
-      probability: defaultPreset.length / 2,
-    },
-    {
-      key: `classroom-chalkboard`,
-      probability: defaultPreset.length / 2,
-    },
-    {
-      key: `classroom-chalkboard`,
-      probability: defaultPreset.length / 2,
-    },
-  ],
-  "is-pilot-suit-cecilia": [
-    ...defaultPreset,
-    {
-      key: `sun-sky`,
-      probability: defaultPreset.length / 2,
-    },
-  ],
-  "is-pilot-suit-charlotte": [
-    ...defaultPreset,
-    {
-      key: `sun-sky`,
-      probability: defaultPreset.length / 2,
-    },
-  ],
-  "is-pilot-suit-houki": [
-    ...defaultPreset,
-    {
-      key: `sun-sky`,
-      probability: defaultPreset.length / 2,
-    },
-  ],
-  "is-infinite-stratos-academy-school-uniform-cecilia": [
+  "is-infinite-stratos-academy-school-uniform-cecilia-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -377,7 +379,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "is-infinite-stratos-academy-school-uniform-charlotte": [
+  "is-infinite-stratos-academy-school-uniform-charlotte-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -388,7 +390,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "is-infinite-stratos-academy-school-uniform-houki": [
+  "is-infinite-stratos-academy-school-uniform-houki-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -399,7 +401,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "is-infinite-stratos-academy-school-uniform-laura": [
+  "is-infinite-stratos-academy-school-uniform-laura-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -410,7 +412,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "is-infinite-stratos-academy-school-uniform-lingyin": [
+  "is-infinite-stratos-academy-school-uniform-lingyin-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -421,7 +423,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "is-infinite-stratos-academy-school-uniform-tatenashi": [
+  "is-infinite-stratos-academy-school-uniform-tatenashi-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -432,7 +434,28 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "is-yellow-dress-maya": [
+  "is-pilot-suit-cecilia-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-pilot-suit-charlotte-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-pilot-suit-houki-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "is-yellow-dress-maya-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -443,7 +466,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "isekai-ojisan-nochekaiser-alicia": [
+  "isekai-ojisan-outfit-alicia-nochekaiser": [
     ...defaultPreset,
     {
       key: `grass`,
@@ -454,7 +477,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "isekai-ojisan-nochekaiser-mabel": [
+  "isekai-ojisan-outfit-mabel-nochekaiser": [
     ...defaultPreset,
     {
       key: `grass`,
@@ -465,7 +488,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "isekai-ojisan-nochekaiser-sui": [
+  "isekai-ojisan-outfit-sui-nochekaiser": [
     ...defaultPreset,
     {
       key: `grass`,
@@ -476,8 +499,8 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "isekai-ojisan-nochekaiser-sumika": defaultPreset,
-  "kagejitsu-nochekaiser-shadow-garden-alpha": [
+  "isekai-ojisan-outfit-sumika-nochekaiser": defaultPreset,
+  "kagejitsu-shadow-garden-alpha-nochekaiser": [
     ...defaultPreset,
     {
       key: `night-moon`,
@@ -488,7 +511,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "kagejitsu-nochekaiser-shadow-garden-beta": [
+  "kagejitsu-shadow-garden-beta-nochekaiser": [
     ...defaultPreset,
     {
       key: `night-moon`,
@@ -496,6 +519,17 @@ export const backgroundsPreset = {
     },
     {
       key: `night-rooftop`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kaguya-sama-shuuchiin-academy-school-uniform-ai-no-lora": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
       probability: defaultPreset.length / 2,
     },
   ],
@@ -510,7 +544,18 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "kaguya-sama-shuuchiin-academy-school-uniform-ai": [
+  "kaguya-sama-shuuchiin-academy-school-uniform-chika-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kaguya-sama-shuuchiin-academy-school-uniform-chika-no-lora": [
     ...defaultPreset,
     {
       key: `classroom-chalkboard`,
@@ -532,7 +577,18 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "kaguya-sama-shuuchiin-academy-school-uniform-chika": [
+  "kaguya-sama-shuuchiin-academy-school-uniform-kaguya-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "kaguya-sama-shuuchiin-academy-school-uniform-kaguya-no-lora": [
     ...defaultPreset,
     {
       key: `classroom-chalkboard`,
@@ -554,7 +610,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "kaguya-sama-shuuchiin-academy-school-uniform-kaguya": [
+  "kaguya-sama-shuuchiin-academy-school-uniform-miko-no-lora": [
     ...defaultPreset,
     {
       key: `classroom-chalkboard`,
@@ -576,18 +632,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "kaguya-sama-shuuchiin-academy-school-uniform-miko": [
-    ...defaultPreset,
-    {
-      key: `classroom-chalkboard`,
-      probability: defaultPreset.length / 2,
-    },
-    {
-      key: `classroom-chalkboard`,
-      probability: defaultPreset.length / 2,
-    },
-  ],
-  "konosuba-megumin-dress-adventurer": [
+  "konosuba-outfit-megumin-adventurer-no-lora": [
     ...defaultPreset,
     {
       key: `grass`,
@@ -598,7 +643,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "konosuba-megumin-dress-light": [
+  "konosuba-outfit-megumin-light-no-lora": [
     ...defaultPreset,
     {
       key: `grass`,
@@ -609,7 +654,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "konosuba-yunyun-shirt": [
+  "konosuba-outfit-yunyun-no-lora": [
     ...defaultPreset,
     {
       key: `grass`,
@@ -620,7 +665,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "lycoris-recoil-lycoris-uniform-chisato": [
+  "lycoris-recoil-lycoris-uniform-chisato-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -631,7 +676,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "lycoris-recoil-lycoris-uniform-takina": [
+  "lycoris-recoil-lycoris-uniform-takina-nochekaiser": [
     ...defaultPreset,
     {
       key: `city`,
@@ -642,47 +687,57 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "new-game-suit-aoba": [
+  "mahoako-outfit-locomusica-notekaga": [
+    ...defaultPreset,
+    { key: `city`, probability: defaultPreset.length },
+  ],
+  "new-game-outfit-aoba-eternal2kpp": [
     ...defaultPreset,
     { key: `city`, probability: defaultPreset.length },
     { key: `office`, probability: defaultPreset.length },
   ],
-  "new-game-shirt-hifumi": [
+  "new-game-outfit-aoba-nochekaiser": [
     ...defaultPreset,
     { key: `city`, probability: defaultPreset.length },
     { key: `office`, probability: defaultPreset.length },
   ],
-  "mahoako-notekaga-locomusica": [
+  "new-game-outfit-hifumi-eternal2kpp": [
     ...defaultPreset,
     { key: `city`, probability: defaultPreset.length },
+    { key: `office`, probability: defaultPreset.length },
   ],
-  "prisma-illya-chloe-beast": defaultPreset,
-  "prisma-illya-illya-beast": defaultPreset,
-  "prisma-illya-magical-girl-illya": [
+  "new-game-outfit-hifumi-nochekaiser": [
+    ...defaultPreset,
+    { key: `city`, probability: defaultPreset.length },
+    { key: `office`, probability: defaultPreset.length },
+  ],
+  "prisma-illya-beast-chloe-am7coffeelove": defaultPreset,
+  "prisma-illya-beast-illya-am7coffeelove": defaultPreset,
+  "prisma-illya-beast-miyu-am7coffeelove": defaultPreset,
+  "prisma-illya-magical-girl-illya-flujoru": [
     ...defaultPreset,
     { key: `night-moon`, probability: defaultPreset.length / 2 },
     { key: `night-rooftop`, probability: defaultPreset.length / 2 },
     { key: `grass-blue-sky`, probability: defaultPreset.length / 2 },
     { key: `garden`, probability: defaultPreset.length / 2 },
   ],
-  "prisma-illya-miyu-beast": defaultPreset,
-  "pso2-bikini-gene": [
+  "pso2-bikini-gene-overnerd": [
     ...defaultPreset,
     { key: `ocean`, probability: defaultPreset.length / 3 },
     { key: `beach-standing`, probability: defaultPreset.length / 3 },
     { key: `beach-near-clean-floor`, probability: defaultPreset.length / 3 },
   ],
-  "rokudenashi-bikini-rumia": [
+  "rokudenashi-bikini-rumia-little-jelly": [
     ...defaultPreset,
     { key: `ocean`, probability: defaultPreset.length },
     { key: `beach-standing`, probability: defaultPreset.length },
     { key: `beach-near-clean-floor`, probability: defaultPreset.length },
   ],
-  "rokudenashi-school-uniform-summer": [
+  "rokudenashi-school-uniform-summer-little-jelly": [
     ...defaultPreset,
     { key: `garden`, probability: defaultPreset.length },
   ],
-  "rokudenashi-school-uniform-winter": [
+  "rokudenashi-school-uniform-winter-little-jelly": [
     ...defaultPreset,
     { key: `garden`, probability: defaultPreset.length },
   ],
@@ -691,9 +746,7 @@ export const backgroundsPreset = {
     { key: `garden`, probability: defaultPreset.length / 2 },
     { key: `city`, probability: defaultPreset.length / 2 },
   ],
-  "sasuoni-eft-first-high-school-uniform-pantyhose": defaultPreset,
-  "sasuoni-eft-first-high-school-uniform-thighhighs": defaultPreset,
-  "slow-loop-school-uniform-hiyori": [
+  "slow-loop-school-uniform-hiyori-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `cafe`,
@@ -708,7 +761,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
-  "slow-loop-school-uniform-koharu": [
+  "slow-loop-school-uniform-koharu-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `cafe`,
@@ -723,7 +776,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
-  "slow-loop-school-uniform-koi": [
+  "slow-loop-school-uniform-koi-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `cafe`,
@@ -738,7 +791,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
-  "spy-family-red-sweater": [
+  "spy-family-red-sweater-eternal2kpp": [
     ...defaultPreset,
     {
       key: `bedroom-near-clean-floor`,
@@ -749,7 +802,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "spy-family-thorn-princess": [
+  "spy-family-thorn-princess-eternal2kpp": [
     ...defaultPreset,
     {
       key: `night-moon`,
@@ -760,7 +813,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "tenshi-sama-blazer": [
+  "tenshi-sama-blazer-jibunsagasinotabi": [
     ...defaultPreset,
     {
       key: `cafe`,
@@ -775,7 +828,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
-  "to-love-ru-school-uniform-nana": [
+  "to-love-ru-school-uniform-nana-lancelot": [
     ...defaultPreset,
     {
       key: `cafe`,

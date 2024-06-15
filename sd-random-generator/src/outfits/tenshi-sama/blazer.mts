@@ -1,7 +1,7 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `mahiru`;
+type Variation = `mahiru-jibunsagasinotabi`;
 
 export const tenshiSamaBlazer = (variation: Variation) =>
   ({

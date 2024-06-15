@@ -1,6 +1,8 @@
 import { OutfitDefine } from "../outfits.mjs";
 
-export const pso2BikiniGene = () =>
+type Variation = `overnerd`;
+
+export const pso2BikiniGene = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

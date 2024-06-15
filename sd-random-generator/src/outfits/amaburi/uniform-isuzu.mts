@@ -1,7 +1,9 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const amaburiUniformIsuzu = () =>
+type Variation = `no-lora` | `h-madoka` | `nochekaiser`;
+
+export const amaburiRedUniformIsuzu = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

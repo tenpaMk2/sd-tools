@@ -1,28 +1,30 @@
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `cecilia` | `charlotte` | `houki`;
+type Variation =
+  | `cecilia-nochekaiser`
+  | `charlotte-nochekaiser`
+  | `houki-nochekaiser`;
 
-const variationParts = {
+const outfitEntries = {
   necklace: {
-    cecilia: [],
-    charlotte: [`jewelry`, `necklace`, `pendant`],
-    houki: [],
+    "cecilia-nochekaiser": [],
+    "charlotte-nochekaiser": [`jewelry`, `necklace`, `pendant`],
+    "houki-nochekaiser": [],
   },
   leotard: {
-    cecilia: [`blue leotard`],
-    charlotte: [`black leotard`],
-    houki: [`white leotard`],
+    "cecilia-nochekaiser": [`blue leotard`],
+    "charlotte-nochekaiser": [`black leotard`],
+    "houki-nochekaiser": [`white leotard`],
   },
   leg: {
-    cecilia: [`white thighhighs`],
-    charlotte: [`black thighhighs`],
-    houki: [`white thighhighs`],
+    "cecilia-nochekaiser": [`white thighhighs`],
+    "charlotte-nochekaiser": [`black thighhighs`],
+    "houki-nochekaiser": [`white thighhighs`],
   },
-} as const satisfies {
-  [k: string]: {
-    [k in Variation]: OutfitDefine["outfitEntries"];
-  };
-};
+} as const satisfies Record<
+  string,
+  Record<Variation, OutfitDefine["outfitEntries"]>
+>;
 
 export const isPilotSuit = (variation: Variation) =>
   ({
@@ -32,16 +34,16 @@ export const isPilotSuit = (variation: Variation) =>
       `pilot suit`,
       `halterneck`,
       `turtleneck`,
-      ...variationParts.necklace[variation],
+      ...outfitEntries.necklace[variation],
       `bare shoulders`,
       `leotard`,
-      ...variationParts.leotard[variation],
+      ...outfitEntries.leotard[variation],
       `covered navel`,
       `shiny`,
       `shiny clothes`,
       `skin tight`,
       `thighhighs`,
-      ...variationParts.leg[variation],
+      ...outfitEntries.leg[variation],
       `thighs skindentation`,
       `bare arms`,
       // `pelvic curtain`, // Nochekaiser specified but I think it should be removed.

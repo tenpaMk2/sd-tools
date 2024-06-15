@@ -1,7 +1,9 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const danmachiHestia = (variation: `nochekaiser`) =>
+type Variation = `no-lora` | `eternal2kpp`;
+
+export const danmachiWhiteDressHestia = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

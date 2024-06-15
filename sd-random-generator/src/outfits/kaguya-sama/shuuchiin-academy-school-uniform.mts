@@ -2,6 +2,18 @@ import { OutfitTag } from "../../tag-defines/adapter.mjs";
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
+type Variation =
+  | `ai-no-lora`
+  | `ai-nochekaiser`
+  | `chika-eternal2kpp`
+  | `chika-no-lora`
+  | `chika-nochekaiser`
+  | `kaguya-eternal2kpp`
+  | `kaguya-no-lora`
+  | `kaguya-nochekaiser`
+  | `miko-no-lora`
+  | `miko-nochekaiser`;
+
 const normal = [
   `shuuchiin academy school uniform`,
   `school uniform`,
@@ -35,15 +47,25 @@ const gyaru = [
   `miniskirt`,
   `socks`,
   `black socks`,
+  `loafers`,
 ] as const satisfies OutfitTag[];
 
 const outfitEntries = {
+  "ai-no-lora": [...gyaru],
   "ai-nochekaiser": [...gyaru, `sweater around waist`],
-  "ai": [...gyaru],
+  "chika-eternal2kpp": [...normal, `socks`, `white socks`],
+  "chika-no-lora": [...normal, `socks`, `white socks`],
   "chika-nochekaiser": [...normal, `socks`, `white socks`],
-  "chika": [...normal, `socks`, `white socks`],
+  "kaguya-eternal2kpp": [...normal, `socks`, `black socks`],
+  "kaguya-no-lora": [...normal, `socks`, `black socks`],
   "kaguya-nochekaiser": [...normal, `socks`, `black socks`],
-  "kaguya": [...normal, `socks`, `black socks`],
+  "miko-no-lora": [
+    ...normal,
+    `armband`,
+    `yellow armband`,
+    `pantyhose`,
+    `black pantyhose`,
+  ],
   "miko-nochekaiser": [
     ...normal,
     `armband`,
@@ -51,18 +73,22 @@ const outfitEntries = {
     `pantyhose`,
     `black pantyhose`,
   ],
-  "miko": [
-    ...normal,
-    `armband`,
-    `yellow armband`,
-    `pantyhose`,
-    `black pantyhose`,
-  ],
-} as const satisfies { [k in string]: OutfitTag[] };
+} as const satisfies Record<Variation, OutfitDefine["outfitEntries"]>;
 
-export const kaguyaSamaShuuchiinAcademySchoolUniform = (
-  variation: keyof typeof outfitEntries,
-) =>
+const upskirtEntries = {
+  "ai-no-lora": upskirtPreset.colorfulPanties,
+  "ai-nochekaiser": upskirtPreset.colorfulPanties,
+  "chika-eternal2kpp": upskirtPreset.colorfulPanties,
+  "chika-no-lora": upskirtPreset.colorfulPanties,
+  "chika-nochekaiser": upskirtPreset.colorfulPanties,
+  "kaguya-eternal2kpp": upskirtPreset.colorfulPanties,
+  "kaguya-no-lora": upskirtPreset.colorfulPanties,
+  "kaguya-nochekaiser": upskirtPreset.colorfulPanties,
+  "miko-no-lora": upskirtPreset.pantiesUnderPantyhose,
+  "miko-nochekaiser": upskirtPreset.pantiesUnderPantyhose,
+} as const satisfies Record<Variation, OutfitDefine["upskirtEntries"]>;
+
+export const kaguyaSamaShuuchiinAcademySchoolUniform = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
@@ -79,9 +105,7 @@ export const kaguyaSamaShuuchiinAcademySchoolUniform = (
       insideOfThighs: false,
     },
     liftType: `dress`,
-    upskirtEntries: [`miko`, `miko-nochekaiser`].some((x) => x === variation)
-      ? upskirtPreset.pantiesUnderPantyhose
-      : upskirtPreset.colorfulPanties,
+    upskirtEntries: upskirtEntries[variation],
     whenRemoveShoes: {
       excludeTags: [`loafers`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

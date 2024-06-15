@@ -1,7 +1,7 @@
 import { OutfitDefine } from "../outfits.mjs";
 
 export const kagejitsuShadowGarden = (
-  variation: `nochekaiser-alpha` | `nochekaiser-beta`,
+  variation: `alpha-nochekaiser` | `beta-nochekaiser`,
 ) =>
   ({
     lora: null,
@@ -12,7 +12,7 @@ export const kagejitsuShadowGarden = (
       `black bodysuit`,
       `gold trim bodysuit`,
       `cleavage cutout`,
-      ...(variation === `nochekaiser-beta` ? ([`armor`] as const) : []),
+      ...(variation === `beta-nochekaiser` ? ([`armor`] as const) : []),
       `gloves`,
       `black gloves`,
       `black footwear`,

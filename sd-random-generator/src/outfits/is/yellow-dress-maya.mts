@@ -1,7 +1,9 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const isYellowDressMaya = () =>
+type Variation = `nochekaiser`;
+
+export const isYellowDressMaya = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

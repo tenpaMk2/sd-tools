@@ -1,7 +1,7 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `kaho`;
+type Variation = `kaho-ibukimakisiko`;
 
 export const blendSSchoolUniform = (variation: Variation) =>
   ({

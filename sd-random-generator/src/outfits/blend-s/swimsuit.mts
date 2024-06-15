@@ -1,6 +1,6 @@
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `kaho`;
+type Variation = `kaho-ibukimakisiko`;
 
 export const blendSSwimsuit = (variation: Variation) =>
   ({

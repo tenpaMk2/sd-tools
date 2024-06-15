@@ -1,7 +1,9 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const newGameShirtHifumi = () =>
+type Variation = `eternal2kpp` | `nochekaiser`;
+
+export const newGameOutfitHifumi = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

@@ -1,7 +1,9 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-export const hyoukaSchoolUniform = () =>
+type Variation = `chenkin`;
+
+export const hyoukaSchoolUniformEru = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],
