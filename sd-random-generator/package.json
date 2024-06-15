@@ -1,10 +1,14 @@
 {
   "name": "@tenpamk2/sd-random-generator",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
   "description": "🎲 Image generator with random characters, outfits, backgrounds and poses via the API of SD web UI (or SD Forge) 🎲",
-  "license": "MIT",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist",
+    "readme-ja.md"
+  ],
   "scripts": {
     "prebuild": "npm run clean",
     "build:base": "npx esbuild --bundle --platform=node --out-extension:.js=.cjs src/index.mts --outdir=dist",
@@ -26,11 +30,12 @@
     "build:sea:postject:win": "npx postject dist-sea/index.exe NODE_SEA_BLOB dist-sea/sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
     "build:sea:win": "run-s clean:sea build:sea:config build:sea:copy-node:win build:sea:postject:win"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "license": "MIT",
+  "private": true,
   "keywords": [
-    "tenpaMk2"
+    "ai",
+    "ai-art",
+    "stable-diffusion"
   ],
   "dependencies": {
     "@tenpamk2/sd-tag-defines": "^1.0.0",

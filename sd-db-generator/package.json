@@ -1,10 +1,14 @@
 {
   "name": "@tenpamk2/sd-db-generator",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
   "description": "🗃️ Database generator for `@tenpamk2/sd-random-generator` 🗄️",
-  "license": "MIT",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.mts",
+  "files": [
+    "dist",
+    "readme-ja.md"
+  ],
   "scripts": {
     "prebuild": "npm run clean",
     "build:base": "npx esbuild --bundle --platform=node --out-extension:.js=.cjs src/index.mts --outdir=dist",
@@ -18,6 +22,7 @@
     "exe": "node dist/index.cjs",
     "test": "vitest"
   },
+  "license": "MIT",
   "private": true,
   "keywords": [
     "ai",

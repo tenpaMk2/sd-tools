@@ -5,10 +5,11 @@
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
   "license": "MIT",
   "scripts": {
-    "build": "npm run -w sd-tag-defines build && npm run -w sd-random-generator build",
+    "build": "npm run -w sd-tag-defines build && npm run -w sd-db-generator build && npm run -w sd-random-generator build",
     "watch:sd-tag-defines": "npm run -w sd-tag-defines watch",
+    "watch:sd-db-generator": "npm run -w sd-db-generator watch",
     "watch:sd-random-generator": "npm run -w sd-random-generator watch",
-    "watch": "run-p watch:sd-tag-defines watch:sd-random-generator",
+    "watch": "run-p watch:sd-tag-defines watch:sd-db-generator watch:sd-random-generator",
     "exe": "npm run -w sd-random-generator exe --"
   },
   "workspaces": [
