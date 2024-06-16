@@ -1,7 +1,8 @@
+import { CameraAngle } from "../../backgrounds/backgrounds.mjs";
 import { emotionPreset } from "../emotion-preset.mjs";
 import { PoseDefine } from "../poses.mjs";
 
-type Variation = `from-above` | `from-below` | `from-horizontal`;
+type Variation = CameraAngle;
 
 const commonEntries = [
   `cowboy shot`,
@@ -9,7 +10,13 @@ const commonEntries = [
   `looking at viewer`,
 ] as const satisfies PoseDefine["entries"];
 
-const commonSpecialVisibility = {
+const entries = {
+  "from-above": [...commonEntries, `from above`, `looking up`],
+  "from-below": [...commonEntries, `from below`, `looking down`],
+  "from-horizontal": commonEntries,
+} as const satisfies Record<Variation, PoseDefine["entries"]>;
+
+const baseSpecialVisibility = {
   armpits: false,
   hangingBreasts: false,
   tautClothes: true,
@@ -22,37 +29,25 @@ const commonSpecialVisibility = {
   upskirt: false,
 } as const satisfies PoseDefine["specialVisibility"];
 
-const variationParts = {
-  cameraAngle: {
-    "from-above": `from-above`,
-    "from-below": `from-below`,
-    "from-horizontal": `from-horizontal`,
-  } as const satisfies Record<Variation, PoseDefine["cameraAngle"]>,
-  entries: {
-    "from-above": [...commonEntries, `from above`, `looking up`],
-    "from-below": [...commonEntries, `from below`, `looking down`],
-    "from-horizontal": commonEntries,
-  } as const satisfies Record<Variation, PoseDefine["entries"]>,
-  specialVisibility: {
-    "from-above": {
-      ...commonSpecialVisibility,
-      underboobLevel: `invisible`,
-      zettaiRyouiki: false,
-    },
-    "from-below": {
-      ...commonSpecialVisibility,
-      underboobLevel: `from below`,
-      upskirt: true,
-    },
-    "from-horizontal": commonSpecialVisibility,
-  } as const satisfies Record<Variation, PoseDefine["specialVisibility"]>,
-} as const;
+const specialVisibility = {
+  "from-above": {
+    ...baseSpecialVisibility,
+    underboobLevel: `invisible`,
+    zettaiRyouiki: false,
+  },
+  "from-below": {
+    ...baseSpecialVisibility,
+    underboobLevel: `from below`,
+    upskirt: true,
+  },
+  "from-horizontal": baseSpecialVisibility,
+} as const satisfies Record<Variation, PoseDefine["specialVisibility"]>;
 
 export const standingArmsBehindBack = (variation: Variation) =>
   ({
     expectedBackgroundType: `standing`,
-    cameraAngle: variationParts.cameraAngle[variation],
-    entries: variationParts.entries[variation],
+    cameraAngle: variation,
+    entries: entries[variation],
     visibility: {
       frontHead: true,
       sideHead: true,
@@ -70,6 +65,6 @@ export const standingArmsBehindBack = (variation: Variation) =>
       wristAndHand: false,
       aroundBody: true,
     },
-    specialVisibility: variationParts.specialVisibility[variation],
+    specialVisibility: specialVisibility[variation],
     emotionProbabilitiesAtPose: emotionPreset["all-flat"],
   }) as const satisfies PoseDefine;

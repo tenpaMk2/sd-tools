@@ -1,0 +1,43 @@
+import { OutfitDefine } from "../outfits.mjs";
+import { upskirtPreset } from "../upskirt-preset";
+
+export const maidBikini = () =>
+  ({
+    lora: null,
+    loraOutfitTriggerWordEntries: [],
+    outfitEntries: [
+      `maid`,
+      `maid headdress`,
+      `detached collar`,
+      `bikini`,
+      `maid bikini`,
+      `breasts skindentation -> skindentation`,
+      `frills`,
+      `apron`,
+      `frilled apron`,
+      `maid apron`,
+      `waist apron`,
+      `detached sleeves`,
+      `collarbone`,
+      `shoulder blades`,
+      `navel`,
+      `skirt`,
+      `miniskirt`,
+      `thighhighs`,
+      `thighs skindentation -> skindentation`,
+    ],
+    specialVisibility: {
+      armpits: true,
+      hangingBreasts: true,
+      tautClothes: false,
+      cleavage: true,
+      sideboob: true,
+      backboob: true,
+      underboobLevel: `only from below`,
+      zettaiRyouiki: true,
+      insideOfThighs: true,
+    },
+    liftType: `skirt`,
+    upskirtEntries: upskirtPreset.colorfulPanties,
+    whenRemoveShoes: null,
+  }) as const satisfies OutfitDefine;
