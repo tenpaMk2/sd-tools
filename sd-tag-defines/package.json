@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
   "description": "🔖 Tag defines for my Stable Diffusion tools 🔖",
-  "main": "dist/index.mjs",
-  "types": "dist/index.d.mts",
+  "exports": {
+    "node": "./dist/index.mjs",
+    "browser": "./dist/index.mjs",
+    "default": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.mts",
   "files": [
     "dist",
     "readme-ja.md"

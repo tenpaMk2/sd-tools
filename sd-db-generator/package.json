@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
   "description": "🗃️ Database generator for `@tenpamk2/sd-random-generator` 🗄️",
-  "main": "dist/index.mjs",
-  "types": "dist/index.d.mts",
+  "exports": {
+    "node": "./dist/index.mjs",
+    "default": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.mts",
   "files": [
     "dist",
     "readme-ja.md"
@@ -32,21 +35,18 @@
     "stable-diffusion"
   ],
   "dependencies": {
-    "@tenpamk2/sd-tag-defines": "^1.0.0",
-    "@types/lodash": "^4.17.0",
-    "commander": "^12.0.0",
-    "picocolors": "^1.0.1",
-    "yaml": "^2.4.2"
+    "@tenpamk2/sd-tag-defines": "^1.0.0"
   },
   "devDependencies": {
-    "@types/cli-progress": "^3.11.5",
     "@types/node": "^20.12.7",
+    "commander": "^12.0.0",
     "esbuild": "^0.21.4",
-    "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
+    "picocolors": "^1.0.1",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "typescript": "^5.4.5",
-    "vitest": "^1.5.0"
+    "vitest": "^1.5.0",
+    "yaml": "^2.4.2"
   }
 }
