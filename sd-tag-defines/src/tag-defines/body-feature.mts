@@ -1,6 +1,6 @@
 import { getKeys } from "../utility.mjs";
 
-export const allDistinguishableBodyTags = {
+export const allDistinguishableBodyFeatureTags = {
   "aqua short tail": `aqua tail`,
   "black short tail": `black tail`,
   "blue short tail": `blue tail`,
@@ -25,10 +25,10 @@ export const allDistinguishableBodyTags = {
   "red long tail": `red tail`,
   "white long tail": `white tail`,
   "yellow long tail": `yellow tail`,
-} as const satisfies { [k in string]: string };
+} as const satisfies Record<string, string>;
 
-export const allBodyTags = [
-  ...getKeys(allDistinguishableBodyTags),
+export const allBodyFeatureTags = [
+  ...getKeys(allDistinguishableBodyFeatureTags),
   `animal ear fluff`,
   `animal ears`,
   `cat ears`,
@@ -58,4 +58,4 @@ export const allBodyTags = [
   `toned`,
   `wide hips`,
 ] as const satisfies readonly string[];
-export type BodyTag = (typeof allBodyTags)[number];
+export type BodyFeatureTag = (typeof allBodyFeatureTags)[number];

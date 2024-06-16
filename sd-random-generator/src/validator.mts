@@ -1,23 +1,12 @@
+// import { CharacterSetting, LoraName, Setting } from "@tenpamk2/sd-db-generator";
+// import { BaseModel } from "@tenpamk2/sd-db-generator/dist/db/checkpoint.mjs";
 // import { Database } from "./db.mjs";
 // import { log, warn } from "./logger.mjs";
-// import {
-//   BaseModel,
-//   CharacterSetting,
-//   Setting,
-//   checkpointInfo,
-// } from "./setting-define.mjs";
-// import { LoraNameTag, allLoras } from "./tag-defines/lora.mjs";
 
-// const searchSupportedBaseModels = (loraName: LoraNameTag): BaseModel[] => {
-//   for (const lora of allLoras) {
-//     if (lora.loraName === loraName) {
-//       return lora.supportedBaseModels;
-//     }
-//   }
-//   return [];
+// const searchSupportedBaseModels = (loraName: LoraName): BaseModel[] => {
+//   const loraTable = Database.singleton().loraTable;
+//   return loraTable[loraName].supportedBaseModels ?? [];
 // };
-
-// // TODO: Define each type for the readbility of VSCode tooltip.
 
 // const validateCharacter = (
 //   character: CharacterSetting,
@@ -28,7 +17,7 @@
 //   const characterData = characterTable[character.key];
 //   if (!characterData?.lora) return;
 
-//   const loraName = characterData.lora.tag;
+//   const loraName = characterData.lora.loraName;
 //   const supportedBaseModels = searchSupportedBaseModels(loraName);
 
 //   if (supportedBaseModels.includes(baseModel)) {
@@ -42,9 +31,11 @@
 // export const validateSetting = (setting: Setting): void => {
 //   log(`Validating...`);
 
+//   const checkpointTable = Database.singleton().checkpointTable;
+
 //   for (const optionSetting of setting.optionSettings) {
 //     const baseModel =
-//       checkpointInfo[optionSetting.optionsBodyJson.sd_model_checkpoint]
+//       checkpointTable[optionSetting.optionsBodyJson.sd_model_checkpoint]
 //         .baseModel;
 
 //     for (const txt2imgSetting of optionSetting.txt2imgSettings) {

@@ -92,6 +92,4 @@ export class Database {
 
     this.defaultSetting = this.loadYaml(`default-setting.yaml`);
   }
-
-  // TODO: Reconsider getting each database separately.
 }

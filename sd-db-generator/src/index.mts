@@ -6,6 +6,7 @@ export {
   CameraAngle,
 } from "./db/backgrounds/backgrounds.mjs";
 export {
+  BreastSizeOrder,
   CharacterDefine,
   CharacterKey,
   CharacterTable,
@@ -79,8 +80,19 @@ export {
   Txt2ImgSetting,
 } from "./setting-define.mjs";
 export {
+  BackgroundTag,
+  BreastSizeTag,
   CharacterFeatureTag,
+  CharacterNameTag,
+  DistinguishableTag,
+  EmotionTag,
   OutfitTag,
   PoseTag,
+  SeriesNameTag,
+  SpecialTag,
   Tag,
+  VisibilityKey,
+  allDistinguishableTags,
+  allVisibilityKeys,
+  tagVisibilities,
 } from "./tag-defines/adapter.mjs";

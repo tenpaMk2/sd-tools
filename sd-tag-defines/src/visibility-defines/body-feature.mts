@@ -1,4 +1,4 @@
-import { BodyTag } from "../tag-defines/body.mjs";
+import { BodyFeatureTag } from "../tag-defines/body-feature.mjs";
 import { Visibility } from "../visibility.mjs";
 
 const all = {
@@ -64,7 +64,7 @@ const preset = {
     sideHipAndThigh: true,
     backHipAndThigh: true,
   },
-} as const satisfies { [k: string]: Visibility };
+} as const satisfies Record<string, Visibility>;
 
 const allDistinguishableBodyFeatureVisibilities = {
   "aqua short tail": preset.shortTail,
@@ -91,9 +91,9 @@ const allDistinguishableBodyFeatureVisibilities = {
   "red long tail": preset.longTail,
   "white long tail": preset.longTail,
   "yellow long tail": preset.longTail,
-} as const satisfies { [key in BodyTag]?: Visibility };
+} as const satisfies Partial<Record<BodyFeatureTag, Visibility>>;
 
-export const allBodyVisibilities = {
+export const allBodyFeatureVisibilities = {
   ...allDistinguishableBodyFeatureVisibilities,
   "animal ear fluff": preset.all,
   "animal ears": preset.all,
@@ -123,4 +123,4 @@ export const allBodyVisibilities = {
   "thick thighs": preset.thighs,
   "toned": preset.all,
   "wide hips": preset.hips,
-} as const satisfies { [key in BodyTag]: Visibility };
+} as const satisfies Record<BodyFeatureTag, Visibility>;

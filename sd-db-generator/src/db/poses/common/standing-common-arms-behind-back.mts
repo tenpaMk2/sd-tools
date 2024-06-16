@@ -27,12 +27,12 @@ const variationParts = {
     "from-above": `from-above`,
     "from-below": `from-below`,
     "from-horizontal": `from-horizontal`,
-  } as const satisfies { [k in Variation]: PoseDefine["cameraAngle"] },
+  } as const satisfies Record<Variation, PoseDefine["cameraAngle"]>,
   entries: {
     "from-above": [...commonEntries, `from above`, `looking up`],
     "from-below": [...commonEntries, `from below`, `looking down`],
     "from-horizontal": commonEntries,
-  } as const satisfies { [k in Variation]: PoseDefine["entries"] },
+  } as const satisfies Record<Variation, PoseDefine["entries"]>,
   specialVisibility: {
     "from-above": {
       ...commonSpecialVisibility,
@@ -45,7 +45,7 @@ const variationParts = {
       upskirt: true,
     },
     "from-horizontal": commonSpecialVisibility,
-  } as const satisfies { [k in Variation]: PoseDefine["specialVisibility"] },
+  } as const satisfies Record<Variation, PoseDefine["specialVisibility"]>,
 } as const;
 
 export const standingArmsBehindBack = (variation: Variation) =>

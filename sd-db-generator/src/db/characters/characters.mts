@@ -1,3 +1,4 @@
+export { BreastSizeOrder } from "@tenpamk2/sd-tag-defines";
 import {
   BreastSizeTag,
   CharacterNameTag,

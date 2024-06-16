@@ -196,7 +196,7 @@ const preset = {
     ...invisible,
     frontHead: true,
   },
-} as const satisfies { [k: string]: Visibility };
+} as const satisfies Record<string, Visibility>;
 
 const allArmbandColorVisibilities = {
   "aqua armband": preset.armlet,
@@ -211,7 +211,7 @@ const allArmbandColorVisibilities = {
   "red armband": preset.armlet,
   "white armband": preset.armlet,
   "yellow armband": preset.armlet,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 // TODO: `color waist apron`
 const allApronColorVisibilities = {
@@ -227,7 +227,7 @@ const allApronColorVisibilities = {
   "red apron": preset.skirt,
   "white apron": preset.skirt,
   "yellow apron": preset.skirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allAscotColorVisibilities = {
   "aqua ascot": preset.bowtie,
@@ -242,7 +242,7 @@ const allAscotColorVisibilities = {
   "red ascot": preset.bowtie,
   "white ascot": preset.bowtie,
   "yellow ascot": preset.bowtie,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allBeltColorVisibilities = {
   "black belt": preset.skirt,
@@ -256,7 +256,7 @@ const allBeltColorVisibilities = {
   "red belt": preset.skirt,
   "white belt": preset.skirt,
   "yellow belt": preset.skirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allBikiniColorVisibilities = {
   "multicolored bikini": preset.dress,
@@ -274,7 +274,7 @@ const allBikiniColorVisibilities = {
   "silver bikini": preset.dress,
   "white bikini": preset.dress,
   "yellow bikini": preset.dress,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allBodysuitColorVisibilities = {
   "aqua bodysuit": preset.all,
@@ -289,7 +289,7 @@ const allBodysuitColorVisibilities = {
   "red bodysuit": preset.all,
   "white bodysuit": preset.all,
   "yellow bodysuit": preset.all,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allBowtieColorVisibilities = {
   "aqua bowtie": preset.bowtie,
@@ -304,7 +304,7 @@ const allBowtieColorVisibilities = {
   "red bowtie": preset.bowtie,
   "white bowtie": preset.bowtie,
   "yellow bowtie": preset.bowtie,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allBurumaColorVisibilities = {
   "aqua buruma": preset.skirt,
@@ -319,7 +319,7 @@ const allBurumaColorVisibilities = {
   "red buruma": preset.skirt,
   "white buruma": preset.skirt,
   "yellow buruma": preset.skirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allCamisoleColorVisibilities = {
   "aqua camisole": preset.shirt,
@@ -334,7 +334,7 @@ const allCamisoleColorVisibilities = {
   "red camisole": preset.shirt,
   "white camisole": preset.shirt,
   "yellow camisole": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allCapeColorVisibilities = {
   "aqua cape": preset.shirt,
@@ -349,7 +349,7 @@ const allCapeColorVisibilities = {
   "red cape": preset.shirt,
   "white cape": preset.shirt,
   "yellow cape": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allCapeletColorVisibilities = {
   "aqua capelet": preset.shirt,
@@ -364,7 +364,7 @@ const allCapeletColorVisibilities = {
   "red capelet": preset.shirt,
   "white capelet": preset.shirt,
   "yellow capelet": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allChokerColorVisibilities = {
   "aqua choker": preset.collar,
@@ -379,7 +379,7 @@ const allChokerColorVisibilities = {
   "red choker": preset.collar,
   "white choker": preset.collar,
   "yellow choker": preset.collar,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allCollarColorVisibilities = {
   "black collar": preset.collar,
@@ -391,7 +391,7 @@ const allCollarColorVisibilities = {
   "purple collar": preset.collar,
   "red collar": preset.collar,
   "white collar": preset.collar,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allDressColorVisibilities = {
   "aqua dress": preset.dress,
@@ -406,7 +406,7 @@ const allDressColorVisibilities = {
   "red dress": preset.dress,
   "white dress": preset.dress,
   "yellow dress": preset.dress,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 // TODO: Separate color thigh boots from following defines.
 const allFootwearColorVisibilities = {
@@ -422,7 +422,7 @@ const allFootwearColorVisibilities = {
   "red footwear": preset.foot,
   "white footwear": preset.foot,
   "yellow footwear": preset.foot,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allGlovesColorVisibilities = {
   "multicolored gloves": preset["wrist cuffs"],
@@ -438,7 +438,7 @@ const allGlovesColorVisibilities = {
   "red gloves": preset["wrist cuffs"],
   "white gloves": preset["wrist cuffs"],
   "yellow gloves": preset["wrist cuffs"],
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allJacketColorVisibilities = {
   "aqua jacket": preset.shirt,
@@ -453,7 +453,7 @@ const allJacketColorVisibilities = {
   "red jacket": preset.shirt,
   "white jacket": preset.shirt,
   "yellow jacket": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allLeotardColorVisibilities = {
   "aqua leotard": preset.dress,
@@ -468,7 +468,7 @@ const allLeotardColorVisibilities = {
   "red leotard": preset.dress,
   "white leotard": preset.dress,
   "yellow leotard": preset.dress,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allNeckerchiefColorVisibilities = {
   "aqua neckerchief": preset.bowtie,
@@ -483,7 +483,7 @@ const allNeckerchiefColorVisibilities = {
   "red neckerchief": preset.bowtie,
   "white neckerchief": preset.bowtie,
   "yellow neckerchief": preset.bowtie,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allNecktieColorVisibilities = {
   "aqua necktie": preset.bowtie,
@@ -498,7 +498,7 @@ const allNecktieColorVisibilities = {
   "red necktie": preset.bowtie,
   "white necktie": preset.bowtie,
   "yellow necktie": preset.bowtie,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allOnePieceSwimsuitColorVisibilities = {
   "aqua one-piece swimsuit": preset.dress,
@@ -515,7 +515,7 @@ const allOnePieceSwimsuitColorVisibilities = {
   "silver one-piece swimsuit": preset.dress,
   "white one-piece swimsuit": preset.dress,
   "yellow one-piece swimsuit": preset.dress,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allPantiesColorVisibilities = {
   "aqua panties": preset.panties,
@@ -530,7 +530,7 @@ const allPantiesColorVisibilities = {
   "red panties": preset.panties,
   "white panties": preset.panties,
   "yellow panties": preset.panties,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allPantsColorVisibilities = {
   "aqua pants": preset.thighs,
@@ -545,7 +545,7 @@ const allPantsColorVisibilities = {
   "red pants": preset.thighs,
   "white pants": preset.thighs,
   "yellow pants": preset.thighs,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allPantyhoseColorVisibilities = {
   "aqua pantyhose": preset.thighhighs,
@@ -560,7 +560,7 @@ const allPantyhoseColorVisibilities = {
   "red pantyhose": preset.thighhighs,
   "white pantyhose": preset.thighhighs,
   "yellow pantyhose": preset.thighhighs,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allSailorCollarColorVisibilities = {
   "aqua sailor collar": preset.collar,
@@ -575,7 +575,7 @@ const allSailorCollarColorVisibilities = {
   "red sailor collar": preset.collar,
   "white sailor collar": preset.collar,
   "yellow sailor collar": preset.collar,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allSerafukuColorVisibilities = {
   "aqua serafuku": preset.shirt,
@@ -590,7 +590,7 @@ const allSerafukuColorVisibilities = {
   "red serafuku": preset.shirt,
   "white serafuku": preset.shirt,
   "yellow serafuku": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allShirtColorVisibilities = {
   "aqua shirt": preset.shirt,
@@ -605,7 +605,7 @@ const allShirtColorVisibilities = {
   "red shirt": preset.shirt,
   "white shirt": preset.shirt,
   "yellow shirt": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allShortsColorVisibilities = {
   "multicolored shorts": preset.skirt,
@@ -621,7 +621,7 @@ const allShortsColorVisibilities = {
   "red shorts": preset.skirt,
   "white shorts": preset.skirt,
   "yellow shorts": preset.skirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allSkirtColorVisibilities = {
   "aqua skirt": preset.skirt,
@@ -636,7 +636,7 @@ const allSkirtColorVisibilities = {
   "red skirt": preset.skirt,
   "white skirt": preset.skirt,
   "yellow skirt": preset.skirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allSleevesColorVisibilities = {
   "aqua sleeves": preset.shoulder,
@@ -651,7 +651,7 @@ const allSleevesColorVisibilities = {
   "red sleeves": preset.shoulder,
   "white sleeves": preset.shoulder,
   "yellow sleeves": preset.shoulder,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allSocksColorVisibilities = {
   "black socks": preset.foot,
@@ -665,7 +665,7 @@ const allSocksColorVisibilities = {
   "red socks": preset.foot,
   "white socks": preset.foot,
   "yellow socks": preset.foot,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allSweaterColorVisibilities = {
   "aqua sweater": preset.shirt,
@@ -681,7 +681,7 @@ const allSweaterColorVisibilities = {
   "red sweater": preset.shirt,
   "yellow sweater": preset.shirt,
   "white sweater": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allSweaterVestColorVisibilities = {
   "aqua sweater vest": preset.shirt,
@@ -696,7 +696,7 @@ const allSweaterVestColorVisibilities = {
   "red sweater vest": preset.shirt,
   "white sweater vest": preset.shirt,
   "yellow sweater vest": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allTankTopColorVisibilities = {
   "aqua tank top": preset.shirt,
@@ -711,7 +711,7 @@ const allTankTopColorVisibilities = {
   "red tank top": preset.shirt,
   "white tank top": preset.shirt,
   "yellow tank top": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allThighhighsColorVisibilities = {
   "black thighhighs": preset.thighhighs,
@@ -725,7 +725,7 @@ const allThighhighsColorVisibilities = {
   "red thighhighs": preset.thighhighs,
   "white thighhighs": preset.thighhighs,
   "yellow thighhighs": preset.thighhighs,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allVestColorVisibilities = {
   "aqua vest": preset.shirt,
@@ -740,7 +740,7 @@ const allVestColorVisibilities = {
   "red vest": preset.shirt,
   "white vest": preset.shirt,
   "yellow vest": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allDistinguishableOutfitVisibilities = {
   "breasts skindentation": preset["breasts skindentation"],
@@ -807,9 +807,9 @@ const allDistinguishableOutfitVisibilities = {
   "white chest gemstone": preset.bowtie,
   "yellow chest gemstone": preset.bowtie,
   "cable knit sweater": preset.shirt,
-} as const satisfies { [key in BodyOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
-export const allOutfitVisibilities = {
+export const allBodyOutfitVisibilities = {
   ...allApronColorVisibilities,
   ...allArmbandColorVisibilities,
   ...allAscotColorVisibilities,
@@ -1154,6 +1154,4 @@ export const allOutfitVisibilities = {
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],
   "yellow sports bra": preset.bra,
-} as const satisfies {
-  [key in BodyOutfitTag]: Visibility;
-};
+} as const satisfies Record<BodyOutfitTag, Visibility>;

@@ -1,6 +1,11 @@
 import {
+  BackgroundTag,
+  BreastSizeOrder,
+  BreastSizeTag,
   CharacterFeatureTag,
+  CharacterNameTag,
   EmotionKey,
+  EmotionTag,
   EmotionType,
   LoraCharacterTriggerWordsTag,
   LoraOutfitTriggerWordsTag,
@@ -10,22 +15,15 @@ import {
   PoseSpecialVisibility,
   PoseTag,
   PoseUnderboobLevelOrder,
+  SeriesNameTag,
+  SpecialTag,
   Tag,
   Txt2ImgSetting,
   UnderboobLevelOrder,
-} from "@tenpamk2/sd-db-generator";
-import {
-  BackgroundTag,
-  BreastSizeOrder,
-  BreastSizeTag,
-  CharacterNameTag,
-  EmotionTag,
-  SeriesNameTag,
-  SpecialTag,
-  VisibilityKeys,
+  VisibilityKey,
   allVisibilityKeys,
   tagVisibilities,
-} from "@tenpamk2/sd-tag-defines";
+} from "@tenpamk2/sd-db-generator";
 import {
   BackgroundCollectedData,
   CharacterCollectedData,
@@ -92,7 +90,7 @@ const setHeavyWeightOne = <T extends Tag>(
 
 const extractVisible = <T extends CharacterFeatureTag | OutfitTag>(
   tokens: Token<T>[],
-  parts: VisibilityKeys[],
+  parts: VisibilityKey[],
 ) => {
   const m = new Map<T, Token<T>>();
   for (const token of tokens) {

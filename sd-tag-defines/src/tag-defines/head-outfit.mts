@@ -13,7 +13,7 @@ const allHairbandColorTags = [
   `black hairband`,
   `grey hairband`,
   `white hairband`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 const allHatColorTags = [
   `aqua hat`,
@@ -28,7 +28,7 @@ const allHatColorTags = [
   `red hat`,
   `white hat`,
   `yellow hat`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 export const allDistinguishableHeadOutfitTags = {
   "aqua hair bow": `aqua bow`,
@@ -57,7 +57,7 @@ export const allDistinguishableHeadOutfitTags = {
   "yellow hair ribbon": `yellow ribbon`,
   "jingle bell hair ornament": `jingle bell`,
   "cable knit hat": `cable knit`,
-} as const satisfies { [k in string]: string };
+} as const satisfies Record<string, string>;
 
 export const allHeadOutfitTags = [
   ...allHairbandColorTags,

@@ -606,7 +606,7 @@ export const allDistinguishableOutfitTags = {
   "white chest gemstone": `white gemstone`,
   "yellow chest gemstone": `yellow gemstone`,
   "cable knit sweater": `cable knit`,
-} as const satisfies { [k in string]: string };
+} as const satisfies Record<string, string>;
 
 export const allBodyOutfitTags = [
   ...allApronColorTags,

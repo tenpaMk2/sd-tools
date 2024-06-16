@@ -1,11 +1,11 @@
-import { LoraEntry, LoraName, Tag, TagEntry } from "@tenpamk2/sd-db-generator";
 import {
-  allDistinguishableBodyTags,
-  allDistinguishableHeadOutfitTags,
-  allDistinguishableOutfitTags,
-} from "@tenpamk2/sd-tag-defines";
-
-type DistinguishableTags = Readonly<{ [k in string]: string }>;
+  DistinguishableTag,
+  LoraEntry,
+  LoraName,
+  Tag,
+  TagEntry,
+  allDistinguishableTags,
+} from "@tenpamk2/sd-db-generator";
 
 /**
  * Token definition.
@@ -22,10 +22,7 @@ export class Token<T extends Tag> {
   toString() {
     // Resolve tag name if it's a distinguishable tag.
     const tag =
-      (allDistinguishableBodyTags as DistinguishableTags)[this.tag] ??
-      (allDistinguishableHeadOutfitTags as DistinguishableTags)[this.tag] ??
-      (allDistinguishableOutfitTags as DistinguishableTags)[this.tag] ??
-      this.tag;
+      allDistinguishableTags[this.tag as DistinguishableTag] ?? this.tag;
 
     return this.weight === 1.0 ? tag : `${tag}:${this.weight}`;
   }
@@ -95,13 +92,7 @@ export class Pattern<T extends Tag> {
     const resolvedTokens = this.tokens.map(
       (token) =>
         ({
-          tag: ((allDistinguishableBodyTags as DistinguishableTags)[
-            token.tag
-          ] ??
-            (allDistinguishableHeadOutfitTags as DistinguishableTags)[
-              token.tag
-            ] ??
-            (allDistinguishableOutfitTags as DistinguishableTags)[token.tag] ??
+          tag: (allDistinguishableTags[token.tag as DistinguishableTag] ??
             token.tag) as T,
           weight: token.weight,
           type: `normal`,

@@ -5,7 +5,7 @@ const allEyebrowsTags = [
   `short eyebrows`,
   `thick eyebrows`,
   `hikimayu`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 const allEyesColorTags = [
   `aqua eyes`,
@@ -20,7 +20,7 @@ const allEyesColorTags = [
   `red eyes`,
   `white eyes`,
   `yellow eyes`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 const allEyesTags = [
   `sparkling eyes`,
@@ -31,13 +31,13 @@ const allEyesTags = [
   `tsurime`,
   `tareme`,
   `jitome`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 const allEyelashesTags = [
   `eyelashes`,
   `long eyelashes`,
   `thick eyelashes`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 export const allDistinguishableFaceTags = {
   "aqua forehead gemstone": `aqua gemstone`,
@@ -52,7 +52,7 @@ export const allDistinguishableFaceTags = {
   "red forehead gemstone": `red gemstone`,
   "white forehead gemstone": `white gemstone`,
   "yellow forehead gemstone": `yellow gemstone`,
-} as const satisfies { [k in string]: string };
+} as const satisfies Record<string, string>;
 
 export const allFaceTags = [
   ...allEyebrowsTags,

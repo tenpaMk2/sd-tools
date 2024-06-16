@@ -19,7 +19,7 @@ const preset = {
     wristAndHand: false,
     aroundBody: false,
   },
-} as const satisfies { [k: string]: Visibility };
+} as const satisfies Record<string, Visibility>;
 
 const allDistinguishableHeadOutfitVisibilities = {
   "aqua hair bow": preset.hair,
@@ -48,7 +48,7 @@ const allDistinguishableHeadOutfitVisibilities = {
   "yellow hair ribbon": preset.hair,
   "jingle bell hair ornament": preset.hair,
   "cable knit hat": preset.hair,
-} as const satisfies { [key in HeadOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<HeadOutfitTag, Visibility>>;
 
 const allHairbandColorVisibilities = {
   "red hairband": preset.hair,
@@ -63,7 +63,7 @@ const allHairbandColorVisibilities = {
   "black hairband": preset.hair,
   "grey hairband": preset.hair,
   "white hairband": preset.hair,
-} as const satisfies { [key in HeadOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<HeadOutfitTag, Visibility>>;
 
 const allHatColorVisibilities = {
   "aqua hat": preset.hair,
@@ -78,7 +78,7 @@ const allHatColorVisibilities = {
   "red hat": preset.hair,
   "white hat": preset.hair,
   "yellow hat": preset.hair,
-} as const satisfies { [key in HeadOutfitTag]?: Visibility };
+} as const satisfies Partial<Record<HeadOutfitTag, Visibility>>;
 
 export const allHeadOutfitVisibilities = {
   ...allDistinguishableHeadOutfitVisibilities,
@@ -156,6 +156,4 @@ export const allHeadOutfitVisibilities = {
   "veil": preset.hair,
   "witch hat": preset.hair,
   "x hair ornament": preset.hair,
-} as const satisfies {
-  [key in HeadOutfitTag]: Visibility;
-};
+} as const satisfies Record<HeadOutfitTag, Visibility>;

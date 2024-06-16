@@ -1,7 +1,18 @@
+export {
+  BackgroundTag,
+  BreastSizeTag,
+  CharacterNameTag,
+  EmotionTag,
+  SeriesNameTag,
+  SpecialTag,
+  VisibilityKey,
+  allVisibilityKeys,
+  tagVisibilities,
+} from "@tenpamk2/sd-tag-defines";
 import {
   BackgroundTag,
+  BodyFeatureTag,
   BodyOutfitTag,
-  BodyTag,
   BreastSizeTag,
   CameraTag,
   CharacterNameTag,
@@ -15,6 +26,9 @@ import {
   PoseTag as OriginalPoseTag,
   SeriesNameTag,
   SpecialTag,
+  allDistinguishableBodyFeatureTags,
+  allDistinguishableHeadOutfitTags,
+  allDistinguishableOutfitTags,
 } from "@tenpamk2/sd-tag-defines";
 import {
   LoraCharacterTriggerWordsTag,
@@ -24,7 +38,7 @@ import {
 export type Tag =
   | BackgroundTag
   | BodyOutfitTag
-  | BodyTag
+  | BodyFeatureTag
   | BreastSizeTag
   | CameraTag
   | CharacterNameTag
@@ -51,7 +65,14 @@ export type OutfitTag = HeadOutfitTag | BodyOutfitTag;
 
 export type CharacterFeatureTag =
   | HeadOutfitTag
-  | BodyTag
+  | BodyFeatureTag
   | HairTag
   | GlassesTag
   | FaceTag;
+
+export const allDistinguishableTags = {
+  ...allDistinguishableBodyFeatureTags,
+  ...allDistinguishableHeadOutfitTags,
+  ...allDistinguishableOutfitTags,
+} as const;
+export type DistinguishableTag = keyof typeof allDistinguishableTags;

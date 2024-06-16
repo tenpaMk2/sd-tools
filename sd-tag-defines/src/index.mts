@@ -1,14 +1,14 @@
 export { BackgroundTag, allBackgroundTags } from "./tag-defines/background.mjs";
 export {
+  BodyFeatureTag,
+  allBodyFeatureTags,
+  allDistinguishableBodyFeatureTags,
+} from "./tag-defines/body-feature.mjs";
+export {
   BodyOutfitTag,
   allBodyOutfitTags,
   allDistinguishableOutfitTags,
 } from "./tag-defines/body-outfit.mjs";
-export {
-  BodyTag,
-  allBodyTags,
-  allDistinguishableBodyTags,
-} from "./tag-defines/body.mjs";
 export {
   BreastSizeOrder,
   BreastSizeTag,
@@ -46,7 +46,7 @@ export {
 export { SpecialTag, allSpecialTags } from "./tag-defines/special.mjs";
 export {
   Visibility,
-  VisibilityKeys,
+  VisibilityKey,
   allVisibilityKeys,
   tagVisibilities,
 } from "./visibility.mjs";
