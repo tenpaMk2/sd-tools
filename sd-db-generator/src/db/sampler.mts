@@ -1,4 +1,4 @@
-type SamplerDefine = Readonly<{}>;
+export type SamplerDefine = Readonly<{}>;
 
 /**
  * Sampler table. The key is the sampler name.
@@ -10,4 +10,5 @@ export const samplerTable = {
   "Restart": {},
 } as const satisfies Record<string, SamplerDefine>;
 
-export type SamplerName = keyof typeof samplerTable;
+export type SamplerTable = typeof samplerTable;
+export type SamplerName = keyof SamplerTable;

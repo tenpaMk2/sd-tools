@@ -1,10 +1,9 @@
+import { LoraEntry, LoraName, Tag, TagEntry } from "@tenpamk2/sd-db-generator";
 import {
   allDistinguishableBodyTags,
   allDistinguishableHeadOutfitTags,
   allDistinguishableOutfitTags,
 } from "@tenpamk2/sd-tag-defines";
-import { Tag } from "./tag-defines/adapter.mjs";
-import { LoraNameTag } from "./tag-defines/lora.mjs";
 
 type DistinguishableTags = Readonly<{ [k in string]: string }>;
 
@@ -31,14 +30,6 @@ export class Token<T extends Tag> {
     return this.weight === 1.0 ? tag : `${tag}:${this.weight}`;
   }
 }
-
-/**
- * Type of entries for normal token define.
- */
-export type NormalEntry<T extends Tag> =
-  | T
-  | { tag: T; weight: number }
-  | { probability?: number; entries: NormalEntry<T>[] }[];
 
 export class Pattern<T extends Tag> {
   readonly tokens: Token<T>[];
@@ -164,11 +155,9 @@ export class PatternCollection<T extends Tag> {
       );
   }
 
-  static create<T extends Tag>(
-    entries: NormalEntry<T>[],
-  ): PatternCollection<T> {
+  static create<T extends Tag>(entries: TagEntry<T>[]): PatternCollection<T> {
     const createPatternCollectionRecursively = (
-      entries: NormalEntry<T>[],
+      entries: TagEntry<T>[],
     ): PatternCollection<T> => {
       const pcs = entries.map((entry) => {
         if (typeof entry === `string`) {
@@ -316,7 +305,7 @@ export class PatternCollection<T extends Tag> {
   }
 
   static createTokensInstantly<T extends Tag>(
-    entries: NormalEntry<T>[],
+    entries: TagEntry<T>[],
   ): Token<T>[] {
     if (!entries || entries.length === 0) return [];
 
@@ -330,26 +319,18 @@ export class PatternCollection<T extends Tag> {
  * Lora string definition.
  */
 export class LoraString {
-  readonly tag: LoraNameTag;
+  readonly loraName: LoraName;
   readonly weight: number;
 
-  constructor({ tag, weight }: { tag: LoraNameTag; weight?: number }) {
-    this.tag = tag;
+  constructor({ loraName, weight }: { loraName: LoraName; weight?: number }) {
+    this.loraName = loraName;
     this.weight = weight ?? 1.0; // `weight` can be negative.
   }
 
   toString() {
-    return `<lora:${this.tag}:${this.weight}>`;
+    return `<lora:${this.loraName}:${this.weight}>`;
   }
 }
-
-/**
- * Type of entries for Lora token define.
- */
-export type LoraEntry = {
-  tag: LoraNameTag;
-  probabilityAndWeights: { probability: number; weight: number }[];
-};
 
 /**
  * Lora picker.
@@ -375,69 +356,9 @@ export class LoraPicker {
     let sum = 0;
     for (const { probability, weight } of this.entry.probabilityAndWeights) {
       sum += probability;
-      if (random <= sum) return new LoraString({ tag: this.entry.tag, weight });
+      if (random <= sum)
+        return new LoraString({ loraName: this.entry.loraName, weight });
     }
     throw new Error(`Error: No item was picked.`);
   }
 }
-
-// const pc1 = PatternCollection.createLora({
-//   tag: `mea-loveru`,
-//   probabilityAndWeights: [
-//     { probability: 1, weight: 0.8 },
-//     { probability: 3, weight: 0.6 },
-//   ],
-// });
-
-// console.log(pc1);
-
-// const pc2 = PatternCollection.create<OutfitAndExposureTag>([
-//   `bikini`,
-//   [
-//     { probability: 2, entries: [`red bikini`] },
-//     { probability: 3, entries: [`blue bikini`] },
-//     {
-//       probability: 1,
-//       entries: [
-//         `skirt`,
-//         [
-//           { probability: 1, entries: [`micro bikini`] },
-//           { probability: 1, entries: [`crown`] },
-//         ],
-//       ],
-//     },
-//   ],
-// ]);
-
-// console.log(pc2);
-
-// const combineIf = pc2.combineIf<EmotionTag>(
-//   (p) => p.tokens.some(({ tag }) => tag === `micro bikini`),
-//   PatternCollection.create<EmotionTag>([
-//     `smile`,
-//     [
-//       { probability: 1, entries: [`!`] },
-//       { probability: 1, entries: [`?`] },
-//     ],
-//   ]),
-// );
-
-// console.log(combineIf);
-
-// const combineIfEmpty = pc2.combineIf(
-//   (p) => p.tokens.some(({ tag }) => tag === `micro bikini`),
-//   PatternCollection.create<EmotionTag>([]),
-// );
-
-// console.log(combineIfEmpty);
-
-// const combineIfAllMatch = pc2.combineIf(
-//   (p) => p.tokens.some(({ tag }) => true),
-//   PatternCollection.create<EmotionTag>([`smile`]),
-// );
-
-// console.log(combineIfAllMatch);
-
-// console.log(`end`);
-
-// TODO: Rename this file as `Token.mts` .

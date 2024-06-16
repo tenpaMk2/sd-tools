@@ -1,4 +1,4 @@
-type UpscalerDefine = Readonly<{}>;
+export type UpscalerDefine = Readonly<{}>;
 
 /**
  * Upscaler table. The key is the upscaler name.
@@ -12,4 +12,5 @@ export const upscalerTable = {
   "R-ESRGAN 4x+": {},
 } as const satisfies Record<string, UpscalerDefine>;
 
-export type UpscalerName = keyof typeof upscalerTable;
+export type UpscalerTable = typeof upscalerTable;
+export type UpscalerName = keyof UpscalerTable;

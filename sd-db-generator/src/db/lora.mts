@@ -1,6 +1,6 @@
 import { BaseModel } from "./checkpoint.mjs";
 
-type LoraDefine = Readonly<{
+export type LoraDefine = Readonly<{
   /**
    * Recommended weight.
    * This value is specied in the LoRA description or sample images.
@@ -78,8 +78,10 @@ export const loraTable = {
   },
 } as const satisfies Record<string, LoraDefine>;
 
-export type LoraName = keyof typeof loraTable;
+export type LoraTable = typeof loraTable;
+export type LoraName = keyof LoraTable;
+
 export type LoraCharacterTriggerWordsTag =
-  (typeof loraTable)[LoraName]["characterTriggerWordsTags"][number];
+  LoraTable[LoraName]["characterTriggerWordsTags"][number];
 export type LoraOutfitTriggerWordsTag =
-  (typeof loraTable)[LoraName]["outfitTriggerTags"][number];
+  LoraTable[LoraName]["outfitTriggerTags"][number];

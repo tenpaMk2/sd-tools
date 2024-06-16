@@ -38,6 +38,7 @@
     "stable-diffusion"
   ],
   "dependencies": {
+    "@tenpamk2/sd-db-generator": "^1.0.0",
     "@tenpamk2/sd-tag-defines": "^1.0.0",
     "@types/lodash": "^4.17.0",
     "cli-progress": "^3.12.0",

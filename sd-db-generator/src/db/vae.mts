@@ -1,4 +1,4 @@
-type VaeDefine = Readonly<{}>;
+export type VaeDefine = Readonly<{}>;
 
 /**
  * VAE table. The key is the VAE name.
@@ -9,4 +9,5 @@ export const vaeTable = {
   "blessed2.vae.safetensors": {},
 } as const satisfies Record<string, VaeDefine>;
 
-export type VaeName = keyof typeof vaeTable;
+export type VaeTable = typeof vaeTable;
+export type VaeName = keyof VaeTable;

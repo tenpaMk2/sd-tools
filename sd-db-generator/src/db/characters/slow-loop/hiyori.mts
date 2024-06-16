@@ -27,15 +27,6 @@ export const slowLoopHiyori = (variation: Variation) =>
       `blue hair`,
       `dark blue hair`,
       `medium hair`,
-      [
-        { entries: [`twintails`] },
-        {
-          entries: [
-            { tag: `bob cut`, weight: 0.12345678901234567889 },
-            [{ entries: [`thick thighs`] }, { entries: [`curvy`] }],
-          ],
-        },
-      ],
       `blunt bangs`,
       `sidelocks`,
     ],

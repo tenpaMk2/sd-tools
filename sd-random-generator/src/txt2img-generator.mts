@@ -1,4 +1,20 @@
 import {
+  CharacterFeatureTag,
+  EmotionKey,
+  EmotionType,
+  LoraCharacterTriggerWordsTag,
+  LoraOutfitTriggerWordsTag,
+  OutfitDefine,
+  OutfitTag,
+  PoseDefine,
+  PoseSpecialVisibility,
+  PoseTag,
+  PoseUnderboobLevelOrder,
+  Tag,
+  Txt2ImgSetting,
+  UnderboobLevelOrder,
+} from "@tenpamk2/sd-db-generator";
+import {
   BackgroundTag,
   BreastSizeOrder,
   BreastSizeTag,
@@ -10,7 +26,6 @@ import {
   allVisibilityKeys,
   tagVisibilities,
 } from "@tenpamk2/sd-tag-defines";
-import { EmotionType } from "./characters/characters.mjs";
 import {
   BackgroundCollectedData,
   CharacterCollectedData,
@@ -18,32 +33,14 @@ import {
   OutfitCollectedData,
   PoseCollectedData,
 } from "./collector.mjs";
-import { emotionProbabilitiesAtEmotionType } from "./emotions/emotion-probabilities-at-emotion-type.mjs";
-import { EmotionKey, emotionTable } from "./emotions/emotions.mjs";
+import { Database } from "./db.mjs";
 import { getKeys, pickRandomly } from "./libs/utility.mjs";
-import { OutfitDefine, UnderboobLevelOrder } from "./outfits/outfits.mjs";
-import {
-  PoseDefine,
-  PoseSpecialVisibility,
-  PoseUnderboobLevelOrder,
-} from "./poses/poses.mjs";
 import {
   LoraPicker,
   LoraString,
   PatternCollection,
   Token,
 } from "./prompt-define.mjs";
-import { Txt2ImgSetting } from "./setting-define.mjs";
-import {
-  CharacterFeatureTag,
-  OutfitTag,
-  PoseTag,
-  Tag,
-} from "./tag-defines/adapter.mjs";
-import {
-  LoraCharacterTriggerWordsTag,
-  LoraOutfitTriggerWordsTag,
-} from "./tag-defines/lora.mjs";
 
 const pickEmotionTokens = (
   emotionProbabilitiesAtPose: PoseDefine["emotionProbabilitiesAtPose"],
@@ -53,6 +50,11 @@ const pickEmotionTokens = (
     EmotionKey,
     { key: EmotionKey; probability: number }
   >();
+
+  const emotionProbabilitiesAtEmotionType =
+    Database.singleton().emotionProbabilitiesAtEmotionType;
+  const emotionTable = Database.singleton().emotionTable;
+
   for (const key of getKeys(emotionProbabilitiesAtPose)) {
     const probabilityOfPose = emotionProbabilitiesAtPose[key]!;
     const probabilityOfEmotionType =

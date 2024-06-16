@@ -5,17 +5,11 @@ import {
 } from "@tenpamk2/sd-tag-defines";
 import { LoraEntry, TagEntry } from "../../entry.mjs";
 import { CharacterFeatureTag } from "../../tag-defines/adapter.mjs";
+import { EmotionType } from "../emotions/emotions.mjs";
 import { LoraCharacterTriggerWordsTag } from "../lora.mjs";
 import { slowLoopHiyori } from "./slow-loop/hiyori.mjs";
 import { slowLoopKoharu } from "./slow-loop/koharu.mjs";
 import { slowLoopKoi } from "./slow-loop/koi.mjs";
-
-export type EmotionType =
-  | `cute`
-  | `serious`
-  | `tsundere`
-  | `emotionless`
-  | `mesugaki`;
 
 export type CharacterDefine = Readonly<{
   /**
@@ -59,7 +53,8 @@ export const characterTable = {
   "slow-loop-koi-ibukimakisiko": slowLoopKoi(`ibukimakisiko`),
 } as const satisfies Record<string, CharacterDefine>;
 
-export type CharacterKey = keyof typeof characterTable;
+export type CharacterTable = typeof characterTable;
+export type CharacterKey = keyof CharacterTable;
 
 // TODO: stomach tattoo. Idea: hook `navel` tag.
 // TODO: Show character and Lora URL lists.

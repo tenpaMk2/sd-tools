@@ -1,54 +1,56 @@
-import { characterTable } from "./characters/characters.mjs";
-import { log, warn } from "./logger.mjs";
-import {
-  BaseModel,
-  CharacterSetting,
-  Setting,
-  checkpointInfo,
-} from "./setting-define.mjs";
-import { LoraNameTag, allLoras } from "./tag-defines/lora.mjs";
+// import { Database } from "./db.mjs";
+// import { log, warn } from "./logger.mjs";
+// import {
+//   BaseModel,
+//   CharacterSetting,
+//   Setting,
+//   checkpointInfo,
+// } from "./setting-define.mjs";
+// import { LoraNameTag, allLoras } from "./tag-defines/lora.mjs";
 
-const searchSupportedBaseModels = (loraName: LoraNameTag): BaseModel[] => {
-  for (const lora of allLoras) {
-    if (lora.loraName === loraName) {
-      return lora.supportedBaseModels;
-    }
-  }
-  return [];
-};
+// const searchSupportedBaseModels = (loraName: LoraNameTag): BaseModel[] => {
+//   for (const lora of allLoras) {
+//     if (lora.loraName === loraName) {
+//       return lora.supportedBaseModels;
+//     }
+//   }
+//   return [];
+// };
 
-// TODO: Define each type for the readbility of VSCode tooltip.
+// // TODO: Define each type for the readbility of VSCode tooltip.
 
-const validateCharacter = (
-  character: CharacterSetting,
-  baseModel: BaseModel,
-): void => {
-  const characterData = characterTable[character.key];
-  if (!characterData?.lora) return;
+// const validateCharacter = (
+//   character: CharacterSetting,
+//   baseModel: BaseModel,
+// ): void => {
+//   const characterTable = Database.singleton().characterTable;
 
-  const loraName = characterData.lora.tag;
-  const supportedBaseModels = searchSupportedBaseModels(loraName);
+//   const characterData = characterTable[character.key];
+//   if (!characterData?.lora) return;
 
-  if (supportedBaseModels.includes(baseModel)) {
-    // Valid!!
-    return;
-  }
+//   const loraName = characterData.lora.tag;
+//   const supportedBaseModels = searchSupportedBaseModels(loraName);
 
-  warn(`Base model \`${baseModel}\` is not supported for \`${loraName}\``);
-};
+//   if (supportedBaseModels.includes(baseModel)) {
+//     // Valid!!
+//     return;
+//   }
 
-export const validateSetting = (setting: Setting): void => {
-  log(`Validating...`);
+//   warn(`Base model \`${baseModel}\` is not supported for \`${loraName}\``);
+// };
 
-  for (const optionSetting of setting.optionSettings) {
-    const baseModel =
-      checkpointInfo[optionSetting.optionsBodyJson.sd_model_checkpoint]
-        .baseModel;
+// export const validateSetting = (setting: Setting): void => {
+//   log(`Validating...`);
 
-    for (const txt2imgSetting of optionSetting.txt2imgSettings) {
-      for (const character of txt2imgSetting.characters ?? []) {
-        validateCharacter(character, baseModel);
-      }
-    }
-  }
-};
+//   for (const optionSetting of setting.optionSettings) {
+//     const baseModel =
+//       checkpointInfo[optionSetting.optionsBodyJson.sd_model_checkpoint]
+//         .baseModel;
+
+//     for (const txt2imgSetting of optionSetting.txt2imgSettings) {
+//       for (const character of txt2imgSetting.characters ?? []) {
+//         validateCharacter(character, baseModel);
+//       }
+//     }
+//   }
+// };

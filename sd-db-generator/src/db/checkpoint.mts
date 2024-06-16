@@ -1,6 +1,6 @@
 export type BaseModel = `SD1.5` | `Pony` | `Animagine`;
 
-type CheckpointDefine = Readonly<{ baseModel: BaseModel }>;
+export type CheckpointDefine = Readonly<{ baseModel: BaseModel }>;
 
 /**
  * Checkpoint table. The key is the checkpoint name.
@@ -25,4 +25,5 @@ export const checkpointTable = {
   "vividorangemix_v10NSFW.safetensors": { baseModel: `SD1.5` },
 } as const satisfies Record<string, CheckpointDefine>;
 
-export type CheckpointName = keyof typeof checkpointTable;
+export type CheckpointTable = typeof checkpointTable;
+export type CheckpointName = keyof CheckpointTable;
