@@ -5,6 +5,7 @@ import {
   CharactersPreset,
   CheckpointAndVaePreset,
   CheckpointTable,
+  DistinguishableTagTable,
   EmotionProbabilitiesAtEmotionType,
   EmotionTable,
   ImageResolutionPreset,
@@ -15,6 +16,7 @@ import {
   PosesPreset,
   SamplerTable,
   Setting,
+  TagVisibilityTable,
   UpscalerTable,
   VaeTable,
 } from "@tenpamk2/sd-db-generator";
@@ -31,6 +33,8 @@ export class Database {
   readonly poseTable: PoseTable;
   readonly emotionTable: EmotionTable;
   readonly emotionProbabilitiesAtEmotionType: EmotionProbabilitiesAtEmotionType;
+  readonly distinguishableTagTable: DistinguishableTagTable;
+  readonly tagVisibilityTable: TagVisibilityTable;
   readonly checkpointAndVaePreset: CheckpointAndVaePreset;
   readonly imageResolutionPreset: ImageResolutionPreset;
   readonly charactersPreset: CharactersPreset;
@@ -62,7 +66,7 @@ export class Database {
 
   private loadYaml(yamlBasename: string): any {
     const content = readFileSync(join(Database.dbDir, yamlBasename), `utf8`);
-    return parseYaml(content);
+    return parseYaml(content, { maxAliasCount: -1 });
   }
 
   constructor() {
@@ -74,6 +78,9 @@ export class Database {
     this.emotionProbabilitiesAtEmotionType = this.loadYaml(
       `emotion-probabilities-at-emotion-type.yaml`,
     );
+
+    this.distinguishableTagTable = this.loadYaml(`distinguishable-tag.yaml`);
+    this.tagVisibilityTable = this.loadYaml(`tag-visibility.yaml`);
 
     this.checkpointAndVaePreset = this.loadYaml(
       `checkpoint-and-vae-preset.yaml`,

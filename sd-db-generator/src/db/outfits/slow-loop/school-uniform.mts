@@ -25,8 +25,8 @@ const outfitEntries = {
       [
         {
           entries: [
-            `worn cardigan`,
-            `yellow worn cardigan`,
+            `worn cardigan -> cardigan`,
+            `yellow worn cardigan -> yellow cardigan`,
             `blazer`,
             `blue jacket`,
             `open jacket`,

@@ -26,9 +26,6 @@ import {
   PoseTag as OriginalPoseTag,
   SeriesNameTag,
   SpecialTag,
-  allDistinguishableBodyFeatureTags,
-  allDistinguishableHeadOutfitTags,
-  allDistinguishableOutfitTags,
 } from "@tenpamk2/sd-tag-defines";
 import {
   LoraCharacterTriggerWordsTag,
@@ -69,10 +66,3 @@ export type CharacterFeatureTag =
   | HairTag
   | GlassesTag
   | FaceTag;
-
-export const allDistinguishableTags = {
-  ...allDistinguishableBodyFeatureTags,
-  ...allDistinguishableHeadOutfitTags,
-  ...allDistinguishableOutfitTags,
-} as const;
-export type DistinguishableTag = keyof typeof allDistinguishableTags;

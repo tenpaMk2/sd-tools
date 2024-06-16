@@ -17,6 +17,11 @@ export {
   CheckpointTable,
 } from "./db/checkpoint.mjs";
 export {
+  DistinguishableTag,
+  DistinguishableTagDefine,
+  DistinguishableTagTable,
+} from "./db/distinguishable-tag.mjs";
+export {
   EmotionDefine,
   EmotionKey,
   EmotionTable,
@@ -67,6 +72,11 @@ export {
   OutfitsPresetKey,
 } from "./db/setting-presets/outfit.mjs";
 export { PosesPreset, PosesPresetKey } from "./db/setting-presets/pose.mjs";
+export {
+  TagVisibilityDefine,
+  TagVisibilityKey,
+  TagVisibilityTable,
+} from "./db/tag-visibility.mjs";
 export { UpscalerDefine, UpscalerName, UpscalerTable } from "./db/upscaler.mjs";
 export { VaeDefine, VaeName, VaeTable } from "./db/vae.mjs";
 export { LoraEntry, TagEntry } from "./entry.mjs";
@@ -84,7 +94,6 @@ export {
   BreastSizeTag,
   CharacterFeatureTag,
   CharacterNameTag,
-  DistinguishableTag,
   EmotionTag,
   OutfitTag,
   PoseTag,
@@ -92,7 +101,5 @@ export {
   SpecialTag,
   Tag,
   VisibilityKey,
-  allDistinguishableTags,
   allVisibilityKeys,
-  tagVisibilities,
 } from "./tag-defines/adapter.mjs";

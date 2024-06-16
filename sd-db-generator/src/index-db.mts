@@ -6,6 +6,7 @@ import { backgroundTable } from "./db/backgrounds/backgrounds.mjs";
 import { characterTable } from "./db/characters/characters.mjs";
 import { checkpointTable } from "./db/checkpoint.mjs";
 import { defaultSetting } from "./db/default-setting.mjs";
+import { distinguishableTagTable } from "./db/distinguishable-tag.mjs";
 import { emotionTable } from "./db/emotions/emotions.mjs";
 import { emotionProbabilitiesAtEmotionType } from "./db/emotions/probabilities-at-emotion-type.mjs";
 import { loraTable } from "./db/lora.mjs";
@@ -18,6 +19,7 @@ import { checkpointAndVaePreset } from "./db/setting-presets/checkpoint-and-vae.
 import { imageResolutionPreset } from "./db/setting-presets/image-resolution.mjs";
 import { outfitsPreset } from "./db/setting-presets/outfit.mjs";
 import { posesPreset } from "./db/setting-presets/pose.mjs";
+import { tagVisibilityTable } from "./db/tag-visibility.mjs";
 import { upscalerTable } from "./db/upscaler.mjs";
 import { vaeTable } from "./db/vae.mjs";
 import { log } from "./logger.mjs";
@@ -56,6 +58,12 @@ exportYaml(
   emotionProbabilitiesAtEmotionType,
   join(options.output, `emotion-probabilities-at-emotion-type.yaml`),
 );
+
+exportYaml(
+  distinguishableTagTable,
+  join(options.output, `distinguishable-tag.yaml`),
+);
+exportYaml(tagVisibilityTable, join(options.output, `tag-visibility.yaml`));
 
 exportYaml(
   checkpointAndVaePreset,

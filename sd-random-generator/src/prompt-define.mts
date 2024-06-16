@@ -4,8 +4,8 @@ import {
   LoraName,
   Tag,
   TagEntry,
-  allDistinguishableTags,
 } from "@tenpamk2/sd-db-generator";
+import { Database } from "./db.mjs";
 
 /**
  * Token definition.
@@ -21,8 +21,10 @@ export class Token<T extends Tag> {
 
   toString() {
     // Resolve tag name if it's a distinguishable tag.
+    const distinguishableTagTable =
+      Database.singleton().distinguishableTagTable;
     const tag =
-      allDistinguishableTags[this.tag as DistinguishableTag] ?? this.tag;
+      distinguishableTagTable[this.tag as DistinguishableTag] ?? this.tag;
 
     return this.weight === 1.0 ? tag : `${tag}:${this.weight}`;
   }
@@ -89,10 +91,13 @@ export class Pattern<T extends Tag> {
   }
 
   toPrompt() {
+    const distinguishableTagTable =
+      Database.singleton().distinguishableTagTable;
+
     const resolvedTokens = this.tokens.map(
       (token) =>
         ({
-          tag: (allDistinguishableTags[token.tag as DistinguishableTag] ??
+          tag: (distinguishableTagTable[token.tag as DistinguishableTag] ??
             token.tag) as T,
           weight: token.weight,
           type: `normal`,

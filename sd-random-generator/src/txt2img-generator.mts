@@ -22,7 +22,6 @@ import {
   UnderboobLevelOrder,
   VisibilityKey,
   allVisibilityKeys,
-  tagVisibilities,
 } from "@tenpamk2/sd-db-generator";
 import {
   BackgroundCollectedData,
@@ -92,10 +91,12 @@ const extractVisible = <T extends CharacterFeatureTag | OutfitTag>(
   tokens: Token<T>[],
   parts: VisibilityKey[],
 ) => {
+  const tagVisibilityTable = Database.singleton().tagVisibilityTable;
+
   const m = new Map<T, Token<T>>();
   for (const token of tokens) {
     for (const part of parts) {
-      if (!tagVisibilities[token.tag][part]) continue;
+      if (!tagVisibilityTable[token.tag][part]) continue;
       setHeavyWeightOne(m, token);
     }
   }

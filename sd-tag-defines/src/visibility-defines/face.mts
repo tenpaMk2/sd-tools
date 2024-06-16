@@ -61,18 +61,18 @@ const allEyelashesVisibilities = {
 } as const satisfies Partial<Record<FaceTag, Visibility>>;
 
 const allDistinguishableFaceVisibilities = {
-  "aqua forehead gemstone": preset.face,
-  "black forehead gemstone": preset.face,
-  "blue forehead gemstone": preset.face,
-  "brown forehead gemstone": preset.face,
-  "green forehead gemstone": preset.face,
-  "grey forehead gemstone": preset.face,
-  "orange forehead gemstone": preset.face,
-  "pink forehead gemstone": preset.face,
-  "purple forehead gemstone": preset.face,
-  "red forehead gemstone": preset.face,
-  "white forehead gemstone": preset.face,
-  "yellow forehead gemstone": preset.face,
+  "aqua forehead gemstone -> aqua gemstone": preset.face,
+  "black forehead gemstone -> black gemstone": preset.face,
+  "blue forehead gemstone -> blue gemstone": preset.face,
+  "brown forehead gemstone -> brown gemstone": preset.face,
+  "green forehead gemstone -> green gemstone": preset.face,
+  "grey forehead gemstone -> grey gemstone": preset.face,
+  "orange forehead gemstone -> orange gemstone": preset.face,
+  "pink forehead gemstone -> pink gemstone": preset.face,
+  "purple forehead gemstone -> purple gemstone": preset.face,
+  "red forehead gemstone -> red gemstone": preset.face,
+  "white forehead gemstone -> white gemstone": preset.face,
+  "yellow forehead gemstone -> yellow gemstone": preset.face,
 } as const satisfies Partial<Record<FaceTag, Visibility>>;
 
 export const allFaceVisibilities = {

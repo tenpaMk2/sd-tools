@@ -37,7 +37,7 @@ export const bikini = () =>
       //   { entries: [`front-tie bikini top`, `side-tie bikini bottom`] },
       // ],
       // [{ entries: [] }, { entries: [`sarong`], probability: 0.2 }],
-      `breasts skindentation`,
+      `breasts skindentation -> skindentation`,
       `collarbone`,
       `shoulder blades`,
       `navel`,
