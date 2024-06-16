@@ -1393,6 +1393,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `Chenkin`,
   },
+  {
+    loraName: `takina-inoue-s1-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/342798/takina-inoue-lycoris-recoil?modelVersionId=566929`,
+    ),
+    characterTriggerWordsTags: [`inoue takina`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

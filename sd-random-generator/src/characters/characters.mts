@@ -178,6 +178,8 @@ export const characterTable = {
   "lycoris-recoil-chisato-nochekaiser": lycorisRecoilChisato(`nochekaiser`),
   "lycoris-recoil-takina-eft": lycorisRecoilTakina(`eft`),
   "lycoris-recoil-takina-nochekaiser": lycorisRecoilTakina(`nochekaiser`),
+  "lycoris-recoil-takina-nochekaiser-booru":
+    lycorisRecoilTakina(`nochekaiser-booru`),
   "mahoako-matama-notekaga": mahoakoMatama(`notekaga`),
   "mushoku-tensei-sylphiette-little-jelly":
     mushokuTenseiSylphietteLittleJelly(),

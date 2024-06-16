@@ -313,11 +313,18 @@ export const outfitsPreset = {
   ],
   "lycoris-recoil-chisato-no-lora": defaultPreset,
   "lycoris-recoil-takina-eft": defaultPreset,
-  "lycoris-recoil-takina-nochekaiser": [
+  "lycoris-recoil-takina-nochekaiser-booru": [
     ...defaultPreset,
     {
       key: `lycoris-recoil-lycoris-uniform-takina-nochekaiser`,
       probability: defaultPreset.length,
+    },
+  ],
+  "lycoris-recoil-takina-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `lycoris-recoil-lycoris-uniform-takina-nochekaiser`,
+      probability: defaultPreset.length / 2,
     },
   ],
   "mahoako-matama-notekaga": [
