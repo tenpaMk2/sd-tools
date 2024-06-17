@@ -1,22 +1,38 @@
 import { upskirtPreset } from "../common/upskirt-preset.mjs";
 import { OutfitDefine } from "../outfits.mjs";
 
-type Variation = `lala-nochekaiser` | `momo-nochekaiser` | `nana-lancelot`;
+type Variation =
+  | `haruna-nochekaiser`
+  | `lala-nochekaiser`
+  | `momo-lancelot`
+  | `momo-nochekaiser`
+  | `nana-lancelot`
+  | `nana-nochekaiser`;
 
 const outfitEntries = {
   vest: {
+    "haruna-nochekaiser": [`sweater vest`, `yellow sweater vest`],
     "lala-nochekaiser": [`sweater vest`, `yellow sweater vest`],
+    "momo-lancelot": [`sweater vest`, `orange sweater vest`],
     "momo-nochekaiser": [`sweater vest`, `yellow sweater vest`],
     "nana-lancelot": [`sweater vest`, `orange sweater vest`],
+    "nana-nochekaiser": [`sweater vest`, `yellow sweater vest`],
   },
   socks: {
+    "haruna-nochekaiser": [`socks`, `black socks`],
     "lala-nochekaiser": [
       `thighhighs`,
       `black thighhighs`,
       `thighs skindentation`,
     ],
-    "momo-nochekaiser": [`socks`, `white socks`],
+    "momo-lancelot": [`thighhighs`, `black thighhighs`, `thighs skindentation`],
+    "momo-nochekaiser": [
+      `thighhighs`,
+      `black thighhighs`,
+      `thighs skindentation`,
+    ],
     "nana-lancelot": [`socks`, `white socks`, `loose socks`],
+    "nana-nochekaiser": [`socks`, `white socks`, `loose socks`],
   },
 } as const satisfies Record<
   string,
@@ -25,9 +41,12 @@ const outfitEntries = {
 
 const specialVisibility = {
   zettariRyouiki: {
+    "haruna-nochekaiser": false,
     "lala-nochekaiser": true,
-    "momo-nochekaiser": false,
+    "momo-lancelot": true,
+    "momo-nochekaiser": true,
     "nana-lancelot": false,
+    "nana-nochekaiser": false,
   },
 } as const satisfies Record<`zettariRyouiki`, Record<Variation, boolean>>;
 

@@ -23,8 +23,10 @@ const portrait = {
     ...(
       [
         // ...charactersPreset.default[0].keys,
-        `to-love-ru-lala-nochekaiser`,
-        `to-love-ru-momo-nochekaiser`,
+        `to-love-ru-haruna-nochekaiser`,
+        `to-love-ru-nana-nochekaiser`,
+        // `to-love-ru-lala-nochekaiser`,
+        // `to-love-ru-momo-nochekaiser`,
         // `lycoris-recoil-takina-nochekaiser`,
         // `hyouka-eru-chenkin`,
         // `atelier-ryza-nochekaiser`,

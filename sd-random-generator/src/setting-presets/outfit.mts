@@ -514,11 +514,24 @@ export const outfitsPreset = {
     ...defaultPreset,
     // TODO: other outfits
   ],
-  "to-love-ru-momo-lancelot": defaultPreset,
+  "to-love-ru-haruna-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-haruna-nochekaiser`,
+      probability: defaultPreset.length,
+    },
+  ],
   "to-love-ru-lala-nochekaiser": [
     ...defaultPreset,
     {
       key: `to-love-ru-school-uniform-lala-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "to-love-ru-momo-lancelot": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-momo-lancelot`,
       probability: defaultPreset.length / 2,
     },
   ],
@@ -530,6 +543,13 @@ export const outfitsPreset = {
     },
   ],
   "to-love-ru-nana-lancelot": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-nana-lancelot`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "to-love-ru-nana-nochekaiser": [
     ...defaultPreset,
     {
       key: `to-love-ru-school-uniform-nana-lancelot`,

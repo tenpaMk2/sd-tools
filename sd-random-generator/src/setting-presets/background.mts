@@ -828,7 +828,37 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "to-love-ru-school-uniform-haruna-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "to-love-ru-school-uniform-lala-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
+  "to-love-ru-school-uniform-momo-lancelot": [
     ...defaultPreset,
     {
       key: `cafe`,
@@ -859,6 +889,21 @@ export const backgroundsPreset = {
     },
   ],
   "to-love-ru-school-uniform-nana-lancelot": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
+  "to-love-ru-school-uniform-nana-nochekaiser": [
     ...defaultPreset,
     {
       key: `cafe`,

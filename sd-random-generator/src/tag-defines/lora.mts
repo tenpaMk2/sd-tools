@@ -1426,6 +1426,28 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
   },
+  {
+    loraName: `haruna-sairenji-darkness-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/346441/haruna-sairenji-to-love-ru?modelVersionId=566775`,
+    ),
+    characterTriggerWordsTags: [`haruna sairenji`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
+  {
+    loraName: `nana-deviluke-darkness-ponyxl-lora-nochekaiser`,
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/353109/nana-asta-deviluke-to-love-ru?modelVersionId=566803`,
+    ),
+    characterTriggerWordsTags: [`nana asta deviluke`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

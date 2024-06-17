@@ -75,6 +75,7 @@ import { slowLoopKoi } from "./slow-loop/koi.mjs";
 import { spyFamilyYor } from "./spy-family/yor.mjs";
 import { tenshiSamaMahiru } from "./tenshi-sama/tenshi-sama-mahiru.mjs";
 import { tenshiTsukiNoel } from "./tenshi-tsuki/noel.mjs";
+import { toLoveRuHaruna } from "./to-love-ru/to-love-ru-haruna.mjs";
 import { toLoveRuLala } from "./to-love-ru/to-love-ru-lala.mjs";
 import { toLoveRuMomo } from "./to-love-ru/to-love-ru-momo.mjs";
 import { toLoveRuNana } from "./to-love-ru/to-love-ru-nana.mjs";
@@ -223,10 +224,12 @@ export const characterTable = {
   "spy-family-yor-eternal2kpp": spyFamilyYor(`eternal2kpp`),
   "tenshi-sama-mahiru-jibunsagasinotabi": tenshiSamaMahiru(`jibunsagasinotabi`),
   "tenshi-tsuki-noel-zedotasco": tenshiTsukiNoel(`zedotasco`),
+  "to-love-ru-haruna-nochekaiser": toLoveRuHaruna(`nochekaiser`),
   "to-love-ru-lala-nochekaiser": toLoveRuLala(`nochekaiser`),
   "to-love-ru-momo-lancelot": toLoveRuMomo(`lancelot`),
   "to-love-ru-momo-nochekaiser": toLoveRuMomo(`nochekaiser`),
   "to-love-ru-nana-lancelot": toLoveRuNana(`lancelot`),
+  "to-love-ru-nana-nochekaiser": toLoveRuNana(`nochekaiser`),
   "working-popura-ibukimakisiko": workingPopura(`ibukimakisiko`),
 } as const satisfies Record<string, CharacterDefine>;
 
