@@ -828,6 +828,36 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "to-love-ru-school-uniform-lala-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
+  "to-love-ru-school-uniform-momo-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `cafe`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-chalkboard`,
+      probability: defaultPreset.length / 1,
+    },
+    {
+      key: `classroom-window`,
+      probability: defaultPreset.length / 1,
+    },
+  ],
   "to-love-ru-school-uniform-nana-lancelot": [
     ...defaultPreset,
     {

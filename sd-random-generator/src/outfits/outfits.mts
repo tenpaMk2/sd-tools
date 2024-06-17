@@ -310,6 +310,10 @@ export const characterOutfitTable = {
   "tenshi-sama-blazer-jibunsagasinotabi": tenshiSamaBlazer(
     `mahiru-jibunsagasinotabi`,
   ),
+  "to-love-ru-school-uniform-lala-nochekaiser":
+    toLoveRuSchoolUniform(`lala-nochekaiser`),
+  "to-love-ru-school-uniform-momo-nochekaiser":
+    toLoveRuSchoolUniform(`momo-nochekaiser`),
   "to-love-ru-school-uniform-nana-lancelot":
     toLoveRuSchoolUniform(`nana-lancelot`),
 } as const satisfies Record<string, OutfitDefine>;

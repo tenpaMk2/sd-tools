@@ -1,35 +1,35 @@
 import { CharacterDefine } from "../characters.mjs";
 
-type Variation = `lancelot`;
+type Variation = `nochekaiser`;
 
 const lora = {
-  lancelot: {
-    tag: `momodevilvXLPonyV1`,
-    probabilityAndWeights: [{ probability: 1, weight: 0.7 }],
+  nochekaiser: {
+    tag: `lala-deviluke-darkness-ponyxl-lora-nochekaiser`,
+    probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
   },
 } as const satisfies Record<Variation, CharacterDefine["lora"]>;
 
 const loraCharacterTriggerWordEntries = {
-  lancelot: [`momodevil`],
+  nochekaiser: [`lala deviluke`],
 } as const satisfies Record<
   Variation,
   CharacterDefine["loraCharacterTriggerWordEntries"]
 >;
 
-export const toLoveRuMomo = (variation: Variation) =>
+export const toLoveRuLala = (variation: Variation) =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`to love-ru`, `to love-ru darkness`],
-    characterNameEntries: [`momo velia deviluke`],
+    characterNameEntries: [`lala satalin deviluke`],
     characterFeatureEntries: [
-      `purple eyes`,
+      `green eyes`,
       `pink hair`,
-      `short hair`,
-      `bob cut`,
+      `long hair`,
+      `straight hair`,
       `hair between eyes`,
       `hair ornament`,
-      `hair flower`,
+      `ahoge`,
       `tail`,
       `demon tail`,
     ],

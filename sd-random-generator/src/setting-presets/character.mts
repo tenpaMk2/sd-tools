@@ -72,7 +72,9 @@ const defaultPreset = [
   { key: `spy-family-yor-eternal2kpp` },
   { key: `tenshi-sama-mahiru-jibunsagasinotabi` },
   { key: `tenshi-tsuki-noel-zedotasco` },
+  { key: `to-love-ru-lala-nochekaiser` },
   { key: `to-love-ru-momo-lancelot` },
+  { key: `to-love-ru-momo-nochekaiser` },
   { key: `to-love-ru-nana-lancelot` },
   { key: `working-popura-ibukimakisiko` },
 ] as const satisfies CharacterSetting[];
