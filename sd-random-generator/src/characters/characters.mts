@@ -20,6 +20,7 @@ import { eromangaSenseiElf } from "./eromanga-sensei/elf.mjs";
 import { eromangaSenseiMegumi } from "./eromanga-sensei/megumi.mjs";
 import { eromangaSenseiSagiri } from "./eromanga-sensei/sagiri.mjs";
 import { fateRin } from "./fate/rin.mjs";
+import { futokuNoGuildEnome } from "./futoku-no-guild/enome.mjs";
 import { futokuNoGuildTokishikko } from "./futoku-no-guild/tokishikko.mjs";
 import { higehiroSayu } from "./higehiro/sayu.mjs";
 import { hyoukaEru } from "./hyouka/eru.mjs";
@@ -150,6 +151,7 @@ export const characterTable = {
   "eromanga-sensei-megumi-eternal2kpp": eromangaSenseiMegumi(`eternal2kpp`),
   "eromanga-sensei-sagiri-eternal2kpp": eromangaSenseiSagiri(`eternal2kpp`),
   "fate-rin-little-jelly": fateRin(`little-jelly`),
+  "futoku-no-guild-enome-zedotasco": futokuNoGuildEnome(`zedotasco`),
   "futoku-no-guild-tokishikko-ibukimakisiko":
     futokuNoGuildTokishikko(`ibukimakisiko`),
   "higehiro-sayu-nochekaiser": higehiroSayu(`nochekaiser`),

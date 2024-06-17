@@ -108,6 +108,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "futoku-no-guild-enome-zedotasco": [
+    ...defaultPreset,
+    {
+      key: `futoku-no-guild-outfit-enome-zedotasco`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "futoku-no-guild-tokishikko-ibukimakisiko": [
     ...defaultPreset,
     {

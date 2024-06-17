@@ -1448,6 +1448,17 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
   },
+  {
+    loraName: `Enome_1`,
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/492994/enome-from-futoku-no-guild`,
+    ),
+    characterTriggerWordsTags: [`Enome`],
+    outfitTriggerTags: [],
+    creator: `ZedoTasco`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

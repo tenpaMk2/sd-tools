@@ -321,6 +321,21 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "futoku-no-guild-outfit-enome-zedotasco": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "futoku-no-guild-outfit-tokishikko-ibukimakisiko": [
     ...defaultPreset,
     {

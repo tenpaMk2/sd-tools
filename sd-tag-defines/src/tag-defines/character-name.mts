@@ -19,6 +19,7 @@ export const allCharacterNameTags = [
   `delta \\(kage no jitsuryokusha ni naritakute!\\)`,
   `eina tulle`,
   `emilia \\(re:zero\\)`,
+  `enome`,
   `epsilon \\(kage no jitsuryokusha ni naritakute!\\)`,
   `eta \\(kage no jitsuryokusha ni naritakute!\\)`,
   `fujimiya sumika \\(isekai ojisan\\)`,

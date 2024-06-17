@@ -12,7 +12,7 @@ const monoCharacterPresetsMap = Object.fromEntries(
 const defaultPreset = [
   // // `amaburi-isuzu-h-madoka`,
   // `amaburi-isuzu-nochekaiser`,
-  { key: `atelier-ryza-nochekaiser` },
+  // { key: `atelier-ryza-nochekaiser` },
   { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
   { key: `blend-s-kaho-ibukimakisiko` },
   { key: `danmachi-aiz-eternal2kpp` },
@@ -25,6 +25,7 @@ const defaultPreset = [
   { key: `eromanga-sensei-megumi-eternal2kpp` },
   { key: `eromanga-sensei-sagiri-eternal2kpp` },
   { key: `fate-rin-little-jelly` },
+  { key: `futoku-no-guild-enome-zedotasco` },
   { key: `futoku-no-guild-tokishikko-ibukimakisiko` },
   { key: `higehiro-sayu-nochekaiser` },
   { key: `hyouka-eru-chenkin` },

@@ -38,6 +38,7 @@ import { testOutfit } from "./common/test-outfit.mjs";
 import { volleyballUniform } from "./common/volleyball-uniform.mjs";
 import { danmachiWhiteDressHestia } from "./danmachi/white-dress-hestia.mjs";
 import { fateRedSweaterRin } from "./fate/red-sweater-rin.mjs";
+import { futokuNoGuildOutfitEnome } from "./futoku-no-guild/outfit-enome.mjs";
 import { futokuNoGuildOutfitTokishikko } from "./futoku-no-guild/tokishikko-dress.mjs";
 import { higehiroSchoolUniform } from "./higehiro/school-uniform.mjs";
 import { hyoukaSchoolUniformEru } from "./hyouka/school-uniform.mjs";
@@ -214,6 +215,8 @@ export const characterOutfitTable = {
     danmachiWhiteDressHestia(`eternal2kpp`),
   "danmachi-white-dress-hestia-no-lora": danmachiWhiteDressHestia(`no-lora`),
   "fate-red-sweater-rin-little-jelly": fateRedSweaterRin(`little-jelly`),
+  "futoku-no-guild-outfit-enome-zedotasco":
+    futokuNoGuildOutfitEnome(`zedotasco`),
   "futoku-no-guild-outfit-tokishikko-ibukimakisiko":
     futokuNoGuildOutfitTokishikko(`ibukimakisiko`),
   "higehiro-school-uniform-sayu-nochekaiser":
