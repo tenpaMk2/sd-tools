@@ -2,15 +2,15 @@ import { EmotionKey, EmotionType } from "./emotions.mjs";
 
 export const emotionProbabilitiesAtEmotionType = {
   cute: {
-    "smile-profile": 1.5,
-    "smile": 1.5,
+    "smile-profile": 2,
+    "smile": 2,
     "light-smile-profile": 0.5,
     "light-smile": 0.5,
     "expressionless": 1.0,
     "surprised": 1.0,
     "confused": 1.0,
     "embarrassed": 1.0,
-    "seductive-smile": 1.0,
+    "seductive-smile": 1.5,
     "embarrassed-scowl": 1.0,
     "angry": 1.0,
     "grin": 0.5,
