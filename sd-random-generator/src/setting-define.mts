@@ -15,6 +15,7 @@ export const checkpointInfo = {
   "ebara_pony_1.bakedVAE.safetensors": { baseModel: `Pony` },
   "ebara_pony_2.1.safetensors": { baseModel: `Pony` },
   "hamefkawaiimix_typelight.safetensors": { baseModel: `Pony` },
+  "hassakuXLHentai_v13.safetensors": { baseModel: `Pony` },
   "momoiropony_v14.safetensors": { baseModel: `Pony` },
   "ponyDiffusionV6XL_v6StartWithThisOne.safetensors": { baseModel: `Pony` },
   "ponymagine91_gamma.safetensors": { baseModel: `Pony` }, // Also supports `Animagine` .

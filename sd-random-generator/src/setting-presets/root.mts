@@ -48,6 +48,10 @@ export const checkpointAndVAEPreset = {
       sd_model_checkpoint: `hamefkawaiimix_typelight.safetensors`,
       sd_vae: `None`,
     },
+    hassaku: {
+      sd_model_checkpoint: `hassakuXLHentai_v13.safetensors`,
+      sd_vae: `None`,
+    },
     pony: {
       sd_model_checkpoint: `ponyDiffusionV6XL_v6StartWithThisOne.safetensors`,
       sd_vae: `None`,

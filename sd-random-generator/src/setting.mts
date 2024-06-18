@@ -23,7 +23,7 @@ const portrait = {
     ...(
       [
         // ...charactersPreset.default[0].keys,
-        `goblin-slayer-cow-girl-eternal2kpp`,
+        // `goblin-slayer-cow-girl-eternal2kpp`,
         // `goblin-slayer-priestess-eternal2kpp`,
         // `futoku-no-guild-enome-zedotasco`,
         // `to-love-ru-haruna-nochekaiser`,
@@ -134,8 +134,9 @@ export const setting = {
   optionSettings: [
     ...[
       // checkpointAndVAEPreset.sdxl.autismmixDPO,
-      checkpointAndVAEPreset.sdxl.ebaraPony2,
-      checkpointAndVAEPreset.sdxl.autismmixConfetti,
+      // checkpointAndVAEPreset.sdxl.ebaraPony2,
+      // checkpointAndVAEPreset.sdxl.autismmixConfetti,
+      checkpointAndVAEPreset.sdxl.hassaku,
       // checkpointAndVAEPreset.sdxl.tponynai,
     ].map((sdxl) => ({
       optionsBodyJson: {
