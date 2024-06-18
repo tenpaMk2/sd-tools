@@ -40,6 +40,8 @@ import { danmachiWhiteDressHestia } from "./danmachi/white-dress-hestia.mjs";
 import { fateRedSweaterRin } from "./fate/red-sweater-rin.mjs";
 import { futokuNoGuildOutfitEnome } from "./futoku-no-guild/outfit-enome.mjs";
 import { futokuNoGuildOutfitTokishikko } from "./futoku-no-guild/tokishikko-dress.mjs";
+import { goblinSlayerOutfitCowGirl } from "./goblin-slayer/outfit-cow-girl.mjs";
+import { goblinSlayerOutfitPriestess } from "./goblin-slayer/outfit-priestess.mjs";
 import { higehiroSchoolUniform } from "./higehiro/school-uniform.mjs";
 import { hyoukaSchoolUniformEru } from "./hyouka/school-uniform.mjs";
 import { hyoukaWhiteBikiniEru } from "./hyouka/white-bikini.mjs";
@@ -219,6 +221,10 @@ export const characterOutfitTable = {
     futokuNoGuildOutfitEnome(`zedotasco`),
   "futoku-no-guild-outfit-tokishikko-ibukimakisiko":
     futokuNoGuildOutfitTokishikko(`ibukimakisiko`),
+  "goblin-slayer-outfit-cow-girl-eternal2kpp":
+    goblinSlayerOutfitCowGirl(`eternal2kpp`),
+  "goblin-slayer-outfit-priestess-eternal2kpp":
+    goblinSlayerOutfitPriestess(`eternal2kpp`),
   "higehiro-school-uniform-sayu-nochekaiser":
     higehiroSchoolUniform(`sayu-nochekaiser`),
   "hyouka-school-uniform-eru-chenkin": hyoukaSchoolUniformEru(`chenkin`),

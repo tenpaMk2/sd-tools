@@ -23,7 +23,9 @@ const portrait = {
     ...(
       [
         // ...charactersPreset.default[0].keys,
-        `futoku-no-guild-enome-zedotasco`,
+        `goblin-slayer-cow-girl-eternal2kpp`,
+        // `goblin-slayer-priestess-eternal2kpp`,
+        // `futoku-no-guild-enome-zedotasco`,
         // `to-love-ru-haruna-nochekaiser`,
         // `to-love-ru-nana-nochekaiser`,
         // `to-love-ru-lala-nochekaiser`,

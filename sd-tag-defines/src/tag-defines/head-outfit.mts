@@ -115,6 +115,7 @@ export const allHeadOutfitTags = [
   `lolita hairband`,
   `maid headdress`,
   `monocle hair ornament`,
+  `multicolored headwear`,
   `musical note hair ornament`,
   `no headwear`,
   `pirate hat`,

@@ -1459,6 +1459,39 @@ export const allLoras = [
     outfitTriggerTags: [],
     creator: `ZedoTasco`,
   },
+  {
+    loraName: `Onna_Shinkan`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/513403/goblin-slayer-or-onna-shinkan-pdxl?modelVersionId=570572`,
+    ),
+    characterTriggerWordsTags: [`Onna Shinkan`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Ushikai_Musume`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/513343/goblin-slayer-or-ushikai-musume-pdxl?modelVersionId=570509`,
+    ),
+    characterTriggerWordsTags: [`Ushikai Musume`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  {
+    loraName: `Yousei_Yunde`,
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/513455/goblin-slayer-or-yousei-yunde-pdxl?modelVersionId=570622`,
+    ),
+    characterTriggerWordsTags: [`Yousei Yunde`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
 ] as const satisfies readonly LoraDefine[];
 
 export type LoraNameTag = (typeof allLoras)[number]["loraName"];

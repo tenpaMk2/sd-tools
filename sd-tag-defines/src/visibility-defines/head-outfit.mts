@@ -136,6 +136,7 @@ export const allHeadOutfitVisibilities = {
   "lolita hairband": preset.hair,
   "maid headdress": preset.hair,
   "monocle hair ornament": preset.hair,
+  "multicolored headwear": preset.hair,
   "musical note hair ornament": preset.hair,
   "no headwear": preset.hair,
   "pirate hat": preset.hair,

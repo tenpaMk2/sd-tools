@@ -351,6 +351,36 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "goblin-slayer-outfit-cow-girl-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "goblin-slayer-outfit-priestess-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `grass`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `grass-blue-sky`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `sun-sky`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "higehiro-school-uniform-sayu-nochekaiser": [
     ...defaultPreset,
     {

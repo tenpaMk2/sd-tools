@@ -122,6 +122,20 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "goblin-slayer-cow-girl-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `goblin-slayer-outfit-cow-girl-eternal2kpp`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "goblin-slayer-priestess-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `goblin-slayer-outfit-priestess-eternal2kpp`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "higehiro-sayu-nochekaiser": [
     ...defaultPreset,
     {

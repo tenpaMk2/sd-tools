@@ -22,6 +22,8 @@ import { eromangaSenseiSagiri } from "./eromanga-sensei/sagiri.mjs";
 import { fateRin } from "./fate/rin.mjs";
 import { futokuNoGuildEnome } from "./futoku-no-guild/enome.mjs";
 import { futokuNoGuildTokishikko } from "./futoku-no-guild/tokishikko.mjs";
+import { goblinSlayerCowGirl } from "./goblin-slayer/cow-girl.mjs";
+import { goblinSlayerPriestess } from "./goblin-slayer/priestess.mjs";
 import { higehiroSayu } from "./higehiro/sayu.mjs";
 import { hyoukaEru } from "./hyouka/eru.mjs";
 import { isCecilia } from "./is/cecilia.mjs";
@@ -154,6 +156,8 @@ export const characterTable = {
   "futoku-no-guild-enome-zedotasco": futokuNoGuildEnome(`zedotasco`),
   "futoku-no-guild-tokishikko-ibukimakisiko":
     futokuNoGuildTokishikko(`ibukimakisiko`),
+  "goblin-slayer-cow-girl-eternal2kpp": goblinSlayerCowGirl(`eternal2kpp`),
+  "goblin-slayer-priestess-eternal2kpp": goblinSlayerPriestess(`eternal2kpp`),
   "higehiro-sayu-nochekaiser": higehiroSayu(`nochekaiser`),
   "hyouka-eru-chenkin": hyoukaEru(`chenkin`),
   "is-cecilia-nochekaiser": isCecilia(`nochekaiser`),

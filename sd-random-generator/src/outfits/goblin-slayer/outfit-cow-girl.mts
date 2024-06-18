@@ -1,0 +1,38 @@
+import { OutfitDefine } from "../outfits.mjs";
+
+type Variation = `eternal2kpp`;
+
+export const goblinSlayerOutfitCowGirl = (variation: Variation) =>
+  ({
+    lora: null,
+    loraOutfitTriggerWordEntries: [],
+    outfitEntries: [
+      `collarbone`,
+      `shirt`,
+      `white shirt`,
+      `long sleeves`,
+      `suspenders`,
+      `overalls`,
+      `belt`,
+      `black belt`,
+      `belt buckle`,
+      `boots`,
+    ],
+    specialVisibility: {
+      armpits: false,
+      hangingBreasts: false,
+      tautClothes: true,
+      cleavage: true,
+      sideboob: false,
+      backboob: false,
+      underboobLevel: `invisible`,
+      zettaiRyouiki: false,
+      insideOfThighs: false,
+    },
+    liftType: `none`,
+    upskirtEntries: [],
+    whenRemoveShoes: {
+      excludeTags: [`boots`],
+      additionalFootEntriesAfterRemoving: [`barefoot`],
+    },
+  }) as const satisfies OutfitDefine;
