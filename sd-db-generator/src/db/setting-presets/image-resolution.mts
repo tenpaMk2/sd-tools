@@ -29,12 +29,12 @@ export const imageResolutionPreset = {
     height: 1024,
   },
   "sdxl-portrait": {
-    width: 864,
+    width: 896,
     height: 1152,
   },
   "sdxl-landscape": {
     width: 1152,
-    height: 864,
+    height: 896,
   },
   /**
    * 9:16.
@@ -42,10 +42,10 @@ export const imageResolutionPreset = {
    */
   "sdxl-tall": {
     width: 768,
-    height: 1360,
+    height: 1344,
   },
   "sdxl-widescreen": {
-    width: 1360,
+    width: 1344,
     height: 768,
   },
 } as const satisfies Record<string, ImageResolutionPresetDefine>;
