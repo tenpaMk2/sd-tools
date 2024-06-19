@@ -11,6 +11,7 @@ import { nearCleanFloorLyingOnBack } from "./common/near-clean-floor-lying-on-ba
 import { nearCleanFloorLyingOnStomach } from "./common/near-clean-floor-lying-on-stomach.mjs";
 import { nearCleanFloorThePose } from "./common/near-clean-floor-the-pose.mjs";
 import { nearCleanFloorWariza } from "./common/near-clean-floor-wariza.mjs";
+import { sittingOnSitting } from "./common/sitting-on-sitting.mjs";
 import { standingArmsUp } from "./common/standing-arms-up.mjs";
 import { standingArmsBehindBack } from "./common/standing-common-arms-behind-back.mjs";
 import { standingContrapposto } from "./common/standing-contrapposto.mjs";
@@ -91,6 +92,9 @@ export const commonPoseTable = {
     nearCleanFloorThePose(`from-horizontal`),
   "near-clean-floor-from-horizontal-wariza":
     nearCleanFloorWariza(`from-horizontal`),
+  "sitting-from-above-on-sitting": sittingOnSitting(`from-above`),
+  "sitting-from-below-on-sitting": sittingOnSitting(`from-below`),
+  "sitting-from-horizontal-on-sitting": sittingOnSitting(`from-horizontal`),
   "standing-from-above-arms-behind-back": standingArmsBehindBack(`from-above`),
   "standing-from-above-arms-up": standingArmsUp(`from-above`),
   "standing-from-above-contrapposto": standingContrapposto(`from-above`),
