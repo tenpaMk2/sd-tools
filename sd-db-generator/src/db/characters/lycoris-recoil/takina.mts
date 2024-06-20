@@ -10,7 +10,7 @@ const lora = {
 } as const satisfies Record<Variation, CharacterDefine[`lora`]>;
 
 const loraCharacterTriggerWordEntries = {
-  nochekaiser: [`chisato nishikigi`],
+  nochekaiser: [`takina inoue`],
 } as const satisfies Record<
   Variation,
   CharacterDefine[`loraCharacterTriggerWordEntries`]
