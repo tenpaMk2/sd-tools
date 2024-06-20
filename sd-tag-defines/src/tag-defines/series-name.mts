@@ -6,6 +6,7 @@ export const allSeriesNameTags = [
   `blend s`,
   `bocchi the rock!`,
   `boku no hero academia`,
+  `brave witches`,
   `dumbbell nan kilo moteru?`,
   `dungeon ni deai wo motomeru no wa machigatteiru darou ka`,
   `eromanga sensei`,
@@ -25,6 +26,7 @@ export const allSeriesNameTags = [
   `kaguya-sama wa kokurasetai ~tensai-tachi no renai zunousen~`,
   `kanojo mo kanojo`,
   `kono subarashii sekai ni shukufuku wo!`,
+  `luminous witches`,
   `lycoris recoil`,
   `machikado mazoku`,
   `magia record: mahou shoujo madoka magica gaiden`,
@@ -52,10 +54,12 @@ export const allSeriesNameTags = [
   `spy x family`,
   `ssss\\.dynazenon`,
   `ssss\\.gridman`,
+  `strike witches`,
   `sword art online`,
   `to love-ru darkness`,
   `to love-ru`,
   `toaru kagaku no railgun`,
   `working!!`,
+  `world witches series`,
 ] as const satisfies readonly string[];
 export type SeriesNameTag = (typeof allSeriesNameTags)[number];

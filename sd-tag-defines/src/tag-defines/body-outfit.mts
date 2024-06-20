@@ -636,6 +636,7 @@ export const allDistinguishableOutfitTags = {
   "white chest gemstone -> white gemstone": `white gemstone`,
   "yellow chest gemstone -> yellow gemstone": `yellow gemstone`,
   "cable knit sweater -> cable knit": `cable knit`,
+  "school swimsuit under serafuku -> swimsuit under clothes": `swimsuit under clothes`,
 } as const satisfies Record<string, string>;
 
 export const allBodyOutfitTags = [

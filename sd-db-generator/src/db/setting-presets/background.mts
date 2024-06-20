@@ -410,6 +410,7 @@ export const backgroundsPreset = {
   "slow-loop-school-uniform-koi-ibukimakisiko": student,
   "spy-family-red-sweater-eternal2kpp": bedroom,
   "spy-family-thorn-princess-eternal2kpp": nightCity,
+  "strike-witches-outfit-yoshika-gwess": blueSky,
   "tenshi-sama-blazer-jibunsagasinotabi": student,
   "to-love-ru-school-uniform-haruna-nochekaiser": student,
   "to-love-ru-school-uniform-lala-nochekaiser": student,

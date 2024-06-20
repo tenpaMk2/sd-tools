@@ -76,6 +76,8 @@ const defaultPreset = [
   { key: `slow-loop-koi-ibukimakisiko` },
   { key: `spy-family-yor-eternal2kpp-thorn-princess`, probability: 0.2 },
   { key: `spy-family-yor-eternal2kpp` },
+  { key: `strike-witches-yoshika-gwess`, probability: 0.8 },
+  { key: `strike-witches-yoshika-witch-gwess`, probability: 0.2 },
   { key: `tenshi-sama-mahiru-jibunsagasinotabi` },
   { key: `tenshi-tsuki-noel-zedotasco` },
   // { key: `to-love-ru-haruna-nochekaiser` },

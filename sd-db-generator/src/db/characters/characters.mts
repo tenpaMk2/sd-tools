@@ -76,6 +76,7 @@ import { slowLoopHiyori } from "./slow-loop/hiyori.mjs";
 import { slowLoopKoharu } from "./slow-loop/koharu.mjs";
 import { slowLoopKoi } from "./slow-loop/koi.mjs";
 import { spyFamilyYor } from "./spy-family/yor.mjs";
+import { strikeWitchesYoshika } from "./strike-witches/yoshika.mjs";
 import { tenshiSamaMahiru } from "./tenshi-sama/mahiru.mjs";
 import { tenshiTsukiNoel } from "./tenshi-tsuki/noel.mjs";
 import { toLoveRuMomo } from "./to-love-ru/momo.mjs";
@@ -210,6 +211,8 @@ export const characterTable = {
     `eternal2kpp-thorn-princess`,
   ),
   "spy-family-yor-eternal2kpp": spyFamilyYor(`eternal2kpp`),
+  "strike-witches-yoshika-gwess": strikeWitchesYoshika(`gwess`),
+  "strike-witches-yoshika-witch-gwess": strikeWitchesYoshika(`witch-gwess`),
   "tenshi-sama-mahiru-jibunsagasinotabi": tenshiSamaMahiru(`jibunsagasinotabi`),
   "tenshi-tsuki-noel-zedotasco": tenshiTsukiNoel(`zedotasco`),
   "to-love-ru-momo-lancelot": toLoveRuMomo(`lancelot`),

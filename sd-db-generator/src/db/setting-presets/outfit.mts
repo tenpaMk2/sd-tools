@@ -490,6 +490,12 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "strike-witches-yoshika-gwess": [...defaultPreset],
+  "strike-witches-yoshika-witch-gwess": [
+    {
+      key: `strike-witches-outfit-yoshika-gwess`,
+    },
+  ],
   "tenshi-sama-mahiru-jibunsagasinotabi": [
     ...defaultPreset,
     {

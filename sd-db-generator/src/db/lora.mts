@@ -824,6 +824,16 @@ export const loraTable = {
     outfitTriggerTags: [`zzmiuaa`],
     creator: `am7coffeelove`,
   },
+  "Miyafuji_PonyXL": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/254580/lora-sdxl-10-pony-sd-15-miyafuji-yoshika-cosplay-strike-witches?modelVersionId=579460`,
+    ),
+    characterTriggerWordsTags: [`aimiyafuji`],
+    outfitTriggerTags: [],
+    creator: `Gwess`,
+  },
   "miyuki-mahouka": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],

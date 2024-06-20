@@ -6,7 +6,8 @@ const portrait = {
   key: `portrait`,
   fixedPrompt: `score_9, score_8_up, score_7_up, 1girl, solo,\n`,
   txt2imgBodyJson: {
-    negative_prompt: `cameltoe, empty eyes, realistic`,
+    // negative_prompt: `cameltoe, empty eyes, realistic`,
+    negative_prompt: ``,
     sampler_name: `Euler a`,
     steps: 25,
     ...imageResolutionPreset["sdxl-portrait"],
@@ -20,7 +21,9 @@ const portrait = {
   characters: [
     ...(
       [
-        `boufuri-sally-king-dong`,
+        // `strike-witches-yoshika-gwess`,
+        // `strike-witches-yoshika-witch-gwess`,
+        // `boufuri-sally-king-dong`,
         // ...charactersPreset.default[0].keys,
         // `hyouka-eru-chenkin`,
         // `atelier-ryza-nochekaiser`,
@@ -125,9 +128,10 @@ export const defaultSetting = {
   optionSettings: [
     ...[
       // checkpointAndVAEPreset.sdxl.autismmixDPO,
-      checkpointAndVaePreset.ebaraPony2,
-      checkpointAndVaePreset.autismmixConfetti,
-      // checkpointAndVAEPreset.sdxl.tponynai,
+      // checkpointAndVaePreset.ebaraPony2,
+      // checkpointAndVaePreset.autismmixConfetti,
+      // checkpointAndVaePreset.tponynai,
+      checkpointAndVaePreset.hassakuXlHentai,
     ].map((sdxl) => ({
       optionsBodyJson: {
         ...sdxl,

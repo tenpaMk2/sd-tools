@@ -837,6 +837,7 @@ const allDistinguishableOutfitVisibilities = {
   "white chest gemstone -> white gemstone": preset.bowtie,
   "yellow chest gemstone -> yellow gemstone": preset.bowtie,
   "cable knit sweater -> cable knit": preset.shirt,
+  "school swimsuit under serafuku -> swimsuit under clothes": preset.panties,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 export const allBodyOutfitVisibilities = {

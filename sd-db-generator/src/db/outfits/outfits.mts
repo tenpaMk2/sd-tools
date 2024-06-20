@@ -68,6 +68,7 @@ import { sasuoniFirstHighSchoolUniform } from "./sasuoni/first-high-school-unifo
 import { slowLoopSchoolUniform } from "./slow-loop/school-uniform.mjs";
 import { spyFamilyRedSweater } from "./spy-family/red-sweater.mjs";
 import { spyFamilyThornPrincess } from "./spy-family/thorn-princess.mjs";
+import { strikeWitchesOutfitYoshika } from "./strike-witches/outfit-yoshika.mjs";
 import { tenshiSamaBlazer } from "./tenshi-sama/blazer.mjs";
 import { toLoveRuSchoolUniform } from "./to-love-ru/school-uniform.mjs";
 
@@ -308,6 +309,8 @@ export const characterOutfitTable = {
   "spy-family-red-sweater-eternal2kpp": spyFamilyRedSweater(`eternal2kpp`),
   "spy-family-thorn-princess-eternal2kpp":
     spyFamilyThornPrincess(`eternal2kpp`),
+  "strike-witches-outfit-yoshika-gwess":
+    strikeWitchesOutfitYoshika(`witch-gwess`),
   "tenshi-sama-blazer-jibunsagasinotabi": tenshiSamaBlazer(
     `mahiru-jibunsagasinotabi`,
   ),
