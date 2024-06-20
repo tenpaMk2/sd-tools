@@ -47,6 +47,10 @@ export const checkpointAndVaePreset = {
     sd_model_checkpoint: `ebara_pony_2.1.safetensors`,
     sd_vae: `None`,
   },
+  hassakuXlHentai: {
+    sd_model_checkpoint: `hassakuXLHentai_v13.safetensors`,
+    sd_vae: `None`,
+  },
   hamefkawaii: {
     sd_model_checkpoint: `hamefkawaiimix_typelight.safetensors`,
     sd_vae: `None`,
