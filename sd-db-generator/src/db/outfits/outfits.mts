@@ -5,6 +5,7 @@ import { amaburiRedUniformIsuzu } from "./amaburi/red-uniform-isuzu.mjs";
 import { blendSSchoolUniform } from "./blend-s/school-uniform.mjs";
 import { blendSSwimsuit } from "./blend-s/swimsuit.mjs";
 import { blendSWaitress } from "./blend-s/waitress.mjs";
+import { boufuriOutfitSally } from "./boufuri/outfit-sally.mjs";
 import { babydoll } from "./common/babydoll.mjs";
 import { bikini } from "./common/bikini.mjs";
 import { bridalLingerie } from "./common/bridal-lingerie.mjs";
@@ -209,6 +210,7 @@ export const characterOutfitTable = {
   "blend-s-waitress-kaho-ibukimakisiko": blendSWaitress(`kaho-ibukimakisiko`),
   "blend-s-waitress-mafuyu-ibukimakisiko":
     blendSWaitress(`mafuyu-ibukimakisiko`),
+  "boufuri-outfit-sally-king-dong": boufuriOutfitSally(`king-dong`),
   "danmachi-white-dress-hestia-eternal2kpp":
     danmachiWhiteDressHestia(`eternal2kpp`),
   "danmachi-white-dress-hestia-no-lora": danmachiWhiteDressHestia(`no-lora`),

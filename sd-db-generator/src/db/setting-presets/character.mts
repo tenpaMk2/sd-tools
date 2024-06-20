@@ -19,6 +19,7 @@ const defaultPreset = [
   { key: `atelier-ryza-nochekaiser` },
   { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
   { key: `blend-s-kaho-ibukimakisiko` },
+  { key: `boufuri-sally-king-dong` },
   { key: `danmachi-aiz-eternal2kpp` },
   { key: `danmachi-eina-eternal2kpp` },
   { key: `danmachi-haruhime-eternal2kpp` },

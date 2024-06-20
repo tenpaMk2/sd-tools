@@ -182,6 +182,21 @@ const allChokerColorTags = [
   `yellow choker`,
 ] as const satisfies string[];
 
+const allCoatColorTags = [
+  `aqua coat`,
+  `black coat`,
+  `blue coat`,
+  `brown coat`,
+  `green coat`,
+  `grey coat`,
+  `orange coat`,
+  `pink coat`,
+  `purple coat`,
+  `red coat`,
+  `white coat`,
+  `yellow coat`,
+] as const satisfies string[];
+
 const allCollarColorTags = [
   `black collar`,
   `blue collar`,
@@ -374,6 +389,21 @@ const allSailorCollarColorTags = [
   `red sailor collar`,
   `white sailor collar`,
   `yellow sailor collar`,
+] as const satisfies string[];
+
+const allScarfColorTags = [
+  `aqua scarf`,
+  `black scarf`,
+  `blue scarf`,
+  `brown scarf`,
+  `green scarf`,
+  `grey scarf`,
+  `orange scarf`,
+  `pink scarf`,
+  `purple scarf`,
+  `red scarf`,
+  `white scarf`,
+  `yellow scarf`,
 ] as const satisfies string[];
 
 const allSerafukuColorTags = [
@@ -621,6 +651,7 @@ export const allBodyOutfitTags = [
   ...allCapeColorTags,
   ...allCapeletColorTags,
   ...allChokerColorTags,
+  ...allCoatColorTags,
   ...allCollarColorTags,
   ...allDressColorTags,
   ...allFootwearColorTags,
@@ -634,6 +665,7 @@ export const allBodyOutfitTags = [
   ...allPantsColorTags,
   ...allPantyhoseColorTags,
   ...allSailorCollarColorTags,
+  ...allScarfColorTags,
   ...allSerafukuColorTags,
   ...allShirtColorTags,
   ...allShortsColorTags,
@@ -684,6 +716,7 @@ export const allBodyOutfitTags = [
   `bra`,
   `bracelet`,
   `breast pocket`,
+  `breastplate`,
   `bridal garter`,
   `bridal gauntlets`,
   `bridal lingerie`,
@@ -712,6 +745,7 @@ export const allBodyOutfitTags = [
   `clothes around waist`,
   `clothes writing`,
   `clothing cutout`,
+  `coat`,
   `collar`,
   `collarbone`,
   `collared dress`,
@@ -740,6 +774,7 @@ export const allBodyOutfitTags = [
   `dragon print`,
   `dress shirt`,
   `dress`,
+  `duffel coat`,
   `elbow gloves`,
   `elbow pads`,
   `epaulettes`,
@@ -754,6 +789,7 @@ export const allBodyOutfitTags = [
   `frills`,
   `front-tie bikini top`,
   `front-tie top`,
+  `fur coat`,
   `fur collar`,
   `fur-trimmed bikini`,
   `fur-trimmed collar`,
@@ -783,6 +819,7 @@ export const allBodyOutfitTags = [
   `juliet sleeves`,
   `knee boots`,
   `knee pads`,
+  `lab coat`,
   `lace panties`,
   `lace-trimmed bra`,
   `lace-up boots`,
@@ -835,6 +872,7 @@ export const allBodyOutfitTags = [
   `office lady`,
   `official alternate costume`,
   `open clothes`,
+  `open coat`,
   `open jacket`,
   `open shirt`,
   `open-chest sweater`,
@@ -931,6 +969,7 @@ export const allBodyOutfitTags = [
   `thighhighs`,
   `tight clothes`,
   `tokiwadai school uniform`,
+  `trench coat`,
   `turtleneck bodysuit`,
   `turtleneck sweater`,
   `turtleneck`,
@@ -951,6 +990,6 @@ export const allBodyOutfitTags = [
   `white towel`,
   `wide sleeves`,
   `wrist cuffs`,
-  `yellow sports bra`,
+  `yellow sports bra`, // TODO
 ] as const satisfies readonly string[];
 export type BodyOutfitTag = (typeof allBodyOutfitTags)[number];

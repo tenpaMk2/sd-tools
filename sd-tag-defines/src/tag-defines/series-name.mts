@@ -20,6 +20,7 @@ export const allSeriesNameTags = [
   `infinite stratos`,
   `isekai nonbiri nouka`,
   `isekai ojisan`,
+  `itai no wa iya nano de bougyoryoku ni kyokufuri shitai to omoimasu`,
   `kage no jitsuryokusha ni naritakute!`,
   `kaguya-sama wa kokurasetai ~tensai-tachi no renai zunousen~`,
   `kanojo mo kanojo`,

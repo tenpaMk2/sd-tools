@@ -20,6 +20,7 @@ const portrait = {
   characters: [
     ...(
       [
+        `boufuri-sally-king-dong`,
         // ...charactersPreset.default[0].keys,
         // `hyouka-eru-chenkin`,
         // `atelier-ryza-nochekaiser`,

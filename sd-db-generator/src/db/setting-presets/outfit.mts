@@ -68,6 +68,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "boufuri-sally-king-dong": [
+    ...defaultPreset,
+    {
+      key: `boufuri-outfit-sally-king-dong`,
+      probability: defaultPreset.length * 2,
+    },
+  ],
   "danmachi-aiz-eternal2kpp": [...defaultPreset],
   "danmachi-eina-eternal2kpp": [...defaultPreset],
   "danmachi-haruhime-eternal2kpp": [...defaultPreset],

@@ -12,6 +12,7 @@ import { amaburiIsuzu } from "./amaburi/isuzu.mjs";
 import { atelierRyza } from "./atelier/ryza.mjs";
 import { blendSKaho } from "./blend-s/kaho.mjs";
 import { blendSMafuyu } from "./blend-s/mafuyu.mjs";
+import { boufuriSally } from "./boufuri/sally.mjs";
 import { danmachiAiz } from "./danmachi/aiz.mjs";
 import { danmachiEina } from "./danmachi/eina.mjs";
 import { danmachiHaruhime } from "./danmachi/haruhime.mjs";
@@ -127,6 +128,7 @@ export const characterTable = {
   ),
   "blend-s-kaho-ibukimakisiko": blendSKaho(`ibukimakisiko`),
   "blend-s-mafuyu-ibukimakisiko": blendSMafuyu(`ibukimakisiko`),
+  "boufuri-sally-king-dong": boufuriSally(`king-dong`),
   "danmachi-aiz-eternal2kpp": danmachiAiz(`eternal2kpp`),
   "danmachi-eina-eternal2kpp": danmachiEina(`eternal2kpp`),
   "danmachi-haruhime-eternal2kpp": danmachiHaruhime(`eternal2kpp`),

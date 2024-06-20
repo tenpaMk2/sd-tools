@@ -336,6 +336,7 @@ export const backgroundsPreset = {
   "blend-s-swimsuit-kaho-ibukimakisiko": ocean,
   "blend-s-waitress-kaho-ibukimakisiko": cafe,
   "blend-s-waitress-mafuyu-ibukimakisiko": cafe,
+  "boufuri-outfit-sally-king-dong": isekai,
   "danmachi-white-dress-hestia-eternal2kpp": defaultPreset,
   "danmachi-white-dress-hestia-no-lora": defaultPreset,
   "fate-red-sweater-rin-little-jelly": [

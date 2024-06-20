@@ -130,6 +130,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  "Sally(bofuri)-Pony": {
+    recommendedWeight: 1.2,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/514124/sally-bofuri-i-dont-want-to-get-hurt-so-ill-max-out-my-defense?modelVersionId=571410`,
+    ),
+    characterTriggerWordsTags: [`Sally`],
+    outfitTriggerTags: [],
+    creator: `King_Dong`,
+  },
   "cecilia-alcott-s2-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],

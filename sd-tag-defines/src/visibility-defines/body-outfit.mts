@@ -381,6 +381,21 @@ const allChokerColorVisibilities = {
   "yellow choker": preset.collar,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allCoatColorVisibilities = {
+  "aqua coat": preset.dress,
+  "black coat": preset.dress,
+  "blue coat": preset.dress,
+  "brown coat": preset.dress,
+  "green coat": preset.dress,
+  "grey coat": preset.dress,
+  "orange coat": preset.dress,
+  "pink coat": preset.dress,
+  "purple coat": preset.dress,
+  "red coat": preset.dress,
+  "white coat": preset.dress,
+  "yellow coat": preset.dress,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allCollarColorVisibilities = {
   "black collar": preset.collar,
   "blue collar": preset.collar,
@@ -575,6 +590,21 @@ const allSailorCollarColorVisibilities = {
   "red sailor collar": preset.collar,
   "white sailor collar": preset.collar,
   "yellow sailor collar": preset.collar,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
+const allScarfCollarColorVisibilities = {
+  "aqua scarf": preset.collar,
+  "black scarf": preset.collar,
+  "blue scarf": preset.collar,
+  "brown scarf": preset.collar,
+  "green scarf": preset.collar,
+  "grey scarf": preset.collar,
+  "orange scarf": preset.collar,
+  "pink scarf": preset.collar,
+  "purple scarf": preset.collar,
+  "red scarf": preset.collar,
+  "white scarf": preset.collar,
+  "yellow scarf": preset.collar,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allSerafukuColorVisibilities = {
@@ -822,6 +852,7 @@ export const allBodyOutfitVisibilities = {
   ...allCapeColorVisibilities,
   ...allCapeletColorVisibilities,
   ...allChokerColorVisibilities,
+  ...allCoatColorVisibilities,
   ...allCollarColorVisibilities,
   ...allDistinguishableOutfitVisibilities,
   ...allDressColorVisibilities,
@@ -836,6 +867,7 @@ export const allBodyOutfitVisibilities = {
   ...allPantsColorVisibilities,
   ...allPantyhoseColorVisibilities,
   ...allSailorCollarColorVisibilities,
+  ...allScarfCollarColorVisibilities,
   ...allSerafukuColorVisibilities,
   ...allShirtColorVisibilities,
   ...allShortsColorVisibilities,
@@ -886,6 +918,7 @@ export const allBodyOutfitVisibilities = {
   "bra": preset.bra,
   "bracelet": preset["wrist cuffs"],
   "breast pocket": preset.bowtie,
+  "breastplate": preset.bra,
   "bridal garter": preset.skirt,
   "bridal gauntlets": preset.shoulder,
   "bridal lingerie": preset.dress,
@@ -914,6 +947,7 @@ export const allBodyOutfitVisibilities = {
   "clothes around waist": preset["high-waist skirt"],
   "clothes writing": preset["center frills"],
   "clothing cutout": preset["clothing cutout"], // TODO: `cleavage clothing cutout`
+  "coat": preset.dress,
   "collar": preset.collar,
   "collarbone": preset.bowtie,
   "collared dress": preset.dress,
@@ -942,6 +976,7 @@ export const allBodyOutfitVisibilities = {
   "dragon print": preset.dress,
   "dress shirt": preset.shirt,
   "dress": preset.dress,
+  "duffel coat": preset.dress,
   "elbow gloves": preset["elbow gloves"],
   "elbow pads": preset["elbow gloves"],
   "epaulettes": preset.shoulder,
@@ -956,6 +991,7 @@ export const allBodyOutfitVisibilities = {
   "frills": preset.all,
   "front-tie bikini top": preset.bowtie,
   "front-tie top": preset.bowtie,
+  "fur coat": preset.dress,
   "fur collar": preset.collar,
   "fur-trimmed bikini": preset.dress,
   "fur-trimmed collar": preset.collar,
@@ -985,6 +1021,7 @@ export const allBodyOutfitVisibilities = {
   "juliet sleeves": preset.shoulder,
   "knee boots": preset.foot,
   "knee pads": preset.thighs,
+  "lab coat": preset.dress,
   "lace panties": preset.panties,
   "lace-trimmed bra": preset.bra,
   "lace-up boots": preset.foot,
@@ -1037,6 +1074,7 @@ export const allBodyOutfitVisibilities = {
   "office lady": preset.all,
   "official alternate costume": preset.all,
   "open clothes": preset.shirt, // Visible from back. Assume when all fours.
+  "open coat": preset.dress,
   "open jacket": preset.shirt, // Visible from back. Assume when all fours.
   "open shirt": preset.shirt,
   "open-chest sweater": preset.shirt,
@@ -1133,6 +1171,7 @@ export const allBodyOutfitVisibilities = {
   "thighhighs": preset.thighhighs,
   "tight clothes": preset.shirt,
   "tokiwadai school uniform": preset.all,
+  "trench coat": preset.dress,
   "turtleneck bodysuit": preset.collar,
   "turtleneck sweater": preset.collar,
   "turtleneck": preset.collar,
