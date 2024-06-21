@@ -14,6 +14,7 @@ export const allSeriesNameTags = [
   `fate/stay night`,
   `fate/unlimited blade works`,
   `futoku no guild`,
+  `goblin slayer!`,
   `gochuumon wa usagi desu ka?`,
   `gridman universe`,
   `hige wo soru\\. soshite joshikousei wo hirou\\.`,

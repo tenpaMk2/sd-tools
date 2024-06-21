@@ -1,21 +1,25 @@
 import { CharacterDefine } from "../characters.mjs";
 
-type Variation = `nochekaiser`;
+type Variation = `nochekaiser` | `nochekaiser-booru`;
 
 const lora = {
-  nochekaiser: {
-    loraName: `takina-lycoreco-01`,
+  "nochekaiser": {
+    loraName: `takina-inoue-s1-ponyxl-lora-nochekaiser`,
+    probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
+  },
+  "nochekaiser-booru": {
+    loraName: `takina-inoue-ponyxl-lora-nochekaiser`,
     probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
   },
 } as const satisfies Record<Variation, CharacterDefine[`lora`]>;
 
 const loraCharacterTriggerWordEntries = {
-  nochekaiser: [`takina inoue`],
+  "nochekaiser": [`inoue takina`],
+  "nochekaiser-booru": [],
 } as const satisfies Record<
   Variation,
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
-
 export const lycorisRecoilTakina = (variation: Variation) =>
   ({
     lora: lora[variation],

@@ -1,42 +1,38 @@
 import { CharacterDefine } from "../characters.mjs";
 
-type Variation = `lancelot` | `nochekaiser`;
+type Variation = `nochekaiser`;
 
 const lora = {
-  lancelot: {
-    loraName: `nanadevilXLPonyV1`,
-    probabilityAndWeights: [{ probability: 1, weight: 0.9 }],
-  },
   nochekaiser: {
-    loraName: `nana-deviluke-darkness-ponyxl-lora-nochekaiser`,
+    loraName: `haruna-sairenji-darkness-ponyxl-lora-nochekaiser`,
     probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
   },
 } as const satisfies Record<Variation, CharacterDefine["lora"]>;
 
 const loraCharacterTriggerWordEntries = {
-  lancelot: [`nanadevil`],
-  nochekaiser: [`nana asta deviluke`],
+  nochekaiser: [`haruna sairenji`],
 } as const satisfies Record<
   Variation,
   CharacterDefine["loraCharacterTriggerWordEntries"]
 >;
 
-export const toLoveRuNana = (variation: Variation) =>
+export const toLoveRuHaruna = (variation: Variation) =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`to love-ru`, `to love-ru darkness`],
-    characterNameEntries: [`nana asta deviluke`],
+    characterNameEntries: [`sairenji haruna`],
     characterFeatureEntries: [
       `purple eyes`,
-      `pink hair`,
-      `long hair`,
-      `twintails`,
-      `hair between eyes`,
-      `tail`,
-      `demon tail`,
+      `purple hair`,
+      `short hair`,
+      `bob cut`,
+      // `swept bangs`,
+      `forehead`,
+      `hair ornament`,
+      `hairclip`,
     ],
-    breastSize: `small breasts`,
-    fang: true,
-    emotionType: `mesugaki`,
+    breastSize: `medium breasts`,
+    fang: false,
+    emotionType: `serious`,
   }) as const satisfies CharacterDefine;

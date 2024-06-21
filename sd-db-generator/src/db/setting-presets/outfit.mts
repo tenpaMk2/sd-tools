@@ -21,7 +21,7 @@ const defaultPreset = getKeys(commonOutfitTable).map((key) => ({
 
 // TODO: Separate each type of presets into files.
 
-export const outfitsPreset = {
+export const outfitsPreset: OutfitsPreset = {
   ...monoOutfitPresetsMap,
 
   "default": defaultPreset,
@@ -104,10 +104,31 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "futoku-no-guild-enome-zedotasco": [
+    ...defaultPreset,
+    {
+      key: `futoku-no-guild-outfit-enome-zedotasco`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "futoku-no-guild-tokishikko-ibukimakisiko": [
     ...defaultPreset,
     {
       key: `futoku-no-guild-outfit-tokishikko-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "goblin-slayer-cow-girl-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `goblin-slayer-outfit-cow-girl-eternal2kpp`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "goblin-slayer-priestess-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `goblin-slayer-outfit-priestess-eternal2kpp`,
       probability: defaultPreset.length / 2,
     },
   ],
@@ -307,6 +328,13 @@ export const outfitsPreset = {
     },
   ],
   "lycoris-recoil-chisato-no-lora": defaultPreset,
+  "lycoris-recoil-takina-nochekaiser-booru": [
+    ...defaultPreset,
+    {
+      key: `lycoris-recoil-lycoris-uniform-takina-nochekaiser`,
+      probability: defaultPreset.length,
+    },
+  ],
   "lycoris-recoil-takina-nochekaiser": [
     ...defaultPreset,
     {
@@ -507,20 +535,20 @@ export const outfitsPreset = {
     ...defaultPreset,
     // TODO: other outfits
   ],
-  // "to-love-ru-haruna-nochekaiser": [
-  //   ...defaultPreset,
-  //   {
-  //     key: `to-love-ru-school-uniform-haruna-nochekaiser`,
-  //     probability: defaultPreset.length,
-  //   },
-  // ],
-  // "to-love-ru-lala-nochekaiser": [
-  //   ...defaultPreset,
-  //   {
-  //     key: `to-love-ru-school-uniform-lala-nochekaiser`,
-  //     probability: defaultPreset.length / 2,
-  //   },
-  // ],
+  "to-love-ru-haruna-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-haruna-nochekaiser`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "to-love-ru-lala-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-lala-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "to-love-ru-momo-lancelot": [
     ...defaultPreset,
     {
@@ -528,13 +556,13 @@ export const outfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  // "to-love-ru-momo-nochekaiser": [
-  //   ...defaultPreset,
-  //   {
-  //     key: `to-love-ru-school-uniform-momo-nochekaiser`,
-  //     probability: defaultPreset.length / 2,
-  //   },
-  // ],
+  "to-love-ru-momo-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-momo-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "to-love-ru-nana-lancelot": [
     ...defaultPreset,
     {
@@ -542,12 +570,12 @@ export const outfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  // "to-love-ru-nana-nochekaiser": [
-  //   ...defaultPreset,
-  //   {
-  //     key: `to-love-ru-school-uniform-nana-lancelot`,
-  //     probability: defaultPreset.length,
-  //   },
-  // ],
+  "to-love-ru-nana-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-nana-lancelot`,
+      probability: defaultPreset.length,
+    },
+  ],
   "working-popura-ibukimakisiko": defaultPreset,
 } as const satisfies OutfitsPreset;

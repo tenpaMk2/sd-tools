@@ -7,7 +7,7 @@ const portrait = {
   fixedPrompt: `score_9, score_8_up, score_7_up, 1girl, solo,\n`,
   txt2imgBodyJson: {
     // negative_prompt: `cameltoe, empty eyes, realistic`,
-    negative_prompt: ``,
+    negative_prompt: `cameltoe`,
     sampler_name: `Euler a`,
     steps: 25,
     ...imageResolutionPreset["sdxl-portrait"],
@@ -21,6 +21,10 @@ const portrait = {
   characters: [
     ...(
       [
+        // "to-love-ru-haruna-nochekaiser",
+        // "to-love-ru-lala-nochekaiser",
+        // "to-love-ru-momo-nochekaiser",
+        // "to-love-ru-nana-nochekaiser",
         // `strike-witches-yoshika-gwess`,
         // `strike-witches-yoshika-witch-gwess`,
         // `boufuri-sally-king-dong`,

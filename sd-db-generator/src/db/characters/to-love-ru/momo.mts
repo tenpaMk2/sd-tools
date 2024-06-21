@@ -1,19 +1,24 @@
 import { CharacterDefine } from "../characters.mjs";
 
-type Variation = `lancelot`;
+type Variation = `lancelot` | `nochekaiser`;
 
 const lora = {
   lancelot: {
     loraName: `momodevilvXLPonyV1`,
     probabilityAndWeights: [{ probability: 1, weight: 0.7 }],
   },
-} as const satisfies Record<Variation, CharacterDefine[`lora`]>;
+  nochekaiser: {
+    loraName: `momo-deviluke-darkness-ponyxl-lora-nochekaiser`,
+    probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+  },
+} as const satisfies Record<Variation, CharacterDefine["lora"]>;
 
 const loraCharacterTriggerWordEntries = {
   lancelot: [`momodevil`],
+  nochekaiser: [`momo deviluke`],
 } as const satisfies Record<
   Variation,
-  CharacterDefine[`loraCharacterTriggerWordEntries`]
+  CharacterDefine["loraCharacterTriggerWordEntries"]
 >;
 
 export const toLoveRuMomo = (variation: Variation) =>

@@ -344,6 +344,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "Enome_1": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/492994/enome-from-futoku-no-guild`,
+    ),
+    characterTriggerWordsTags: [`Enome`],
+    outfitTriggerTags: [],
+    creator: `ZedoTasco`,
+  },
   "erika-mahouka": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -409,6 +419,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`haruhime sanjouno`],
     outfitTriggerTags: [],
     creator: `eft`,
+  },
+  "haruna-sairenji-darkness-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/346441/haruna-sairenji-to-love-ru?modelVersionId=566775`,
+    ),
+    characterTriggerWordsTags: [`haruna sairenji`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
   },
   "haruna-loveru": {
     recommendedWeight: 0.8,
@@ -629,6 +649,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`kyouko sakura`],
     outfitTriggerTags: [],
     creator: `eft`,
+  },
+  "lala-deviluke-darkness-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/342926/lala-satalin-deviluke-to-love-ru?modelVersionId=566823`,
+    ),
+    characterTriggerWordsTags: [`lala deviluke`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
   },
   "lala-loveru": {
     recommendedWeight: 0.8,
@@ -864,6 +894,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  "momo-deviluke-darkness-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/342887/momo-belia-deviluke-to-love-ru?modelVersionId=566787`,
+    ),
+    characterTriggerWordsTags: [`momo deviluke`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
   "momo-loveru": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -891,6 +931,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`Sylphiette`],
     outfitTriggerTags: [`SylphietteSchoolUniform`],
     creator: `LittleJelly`,
+  },
+  "nana-deviluke-darkness-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/353109/nana-asta-deviluke-to-love-ru?modelVersionId=566803`,
+    ),
+    characterTriggerWordsTags: [`nana asta deviluke`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
   },
   "nana-loveru": {
     recommendedWeight: 0.8,
@@ -941,6 +991,16 @@ export const loraTable = {
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `OG_Turles`,
+  },
+  "Onna_Shinkan": {
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/513403/goblin-slayer-or-onna-shinkan-pdxl?modelVersionId=570572`,
+    ),
+    characterTriggerWordsTags: [`Onna Shinkan`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
   },
   "philuffy-bahamut-01": {
     recommendedWeight: 0.8,
@@ -1160,6 +1220,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  "takina-inoue-s1-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/342798/takina-inoue-lycoris-recoil?modelVersionId=566929`,
+    ),
+    characterTriggerWordsTags: [`inoue takina`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
   "takina-lycoreco-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -1210,6 +1280,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
   },
+  "Ushikai_Musume": {
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/513343/goblin-slayer-or-ushikai-musume-pdxl?modelVersionId=570509`,
+    ),
+    characterTriggerWordsTags: [`Ushikai Musume`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
   "yachiyo-madomagi-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -1259,6 +1339,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`yoshinaga koi`],
     outfitTriggerTags: [`yoshinagakoi-casual`, `yoshinagakoi-schooluniform`],
     creator: `Ibukimakisiko`,
+  },
+  "Yousei_Yunde": {
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/513455/goblin-slayer-or-yousei-yunde-pdxl?modelVersionId=570622`,
+    ),
+    characterTriggerWordsTags: [`Yousei Yunde`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
   },
   "yui-loveru": {
     recommendedWeight: 0.8,

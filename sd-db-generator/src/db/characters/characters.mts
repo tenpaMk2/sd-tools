@@ -23,7 +23,10 @@ import { eromangaSenseiElf } from "./eromanga-sensei/elf.mjs";
 import { eromangaSenseiMegumi } from "./eromanga-sensei/megumi.mjs";
 import { eromangaSenseiSagiri } from "./eromanga-sensei/sagiri.mjs";
 import { fateRin } from "./fate/rin.mjs";
+import { futokuNoGuildEnome } from "./futoku-no-guild/enome.mjs";
 import { futokuNoGuildTokishikko } from "./futoku-no-guild/tokishikko.mjs";
+import { goblinSlayerCowGirl } from "./goblin-slayer/cow-girl.mjs";
+import { goblinSlayerPriestess } from "./goblin-slayer/priestess.mjs";
 import { higehiroSayu } from "./higehiro/sayu.mjs";
 import { hyoukaEru } from "./hyouka/eru.mjs";
 import { isCecilia } from "./is/cecilia.mjs";
@@ -79,6 +82,8 @@ import { spyFamilyYor } from "./spy-family/yor.mjs";
 import { strikeWitchesYoshika } from "./strike-witches/yoshika.mjs";
 import { tenshiSamaMahiru } from "./tenshi-sama/mahiru.mjs";
 import { tenshiTsukiNoel } from "./tenshi-tsuki/noel.mjs";
+import { toLoveRuHaruna } from "./to-love-ru/haruna.mjs";
+import { toLoveRuLala } from "./to-love-ru/lala.mjs";
 import { toLoveRuMomo } from "./to-love-ru/momo.mjs";
 import { toLoveRuNana } from "./to-love-ru/nana.mjs";
 import { workingPopura } from "./working/popura.mjs";
@@ -141,8 +146,11 @@ export const characterTable = {
   "eromanga-sensei-megumi-eternal2kpp": eromangaSenseiMegumi(`eternal2kpp`),
   "eromanga-sensei-sagiri-eternal2kpp": eromangaSenseiSagiri(`eternal2kpp`),
   "fate-rin-little-jelly": fateRin(`little-jelly`),
+  "futoku-no-guild-enome-zedotasco": futokuNoGuildEnome(`zedotasco`),
   "futoku-no-guild-tokishikko-ibukimakisiko":
     futokuNoGuildTokishikko(`ibukimakisiko`),
+  "goblin-slayer-cow-girl-eternal2kpp": goblinSlayerCowGirl(`eternal2kpp`),
+  "goblin-slayer-priestess-eternal2kpp": goblinSlayerPriestess(`eternal2kpp`),
   "higehiro-sayu-nochekaiser": higehiroSayu(`nochekaiser`),
   "hyouka-eru-chenkin": hyoukaEru(`chenkin`),
   "is-cecilia-nochekaiser": isCecilia(`nochekaiser`),
@@ -169,6 +177,8 @@ export const characterTable = {
   "konosuba-yunyun-no-lora": konosubaYunyun(`no-lora`),
   "lycoris-recoil-chisato-no-lora": lycorisRecoilChisato(`no-lora`),
   "lycoris-recoil-chisato-nochekaiser": lycorisRecoilChisato(`nochekaiser`),
+  "lycoris-recoil-takina-nochekaiser-booru":
+    lycorisRecoilTakina(`nochekaiser-booru`),
   "lycoris-recoil-takina-nochekaiser": lycorisRecoilTakina(`nochekaiser`),
   "mahoako-matama-notekaga": mahoakoMatama(`notekaga`),
   "mushoku-tensei-sylphiette-little-jelly":
@@ -215,8 +225,12 @@ export const characterTable = {
   "strike-witches-yoshika-witch-gwess": strikeWitchesYoshika(`witch-gwess`),
   "tenshi-sama-mahiru-jibunsagasinotabi": tenshiSamaMahiru(`jibunsagasinotabi`),
   "tenshi-tsuki-noel-zedotasco": tenshiTsukiNoel(`zedotasco`),
+  "to-love-ru-haruna-nochekaiser": toLoveRuHaruna(`nochekaiser`),
+  "to-love-ru-lala-nochekaiser": toLoveRuLala(`nochekaiser`),
   "to-love-ru-momo-lancelot": toLoveRuMomo(`lancelot`),
+  "to-love-ru-momo-nochekaiser": toLoveRuMomo(`nochekaiser`),
   "to-love-ru-nana-lancelot": toLoveRuNana(`lancelot`),
+  "to-love-ru-nana-nochekaiser": toLoveRuNana(`nochekaiser`),
   "working-popura-ibukimakisiko": workingPopura(`ibukimakisiko`),
 } as const satisfies Record<string, CharacterDefine>;
 
