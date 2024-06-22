@@ -132,7 +132,7 @@ const createSpecialTokens = (
   if (
     outfit.hangingBreasts &&
     pose.hangingBreasts &&
-    BreastSizeOrder["medium breasts"] <= BreastSizeOrder[breastSize]
+    BreastSizeOrder[`large breasts`] <= BreastSizeOrder[breastSize]
   ) {
     push(`hanging breasts`);
   }
