@@ -1,9 +1,7 @@
 {
-  "private": true,
   "name": "sd-tools",
-  "description": "🥝 Mono repo for Stable Diffusion tools 🍓",
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
-  "license": "MIT",
+  "description": "🥝 Mono repo for Stable Diffusion tools 🍓",
   "scripts": {
     "build": "npm run -w sd-tag-defines build && npm run -w sd-db-generator build && npm run -w sd-random-generator build",
     "watch:sd-tag-defines": "npm run -w sd-tag-defines watch",
@@ -19,6 +17,13 @@
     "clean:sd-random-generator": "npm run -w sd-random-generator clean",
     "clean": "run-p clean:sd-tag-defines clean:sd-db-generator clean:sd-random-generator"
   },
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "ai",
+    "ai-art",
+    "stable-diffusion"
+  ],
   "workspaces": [
     "sd-db-generator",
     "sd-random-generator",
