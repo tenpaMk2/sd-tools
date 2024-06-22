@@ -63,6 +63,10 @@ export const checkpointAndVaePreset = {
     sd_model_checkpoint: `ponymagine91_gamma.safetensors`,
     sd_vae: `None`,
   },
+  pvcStyle: {
+    sd_model_checkpoint: `PVCStyleModelMovable_pony151.safetensors`,
+    sd_vae: `None`,
+  },
   momoiro: {
     sd_model_checkpoint: `momoiropony_v14.safetensors`,
     sd_vae: `None`,

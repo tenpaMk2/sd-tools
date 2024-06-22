@@ -20,6 +20,7 @@ export const checkpointTable = {
   "momoiropony_v14.safetensors": { baseModel: `Pony` },
   "ponyDiffusionV6XL_v6StartWithThisOne.safetensors": { baseModel: `Pony` },
   "ponymagine91_gamma.safetensors": { baseModel: `Pony` }, // Also supports `Animagine` .
+  "PVCStyleModelMovable_pony151.safetensors": { baseModel: `Pony` },
   "tPonynai3_v41OptimizedFromV4.safetensors": { baseModel: `Pony` },
   "tPonynai3_v51WeightOptimized.safetensors": { baseModel: `Pony` },
   "vividorangemix_v10.safetensors": { baseModel: `SD1.5` },
