@@ -1,14 +1,18 @@
 import { SingleBar } from "cli-progress";
-import { blue, cyan, magenta, yellow } from "picocolors";
+import picocolors from "picocolors";
 
 const paddingDigits = 8;
 
 export const log = (str: string) => {
-  console.log(`${cyan(`LOG`.padEnd(paddingDigits, ` `) + `|`)} ${str}`);
+  console.log(
+    `${picocolors.cyan(`LOG`.padEnd(paddingDigits, ` `) + `|`)} ${str}`,
+  );
 };
 
 export const warn = (str: string) => {
-  console.warn(`${yellow(`WARN`.padEnd(paddingDigits, ` `) + `|`)} ${str}`);
+  console.warn(
+    `${picocolors.yellow(`WARN`.padEnd(paddingDigits, ` `) + `|`)} ${str}`,
+  );
 };
 
 export class ProgressBar {
@@ -18,8 +22,8 @@ export class ProgressBar {
   constructor() {
     this.progress = new SingleBar({
       format:
-        magenta(`PROGRESS`.padEnd(paddingDigits, ` `) + `|`) +
-        blue(` {bar} | ETA: {etaSecond}s`),
+        picocolors.magenta(`PROGRESS`.padEnd(paddingDigits, ` `) + `|`) +
+        picocolors.blue(` {bar} | ETA: {etaSecond}s`),
       barCompleteChar: "\u2588",
       barIncompleteChar: "\u2591",
     });

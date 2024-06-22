@@ -1,5 +1,5 @@
 import { OutfitDefine } from "../outfits.mjs";
-import { upskirtPreset } from "../upskirt-preset";
+import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `ibukimakisiko`;
 

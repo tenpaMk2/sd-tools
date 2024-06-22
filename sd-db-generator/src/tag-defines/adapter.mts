@@ -1,4 +1,5 @@
-export {
+export { allVisibilityKeys, tagVisibilities } from "@tenpamk2/sd-tag-defines";
+export type {
   BackgroundTag,
   BreastSizeTag,
   CharacterNameTag,
@@ -6,10 +7,8 @@ export {
   SeriesNameTag,
   SpecialTag,
   VisibilityKey,
-  allVisibilityKeys,
-  tagVisibilities,
 } from "@tenpamk2/sd-tag-defines";
-import {
+import type {
   BackgroundTag,
   BodyFeatureTag,
   BodyOutfitTag,
@@ -27,7 +26,7 @@ import {
   SeriesNameTag,
   SpecialTag,
 } from "@tenpamk2/sd-tag-defines";
-import {
+import type {
   LoraCharacterTriggerWordsTag,
   LoraOutfitTriggerWordsTag,
 } from "../db/lora.mjs";

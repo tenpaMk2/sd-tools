@@ -4,8 +4,8 @@
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
   "description": "🎲 Image generator with random characters, outfits, backgrounds and poses via the API of SD web UI (or SD Forge) 🎲",
   "exports": {
-    "node": "./dist/index.cjs",
-    "default": "./dist/index.cjs"
+    "node": "./dist/index.mjs",
+    "default": "./dist/index.mjs"
   },
   "files": [
     "dist",
@@ -13,23 +13,23 @@
   ],
   "scripts": {
     "prebuild": "npm run clean",
-    "build:base": "npx esbuild --bundle --platform=node --out-extension:.js=.cjs src/index.mts --outdir=dist",
-    "build:esbuild": "npm run build:base -- --minify",
-    "build:declaration": "tsc",
-    "build": "run-p build:esbuild build:declaration",
-    "watch:esbuild": "npm run build:base -- --sourcemap --keep-names --watch",
-    "watch:declaration": "tsc --watch",
-    "watch": "run-p watch:esbuild watch:declaration",
+    "build:base": "npx swc src --out-dir dist --strip-leading-paths --out-file-extension mjs",
+    "build:source": "npm run build:base",
+    "build:type": "tsc",
+    "build": "run-p build:source build:type",
+    "watch:source": "npm run build:base -- --source-maps --watch",
+    "watch:type": "tsc --watch",
+    "watch": "run-p watch:source watch:type",
     "clean": "rimraf dist",
-    "exe": "node dist/index.cjs",
+    "exe": "node dist/index.mjs",
     "test": "vitest",
     "clean:sea": "rimraf dist-sea",
     "build:sea:config": "mkdirp dist-sea && node --experimental-sea-config sea-config.json",
     "build:sea:copy-node:mac": "cp $(command -v node) dist-sea/index && chmod a+w dist-sea/index",
-    "build:sea:postject:mac": "npx postject dist-sea/index NODE_SEA_BLOB dist-sea/sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2 --macho-segment-name NODE_SEA",
-    "build:sea:mac": "run-s clean:sea build:sea:config build:sea:copy-node:mac build:sea:postject:mac",
     "build:sea:copy-node:win": "node -e \"require('fs').copyFileSync(process.execPath, 'dist-sea/index.exe')\"",
+    "build:sea:postject:mac": "npx postject dist-sea/index NODE_SEA_BLOB dist-sea/sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2 --macho-segment-name NODE_SEA",
     "build:sea:postject:win": "npx postject dist-sea/index.exe NODE_SEA_BLOB dist-sea/sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
+    "build:sea:mac": "run-s clean:sea build:sea:config build:sea:copy-node:mac build:sea:postject:mac",
     "build:sea:win": "run-s clean:sea build:sea:config build:sea:copy-node:win build:sea:postject:win"
   },
   "license": "MIT",
@@ -47,9 +47,11 @@
     "yaml": "^2.4.2"
   },
   "devDependencies": {
+    "@swc/cli": "^0.3.14",
+    "@swc/core": "^1.6.5",
     "@types/cli-progress": "^3.11.5",
     "@types/node": "^20.12.7",
-    "esbuild": "^0.21.4",
+    "chokidar": "^3.6.0",
     "mkdirp": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",

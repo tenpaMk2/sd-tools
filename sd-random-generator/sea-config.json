@@ -1,1 +1,1 @@
-{ "main": "dist/index.cjs", "output": "dist-sea/sea-prep.blob" }
+{ "main": "dist/index.mjs", "output": "dist-sea/sea-prep.blob" }
