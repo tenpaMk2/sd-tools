@@ -14,7 +14,7 @@ export type LoraDefine = Readonly<{
   /**
    * URL for DL.
    */
-  url: URL;
+  url: string;
   /**
    * Character trigger words tags.
    * Define only the LoRA has uncommon trigger words.
@@ -43,7 +43,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/353023/ai-hayasaka-kaguya-sama-love-is-war?modelVersionId=394781`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`ai hayasaka`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -53,7 +53,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/498903/danmachi-or-ais-wallenstein-pdxl?modelVersionId=554574`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Ais Wallenstein`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -61,7 +61,9 @@ export const loraTable = {
   "ais-danmachi": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/339169/ais-wallenstein-danmachi`),
+    url: new URL(
+      `https://civitai.com/models/339169/ais-wallenstein-danmachi`,
+    ).toString(),
     characterTriggerWordsTags: [`ais wallenstein`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -69,7 +71,9 @@ export const loraTable = {
   "akoya_matama-pony-v1": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`Pony`],
-    url: new URL(`https://civitai.com/models/351800?modelVersionId=393514`),
+    url: new URL(
+      `https://civitai.com/models/351800?modelVersionId=393514`,
+    ).toString(),
     characterTriggerWordsTags: [`akoya matama`],
     outfitTriggerTags: [],
     creator: `NoteKaga`,
@@ -79,7 +83,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/399726/alicia-edelsia-uncle-from-another-world?modelVersionId=445807`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`alicia edelsia`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -89,7 +93,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/55673/sento-isuzu-or-amagi-brilliant-park`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`SentoIsuzu`],
     outfitTriggerTags: [
       `SentoUniform`,
@@ -107,7 +111,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/452502/angelina-lina-angie-sirius-kudou-shields-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503820`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -117,7 +121,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/494354/new-game-or-aoba-suzukaze-pdxl?modelVersionId=549604`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Aoba Suzukaze`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -125,7 +129,9 @@ export const loraTable = {
   "aoba-suzukaze-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
-    url: new URL(`https://civitai.com/models/354199/aoba-suzukaze-new-game`),
+    url: new URL(
+      `https://civitai.com/models/354199/aoba-suzukaze-new-game`,
+    ).toString(),
     characterTriggerWordsTags: [`aoba suzukaze`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -135,7 +141,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/514124/sally-bofuri-i-dont-want-to-get-hurt-so-ill-max-out-my-defense?modelVersionId=571410`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Sally`],
     outfitTriggerTags: [],
     creator: `King_Dong`,
@@ -145,7 +151,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431036/cecilia-alcott-infinite-stratos-is`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
@@ -155,7 +161,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/191380/celistia-ralgris-saijaku-muhai-no-bahamut`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -165,7 +171,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431037/charlotte-dunois-infinite-stratos-is`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
@@ -175,7 +181,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431039/chifuyu-orimura-infinite-stratos-is`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`chifuyu orimura`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -185,7 +191,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/513468/chitanda-eru-hyouka?modelVersionId=570635`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`chitanda_eru`],
     outfitTriggerTags: [],
     creator: `Chenkin`,
@@ -195,7 +201,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/484301/kaguya-sama-wa-kokurasetai-or-chika-fujiwara-pdxl?modelVersionId=538606`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Chika Fujiwara`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -205,7 +211,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/336863/chika-fujiwara-kaguya-sama-love-is-war`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`chika fujiwara`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -215,7 +221,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/226036/chisato-nishikigi-lycoris-recoil`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`chisato nishikigi`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -225,7 +231,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/342789/chisato-nishikigi-lycoris-recoil`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`chisato nishikigi`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -235,7 +241,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/309537/chloe-von-einzbernbeast-style?modelVersionId=347422`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`zzcloaa`],
     creator: `am7coffeelove`,
@@ -245,7 +251,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/361913/hestia-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-danmachi?modelVersionId=404426`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`hestia`],
     outfitTriggerTags: [],
     creator: `NoteKaga`,
@@ -255,7 +261,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/315196/akemi-souryuuin-how-heavy-are-the-dumbbells-you-lift-dumbbell-nan-kilo-moteru-anime-design`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`eft_dumbbell_black`],
     outfitTriggerTags: [],
     creator: `wiz_`,
@@ -265,7 +271,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/315195/hibiki-sakura-how-heavy-are-the-dumbbells-you-lift-dumbbell-nan-kilo-moteru-anime-design`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`eft_dumbbell_blonde`],
     outfitTriggerTags: [],
     creator: `wiz_`,
@@ -275,7 +281,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/315191/ayaka-uehara-how-heavy-are-the-dumbbells-you-lift-dumbbell-nan-kilo-moteru-anime-design`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`eft_dumbbell_bun`],
     outfitTriggerTags: [],
     creator: `wiz_`,
@@ -285,7 +291,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/315183/satomi-tachibana-how-heavy-are-the-dumbbells-you-lift-dumbbell-nan-kilo-moteru-anime-design`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`eft_dumbbell_short`],
     outfitTriggerTags: [],
     creator: `wiz_`,
@@ -295,7 +301,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/315188/gina-boyd-how-heavy-are-the-dumbbells-you-lift-dumbbell-nan-kilo-moteru-anime-design`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`eft_dumbbell_white`],
     outfitTriggerTags: [],
     creator: `wiz_`,
@@ -305,7 +311,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/498849/danmachi-or-eina-tulle-pdxl?modelVersionId=554519`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Ais Wallenstein`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -313,7 +319,9 @@ export const loraTable = {
   "eina-danmachi": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/342415/eina-tulle-danmachi`),
+    url: new URL(
+      `https://civitai.com/models/342415/eina-tulle-danmachi`,
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -323,7 +331,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/502864/eromanga-sensei-or-elf-yamada-pdxl?modelVersionId=558920`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Elf Yamada`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -331,7 +339,9 @@ export const loraTable = {
   "Emilia": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],
-    url: new URL(`https://civitai.com/models/80978?modelVersionId=538640`),
+    url: new URL(
+      `https://civitai.com/models/80978?modelVersionId=538640`,
+    ).toString(),
     characterTriggerWordsTags: [`Emilia`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -339,7 +349,7 @@ export const loraTable = {
   "emilia-rezero-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/216916/emilia-rezero`),
+    url: new URL(`https://civitai.com/models/216916/emilia-rezero`).toString(),
     characterTriggerWordsTags: [`emilia`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -349,7 +359,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/492994/enome-from-futoku-no-guild`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Enome`],
     outfitTriggerTags: [],
     creator: `ZedoTasco`,
@@ -359,7 +369,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/298310/erika-chiba-mahouka-koukou-no-rettousei`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`erika chiba`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -369,7 +379,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/410579/tohsaka-rin-or-ponyxl-or-fatestay-night-unlimited-blade-works?modelVersionId=457675`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`tohsakarin`],
     outfitTriggerTags: [
       `rinsweater`,
@@ -385,7 +395,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/350357/gene-pso2?modelVersionId=422503`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `overnerd`,
@@ -395,7 +405,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/494389/new-game-or-hajime-shinoda-pdxl?modelVersionId=549641`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Hajime Shinoda`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -405,7 +415,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/498837/danmachi-or-haruhime-sanjouno-pdxl?modelVersionId=554505`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Haruhime Sanjouno`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -415,7 +425,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/342409/haruhime-sanjouno-danmachi`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`haruhime sanjouno`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -425,7 +435,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/346441/haruna-sairenji-to-love-ru?modelVersionId=566775`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`haruna sairenji`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -435,7 +445,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/258480/haruna-sairenji-to-love-ru`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`haruna sairenji`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -445,7 +455,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/498816/danmachi-or-hestia-pdxl?modelVersionId=554481`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Hestia`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -453,7 +463,9 @@ export const loraTable = {
   "hestia-danmachi": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/339164/hestia-danmachi`),
+    url: new URL(
+      `https://civitai.com/models/339164/hestia-danmachi`,
+    ).toString(),
     characterTriggerWordsTags: [`hestia`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -463,7 +475,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/494374/new-game-or-hifumi-takimoto-pdxl?modelVersionId=549625`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Hifumi Takimoto`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -471,7 +483,9 @@ export const loraTable = {
   "hifumi-takimoto-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
-    url: new URL(`https://civitai.com/models/354005/hifumi-takimoto-new-game`),
+    url: new URL(
+      `https://civitai.com/models/354005/hifumi-takimoto-new-game`,
+    ).toString(),
     characterTriggerWordsTags: [`hifumi takemoto`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -481,7 +495,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431756/pony-xl-hinata-kaho-blend-s?modelVersionId=481006`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`kaho-default`, `kaho-schooluniform`, `kaho-swim`],
     creator: `Ibukimakisiko`,
@@ -491,7 +505,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/269407/homura-akemi-mahou-shoujo-madokamagica`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`homura akemi`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -501,7 +515,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/298315/honoka-mitsui-mahouka-koukou-no-rettousei`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`honoka mitsui`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -511,7 +525,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/452613/honoka-mitsui-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503940`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`honoka mitsui`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -521,7 +535,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431505/pony-xl-hoshikawa-mafuyu-blend-s?modelVersionId=480728`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`mafuyu-default`, `mafuyu-casual`, `mafuyu-swim`],
     creator: `Ibukimakisiko`,
@@ -531,7 +545,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431040/houki-shinonono-infinite-stratos-is`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`houki shinonono`],
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
@@ -541,7 +555,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/78552/sdxlsd15-ichijou-hotaru-or-non-non-biyori`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`ichijou hotaru`],
     outfitTriggerTags: [],
     creator: `NoteKaga`,
@@ -551,7 +565,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/472636/pony-xl-illyasviel-von-einzbern-fatekaleid-liner-prisma-illya?modelVersionId=525776`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`illya`],
     outfitTriggerTags: [
       `ruby`,
@@ -567,7 +581,9 @@ export const loraTable = {
   "illyabeasts_Ponyv2": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
-    url: new URL(`https://civitai.com/models/309396?modelVersionId=347749`),
+    url: new URL(
+      `https://civitai.com/models/309396?modelVersionId=347749`,
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`zzillaaa`],
     creator: `am7coffeelove`,
@@ -575,7 +591,9 @@ export const loraTable = {
   "iroha-madomagi-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/271627/iroha-tamaki-magia-record`),
+    url: new URL(
+      `https://civitai.com/models/271627/iroha-tamaki-magia-record`,
+    ).toString(),
     characterTriggerWordsTags: [`iroha tamaki`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -585,7 +603,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/367371/isuzu-sento-amagi-brilliant-park`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`isuzu sento`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -595,7 +613,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/416294/izumi-noel-from-studio-apartment-good-lighting-angel-included`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`sayu ogiwara`],
     outfitTriggerTags: [],
     creator: `ZedoTasco`,
@@ -605,7 +623,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/484411/kaguya-sama-wa-kokurasetai-or-kaguya-shinomiya-pdxl?modelVersionId=538731`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Kaguya Shinomiya`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -615,7 +633,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/353048/kaguya-shinomiya-kaguya-sama-love-is-war?modelVersionId=394808`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`kaguya shinomiya`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -625,7 +643,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/494513/new-game-or-kou-yagami-pdxl?modelVersionId=549780`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Kou Yagami`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -635,7 +653,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/191382/krulcifer-einfolk-saijaku-muhai-no-bahamut`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -645,7 +663,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/269411/kyouko-sakura-mahou-shoujo-madokamagica`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`kyouko sakura`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -655,7 +673,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/342926/lala-satalin-deviluke-to-love-ru?modelVersionId=566823`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`lala deviluke`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -665,7 +683,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/258475/lala-satalin-deviluke-to-love-ru`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -675,7 +693,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/406483/laura-bodewig-infinite-stratos-is-commission`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
@@ -683,7 +701,9 @@ export const loraTable = {
   "lili-danmachi": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/342407/liliruca-arde-danmachi`),
+    url: new URL(
+      `https://civitai.com/models/342407/liliruca-arde-danmachi`,
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -693,7 +713,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/498803/danmachi-or-liliruca-arde-pdxl?modelVersionId=554466`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -703,7 +723,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431065/lingyin-huang-infinite-stratos-is`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`lingyin huang`],
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
@@ -713,7 +733,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/191377/lisesharte-atismata-saijaku-muhai-no-bahamut`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -723,7 +743,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/399727/mabel-rayveil-uncle-from-another-world?modelVersionId=445809`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`mabel rayveil`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -733,7 +753,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/269404/madoka-kaname-mahou-shoujo-madokamagica`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`madoka kaname`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -743,7 +763,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/463329/mahiru-shiina-otonari-no-tenshi-sama-ni-itsunomanika-dame-ningen-ni-sareteita-ken-xl-pony-lora?modelVersionId=515633`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`MahiruShiina`],
     outfitTriggerTags: [],
     creator: `jibunsagasinotabi`,
@@ -753,7 +773,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/269417/mami-tomoe-mahou-shoujo-madokamagica`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`mami tomoe`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -763,7 +783,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431075/maya-yamada-infinite-stratos-is`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`maya yamada`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -773,7 +793,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/298307/mayumi-saegusa-mahouka-koukou-no-rettousei`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`mayumi saegusa`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -783,7 +803,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/452537/mayumi-elfin-sniper-saegusa-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503861`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`mayumi saegusa`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -791,7 +811,9 @@ export const loraTable = {
   "mea-loveru": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/258474/mea-kurosaki-to-love-ru`),
+    url: new URL(
+      `https://civitai.com/models/258474/mea-kurosaki-to-love-ru`,
+    ).toString(),
     characterTriggerWordsTags: [`mea kurosaki`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -801,7 +823,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/502836/eromanga-sensei-or-megumi-jinno-pdxl?modelVersionId=558887`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Megumi Jinno`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -811,7 +833,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/354194/miko-iino-kaguya-sama-love-is-war?modelVersionId=396066`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`miko iino`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -821,7 +843,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/456435/pony-xl-minagi-hiyori-slow-loop?modelVersionId=508106`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`minagi hiyori`],
     outfitTriggerTags: [
       `hiyori-default`,
@@ -835,7 +857,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/458236/pony-xl-minagi-koharu-slow-loop?modelVersionId=510028`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`minagi koharu`],
     outfitTriggerTags: [
       `koharu-default`,
@@ -849,7 +871,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/309561/miyu-edelfeltbeast-style?modelVersionId=347442`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`zzmiuaa`],
     creator: `am7coffeelove`,
@@ -859,7 +881,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/254580/lora-sdxl-10-pony-sd-15-miyafuji-yoshika-cosplay-strike-witches?modelVersionId=579460`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`aimiyafuji`],
     outfitTriggerTags: [],
     creator: `Gwess`,
@@ -869,7 +891,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/298306/miyuki-shiba-mahouka-koukou-no-rettousei`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`miyuki shiba`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -879,7 +901,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/452592/miyuki-snow-queen-shiba-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503917`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`miyuki shiba`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -889,7 +911,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/452593/mizuki-shibata-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503918`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`mizuki shibata`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -899,7 +921,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/342887/momo-belia-deviluke-to-love-ru?modelVersionId=566787`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`momo deviluke`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -909,7 +931,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/258472/momo-belia-deviluke-to-love-ru`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`momo belia deviluke`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -917,7 +939,9 @@ export const loraTable = {
   "momodevilvXLPonyV1": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],
-    url: new URL(`https://civitai.com/models/360361/momo-velia-deviluke`),
+    url: new URL(
+      `https://civitai.com/models/360361/momo-velia-deviluke`,
+    ).toString(),
     characterTriggerWordsTags: [`momodevil`],
     outfitTriggerTags: [],
     creator: `Lancelot69lol`,
@@ -927,7 +951,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/422738/sylphiette-or-ponyxl-or-mushoku-tensei-isekai-ittara-honki-dasu?modelVersionId=471005`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Sylphiette`],
     outfitTriggerTags: [`SylphietteSchoolUniform`],
     creator: `LittleJelly`,
@@ -937,7 +961,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/353109/nana-asta-deviluke-to-love-ru?modelVersionId=566803`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`nana asta deviluke`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -947,7 +971,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/258477/nana-astar-deviluke-to-love-ru`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`nana astar deviluke`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -957,7 +981,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/401556/nana-asta-deviluke?modelVersionId=447746`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`nanadevil`],
     outfitTriggerTags: [],
     creator: `Lancelot69lol`,
@@ -967,7 +991,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/494552/new-game-or-nene-sakura-pdxl?modelVersionId=549820`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Nene Sakura`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -977,7 +1001,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/235178/nishikigi-chisato-lycoris-recoil`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`aachisato`],
     creator: `h_madoka`,
@@ -987,7 +1011,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/250377/cecilia-alcott-or-infinite-stratos`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `OG_Turles`,
@@ -997,7 +1021,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/513403/goblin-slayer-or-onna-shinkan-pdxl?modelVersionId=570572`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Onna Shinkan`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1007,7 +1031,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/191372/philuffy-aingram-saijaku-muhai-no-bahamut`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1015,7 +1039,9 @@ export const loraTable = {
   "Ram": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],
-    url: new URL(`https://civitai.com/models/80978?modelVersionId=548306`),
+    url: new URL(
+      `https://civitai.com/models/80978?modelVersionId=548306`,
+    ).toString(),
     characterTriggerWordsTags: [`Ram`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1023,7 +1049,7 @@ export const loraTable = {
   "ram-rezero-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/216920/ram-rezero`),
+    url: new URL(`https://civitai.com/models/216920/ram-rezero`).toString(),
     characterTriggerWordsTags: [`ram`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1033,7 +1059,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/354022/reisalin-ryza-stout-atelier-ryza-ever-darkness-and-the-secret-hideout-the-animation-ryza-no-atelier-tokoyami-no-joou-to-himitsu-no-kakurega`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`reisalin stout`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -1043,7 +1069,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/80978/rezero-characters-pack-or-sd-15-pdxl?modelVersionId=538783`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Rem`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1051,7 +1077,7 @@ export const loraTable = {
   "rem-rezero-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/216918/rem-rezero`),
+    url: new URL(`https://civitai.com/models/216918/rem-rezero`).toString(),
     characterTriggerWordsTags: [`rem`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1061,7 +1087,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/494498/new-game-or-rin-tooyama-pdxl?modelVersionId=549764`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Rin Tooyama`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1071,7 +1097,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/470001/rumia-tingel-or-pony-xl-or-rokudenashi-majutsu-koushi-to-akashic-records?modelVersionId=523075`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`RumiaTingel`],
     outfitTriggerTags: [`RumiaSchool`, `RumiaBikini`],
     creator: `LittleJelly`,
@@ -1081,7 +1107,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/498752/danmachi-or-ryuu-lion-pdxl?modelVersionId=554414`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Ryuu Lion`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1089,7 +1115,9 @@ export const loraTable = {
   "ryuu-danmachi": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/342406/ryuu-lion-danmachi`),
+    url: new URL(
+      `https://civitai.com/models/342406/ryuu-lion-danmachi`,
+    ).toString(),
     characterTriggerWordsTags: [`ryuu lion`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1099,7 +1127,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/502815/eromanga-sensei-or-sagiri-izumi-pdxl?modelVersionId=558869`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Sagiri Izumi`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1109,7 +1137,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/269414/sayaka-miki-mahou-shoujo-madokamagica`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`sayaka miki`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1119,7 +1147,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/398568/sayu-ogiwara-higehiro-after-being-rejected-i-shaved-and-took-in-a-high-school-runaway`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`sayu ogiwara`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -1129,7 +1157,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/453423/pony-sento-isuzu-amagi-brilliant-park`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`aaisuzu`],
     outfitTriggerTags: [],
     creator: `h_madoka`,
@@ -1139,7 +1167,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/364060/alpha-the-eminence-in-shadow-kage-no-jitsuryokusha-ni-naritakute-commission?modelVersionId=406796`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`alpha`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -1149,7 +1177,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/364066/beta-the-eminence-in-shadow-kage-no-jitsuryokusha-ni-naritakute-commission?modelVersionId=406805`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`beta`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -1159,7 +1187,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/452594/shizuku-kitayama-the-irregular-at-magic-high-school-mahouka-koukou-no-rettousei?modelVersionId=503919`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`shizuku kitayama`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -1169,7 +1197,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/298313/shizuku-kitayama-mahouka-koukou-no-rettousei`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`shizuku kitayama`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1179,7 +1207,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/19948/shokuhou-misaki-toaru-kagaku-no-railgun`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`hmmisaki`],
     outfitTriggerTags: [],
     creator: `h_madoka`,
@@ -1189,7 +1217,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/398579/sumika-fujimiya-uncle-from-another-world?modelVersionId=444492`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`sumika fujimiya`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -1197,7 +1225,9 @@ export const loraTable = {
   "suzukaze_aoba_newgame": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/227219/suzukaze-aoba-new-game`),
+    url: new URL(
+      `https://civitai.com/models/227219/suzukaze-aoba-new-game`,
+    ).toString(),
     characterTriggerWordsTags: [`suzukaze_aoba_newgame`],
     outfitTriggerTags: [],
     creator: `narugo1992`,
@@ -1205,7 +1235,9 @@ export const loraTable = {
   "takimoto_hifumi_newgame": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/227280/takimoto-hifumi-new-game`),
+    url: new URL(
+      `https://civitai.com/models/227280/takimoto-hifumi-new-game`,
+    ).toString(),
     characterTriggerWordsTags: [`takimoto_hifumi_newgame`],
     outfitTriggerTags: [],
     creator: `narugo1992`,
@@ -1215,7 +1247,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/342798/takina-inoue-lycoris-recoil`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
@@ -1225,7 +1257,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/342798/takina-inoue-lycoris-recoil?modelVersionId=566929`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`inoue takina`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -1235,7 +1267,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/226041/takina-inoue-lycoris-recoil`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`takina inoue`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1245,7 +1277,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/463900/pony-xl-taneshima-popura-working`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`popura-default`, `popura-schooluniform`],
     creator: `Ibukimakisiko`,
@@ -1255,7 +1287,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/431107/tatenashi-sarashiki-infinite-stratos-is`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`tatenashi sarashiki`],
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
@@ -1265,7 +1297,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/479322/pony-xl-tokishikko-dana-futoku-no-guild?modelVersionId=533059`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [`tokishikko-default`, `tokishikko-inner`],
     creator: `Ibukimakisiko`,
@@ -1275,7 +1307,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/391246/sui-tsundere-elf-suzail-gierger-zegalnelv-zegilrea-granzelga-elga-uncle-from-another-world?modelVersionId=436486`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`tsundere elf`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
@@ -1285,7 +1317,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/513343/goblin-slayer-or-ushikai-musume-pdxl?modelVersionId=570509`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Ushikai Musume`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1295,7 +1327,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/271624/yachiyo-nanami-magia-record`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`yachiyo nanami`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1305,7 +1337,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/258473/konjiki-no-yami-to-love-ru`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1315,7 +1347,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/487426/spy-x-family-or-yor-forger-pdxl?modelVersionId=542026`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Yor Forger`, `yor briar`, `Thorn Princess`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1325,7 +1357,7 @@ export const loraTable = {
     supportedBaseModels: [`SD1.5`],
     url: new URL(
       `https://civitai.com/models/191383/yoruka-kirihime-saijaku-muhai-no-bahamut`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`yoruka kirihime`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1335,7 +1367,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/462141/pony-xl-yoshinaga-koi-slow-loop?modelVersionId=514275`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`yoshinaga koi`],
     outfitTriggerTags: [`yoshinagakoi-casual`, `yoshinagakoi-schooluniform`],
     creator: `Ibukimakisiko`,
@@ -1345,7 +1377,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/513455/goblin-slayer-or-yousei-yunde-pdxl?modelVersionId=570622`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Yousei Yunde`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
@@ -1353,7 +1385,9 @@ export const loraTable = {
   "yui-loveru": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
-    url: new URL(`https://civitai.com/models/258476/yui-kotegawa-to-love-ru`),
+    url: new URL(
+      `https://civitai.com/models/258476/yui-kotegawa-to-love-ru`,
+    ).toString(),
     characterTriggerWordsTags: [`yui kotegawa`],
     outfitTriggerTags: [],
     creator: `eft`,
@@ -1363,7 +1397,7 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/494687/new-game-or-yun-iijima-pdxl?modelVersionId=549975`,
-    ),
+    ).toString(),
     characterTriggerWordsTags: [`Yun Iijima`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
