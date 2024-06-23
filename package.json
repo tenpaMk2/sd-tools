@@ -15,7 +15,13 @@
     "clean:sd-tag-defines": "npm run -w sd-tag-defines clean",
     "clean:sd-db-generator": "npm run -w sd-db-generator clean",
     "clean:sd-random-generator": "npm run -w sd-random-generator clean",
-    "clean": "run-p clean:sd-tag-defines clean:sd-db-generator clean:sd-random-generator"
+    "clean": "run-p clean:sd-tag-defines clean:sd-db-generator clean:sd-random-generator",
+    "build:sd-random-generator:sea:mac": "npm run -w sd-random-generator build:sea:mac",
+    "build:sd-random-generator:sea:win": "npm run -w sd-random-generator build:sea:win",
+    "build:sd-random-generator:sea:mac:package": "cpy 'sd-random-generator/dist-sea/inde?' 'dist-sea/' --rename=sd-random-generator && cpy 'sd-db-generator/outputs/*.yaml' 'dist-sea/db/'",
+    "build:sd-random-generator:sea:win:package": "cpy 'sd-random-generator/dist-sea/inde?.exe' 'dist-sea/' --rename=sd-random-generator && cpy 'sd-db-generator/outputs/*.yaml' 'dist-sea/db/'",
+    "build:sd-random-generator:sea:mac:all": "run-s 'build' 'build:sd-random-generator:sea:mac' 'build:sd-random-generator:sea:mac:package'",
+    "build:sd-random-generator:sea:win:all": "run-s 'build' 'build:sd-random-generator:sea:win' 'build:sd-random-generator:sea:win:package'"
   },
   "license": "MIT",
   "private": true,
