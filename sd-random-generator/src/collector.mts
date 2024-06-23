@@ -1,39 +1,34 @@
 import {
   BackgroundDefine,
-  backgroundTable,
-} from "./backgrounds/backgrounds.mjs";
-import {
+  BackgroundSetting,
   CharacterDefine,
   CharacterKey,
-  characterTable,
-} from "./characters/characters.mjs";
-import { isNullrishOrEmptyArray } from "./libs/utility.mjs";
-import { OutfitDefine, outfitTable } from "./outfits/outfits.mjs";
-import { PoseDefine, poseTable } from "./poses/poses.mjs";
-import {
-  BackgroundSetting,
   CharacterSetting,
   OptionSetting,
+  OutfitDefine,
   OutfitSetting,
+  PoseDefine,
   PoseSetting,
   Setting,
   Txt2ImgSetting,
-} from "./setting-define.mjs";
-import { backgroundsPreset } from "./setting-presets/background.mjs";
-import { charactersPreset } from "./setting-presets/character.mjs";
-import { outfitsPreset } from "./setting-presets/outfit.mjs";
-import { posesPreset } from "./setting-presets/pose.mjs";
+} from "@tenpamk2/sd-db-generator";
+import { Database } from "./db.mjs";
+import { isNullrishOrEmptyArray } from "./libs/utility.mjs";
 
 export type PoseCollectedData = Omit<PoseSetting, "probability"> & {
   probability: number;
   pose: PoseDefine;
 };
 
-const collectPose = ({ key, probability }: PoseSetting): PoseCollectedData => ({
-  key,
-  probability: probability ?? 1,
-  pose: poseTable[key],
-});
+const collectPose = ({ key, probability }: PoseSetting): PoseCollectedData => {
+  const poseTable = Database.singleton().poseTable;
+
+  return {
+    key,
+    probability: probability ?? 1,
+    pose: poseTable[key],
+  };
+};
 
 export type BackgroundCollectedData = Omit<
   BackgroundSetting,
@@ -49,6 +44,8 @@ const collectBackground = ({
   probability,
   poses,
 }: BackgroundSetting): BackgroundCollectedData => {
+  const backgroundTable = Database.singleton().backgroundTable;
+  const posesPreset = Database.singleton().posesPreset;
   const background = backgroundTable[key];
 
   const targetPoses = isNullrishOrEmptyArray(poses)
@@ -63,7 +60,7 @@ const collectBackground = ({
     );
 
   if (filteredPoses.length === 0) {
-    throw new Error(`Error: No valid poses for background ${key}`);
+    throw new Error(`Error: No valid poses for background \`${key}\` .`);
   }
 
   return {
@@ -88,6 +85,8 @@ const collectOutfit = ({
   probability,
   backgrounds,
 }: OutfitSetting): OutfitCollectedData => {
+  const outfitTable = Database.singleton().outfitTable;
+  const backgroundsPreset = Database.singleton().backgroundsPreset;
   const outfit = outfitTable[key];
 
   const targetBackgrounds = isNullrishOrEmptyArray(backgrounds)
@@ -117,6 +116,8 @@ const collectCharacter = ({
   probability,
   outfits,
 }: CharacterSetting): CharacterCollectedData => {
+  const characterTable = Database.singleton().characterTable;
+  const outfitsPreset = Database.singleton().outfitsPreset;
   const character = characterTable[key];
 
   const targetOutfits = isNullrishOrEmptyArray(outfits)
@@ -146,6 +147,8 @@ const collectTxt2imgData = ({
   txt2imgBodyJson,
   characters,
 }: Txt2ImgSetting): Txt2imgCollectedData => {
+  const charactersPreset = Database.singleton().charactersPreset;
+
   const targetCharacters = isNullrishOrEmptyArray(characters)
     ? charactersPreset.default
     : characters;

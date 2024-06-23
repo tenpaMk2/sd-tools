@@ -11,7 +11,7 @@ const allEyewearColorTags = [
   `red-framed eyewear`,
   `white-framed eyewear`,
   `yellow-framed eyewear`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 const allTintedEyewearColorTags = [
   `blue-tinted eyewear`,
@@ -21,7 +21,7 @@ const allTintedEyewearColorTags = [
   `purple-tinted eyewear`,
   `red-tinted eyewear`,
   `yellow-tinted eyewear`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 export const allGlassesTags = [
   ...allEyewearColorTags,

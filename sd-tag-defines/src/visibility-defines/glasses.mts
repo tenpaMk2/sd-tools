@@ -19,7 +19,7 @@ const preset = {
     wristAndHand: false,
     aroundBody: false,
   },
-} as const satisfies { [k: string]: Visibility };
+} as const satisfies Record<string, Visibility>;
 
 const allEyewearColorVisibilities = {
   "aqua-framed eyewear": preset.glasses,
@@ -34,7 +34,7 @@ const allEyewearColorVisibilities = {
   "red-framed eyewear": preset.glasses,
   "white-framed eyewear": preset.glasses,
   "yellow-framed eyewear": preset.glasses,
-} as const satisfies { [key in GlassesTag]?: Visibility };
+} as const satisfies Partial<Record<GlassesTag, Visibility>>;
 
 const allTintedEyewearColorVisibilities = {
   "blue-tinted eyewear": preset.glasses,
@@ -44,7 +44,7 @@ const allTintedEyewearColorVisibilities = {
   "purple-tinted eyewear": preset.glasses,
   "red-tinted eyewear": preset.glasses,
   "yellow-tinted eyewear": preset.glasses,
-} as const satisfies { [key in GlassesTag]?: Visibility };
+} as const satisfies Partial<Record<GlassesTag, Visibility>>;
 
 export const allGlassesVisibilities = {
   ...allEyewearColorVisibilities,
@@ -75,4 +75,4 @@ export const allGlassesVisibilities = {
   "teardrop-framed glasses": preset.glasses,
   "tinted eyewear": preset.glasses,
   "under-rim eyewear": preset.glasses,
-} as const satisfies { [key in GlassesTag]: Visibility };
+} as const satisfies Record<GlassesTag, Visibility>;

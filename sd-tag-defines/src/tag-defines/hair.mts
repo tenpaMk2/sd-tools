@@ -20,7 +20,7 @@ const allHairColorTags = [
   `streaked hair`,
   `two-tone hair`,
   `white hair`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 const allHairLengthTags = [
   `short hair`,
@@ -28,7 +28,7 @@ const allHairLengthTags = [
   `long hair`,
   `very long hair`,
   `absurdly long hair`,
-] as const satisfies readonly string[];
+] as const satisfies string[];
 
 export const allHairTags = [
   ...allHairColorTags,

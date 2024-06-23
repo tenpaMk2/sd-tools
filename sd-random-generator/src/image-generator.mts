@@ -1,6 +1,6 @@
+import { OptionSetting, Setting } from "@tenpamk2/sd-db-generator";
 import { OptionCollectedData, RootCollectedData } from "./collector.mjs";
 import { ProgressBar, log } from "./logger.mjs";
-import { OptionSetting, Setting } from "./setting-define.mjs";
 import { Txt2ImgBodyJson, Txt2imgGenerator } from "./txt2img-generator.mjs";
 
 class StatusPoller {

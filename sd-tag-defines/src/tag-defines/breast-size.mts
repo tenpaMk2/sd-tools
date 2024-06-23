@@ -13,4 +13,4 @@ export const BreastSizeOrder = {
   "medium breasts": 3,
   "large breasts": 4,
   "huge breasts": 5,
-} as const satisfies { [K in BreastSizeTag]: number };
+} as const satisfies Record<BreastSizeTag, number>;

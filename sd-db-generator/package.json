@@ -1,0 +1,52 @@
+{
+  "name": "@tenpamk2/sd-db-generator",
+  "version": "1.0.0",
+  "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
+  "description": "🗃️ Database generator for `@tenpamk2/sd-random-generator` 🗄️",
+  "exports": {
+    "node": "./dist/index.mjs",
+    "default": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist",
+    "readme-ja.md"
+  ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build:base": "npx swc src --out-dir dist --strip-leading-paths --out-file-extension mjs",
+    "build:source": "npm run build:base",
+    "build:type": "tsc",
+    "build": "run-p build:source build:type",
+    "watch:source": "npm run build:base -- --source-maps --watch",
+    "watch:type": "tsc --watch",
+    "watch": "run-p watch:source watch:type",
+    "clean": "rimraf dist",
+    "exe": "node dist/index-db.mjs",
+    "test": "vitest"
+  },
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "ai",
+    "ai-art",
+    "stable-diffusion"
+  ],
+  "dependencies": {
+    "@tenpamk2/sd-tag-defines": "^1.0.0"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.14",
+    "@swc/core": "^1.6.5",
+    "@types/node": "^20.12.7",
+    "chokidar": "^3.6.0",
+    "commander": "^12.0.0",
+    "npm-run-all": "^4.1.5",
+    "picocolors": "^1.0.1",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0",
+    "yaml": "^2.4.2"
+  }
+}

@@ -1,21 +1,42 @@
 {
-  "private": true,
   "name": "sd-tools",
-  "description": "🥝 Mono repo for Stable Diffusion tools 🍓",
   "author": "tenpaMk2 <wavyroom@gmail.com> (https://github.com/tenpaMk2)",
-  "license": "MIT",
+  "description": "🥝 Mono repo for Stable Diffusion tools 🍓",
   "scripts": {
-    "build": "npm run -w sd-tag-defines build && npm run -w sd-random-generator build",
+    "build": "npm run -w sd-tag-defines build && npm run -w sd-db-generator build && npm run -w sd-random-generator build",
     "watch:sd-tag-defines": "npm run -w sd-tag-defines watch",
+    "watch:sd-db-generator": "npm run -w sd-db-generator watch",
     "watch:sd-random-generator": "npm run -w sd-random-generator watch",
-    "watch": "run-p watch:sd-tag-defines watch:sd-random-generator",
-    "exe": "npm run -w sd-random-generator exe --"
+    "watch": "run-p watch:sd-tag-defines watch:sd-db-generator watch:sd-random-generator",
+    "exe:sd-db-generator": "npm run -w sd-db-generator exe --",
+    "exe:sd-random-generator": "npm run -w sd-random-generator exe --",
+    "copy-db": "cpy 'sd-db-generator/outputs/*.yaml' 'sd-random-generator/db/'",
+    "exe": "run-s 'exe:sd-db-generator -- --output outputs/' 'copy-db' 'exe:sd-random-generator -- --db-dir db/'",
+    "clean:sd-tag-defines": "npm run -w sd-tag-defines clean",
+    "clean:sd-db-generator": "npm run -w sd-db-generator clean",
+    "clean:sd-random-generator": "npm run -w sd-random-generator clean",
+    "clean": "run-p clean:sd-tag-defines clean:sd-db-generator clean:sd-random-generator",
+    "build:sd-random-generator:sea:mac": "npm run -w sd-random-generator build:sea:mac",
+    "build:sd-random-generator:sea:win": "npm run -w sd-random-generator build:sea:win",
+    "build:sd-random-generator:sea:mac:package": "cpy 'sd-random-generator/dist-sea/inde?' 'dist-sea/' --rename=sd-random-generator && cpy 'sd-db-generator/outputs/*.yaml' 'dist-sea/db/'",
+    "build:sd-random-generator:sea:win:package": "cpy 'sd-random-generator/dist-sea/inde?.exe' 'dist-sea/' --rename=sd-random-generator && cpy 'sd-db-generator/outputs/*.yaml' 'dist-sea/db/'",
+    "build:sd-random-generator:sea:mac:all": "run-s 'build' 'build:sd-random-generator:sea:mac' 'build:sd-random-generator:sea:mac:package'",
+    "build:sd-random-generator:sea:win:all": "run-s 'build' 'build:sd-random-generator:sea:win' 'build:sd-random-generator:sea:win:package'"
   },
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "ai",
+    "ai-art",
+    "stable-diffusion"
+  ],
   "workspaces": [
-    "sd-tag-defines",
-    "sd-random-generator"
+    "sd-db-generator",
+    "sd-random-generator",
+    "sd-tag-defines"
   ],
   "devDependencies": {
+    "cpy-cli": "^5.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5"
   }

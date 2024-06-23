@@ -133,5 +133,7 @@ dist
 .DS_Store
 .vscode
 dist/
+dist-db/
 dist-sea/
 outputs/
+/sd-random-generator/db/

@@ -36,7 +36,7 @@ const preset = {
     wristAndHand: false,
     aroundBody: false,
   },
-} as const satisfies { [k: string]: Visibility };
+} as const satisfies Record<string, Visibility>;
 
 const allHairColorVisibilities = {
   "aqua hair": preset.hair,
@@ -60,7 +60,7 @@ const allHairColorVisibilities = {
   "streaked hair": preset.hair,
   "two-tone hair": preset.hair,
   "white hair": preset.hair,
-} as const satisfies { [key in HairTag]?: Visibility };
+} as const satisfies Partial<Record<HairTag, Visibility>>;
 
 const allHairLengthVisibilities = {
   "short hair": preset.hair,
@@ -68,7 +68,7 @@ const allHairLengthVisibilities = {
   "long hair": preset.hair,
   "very long hair": preset.hair,
   "absurdly long hair": preset.hair,
-} as const satisfies { [key in HairTag]?: Visibility };
+} as const satisfies Partial<Record<HairTag, Visibility>>;
 
 export const allHairVisibilities = {
   ...allHairColorVisibilities,
@@ -172,6 +172,4 @@ export const allHairVisibilities = {
   "undercut": preset.hair,
   "wavy hair": preset.hair,
   "wide ponytail": preset.hair,
-} as const satisfies {
-  [key in HairTag]: Visibility;
-};
+} as const satisfies Record<HairTag, Visibility>;

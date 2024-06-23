@@ -2,15 +2,27 @@ import {
   BackgroundTag,
   BreastSizeOrder,
   BreastSizeTag,
+  CharacterFeatureTag,
   CharacterNameTag,
+  EmotionKey,
   EmotionTag,
+  EmotionType,
+  LoraCharacterTriggerWordsTag,
+  LoraOutfitTriggerWordsTag,
+  OutfitDefine,
+  OutfitTag,
+  PoseDefine,
+  PoseSpecialVisibility,
+  PoseTag,
+  PoseUnderboobLevelOrder,
   SeriesNameTag,
   SpecialTag,
-  VisibilityKeys,
+  Tag,
+  Txt2ImgSetting,
+  UnderboobLevelOrder,
+  VisibilityKey,
   allVisibilityKeys,
-  tagVisibilities,
-} from "@tenpamk2/sd-tag-defines";
-import { EmotionType } from "./characters/characters.mjs";
+} from "@tenpamk2/sd-db-generator";
 import {
   BackgroundCollectedData,
   CharacterCollectedData,
@@ -18,32 +30,14 @@ import {
   OutfitCollectedData,
   PoseCollectedData,
 } from "./collector.mjs";
-import { emotionProbabilitiesAtEmotionType } from "./emotions/emotion-probabilities-at-emotion-type.mjs";
-import { EmotionKey, emotionTable } from "./emotions/emotions.mjs";
+import { Database } from "./db.mjs";
 import { getKeys, pickRandomly } from "./libs/utility.mjs";
-import { OutfitDefine, UnderboobLevelOrder } from "./outfits/outfits.mjs";
-import {
-  PoseDefine,
-  PoseSpecialVisibility,
-  PoseUnderboobLevelOrder,
-} from "./poses/poses.mjs";
 import {
   LoraPicker,
   LoraString,
   PatternCollection,
   Token,
 } from "./prompt-define.mjs";
-import { Txt2ImgSetting } from "./setting-define.mjs";
-import {
-  CharacterFeatureTag,
-  OutfitTag,
-  PoseTag,
-  Tag,
-} from "./tag-defines/adapter.mjs";
-import {
-  LoraCharacterTriggerWordsTag,
-  LoraOutfitTriggerWordsTag,
-} from "./tag-defines/lora.mjs";
 
 const pickEmotionTokens = (
   emotionProbabilitiesAtPose: PoseDefine["emotionProbabilitiesAtPose"],
@@ -53,6 +47,11 @@ const pickEmotionTokens = (
     EmotionKey,
     { key: EmotionKey; probability: number }
   >();
+
+  const emotionProbabilitiesAtEmotionType =
+    Database.singleton().emotionProbabilitiesAtEmotionType;
+  const emotionTable = Database.singleton().emotionTable;
+
   for (const key of getKeys(emotionProbabilitiesAtPose)) {
     const probabilityOfPose = emotionProbabilitiesAtPose[key]!;
     const probabilityOfEmotionType =
@@ -90,12 +89,14 @@ const setHeavyWeightOne = <T extends Tag>(
 
 const extractVisible = <T extends CharacterFeatureTag | OutfitTag>(
   tokens: Token<T>[],
-  parts: VisibilityKeys[],
+  parts: VisibilityKey[],
 ) => {
+  const tagVisibilityTable = Database.singleton().tagVisibilityTable;
+
   const m = new Map<T, Token<T>>();
   for (const token of tokens) {
     for (const part of parts) {
-      if (!tagVisibilities[token.tag][part]) continue;
+      if (!tagVisibilityTable[token.tag][part]) continue;
       setHeavyWeightOne(m, token);
     }
   }
@@ -131,7 +132,7 @@ const createSpecialTokens = (
   if (
     outfit.hangingBreasts &&
     pose.hangingBreasts &&
-    BreastSizeOrder["medium breasts"] <= BreastSizeOrder[breastSize]
+    BreastSizeOrder[`large breasts`] <= BreastSizeOrder[breastSize]
   ) {
     push(`hanging breasts`);
   }

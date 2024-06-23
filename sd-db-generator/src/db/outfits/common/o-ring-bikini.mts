@@ -1,0 +1,48 @@
+import { OutfitDefine } from "../outfits.mjs";
+
+export const oRingBikini = () =>
+  ({
+    lora: null,
+    loraOutfitTriggerWordEntries: [],
+    outfitEntries: [
+      `bikini`,
+      [
+        { entries: [`aqua bikini`] },
+        { entries: [`black bikini`] },
+        { entries: [`blue bikini`] },
+        { entries: [`green bikini`] },
+        { entries: [`orange bikini`] },
+        { entries: [`pink bikini`] },
+        { entries: [`purple bikini`] },
+        { entries: [`red bikini`] },
+        { entries: [`white bikini`] },
+        { entries: [`yellow bikini`] },
+        { entries: [`gold bikini`] },
+        { entries: [`silver bikini`] },
+      ],
+      `o-ring bikini`,
+      `o-ring top`,
+      `o-ring bottom`,
+      `breasts skindentation -> skindentation`,
+      `collarbone`,
+      `shoulder blades`,
+      `navel`,
+      `bare arms`,
+      `bare legs`,
+      `barefoot`,
+    ],
+    specialVisibility: {
+      armpits: true,
+      hangingBreasts: true,
+      tautClothes: false,
+      cleavage: true,
+      sideboob: true,
+      backboob: true,
+      underboobLevel: `only from below`,
+      zettaiRyouiki: false,
+      insideOfThighs: true,
+    },
+    liftType: `none`,
+    upskirtEntries: [],
+    whenRemoveShoes: null,
+  }) as const satisfies OutfitDefine;
