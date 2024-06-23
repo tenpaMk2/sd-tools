@@ -1,5 +1,5 @@
-import { GlassesTag } from "../tag-defines/glasses.mjs";
-import { Visibility } from "../visibility.mjs";
+import type { GlassesTag } from "../tag-defines/glasses.mjs";
+import type { Visibility } from "../visibility.mjs";
 
 const preset = {
   glasses: {

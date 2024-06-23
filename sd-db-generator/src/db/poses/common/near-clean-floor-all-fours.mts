@@ -1,5 +1,5 @@
 import { emotionPreset } from "../emotion-preset.mjs";
-import { PoseDefine } from "../poses.mjs";
+import type { PoseDefine } from "../poses.mjs";
 
 type Variation = `from-below` | `from-horizontal`;
 

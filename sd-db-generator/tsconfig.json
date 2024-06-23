@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "target": "ESNext", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "noEmit": false, /* Do not emit output. */
     "emitDeclarationOnly": true, /* Only output d.ts files. */
     "declaration": true, /* Generates corresponding '.d.ts' file. */
     "outDir": "./dist", /* Specify an output folder for all emitted files. */
@@ -8,6 +10,9 @@
     "skipLibCheck": true, /* Skip type checking all .d.ts files. */
     "isolatedModules": true, /* Ensure that each file can be safely transpiled independently of other files. */
     "esModuleInterop": true, /* Enable compatibility with Babel and other transpilers that emit CommonJS. */
+    "verbatimModuleSyntax": true, /* Ensure that import statements are not removed during compilation. */
+    "module": "NodeNext", /* Specify what module code is generated. */
+    "moduleResolution": "NodeNext", /* Specify how TypeScript looks up a file from a given module specifier. */
   },
   "include": [
     "src"

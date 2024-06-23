@@ -1,9 +1,9 @@
-import { BodyFeatureTag } from "./tag-defines/body-feature.mjs";
-import { BodyOutfitTag } from "./tag-defines/body-outfit.mjs";
-import { FaceTag } from "./tag-defines/face.mjs";
-import { GlassesTag } from "./tag-defines/glasses.mjs";
-import { HairTag } from "./tag-defines/hair.mjs";
-import { HeadOutfitTag } from "./tag-defines/head-outfit.mjs";
+import type { BodyFeatureTag } from "./tag-defines/body-feature.mjs";
+import type { BodyOutfitTag } from "./tag-defines/body-outfit.mjs";
+import type { FaceTag } from "./tag-defines/face.mjs";
+import type { GlassesTag } from "./tag-defines/glasses.mjs";
+import type { HairTag } from "./tag-defines/hair.mjs";
+import type { HeadOutfitTag } from "./tag-defines/head-outfit.mjs";
 import { allBodyFeatureVisibilities } from "./visibility-defines/body-feature.mjs";
 import { allBodyOutfitVisibilities } from "./visibility-defines/body-outfit.mjs";
 import { allFaceVisibilities } from "./visibility-defines/face.mjs";

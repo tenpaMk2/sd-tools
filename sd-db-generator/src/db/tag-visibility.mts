@@ -1,4 +1,4 @@
-import { Visibility, tagVisibilities } from "@tenpamk2/sd-tag-defines";
+import { tagVisibilities, type Visibility } from "@tenpamk2/sd-tag-defines";
 
 export type TagVisibilityDefine = Visibility;
 export const tagVisibilityTable = tagVisibilities;

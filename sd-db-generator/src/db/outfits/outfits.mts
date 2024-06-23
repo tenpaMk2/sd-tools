@@ -1,6 +1,6 @@
-import { LoraEntry, TagEntry } from "../../entry.mjs";
-import { OutfitTag } from "../../index.mjs";
-import { LoraOutfitTriggerWordsTag } from "../lora.mjs";
+import type { LoraEntry, TagEntry } from "../../entry.mjs";
+import type { OutfitTag } from "../../index.mjs";
+import type { LoraOutfitTriggerWordsTag } from "../lora.mjs";
 import { amaburiRedUniformIsuzu } from "./amaburi/red-uniform-isuzu.mjs";
 import { blendSSchoolUniform } from "./blend-s/school-uniform.mjs";
 import { blendSSwimsuit } from "./blend-s/swimsuit.mjs";

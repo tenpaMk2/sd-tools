@@ -1,7 +1,10 @@
-import { OutfitKey } from "../../index.mjs";
+import type { OutfitKey } from "../../index.mjs";
 import { getKeys } from "../../libs/utility.mjs";
-import { BackgroundSetting } from "../../setting-define.mjs";
-import { BackgroundKey, backgroundTable } from "../backgrounds/backgrounds.mjs";
+import type { BackgroundSetting } from "../../setting-define.mjs";
+import {
+  backgroundTable,
+  type BackgroundKey,
+} from "../backgrounds/backgrounds.mjs";
 
 export type BackgroundsPresetKey = `default` | OutfitKey;
 

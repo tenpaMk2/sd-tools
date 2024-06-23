@@ -1,5 +1,5 @@
-import { HeadOutfitTag } from "../tag-defines/head-outfit.mjs";
-import { Visibility } from "../visibility.mjs";
+import type { HeadOutfitTag } from "../index.mjs";
+import type { Visibility } from "../visibility.mjs";
 
 const preset = {
   hair: {

@@ -1,4 +1,4 @@
-import { EmotionKey } from "../emotions/emotions.mjs";
+import type { EmotionKey } from "../emotions/emotions.mjs";
 
 export const emotionPreset = {
   "all-flat": {

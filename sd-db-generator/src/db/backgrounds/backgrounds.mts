@@ -1,5 +1,5 @@
-import { BackgroundTag } from "@tenpamk2/sd-tag-defines";
-import { TagEntry } from "../../entry.mjs";
+import type { BackgroundTag } from "@tenpamk2/sd-tag-defines";
+import type { TagEntry } from "../../entry.mjs";
 import { beach } from "./common/beach.mjs";
 import { bedSheet } from "./common/bed-sheet.mjs";
 import { bedroom } from "./common/bedroom.mjs";

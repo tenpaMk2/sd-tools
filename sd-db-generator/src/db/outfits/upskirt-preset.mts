@@ -1,5 +1,5 @@
-import { TagEntry } from "../../entry.mjs";
-import { OutfitTag } from "../../index.mjs";
+import type { TagEntry } from "../../entry.mjs";
+import type { OutfitTag } from "../../index.mjs";
 
 export const upskirtPreset = {
   colorfulPanties: [

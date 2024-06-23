@@ -1,5 +1,5 @@
-import { BodyFeatureTag } from "../tag-defines/body-feature.mjs";
-import { Visibility } from "../visibility.mjs";
+import type { BodyFeatureTag } from "../tag-defines/body-feature.mjs";
+import type { Visibility } from "../visibility.mjs";
 
 const all = {
   frontHead: true,

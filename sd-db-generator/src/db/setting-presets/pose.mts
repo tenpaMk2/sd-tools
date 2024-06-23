@@ -1,7 +1,7 @@
 import { getKeys } from "../../libs/utility.mjs";
-import { PoseSetting } from "../../setting-define.mjs";
-import { BackgroundKey } from "../backgrounds/backgrounds.mjs";
-import { PoseKey, commonPoseTable, poseTable } from "../poses/poses.mjs";
+import { type PoseSetting } from "../../setting-define.mjs";
+import { type BackgroundKey } from "../backgrounds/backgrounds.mjs";
+import { commonPoseTable, poseTable, type PoseKey } from "../poses/poses.mjs";
 
 export type PosesPresetKey = `default` | BackgroundKey;
 export type PosesPreset = Record<PosesPresetKey, PoseSetting[]>;

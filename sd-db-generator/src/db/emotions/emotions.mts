@@ -1,5 +1,5 @@
-import { EmotionTag } from "@tenpamk2/sd-tag-defines";
-import { TagEntry } from "../../entry.mjs";
+import type { EmotionTag } from "@tenpamk2/sd-tag-defines";
+import type { TagEntry } from "../../entry.mjs";
 
 export type EmotionDefine = {
   entries: TagEntry<EmotionTag>[];

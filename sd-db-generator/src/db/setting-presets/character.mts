@@ -1,6 +1,9 @@
 import { getKeys } from "../../libs/utility.mjs";
-import { CharacterSetting } from "../../setting-define.mjs";
-import { CharacterKey, characterTable } from "../characters/characters.mjs";
+import type { CharacterSetting } from "../../setting-define.mjs";
+import {
+  characterTable,
+  type CharacterKey,
+} from "../characters/characters.mjs";
 
 export type CharactersPresetKey = `default` | CharacterKey;
 

@@ -1,5 +1,5 @@
-import { CheckpointName } from "../checkpoint.mjs";
-import { VaeName } from "../vae.mjs";
+import type { CheckpointName } from "../checkpoint.mjs";
+import type { VaeName } from "../vae.mjs";
 
 export type CheckpointAndVaePresetDefine = {
   sd_model_checkpoint: CheckpointName;

@@ -1,5 +1,4 @@
-import { LoraName } from "./db/lora.mjs";
-import { Tag } from "./tag-defines/adapter.mjs";
+import type { LoraName, Tag } from "./index.mjs";
 
 export type LoraEntry = {
   loraName: LoraName;

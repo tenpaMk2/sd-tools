@@ -1,4 +1,4 @@
-import { BaseModel } from "./checkpoint.mjs";
+import type { BaseModel } from "./checkpoint.mjs";
 
 export type LoraDefine = Readonly<{
   /**

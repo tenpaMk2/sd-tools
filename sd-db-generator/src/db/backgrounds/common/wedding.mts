@@ -1,4 +1,4 @@
-import { BackgroundDefine, BackgroundType } from "../backgrounds.mjs";
+import type { BackgroundDefine, BackgroundType } from "../backgrounds.mjs";
 
 export const wedding = ({
   backgroundType,

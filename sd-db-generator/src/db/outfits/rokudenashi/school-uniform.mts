@@ -1,5 +1,5 @@
-import { OutfitTag } from "../../../index.mjs";
-import { OutfitDefine } from "../outfits.mjs";
+import type { OutfitTag } from "../../../index.mjs";
+import type { OutfitDefine } from "../outfits.mjs";
 import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `summer-little-jelly` | `winter-little-jelly`;

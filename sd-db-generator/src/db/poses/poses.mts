@@ -1,8 +1,11 @@
-import { Visibility } from "@tenpamk2/sd-tag-defines";
-import { PoseTag, TagEntry } from "../../index.mjs";
-import { BackgroundType, CameraAngle } from "../backgrounds/backgrounds.mjs";
-import { EmotionKey } from "../emotions/emotions.mjs";
-import { OutfitDefine } from "../outfits/outfits.mjs";
+import type { Visibility } from "@tenpamk2/sd-tag-defines";
+import type { PoseTag, TagEntry } from "../../index.mjs";
+import type {
+  BackgroundType,
+  CameraAngle,
+} from "../backgrounds/backgrounds.mjs";
+import type { EmotionKey } from "../emotions/emotions.mjs";
+import type { OutfitDefine } from "../outfits/outfits.mjs";
 import { nearCleanFloorAllFoursFromBehind } from "./common/near-clean-floor-all-fours-from-behind.mjs";
 import { nearCleanFloorAllFours } from "./common/near-clean-floor-all-fours.mjs";
 import { nearCleanFloorFromAboveLyingReachingTowardsViewer } from "./common/near-clean-floor-from-above-lying-reaching-towards-viewer.mjs";

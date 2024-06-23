@@ -1,6 +1,6 @@
-import { CameraAngle } from "../../backgrounds/backgrounds.mjs";
+import type { CameraAngle } from "../../backgrounds/backgrounds.mjs";
 import { emotionPreset } from "../emotion-preset.mjs";
-import { PoseDefine } from "../poses.mjs";
+import type { PoseDefine } from "../poses.mjs";
 
 type Variation = CameraAngle;
 

@@ -1,5 +1,5 @@
 import { emotionPreset } from "../emotion-preset.mjs";
-import { PoseDefine } from "../poses.mjs";
+import type { PoseDefine } from "../poses.mjs";
 
 export const nearCleanFloorFromAboveLyingReachingTowardsViewer = () =>
   ({

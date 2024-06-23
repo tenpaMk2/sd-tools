@@ -1,7 +1,10 @@
-import { OptionSetting, Setting } from "@tenpamk2/sd-db-generator";
-import { OptionCollectedData, RootCollectedData } from "./collector.mjs";
+import type { OptionSetting, Setting } from "@tenpamk2/sd-db-generator";
+import type { OptionCollectedData, RootCollectedData } from "./collector.mjs";
 import { ProgressBar, log } from "./logger.mjs";
-import { Txt2ImgBodyJson, Txt2imgGenerator } from "./txt2img-generator.mjs";
+import {
+  Txt2imgGenerator,
+  type Txt2ImgBodyJson,
+} from "./txt2img-generator.mjs";
 
 class StatusPoller {
   readonly progressBar: ProgressBar;

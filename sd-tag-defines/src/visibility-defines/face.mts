@@ -1,5 +1,5 @@
-import { FaceTag } from "../tag-defines/face.mjs";
-import { Visibility } from "../visibility.mjs";
+import type { FaceTag } from "../tag-defines/face.mjs";
+import type { Visibility } from "../visibility.mjs";
 
 const preset = {
   face: {

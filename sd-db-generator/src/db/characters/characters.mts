@@ -1,13 +1,13 @@
 export { BreastSizeOrder } from "@tenpamk2/sd-tag-defines";
-import {
+import type {
   BreastSizeTag,
   CharacterNameTag,
   SeriesNameTag,
 } from "@tenpamk2/sd-tag-defines";
-import { LoraEntry, TagEntry } from "../../entry.mjs";
-import { CharacterFeatureTag } from "../../tag-defines/adapter.mjs";
-import { EmotionType } from "../emotions/emotions.mjs";
-import { LoraCharacterTriggerWordsTag } from "../lora.mjs";
+import type { LoraEntry, TagEntry } from "../../entry.mjs";
+import type { CharacterFeatureTag } from "../../tag-defines/adapter.mjs";
+import type { EmotionType } from "../emotions/emotions.mjs";
+import type { LoraCharacterTriggerWordsTag } from "../lora.mjs";
 import { amaburiIsuzu } from "./amaburi/isuzu.mjs";
 import { atelierRyza } from "./atelier/ryza.mjs";
 import { blendSKaho } from "./blend-s/kaho.mjs";

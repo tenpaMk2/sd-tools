@@ -1,6 +1,6 @@
-import { CharacterKey, OutfitKey } from "../../index.mjs";
+import type { CharacterKey, OutfitKey } from "../../index.mjs";
 import { getKeys } from "../../libs/utility.mjs";
-import { OutfitSetting } from "../../setting-define.mjs";
+import type { OutfitSetting } from "../../setting-define.mjs";
 import { commonOutfitTable, outfitTable } from "../outfits/outfits.mjs";
 
 export type OutfitsPresetKey = `default` | CharacterKey;

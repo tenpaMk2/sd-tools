@@ -1,4 +1,4 @@
-import { EmotionKey, EmotionType } from "./emotions.mjs";
+import type { EmotionKey, EmotionType } from "./emotions.mjs";
 
 export type EmotionProbabilitiesAtEmotionType = Record<
   EmotionType,

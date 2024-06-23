@@ -1,14 +1,14 @@
-import { Setting, Txt2ImgSetting } from "../setting-define.mjs";
+import type { Setting, Txt2ImgSetting } from "../setting-define.mjs";
 import { checkpointAndVaePreset } from "./setting-presets/checkpoint-and-vae.mjs";
 import { imageResolutionPreset } from "./setting-presets/image-resolution.mjs";
 
 const portrait = {
   key: `portrait`,
   // fixedPrompt: `score_9, score_8_up, score_7_up, 1girl, solo,\n`,
-  fixedPrompt: `score_9, 1girl, solo,\n`,
+  fixedPrompt: `score_9, 1girl, solo, shiny skin, \n`,
   txt2imgBodyJson: {
     // negative_prompt: `cameltoe, empty eyes, realistic`,
-    negative_prompt: `cameltoe`,
+    negative_prompt: ``,
     sampler_name: `Euler a`,
     steps: 25,
     ...imageResolutionPreset["sdxl-portrait"],
@@ -22,10 +22,10 @@ const portrait = {
   characters: [
     ...(
       [
-        // "to-love-ru-haruna-nochekaiser",
-        // "to-love-ru-lala-nochekaiser",
-        // "to-love-ru-momo-nochekaiser",
-        // "to-love-ru-nana-nochekaiser",
+        "to-love-ru-haruna-nochekaiser",
+        "to-love-ru-lala-nochekaiser",
+        "to-love-ru-momo-nochekaiser",
+        "to-love-ru-nana-nochekaiser",
         // `strike-witches-yoshika-gwess`,
         // `strike-witches-yoshika-witch-gwess`,
         // `boufuri-sally-king-dong`,
@@ -86,6 +86,7 @@ const portrait = {
       key,
       outfits: (
         [
+          `micro-bikini`,
           // `race-queen`,
           // `sukumizu`,
           // `naked-towel`,
