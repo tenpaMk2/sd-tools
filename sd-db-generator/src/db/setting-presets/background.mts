@@ -32,10 +32,11 @@ const defaultPreset = [
 ] as const satisfies BackgroundSetting[];
 
 const ocean = [
-  ...defaultPreset,
-  { key: `ocean-standing`, probability: defaultPreset.length },
-  { key: `beach-standing`, probability: defaultPreset.length },
-  { key: `beach-near-clean-floor`, probability: defaultPreset.length },
+  { key: `bed-sheet-steaming-near-clean-floor` },
+  { key: `ocean-standing` },
+  { key: `beach-standing` },
+  { key: `beach-near-clean-floor` },
+  { key: `beach-sitting-on` },
 ] as const satisfies BackgroundSetting[];
 
 const casual = [
