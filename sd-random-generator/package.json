@@ -24,13 +24,14 @@
     "exe": "node dist/index.mjs",
     "test": "vitest",
     "clean:sea": "rimraf dist-sea",
+    "build:sea:bundle": "npx esbuild --bundle --platform=node --out-extension:.js=.cjs dist/index.mjs --outdir=dist-sea",
     "build:sea:config": "mkdirp dist-sea && node --experimental-sea-config sea-config.json",
     "build:sea:copy-node:mac": "cp $(command -v node) dist-sea/index && chmod a+w dist-sea/index",
     "build:sea:copy-node:win": "node -e \"require('fs').copyFileSync(process.execPath, 'dist-sea/index.exe')\"",
     "build:sea:postject:mac": "npx postject dist-sea/index NODE_SEA_BLOB dist-sea/sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2 --macho-segment-name NODE_SEA",
     "build:sea:postject:win": "npx postject dist-sea/index.exe NODE_SEA_BLOB dist-sea/sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
-    "build:sea:mac": "run-s clean:sea build:sea:config build:sea:copy-node:mac build:sea:postject:mac",
-    "build:sea:win": "run-s clean:sea build:sea:config build:sea:copy-node:win build:sea:postject:win"
+    "build:sea:mac": "run-s clean:sea build:sea:bundle build:sea:config build:sea:copy-node:mac build:sea:postject:mac",
+    "build:sea:win": "run-s clean:sea build:sea:bundle build:sea:config build:sea:copy-node:win build:sea:postject:win"
   },
   "license": "MIT",
   "private": true,
