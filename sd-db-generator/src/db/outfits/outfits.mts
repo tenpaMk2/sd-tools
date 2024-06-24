@@ -53,6 +53,7 @@ import { isekaiOjisanOutfitMabel } from "./isekai-ojisan/mabel.mjs";
 import { isekaiOjisanOutfitSui } from "./isekai-ojisan/sui.mjs";
 import { isekaiOjisanOutfitSumika } from "./isekai-ojisan/sumika.mjs";
 import { kagejitsuShadowGarden } from "./kagejitsu/shadow-garden.mjs";
+import { kaguyaSamaMaidHayasaka } from "./kaguya-sama/maid-hayasaka.mjs";
 import { kaguyaSamaShuuchiinAcademySchoolUniform } from "./kaguya-sama/shuuchiin-academy-school-uniform.mjs";
 import { konosubaOutfitMegumin } from "./konosuba/megumin-dress.mjs";
 import { konosubaOutfitYunyun } from "./konosuba/yunyun-shirt.mjs";
@@ -258,6 +259,8 @@ export const characterOutfitTable = {
     kagejitsuShadowGarden(`alpha-nochekaiser`),
   "kagejitsu-shadow-garden-beta-nochekaiser":
     kagejitsuShadowGarden(`beta-nochekaiser`),
+  "kaguya-sama-maid-hayasaka-nochekaiser":
+    kaguyaSamaMaidHayasaka(`nochekaiser`),
   "kaguya-sama-shuuchiin-academy-school-uniform-ai-no-lora":
     kaguyaSamaShuuchiinAcademySchoolUniform(`ai-no-lora`),
   "kaguya-sama-shuuchiin-academy-school-uniform-ai-nochekaiser":

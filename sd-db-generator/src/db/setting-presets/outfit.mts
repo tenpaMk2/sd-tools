@@ -267,6 +267,17 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "kaguya-sama-ai-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `kaguya-sama-maid-hayasaka-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `kaguya-sama-shuuchiin-academy-school-uniform-ai-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "kaguya-sama-chika-eternal2kpp": [
     ...defaultPreset,
     {
@@ -299,6 +310,13 @@ export const outfitsPreset: OutfitsPreset = {
     ...defaultPreset,
     {
       key: `kaguya-sama-shuuchiin-academy-school-uniform-miko-no-lora`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "kaguya-sama-miko-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `kaguya-sama-shuuchiin-academy-school-uniform-miko-nochekaiser`,
       probability: defaultPreset.length,
     },
   ],

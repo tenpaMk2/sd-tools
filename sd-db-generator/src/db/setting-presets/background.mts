@@ -373,6 +373,7 @@ export const backgroundsPreset = {
   "isekai-ojisan-outfit-sumika-nochekaiser": bedroom,
   "kagejitsu-shadow-garden-alpha-nochekaiser": nightCity,
   "kagejitsu-shadow-garden-beta-nochekaiser": nightCity,
+  "kaguya-sama-maid-hayasaka-nochekaiser": student, // TODO
   "kaguya-sama-shuuchiin-academy-school-uniform-ai-no-lora": student,
   "kaguya-sama-shuuchiin-academy-school-uniform-ai-nochekaiser": student,
   "kaguya-sama-shuuchiin-academy-school-uniform-chika-eternal2kpp": student,

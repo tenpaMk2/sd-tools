@@ -48,6 +48,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
   },
+  "ai-hayasaka-s3-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/353023/ai-hayasaka-kaguya-sama-love-is-war?modelVersionId=566862`,
+    ).toString(),
+    characterTriggerWordsTags: [`ai hayasaka`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
   "Ais_Wallenstein": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],
@@ -833,6 +843,16 @@ export const loraTable = {
     supportedBaseModels: [`Pony`],
     url: new URL(
       `https://civitai.com/models/354194/miko-iino-kaguya-sama-love-is-war?modelVersionId=396066`,
+    ).toString(),
+    characterTriggerWordsTags: [`miko iino`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
+  "miko-iino-s3-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/354194/miko-iino-kaguya-sama-love-is-war?modelVersionId=566884`,
     ).toString(),
     characterTriggerWordsTags: [`miko iino`],
     outfitTriggerTags: [],

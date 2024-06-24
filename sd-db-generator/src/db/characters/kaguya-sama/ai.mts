@@ -1,13 +1,18 @@
 import type { CharacterDefine } from "../characters.mjs";
 
-type Variation = `no-lora`;
+type Variation = `no-lora` | `nochekaiser`;
 
 const lora = {
   "no-lora": null,
+  "nochekaiser": {
+    loraName: `ai-hayasaka-s3-ponyxl-lora-nochekaiser`,
+    probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
+  },
 } as const satisfies Record<Variation, CharacterDefine[`lora`]>;
 
 const loraCharacterTriggerWordEntries = {
   "no-lora": [],
+  "nochekaiser": [`ai hayasaka`],
 } as const satisfies Record<
   Variation,
   CharacterDefine[`loraCharacterTriggerWordEntries`]
