@@ -92,20 +92,7 @@ const postTxt2img = async (
     batch_size: 1,
     send_images: false,
     save_images: true,
-    alwayson_scripts: {
-      // cutoff: {
-      //   args: [
-      //     true,
-      //     "red,pink,orange,yellow,green,blue,purple,black,white,brown,grey,blonde",
-      //     1.5,
-      //     false,
-      //     false,
-      //     "",
-      //     "Lerp",
-      //     true,
-      //   ],
-      // },
-    },
+    alwayson_scripts: {},
     ...txt2imgBodyJson,
   };
 
