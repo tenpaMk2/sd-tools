@@ -87,12 +87,23 @@ const postTxt2img = async (
   txt2imgBodyJson: Txt2ImgBodyJson,
   { ip, port }: Setting["machine"],
 ) => {
+  const samples_filename_pattern = [
+    `[model_name]`,
+    txt2imgBodyJson._key.character,
+    txt2imgBodyJson._key.outfit,
+    txt2imgBodyJson._key.background,
+    txt2imgBodyJson._key.pose,
+  ].join(`_`);
+
   const json = {
     seed: -1,
     batch_size: 1,
     send_images: false,
     save_images: true,
     alwayson_scripts: {},
+    override_settings: {
+      samples_filename_pattern,
+    },
     ...txt2imgBodyJson,
   };
 
