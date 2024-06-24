@@ -60,5 +60,5 @@ export const sittingOnSitting = (variation: Variation) =>
       aroundBody: true,
     },
     specialVisibility: specialVisibility[variation],
-    emotionProbabilitiesAtPose: emotionPreset["all-flat"],
+    emotionProbabilitiesAtPose: emotionPreset["default"],
   }) as const satisfies PoseDefine;

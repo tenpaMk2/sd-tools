@@ -5,7 +5,7 @@ import { imageResolutionPreset } from "./setting-presets/image-resolution.mjs";
 const portrait = {
   key: `portrait`,
   // fixedPrompt: `score_9, score_8_up, score_7_up, 1girl, solo,\n`,
-  fixedPrompt: `score_9, 1girl, solo, shiny skin, \n`,
+  fixedPrompt: `score_9, 1girl, solo, \n`,
   txt2imgBodyJson: {
     // negative_prompt: `cameltoe, empty eyes, realistic`,
     negative_prompt: ``,
@@ -14,7 +14,7 @@ const portrait = {
     ...imageResolutionPreset["sdxl-portrait"],
     cfg_scale: 5,
     denoising_strength: 0.2,
-    enable_hr: true,
+    enable_hr: false,
     hr_scale: 2,
     hr_upscaler: "4x-AnimeSharp",
     hr_second_pass_steps: 0,
@@ -22,10 +22,12 @@ const portrait = {
   characters: [
     ...(
       [
-        "to-love-ru-haruna-nochekaiser",
-        "to-love-ru-lala-nochekaiser",
-        "to-love-ru-momo-nochekaiser",
-        "to-love-ru-nana-nochekaiser",
+        `kaguya-sama-ai-nochekaiser`,
+        `kaguya-sama-miko-nochekaiser`,
+        // "to-love-ru-haruna-nochekaiser",
+        // "to-love-ru-lala-nochekaiser",
+        // "to-love-ru-momo-nochekaiser",
+        // "to-love-ru-nana-nochekaiser",
         // `strike-witches-yoshika-gwess`,
         // `strike-witches-yoshika-witch-gwess`,
         // `boufuri-sally-king-dong`,
@@ -86,7 +88,7 @@ const portrait = {
       key,
       outfits: (
         [
-          `micro-bikini`,
+          // `micro-bikini`,
           // `race-queen`,
           // `sukumizu`,
           // `naked-towel`,
@@ -142,9 +144,9 @@ export const defaultSetting = {
   optionSettings: [
     ...[
       // checkpointAndVAEPreset.sdxl.autismmixDPO,
-      // checkpointAndVaePreset.ebaraPony2,
+      checkpointAndVaePreset.ebaraPony2,
       // checkpointAndVaePreset.autismmixConfetti,
-      // checkpointAndVaePreset.tponynai,
+      checkpointAndVaePreset.tponynai,
       checkpointAndVaePreset.hassakuXlHentai,
       // checkpointAndVaePreset.pvcStyle,
     ].map((sdxl) => ({

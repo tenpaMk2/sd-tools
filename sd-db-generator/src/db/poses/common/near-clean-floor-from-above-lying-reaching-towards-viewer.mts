@@ -41,5 +41,5 @@ export const nearCleanFloorFromAboveLyingReachingTowardsViewer = () =>
       insideOfThighs: true,
       upskirt: false,
     },
-    emotionProbabilitiesAtPose: emotionPreset["all-flat"],
+    emotionProbabilitiesAtPose: emotionPreset["default"],
   }) as const satisfies PoseDefine;

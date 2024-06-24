@@ -84,5 +84,5 @@ export const standingPawPose = (variation: Variation) =>
     entries: entries[variation],
     visibility: visibility[variation],
     specialVisibility: specialVisibility[variation],
-    emotionProbabilitiesAtPose: emotionPreset["all-flat"],
+    emotionProbabilitiesAtPose: emotionPreset["default"],
   }) as const satisfies PoseDefine;
