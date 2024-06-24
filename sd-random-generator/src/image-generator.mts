@@ -69,8 +69,6 @@ const postOption = async (
 
   const json = {
     outdir_txt2img_samples: "outputs/",
-    do_not_show_images: true,
-    live_previews_enable: false,
     ...optionsBodyJson,
   };
 
@@ -103,6 +101,8 @@ const postTxt2img = async (
     alwayson_scripts: {},
     override_settings: {
       samples_filename_pattern,
+      do_not_show_images: true,
+      live_previews_enable: false,
     },
     ...txt2imgBodyJson,
   };
