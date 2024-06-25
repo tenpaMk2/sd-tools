@@ -55,7 +55,7 @@ export const sittingOnSitting = (variation: Variation) =>
       frontHipAndThigh: true,
       sideHipAndThigh: true,
       backHipAndThigh: false,
-      foot: true,
+      foot: false,
       wristAndHand: true,
       aroundBody: true,
     },
