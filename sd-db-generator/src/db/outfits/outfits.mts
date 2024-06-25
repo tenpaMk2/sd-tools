@@ -74,6 +74,8 @@ import { spyFamilyRedSweater } from "./spy-family/red-sweater.mjs";
 import { spyFamilyThornPrincess } from "./spy-family/thorn-princess.mjs";
 import { strikeWitchesOutfitYoshika } from "./strike-witches/outfit-yoshika.mjs";
 import { tenshiSamaBlazer } from "./tenshi-sama/blazer.mjs";
+import { tenshiTsukiOutfitTowa } from "./tenshi-tsuki/outfit-towa.mjs";
+import { tenshiTsukiSchoolUniform } from "./tenshi-tsuki/school-uniform.mjs";
 import { toLoveRuSchoolUniform } from "./to-love-ru/school-uniform.mjs";
 
 /**
@@ -326,6 +328,15 @@ export const characterOutfitTable = {
   "tenshi-sama-blazer-jibunsagasinotabi": tenshiSamaBlazer(
     `mahiru-jibunsagasinotabi`,
   ),
+  "tenshi-tsuki-outfit-towa-eternal2kpp": tenshiTsukiOutfitTowa(`eternal2kpp`),
+  "tenshi-tsuki-school-uniform-noel-duongve":
+    tenshiTsukiSchoolUniform(`noel-duongve`),
+  "tenshi-tsuki-school-uniform-noel-eternal2kpp":
+    tenshiTsukiSchoolUniform(`noel-eternal2kpp`),
+  "tenshi-tsuki-school-uniform-tsumugi-duongve":
+    tenshiTsukiSchoolUniform(`tsumugi-duongve`),
+  "tenshi-tsuki-school-uniform-tsumugi-eternal2kpp":
+    tenshiTsukiSchoolUniform(`tsumugi-eternal2kpp`),
   "to-love-ru-school-uniform-haruna-nochekaiser":
     toLoveRuSchoolUniform(`haruna-nochekaiser`),
   "to-love-ru-school-uniform-lala-nochekaiser":

@@ -1,44 +1,40 @@
 import type { CharacterDefine } from "../characters.mjs";
 
-type Variation = `duongve` | `eternal2kpp` | `zedotasco`;
+type Variation = `duongve` | `eternal2kpp`;
 
 const lora = {
   duongve: {
-    loraName: `Noel_Izumi`,
+    loraName: `Tsumugi_Tsutsumi-58`,
     probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
   },
   eternal2kpp: {
-    loraName: `Noeru_Izumi`,
-    probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
-  },
-  zedotasco: {
-    loraName: `Izumi Noel`,
-    probabilityAndWeights: [{ probability: 1, weight: 0.8 }],
+    loraName: `Tsumugi_Tsutsumi`,
+    probabilityAndWeights: [{ probability: 1, weight: 0.7 }],
   },
 } as const satisfies Record<Variation, CharacterDefine[`lora`]>;
 
 const loraCharacterTriggerWordEntries = {
-  duongve: [`noel izumi`],
-  eternal2kpp: [`Noeru Izumi`],
-  zedotasco: [],
+  duongve: [`tsumugi tsutsumi`],
+  eternal2kpp: [`Tsumugi Tsutsumi`],
 } as const satisfies Record<
   Variation,
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
 
-export const tenshiTsukiNoel = (variation: Variation) =>
+export const tenshiTsukiTsumugi = (variation: Variation) =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [`one room hiatari futsuu tenshi-tsuki`],
-    characterNameEntries: [`izumi noel`],
+    characterNameEntries: [`tsutsumi tsumugi`],
     characterFeatureEntries: [
-      `green eyes`,
-      `blonde hair`,
-      `long hair`,
-      `straight hair`,
-      `sidelocks`,
-      `blunt bangs`,
+      `brown eyes`,
+      `brown hair`,
+      `short hair`,
+      `bob cut`,
+      `swept bangs`,
+      `hair bow`,
+      `black hair bow -> black bow`,
     ],
     breastSize: `medium breasts`,
     fang: false,

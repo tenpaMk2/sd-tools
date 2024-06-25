@@ -549,9 +549,44 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "tenshi-tsuki-noel-duongve": [
+    ...defaultPreset,
+    {
+      key: `tenshi-tsuki-school-uniform-noel-duongve`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "tenshi-tsuki-noel-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `tenshi-tsuki-school-uniform-noel-eternal2kpp`,
+      probability: defaultPreset.length,
+    },
+  ],
   "tenshi-tsuki-noel-zedotasco": [
     ...defaultPreset,
     // TODO: other outfits
+  ],
+  "tenshi-tsuki-towa-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `tenshi-tsuki-outfit-towa-eternal2kpp`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "tenshi-tsuki-tsumugi-duongve": [
+    ...defaultPreset,
+    {
+      key: `tenshi-tsuki-school-uniform-tsumugi-duongve`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "tenshi-tsuki-tsumugi-eternal2kpp": [
+    ...defaultPreset,
+    {
+      key: `tenshi-tsuki-school-uniform-tsumugi-eternal2kpp`,
+      probability: defaultPreset.length,
+    },
   ],
   "to-love-ru-haruna-nochekaiser": [
     ...defaultPreset,

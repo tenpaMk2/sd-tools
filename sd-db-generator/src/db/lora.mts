@@ -510,6 +510,16 @@ export const loraTable = {
     outfitTriggerTags: [`kaho-default`, `kaho-schooluniform`, `kaho-swim`],
     creator: `Ibukimakisiko`,
   },
+  "Hisui_Tsurumi": {
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/523291/one-room-hiatari-futsuu-tenshi-tsuki-or-hisui-tsurumi-pdxl`,
+    ).toString(),
+    characterTriggerWordsTags: [`Hisui Tsurumi`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
   "homura-madomagi-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -725,6 +735,26 @@ export const loraTable = {
       `https://civitai.com/models/498803/danmachi-or-liliruca-arde-pdxl?modelVersionId=554466`,
     ).toString(),
     characterTriggerWordsTags: [],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  "Lilishka-54": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/463583?modelVersionId=574349`,
+    ).toString(),
+    characterTriggerWordsTags: [`lilishka`],
+    outfitTriggerTags: [],
+    creator: `duongve13112002`,
+  },
+  "Lilishka": {
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/523332/one-room-hiatari-futsuu-tenshi-tsuki-or-lilishka-pdxl`,
+    ).toString(),
+    characterTriggerWordsTags: [`Lilishka`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
   },
@@ -1026,6 +1056,26 @@ export const loraTable = {
     outfitTriggerTags: [`aachisato`],
     creator: `h_madoka`,
   },
+  "Noel_Izumi": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/425633?modelVersionId=563616`,
+    ).toString(),
+    characterTriggerWordsTags: [`noel izumi`],
+    outfitTriggerTags: [],
+    creator: `duongve13112002`,
+  },
+  "Noeru_Izumi": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/523273/one-room-hiatari-futsuu-tenshi-tsuki-or-noeru-izumi-pdxl`,
+    ).toString(),
+    characterTriggerWordsTags: [`Noeru Izumi`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
   "OGT_Cecilia_Alcott-v1": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -1312,6 +1362,16 @@ export const loraTable = {
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
   },
+  "Towa-15": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/410608?modelVersionId=563752`,
+    ).toString(),
+    characterTriggerWordsTags: [`towa`],
+    outfitTriggerTags: [],
+    creator: `duongve13112002`,
+  },
   "tokishikko dana_PONY_epoch-000020": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
@@ -1322,6 +1382,36 @@ export const loraTable = {
     outfitTriggerTags: [`tokishikko-default`, `tokishikko-inner`],
     creator: `Ibukimakisiko`,
   },
+  "Towa": {
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/523400/one-room-hiatari-futsuu-tenshi-tsuki-or-towa-pdxl`,
+    ).toString(),
+    characterTriggerWordsTags: [`Towa`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
+  "Tsumugi_Tsutsumi-58": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/434957?modelVersionId=578297`,
+    ).toString(),
+    characterTriggerWordsTags: [`tsumugi tsutsumi`],
+    outfitTriggerTags: [],
+    creator: `duongve13112002`,
+  },
+  "Tsumugi_Tsutsumi": {
+    recommendedWeight: 0.7,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/523560/one-room-hiatari-futsuu-tenshi-tsuki-or-tsumugi-tsutsumi-pdxl`,
+    ).toString(),
+    characterTriggerWordsTags: [`Tsumugi Tsutsumi`],
+    outfitTriggerTags: [],
+    creator: `Eternal2kPP`,
+  },
   "tsundere-elf-s1-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
@@ -1331,6 +1421,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`tsundere elf`],
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
+  },
+  "Tsurumi_Hisui": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/480089?modelVersionId=574564`,
+    ).toString(),
+    characterTriggerWordsTags: [`tsurumi hisui`],
+    outfitTriggerTags: [],
+    creator: `duongve13112002`,
   },
   "Ushikai_Musume": {
     recommendedWeight: 0.7,

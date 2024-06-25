@@ -47,12 +47,12 @@ const casual = [
 ] as const satisfies BackgroundSetting[];
 
 const student = [
-  ...defaultPreset,
-  { key: `city-sitting-on`, probability: defaultPreset.length },
-  { key: `city-standing`, probability: defaultPreset.length },
-  { key: `cafe-standing`, probability: defaultPreset.length },
-  { key: `karaoke-box-sitting-on`, probability: defaultPreset.length / 3 },
-  { key: `karaoke-box-standing`, probability: defaultPreset.length / 3 },
+  { key: `bed-sheet-steaming-near-clean-floor`, probability: 2 },
+  { key: `city-sitting-on`, probability: 0.5 },
+  { key: `city-standing` },
+  { key: `cafe-standing` },
+  { key: `karaoke-box-sitting-on`, probability: 0.2 },
+  { key: `karaoke-box-standing`, probability: 0.2 },
 ] as const satisfies BackgroundSetting[];
 
 const officeLady = [
@@ -101,15 +101,13 @@ const classroom = [
 const bedroom = [
   {
     key: `bedroom-near-clean-floor`,
-    probability: defaultPreset.length,
   },
   {
     key: `bedroom-sitting-on`,
-    probability: defaultPreset.length,
+    probability: 0.3,
   },
   {
     key: `bedroom-standing`,
-    probability: defaultPreset.length,
   },
 ] as const satisfies BackgroundSetting[];
 
@@ -420,6 +418,11 @@ export const backgroundsPreset = {
   "spy-family-thorn-princess-eternal2kpp": nightCity,
   "strike-witches-outfit-yoshika-gwess": blueSky,
   "tenshi-sama-blazer-jibunsagasinotabi": student,
+  "tenshi-tsuki-outfit-towa-eternal2kpp": bedroom,
+  "tenshi-tsuki-school-uniform-noel-duongve": student,
+  "tenshi-tsuki-school-uniform-noel-eternal2kpp": student,
+  "tenshi-tsuki-school-uniform-tsumugi-duongve": student,
+  "tenshi-tsuki-school-uniform-tsumugi-eternal2kpp": student,
   "to-love-ru-school-uniform-haruna-nochekaiser": student,
   "to-love-ru-school-uniform-lala-nochekaiser": student,
   "to-love-ru-school-uniform-momo-lancelot": student,

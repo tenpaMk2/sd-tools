@@ -39,7 +39,7 @@ export const allSeriesNameTags = [
   `mushoku tensei`,
   `new game!`,
   `non non biyori`,
-  `one room hiatari futsuu tenshi`,
+  `one room hiatari futsuu tenshi-tsuki`,
   `otonari no tenshi-sama ni itsu no mani ka dame ningen ni sarete ita ken`,
   `phantasy star online 2`,
   `rakudai kishi no cavalry`,

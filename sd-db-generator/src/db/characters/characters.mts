@@ -82,6 +82,8 @@ import { spyFamilyYor } from "./spy-family/yor.mjs";
 import { strikeWitchesYoshika } from "./strike-witches/yoshika.mjs";
 import { tenshiSamaMahiru } from "./tenshi-sama/mahiru.mjs";
 import { tenshiTsukiNoel } from "./tenshi-tsuki/noel.mjs";
+import { tenshiTsukiTowa } from "./tenshi-tsuki/towa.mjs";
+import { tenshiTsukiTsumugi } from "./tenshi-tsuki/tsumugi.mjs";
 import { toLoveRuHaruna } from "./to-love-ru/haruna.mjs";
 import { toLoveRuLala } from "./to-love-ru/lala.mjs";
 import { toLoveRuMomo } from "./to-love-ru/momo.mjs";
@@ -226,7 +228,12 @@ export const characterTable = {
   "strike-witches-yoshika-gwess": strikeWitchesYoshika(`gwess`),
   "strike-witches-yoshika-witch-gwess": strikeWitchesYoshika(`witch-gwess`),
   "tenshi-sama-mahiru-jibunsagasinotabi": tenshiSamaMahiru(`jibunsagasinotabi`),
+  "tenshi-tsuki-noel-duongve": tenshiTsukiNoel(`duongve`),
+  "tenshi-tsuki-noel-eternal2kpp": tenshiTsukiNoel(`eternal2kpp`),
   "tenshi-tsuki-noel-zedotasco": tenshiTsukiNoel(`zedotasco`),
+  "tenshi-tsuki-towa-eternal2kpp": tenshiTsukiTowa(`eternal2kpp`),
+  "tenshi-tsuki-tsumugi-duongve": tenshiTsukiTsumugi(`duongve`),
+  "tenshi-tsuki-tsumugi-eternal2kpp": tenshiTsukiTsumugi(`eternal2kpp`),
   "to-love-ru-haruna-nochekaiser": toLoveRuHaruna(`nochekaiser`),
   "to-love-ru-lala-nochekaiser": toLoveRuLala(`nochekaiser`),
   "to-love-ru-momo-lancelot": toLoveRuMomo(`lancelot`),

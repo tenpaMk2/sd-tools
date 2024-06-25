@@ -196,6 +196,10 @@ const preset = {
     ...invisible,
     frontHead: true,
   },
+  "wings": {
+    ...invisible,
+    aroundBody: true,
+  },
 } as const satisfies Record<string, Visibility>;
 
 const allArmbandColorVisibilities = {
@@ -881,9 +885,12 @@ export const allBodyOutfitVisibilities = {
   ...allThighhighsColorVisibilities,
   ...allVestColorVisibilities,
   "aiguillette": preset.bowtie,
+  "angel wings": preset.wings,
+  "angel": preset.all,
   "animal collar": preset.collar,
   "animal hands": preset["wrist cuffs"],
   "ankle boots": preset.foot,
+  "ankle lace-up": preset.foot,
   "apron": preset.dress,
   "aran sweater": preset.shirt,
   "argyle bikini": preset.dress,
@@ -988,6 +995,7 @@ export const allBodyOutfitVisibilities = {
   "formal": preset.all,
   "frilled apron": preset.dress,
   "frilled bikini": preset.dress,
+  "frilled dress": preset.dress,
   "frilled skirt": preset.skirt,
   "frilled sleeves": preset.shoulder, // `wrist cuffs` ?
   "frills": preset.all,
@@ -1024,7 +1032,6 @@ export const allBodyOutfitVisibilities = {
   "knee boots": preset.foot,
   "knee pads": preset.thighs,
   "lab coat": preset.dress,
-
   "lace panties": preset.panties,
   "lace-trimmed bra": preset.bra,
   "lace-up boots": preset.foot,
@@ -1120,12 +1127,14 @@ export const allBodyOutfitVisibilities = {
   "red sports bra": preset.bra,
   "rei no himo": preset.bra,
   "revealing clothes": preset.all,
+  "ribbed dress": preset.dress,
   "ribbed sleeves": preset.shoulder,
   "ribbed sweater": preset.shirt,
   "ribbon choker": preset.collar,
   "robe": preset.dress,
   "sailor collar": preset.collar,
   "sainan high school uniform": preset.dress,
+  "sandals": preset.foot,
   "santa bikini": preset.dress,
   "santa costume": preset.all,
   "sarong": preset.skirt,
@@ -1142,6 +1151,7 @@ export const allBodyOutfitVisibilities = {
   "short sleeves": preset.shoulder,
   "shorts": preset.skirt,
   "shoulder blades": preset["shoulder blades"],
+  "showgirl skirt": preset.skirt,
   "shuuchiin academy school uniform": preset.dress,
   "side slit": preset["side hip"],
   "side-tie bikini bottom": preset["side hip"],
