@@ -108,6 +108,7 @@ export const allCharacterNameTags = [
   `sakura kyoko`,
   `sakura kyouko`,
   `sakura nene`,
+  `sakuranomiya maika`,
   `salama \\(amaburi\\)`,
   `sally \\(bofuri\\)`,
   `sanjouno haruhime`,

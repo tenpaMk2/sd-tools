@@ -68,6 +68,13 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "blend-s-maika-shadowxart": [
+    ...defaultPreset,
+    {
+      key: `blend-s-waitress-maika-shadowxart`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "boufuri-sally-king-dong": [
     ...defaultPreset,
     {

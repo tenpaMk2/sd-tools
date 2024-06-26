@@ -337,6 +337,7 @@ export const backgroundsPreset = {
   "blend-s-school-uniform-kaho-ibukimakisiko": student,
   "blend-s-swimsuit-kaho-ibukimakisiko": ocean,
   "blend-s-waitress-kaho-ibukimakisiko": cafe,
+  "blend-s-waitress-maika-shadowxart": cafe,
   "blend-s-waitress-mafuyu-ibukimakisiko": cafe,
   "boufuri-outfit-sally-king-dong": isekai,
   "danmachi-white-dress-hestia-eternal2kpp": defaultPreset,

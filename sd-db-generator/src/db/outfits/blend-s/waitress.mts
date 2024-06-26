@@ -1,10 +1,14 @@
 import type { OutfitDefine } from "../outfits.mjs";
 import { upskirtPreset } from "../upskirt-preset.mjs";
 
-type Variation = `kaho-ibukimakisiko` | `mafuyu-ibukimakisiko`;
+type Variation =
+  | `kaho-ibukimakisiko`
+  | `maika-shadowxart`
+  | `mafuyu-ibukimakisiko`;
 
 const loraOutfitTriggerWordEntries = {
   "kaho-ibukimakisiko": [`kaho-default`],
+  "maika-shadowxart": [],
   "mafuyu-ibukimakisiko": [`mafuyu-default`],
 } as const satisfies Record<
   Variation,
@@ -14,10 +18,12 @@ const loraOutfitTriggerWordEntries = {
 const outfitEntries = {
   shirtColor: {
     "kaho-ibukimakisiko": [`blue shirt`],
+    "maika-shadowxart": [`pink shirt`],
     "mafuyu-ibukimakisiko": [`yellow shirt`],
   },
   skirtColor: {
     "kaho-ibukimakisiko": [`blue skirt`],
+    "maika-shadowxart": [`pink skirt`],
     "mafuyu-ibukimakisiko": [`yellow skirt`],
   },
 } as const satisfies Record<

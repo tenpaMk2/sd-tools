@@ -798,6 +798,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "Maika_Sakuranomiya_Pony": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/537904/maika-sakuranomiya-blend-s-pony`,
+    ).toString(),
+    characterTriggerWordsTags: [`Sakuranomiya_Maika`],
+    outfitTriggerTags: [],
+    creator: `ShadowxArt`,
+  },
   "MahiruShiinaXLpony001": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],

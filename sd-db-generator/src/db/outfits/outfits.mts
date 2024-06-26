@@ -215,6 +215,7 @@ export const characterOutfitTable = {
     blendSSchoolUniform(`kaho-ibukimakisiko`),
   "blend-s-swimsuit-kaho-ibukimakisiko": blendSSwimsuit(`kaho-ibukimakisiko`),
   "blend-s-waitress-kaho-ibukimakisiko": blendSWaitress(`kaho-ibukimakisiko`),
+  "blend-s-waitress-maika-shadowxart": blendSWaitress(`maika-shadowxart`),
   "blend-s-waitress-mafuyu-ibukimakisiko":
     blendSWaitress(`mafuyu-ibukimakisiko`),
   "boufuri-outfit-sally-king-dong": boufuriOutfitSally(`king-dong`),
