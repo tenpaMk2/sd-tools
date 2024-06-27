@@ -716,6 +716,22 @@ const allSocksColorVisibilities = {
   "yellow socks": preset.foot,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allSportsBraColorVisibilities = {
+  "aqua sports bra": preset.bra,
+  "beige sports bra": preset.bra,
+  "black sports bra": preset.bra,
+  "blue sports bra": preset.bra,
+  "brown sports bra": preset.bra,
+  "green sports bra": preset.bra,
+  "grey sports bra": preset.bra,
+  "orange sports bra": preset.bra,
+  "pink sports bra": preset.bra,
+  "purple sports bra": preset.bra,
+  "red sports bra": preset.bra,
+  "white sports bra": preset.bra,
+  "yellow sports bra": preset.bra,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allSweaterColorVisibilities = {
   "aqua sweater": preset.shirt,
   "beige sweater": preset.shirt,
@@ -895,6 +911,7 @@ export const allBodyOutfitVisibilities = {
   ...allSkirtColorVisibilities,
   ...allSleevesColorVisibilities,
   ...allSocksColorVisibilities,
+  ...allSportsBraColorVisibilities,
   ...allSweaterColorVisibilities,
   ...allSweaterVestColorVisibilities,
   ...allTankTopColorVisibilities,
@@ -934,7 +951,6 @@ export const allBodyOutfitVisibilities = {
   "bikini": preset.dress,
   "black footwear": preset.foot,
   "blazer": preset.shirt,
-  "blue sports bra": preset.bra,
   "bodystocking": preset.all,
   "bodysuit": preset.all,
   "boots": preset.foot,
@@ -1107,7 +1123,6 @@ export const allBodyOutfitVisibilities = {
   "open jacket": preset.shirt, // Visible from back. Assume when all fours.
   "open shirt": preset.shirt,
   "open-chest sweater": preset.shirt,
-  "orange sports bra": preset.bra, // TODO: Separate colors.
   "overalls": preset.dress,
   "panties under pantyhose": preset.panties,
   "panties": preset.panties,
@@ -1141,7 +1156,6 @@ export const allBodyOutfitVisibilities = {
   "pumps": preset.foot,
   "rabbit tail": preset.shortTail,
   "race queen": preset.all,
-  "red sports bra": preset.bra,
   "rei no himo": preset.bra,
   "revealing clothes": preset.all,
   "ribbed dress": preset.dress,
@@ -1224,9 +1238,7 @@ export const allBodyOutfitVisibilities = {
   "waitress": preset.all,
   "wedding dress": preset.dress,
   "white cloak": preset.dress,
-  "white sports bra": preset.bra,
   "white towel": preset.dress,
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],
-  "yellow sports bra": preset.bra,
 } as const satisfies Record<BodyOutfitTag, Visibility>;

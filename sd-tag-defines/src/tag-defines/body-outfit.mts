@@ -512,6 +512,22 @@ const allSocksColorTags = [
   `yellow socks`,
 ] as const satisfies string[];
 
+const allSportsBraColorTags = [
+  `aqua sports bra`,
+  `beige sports bra`,
+  `black sports bra`,
+  `blue sports bra`,
+  `brown sports bra`,
+  `green sports bra`,
+  `grey sports bra`,
+  `orange sports bra`,
+  `pink sports bra`,
+  `purple sports bra`,
+  `red sports bra`,
+  `white sports bra`,
+  `yellow sports bra`,
+] as const satisfies string[];
+
 const allSweaterColorTags = [
   `aqua sweater`,
   `beige sweater`,
@@ -690,6 +706,7 @@ export const allBodyOutfitTags = [
   ...allSkirtColorTags,
   ...allSleevesColorTags,
   ...allSocksColorTags,
+  ...allSportsBraColorTags,
   ...allSweaterColorTags,
   ...allSweaterVestColorTags,
   ...allTankTopColorTags,
@@ -729,7 +746,6 @@ export const allBodyOutfitTags = [
   `bikini top only`,
   `bikini`,
   `blazer`,
-  `blue sports bra`,
   `bodystocking`,
   `bodysuit`,
   `boots`,
@@ -902,7 +918,6 @@ export const allBodyOutfitTags = [
   `open jacket`,
   `open shirt`,
   `open-chest sweater`,
-  `orange sports bra`,
   `overalls`,
   `panties under pantyhose`,
   `panties`,
@@ -936,7 +951,6 @@ export const allBodyOutfitTags = [
   `pumps`,
   `rabbit tail`,
   `race queen`,
-  `red sports bra`,
   `rei no himo`,
   `revealing clothes`,
   `ribbed dress`,
@@ -1019,10 +1033,8 @@ export const allBodyOutfitTags = [
   `waitress`,
   `wedding dress`,
   `white cloak`,
-  `white sports bra`,
   `white towel`,
   `wide sleeves`,
   `wrist cuffs`,
-  `yellow sports bra`, // TODO
 ] as const satisfies readonly string[];
 export type BodyOutfitTag = (typeof allBodyOutfitTags)[number];
