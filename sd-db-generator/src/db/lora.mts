@@ -98,6 +98,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
   },
+  "alpha-pdxl-nvwls-v1": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/534465/alpha-the-eminence-in-shadow-sdxl-lora-pony-diffusion?modelVersionId=594073`,
+    ).toString(),
+    characterTriggerWordsTags: [`alpha`],
+    outfitTriggerTags: [],
+    creator: `novowels`,
+  },
   "AmagiBrilliantPark_SentoIsuzu": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -146,15 +156,15 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
-  "Sally(bofuri)-Pony": {
-    recommendedWeight: 1.2,
+  "beta-pdxl-nvwls-v1": {
+    recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
     url: new URL(
-      `https://civitai.com/models/514124/sally-bofuri-i-dont-want-to-get-hurt-so-ill-max-out-my-defense?modelVersionId=571410`,
+      `https://civitai.com/models/534462/beta-the-eminence-in-shadow-sdxl-lora-pony-diffusion?modelVersionId=594069`,
     ).toString(),
-    characterTriggerWordsTags: [`Sally`],
+    characterTriggerWordsTags: [`beta`],
     outfitTriggerTags: [],
-    creator: `King_Dong`,
+    creator: `novowels`,
   },
   "cecilia-alcott-s2-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
@@ -1211,6 +1221,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`Sagiri Izumi`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
+  },
+  "Sally(bofuri)-Pony": {
+    recommendedWeight: 1.2,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/514124/sally-bofuri-i-dont-want-to-get-hurt-so-ill-max-out-my-defense?modelVersionId=571410`,
+    ).toString(),
+    characterTriggerWordsTags: [`Sally`],
+    outfitTriggerTags: [],
+    creator: `King_Dong`,
   },
   "sayaka-madomagi-01": {
     recommendedWeight: 0.8,

@@ -260,10 +260,24 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "kagejitsu-alpha-novowels": [
+    ...defaultPreset,
+    {
+      key: `kagejitsu-shadow-garden-alpha-novowels`,
+      probability: defaultPreset.length,
+    },
+  ],
   "kagejitsu-beta-nochekaiser": [
     ...defaultPreset,
     {
       key: `kagejitsu-shadow-garden-beta-nochekaiser`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "kagejitsu-beta-novowels": [
+    ...defaultPreset,
+    {
+      key: `kagejitsu-shadow-garden-beta-novowels`,
       probability: defaultPreset.length,
     },
   ],

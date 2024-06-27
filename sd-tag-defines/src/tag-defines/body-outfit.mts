@@ -270,6 +270,21 @@ const allJacketColorTags = [
   `yellow jacket`,
 ] as const satisfies string[];
 
+const allLeggingsColorTags = [
+  `aqua leggings`,
+  `black leggings`,
+  `blue leggings`,
+  `brown leggings`,
+  `green leggings`,
+  `grey leggings`,
+  `orange leggings`,
+  `pink leggings`,
+  `purple leggings`,
+  `red leggings`,
+  `white leggings`,
+  `yellow leggings`,
+] as const satisfies string[];
+
 const allLeotardColorTags = [
   `aqua leotard`,
   `black leotard`,
@@ -284,6 +299,7 @@ const allLeotardColorTags = [
   `white leotard`,
   `yellow leotard`,
 ] as const satisfies string[];
+
 const allNeckerchiefColorTags = [
   `aqua neckerchief`,
   `black neckerchief`,
@@ -658,6 +674,7 @@ export const allBodyOutfitTags = [
   ...allFootwearColorTags,
   ...allGlovesColorTags,
   ...allJacketColorTags,
+  ...allLeggingsColorTags,
   ...allLeotardColorTags,
   ...allNeckerchiefColorTags,
   ...allNecktieColorTags,
@@ -833,6 +850,7 @@ export const allBodyOutfitTags = [
   `latex bikini`,
   `latex leotard`,
   `latex shorts`,
+  `leggings`,
   `leotard`,
   `lingerie`,
   `loafers`,

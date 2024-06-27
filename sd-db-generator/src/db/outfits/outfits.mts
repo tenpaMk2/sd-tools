@@ -260,8 +260,12 @@ export const characterOutfitTable = {
     isekaiOjisanOutfitSumika(`nochekaiser`),
   "kagejitsu-shadow-garden-alpha-nochekaiser":
     kagejitsuShadowGarden(`alpha-nochekaiser`),
+  "kagejitsu-shadow-garden-alpha-novowels":
+    kagejitsuShadowGarden(`alpha-novowels`),
   "kagejitsu-shadow-garden-beta-nochekaiser":
     kagejitsuShadowGarden(`beta-nochekaiser`),
+  "kagejitsu-shadow-garden-beta-novowels":
+    kagejitsuShadowGarden(`beta-novowels`),
   "kaguya-sama-maid-hayasaka-nochekaiser":
     kaguyaSamaMaidHayasaka(`nochekaiser`),
   "kaguya-sama-shuuchiin-academy-school-uniform-ai-no-lora":

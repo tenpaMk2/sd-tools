@@ -474,6 +474,21 @@ const allJacketColorVisibilities = {
   "yellow jacket": preset.shirt,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allLeggingsColorVisibilities = {
+  "aqua leggings": preset.thighhighs,
+  "black leggings": preset.thighhighs,
+  "blue leggings": preset.thighhighs,
+  "brown leggings": preset.thighhighs,
+  "green leggings": preset.thighhighs,
+  "grey leggings": preset.thighhighs,
+  "orange leggings": preset.thighhighs,
+  "pink leggings": preset.thighhighs,
+  "purple leggings": preset.thighhighs,
+  "red leggings": preset.thighhighs,
+  "white leggings": preset.thighhighs,
+  "yellow leggings": preset.thighhighs,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allLeotardColorVisibilities = {
   "aqua leotard": preset.dress,
   "black leotard": preset.dress,
@@ -864,6 +879,7 @@ export const allBodyOutfitVisibilities = {
   ...allFootwearColorVisibilities,
   ...allGlovesColorVisibilities,
   ...allJacketColorVisibilities,
+  ...allLeggingsColorVisibilities,
   ...allLeotardColorVisibilities,
   ...allNeckerchiefColorVisibilities,
   ...allNecktieColorVisibilities,
@@ -1039,6 +1055,7 @@ export const allBodyOutfitVisibilities = {
   "latex bikini": preset.dress,
   "latex leotard": preset.dress,
   "latex shorts": preset.skirt,
+  "leggings": preset.thighhighs,
   "leotard": preset.dress,
   "lingerie": preset.dress,
   "loafers": preset.foot,
