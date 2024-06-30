@@ -121,5 +121,3 @@ export const allBackgroundTags = [
   `yellow background`,
 ] as const satisfies readonly string[];
 export type BackgroundTag = (typeof allBackgroundTags)[number];
-
-// TODO: Add test that emits warn if array is not sorted.
