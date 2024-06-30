@@ -5,6 +5,7 @@ export const microBikini = () =>
     lora: null,
     loraOutfitTriggerWordEntries: [],
     outfitEntries: [
+      `swimsuit`,
       `bikini`,
       `micro bikini`,
       [
@@ -28,7 +29,7 @@ export const microBikini = () =>
       `bare arms`,
       `bare legs`,
       `barefoot`,
-      // `shiny skin`,
+      [{ entries: [] }, { entries: [`shiny skin`] }],
     ],
     specialVisibility: {
       armpits: true,

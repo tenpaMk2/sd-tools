@@ -22,7 +22,6 @@ import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
 import { nakedTowel } from "./common/naked-towel.mjs";
 import { nun } from "./common/nun.mjs";
-import { oRingBikini } from "./common/o-ring-bikini.mjs";
 import { openChestSweater } from "./common/open-chest-sweater.mjs";
 import { playboyBunny } from "./common/playboy-bunny.mjs";
 import { raceQueen } from "./common/race-queen.mjs";
@@ -167,7 +166,9 @@ export type OutfitDefine = Readonly<{
 
 export const commonOutfitTable = {
   "babydoll": babydoll(),
-  "bikini": bikini(),
+  "bikini-frill": bikini(`frill`),
+  "bikini-o-ring": bikini(`o-ring`),
+  "bikini-tie": bikini(`tie`),
   "bridal-lingerie": bridalLingerie(),
   "camisole-denim-shorts": camisoleDenimShorts(),
   "casual-miniskirt": casualMiniskirt(),
@@ -182,7 +183,6 @@ export const commonOutfitTable = {
   "micro-bikini": microBikini(),
   "naked-towel": nakedTowel(),
   "nun": nun(),
-  "o-ring-bikini": oRingBikini(),
   "open-chest-sweater": openChestSweater(),
   "playboy-bunny": playboyBunny(),
   "race-queen": raceQueen(),

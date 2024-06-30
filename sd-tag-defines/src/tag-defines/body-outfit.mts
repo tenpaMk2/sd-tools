@@ -690,6 +690,8 @@ export const allDistinguishableOutfitTags = {
   "navel cutout -> clothing cutout": `clothing cutout`,
   "side cutout -> clothing cutout": `clothing cutout`,
   "back cutout -> clothing cutout": `clothing cutout`,
+  "o-ring bikini -> o-ring": `o-ring`,
+  "frilled bikini -> frills": `frills`,
 } as const satisfies Record<string, string>;
 
 export const allBodyOutfitTags = [
@@ -888,6 +890,7 @@ export const allBodyOutfitTags = [
   `latex bikini`,
   `latex leotard`,
   `latex shorts`,
+  `layered bikini`,
   `leggings`,
   `leotard`,
   `lingerie`,
@@ -991,6 +994,7 @@ export const allBodyOutfitTags = [
   `school uniform`,
   `serafuku`,
   `shiny clothes`,
+  `shiny skin`, // Treat it as body outfit.
   `shiny`,
   `shirt`,
   `shoes`,

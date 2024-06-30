@@ -22,8 +22,8 @@ export const sukumizuThighhighs = () =>
       `thighhighs`,
       `thighs skindentation -> skindentation`,
       `skin tight`,
-      // `shiny skin`,
       `no shoes`,
+      [{ entries: [] }, { entries: [`shiny skin`] }],
     ],
     specialVisibility: {
       armpits: true,

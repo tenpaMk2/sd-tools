@@ -16,8 +16,8 @@ export const pso2BikiniGene = (variation: Variation) =>
       `bare arms`,
       `bare legs`,
       `barefoot`,
-      // `shiny skin`,
       `thigh strap`,
+      [{ entries: [] }, { entries: [`shiny skin`] }],
     ],
     specialVisibility: {
       armpits: true,

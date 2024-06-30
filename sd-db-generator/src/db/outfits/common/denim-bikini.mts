@@ -41,7 +41,7 @@ export const denimBikini = () =>
       `cutoffs`,
       `bare legs`,
       `barefoot`,
-      // `shiny skin`, // TODO: `shiny skin` to background?
+      [{ entries: [] }, { entries: [`shiny skin`] }],
     ],
     specialVisibility: {
       armpits: true,

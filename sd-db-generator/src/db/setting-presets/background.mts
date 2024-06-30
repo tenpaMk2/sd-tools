@@ -183,7 +183,9 @@ export const backgroundsPreset = {
    * Common outfits.
    */
   "babydoll": defaultPreset,
-  "bikini": ocean,
+  "bikini-frill": ocean,
+  "bikini-o-ring": ocean,
+  "bikini-tie": ocean,
   "bridal-lingerie": [
     ...defaultPreset,
     { key: `wedding-near-clean-floor`, probability: defaultPreset.length / 2 },
@@ -230,7 +232,6 @@ export const backgroundsPreset = {
     // { key: `onsen-standing`, probability: defaultPreset.length },
     // { key: `onsen-near-clean-floor`, probability: defaultPreset.length },
   ],
-  "o-ring-bikini": ocean,
   "open-chest-sweater": bedroom,
   "playboy-bunny": [
     ...defaultPreset,

@@ -893,6 +893,8 @@ const allDistinguishableOutfitVisibilities = {
   "navel cutout -> clothing cutout": preset.navel,
   "side cutout -> clothing cutout": preset["side stomach"],
   "back cutout -> clothing cutout": preset.back,
+  "o-ring bikini -> o-ring": preset.dress,
+  "frilled bikini -> frills": preset.dress,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 export const allBodyOutfitVisibilities = {
@@ -1092,6 +1094,7 @@ export const allBodyOutfitVisibilities = {
   "latex bikini": preset.dress,
   "latex leotard": preset.dress,
   "latex shorts": preset.skirt,
+  "layered bikini": preset.dress,
   "leggings": preset.thighhighs,
   "leotard": preset.dress,
   "lingerie": preset.dress,
@@ -1195,6 +1198,7 @@ export const allBodyOutfitVisibilities = {
   "school uniform": preset.dress,
   "serafuku": preset.shirt,
   "shiny clothes": preset.all,
+  "shiny skin": preset.all,
   "shiny": preset.all,
   "shirt": preset.shirt,
   "shoes": preset.foot,

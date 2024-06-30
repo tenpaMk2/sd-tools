@@ -23,10 +23,10 @@ export const cheerleader = () =>
         { entries: [`red shirt`, `white skirt`] },
       ],
       // `sweat`, // TODO: `sweat` to background or pose
-      // `shiny skin`, // TODO: `shiny skin` to background?
       `bare legs`,
       `shoes`,
       `sneakers`,
+      [{ entries: [] }, { entries: [`shiny skin`] }],
     ],
     specialVisibility: {
       armpits: true,
