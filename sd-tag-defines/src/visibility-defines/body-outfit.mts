@@ -45,6 +45,11 @@ const preset = {
     sideBreast: true,
     backBreast: true,
   },
+  "back": {
+    ...invisible,
+    backBreast: true,
+    backMidriff: true,
+  },
   "bowtie": {
     ...invisible,
     frontBreast: true,
@@ -68,15 +73,6 @@ const preset = {
     ...invisible,
     frontBreast: true,
     frontMidriff: true,
-  },
-  "clothing cutout": {
-    ...invisible,
-    frontHipAndThigh: true,
-    sideHipAndThigh: true,
-    backHipAndThigh: true,
-    frontMidriff: true,
-    sideMidriff: true,
-    backMidriff: true,
   },
   "collar": {
     ...invisible,
@@ -126,6 +122,10 @@ const preset = {
     ...invisible,
     backHipAndThigh: true,
   },
+  "mouth veil": {
+    ...invisible,
+    frontHead: true,
+  },
   "navel": {
     ...invisible,
     frontMidriff: true,
@@ -163,6 +163,10 @@ const preset = {
     ...invisible,
     sideHipAndThigh: true,
   },
+  "side stomach": {
+    ...invisible,
+    sideMidriff: true,
+  },
   "skirt": {
     ...invisible,
     frontHipAndThigh: true,
@@ -191,10 +195,6 @@ const preset = {
   "wrist cuffs": {
     ...invisible,
     wristAndHand: true,
-  },
-  "mouth veil": {
-    ...invisible,
-    frontHead: true,
   },
   "wings": {
     ...invisible,
@@ -885,6 +885,14 @@ const allDistinguishableOutfitVisibilities = {
   "red waist apron -> red apron": preset.skirt,
   "white waist apron -> white apron": preset.skirt,
   "yellow waist apron -> yellow apron": preset.skirt,
+  "shoulder cutout -> clothing cutout": preset.shoulder,
+  "armpit cutout -> clothing cutout": preset.shoulder,
+  "cleavage cutout -> clothing cutout": preset.bowtie,
+  "underboob cutout -> clothing cutout": preset.bowtie,
+  "stomach cutout -> clothing cutout": preset.navel,
+  "navel cutout -> clothing cutout": preset.navel,
+  "side cutout -> clothing cutout": preset["side stomach"],
+  "back cutout -> clothing cutout": preset.back,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 export const allBodyOutfitVisibilities = {
@@ -942,11 +950,13 @@ export const allBodyOutfitVisibilities = {
   "armband": preset.armlet,
   "armlet": preset.armlet,
   "armor": preset.dress,
+  "armpit cutout": preset.shoulder,
   "ascot": preset.bowtie,
   "ass": preset.hips,
   "asymmetrical clothes": preset.dress,
   "asymmetrical legwear": preset.thighhighs,
   "babydoll": preset.dress,
+  "back cutout": preset.back,
   "bandaged leg": preset.thighhighs,
   "bandeau": preset.bra,
   "bare arms": preset.shoulder,
@@ -984,6 +994,7 @@ export const allBodyOutfitVisibilities = {
   "capelet": preset.shirt,
   "cardigan around waist": preset["high-waist skirt"],
   "casual": preset.dress,
+  "cat cutout": preset.bowtie,
   "center frills": preset["center frills"],
   "center opening": preset["center frills"],
   "checkered bikini": preset.dress,
@@ -997,7 +1008,6 @@ export const allBodyOutfitVisibilities = {
   "cloak": preset.dress,
   "clothes around waist": preset["high-waist skirt"],
   "clothes writing": preset["center frills"],
-  "clothing cutout": preset["clothing cutout"], // TODO: `cleavage clothing cutout`
   "coat": preset.dress,
   "collar": preset.collar,
   "collarbone": preset.bowtie,
@@ -1060,6 +1070,7 @@ export const allBodyOutfitVisibilities = {
   "halterneck": preset.collar,
   "harem outfit": preset.dress,
   "harem pants": preset.skirt,
+  "heart cutout": preset.bowtie,
   "high-low skirt": preset.skirt,
   "high-waist skirt": preset["high-waist skirt"],
   "hip vent": preset["side hip"],
@@ -1193,8 +1204,10 @@ export const allBodyOutfitVisibilities = {
   "short sleeves": preset.shoulder,
   "shorts": preset.skirt,
   "shoulder blades": preset["shoulder blades"],
+  "shoulder cutout": preset.shoulder,
   "showgirl skirt": preset.skirt,
   "shuuchiin academy school uniform": preset.dress,
+  "side cutout": preset["side stomach"],
   "side slit": preset["side hip"],
   "side-tie bikini bottom": preset["side hip"],
   "single glove": preset["wrist cuffs"],
@@ -1211,6 +1224,7 @@ export const allBodyOutfitVisibilities = {
   "sports bikini": preset.dress,
   "sports bra": preset.bra,
   "sportswear": preset.all,
+  "stomach cutout": preset.navel,
   "strap": preset.all,
   "striped bikini": preset.dress,
   "striped necktie": preset.bowtie,
@@ -1239,6 +1253,7 @@ export const allBodyOutfitVisibilities = {
   "two-tone dress": preset.dress,
   "two-tone shirt": preset.shirt,
   "unbuttoned": preset.bowtie,
+  "underboob cutout": preset.bowtie,
   "underbust": preset.underbust,
   "underwear only": preset.dress,
   "underwear": preset.dress,

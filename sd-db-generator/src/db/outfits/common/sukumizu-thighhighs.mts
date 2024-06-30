@@ -12,7 +12,9 @@ export const sukumizuThighhighs = () =>
         { entries: [`black one-piece swimsuit`, `black thighhighs`] },
         { entries: [`white one-piece swimsuit`, `white thighhighs`] },
       ],
+      `cleavage cutout -> clothing cutout`,
       `cleavage cutout`,
+      `heart cutout`,
       `collarbone`,
       `bare arms`,
       `covered navel`,
@@ -22,7 +24,6 @@ export const sukumizuThighhighs = () =>
       `skin tight`,
       // `shiny skin`,
       `no shoes`,
-      // TODO: Reconsider `heart cutout` .
     ],
     specialVisibility: {
       armpits: true,

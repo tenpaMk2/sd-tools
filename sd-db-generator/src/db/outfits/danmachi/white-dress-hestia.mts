@@ -11,7 +11,7 @@ export const danmachiWhiteDressHestia = (variation: Variation) =>
       `white dress`,
       `blue bowtie`,
       `pencil dress`,
-      `clothing cutout`,
+      `cleavage cutout -> clothing cutout`,
       `cleavage cutout`,
       `rei no himo`,
       `sleeveless`,

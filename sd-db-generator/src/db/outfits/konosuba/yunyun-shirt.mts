@@ -14,7 +14,7 @@ export const konosubaOutfitYunyun = (variation: Variation) =>
       `white collar`,
       `necktie`,
       `pink necktie`,
-      `clothing cutout`,
+      `cleavage cutout -> clothing cutout`,
       `cleavage cutout`,
       `long sleeves`,
       `juliet sleeves`,

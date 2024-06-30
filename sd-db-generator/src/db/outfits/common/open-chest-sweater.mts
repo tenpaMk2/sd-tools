@@ -14,6 +14,7 @@ export const openChestSweater = () =>
         { entries: [`red sweater`] },
       ],
       `open-chest sweater`,
+      `cleavage cutout -> clothing cutout`,
       `cleavage cutout`,
       `turtleneck sweater`,
       `long sleeves`,
