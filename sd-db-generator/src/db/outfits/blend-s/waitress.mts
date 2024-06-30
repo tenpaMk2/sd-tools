@@ -44,7 +44,7 @@ export const blendSWaitress = (variation: Variation) =>
       `gloves`,
       `white gloves`,
       `waist apron`,
-      `white apron`,
+      `white waist apron -> white apron`,
       `skirt`,
       ...outfitEntries.skirtColor[variation],
       `miniskirt`,
