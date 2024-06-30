@@ -34,7 +34,9 @@ export const prismaIllyaBeastIllya = (variation: `am7coffeelove`) =>
       zettaiRyouiki: false,
       insideOfThighs: true,
     },
-    liftType: `skirt`,
-    upskirtEntries: [],
+    upskirt: {
+      liftType: `skirt`,
+      entries: [],
+    }, // TODO: fixme
     whenRemoveShoes: null,
   }) as const satisfies OutfitDefine;

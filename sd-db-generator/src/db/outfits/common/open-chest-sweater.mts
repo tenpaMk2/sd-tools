@@ -32,7 +32,9 @@ export const openChestSweater = () =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: null,
   }) as const satisfies OutfitDefine;

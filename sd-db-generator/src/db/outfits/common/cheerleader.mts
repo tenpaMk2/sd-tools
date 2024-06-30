@@ -39,8 +39,10 @@ export const cheerleader = () =>
       zettaiRyouiki: false,
       insideOfThighs: true,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.vividPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.vividPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`shoes`, `sneakers`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

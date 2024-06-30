@@ -108,8 +108,10 @@ export const slowLoopSchoolUniform = (variation: Variation) =>
       zettaiRyouiki: specialVisibility.zettaiRyouiki[variation],
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: [],
+    upskirt: {
+      liftType: `skirt`,
+      entries: [],
+    }, // TODO: fixme
     whenRemoveShoes: {
       excludeTags: [`loafers`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

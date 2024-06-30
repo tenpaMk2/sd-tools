@@ -32,7 +32,9 @@ export const danmachiWhiteDressHestia = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: true,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.whitePanties,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.whitePanties,
+    },
     whenRemoveShoes: null,
   }) as const satisfies OutfitDefine;

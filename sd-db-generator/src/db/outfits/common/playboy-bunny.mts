@@ -39,8 +39,7 @@ export const playboyBunny = () =>
       zettaiRyouiki: false,
       insideOfThighs: true,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: {
       excludeTags: [`pumps`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

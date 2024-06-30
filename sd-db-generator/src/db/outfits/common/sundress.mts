@@ -28,8 +28,10 @@ export const sundress = () =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.whitePanties,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.whitePanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`loafers`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

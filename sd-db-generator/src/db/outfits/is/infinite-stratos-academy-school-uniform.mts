@@ -88,14 +88,29 @@ const outfitEntries = {
   Record<Variation, OutfitDefine["outfitEntries"]>
 >;
 
-const upskirtEntries = {
-  "cecilia-nochekaiser": upskirtPreset.pantiesUnderPantyhose,
-  "charlotte-nochekaiser": upskirtPreset.colorfulPanties,
-  "houki-nochekaiser": upskirtPreset.colorfulPanties,
-  "laura-nochekaiser": [],
-  "lingyin-nochekaiser": upskirtPreset.colorfulPanties,
-  "tatenashi-nochekaiser": upskirtPreset.pantiesUnderPantyhose,
-} as const satisfies Record<Variation, OutfitDefine["outfitEntries"]>;
+const upskirt = {
+  "cecilia-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.pantiesUnderPantyhose,
+  },
+  "charlotte-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "houki-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "laura-nochekaiser": null,
+  "lingyin-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "tatenashi-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.pantiesUnderPantyhose,
+  },
+} as const satisfies Record<Variation, OutfitDefine["upskirt"]>;
 
 const whenRemoveShoes = {
   "cecilia-nochekaiser": {
@@ -153,7 +168,6 @@ export const isInfiniteStratosAcademySchoolUniform = (variation: Variation) =>
       zettaiRyouiki: true,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtEntries[variation],
+    upskirt: upskirt[variation],
     whenRemoveShoes: whenRemoveShoes[variation],
   }) as const satisfies OutfitDefine;

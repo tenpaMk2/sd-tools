@@ -41,8 +41,7 @@ export const strikeWitchesOutfitYoshika = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: {
       excludeTags: [`shoes`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

@@ -75,18 +75,45 @@ const outfitEntries = {
   ],
 } as const satisfies Record<Variation, OutfitDefine["outfitEntries"]>;
 
-const upskirtEntries = {
-  "ai-no-lora": upskirtPreset.colorfulPanties,
-  "ai-nochekaiser": upskirtPreset.colorfulPanties,
-  "chika-eternal2kpp": upskirtPreset.colorfulPanties,
-  "chika-no-lora": upskirtPreset.colorfulPanties,
-  "chika-nochekaiser": upskirtPreset.colorfulPanties,
-  "kaguya-eternal2kpp": upskirtPreset.colorfulPanties,
-  "kaguya-no-lora": upskirtPreset.colorfulPanties,
-  "kaguya-nochekaiser": upskirtPreset.colorfulPanties,
-  "miko-no-lora": upskirtPreset.pantiesUnderPantyhose,
-  "miko-nochekaiser": upskirtPreset.pantiesUnderPantyhose,
-} as const satisfies Record<Variation, OutfitDefine["upskirtEntries"]>;
+const upskirt = {
+  "ai-no-lora": { liftType: `skirt`, entries: upskirtPreset.colorfulPanties },
+  "ai-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "chika-eternal2kpp": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "chika-no-lora": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "chika-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "kaguya-eternal2kpp": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "kaguya-no-lora": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "kaguya-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  "miko-no-lora": {
+    liftType: `skirt`,
+    entries: upskirtPreset.pantiesUnderPantyhose,
+  },
+  "miko-nochekaiser": {
+    liftType: `skirt`,
+    entries: upskirtPreset.pantiesUnderPantyhose,
+  },
+} as const satisfies Record<Variation, OutfitDefine["upskirt"]>;
 
 export const kaguyaSamaShuuchiinAcademySchoolUniform = (variation: Variation) =>
   ({
@@ -104,8 +131,7 @@ export const kaguyaSamaShuuchiinAcademySchoolUniform = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtEntries[variation],
+    upskirt: upskirt[variation],
     whenRemoveShoes: {
       excludeTags: [`loafers`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

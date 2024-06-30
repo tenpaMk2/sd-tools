@@ -47,8 +47,10 @@ export const formalSuit = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.pantiesUnderPantyhose,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.pantiesUnderPantyhose,
+    },
     whenRemoveShoes: {
       excludeTags: [`pumps`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

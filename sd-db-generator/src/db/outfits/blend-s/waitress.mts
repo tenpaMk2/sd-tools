@@ -64,8 +64,10 @@ export const blendSWaitress = (variation: Variation) =>
       zettaiRyouiki: true,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`black footwear`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

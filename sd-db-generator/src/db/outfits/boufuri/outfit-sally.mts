@@ -40,8 +40,7 @@ export const boufuriOutfitSally = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: {
       excludeTags: [`boots`, `blue footwear`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

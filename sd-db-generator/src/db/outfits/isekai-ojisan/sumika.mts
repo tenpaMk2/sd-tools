@@ -31,8 +31,10 @@ export const isekaiOjisanOutfitSumika = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`boots`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

@@ -32,8 +32,10 @@ export const spyFamilyThornPrincess = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.blackPanties,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.blackPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`thigh boots`, `black footwear`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

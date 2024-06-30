@@ -32,8 +32,10 @@ export const prismaIllyaMagicalGirlIllya = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.whitePanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.whitePanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`thigh boots`, `pink footwear`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

@@ -28,8 +28,10 @@ export const isekaiOjisanOutfitSui = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.pantiesUnderPantyhose,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.pantiesUnderPantyhose,
+    },
     whenRemoveShoes: {
       excludeTags: [`boots`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

@@ -38,8 +38,10 @@ export const sasuoniFirstHighSchoolUniform = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.pantiesUnderPantyhose,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.pantiesUnderPantyhose,
+    },
     whenRemoveShoes: {
       excludeTags: [`boots`, `black footwear`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

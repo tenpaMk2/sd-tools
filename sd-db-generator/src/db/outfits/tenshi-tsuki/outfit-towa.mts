@@ -45,8 +45,10 @@ export const tenshiTsukiOutfitTowa = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.whitePanties,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.whitePanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`sandals`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

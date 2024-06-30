@@ -35,8 +35,10 @@ export const isekaiOjisanOutfitAlicia = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.whitePanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.whitePanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`boots`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

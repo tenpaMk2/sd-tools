@@ -52,7 +52,6 @@ export const kagejitsuShadowGarden = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: null,
   }) as const satisfies OutfitDefine;

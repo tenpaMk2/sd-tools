@@ -37,7 +37,9 @@ export const maidBikini = () =>
       zettaiRyouiki: true,
       insideOfThighs: true,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: null,
   }) as const satisfies OutfitDefine;

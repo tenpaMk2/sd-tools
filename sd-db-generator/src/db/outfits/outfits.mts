@@ -139,14 +139,16 @@ export type OutfitDefine = Readonly<{
      */
     insideOfThighs: boolean;
   };
-  /**
-   * Lift type for clothes lift.
-   */
-  liftType: `none` | `skirt` | `dress`;
-  /**
-   * Outfit and exposure defines in the skirt for when `upskirt` is specified.
-   */
-  upskirtEntries: TagEntry<OutfitTag>[]; // TODO: Reconsider as `null` .
+  upskirt: null | {
+    /**
+     * Lift type for clothes lift.
+     */
+    liftType: `skirt` | `dress`;
+    /**
+     * Outfit and exposure defines in the skirt for when `upskirt` is specified.
+     */
+    entries: TagEntry<OutfitTag>[]; // TODO: Reconsider as `null` .
+  };
   /**
    * Outfit and exposure defines at foot for when footwear should be removed.
    */

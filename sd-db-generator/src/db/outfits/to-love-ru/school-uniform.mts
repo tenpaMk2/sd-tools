@@ -84,8 +84,10 @@ export const toLoveRuSchoolUniform = (variation: Variation) =>
       zettaiRyouiki: specialVisibility.zettariRyouiki[variation],
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`loafers`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

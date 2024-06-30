@@ -29,8 +29,7 @@ export const isekaiOjisanOutfitMabel = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: {
       excludeTags: [`boots`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

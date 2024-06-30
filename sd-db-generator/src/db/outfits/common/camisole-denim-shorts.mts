@@ -43,8 +43,7 @@ export const camisoleDenimShorts = () =>
       zettaiRyouiki: false,
       insideOfThighs: true,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: {
       excludeTags: [`shoes`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

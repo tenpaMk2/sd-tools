@@ -82,7 +82,9 @@ export const tenshiTsukiSchoolUniform = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: whenRemoveShoes[variation],
   }) as const satisfies OutfitDefine;

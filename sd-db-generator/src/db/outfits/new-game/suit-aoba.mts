@@ -34,8 +34,10 @@ export const newGameOutfitAoba = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.whitePanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.whitePanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`loafers`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

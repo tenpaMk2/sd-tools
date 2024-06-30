@@ -54,8 +54,10 @@ export const konosubaOutfitMegumin = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.monochromePanties,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.monochromePanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`boots`, `orange footwear`, `knee boots`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

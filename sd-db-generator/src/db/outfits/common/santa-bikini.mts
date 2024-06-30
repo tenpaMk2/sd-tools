@@ -33,7 +33,6 @@ export const santaBikini = () =>
       zettaiRyouiki: false,
       insideOfThighs: true,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: null,
   }) as const satisfies OutfitDefine;

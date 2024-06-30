@@ -36,8 +36,7 @@ export const sportsBikini = () =>
       zettaiRyouiki: false,
       insideOfThighs: true,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: {
       excludeTags: [`shoes`, `sneakers`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

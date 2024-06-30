@@ -42,8 +42,10 @@ export const konosubaOutfitYunyun = (variation: Variation) =>
       zettaiRyouiki: true,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`boots`, `brown footwear`, `knee boots`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

@@ -27,8 +27,10 @@ export const isYellowDressMaya = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.pinkPanties,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.pinkPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`boots`, `knee boots`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

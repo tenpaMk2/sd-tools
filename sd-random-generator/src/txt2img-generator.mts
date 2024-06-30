@@ -108,14 +108,14 @@ const createSpecialTokens = (
   pose: PoseSpecialVisibility,
   {
     breastSize,
-    upskirtTokens,
+    upskirt,
     emotionTokens,
     backgroundTokens,
     visibleFeatureTokens,
     visibleOutfitTokens,
   }: {
     breastSize: BreastSizeTag;
-    upskirtTokens: Token<OutfitTag>[];
+    upskirt: OutfitDefine["upskirt"];
     emotionTokens: Token<EmotionTag | SpecialTag>[];
     backgroundTokens: Token<BackgroundTag>[];
     visibleFeatureTokens: Token<CharacterFeatureTag>[];
@@ -170,8 +170,12 @@ const createSpecialTokens = (
     push(`thigh gap`);
   }
 
-  if (pose.upskirt && 0 < upskirtTokens.length) {
+  if (pose.upskirt && upskirt) {
     push(`upskirt`);
+
+    const upskirtTokens = PatternCollection.createTokensInstantly<OutfitTag>(
+      upskirt.entries,
+    );
 
     for (const token of upskirtTokens) {
       m.set(token.tag, token);
@@ -185,6 +189,8 @@ const createSpecialTokens = (
       push(`pantyshot`);
     }
   }
+
+  // TODO: Add `clothes lift` , `skirt lift` and `dress lift` .
 
   return [...m.values()];
 };
@@ -283,10 +289,6 @@ const buildCore = ({
       outfitData.outfit.outfitEntries,
     );
 
-  const upskirtTokens = PatternCollection.createTokensInstantly<OutfitTag>(
-    outfitData.outfit.upskirtEntries,
-  );
-
   const cameraAngle = poseData.pose.cameraAngle;
   const backgroundTokens =
     PatternCollection.createTokensInstantly<BackgroundTag>(
@@ -334,7 +336,7 @@ const buildCore = ({
     poseData.pose.specialVisibility,
     {
       breastSize: characterData.character.breastSize,
-      upskirtTokens,
+      upskirt: outfitData.outfit.upskirt,
       emotionTokens: newEmotionTokens,
       backgroundTokens,
       visibleFeatureTokens,

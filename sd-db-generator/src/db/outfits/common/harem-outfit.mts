@@ -32,7 +32,6 @@ export const haremOutfit = () =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `none`,
-    upskirtEntries: [],
+    upskirt: null,
     whenRemoveShoes: null,
   }) as const satisfies OutfitDefine;

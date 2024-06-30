@@ -36,8 +36,10 @@ export const goblinSlayerOutfitPriestess = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `dress`,
-    upskirtEntries: upskirtPreset.whitePanties,
+    upskirt: {
+      liftType: `dress`,
+      entries: upskirtPreset.whitePanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`thigh boots`],
       additionalFootEntriesAfterRemoving: [`barefoot`],

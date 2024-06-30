@@ -25,8 +25,10 @@ export const casualMiniskirt = () =>
       zettaiRyouiki: true,
       insideOfThighs: true,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`sneakers`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

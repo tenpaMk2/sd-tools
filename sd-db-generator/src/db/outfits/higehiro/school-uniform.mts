@@ -38,8 +38,10 @@ export const higehiroSchoolUniform = (variation: Variation) =>
       zettaiRyouiki: false,
       insideOfThighs: false,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.blackPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.blackPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`loafers`],
       additionalFootEntriesAfterRemoving: [`no shoes`],

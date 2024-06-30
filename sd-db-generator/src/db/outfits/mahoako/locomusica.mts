@@ -40,8 +40,10 @@ export const mahoakoOutfitLocomusica = (variation: Variation) =>
       zettaiRyouiki: true,
       insideOfThighs: true,
     },
-    liftType: `skirt`,
-    upskirtEntries: upskirtPreset.colorfulPanties,
+    upskirt: {
+      liftType: `skirt`,
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`boots`, `aqua footwear`, `knee boots`],
       additionalFootEntriesAfterRemoving: [`no shoes`],
