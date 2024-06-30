@@ -303,7 +303,6 @@ const buildCore = ({
     characterData.character.emotionType,
   );
 
-  // Reconsider moving `fang` to `SpecialTag`.
   const newEmotionTokens = emotionTokens.some(
     ({ tag }) => tag === `open mouth` && characterData.character.fang,
   )
