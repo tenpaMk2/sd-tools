@@ -71,7 +71,6 @@ const pickEmotionTokens = (
   return emotionTokens;
 };
 
-// TODO: bug: `Rem` LoraとTriggerWordsの `Rem` が重複してると削除される。
 const setHeavyWeightOne = <T extends Tag>(
   m: Map<T, Token<T>>,
   token: Token<T>,
