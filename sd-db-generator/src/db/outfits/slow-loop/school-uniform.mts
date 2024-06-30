@@ -1,4 +1,5 @@
 import type { OutfitDefine } from "../outfits.mjs";
+import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation =
   | `koharu-ibukimakisiko`
@@ -110,8 +111,8 @@ export const slowLoopSchoolUniform = (variation: Variation) =>
     },
     upskirt: {
       liftType: `skirt`,
-      entries: [],
-    }, // TODO: fixme
+      entries: upskirtPreset.colorfulPanties,
+    },
     whenRemoveShoes: {
       excludeTags: [`loafers`],
       additionalFootEntriesAfterRemoving: [`no shoes`],
