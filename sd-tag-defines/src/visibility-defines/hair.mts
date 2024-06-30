@@ -82,7 +82,7 @@ export const allHairVisibilities = {
   "asymmetrical sidelocks": preset.hair,
   "bangs pinned back": preset.bangs,
   "blunt bangs": preset.bangs,
-  "blunt ends": preset.hair, // TODO: `blunt bangs ends`
+  "blunt ends": preset.hair,
   "bob cut": preset.hair,
   "bow-shaped hair": preset.hair,
   "braid": preset.hair,
