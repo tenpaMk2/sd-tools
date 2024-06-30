@@ -176,6 +176,16 @@ export const loraTable = {
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
   },
+  "celia claire_PONY_epoch-000016": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/452855/pony-xl-celia-claire-seirei-gensouki`,
+    ).toString(),
+    characterTriggerWordsTags: [`celia claire`],
+    outfitTriggerTags: [`celia-default`],
+    creator: `Ibukimakisiko`,
+  },
   "celistia-bahamut-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],

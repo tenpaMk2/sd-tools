@@ -1028,6 +1028,7 @@ export const allBodyOutfitVisibilities = {
   "frilled apron": preset.dress,
   "frilled bikini": preset.dress,
   "frilled dress": preset.dress,
+  "frilled shirt": preset.shirt,
   "frilled skirt": preset.skirt,
   "frilled sleeves": preset.shoulder, // `wrist cuffs` ?
   "frills": preset.all,
@@ -1083,6 +1084,7 @@ export const allBodyOutfitVisibilities = {
   "maid apron": preset.dress,
   "maid bikini": preset.dress,
   "maid": preset.all,
+  "mary janes": preset.foot,
   "micro bikini": preset.dress,
   "midriff": preset.navel,
   "miko": preset.dress,

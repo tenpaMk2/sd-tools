@@ -69,6 +69,7 @@ import { pso2BikiniGene } from "./pso2/bikini-gene.mjs";
 import { rokudenashiBikini } from "./rokudenashi/bikini.mjs";
 import { rokudenashiSchoolUniform } from "./rokudenashi/school-uniform.mjs";
 import { sasuoniFirstHighSchoolUniform } from "./sasuoni/first-high-school-uniform.mjs";
+import { seireiOutfitCelia } from "./seirei/outfit-celia.mjs";
 import { slowLoopSchoolUniform } from "./slow-loop/school-uniform.mjs";
 import { spyFamilyRedSweater } from "./spy-family/red-sweater.mjs";
 import { spyFamilyThornPrincess } from "./spy-family/thorn-princess.mjs";
@@ -319,6 +320,7 @@ export const characterOutfitTable = {
     rokudenashiSchoolUniform(`winter-little-jelly`),
   "sasuoni-first-high-school-uniform-nochekaiser":
     sasuoniFirstHighSchoolUniform(`nochekaiser`),
+  "seirei-outfit-celia-ibukimakisiko": seireiOutfitCelia(`ibukimakisiko`),
   "slow-loop-school-uniform-hiyori-ibukimakisiko":
     slowLoopSchoolUniform(`hiyori-ibukimakisiko`),
   "slow-loop-school-uniform-koharu-ibukimakisiko":

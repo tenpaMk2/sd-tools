@@ -82,6 +82,7 @@ const defaultPreset = [
   { key: `rokudenashi-rumia-little-jelly` },
   { key: `sasuoni-honoka-nochekaiser` },
   { key: `sasuoni-mizuki-nochekaiser` },
+  { key: `seirei-celia-ibukimakisiko` },
   { key: `slow-loop-hiyori-ibukimakisiko` },
   { key: `slow-loop-koharu-ibukimakisiko` },
   { key: `slow-loop-koi-ibukimakisiko` },
@@ -109,4 +110,4 @@ export const charactersPreset: CharactersPreset = {
   ...monoCharacterPresetsMap,
 
   default: defaultPreset,
-} as const satisfies CharactersPreset;
+} as const;

@@ -132,11 +132,11 @@ const sports = [
 ] as const satisfies BackgroundSetting[];
 
 const isekai = [
-  ...defaultPreset,
-  { key: `grass-sitting-on`, probability: defaultPreset.length },
-  { key: `grass-near-clean-floor`, probability: defaultPreset.length },
-  { key: `grass-standing`, probability: defaultPreset.length },
-  { key: `sky-blue-sky-standing`, probability: defaultPreset.length },
+  { key: `bed-sheet-steaming-near-clean-floor` },
+  { key: `grass-sitting-on` },
+  { key: `grass-near-clean-floor` },
+  { key: `grass-standing` },
+  { key: `sky-blue-sky-standing` },
   // TODO: mountains, forest
 ] as const satisfies BackgroundSetting[];
 
@@ -414,6 +414,15 @@ export const backgroundsPreset = {
   "rokudenashi-school-uniform-summer-little-jelly": garden,
   "rokudenashi-school-uniform-winter-little-jelly": garden,
   "sasuoni-first-high-school-uniform-nochekaiser": garden,
+  "seirei-outfit-celia-ibukimakisiko": [
+    ...isekai,
+    {
+      key: `garden-sitting-on`,
+    },
+    {
+      key: `garden-standing`,
+    },
+  ], // TODO: Reconsider
   "slow-loop-school-uniform-hiyori-ibukimakisiko": student,
   "slow-loop-school-uniform-koharu-ibukimakisiko": student,
   "slow-loop-school-uniform-koi-ibukimakisiko": student,

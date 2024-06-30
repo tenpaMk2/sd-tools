@@ -521,6 +521,13 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "seirei-celia-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `seirei-outfit-celia-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+  ],
   "slow-loop-hiyori-ibukimakisiko": [
     ...defaultPreset,
     {

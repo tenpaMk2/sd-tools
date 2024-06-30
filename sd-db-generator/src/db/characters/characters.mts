@@ -76,6 +76,7 @@ import { sasuoniMayumi } from "./sasuoni/mayumi.mjs";
 import { sasuoniMiyuki } from "./sasuoni/miyuki.mjs";
 import { sasuoniMizuki } from "./sasuoni/mizuki.mjs";
 import { sasuoniShizuku } from "./sasuoni/shizuku.mjs";
+import { seireiCelia } from "./seirei/celia.mjs";
 import { slowLoopHiyori } from "./slow-loop/hiyori.mjs";
 import { slowLoopKoharu } from "./slow-loop/koharu.mjs";
 import { slowLoopKoi } from "./slow-loop/koi.mjs";
@@ -222,6 +223,7 @@ export const characterTable = {
   "sasuoni-miyuki-nochekaiser": sasuoniMiyuki(`nochekaiser`),
   "sasuoni-mizuki-nochekaiser": sasuoniMizuki(`nochekaiser`),
   "sasuoni-shizuku-nochekaiser": sasuoniShizuku(`nochekaiser`),
+  "seirei-celia-ibukimakisiko": seireiCelia(`ibukimakisiko`),
   "slow-loop-hiyori-ibukimakisiko": slowLoopHiyori(`ibukimakisiko`),
   "slow-loop-koharu-ibukimakisiko": slowLoopKoharu(`ibukimakisiko`),
   "slow-loop-koi-ibukimakisiko": slowLoopKoi(`ibukimakisiko`),

@@ -8,6 +8,7 @@ export const allCharacterNameTags = [
   `aqua \\(konosuba\\)`,
   `beta \\(kage no jitsuryokusha ni naritakute!\\)`,
   `cecilia alcott`,
+  `celia claire`,
   `celistia ralgris`,
   `charlotte dunois`,
   `charlotte e\\. yeager`,
