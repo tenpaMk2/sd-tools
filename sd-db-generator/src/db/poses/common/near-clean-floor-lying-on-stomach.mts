@@ -5,6 +5,7 @@ type Variation = `from-above` | `from-horizontal`;
 
 const entries = {
   "from-above": [
+    `from behind`,
     `from above`,
     `lying`,
     `on stomach`,
@@ -48,7 +49,7 @@ const specialVisibility = {
   },
 } as const satisfies Record<Variation, PoseDefine["specialVisibility"]>;
 
-export const nearCleanFloorLyingOnStomach = (variation: Variation) =>
+export const nearCleanFloorLyingOnStomachFromBehind = (variation: Variation) =>
   ({
     expectedBackgroundType: `near-clean-floor`,
     cameraAngle: variation,

@@ -15,7 +15,7 @@ import { nearCleanFloorAllFours } from "./common/near-clean-floor-all-fours.mjs"
 import { nearCleanFloorFromAboveLyingReachingTowardsViewer } from "./common/near-clean-floor-from-above-lying-reaching-towards-viewer.mjs";
 import { nearCleanFloorKneelingSpreadLegs } from "./common/near-clean-floor-kneeling-spread-legs.mjs";
 import { nearCleanFloorLyingOnBack } from "./common/near-clean-floor-lying-on-back.mjs";
-import { nearCleanFloorLyingOnStomach } from "./common/near-clean-floor-lying-on-stomach.mjs";
+import { nearCleanFloorLyingOnStomachFromBehind } from "./common/near-clean-floor-lying-on-stomach.mjs";
 import { nearCleanFloorThePose } from "./common/near-clean-floor-the-pose.mjs";
 import { nearCleanFloorWariza } from "./common/near-clean-floor-wariza.mjs";
 import { sittingOnSitting } from "./common/sitting-on-sitting.mjs";
@@ -77,8 +77,8 @@ export const commonPoseTable = {
     nearCleanFloorKneelingSpreadLegs(`from-above`),
   "near-clean-floor-from-above-lying-on-back":
     nearCleanFloorLyingOnBack(`from-above`),
-  "near-clean-floor-from-above-lying-on-stomach":
-    nearCleanFloorLyingOnStomach(`from-above`),
+  "near-clean-floor-from-above-lying-on-stomach-from-behind":
+    nearCleanFloorLyingOnStomachFromBehind(`from-above`),
   "near-clean-floor-from-above-lying-reaching-towards-viewer":
     nearCleanFloorFromAboveLyingReachingTowardsViewer(),
   "near-clean-floor-from-above-the-pose": nearCleanFloorThePose(`from-above`),
@@ -95,8 +95,8 @@ export const commonPoseTable = {
     nearCleanFloorAllFours(`from-horizontal`),
   "near-clean-floor-from-horizontal-kneeling-spread-legs":
     nearCleanFloorKneelingSpreadLegs(`from-horizontal`),
-  "near-clean-floor-from-horizontal-lying-on-stomach":
-    nearCleanFloorLyingOnStomach(`from-horizontal`),
+  "near-clean-floor-from-horizontal-lying-on-stomach-from-behind":
+    nearCleanFloorLyingOnStomachFromBehind(`from-horizontal`),
   "near-clean-floor-from-horizontal-the-pose":
     nearCleanFloorThePose(`from-horizontal`),
   "near-clean-floor-from-horizontal-wariza":
