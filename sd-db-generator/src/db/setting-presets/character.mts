@@ -5,7 +5,7 @@ import {
   type CharacterKey,
 } from "../characters/characters.mjs";
 
-export type CharactersPresetKey = `default` | CharacterKey;
+export type CharactersPresetKey = `baseCharacters` | `default` | CharacterKey;
 
 export type CharactersPreset = Record<CharactersPresetKey, CharacterSetting[]>;
 
@@ -16,13 +16,8 @@ const monoCharacterPresetsMap = Object.fromEntries(
   ),
 ) as Record<CharacterKey, CharacterSetting[]>;
 
-const defaultPreset = [
-  // // `amaburi-isuzu-h-madoka`,
-  // `amaburi-isuzu-nochekaiser`,
-  // { key: `atelier-ryza-nochekaiser` },
-  { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
+const baseCharactersPreset = [
   { key: `blend-s-kaho-ibukimakisiko` },
-  // { key: `blend-s-maika-shadowxart` },
   { key: `boufuri-sally-king-dong` },
   { key: `danmachi-aiz-eternal2kpp` },
   { key: `danmachi-eina-eternal2kpp` },
@@ -51,23 +46,17 @@ const defaultPreset = [
   { key: `isekai-ojisan-sui-nochekaiser` },
   { key: `isekai-ojisan-sumika-nochekaiser` },
   { key: `kagejitsu-alpha-nochekaiser` },
-  // { key: `kagejitsu-alpha-novowels` },
   { key: `kagejitsu-beta-nochekaiser` },
-  // { key: `kagejitsu-beta-novowels` },
-  // { key: `kaguya-sama-ai-no-lora` },
   { key: `kaguya-sama-ai-nochekaiser` },
   { key: `kaguya-sama-chika-eternal2kpp` },
   { key: `kaguya-sama-kaguya-eternal2kpp` },
   { key: `kaguya-sama-miko-nochekaiser` },
-  // `kaguya-sama-miko`,
   { key: `konosuba-megumin-no-lora` },
   { key: `konosuba-yunyun-no-lora` },
   { key: `lycoris-recoil-chisato-nochekaiser` },
-  { key: `lycoris-recoil-chisato-no-lora` },
   { key: `lycoris-recoil-takina-nochekaiser` },
   { key: `mahoako-matama-notekaga` },
   { key: `mushoku-tensei-sylphiette-little-jelly` },
-  { key: `mushoku-tensei-roxy-ibukimakisiko-pajamas` },
   { key: "new-game-aoba-eternal2kpp" },
   { key: "new-game-hajime-eternal2kpp" },
   { key: "new-game-hifumi-eternal2kpp" },
@@ -87,28 +76,32 @@ const defaultPreset = [
   { key: `slow-loop-hiyori-ibukimakisiko` },
   { key: `slow-loop-koharu-ibukimakisiko` },
   { key: `slow-loop-koi-ibukimakisiko` },
-  { key: `spy-family-yor-eternal2kpp-thorn-princess`, probability: 0.2 },
   { key: `spy-family-yor-eternal2kpp` },
-  { key: `strike-witches-yoshika-gwess`, probability: 0.8 },
-  { key: `strike-witches-yoshika-witch-gwess`, probability: 0.2 },
+  { key: `strike-witches-yoshika-gwess` },
   { key: `tenshi-sama-mahiru-jibunsagasinotabi` },
-  // { key: `tenshi-tsuki-noel-duongve` },
   { key: `tenshi-tsuki-noel-eternal2kpp` },
-  // { key: `tenshi-tsuki-noel-zedotasco` },
   { key: `tenshi-tsuki-towa-eternal2kpp` },
-  // { key: `tenshi-tsuki-tsumugi-duongve` },
   { key: `tenshi-tsuki-tsumugi-eternal2kpp` },
   { key: `to-love-ru-haruna-nochekaiser` },
   { key: `to-love-ru-lala-nochekaiser` },
-  { key: `to-love-ru-momo-lancelot` },
-  { key: `to-love-ru-momo-nochekaiser` },
+  { key: `to-love-ru-momo-lancelot`, probability: 0.5 },
+  { key: `to-love-ru-momo-nochekaiser`, probability: 0.5 },
   { key: `to-love-ru-nana-lancelot` },
   { key: `to-love-ru-nana-nochekaiser` },
   { key: `working-popura-ibukimakisiko` },
 ] as const satisfies CharacterSetting[];
 
+const defaultPreset = [
+  ...baseCharactersPreset,
+  { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
+  { key: `mushoku-tensei-roxy-ibukimakisiko-pajamas`, probability: 0.2 },
+  { key: `spy-family-yor-eternal2kpp-thorn-princess`, probability: 0.2 },
+  { key: `strike-witches-yoshika-witch-gwess`, probability: 0.2 },
+] as const satisfies CharacterSetting[];
+
 export const charactersPreset: CharactersPreset = {
   ...monoCharacterPresetsMap,
 
+  baseCharacters: baseCharactersPreset,
   default: defaultPreset,
 } as const;
