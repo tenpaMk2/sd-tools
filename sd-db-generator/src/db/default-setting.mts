@@ -5,7 +5,7 @@ import { imageResolutionPreset } from "./setting-presets/image-resolution.mjs";
 const portrait = {
   key: `portrait`,
   // fixedPrompt: `score_9, score_8_up, score_7_up, 1girl, solo,\n`,
-  fixedPrompt: `score_9, 1girl, solo, \n`,
+  fixedPrompt: `score_9,\n`,
   txt2imgBodyJson: {
     // negative_prompt: `cameltoe, empty eyes, realistic`,
     negative_prompt: ``,

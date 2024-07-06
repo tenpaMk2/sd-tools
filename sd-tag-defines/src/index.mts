@@ -40,6 +40,10 @@ export {
   allHoldingPoseTags,
 } from "./tag-defines/holding.mjs";
 export type { HoldingItemTag, HoldingPoseTag } from "./tag-defines/holding.mjs";
+export { allPersonCountTags } from "./tag-defines/person-count.mjs";
+export type { PersonCountTag } from "./tag-defines/person-count.mjs";
+export { allPersonRelationTags } from "./tag-defines/person-relation.mjs";
+export type { PersonRelationTag } from "./tag-defines/person-relation.mjs";
 export { allPoseTags } from "./tag-defines/pose.mjs";
 export type { PoseTag } from "./tag-defines/pose.mjs";
 export { allSeriesNameTags } from "./tag-defines/series-name.mjs";

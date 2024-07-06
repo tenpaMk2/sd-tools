@@ -64,6 +64,8 @@ export const sittingOnSinging = (variation: Variation) =>
   ({
     expectedBackgroundType: `sitting-on`,
     cameraAngle: variation,
+    personCountEntries: [`1girl`],
+    personRelationEntries: [`solo`],
     entries: entries[variation],
     visibility: visibility[variation],
     specialVisibility: specialVisibility[variation],

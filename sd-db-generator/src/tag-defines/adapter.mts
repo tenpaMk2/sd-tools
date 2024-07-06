@@ -4,6 +4,8 @@ export type {
   BreastSizeTag,
   CharacterNameTag,
   EmotionTag,
+  PersonCountTag,
+  PersonRelationTag,
   SeriesNameTag,
   SpecialTag,
   VisibilityKey,
@@ -23,6 +25,8 @@ import type {
   HoldingItemTag,
   HoldingPoseTag,
   PoseTag as OriginalPoseTag,
+  PersonCountTag,
+  PersonRelationTag,
   SeriesNameTag,
   SpecialTag,
 } from "@tenpamk2/sd-tag-defines";
@@ -32,6 +36,8 @@ import type {
 } from "../db/lora.mjs";
 
 export type Tag =
+  | PersonCountTag
+  | PersonRelationTag
   | BackgroundTag
   | BodyOutfitTag
   | BodyFeatureTag

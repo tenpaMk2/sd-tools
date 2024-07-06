@@ -14,6 +14,8 @@ import {
   type LoraOutfitTriggerWordsTag,
   type OutfitDefine,
   type OutfitTag,
+  type PersonCountTag,
+  type PersonRelationTag,
   type PoseDefine,
   type PoseSpecialVisibility,
   type PoseTag,
@@ -244,6 +246,16 @@ const buildCore = ({
 }): PromptMaterial => {
   const loraStrings: LoraString[] = [];
 
+  const personCountTokens =
+    PatternCollection.createTokensInstantly<PersonCountTag>(
+      poseData.pose.personCountEntries,
+    );
+
+  const personRelationTokens =
+    PatternCollection.createTokensInstantly<PersonRelationTag>(
+      poseData.pose.personRelationEntries,
+    );
+
   if (characterData.character.lora) {
     const loraPicker = new LoraPicker(characterData.character.lora);
     loraStrings.push(loraPicker.pick());
@@ -346,6 +358,8 @@ const buildCore = ({
 
   const m = new Map<Tag, Token<Tag>>();
   for (const token of [
+    personCountTokens,
+    personRelationTokens,
     loraCharacterTriggerWordTokens,
     seriesNameTokens,
     characterNameTokens,

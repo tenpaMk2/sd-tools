@@ -108,6 +108,8 @@ export type {
   CharacterNameTag,
   EmotionTag,
   OutfitTag,
+  PersonCountTag,
+  PersonRelationTag,
   PoseTag,
   SeriesNameTag,
   SpecialTag,

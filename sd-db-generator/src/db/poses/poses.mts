@@ -1,4 +1,8 @@
-import type { Visibility } from "@tenpamk2/sd-tag-defines";
+import type {
+  PersonCountTag,
+  PersonRelationTag,
+  Visibility,
+} from "@tenpamk2/sd-tag-defines";
 import type { PoseTag, TagEntry } from "../../index.mjs";
 import type {
   BackgroundType,
@@ -58,6 +62,8 @@ export const PoseUnderboobLevelOrder = {
 export type PoseDefine = {
   expectedBackgroundType: BackgroundType;
   cameraAngle: CameraAngle;
+  personCountEntries: TagEntry<PersonCountTag>[];
+  personRelationEntries: TagEntry<PersonRelationTag>[];
   entries: TagEntry<PoseTag>[];
   visibility: Visibility;
   specialVisibility: PoseSpecialVisibility;

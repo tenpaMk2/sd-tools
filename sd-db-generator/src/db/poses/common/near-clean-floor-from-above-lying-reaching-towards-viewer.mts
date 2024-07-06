@@ -5,6 +5,8 @@ export const nearCleanFloorFromAboveLyingReachingTowardsViewer = () =>
   ({
     expectedBackgroundType: `near-clean-floor`,
     cameraAngle: `from-above`,
+    personCountEntries: [`1girl`],
+    personRelationEntries: [`solo`],
     entries: [
       `lying`,
       `on back`,

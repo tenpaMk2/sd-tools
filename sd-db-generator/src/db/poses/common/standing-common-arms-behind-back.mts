@@ -47,6 +47,8 @@ export const standingArmsBehindBack = (variation: Variation) =>
   ({
     expectedBackgroundType: `standing`,
     cameraAngle: variation,
+    personCountEntries: [`1girl`],
+    personRelationEntries: [`solo`],
     entries: entries[variation],
     visibility: {
       frontHead: true,

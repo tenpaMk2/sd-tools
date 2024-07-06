@@ -87,6 +87,8 @@ export const standingArmsUp = (variation: Variation) =>
   ({
     expectedBackgroundType: `standing`,
     cameraAngle: variation,
+    personCountEntries: [`1girl`],
+    personRelationEntries: [`solo`],
     entries: entries[variation],
     visibility: visibility[variation],
     specialVisibility: specialVisibility[variation],
