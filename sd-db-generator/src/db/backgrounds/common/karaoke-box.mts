@@ -13,8 +13,12 @@ const cameraAngle = {
     },
   },
   "sitting-on": {
-    "from-above": { entries: [`indoors`, `karaoke`, `karaoke-box`] },
-    "from-below": { entries: [`indoors`, `karaoke`, `karaoke-box`] },
+    "from-above": {
+      entries: [`indoors`, `karaoke`, `karaoke-box`, `couch`, `on couch`],
+    },
+    "from-below": {
+      entries: [`indoors`, `karaoke`, `karaoke-box`, `couch`, `on couch`],
+    },
     "from-horizontal": {
       entries: [`indoors`, `karaoke`, `karaoke-box`, `couch`, `on couch`],
     },
