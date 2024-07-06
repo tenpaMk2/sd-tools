@@ -67,6 +67,7 @@ const defaultPreset = [
   { key: `lycoris-recoil-takina-nochekaiser` },
   { key: `mahoako-matama-notekaga` },
   { key: `mushoku-tensei-sylphiette-little-jelly` },
+  { key: `mushoku-tensei-roxy-ibukimakisiko-pajamas` },
   { key: "new-game-aoba-eternal2kpp" },
   { key: "new-game-hajime-eternal2kpp" },
   { key: "new-game-hifumi-eternal2kpp" },

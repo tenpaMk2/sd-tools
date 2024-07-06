@@ -1225,6 +1225,7 @@ export const allBodyOutfitVisibilities = {
   "sleeveless": preset.shoulder,
   "sneakers": preset.foot,
   "socks": preset.foot,
+  "spaghetti strap": preset.shoulder,
   "sports bikini": preset.dress,
   "sports bra": preset.bra,
   "sportswear": preset.all,

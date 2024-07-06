@@ -58,6 +58,7 @@ import { konosubaOutfitMegumin } from "./konosuba/megumin-dress.mjs";
 import { konosubaOutfitYunyun } from "./konosuba/yunyun-shirt.mjs";
 import { lycorisRecoilLycorisUniform } from "./lycoris-recoil/lycoris-uniform.mjs";
 import { mahoakoOutfitLocomusica } from "./mahoako/locomusica.mjs";
+import { mushokuTenseiPajamasRoxy } from "./mushoku-tensei/pajamas-roxy.mjs";
 import { newGameOutfitHifumi } from "./new-game/shirt-hifumi.mjs";
 import { newGameOutfitAoba } from "./new-game/suit-aoba.mjs";
 import { prismaIllyaBeastChloe } from "./prisma-illya/chloe-beast.mjs";
@@ -301,6 +302,8 @@ export const characterOutfitTable = {
   "lycoris-recoil-lycoris-uniform-takina-nochekaiser":
     lycorisRecoilLycorisUniform(`takina-nochekaiser`),
   "mahoako-outfit-locomusica-notekaga": mahoakoOutfitLocomusica(`notekaga`),
+  "mushoku-tensei-pajamas-roxy-ibukimakisiko":
+    mushokuTenseiPajamasRoxy(`ibukimakisiko`),
   "new-game-outfit-aoba-eternal2kpp": newGameOutfitAoba(`eternal2kpp`),
   "new-game-outfit-aoba-nochekaiser": newGameOutfitAoba(`nochekaiser`),
   "new-game-outfit-hifumi-eternal2kpp": newGameOutfitHifumi(`eternal2kpp`),

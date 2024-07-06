@@ -26,6 +26,7 @@ export const allCharacterNameTags = [
   `enome`,
   `epsilon \\(kage no jitsuryokusha ni naritakute!\\)`,
   `erica hartmann`,
+  `eris greyrat`,
   `eta \\(kage no jitsuryokusha ni naritakute!\\)`,
   `francesca lucchini`,
   `fujimiya sumika \\(isekai ojisan\\)`,
@@ -100,6 +101,7 @@ export const allCharacterNameTags = [
   `ram \\(re:zero\\)`,
   `reisalin stout`,
   `rem \\(re:zero\\)`,
+  `roxy migurdia`,
   `rumia tingel`,
   `ryu lion`,
   `saegusa mayumi`,
@@ -155,6 +157,7 @@ export const allCharacterNameTags = [
   `yoruka kirihime`,
   `yoshinaga koi`,
   `yui kotegawa`,
+  `yunyun \\(konosuba\\)`,
   `yunyun \\(konosuba\\)`,
   `zeta \\(kage no jitsuryokusha ni naritakute!\\)`,
 ] as const satisfies readonly string[];

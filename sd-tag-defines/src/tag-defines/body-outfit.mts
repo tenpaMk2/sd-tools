@@ -1021,6 +1021,7 @@ export const allBodyOutfitTags = [
   `sleeveless`,
   `sneakers`,
   `socks`,
+  `spaghetti strap`,
   `sports bikini`,
   `sports bra`,
   `sportswear`,

@@ -1202,6 +1202,20 @@ export const loraTable = {
     outfitTriggerTags: [`RumiaSchool`, `RumiaBikini`],
     creator: `LittleJelly`,
   },
+  "roxy_pajamas_PONY_last": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/424801/pony-xl-roxy-migurdia-mushoku-tensei?modelVersionId=614679`,
+    ).toString(),
+    characterTriggerWordsTags: [`roxy migurdia`],
+    outfitTriggerTags: [
+      `roxy-pajamas`,
+      `white spaghetti straps`,
+      `black spaghetti straps`,
+    ],
+    creator: `Ibukimakisiko`,
+  },
   "Ryuu_Lion": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],

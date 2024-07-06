@@ -53,6 +53,7 @@ import { konosubaYunyun } from "./konosuba/yunyun.mjs";
 import { lycorisRecoilChisato } from "./lycoris-recoil/chisato.mjs";
 import { lycorisRecoilTakina } from "./lycoris-recoil/takina.mjs";
 import { mahoakoMatama } from "./mahoako/matama.mjs";
+import { mushokuTenseiRoxy } from "./mushoku-tensei/roxy.mjs";
 import { mushokuTenseiSylphiette } from "./mushoku-tensei/sylphiette.mjs";
 import { newGameAoba } from "./new-game/aoba.mjs";
 import { newGameHajime } from "./new-game/hajime.mjs";
@@ -192,6 +193,9 @@ export const characterTable = {
   "mahoako-matama-notekaga": mahoakoMatama(`notekaga`),
   "mushoku-tensei-sylphiette-little-jelly":
     mushokuTenseiSylphiette(`little-jelly`),
+  "mushoku-tensei-roxy-ibukimakisiko-pajamas": mushokuTenseiRoxy(
+    `ibukimakisiko-pajamas`,
+  ),
   "new-game-aoba-eternal2kpp": newGameAoba(`eternal2kpp`),
   "new-game-aoba-nochekaiser": newGameAoba(`nochekaiser`),
   "new-game-hajime-eternal2kpp": newGameHajime(`eternal2kpp`),

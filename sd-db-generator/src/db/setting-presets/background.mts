@@ -392,6 +392,9 @@ export const backgroundsPreset = {
   "lycoris-recoil-lycoris-uniform-chisato-nochekaiser": casual,
   "lycoris-recoil-lycoris-uniform-takina-nochekaiser": casual,
   "mahoako-outfit-locomusica-notekaga": casual,
+  "mushoku-tensei-pajamas-roxy-ibukimakisiko": [
+    { key: `bed-sheet-steaming-near-clean-floor` },
+  ],
   "new-game-outfit-aoba-eternal2kpp": officeLady,
   "new-game-outfit-aoba-nochekaiser": officeLady,
   "new-game-outfit-hifumi-eternal2kpp": officeLady,

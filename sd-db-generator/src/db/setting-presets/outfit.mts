@@ -387,6 +387,9 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "mushoku-tensei-roxy-ibukimakisiko-pajamas": [
+    { key: `mushoku-tensei-pajamas-roxy-ibukimakisiko` },
+  ],
   "mushoku-tensei-sylphiette-little-jelly": defaultPreset,
   "new-game-aoba-eternal2kpp": [
     ...defaultPreset,
