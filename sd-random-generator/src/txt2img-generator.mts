@@ -374,6 +374,12 @@ export type Txt2ImgBodyJson = Txt2ImgSetting["txt2imgBodyJson"] & {
   prompt: string;
 };
 
+type AlwaysonScripts = {
+  "freeu integrated"?: {
+    args: [boolean, number, number, number, number];
+  };
+};
+
 export class Txt2imgGenerator {
   constructor(readonly option: OptionCollectedData) {}
 
@@ -393,6 +399,20 @@ export class Txt2imgGenerator {
     }
 
     throw new Error(`Unexpected error: No candidate was picked.`);
+  }
+
+  private generateFreeuIntegrated(
+    setting: NonNullable<
+      OptionCollectedData["txt2imgs"][number]["extensions"]
+    >["freeuIntegrated"],
+  ): Pick<AlwaysonScripts, "freeu integrated"> {
+    if (!setting) return {};
+
+    return {
+      "freeu integrated": {
+        args: [setting.enable, setting.b1, setting.b2, setting.s1, setting.s2],
+      },
+    };
   }
 
   generate(): Txt2ImgBodyJson {
@@ -422,6 +442,16 @@ export class Txt2imgGenerator {
       `\n` +
       promptMaterial.loraStrings.join(`\n`);
 
-    return { _key, prompt, ...txt2imgData.txt2imgBodyJson };
+    const freeuIntegrated = this.generateFreeuIntegrated(
+      txt2imgData.extensions?.freeuIntegrated,
+    );
+
+    const alwayson_scripts = { ...freeuIntegrated };
+
+    return {
+      _key,
+      prompt,
+      ...{ alwayson_scripts, ...txt2imgData.txt2imgBodyJson },
+    };
   }
 }

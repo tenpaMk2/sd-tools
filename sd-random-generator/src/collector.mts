@@ -145,6 +145,7 @@ const collectTxt2imgData = ({
   probability,
   fixedPrompt,
   txt2imgBodyJson,
+  extensions,
   characters,
 }: Txt2ImgSetting): Txt2imgCollectedData => {
   const charactersPreset = Database.singleton().charactersPreset;
@@ -158,6 +159,7 @@ const collectTxt2imgData = ({
     probability: probability ?? 1,
     fixedPrompt,
     txt2imgBodyJson,
+    extensions,
     characters: targetCharacters.map(collectCharacter),
   };
 };

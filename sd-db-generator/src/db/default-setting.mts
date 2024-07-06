@@ -19,6 +19,17 @@ const portrait = {
     hr_upscaler: "4x-AnimeSharp",
     hr_second_pass_steps: 0,
   },
+
+  extensions: {
+    freeuIntegrated: {
+      enable: true,
+      b1: 1.3,
+      b2: 1.4,
+      s1: 0.9,
+      s2: 0.2,
+    },
+  },
+
   characters: [
     ...(
       [

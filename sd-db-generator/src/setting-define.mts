@@ -61,7 +61,41 @@ export type Txt2ImgSetting = Readonly<{
     hr_scale: number;
     hr_upscaler: UpscalerName;
     hr_second_pass_steps: number;
+    alwayson_scripts?: any;
   };
+
+  /**
+   * Extension settings.
+   */
+  extensions?: {
+    /**
+     * FreeU Integrated settings on Forge.
+     */
+    freeuIntegrated?: {
+      enable: boolean;
+      /**
+       * B1.
+       * Default is `1.3`.
+       */
+      b1: number;
+      /**
+       * B2.
+       * Default is `1.4`.
+       */
+      b2: number;
+      /**
+       * S1.
+       * Default is `0.9`.
+       */
+      s1: number;
+      /**
+       * S2.
+       * Default is `0.2`.
+       */
+      s2: number;
+    };
+  };
+
   characters?: CharacterSetting[];
 }>;
 

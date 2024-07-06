@@ -98,7 +98,6 @@ const postTxt2img = async (
     batch_size: 1,
     send_images: false,
     save_images: true,
-    alwayson_scripts: {},
     override_settings: {
       samples_filename_pattern,
       do_not_show_images: true,
