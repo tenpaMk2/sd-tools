@@ -58,6 +58,8 @@ import { konosubaOutfitMegumin } from "./konosuba/megumin-dress.mjs";
 import { konosubaOutfitYunyun } from "./konosuba/yunyun-shirt.mjs";
 import { lycorisRecoilLycorisUniform } from "./lycoris-recoil/lycoris-uniform.mjs";
 import { mahoakoOutfitLocomusica } from "./mahoako/locomusica.mjs";
+import { mushokuTenseiOutfitRoxy } from "./mushoku-tensei/outfit-roxy.mjs";
+import { mushokuTenseiOversizedShirtRoxy } from "./mushoku-tensei/oversized-shirt-roxy.mjs";
 import { mushokuTenseiPajamasRoxy } from "./mushoku-tensei/pajamas-roxy.mjs";
 import { newGameOutfitHifumi } from "./new-game/shirt-hifumi.mjs";
 import { newGameOutfitAoba } from "./new-game/suit-aoba.mjs";
@@ -143,7 +145,7 @@ export type OutfitDefine = Readonly<{
     /**
      * Lift type for clothes lift.
      */
-    liftType: `skirt` | `dress`;
+    liftType: `skirt` | `dress` | `shirt`;
     /**
      * Outfit and exposure defines in the skirt for when `upskirt` is specified.
      */
@@ -302,6 +304,18 @@ export const characterOutfitTable = {
   "lycoris-recoil-lycoris-uniform-takina-nochekaiser":
     lycorisRecoilLycorisUniform(`takina-nochekaiser`),
   "mahoako-outfit-locomusica-notekaga": mahoakoOutfitLocomusica(`notekaga`),
+  "mushoku-tensei-outfit-roxy-adventurer-indoors-ibukimakisiko":
+    mushokuTenseiOutfitRoxy(`adventurer-indoors-ibukimakisiko`),
+  "mushoku-tensei-outfit-roxy-adventurer-outdoors-ibukimakisiko":
+    mushokuTenseiOutfitRoxy(`adventurer-outdoors-ibukimakisiko`),
+  "mushoku-tensei-outfit-roxy-indoors-ibukimakisiko": mushokuTenseiOutfitRoxy(
+    `indoors-ibukimakisiko`,
+  ),
+  "mushoku-tensei-outfit-roxy-outdoors-ibukimakisiko": mushokuTenseiOutfitRoxy(
+    `outdoors-ibukimakisiko`,
+  ),
+  "mushoku-tensei-oversized-shirt-roxy-ibukimakisiko":
+    mushokuTenseiOversizedShirtRoxy(`ibukimakisiko`),
   "mushoku-tensei-pajamas-roxy-ibukimakisiko":
     mushokuTenseiPajamasRoxy(`ibukimakisiko`),
   "new-game-outfit-aoba-eternal2kpp": newGameOutfitAoba(`eternal2kpp`),

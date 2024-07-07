@@ -4,6 +4,7 @@ import { beach } from "./common/beach.mjs";
 import { bedSheet } from "./common/bed-sheet.mjs";
 import { bedroom } from "./common/bedroom.mjs";
 import { blueSkyConfetti } from "./common/blue-sky-confetti.mjs";
+import { bookshelf } from "./common/bookshelf.mjs";
 import { cafe } from "./common/cafe.mjs";
 import { casino } from "./common/casino.mjs";
 import { christmas } from "./common/christmas.mjs";
@@ -61,6 +62,11 @@ export const backgroundTable = {
     backgroundType: `standing`,
   }),
   "blue-sky-confetti-standing": blueSkyConfetti({ backgroundType: `standing` }),
+  "bookshelf-near-clean-floor": bookshelf({
+    backgroundType: `near-clean-floor`,
+  }),
+  "bookshelf-sitting-on": bookshelf({ backgroundType: `sitting-on` }),
+  "bookshelf-standing": bookshelf({ backgroundType: `standing` }),
   "cafe-standing": cafe({ backgroundType: `standing` }),
   "casino-sitting-on": casino({ backgroundType: `sitting-on` }),
   "casino-standing": casino({ backgroundType: `standing` }),

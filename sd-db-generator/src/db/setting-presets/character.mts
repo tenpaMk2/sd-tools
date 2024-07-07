@@ -57,6 +57,7 @@ const baseCharactersPreset = [
   { key: `lycoris-recoil-takina-nochekaiser` },
   { key: `mahoako-matama-notekaga` },
   { key: `mushoku-tensei-sylphiette-little-jelly` },
+  { key: `mushoku-tensei-roxy-ibukimakisiko` },
   { key: "new-game-aoba-eternal2kpp" },
   { key: "new-game-hajime-eternal2kpp" },
   { key: "new-game-hifumi-eternal2kpp" },
@@ -94,7 +95,14 @@ const baseCharactersPreset = [
 const defaultPreset = [
   ...baseCharactersPreset,
   { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
-  { key: `mushoku-tensei-roxy-ibukimakisiko-pajamas`, probability: 0.2 },
+  { key: `mushoku-tensei-roxy-adventurer-ibukimakisiko`, probability: 0.05 },
+  {
+    key: `mushoku-tensei-roxy-adventurer-no-ahoge-ibukimakisiko`,
+    probability: 0.05,
+  },
+  { key: `mushoku-tensei-roxy-hair-down-ibukimakisiko`, probability: 0.05 },
+  { key: `mushoku-tensei-roxy-no-ahoge-ibukimakisiko`, probability: 0.05 },
+  { key: `mushoku-tensei-roxy-pajamas-ibukimakisiko`, probability: 0.05 },
   { key: `spy-family-yor-eternal2kpp-thorn-princess`, probability: 0.2 },
   { key: `strike-witches-yoshika-witch-gwess`, probability: 0.2 },
 ] as const satisfies CharacterSetting[];

@@ -173,6 +173,12 @@ const garden = [
   },
 ] as const satisfies BackgroundSetting[];
 
+const bookshelf = [
+  { key: `bookshelf-near-clean-floor` },
+  { key: `bookshelf-sitting-on`, probability: 0.3 },
+  { key: `bookshelf-standing` },
+] as const satisfies BackgroundSetting[];
+
 export const backgroundsPreset = {
   "default": [
     { key: `colorful-background-standing` },
@@ -392,8 +398,17 @@ export const backgroundsPreset = {
   "lycoris-recoil-lycoris-uniform-chisato-nochekaiser": casual,
   "lycoris-recoil-lycoris-uniform-takina-nochekaiser": casual,
   "mahoako-outfit-locomusica-notekaga": casual,
+  "mushoku-tensei-outfit-roxy-adventurer-indoors-ibukimakisiko": bookshelf,
+  "mushoku-tensei-outfit-roxy-adventurer-outdoors-ibukimakisiko": isekai,
+  "mushoku-tensei-outfit-roxy-indoors-ibukimakisiko": bookshelf,
+  "mushoku-tensei-outfit-roxy-outdoors-ibukimakisiko": isekai,
+  "mushoku-tensei-oversized-shirt-roxy-ibukimakisiko": [
+    { key: `bed-sheet-steaming-near-clean-floor`, probability: 3 },
+    ...bedroom,
+  ],
   "mushoku-tensei-pajamas-roxy-ibukimakisiko": [
-    { key: `bed-sheet-steaming-near-clean-floor` },
+    { key: `bed-sheet-steaming-near-clean-floor`, probability: 3 },
+    ...bedroom,
   ],
   "new-game-outfit-aoba-eternal2kpp": officeLady,
   "new-game-outfit-aoba-nochekaiser": officeLady,

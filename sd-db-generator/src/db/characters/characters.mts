@@ -193,8 +193,21 @@ export const characterTable = {
   "mahoako-matama-notekaga": mahoakoMatama(`notekaga`),
   "mushoku-tensei-sylphiette-little-jelly":
     mushokuTenseiSylphiette(`little-jelly`),
-  "mushoku-tensei-roxy-ibukimakisiko-pajamas": mushokuTenseiRoxy(
-    `ibukimakisiko-pajamas`,
+  "mushoku-tensei-roxy-adventurer-ibukimakisiko": mushokuTenseiRoxy(
+    `adventurer-ibukimakisiko`,
+  ),
+  "mushoku-tensei-roxy-adventurer-no-ahoge-ibukimakisiko": mushokuTenseiRoxy(
+    `adventurer-no-ahoge-ibukimakisiko`,
+  ),
+  "mushoku-tensei-roxy-hair-down-ibukimakisiko": mushokuTenseiRoxy(
+    `hair-down-ibukimakisiko`,
+  ),
+  "mushoku-tensei-roxy-ibukimakisiko": mushokuTenseiRoxy(`ibukimakisiko`),
+  "mushoku-tensei-roxy-no-ahoge-ibukimakisiko": mushokuTenseiRoxy(
+    `no-ahoge-ibukimakisiko`,
+  ),
+  "mushoku-tensei-roxy-pajamas-ibukimakisiko": mushokuTenseiRoxy(
+    `pajamas-ibukimakisiko`,
   ),
   "new-game-aoba-eternal2kpp": newGameAoba(`eternal2kpp`),
   "new-game-aoba-nochekaiser": newGameAoba(`nochekaiser`),

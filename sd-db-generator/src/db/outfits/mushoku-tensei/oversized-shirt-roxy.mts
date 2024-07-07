@@ -2,37 +2,33 @@ import type { OutfitDefine } from "../outfits.mjs";
 import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `ibukimakisiko`;
+
 const loraOutfitTriggerWordEntries = {
-  ibukimakisiko: [`roxy-pajamas`],
+  ibukimakisiko: [`roxy-default`],
 } as const satisfies Record<
   Variation,
   OutfitDefine["loraOutfitTriggerWordEntries"]
 >;
 
-export const mushokuTenseiPajamasRoxy = (variation: Variation) =>
+export const mushokuTenseiOversizedShirtRoxy = (variation: Variation) =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],
     outfitEntries: [
-      `dress`,
-      `white dress`,
-      `frills`,
-      `frilled dress`,
-      `bare shoulders`,
-      `spaghetti strap`,
-      `white spaghetti straps`,
-      `black spaghetti straps`,
-      `off shoulder`,
-      `shoulder blades`,
-      `short dress`,
+      `shirt`,
+      { tag: `white shirt`, weight: 1.2 },
+      `oversized shirt`,
+      `long sleeves`,
+      // `t-shirt`, // Don't specify because a logo mark appears on the chest.
+      `no pants`,
       `bare legs`,
       `barefoot`,
     ],
     specialVisibility: {
-      armpits: true,
+      armpits: false,
       hangingBreasts: false,
       tautClothes: false,
-      cleavage: true,
+      cleavage: false,
       sideboob: false,
       backboob: false,
       underboobLevel: `invisible`,
@@ -40,7 +36,7 @@ export const mushokuTenseiPajamasRoxy = (variation: Variation) =>
       insideOfThighs: false,
     },
     upskirt: {
-      liftType: `skirt`,
+      liftType: `shirt`,
       entries: upskirtPreset.whitePanties,
     },
     whenRemoveShoes: null,

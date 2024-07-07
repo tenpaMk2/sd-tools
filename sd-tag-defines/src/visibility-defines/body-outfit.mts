@@ -369,6 +369,21 @@ const allChokerColorVisibilities = {
   "yellow choker": preset.collar,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allCloakColorVisibilities = {
+  "aqua cloak": preset.dress,
+  "black cloak": preset.dress,
+  "blue cloak": preset.dress,
+  "brown cloak": preset.dress,
+  "green cloak": preset.dress,
+  "grey cloak": preset.dress,
+  "orange cloak": preset.dress,
+  "pink cloak": preset.dress,
+  "purple cloak": preset.dress,
+  "red cloak": preset.dress,
+  "white cloak": preset.dress,
+  "yellow cloak": preset.dress,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allCoatColorVisibilities = {
   "aqua coat": preset.dress,
   "black coat": preset.dress,
@@ -909,6 +924,7 @@ export const allBodyOutfitVisibilities = {
   ...allCapeColorVisibilities,
   ...allCapeletColorVisibilities,
   ...allChokerColorVisibilities,
+  ...allCloakColorVisibilities,
   ...allCoatColorVisibilities,
   ...allCollarColorVisibilities,
   ...allDistinguishableOutfitVisibilities,
@@ -972,6 +988,7 @@ export const allBodyOutfitVisibilities = {
   "bikini top only": preset.shirt,
   "bikini": preset.dress,
   "black footwear": preset.foot,
+  "black spaghetti straps": preset.shoulder, // For `mushoku-tensei-outfit-roxy-ibukimakisiko` .
   "blazer": preset.shirt,
   "bodystocking": preset.all,
   "bodysuit": preset.all,
@@ -1149,6 +1166,8 @@ export const allBodyOutfitVisibilities = {
   "open shirt": preset.shirt,
   "open-chest sweater": preset.shirt,
   "overalls": preset.dress,
+  "oversized clothes": preset.dress,
+  "oversized shirt": preset.shirt,
   "panties under pantyhose": preset.panties,
   "panties": preset.panties,
   "pants": preset.thighs,
@@ -1223,6 +1242,7 @@ export const allBodyOutfitVisibilities = {
   "sleeveless jacket": preset.shirt,
   "sleeveless shirt": preset.shirt,
   "sleeveless": preset.shoulder,
+  "sleeves past wrists": preset["wrist cuffs"],
   "sneakers": preset.foot,
   "socks": preset.foot,
   "spaghetti strap": preset.shoulder,
@@ -1260,6 +1280,7 @@ export const allBodyOutfitVisibilities = {
   "unbuttoned": preset.bowtie,
   "underboob cutout": preset.bowtie,
   "underbust": preset.underbust,
+  "undersized clothes": preset.dress,
   "underwear only": preset.dress,
   "underwear": preset.dress,
   "uniform": preset.all,
@@ -1268,7 +1289,8 @@ export const allBodyOutfitVisibilities = {
   "waist apron": preset.skirt,
   "waitress": preset.all,
   "wedding dress": preset.dress,
-  "white cloak": preset.dress,
+  "white boots": preset.foot, // For `mushoku-tensei-outfit-roxy-ibukimakisiko` .
+  "white spaghetti straps": preset.shoulder, // For `mushoku-tensei-outfit-roxy-ibukimakisiko` .
   "white towel": preset.dress,
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],

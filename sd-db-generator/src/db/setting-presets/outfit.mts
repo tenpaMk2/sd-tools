@@ -387,7 +387,26 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "mushoku-tensei-roxy-ibukimakisiko-pajamas": [
+  "mushoku-tensei-roxy-adventurer-ibukimakisiko": [
+    { key: `mushoku-tensei-outfit-roxy-adventurer-indoors-ibukimakisiko` },
+  ],
+  "mushoku-tensei-roxy-adventurer-no-ahoge-ibukimakisiko": [
+    { key: `mushoku-tensei-outfit-roxy-adventurer-outdoors-ibukimakisiko` },
+  ],
+  "mushoku-tensei-roxy-hair-down-ibukimakisiko": [
+    { key: `mushoku-tensei-oversized-shirt-roxy-ibukimakisiko` },
+  ],
+  "mushoku-tensei-roxy-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `mushoku-tensei-outfit-roxy-indoors-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "mushoku-tensei-roxy-no-ahoge-ibukimakisiko": [
+    { key: `mushoku-tensei-outfit-roxy-outdoors-ibukimakisiko` },
+  ],
+  "mushoku-tensei-roxy-pajamas-ibukimakisiko": [
     { key: `mushoku-tensei-pajamas-roxy-ibukimakisiko` },
   ],
   "mushoku-tensei-sylphiette-little-jelly": defaultPreset,

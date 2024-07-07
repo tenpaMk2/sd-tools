@@ -1202,6 +1202,26 @@ export const loraTable = {
     outfitTriggerTags: [`RumiaSchool`, `RumiaBikini`],
     creator: `LittleJelly`,
   },
+  "roxy_outfit1_PONY_epoch-000020": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/424801?modelVersionId=473292`,
+    ).toString(),
+    characterTriggerWordsTags: [`roxy migurdia`],
+    outfitTriggerTags: [`roxy-outfit1`, `roxy-inner1`, `roxy-default`],
+    creator: `Ibukimakisiko`,
+  },
+  "roxy_outfit2_PONY_epoch-000020": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/424801?modelVersionId=473298`,
+    ).toString(),
+    characterTriggerWordsTags: [`roxy migurdia`],
+    outfitTriggerTags: [`roxy-outfit2`, `roxy-inner2`, `roxy-default`],
+    creator: `Ibukimakisiko`,
+  },
   "roxy_pajamas_PONY_last": {
     recommendedWeight: 1.0,
     supportedBaseModels: [`Pony`],
@@ -1209,11 +1229,7 @@ export const loraTable = {
       `https://civitai.com/models/424801/pony-xl-roxy-migurdia-mushoku-tensei?modelVersionId=614679`,
     ).toString(),
     characterTriggerWordsTags: [`roxy migurdia`],
-    outfitTriggerTags: [
-      `roxy-pajamas`,
-      `white spaghetti straps`,
-      `black spaghetti straps`,
-    ],
+    outfitTriggerTags: [`roxy-pajamas`],
     creator: `Ibukimakisiko`,
   },
   "Ryuu_Lion": {

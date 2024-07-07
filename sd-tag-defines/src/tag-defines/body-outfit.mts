@@ -167,6 +167,21 @@ const allChokerColorTags = [
   `yellow choker`,
 ] as const satisfies string[];
 
+const allCloakColorTags = [
+  `aqua cloak`,
+  `black cloak`,
+  `blue cloak`,
+  `brown cloak`,
+  `green cloak`,
+  `grey cloak`,
+  `orange cloak`,
+  `pink cloak`,
+  `purple cloak`,
+  `red cloak`,
+  `white cloak`,
+  `yellow cloak`,
+] as const satisfies string[];
+
 const allCoatColorTags = [
   `aqua coat`,
   `black coat`,
@@ -706,6 +721,7 @@ export const allBodyOutfitTags = [
   ...allCapeColorTags,
   ...allCapeletColorTags,
   ...allChokerColorTags,
+  ...allCloakColorTags,
   ...allCoatColorTags,
   ...allCollarColorTags,
   ...allDressColorTags,
@@ -768,6 +784,7 @@ export const allBodyOutfitTags = [
   `bikini skirt`,
   `bikini top only`,
   `bikini`,
+  `black spaghetti straps`, // For `mushoku-tensei-pajamas-roxy-ibukimakisiko` .
   `blazer`,
   `bodystocking`,
   `bodysuit`,
@@ -945,6 +962,8 @@ export const allBodyOutfitTags = [
   `open shirt`,
   `open-chest sweater`,
   `overalls`,
+  `oversized clothes`,
+  `oversized shirt`,
   `panties under pantyhose`,
   `panties`,
   `pants`,
@@ -1019,6 +1038,7 @@ export const allBodyOutfitTags = [
   `sleeveless jacket`,
   `sleeveless shirt`,
   `sleeveless`,
+  `sleeves past wrists`,
   `sneakers`,
   `socks`,
   `spaghetti strap`,
@@ -1056,6 +1076,7 @@ export const allBodyOutfitTags = [
   `unbuttoned`,
   `underboob cutout`,
   `underbust`,
+  `undersized clothes`,
   `underwear only`,
   `underwear`,
   `uniform`,
@@ -1064,7 +1085,8 @@ export const allBodyOutfitTags = [
   `waist apron`,
   `waitress`,
   `wedding dress`,
-  `white cloak`,
+  `white boots`, // For `mushoku-tensei-outfit-roxy-ibukimakisiko` .
+  `white spaghetti straps`, // For `mushoku-tensei-pajamas-roxy-ibukimakisiko` .
   `white towel`,
   `wide sleeves`,
   `wrist cuffs`,
