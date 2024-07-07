@@ -26,7 +26,7 @@ export class Token<T extends Tag> {
     const tag =
       distinguishableTagTable[this.tag as DistinguishableTag] ?? this.tag;
 
-    return this.weight === 1.0 ? tag : `${tag}:${this.weight}`;
+    return this.weight === 1.0 ? tag : `(${tag}:${this.weight})`;
   }
 }
 
