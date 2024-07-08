@@ -4,6 +4,7 @@ export const allSeriesNameTags = [
   `atelier \\(series\\)`,
   `atelier ryza`,
   `blend s`,
+  `blue archive`,
   `bocchi the rock!`,
   `boku no hero academia`,
   `brave witches`,

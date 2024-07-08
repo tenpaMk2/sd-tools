@@ -498,6 +498,21 @@ const allSleevesColorTags = [
   `yellow sleeves`,
 ] as const satisfies string[];
 
+const allSneakersColorTags = [
+  `aqua sneakers`,
+  `black sneakers`,
+  `blue sneakers`,
+  `brown sneakers`,
+  `green sneakers`,
+  `grey sneakers`,
+  `orange sneakers`,
+  `pink sneakers`,
+  `purple sneakers`,
+  `red sneakers`,
+  `white sneakers`,
+  `yellow sneakers`,
+] as const satisfies string[];
+
 const allSocksColorTags = [
   `black socks`,
   `blue socks`,
@@ -743,6 +758,7 @@ export const allBodyOutfitTags = [
   ...allShortsColorTags,
   ...allSkirtColorTags,
   ...allSleevesColorTags,
+  ...allSneakersColorTags,
   ...allSocksColorTags,
   ...allSportsBraColorTags,
   ...allSweaterColorTags,
@@ -882,6 +898,7 @@ export const allBodyOutfitTags = [
   `habit`,
   `hakama skirt`,
   `hakama`,
+  `half gloves`,
   `halterneck`,
   `harem outfit`,
   `harem pants`,
@@ -892,6 +909,7 @@ export const allBodyOutfitTags = [
   `hood up`,
   `hood`,
   `hooded cloak`,
+  `id card`,
   `infinite stratos academy school uniform`,
   `jacket`,
   `jersey`, // Don't confuse with `track jacket`.
@@ -1067,6 +1085,7 @@ export const allBodyOutfitTags = [
   `thighhighs`,
   `tight clothes`,
   `tokiwadai school uniform`,
+  `track jacket`,
   `trench coat`,
   `turtleneck bodysuit`,
   `turtleneck sweater`,

@@ -701,6 +701,21 @@ const allSleevesColorVisibilities = {
   "yellow sleeves": preset.shoulder,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allSneakersColorVisibilities = {
+  "aqua sneakers": preset.foot,
+  "black sneakers": preset.foot,
+  "blue sneakers": preset.foot,
+  "brown sneakers": preset.foot,
+  "green sneakers": preset.foot,
+  "grey sneakers": preset.foot,
+  "orange sneakers": preset.foot,
+  "pink sneakers": preset.foot,
+  "purple sneakers": preset.foot,
+  "red sneakers": preset.foot,
+  "white sneakers": preset.foot,
+  "yellow sneakers": preset.foot,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allSocksColorVisibilities = {
   "black socks": preset.foot,
   "blue socks": preset.foot,
@@ -947,6 +962,7 @@ export const allBodyOutfitVisibilities = {
   ...allShortsColorVisibilities,
   ...allSkirtColorVisibilities,
   ...allSleevesColorVisibilities,
+  ...allSneakersColorVisibilities,
   ...allSocksColorVisibilities,
   ...allSportsBraColorVisibilities,
   ...allSweaterColorVisibilities,
@@ -1086,6 +1102,7 @@ export const allBodyOutfitVisibilities = {
   "habit": preset.all,
   "hakama skirt": preset.skirt,
   "hakama": preset.shirt,
+  "half gloves": preset["wrist cuffs"],
   "halterneck": preset.collar,
   "harem outfit": preset.dress,
   "harem pants": preset.skirt,
@@ -1096,6 +1113,7 @@ export const allBodyOutfitVisibilities = {
   "hood up": preset.hat,
   "hood": preset.hat,
   "hooded cloak": preset.dress,
+  "id card": preset.bowtie,
   "infinite stratos academy school uniform": preset.all,
   "jacket": preset.shirt,
   "jersey": preset.shirt,
@@ -1271,6 +1289,7 @@ export const allBodyOutfitVisibilities = {
   "thighhighs": preset.thighhighs,
   "tight clothes": preset.shirt,
   "tokiwadai school uniform": preset.all,
+  "track jacket": preset.shirt,
   "trench coat": preset.dress,
   "turtleneck bodysuit": preset.collar,
   "turtleneck sweater": preset.collar,

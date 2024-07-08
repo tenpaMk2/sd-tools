@@ -156,6 +156,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  "arona_blue archive_PONY_last": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/346643/pony-xl-arona-blue-archive?modelVersionId=387912`,
+    ).toString(),
+    characterTriggerWordsTags: [`arona \\(blue archive\\)`],
+    outfitTriggerTags: [],
+    creator: `Ibukimakisiko`,
+  },
   "beta-pdxl-nvwls-v1": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
@@ -1591,6 +1601,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`Yun Iijima`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
+  },
+  "yuuka_blue archive_PONY_last": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/374498/pony-xl-hayase-yuuka-blue-archive?modelVersionId=418259`,
+    ).toString(),
+    characterTriggerWordsTags: [`yuuka \\(blue archive\\)`],
+    outfitTriggerTags: [`yuuka-default`, `yuuka-gym`],
+    creator: `Ibukimakisiko`,
   },
 } as const satisfies Record<string, LoraDefine>;
 

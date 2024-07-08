@@ -18,6 +18,8 @@ const monoCharacterPresetsMap = Object.fromEntries(
 
 const baseCharactersPreset = [
   { key: `blend-s-kaho-ibukimakisiko` },
+  { key: `blue-archive-arona-ibukimakisiko` },
+  { key: `blue-archive-yuuka-ibukimakisiko` },
   { key: `boufuri-sally-king-dong` },
   { key: `danmachi-aiz-eternal2kpp` },
   { key: `danmachi-eina-eternal2kpp` },
@@ -95,6 +97,7 @@ const baseCharactersPreset = [
 const defaultPreset = [
   ...baseCharactersPreset,
   { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
+  { key: `blue-archive-yuuka-gym-ibukimakisiko`, probability: 0.2 },
   { key: `mushoku-tensei-roxy-adventurer-ibukimakisiko`, probability: 0.05 },
   {
     key: `mushoku-tensei-roxy-adventurer-no-ahoge-ibukimakisiko`,

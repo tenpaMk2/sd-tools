@@ -74,6 +74,27 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "blue-archive-arona-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `blue-archive-school-uniform-arona-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "blue-archive-yuuka-gym-ibukimakisiko": [
+    { key: `blue-archive-gym-uniform-yuuka-ibukimakisiko` },
+  ],
+  "blue-archive-yuuka-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `blue-archive-school-uniform-yuuka-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `blue-archive-school-uniform-yuuka-shirt-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "boufuri-sally-king-dong": [
     ...defaultPreset,
     {

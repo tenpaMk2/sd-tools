@@ -5,6 +5,8 @@ import { amaburiRedUniformIsuzu } from "./amaburi/red-uniform-isuzu.mjs";
 import { blendSSchoolUniform } from "./blend-s/school-uniform.mjs";
 import { blendSSwimsuit } from "./blend-s/swimsuit.mjs";
 import { blendSWaitress } from "./blend-s/waitress.mjs";
+import { blueArchiveGymUniform } from "./blue-archive/gym-uniform.mjs";
+import { blueArchiveSchoolUniform } from "./blue-archive/school-uniform.mjs";
 import { boufuriOutfitSally } from "./boufuri/outfit-sally.mjs";
 import { babydoll } from "./common/babydoll.mjs";
 import { bikini } from "./common/bikini.mjs";
@@ -224,6 +226,14 @@ export const characterOutfitTable = {
   "blend-s-waitress-maika-shadowxart": blendSWaitress(`maika-shadowxart`),
   "blend-s-waitress-mafuyu-ibukimakisiko":
     blendSWaitress(`mafuyu-ibukimakisiko`),
+  "blue-archive-gym-uniform-yuuka-ibukimakisiko":
+    blueArchiveGymUniform(`yuuka-ibukimakisiko`),
+  "blue-archive-school-uniform-arona-ibukimakisiko":
+    blueArchiveSchoolUniform(`arona-ibukimakisiko`),
+  "blue-archive-school-uniform-yuuka-ibukimakisiko":
+    blueArchiveSchoolUniform(`yuuka-ibukimakisiko`),
+  "blue-archive-school-uniform-yuuka-shirt-ibukimakisiko":
+    blueArchiveSchoolUniform(`yuuka-shirt-ibukimakisiko`),
   "boufuri-outfit-sally-king-dong": boufuriOutfitSally(`king-dong`),
   "danmachi-white-dress-hestia-eternal2kpp":
     danmachiWhiteDressHestia(`eternal2kpp`),

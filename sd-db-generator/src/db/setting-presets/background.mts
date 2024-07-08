@@ -47,6 +47,19 @@ const casual = [
 ] as const satisfies BackgroundSetting[];
 
 const student = [
+  { key: `classroom-chalkboard-sitting-on` },
+  { key: `classroom-chalkboard-standing` },
+  { key: `classroom-window-sitting-on` },
+  { key: `classroom-window-standing` },
+  { key: `bed-sheet-steaming-near-clean-floor`, probability: 2 },
+  { key: `city-sitting-on`, probability: 0.5 },
+  { key: `city-standing` },
+  { key: `cafe-standing` },
+  { key: `karaoke-box-sitting-on`, probability: 0.2 },
+  { key: `karaoke-box-standing`, probability: 0.2 },
+] as const satisfies BackgroundSetting[];
+
+const nearFeatureStudent = [
   { key: `bed-sheet-steaming-near-clean-floor`, probability: 2 },
   { key: `city-sitting-on`, probability: 0.5 },
   { key: `city-standing` },
@@ -76,26 +89,6 @@ const grass = [
   { key: `grass-sitting-on`, probability: defaultPreset.length },
   { key: `grass-near-clean-floor`, probability: defaultPreset.length },
   { key: `grass-standing`, probability: defaultPreset.length },
-] as const satisfies BackgroundSetting[];
-
-const classroom = [
-  ...defaultPreset,
-  {
-    key: `classroom-chalkboard-sitting-on`,
-    probability: defaultPreset.length,
-  },
-  {
-    key: `classroom-chalkboard-standing`,
-    probability: defaultPreset.length,
-  },
-  {
-    key: `classroom-window-sitting-on`,
-    probability: defaultPreset.length,
-  },
-  {
-    key: `classroom-window-standing`,
-    probability: defaultPreset.length,
-  },
 ] as const satisfies BackgroundSetting[];
 
 const bedroom = [
@@ -216,7 +209,7 @@ export const backgroundsPreset = {
   "china-dress": defaultPreset,
   "cow-print-bikini": grass,
   "denim-bikini": ocean,
-  "formal-suit": classroom,
+  "formal-suit": student,
   "gym-uniform": sports,
   "harem-outfit": [
     ...defaultPreset,
@@ -273,7 +266,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
-  "school-uniform-bowtie": classroom,
+  "school-uniform-bowtie": student,
   "sports-bikini": sports,
   "sukumizu-thighhighs": defaultPreset,
   "sukumizu": [
@@ -346,6 +339,10 @@ export const backgroundsPreset = {
   "blend-s-waitress-kaho-ibukimakisiko": cafe,
   "blend-s-waitress-maika-shadowxart": cafe,
   "blend-s-waitress-mafuyu-ibukimakisiko": cafe,
+  "blue-archive-gym-uniform-yuuka-ibukimakisiko": sports,
+  "blue-archive-school-uniform-arona-ibukimakisiko": nearFeatureStudent,
+  "blue-archive-school-uniform-yuuka-ibukimakisiko": nearFeatureStudent,
+  "blue-archive-school-uniform-yuuka-shirt-ibukimakisiko": nearFeatureStudent,
   "boufuri-outfit-sally-king-dong": isekai,
   "danmachi-white-dress-hestia-eternal2kpp": defaultPreset,
   "danmachi-white-dress-hestia-no-lora": defaultPreset,
@@ -432,7 +429,7 @@ export const backgroundsPreset = {
   "rokudenashi-bikini-rumia-little-jelly": ocean,
   "rokudenashi-school-uniform-summer-little-jelly": garden,
   "rokudenashi-school-uniform-winter-little-jelly": garden,
-  "sasuoni-first-high-school-uniform-nochekaiser": garden,
+  "sasuoni-first-high-school-uniform-nochekaiser": nearFeatureStudent,
   "seirei-outfit-celia-ibukimakisiko": [
     ...isekai,
     {

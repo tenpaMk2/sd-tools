@@ -112,6 +112,7 @@ export const allBodyFeatureVisibilities = {
   "fox girl": preset.all,
   "fox tail": preset.longTail,
   "gyaru": preset.all,
+  "halo": preset.head,
   "loli": preset.all,
   "mature female": preset.all,
   "pointy ears": preset.shortTail,

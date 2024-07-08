@@ -13,6 +13,8 @@ import { atelierRyza } from "./atelier/ryza.mjs";
 import { blendSKaho } from "./blend-s/kaho.mjs";
 import { blendSMafuyu } from "./blend-s/mafuyu.mjs";
 import { blendSMaika } from "./blend-s/maika.mjs";
+import { blueArchiveArona } from "./blue-archive/arona.mjs";
+import { blueArchiveYuuka } from "./blue-archive/yuuka.mjs";
 import { boufuriSally } from "./boufuri/sally.mjs";
 import { danmachiAiz } from "./danmachi/aiz.mjs";
 import { danmachiEina } from "./danmachi/eina.mjs";
@@ -140,6 +142,9 @@ export const characterTable = {
   "blend-s-kaho-ibukimakisiko": blendSKaho(`ibukimakisiko`),
   "blend-s-mafuyu-ibukimakisiko": blendSMafuyu(`ibukimakisiko`),
   "blend-s-maika-shadowxart": blendSMaika(`shadowxart`),
+  "blue-archive-arona-ibukimakisiko": blueArchiveArona(`ibukimakisiko`),
+  "blue-archive-yuuka-gym-ibukimakisiko": blueArchiveYuuka(`gym-ibukimakisiko`),
+  "blue-archive-yuuka-ibukimakisiko": blueArchiveYuuka(`ibukimakisiko`),
   "boufuri-sally-king-dong": boufuriSally(`king-dong`),
   "danmachi-aiz-eternal2kpp": danmachiAiz(`eternal2kpp`),
   "danmachi-eina-eternal2kpp": danmachiEina(`eternal2kpp`),
