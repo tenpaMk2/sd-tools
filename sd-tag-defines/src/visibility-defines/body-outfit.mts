@@ -1055,6 +1055,7 @@ export const allBodyOutfitVisibilities = {
   "cow print gloves": preset["wrist cuffs"],
   "cow print thighhighs": preset.thighhighs,
   "cow print": preset.dress,
+  "crisis management form \\(machimazo\\)": preset.all,
   "criss-cross halter": preset.bowtie,
   "crop top overhang": preset.bowtie,
   "crop top": preset.shirt,
@@ -1306,6 +1307,7 @@ export const allBodyOutfitVisibilities = {
   "vest": preset.shirt,
   "volleyball uniform": preset.all,
   "waist apron": preset.skirt,
+  "waist cape": preset.skirt,
   "waitress": preset.all,
   "wedding dress": preset.dress,
   "white boots": preset.foot, // For `mushoku-tensei-outfit-roxy-ibukimakisiko` .

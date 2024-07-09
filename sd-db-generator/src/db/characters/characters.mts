@@ -54,6 +54,7 @@ import { konosubaMegumin } from "./konosuba/megumin.mjs";
 import { konosubaYunyun } from "./konosuba/yunyun.mjs";
 import { lycorisRecoilChisato } from "./lycoris-recoil/chisato.mjs";
 import { lycorisRecoilTakina } from "./lycoris-recoil/takina.mjs";
+import { machikadoMazokuShamiko } from "./machikado-mazoku/shamiko.mjs";
 import { mahoakoMatama } from "./mahoako/matama.mjs";
 import { mushokuTenseiRoxy } from "./mushoku-tensei/roxy.mjs";
 import { mushokuTenseiSylphiette } from "./mushoku-tensei/sylphiette.mjs";
@@ -195,6 +196,11 @@ export const characterTable = {
   "lycoris-recoil-takina-nochekaiser-booru":
     lycorisRecoilTakina(`nochekaiser-booru`),
   "lycoris-recoil-takina-nochekaiser": lycorisRecoilTakina(`nochekaiser`),
+  "machikado-mazoku-shamiko-ibukimakisiko":
+    machikadoMazokuShamiko(`ibukimakisiko`),
+  "machikado-mazoku-shamiko-ponytail-ibukimakisiko": machikadoMazokuShamiko(
+    `ponytail-ibukimakisiko`,
+  ),
   "mahoako-matama-notekaga": mahoakoMatama(`notekaga`),
   "mushoku-tensei-sylphiette-little-jelly":
     mushokuTenseiSylphiette(`little-jelly`),

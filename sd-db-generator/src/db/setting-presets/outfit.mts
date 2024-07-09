@@ -401,6 +401,20 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "machikado-mazoku-shamiko-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `machikado-mazoku-crisis-management-form-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `machikado-mazoku-school-uniform-shamiko-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "machikado-mazoku-shamiko-ponytail-ibukimakisiko": [
+    { key: `machikado-mazoku-gym-uniform-shamiko-ibukimakisiko` },
+  ],
   "mahoako-matama-notekaga": [
     ...defaultPreset,
     {

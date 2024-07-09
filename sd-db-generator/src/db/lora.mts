@@ -1332,6 +1332,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser881`,
   },
+  "shamiko_machikado mazoku_PONY_epoch-000020": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/484915/pony-xl-yoshida-yuuko-machikado-mazoku?modelVersionId=539284`,
+    ).toString(),
+    characterTriggerWordsTags: [`yoshida yuuko \\(machikado mazoku\\)`],
+    outfitTriggerTags: [`shamiko-default`, `shamiko-kikikanri`, `shamiko-gym`],
+    creator: `Ibukimakisiko`,
+  },
   "shizuku-kitayama-s2-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],

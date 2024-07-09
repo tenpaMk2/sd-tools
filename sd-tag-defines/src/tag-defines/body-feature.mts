@@ -47,6 +47,7 @@ export const allBodyFeatureTags = [
   `fox tail`,
   `gyaru`,
   `halo`,
+  `horns`,
   `loli`,
   `mature female`,
   `pointy ears`,

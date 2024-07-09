@@ -851,6 +851,7 @@ export const allBodyOutfitTags = [
   `cow print gloves`,
   `cow print thighhighs`,
   `cow print`,
+  `crisis management form \\(machimazo\\)`,
   `criss-cross halter`,
   `crop top overhang`,
   `crop top`,
@@ -1102,6 +1103,7 @@ export const allBodyOutfitTags = [
   `vest`,
   `volleyball uniform`,
   `waist apron`,
+  `waist cape`,
   `waitress`,
   `wedding dress`,
   `white boots`, // For `mushoku-tensei-outfit-roxy-ibukimakisiko` .

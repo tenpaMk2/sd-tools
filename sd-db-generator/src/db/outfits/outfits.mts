@@ -59,6 +59,9 @@ import { kaguyaSamaShuuchiinAcademySchoolUniform } from "./kaguya-sama/shuuchiin
 import { konosubaOutfitMegumin } from "./konosuba/megumin-dress.mjs";
 import { konosubaOutfitYunyun } from "./konosuba/yunyun-shirt.mjs";
 import { lycorisRecoilLycorisUniform } from "./lycoris-recoil/lycoris-uniform.mjs";
+import { machikadoMazokuCrisisManagementForm } from "./machikado-mazoku/crisis-management-form.mjs";
+import { machikadoMazokuGymUniform } from "./machikado-mazoku/gym-uniform.mjs";
+import { machikadoMazokuSchoolUniform } from "./machikado-mazoku/school-uniform.mjs";
 import { mahoakoOutfitLocomusica } from "./mahoako/locomusica.mjs";
 import { mushokuTenseiOutfitRoxy } from "./mushoku-tensei/outfit-roxy.mjs";
 import { mushokuTenseiOversizedShirtRoxy } from "./mushoku-tensei/oversized-shirt-roxy.mjs";
@@ -313,6 +316,12 @@ export const characterOutfitTable = {
     lycorisRecoilLycorisUniform(`chisato-nochekaiser`),
   "lycoris-recoil-lycoris-uniform-takina-nochekaiser":
     lycorisRecoilLycorisUniform(`takina-nochekaiser`),
+  "machikado-mazoku-crisis-management-form-ibukimakisiko":
+    machikadoMazokuCrisisManagementForm(`ibukimakisiko`),
+  "machikado-mazoku-gym-uniform-shamiko-ibukimakisiko":
+    machikadoMazokuGymUniform(`shamiko-ibukimakisiko`),
+  "machikado-mazoku-school-uniform-shamiko-ibukimakisiko":
+    machikadoMazokuSchoolUniform(`shamiko-ibukimakisiko`),
   "mahoako-outfit-locomusica-notekaga": mahoakoOutfitLocomusica(`notekaga`),
   "mushoku-tensei-outfit-roxy-adventurer-indoors-ibukimakisiko":
     mushokuTenseiOutfitRoxy(`adventurer-indoors-ibukimakisiko`),

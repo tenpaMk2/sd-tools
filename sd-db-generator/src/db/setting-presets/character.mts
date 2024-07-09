@@ -57,6 +57,7 @@ const baseCharactersPreset = [
   { key: `konosuba-yunyun-no-lora` },
   { key: `lycoris-recoil-chisato-nochekaiser` },
   { key: `lycoris-recoil-takina-nochekaiser` },
+  { key: `machikado-mazoku-shamiko-ibukimakisiko` },
   { key: `mahoako-matama-notekaga` },
   { key: `mushoku-tensei-sylphiette-little-jelly` },
   { key: `mushoku-tensei-roxy-ibukimakisiko` },
@@ -98,6 +99,7 @@ const defaultPreset = [
   ...baseCharactersPreset,
   { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
   { key: `blue-archive-yuuka-gym-ibukimakisiko`, probability: 0.2 },
+  { key: `machikado-mazoku-shamiko-ponytail-ibukimakisiko`, probability: 0.2 },
   { key: `mushoku-tensei-roxy-adventurer-ibukimakisiko`, probability: 0.05 },
   {
     key: `mushoku-tensei-roxy-adventurer-no-ahoge-ibukimakisiko`,
