@@ -15,6 +15,7 @@ import { blendSMafuyu } from "./blend-s/mafuyu.mjs";
 import { blendSMaika } from "./blend-s/maika.mjs";
 import { blueArchiveArona } from "./blue-archive/arona.mjs";
 import { blueArchiveYuuka } from "./blue-archive/yuuka.mjs";
+import { boufuriMaple } from "./boufuri/maple.mjs";
 import { boufuriSally } from "./boufuri/sally.mjs";
 import { danmachiAiz } from "./danmachi/aiz.mjs";
 import { danmachiEina } from "./danmachi/eina.mjs";
@@ -146,6 +147,8 @@ export const characterTable = {
   "blue-archive-arona-ibukimakisiko": blueArchiveArona(`ibukimakisiko`),
   "blue-archive-yuuka-gym-ibukimakisiko": blueArchiveYuuka(`gym-ibukimakisiko`),
   "blue-archive-yuuka-ibukimakisiko": blueArchiveYuuka(`ibukimakisiko`),
+  "boufuri-maple-ibukimakisiko": boufuriMaple(`ibukimakisiko`),
+  "boufuri-sally-ibukimakisiko": boufuriSally(`ibukimakisiko`),
   "boufuri-sally-king-dong": boufuriSally(`king-dong`),
   "danmachi-aiz-eternal2kpp": danmachiAiz(`eternal2kpp`),
   "danmachi-eina-eternal2kpp": danmachiEina(`eternal2kpp`),

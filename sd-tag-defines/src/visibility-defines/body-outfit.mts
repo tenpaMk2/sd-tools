@@ -217,6 +217,21 @@ const allArmbandColorVisibilities = {
   "yellow armband": preset.armlet,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allArmorColorVisibilities = {
+  "aqua armor": preset.dress,
+  "black armor": preset.dress,
+  "blue armor": preset.dress,
+  "brown armor": preset.dress,
+  "green armor": preset.dress,
+  "grey armor": preset.dress,
+  "orange armor": preset.dress,
+  "pink armor": preset.dress,
+  "purple armor": preset.dress,
+  "red armor": preset.dress,
+  "white armor": preset.dress,
+  "yellow armor": preset.dress,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allAscotColorVisibilities = {
   "aqua ascot": preset.bowtie,
   "black ascot": preset.bowtie,
@@ -929,6 +944,7 @@ const allDistinguishableOutfitVisibilities = {
 
 export const allBodyOutfitVisibilities = {
   ...allArmbandColorVisibilities,
+  ...allArmorColorVisibilities,
   ...allAscotColorVisibilities,
   ...allBeltColorVisibilities,
   ...allBikiniColorVisibilities,
@@ -984,6 +1000,7 @@ export const allBodyOutfitVisibilities = {
   "armband": preset.armlet,
   "armlet": preset.armlet,
   "armor": preset.dress,
+  "armored boots": preset.foot,
   "armpit cutout": preset.shoulder,
   "ascot": preset.bowtie,
   "ass": preset.hips,
@@ -1114,6 +1131,7 @@ export const allBodyOutfitVisibilities = {
   "hood up": preset.hat,
   "hood": preset.hat,
   "hooded cloak": preset.dress,
+  "hoodie": preset.shirt,
   "id card": preset.bowtie,
   "infinite stratos academy school uniform": preset.all,
   "jacket": preset.shirt,
@@ -1232,6 +1250,7 @@ export const allBodyOutfitVisibilities = {
   "santa bikini": preset.dress,
   "santa costume": preset.all,
   "sarong": preset.skirt,
+  "scarf": preset.collar,
   "school swimsuit": preset.dress,
   "school uniform": preset.dress,
   "serafuku": preset.shirt,

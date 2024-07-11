@@ -1,47 +1,36 @@
 import type { CharacterDefine } from "../characters.mjs";
 
-type Variation = `king-dong` | `ibukimakisiko`;
+type Variation = `ibukimakisiko`;
 
 const lora = {
-  "king-dong": {
-    loraName: `Sally(bofuri)-Pony`,
-    probabilityAndWeights: [{ probability: 1, weight: 1.2 }],
-  },
-  "ibukimakisiko": {
-    loraName: `sally_bofuri_PONY_last`,
+  ibukimakisiko: {
+    loraName: `maple_bofuri_PONY_last`,
     probabilityAndWeights: [{ probability: 1, weight: 1.0 }],
   },
 } as const satisfies Record<Variation, CharacterDefine[`lora`]>;
 
 const loraCharacterTriggerWordEntries = {
-  "king-dong": [`Sally`],
-  "ibukimakisiko": [`sally \\(bofuri\\)`],
+  ibukimakisiko: [`maple \\(bofuri\\)`],
 } as const satisfies Record<
   Variation,
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
 
-export const boufuriSally = (variation: Variation) =>
+export const boufuriMaple = (variation: Variation) =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
     seriesNameEntries: [
       `itai no wa iya nano de bougyoryoku ni kyokufuri shitai to omoimasu`,
     ],
-    characterNameEntries: [`sally \\(bofuri\\)`],
+    characterNameEntries: [`maple \\(bofuri\\)`],
     characterFeatureEntries: [
-      `brown eyes`,
-      `tsurime`,
-      `brown hair`,
-      `long hair`,
-      `ponytail`,
-      `high ponytail`,
+      `purple eyes`,
+      `black hair`,
+      `short hair`,
       `hair between eyes`,
-      `sidelocks`,
-      `hair bow`,
-      `white hair bow -> white bow`,
-      `hair ribbon`,
-      `white hair ribbon -> white ribbon`,
+      `ahoge`,
+      `hair ornament`,
     ],
     breastSize: `medium breasts`,
     fang: false,

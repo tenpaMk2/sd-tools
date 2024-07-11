@@ -15,6 +15,21 @@ const allArmbandColorTags = [
   `yellow armband`,
 ] as const satisfies string[];
 
+const allArmorColorTags = [
+  `aqua armor`,
+  `black armor`,
+  `blue armor`,
+  `brown armor`,
+  `green armor`,
+  `grey armor`,
+  `orange armor`,
+  `pink armor`,
+  `purple armor`,
+  `red armor`,
+  `white armor`,
+  `yellow armor`,
+] as const satisfies string[];
+
 const allAscotColorTags = [
   `aqua ascot`,
   `black ascot`,
@@ -726,6 +741,7 @@ export const allDistinguishableOutfitTags = {
 
 export const allBodyOutfitTags = [
   ...allArmbandColorTags,
+  ...allArmorColorTags,
   ...allAscotColorTags,
   ...allBeltColorTags,
   ...allBikiniColorTags,
@@ -781,6 +797,7 @@ export const allBodyOutfitTags = [
   `armband`,
   `armlet`,
   `armor`,
+  `armored boots`,
   `armpit cutout`,
   `ascot`,
   `ass`,
@@ -910,6 +927,7 @@ export const allBodyOutfitTags = [
   `hood up`,
   `hood`,
   `hooded cloak`,
+  `hoodie`,
   `id card`,
   `infinite stratos academy school uniform`,
   `jacket`,
@@ -1028,6 +1046,7 @@ export const allBodyOutfitTags = [
   `santa bikini`,
   `santa costume`,
   `sarong`,
+  `scarf`,
   `school swimsuit`,
   `school uniform`,
   `serafuku`,

@@ -858,6 +858,20 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "maple_bofuri_PONY_last": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/567003/pony-xl-maple-bofuri?modelVersionId=631881`,
+    ).toString(),
+    characterTriggerWordsTags: [`maple \\(bofuri\\)`],
+    outfitTriggerTags: [
+      `maple-default`,
+      `maple-schooluniform`,
+      `maple-pajamas`,
+    ],
+    creator: `Ibukimakisiko`,
+  },
   "maya-yamada-s2-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
@@ -1271,6 +1285,20 @@ export const loraTable = {
     characterTriggerWordsTags: [`Sagiri Izumi`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
+  },
+  "sally_bofuri_PONY_last": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/567030/pony-xl-sally-bofuri?modelVersionId=631911`,
+    ).toString(),
+    characterTriggerWordsTags: [`sally \\(bofuri\\)`],
+    outfitTriggerTags: [
+      `sally-default`,
+      `sally-schooluniform`,
+      `sally-pajamas`,
+    ],
+    creator: `Ibukimakisiko`,
   },
   "Sally(bofuri)-Pony": {
     recommendedWeight: 1.2,

@@ -95,6 +95,30 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "boufuri-maple-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `boufuri-outfit-maple-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `boufuri-school-uniform-maple-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+    // TODO: Add pajamas.
+  ],
+  "boufuri-sally-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `boufuri-outfit-sally-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `boufuri-school-uniform-sally-ibukimakisiko`,
+      probability: defaultPreset.length,
+    },
+    // TODO: Add pajamas.
+  ],
   "boufuri-sally-king-dong": [
     ...defaultPreset,
     {

@@ -343,7 +343,11 @@ export const backgroundsPreset = {
   "blue-archive-school-uniform-arona-ibukimakisiko": nearFeatureStudent,
   "blue-archive-school-uniform-yuuka-ibukimakisiko": nearFeatureStudent,
   "blue-archive-school-uniform-yuuka-shirt-ibukimakisiko": nearFeatureStudent,
+  "boufuri-outfit-maple-ibukimakisiko": isekai,
+  "boufuri-outfit-sally-ibukimakisiko": isekai,
   "boufuri-outfit-sally-king-dong": isekai,
+  "boufuri-school-uniform-maple-ibukimakisiko": student,
+  "boufuri-school-uniform-sally-ibukimakisiko": student,
   "danmachi-white-dress-hestia-eternal2kpp": defaultPreset,
   "danmachi-white-dress-hestia-no-lora": defaultPreset,
   "fate-red-sweater-rin-little-jelly": [
