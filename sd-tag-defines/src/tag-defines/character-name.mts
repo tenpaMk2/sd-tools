@@ -1,4 +1,5 @@
 export const allCharacterNameTags = [
+  `aisha greyrat`,
   `aiz wallenstein`,
   `akemi homura`,
   `akoya matama`,
@@ -79,6 +80,7 @@ export const allCharacterNameTags = [
   `laura bodewig`,
   `liliruca arde`,
   `lilishka`,
+  `lillia greyrat`,
   `lisesharte atismata`,
   `loco musica`,
   `lynette bishop`,
@@ -100,6 +102,7 @@ export const allCharacterNameTags = [
   `nanami yachiyo`,
   `natsu megumi`,
   `nishikigi chisato`,
+  `norn greyrat`,
   `ogiwara sayu`,
   `orimura chifuyu`,
   `perrine h\\. clostermann`,
@@ -175,6 +178,7 @@ export const allCharacterNameTags = [
   `yunyun \\(konosuba\\)`,
   `yuuka \\(blue archive\\)`,
   `yuuka \\(track\\) \\(blue archive\\)`,
+  `zenith greyrat`,
   `zeta \\(kage no jitsuryokusha ni naritakute!\\)`,
 ] as const satisfies readonly string[];
 export type CharacterNameTag = (typeof allCharacterNameTags)[number];

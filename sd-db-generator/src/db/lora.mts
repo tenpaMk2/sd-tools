@@ -78,6 +78,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "aisha-greyrat_PONY_epoch-000020": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/460406/pony-xl-aisha-greyrat-mushoku-tensei-season2?modelVersionId=512393`,
+    ).toString(),
+    characterTriggerWordsTags: [`aisha greyrat`],
+    outfitTriggerTags: [],
+    creator: `Ibukimakisiko`,
+  },
   "akoya_matama-pony-v1": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`Pony`],
@@ -1129,6 +1139,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`Noeru Izumi`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
+  },
+  "norn-greyrat_PONY_epoch-000025": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/460399/pony-xl-norn-greyrat-mushoku-tensei-season2?modelVersionId=512386`,
+    ).toString(),
+    characterTriggerWordsTags: [`norn greyrat`],
+    outfitTriggerTags: [`norn-default`, `norn-schooluniform`],
+    creator: `Ibukimakisiko`,
   },
   "OGT_Cecilia_Alcott-v1": {
     recommendedWeight: 0.8,

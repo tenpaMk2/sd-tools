@@ -446,6 +446,24 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "mushoku-tensei-aisha-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `mushoku-tensei-maid-aisha-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "mushoku-tensei-norn-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `mushoku-tensei-outfit-norn-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `mushoku-tensei-school-uniform-norn-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "mushoku-tensei-roxy-adventurer-ibukimakisiko": [
     { key: `mushoku-tensei-outfit-roxy-adventurer-indoors-ibukimakisiko` },
   ],

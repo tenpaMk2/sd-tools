@@ -65,9 +65,12 @@ import { machikadoMazokuCrisisManagementForm } from "./machikado-mazoku/crisis-m
 import { machikadoMazokuGymUniform } from "./machikado-mazoku/gym-uniform.mjs";
 import { machikadoMazokuSchoolUniform } from "./machikado-mazoku/school-uniform.mjs";
 import { mahoakoOutfitLocomusica } from "./mahoako/locomusica.mjs";
+import { mushokuTenseiMaid } from "./mushoku-tensei/maid.mjs";
+import { mushokuTenseiOutfitNorn } from "./mushoku-tensei/outfit-norn.mjs";
 import { mushokuTenseiOutfitRoxy } from "./mushoku-tensei/outfit-roxy.mjs";
 import { mushokuTenseiOversizedShirtRoxy } from "./mushoku-tensei/oversized-shirt-roxy.mjs";
 import { mushokuTenseiPajamasRoxy } from "./mushoku-tensei/pajamas-roxy.mjs";
+import { mushokuTenseiSchoolUniform } from "./mushoku-tensei/school-uniform.mjs";
 import { newGameOutfitHifumi } from "./new-game/shirt-hifumi.mjs";
 import { newGameOutfitAoba } from "./new-game/suit-aoba.mjs";
 import { prismaIllyaBeastChloe } from "./prisma-illya/chloe-beast.mjs";
@@ -331,6 +334,10 @@ export const characterOutfitTable = {
   "machikado-mazoku-school-uniform-shamiko-ibukimakisiko":
     machikadoMazokuSchoolUniform(`shamiko-ibukimakisiko`),
   "mahoako-outfit-locomusica-notekaga": mahoakoOutfitLocomusica(`notekaga`),
+  "mushoku-tensei-maid-aisha-ibukimakisiko":
+    mushokuTenseiMaid(`aisha-ibukimakisiko`),
+  "mushoku-tensei-outfit-norn-ibukimakisiko":
+    mushokuTenseiOutfitNorn(`ibukimakisiko`),
   "mushoku-tensei-outfit-roxy-adventurer-indoors-ibukimakisiko":
     mushokuTenseiOutfitRoxy(`adventurer-indoors-ibukimakisiko`),
   "mushoku-tensei-outfit-roxy-adventurer-outdoors-ibukimakisiko":
@@ -345,6 +352,8 @@ export const characterOutfitTable = {
     mushokuTenseiOversizedShirtRoxy(`ibukimakisiko`),
   "mushoku-tensei-pajamas-roxy-ibukimakisiko":
     mushokuTenseiPajamasRoxy(`ibukimakisiko`),
+  "mushoku-tensei-school-uniform-norn-ibukimakisiko":
+    mushokuTenseiSchoolUniform(`norn-ibukimakisiko`),
   "new-game-outfit-aoba-eternal2kpp": newGameOutfitAoba(`eternal2kpp`),
   "new-game-outfit-aoba-nochekaiser": newGameOutfitAoba(`nochekaiser`),
   "new-game-outfit-hifumi-eternal2kpp": newGameOutfitHifumi(`eternal2kpp`),

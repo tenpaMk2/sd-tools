@@ -61,6 +61,8 @@ const baseCharactersPreset = [
   { key: `lycoris-recoil-takina-nochekaiser` },
   { key: `machikado-mazoku-shamiko-ibukimakisiko` },
   { key: `mahoako-matama-notekaga` },
+  { key: `mushoku-tensei-aisha-ibukimakisiko` },
+  { key: `mushoku-tensei-norn-ibukimakisiko` },
   { key: `mushoku-tensei-sylphiette-little-jelly` },
   { key: `mushoku-tensei-roxy-ibukimakisiko` },
   { key: "new-game-aoba-eternal2kpp" },
