@@ -23,6 +23,18 @@ export const checkpointTable = {
       `https://civitai.com/models/395554/7th-anime-xl-pony-a`,
     ).toString(),
   },
+  "aaaautismPonyFinetune_aaaaReStart.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/353543/aaaautism-or-pony-finetune-mix?modelVersionId=630950`,
+    ).toString(),
+  },
+  "animixv9xlAnimetvMix_animixv9xlV25REV.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/454878/animixv9xl-animetv-mixanime-screencap?modelVersionId=641236`,
+    ).toString(),
+  },
   "autismmixSDXL_autismmixConfetti.safetensors": {
     baseModel: `Pony`,
     url: new URL(
@@ -71,6 +83,12 @@ export const checkpointTable = {
     baseModel: `Pony`,
     url: new URL(
       `https://civitai.com/models/376031?modelVersionId=575495`,
+    ).toString(),
+  },
+  "hentaiCinematicPony_v2.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/492705/hentaicinematicpony?modelVersionId=637173`,
     ).toString(),
   },
   "momoiropony_v14.safetensors": {

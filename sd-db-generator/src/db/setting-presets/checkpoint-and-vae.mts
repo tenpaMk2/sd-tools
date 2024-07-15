@@ -75,6 +75,18 @@ export const checkpointAndVaePreset = {
     sd_model_checkpoint: `tPonynai3_v51WeightOptimized.safetensors`,
     sd_vae: `None`,
   },
+  aaaautismRestart: {
+    sd_model_checkpoint: `aaaautismPonyFinetune_aaaaReStart.safetensors`,
+    sd_vae: `None`,
+  },
+  aniMixV9XlV25: {
+    sd_model_checkpoint: `animixv9xlAnimetvMix_animixv9xlV25REV.safetensors`,
+    sd_vae: `None`,
+  },
+  hentaiCinematicPony2: {
+    sd_model_checkpoint: `hentaiCinematicPony_v2.safetensors`,
+    sd_vae: `None`,
+  },
 } as const satisfies Record<string, CheckpointAndVaePresetDefine>;
 
 export type CheckpointAndVaePreset = typeof checkpointAndVaePreset;
