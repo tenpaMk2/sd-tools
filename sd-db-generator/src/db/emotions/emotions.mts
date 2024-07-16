@@ -12,7 +12,7 @@ export const emotionTable = {
       `smile`,
       [
         { entries: [`half-closed eyes`] },
-        { entries: [`parted lips`] },
+        { entries: [`parted lips`], probability: 0.5 },
         { entries: [`:d`, `open mouth`] },
         { entries: [`closed mouth`] },
       ],
@@ -28,7 +28,7 @@ export const emotionTable = {
       `smile`,
       [
         { entries: [`half-closed eyes`] },
-        { entries: [`parted lips`] },
+        { entries: [`parted lips`], probability: 0.5 },
         { entries: [`:d`, `open mouth`] },
         { entries: [`closed mouth`] },
         { entries: [`one eye closed`, `;d`, `open mouth`] },
@@ -46,7 +46,7 @@ export const emotionTable = {
       `light smile`,
       [
         { entries: [`open mouth`] },
-        { entries: [`parted lips`] },
+        { entries: [`parted lips`], probability: 0.5 },
         { entries: [`closed mouth`] },
       ],
       [
@@ -61,7 +61,7 @@ export const emotionTable = {
       `light smile`,
       [
         { entries: [`open mouth`] },
-        { entries: [`parted lips`] },
+        { entries: [`parted lips`], probability: 0.5 },
         { entries: [`closed mouth`] },
         { entries: [`one eye closed`, `;d`, `open mouth`] },
         { entries: [`one eye closed`, `;\\)`, `closed mouth`] },
