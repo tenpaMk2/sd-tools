@@ -86,6 +86,7 @@ export const allHeadOutfitVisibilities = {
   ...allHatColorVisibilities,
   "anchor hair ornament": preset.hair,
   "bat hair ornament": preset.hair,
+  "beret": preset.hair,
   "bone hair ornament": preset.hair,
   "bow hairband": preset.hair,
   "bridal veil": preset.hair,

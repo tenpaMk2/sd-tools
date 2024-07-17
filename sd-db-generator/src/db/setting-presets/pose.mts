@@ -91,6 +91,8 @@ export const posesPreset = {
   "racing-circuit-standing": defaultPreset,
   "sky-blue-sky-standing": defaultPreset,
   "sky-orange-sky-standing": defaultPreset,
+  "tatami-near-clean-floor": defaultPreset,
+  "tatami-sitting-on": defaultPreset,
   "tennis-court-near-clean-floor": defaultPreset,
   "tennis-court-sitting-on": defaultPreset,
   "tennis-court-standing": defaultPreset, // TODO: Forgot tennis.

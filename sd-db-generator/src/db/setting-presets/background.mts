@@ -1,10 +1,5 @@
 import type { OutfitKey } from "../../index.mjs";
-import { getKeys } from "../../libs/utility.mjs";
 import type { BackgroundSetting } from "../../setting-define.mjs";
-import {
-  backgroundTable,
-  type BackgroundKey,
-} from "../backgrounds/backgrounds.mjs";
 
 export type BackgroundsPresetKey = `default` | OutfitKey;
 
@@ -12,13 +7,6 @@ export type BackgroundsPreset = Record<
   BackgroundsPresetKey,
   BackgroundSetting[]
 >;
-
-const monoBackgroundPresetsMap = Object.fromEntries(
-  getKeys(backgroundTable).reduce(
-    (acc, key) => acc.set(key, [{ key }]),
-    new Map<BackgroundKey, BackgroundSetting[]>(),
-  ),
-) as Record<BackgroundKey, BackgroundSetting[]>;
 
 const defaultPreset = [
   { key: `colorful-background-standing` },
@@ -170,6 +158,11 @@ const bookshelf = [
   { key: `bookshelf-near-clean-floor` },
   { key: `bookshelf-sitting-on`, probability: 0.3 },
   { key: `bookshelf-standing` },
+] as const satisfies BackgroundSetting[];
+
+const tatami = [
+  { key: `tatami-near-clean-floor` },
+  { key: `tatami-sitting-on`, probability: 0.3 },
 ] as const satisfies BackgroundSetting[];
 
 export const backgroundsPreset = {
@@ -439,6 +432,8 @@ export const backgroundsPreset = {
   "rokudenashi-bikini-rumia-little-jelly": ocean,
   "rokudenashi-school-uniform-summer-little-jelly": garden,
   "rokudenashi-school-uniform-winter-little-jelly": garden,
+  "ryuuou-outfit-hinatsuru-ai-ibukimakisiko": [...bedroom, ...tatami],
+  "ryuuou-outfit-yashajin-ai-ibukimakisiko": [...bedroom, ...tatami],
   "sasuoni-first-high-school-uniform-nochekaiser": nearFeatureStudent,
   "seirei-outfit-celia-ibukimakisiko": [
     ...isekai,

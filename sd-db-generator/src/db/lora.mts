@@ -550,6 +550,16 @@ export const loraTable = {
     outfitTriggerTags: [`kaho-default`, `kaho-schooluniform`, `kaho-swim`],
     creator: `Ibukimakisiko`,
   },
+  "hinatsuru ai_PONY_epoch-000015": {
+    recommendedWeight: 1,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/450903/pony-xl-hinatsuru-ai-ryuuou-no-oshigoto?modelVersionId=502038`,
+    ).toString(),
+    characterTriggerWordsTags: [`hinatsuru ai`],
+    outfitTriggerTags: [`hinatsuruai-default`],
+    creator: `Ibukimakisiko`,
+  },
   "Hisui_Tsurumi": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],
@@ -1599,6 +1609,16 @@ export const loraTable = {
     characterTriggerWordsTags: [],
     outfitTriggerTags: [],
     creator: `eft`,
+  },
+  "yashajin ai_PONY_last": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/454348/pony-xl-yashajin-ai-ryuuou-no-oshigoto?modelVersionId=505835`,
+    ).toString(),
+    characterTriggerWordsTags: [`yashajin ai`],
+    outfitTriggerTags: [`yashajinai-default`],
+    creator: `Ibukimakisiko`,
   },
   "Yor_Forger": {
     recommendedWeight: 0.7,

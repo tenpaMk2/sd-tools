@@ -792,6 +792,7 @@ export const allBodyOutfitTags = [
   `ankle lace-up`,
   `aran sweater`,
   `argyle bikini`,
+  `argyle pantyhose`,
   `argyle sweater vest`,
   `argyle sweater`,
   `armband`,
@@ -819,6 +820,7 @@ export const allBodyOutfitTags = [
   `bikini`,
   `black spaghetti straps`, // For `mushoku-tensei-pajamas-roxy-ibukimakisiko` .
   `blazer`,
+  `bobby socks`,
   `bodystocking`,
   `bodysuit`,
   `boots`,
@@ -1057,6 +1059,7 @@ export const allBodyOutfitTags = [
   `shoes`,
   `short dress`,
   `short necktie`,
+  `short over long sleeves`,
   `short shorts`,
   `short sleeves`,
   `shorts`,

@@ -997,6 +997,7 @@ export const allBodyOutfitVisibilities = {
   "argyle bikini": preset.dress,
   "argyle sweater vest": preset.shirt,
   "argyle sweater": preset.shirt,
+  "argyle pantyhose": preset.thighhighs,
   "armband": preset.armlet,
   "armlet": preset.armlet,
   "armor": preset.dress,
@@ -1023,6 +1024,7 @@ export const allBodyOutfitVisibilities = {
   "black footwear": preset.foot,
   "black spaghetti straps": preset.shoulder, // For `mushoku-tensei-outfit-roxy-ibukimakisiko` .
   "blazer": preset.shirt,
+  "bobby socks": preset.foot,
   "bodystocking": preset.all,
   "bodysuit": preset.all,
   "boots": preset.foot,
@@ -1261,6 +1263,7 @@ export const allBodyOutfitVisibilities = {
   "shoes": preset.foot,
   "short dress": preset.dress,
   "short necktie": preset.bowtie,
+  "short over long sleeves": preset.shoulder,
   "short shorts": preset.skirt,
   "short sleeves": preset.shoulder,
   "shorts": preset.skirt,

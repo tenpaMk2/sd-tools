@@ -65,6 +65,7 @@ export const allHeadOutfitTags = [
   ...getKeys(allDistinguishableHeadOutfitTags),
   `anchor hair ornament`,
   `bat hair ornament`,
+  `beret`,
   `bone hair ornament`,
   `bow hairband`,
   `bridal veil`,

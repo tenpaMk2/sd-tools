@@ -77,6 +77,8 @@ import { reZeroEmilia } from "./re-zero/emilia.mjs";
 import { reZeroRam } from "./re-zero/ram.mjs";
 import { reZeroRem } from "./re-zero/rem.mjs";
 import { rokudenashiRumia } from "./rokudenashi/rumia.mjs";
+import { ryuuouHinatsuruAi } from "./ryuuou/hinatsuru-ai.mjs";
+import { ryuuouYashajinAi } from "./ryuuou/yashajin-ai.mjs";
 import { sasuoniAngelina } from "./sasuoni/angelina.mjs";
 import { sasuoniHonoka } from "./sasuoni/honoka.mjs";
 import { sasuoniMayumi } from "./sasuoni/mayumi.mjs";
@@ -252,6 +254,8 @@ export const characterTable = {
   "re-zero-rem-eternal2kpp": reZeroRem(`eternal2kpp`),
   "re-zero-rem-no-lora": reZeroRem(`no-lora`),
   "rokudenashi-rumia-little-jelly": rokudenashiRumia(`little-jelly`),
+  "ryuuou-hinatsuru-ai-ibukimakisiko": ryuuouHinatsuruAi(`ibukimakisiko`),
+  "ryuuou-yashajin-ai-ibukimakisiko": ryuuouYashajinAi(`ibukimakisiko`),
   "sasuoni-angelina-nochekaiser": sasuoniAngelina(`nochekaiser`),
   "sasuoni-honoka-nochekaiser": sasuoniHonoka(`nochekaiser`),
   "sasuoni-mayumi-nochekaiser": sasuoniMayumi(`nochekaiser`),

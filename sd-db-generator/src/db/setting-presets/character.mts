@@ -78,6 +78,8 @@ const baseCharactersPreset = [
   { key: `re-zero-ram-eternal2kpp` },
   { key: `re-zero-rem-eternal2kpp` },
   { key: `rokudenashi-rumia-little-jelly` },
+  { key: `ryuuou-hinatsuru-ai-ibukimakisiko` },
+  { key: `ryuuou-yashajin-ai-ibukimakisiko` },
   { key: `sasuoni-honoka-nochekaiser` },
   { key: `sasuoni-mizuki-nochekaiser` },
   { key: `seirei-celia-ibukimakisiko` },

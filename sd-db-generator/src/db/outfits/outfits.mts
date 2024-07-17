@@ -80,6 +80,8 @@ import { prismaIllyaBeastMiyu } from "./prisma-illya/miyu-beast.mjs";
 import { pso2BikiniGene } from "./pso2/bikini-gene.mjs";
 import { rokudenashiBikini } from "./rokudenashi/bikini.mjs";
 import { rokudenashiSchoolUniform } from "./rokudenashi/school-uniform.mjs";
+import { ryuuouOutfitHinatsuruAi } from "./ryuuou/outfit-hinatsuru-ai.mjs";
+import { ryuuouOutfitYashajinAi } from "./ryuuou/outfit-yashajin-ai.mjs";
 import { sasuoniFirstHighSchoolUniform } from "./sasuoni/first-high-school-uniform.mjs";
 import { seireiOutfitCelia } from "./seirei/outfit-celia.mjs";
 import { slowLoopSchoolUniform } from "./slow-loop/school-uniform.mjs";
@@ -373,6 +375,10 @@ export const characterOutfitTable = {
     rokudenashiSchoolUniform(`summer-little-jelly`),
   "rokudenashi-school-uniform-winter-little-jelly":
     rokudenashiSchoolUniform(`winter-little-jelly`),
+  "ryuuou-outfit-hinatsuru-ai-ibukimakisiko":
+    ryuuouOutfitHinatsuruAi(`ibukimakisiko`),
+  "ryuuou-outfit-yashajin-ai-ibukimakisiko":
+    ryuuouOutfitYashajinAi(`ibukimakisiko`),
   "sasuoni-first-high-school-uniform-nochekaiser":
     sasuoniFirstHighSchoolUniform(`nochekaiser`),
   "seirei-outfit-celia-ibukimakisiko": seireiOutfitCelia(`ibukimakisiko`),

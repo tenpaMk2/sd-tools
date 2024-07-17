@@ -110,6 +110,7 @@ export const allBackgroundTags = [
   `sunlight`,
   `sunset`,
   `sweat`,
+  `tatami`,
   `tennis court`,
   `tennis net`,
   `tire`,

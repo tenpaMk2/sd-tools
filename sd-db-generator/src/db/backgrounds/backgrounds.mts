@@ -24,6 +24,7 @@ import { onsen } from "./common/onsen.mjs";
 import { poolside } from "./common/poolside.mjs";
 import { racingCircuit } from "./common/racing-circuits.mjs";
 import { sky } from "./common/sky.mjs";
+import { tatami } from "./common/tatami.mjs";
 import { tennisCourt } from "./common/tennis-court.mjs";
 import { wedding } from "./common/wedding.mjs";
 
@@ -166,6 +167,8 @@ export const backgroundTable = {
     variation: `orange-sky`,
     backgroundType: `standing`,
   }),
+  "tatami-near-clean-floor": tatami({ backgroundType: `near-clean-floor` }),
+  "tatami-sitting-on": tatami({ backgroundType: `sitting-on` }),
   "tennis-court-near-clean-floor": tennisCourt({
     backgroundType: `near-clean-floor`,
   }),

@@ -577,6 +577,20 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "ryuuou-hinatsuru-ai-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `ryuuou-outfit-hinatsuru-ai-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "ryuuou-yashajin-ai-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `ryuuou-outfit-yashajin-ai-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "sasuoni-angelina-nochekaiser": [
     ...defaultPreset,
     {
