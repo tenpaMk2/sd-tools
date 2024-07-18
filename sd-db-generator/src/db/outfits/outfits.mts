@@ -65,6 +65,7 @@ import { machikadoMazokuCrisisManagementForm } from "./machikado-mazoku/crisis-m
 import { machikadoMazokuGymUniform } from "./machikado-mazoku/gym-uniform.mjs";
 import { machikadoMazokuSchoolUniform } from "./machikado-mazoku/school-uniform.mjs";
 import { mahoakoOutfitLocomusica } from "./mahoako/locomusica.mjs";
+import { majoNoTabitabiWitch } from "./majo-no-tabitabi/witch.mjs";
 import { mushokuTenseiMaid } from "./mushoku-tensei/maid.mjs";
 import { mushokuTenseiOutfitNorn } from "./mushoku-tensei/outfit-norn.mjs";
 import { mushokuTenseiOutfitRoxy } from "./mushoku-tensei/outfit-roxy.mjs";
@@ -336,6 +337,11 @@ export const characterOutfitTable = {
   "machikado-mazoku-school-uniform-shamiko-ibukimakisiko":
     machikadoMazokuSchoolUniform(`shamiko-ibukimakisiko`),
   "mahoako-outfit-locomusica-notekaga": mahoakoOutfitLocomusica(`notekaga`),
+  "majo-no-tabitabi-witch-elaina-ibukimakisiko":
+    majoNoTabitabiWitch(`elaina-ibukimakisiko`),
+  "majo-no-tabitabi-witch-elaina-inner-ibukimakisiko": majoNoTabitabiWitch(
+    `elaina-inner-ibukimakisiko`,
+  ),
   "mushoku-tensei-maid-aisha-ibukimakisiko":
     mushokuTenseiMaid(`aisha-ibukimakisiko`),
   "mushoku-tensei-outfit-norn-ibukimakisiko":

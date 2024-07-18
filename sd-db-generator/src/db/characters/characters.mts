@@ -57,6 +57,7 @@ import { lycorisRecoilChisato } from "./lycoris-recoil/chisato.mjs";
 import { lycorisRecoilTakina } from "./lycoris-recoil/takina.mjs";
 import { machikadoMazokuShamiko } from "./machikado-mazoku/shamiko.mjs";
 import { mahoakoMatama } from "./mahoako/matama.mjs";
+import { majoNoTabitabiElaina } from "./majo-no-tabitabi/elaina.mjs";
 import { mushokuTenseiAisha } from "./mushoku-tensei/aisha.mjs";
 import { mushokuTenseiNorn } from "./mushoku-tensei/norn.mjs";
 import { mushokuTenseiRoxy } from "./mushoku-tensei/roxy.mjs";
@@ -209,6 +210,11 @@ export const characterTable = {
     `ponytail-ibukimakisiko`,
   ),
   "mahoako-matama-notekaga": mahoakoMatama(`notekaga`),
+  "majo-no-tabitabi-elaina-ibukimakisiko":
+    majoNoTabitabiElaina(`ibukimakisiko`),
+  "majo-no-tabitabi-elaina-no-ahoge-ibukimakisiko": majoNoTabitabiElaina(
+    `no-ahoge-ibukimakisiko`,
+  ),
   "mushoku-tensei-aisha-ibukimakisiko": mushokuTenseiAisha(`ibukimakisiko`),
   "mushoku-tensei-norn-ibukimakisiko": mushokuTenseiNorn(`ibukimakisiko`),
   "mushoku-tensei-sylphiette-little-jelly":

@@ -1228,6 +1228,7 @@ export const allBodyOutfitVisibilities = {
   "playboy bunny": preset.dress,
   "pleated dress": preset.dress,
   "pleated skirt": preset.skirt,
+  "pointy footwear": preset.foot,
   "polka dot bikini": preset.dress,
   "polka dot sweater": preset.shirt,
   "priestess": preset.all,

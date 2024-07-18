@@ -1024,6 +1024,7 @@ export const allBodyOutfitTags = [
   `playboy bunny`,
   `pleated dress`,
   `pleated skirt`,
+  `pointy footwear`,
   `polka dot bikini`,
   `polka dot sweater`,
   `priestess`,

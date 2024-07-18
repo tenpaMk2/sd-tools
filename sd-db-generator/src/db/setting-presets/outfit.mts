@@ -446,6 +446,16 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "majo-no-tabitabi-elaina-ibukimakisiko": [
+    ...defaultPreset,
+    {
+      key: `majo-no-tabitabi-witch-elaina-inner-ibukimakisiko`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "majo-no-tabitabi-elaina-no-ahoge-ibukimakisiko": [
+    { key: `majo-no-tabitabi-witch-elaina-ibukimakisiko` },
+  ],
   "mushoku-tensei-aisha-ibukimakisiko": [
     ...defaultPreset,
     {

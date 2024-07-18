@@ -395,6 +395,8 @@ export const backgroundsPreset = {
   "machikado-mazoku-gym-uniform-shamiko-ibukimakisiko": sports,
   "machikado-mazoku-school-uniform-shamiko-ibukimakisiko": student,
   "mahoako-outfit-locomusica-notekaga": casual,
+  "majo-no-tabitabi-witch-elaina-ibukimakisiko": isekai,
+  "majo-no-tabitabi-witch-elaina-inner-ibukimakisiko": isekai,
   "mushoku-tensei-maid-aisha-ibukimakisiko": garden, // TODO: Reconsider.
   "mushoku-tensei-outfit-norn-ibukimakisiko": bookshelf,
   "mushoku-tensei-outfit-roxy-adventurer-indoors-ibukimakisiko": bookshelf,

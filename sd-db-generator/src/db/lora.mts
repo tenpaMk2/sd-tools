@@ -376,6 +376,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "elaina_majo no tabitabi_PONY_last": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/445273/pony-xl-elaina-majo-no-tabitabi?modelVersionId=495831`,
+    ).toString(),
+    characterTriggerWordsTags: [`elaina \\(majo no tabitabi\\)`],
+    outfitTriggerTags: [`elaina-default`, `elaina-inner`],
+    creator: `Ibukimakisiko`,
+  },
   "Elf_Yamada": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],
