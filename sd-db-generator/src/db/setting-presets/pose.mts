@@ -99,6 +99,14 @@ export const posesPreset = {
   "racing-circuit-standing": defaultPreset,
   "sky-blue-sky-standing": defaultPreset,
   "sky-orange-sky-standing": defaultPreset,
+  "sweat-white-background-near-clean-floor": defaultPreset, // TODO: Reconsider.
+  "sweat-white-background-sitting-on": defaultPreset, // TODO: Reconsider.
+  "sweat-white-background-standing-for-armpit": [
+    { key: `standing-from-horizontal-arm-up-from-side` },
+    { key: `standing-from-horizontal-presenting-armpit` },
+    { key: `standing-from-horizontal-presenting-armpit-from-side` },
+  ],
+  "sweat-white-background-standing": defaultPreset, // TODO: Reconsider.
   "tatami-near-clean-floor": defaultPreset,
   "tatami-sitting-on": defaultPreset,
   "tennis-court-near-clean-floor": defaultPreset,

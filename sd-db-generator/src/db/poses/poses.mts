@@ -19,6 +19,7 @@ import { nearCleanFloorLyingOnStomachFromBehind } from "./common/near-clean-floo
 import { nearCleanFloorThePose } from "./common/near-clean-floor-the-pose.mjs";
 import { nearCleanFloorWariza } from "./common/near-clean-floor-wariza.mjs";
 import { sittingOnSitting } from "./common/sitting-on-sitting.mjs";
+import { standingArmUpFromSide } from "./common/standing-arm-up-from-side.mjs";
 import { standingArmsUp } from "./common/standing-arms-up.mjs";
 import { standingArmsBehindBack } from "./common/standing-common-arms-behind-back.mjs";
 import { standingContrapposto } from "./common/standing-contrapposto.mjs";
@@ -33,6 +34,7 @@ import { standingLeaningForwardVArms } from "./common/standing-leaning-forward-v
 import { standingLookingAheadFromSide } from "./common/standing-looking-ahead-from-side.mjs";
 import { standingPawPose } from "./common/standing-paw-pose.mjs";
 import { standingPortrait } from "./common/standing-portrait.mjs";
+import { standingPresentingArmpit } from "./common/standing-presenting-armpit.mjs";
 import { standingShushing } from "./common/standing-shushing.mjs";
 import { standingSquatting } from "./common/standing-squatting.mjs";
 import { standingTwistedTorso } from "./common/standing-twisted-torso.mjs";
@@ -150,6 +152,8 @@ export const commonPoseTable = {
   "standing-from-below-squatting": standingSquatting(`from-below`),
   "standing-from-below-twisted-torso": standingTwistedTorso(`from-below`),
   "standing-from-below-v": standingV(`from-below`),
+  "standing-from-horizontal-arm-up-from-side":
+    standingArmUpFromSide(`from-horizontal`),
   "standing-from-horizontal-arms-behind-back":
     standingArmsBehindBack(`from-horizontal`),
   "standing-from-horizontal-arms-up": standingArmsUp(`from-horizontal`),
@@ -172,6 +176,10 @@ export const commonPoseTable = {
     standingLookingAheadFromSide(`from-horizontal`),
   "standing-from-horizontal-paw-pose": standingPawPose(`from-horizontal`),
   "standing-from-horizontal-portrait": standingPortrait(`from-horizontal`),
+  "standing-from-horizontal-presenting-armpit":
+    standingPresentingArmpit(`from-front`),
+  "standing-from-horizontal-presenting-armpit-from-side":
+    standingPresentingArmpit(`from-side`),
   "standing-from-horizontal-shushing": standingShushing(`from-horizontal`),
   "standing-from-horizontal-squatting": standingSquatting(`from-horizontal`),
   "standing-from-horizontal-twisted-torso":

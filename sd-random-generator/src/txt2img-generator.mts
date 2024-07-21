@@ -129,6 +129,10 @@ const createSpecialTokens = (
 
   if (outfit.armpits && pose.armpits) {
     push(`armpits`);
+
+    if (backgroundTokens.some(({ tag }) => tag === `sweat`)) {
+      push(`sweaty armpits`);
+    }
   }
   if (
     outfit.hangingBreasts &&

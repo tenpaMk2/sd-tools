@@ -1,4 +1,5 @@
 export const allCameraTags = [
+  `armpit focus`,
   `ass focus`,
   `breasts`,
   `close-up`,

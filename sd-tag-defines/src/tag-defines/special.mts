@@ -10,6 +10,7 @@ export const allSpecialTags = [
   `sideboob`,
   `skirt lift`,
   `stomach tattoo`,
+  `sweaty armpits`,
   `taut clothes`,
   `thigh gap`,
   `underboob`,

@@ -165,6 +165,10 @@ const tatami = [
   { key: `tatami-sitting-on`, probability: 0.3 },
 ] as const satisfies BackgroundSetting[];
 
+const armpitsVisible = [
+  { key: `sweat-white-background-standing-for-armpit` },
+] as const satisfies BackgroundSetting[];
+
 export const backgroundsPreset = {
   "default": [
     { key: `colorful-background-standing` },
@@ -174,16 +178,17 @@ export const backgroundsPreset = {
   /**
    * Common outfits.
    */
-  "babydoll": defaultPreset,
-  "bikini-frill": ocean,
-  "bikini-o-ring": ocean,
-  "bikini-tie": ocean,
+  "babydoll": [...defaultPreset, ...armpitsVisible],
+  "bikini-frill": [...ocean, ...armpitsVisible],
+  "bikini-o-ring": [...ocean, ...armpitsVisible],
+  "bikini-tie": [...ocean, ...armpitsVisible],
   "bridal-lingerie": [
     ...defaultPreset,
     { key: `wedding-near-clean-floor`, probability: defaultPreset.length / 2 },
     { key: `wedding-standing`, probability: defaultPreset.length / 2 },
+    ...armpitsVisible,
   ],
-  "camisole-denim-shorts": casual,
+  "camisole-denim-shorts": [...casual, ...armpitsVisible],
   "casual-miniskirt": casual,
   "cheerleader": [
     {
@@ -192,16 +197,15 @@ export const backgroundsPreset = {
     },
     {
       key: `blue-sky-confetti-standing`,
-      probability: 1,
     },
     {
       key: `bed-sheet-steaming-near-clean-floor`,
-      probability: 1,
     },
+    ...armpitsVisible,
   ],
-  "china-dress": defaultPreset,
-  "cow-print-bikini": grass,
-  "denim-bikini": ocean,
+  "china-dress": [...defaultPreset, ...armpitsVisible],
+  "cow-print-bikini": [...grass, ...armpitsVisible],
+  "denim-bikini": [...ocean, ...armpitsVisible],
   "formal-suit": student,
   "gym-uniform": sports,
   "harem-outfit": [
@@ -210,13 +214,15 @@ export const backgroundsPreset = {
       key: `bed-sheet-red-curtains-near-clean-floor`,
       probability: defaultPreset.length,
     },
+    ...armpitsVisible,
   ],
-  "maid-bikini": cafe,
-  "micro-bikini": ocean,
+  "maid-bikini": [...cafe, ...armpitsVisible],
+  "micro-bikini": [...ocean, ...armpitsVisible],
   "naked-towel": [
     ...defaultPreset,
     { key: `onsen-standing`, probability: defaultPreset.length },
     { key: `onsen-near-clean-floor`, probability: defaultPreset.length },
+    ...armpitsVisible,
   ],
   "nun": [
     ...defaultPreset,
@@ -235,6 +241,7 @@ export const backgroundsPreset = {
       key: `casino-standing`,
       probability: defaultPreset.length,
     },
+    ...armpitsVisible,
   ],
   "race-queen": [
     ...defaultPreset,
@@ -247,7 +254,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length,
     },
   ],
-  "revealing-miko": defaultPreset, // TODO: shrine
+  "revealing-miko": [...defaultPreset, ...armpitsVisible], // TODO: shrine
   "santa-bikini": [
     ...defaultPreset,
     {
@@ -258,10 +265,11 @@ export const backgroundsPreset = {
       key: `christmas-standing`,
       probability: defaultPreset.length / 2,
     },
+    ...armpitsVisible,
   ],
   "school-uniform-bowtie": student,
-  "sports-bikini": sports,
-  "sukumizu-thighhighs": defaultPreset,
+  "sports-bikini": [...sports, ...armpitsVisible],
+  "sukumizu-thighhighs": [...defaultPreset, ...armpitsVisible],
   "sukumizu": [
     ...defaultPreset,
     {
@@ -276,8 +284,9 @@ export const backgroundsPreset = {
       key: `poolside-standing`,
       probability: defaultPreset.length,
     },
+    ...armpitsVisible,
   ],
-  "tank-top-dolphin-shorts": bedroom,
+  "tank-top-dolphin-shorts": [...bedroom, ...armpitsVisible],
   "tennis-uniform": [
     ...defaultPreset,
     {
@@ -319,6 +328,7 @@ export const backgroundsPreset = {
       key: `grass-near-clean-floor`,
       probability: defaultPreset.length / 1,
     },
+    ...armpitsVisible,
   ],
   "undressing-shirt": [{ key: `bedroom-for-undressing` }],
 
