@@ -36,5 +36,5 @@ export const tatami = ({
   ({
     backgroundType,
     ...cameraAngle[backgroundType],
-    removeShoes: false,
+    removeShoes: true,
   }) as const satisfies BackgroundDefine;

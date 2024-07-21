@@ -65,5 +65,5 @@ export const bedroom = ({
   ({
     backgroundType,
     ...cameraAngle[backgroundType],
-    removeShoes: false,
+    removeShoes: true,
   }) as const satisfies BackgroundDefine;
