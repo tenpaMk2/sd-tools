@@ -36,6 +36,7 @@ const outfitEntries = {
       },
       {
         entries: [`halterneck`, `criss-cross halter`],
+        probability: 0.2,
       },
     ],
     [{ entries: [] }, { entries: [`bracelet`] }],
@@ -91,6 +92,7 @@ const outfitEntries = {
       },
       {
         entries: [`halterneck`, `criss-cross halter`],
+        probability: 0.2,
       },
     ],
     [{ entries: [] }, { entries: [`bracelet`] }],
