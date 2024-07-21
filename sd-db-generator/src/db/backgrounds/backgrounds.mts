@@ -177,6 +177,7 @@ export const backgroundTable = {
   "wedding-standing": wedding({ backgroundType: `standing` }),
   "wedding-near-clean-floor": wedding({ backgroundType: `near-clean-floor` }),
   "wedding-sitting-on": wedding({ backgroundType: `sitting-on` }),
+  "bedroom-for-undressing": bedroom({ backgroundType: `standing` }),
 } as const satisfies Record<string, BackgroundDefine>;
 
 export type BackgroundTable = typeof backgroundTable;

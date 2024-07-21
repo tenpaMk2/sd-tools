@@ -43,6 +43,8 @@ import { standingCheering } from "./special/standing-cheering.mjs";
 import { standingHoldingBouquet } from "./special/standing-holding-bouquet.mjs";
 import { standingHoldingVolleyball } from "./special/standing-holding-volleyball.mjs";
 import { standingSinging } from "./special/standing-singing.mjs";
+import { standingUndressingUpperBody } from "./special/standing-undressing-upper-body.mjs";
+import { standingUndressing } from "./special/standing-undressing.mjs";
 
 export type PoseSpecialVisibility = Omit<
   OutfitDefine["specialVisibility"],
@@ -185,16 +187,25 @@ export const specialPoseTable = {
   "standing-from-above-holding-bouquet": standingHoldingBouquet(`from-above`),
   "standing-from-above-holding-volleyball":
     standingHoldingVolleyball(`from-above`),
+  "standing-from-above-undressing-upper-body":
+    standingUndressingUpperBody(`from-above`),
+  "standing-from-above-undressing": standingUndressing(`from-above`),
   "standing-from-below-cheering": standingCheering(`from-below`),
   "standing-from-below-holding-bouquet": standingHoldingBouquet(`from-below`),
   "standing-from-below-holding-volleyball":
     standingHoldingVolleyball(`from-below`),
+  "standing-from-below-undressing-upper-body":
+    standingUndressingUpperBody(`from-below`),
+  "standing-from-below-undressing": standingUndressing(`from-below`),
   "standing-from-horizontal-cheering": standingCheering(`from-horizontal`),
   "standing-from-horizontal-holding-bouquet":
     standingHoldingBouquet(`from-horizontal`),
   "standing-from-horizontal-holding-volleyball":
     standingHoldingVolleyball(`from-horizontal`),
   "standing-from-horizontal-singing": standingSinging(`from-horizontal`),
+  "standing-from-horizontal-undressing-upper-body":
+    standingUndressingUpperBody(`from-horizontal`),
+  "standing-from-horizontal-undressing": standingUndressing(`from-horizontal`),
 } as const satisfies Record<string, PoseDefine>;
 
 export const poseTable = {

@@ -38,6 +38,7 @@ import { sukumizu } from "./common/sukumizu.mjs";
 import { sundress } from "./common/sundress.mjs";
 import { tankTopDolphinShorts } from "./common/tank-top-dolphin-shorts.mjs";
 import { tennisUniform } from "./common/tennis-uniform.mjs";
+import { undressingShirt } from "./common/undressing-shirt.mjs";
 import { volleyballUniform } from "./common/volleyball-uniform.mjs";
 import { danmachiWhiteDressHestia } from "./danmachi/white-dress-hestia.mjs";
 import { fateRedSweaterRin } from "./fate/red-sweater-rin.mjs";
@@ -211,6 +212,7 @@ export const commonOutfitTable = {
   "sundress": sundress(),
   "tank-top-dolphin-shorts": tankTopDolphinShorts(),
   "tennis-uniform": tennisUniform(),
+  "undressing-shirt": undressingShirt(),
   "volleyball-uniform": volleyballUniform(),
   // TODO: competition swimsuit
   // TODO: track uniform, track and field

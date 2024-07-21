@@ -320,6 +320,7 @@ export const backgroundsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "undressing-shirt": [{ key: `bedroom-for-undressing` }],
 
   /**
    * Character specific outfits.
