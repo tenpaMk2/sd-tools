@@ -178,10 +178,6 @@ export const commonPoseTable = {
     standingLookingAheadFromSide(`from-horizontal`),
   "standing-from-horizontal-paw-pose": standingPawPose(`from-horizontal`),
   "standing-from-horizontal-portrait": standingPortrait(`from-horizontal`),
-  "standing-from-horizontal-presenting-armpit":
-    standingPresentingArmpit(`from-front`),
-  "standing-from-horizontal-presenting-armpit-from-side":
-    standingPresentingArmpit(`from-side`),
   "standing-from-horizontal-shushing": standingShushing(`from-horizontal`),
   "standing-from-horizontal-squatting": standingSquatting(`from-horizontal`),
   "standing-from-horizontal-twisted-torso":
@@ -222,6 +218,10 @@ export const specialPoseTable = {
     standingHoldingBouquet(`from-horizontal`),
   "standing-from-horizontal-holding-volleyball":
     standingHoldingVolleyball(`from-horizontal`),
+  "standing-from-horizontal-presenting-armpit-from-side":
+    standingPresentingArmpit(`from-side`),
+  "standing-from-horizontal-presenting-armpit":
+    standingPresentingArmpit(`from-front`),
   "standing-from-horizontal-singing": standingSinging(`from-horizontal`),
   "standing-from-horizontal-undressing-upper-body":
     standingUndressingUpperBody(`from-horizontal`),
