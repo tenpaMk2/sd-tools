@@ -30,7 +30,7 @@ export const nonNonBiyoriHotaru = (variation: Variation) =>
       `swept bangs`,
       `sidelocks`,
     ],
-    breastSize: `large breasts`,
+    breastSize: `medium breasts`,
     fang: false,
     emotionType: `cute`,
   }) as const satisfies CharacterDefine;
