@@ -47,6 +47,12 @@ export const checkpointTable = {
       `https://civitai.com/models/288584?modelVersionId=324692`,
     ).toString(),
   },
+  "boleromixPony_v141VAE.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/448716?modelVersionId=629179`,
+    ).toString(),
+  },
   "calicomix_v75.safetensors": {
     baseModel: `SD1.5`,
     url: new URL(
@@ -73,6 +79,12 @@ export const checkpointTable = {
     baseModel: `Pony`,
     url: new URL(`https://huggingface.co/tsukihara/xl_model`).toString(),
   },
+  "evaclausmixPonyXL_v21.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/418105/evaclausmix-pony-xl`,
+    ).toString(),
+  },
   "hamefkawaiimix_typelight.safetensors": {
     baseModel: `Pony`,
     url: new URL(
@@ -89,6 +101,12 @@ export const checkpointTable = {
     baseModel: `Pony`,
     url: new URL(
       `https://civitai.com/models/492705/hentaicinematicpony?modelVersionId=637173`,
+    ).toString(),
+  },
+  "malaAnimeMixNSFW_v60.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/442163?modelVersionId=659529`,
     ).toString(),
   },
   "momoiropony_v14.safetensors": {

@@ -35,6 +35,10 @@ export const checkpointAndVaePreset = {
     sd_model_checkpoint: `autismmixSDXL_autismmixDPO.safetensors`,
     sd_vae: `None`,
   },
+  boleromix: {
+    sd_model_checkpoint: `boleromixPony_v141VAE.safetensors`,
+    sd_vae: `None`,
+  },
   chacolEbara: {
     sd_model_checkpoint: `chacolebaramixxl_v21.safetensors`,
     sd_vae: `None`,
@@ -45,6 +49,10 @@ export const checkpointAndVaePreset = {
   },
   ebaraPony2: {
     sd_model_checkpoint: `ebara_pony_2.1.safetensors`,
+    sd_vae: `None`,
+  },
+  evaclausmix: {
+    sd_model_checkpoint: `evaclausmixPonyXL_v21.safetensors`,
     sd_vae: `None`,
   },
   hassakuXlHentai: {
@@ -65,6 +73,10 @@ export const checkpointAndVaePreset = {
   },
   pvcStyle: {
     sd_model_checkpoint: `PVCStyleModelMovable_pony151.safetensors`,
+    sd_vae: `None`,
+  },
+  malaAnimeMix: {
+    sd_model_checkpoint: `malaAnimeMixNSFW_v60.safetensors`,
     sd_vae: `None`,
   },
   momoiro: {
