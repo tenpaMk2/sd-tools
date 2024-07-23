@@ -9,6 +9,7 @@ export const allPoseTags = [
   `clothes lift`,
   `contrapposto`,
   `double v`,
+  `drinking`,
   `grabbing own breast`,
   `grabbing`,
   `hand up`,

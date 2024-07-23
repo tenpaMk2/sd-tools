@@ -39,9 +39,11 @@ import { standingShushing } from "./common/standing-shushing.mjs";
 import { standingSquatting } from "./common/standing-squatting.mjs";
 import { standingTwistedTorso } from "./common/standing-twisted-torso.mjs";
 import { standingV } from "./common/standing-v.mjs";
+import { sittingOnHoldingBeerMug } from "./special/sitting-on-holding-beer-mug.mjs";
 import { sittingOnSingingFromSide } from "./special/sitting-on-singing-from-side.mjs";
 import { sittingOnSinging } from "./special/sitting-on-singing.mjs";
 import { standingCheering } from "./special/standing-cheering.mjs";
+import { standingHoldingBeerMug } from "./special/standing-holding-beer-mug.mjs";
 import { standingHoldingBouquet } from "./special/standing-holding-bouquet.mjs";
 import { standingHoldingVolleyball } from "./special/standing-holding-volleyball.mjs";
 import { standingSinging } from "./special/standing-singing.mjs";
@@ -188,10 +190,17 @@ export const commonPoseTable = {
 } as const satisfies Record<string, PoseDefine>;
 
 export const specialPoseTable = {
+  "sitting-on-from-above-holding-beer-mug":
+    sittingOnHoldingBeerMug(`from-above`),
+  "sitting-on-from-below-holding-beer-mug":
+    sittingOnHoldingBeerMug(`from-below`),
+  "sitting-on-from-horizontal-holding-beer-mug":
+    sittingOnHoldingBeerMug(`from-horizontal`),
   "sitting-on-from-horizontal-singing-from-side":
     sittingOnSingingFromSide(`from-horizontal`),
   "sitting-on-from-horizontal-singing": sittingOnSinging(`from-horizontal`),
   "standing-from-above-cheering": standingCheering(`from-above`),
+  "standing-from-above-holding-beer-mug": standingHoldingBeerMug(`from-above`),
   "standing-from-above-holding-bouquet": standingHoldingBouquet(`from-above`),
   "standing-from-above-holding-volleyball":
     standingHoldingVolleyball(`from-above`),
@@ -199,6 +208,7 @@ export const specialPoseTable = {
     standingUndressingUpperBody(`from-above`),
   "standing-from-above-undressing": standingUndressing(`from-above`),
   "standing-from-below-cheering": standingCheering(`from-below`),
+  "standing-from-below-holding-beer-mug": standingHoldingBeerMug(`from-below`),
   "standing-from-below-holding-bouquet": standingHoldingBouquet(`from-below`),
   "standing-from-below-holding-volleyball":
     standingHoldingVolleyball(`from-below`),
@@ -206,6 +216,8 @@ export const specialPoseTable = {
     standingUndressingUpperBody(`from-below`),
   "standing-from-below-undressing": standingUndressing(`from-below`),
   "standing-from-horizontal-cheering": standingCheering(`from-horizontal`),
+  "standing-from-horizontal-holding-beer-mug":
+    standingHoldingBeerMug(`from-horizontal`),
   "standing-from-horizontal-holding-bouquet":
     standingHoldingBouquet(`from-horizontal`),
   "standing-from-horizontal-holding-volleyball":

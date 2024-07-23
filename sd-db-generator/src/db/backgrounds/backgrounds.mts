@@ -1,5 +1,6 @@
 import type { BackgroundTag } from "@tenpamk2/sd-tag-defines";
 import type { TagEntry } from "../../entry.mjs";
+import { bar } from "./common/bar.mjs";
 import { beach } from "./common/beach.mjs";
 import { bedSheet } from "./common/bed-sheet.mjs";
 import { bedroom } from "./common/bedroom.mjs";
@@ -46,6 +47,8 @@ export type BackgroundDefine = Partial<
 };
 
 export const backgroundTable = {
+  "bar-sitting-on": bar({ backgroundType: `sitting-on` }),
+  "bar-standing": bar({ backgroundType: `standing` }),
   "beach-near-clean-floor": beach({ backgroundType: `near-clean-floor` }),
   "beach-sitting-on": beach({ backgroundType: `sitting-on` }),
   "beach-standing": beach({ backgroundType: `standing` }),

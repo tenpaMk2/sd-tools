@@ -737,6 +737,9 @@ export const allDistinguishableOutfitTags = {
   "back cutout -> clothing cutout": `clothing cutout`,
   "o-ring bikini -> o-ring": `o-ring`,
   "frilled bikini -> frills": `frills`,
+  "cross-laced dress -> cross-laced clothes": `cross-laced clothes`,
+  "cross-laced top -> cross-laced clothes": `cross-laced clothes`,
+  "cross-laced skirt -> cross-laced clothes": `cross-laced clothes`,
 } as const satisfies Record<string, string>;
 
 export const allBodyOutfitTags = [
@@ -877,6 +880,7 @@ export const allBodyOutfitTags = [
   `cropped jacket`,
   `cropped shirt`,
   `cross tie`,
+  `cross-laced dress`,
   `cross-laced footwear`,
   `crotch seam`,
   `cutoffs`,
@@ -884,6 +888,7 @@ export const allBodyOutfitTags = [
   `denim`,
   `detached collar`,
   `detached sleeves`,
+  `dirndl`,
   `dolphin shorts`,
   `dragon print`,
   `dress shirt`,
@@ -912,6 +917,7 @@ export const allBodyOutfitTags = [
   `fur-trimmed skirt`,
   `garter belt`,
   `garter straps`,
+  `german clothes`,
   `gloves`,
   `gym shirt`,
   `gym uniform`,

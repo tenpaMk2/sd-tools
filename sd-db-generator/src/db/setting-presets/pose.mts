@@ -22,6 +22,16 @@ export const posesPreset = {
 
   "default": defaultPreset,
 
+  "bar-sitting-on": [
+    { key: `sitting-on-from-above-holding-beer-mug` },
+    { key: `sitting-on-from-below-holding-beer-mug` },
+    { key: `sitting-on-from-horizontal-holding-beer-mug` },
+  ],
+  "bar-standing": [
+    { key: `standing-from-above-holding-beer-mug` },
+    { key: `standing-from-below-holding-beer-mug` },
+    { key: `standing-from-horizontal-holding-beer-mug` },
+  ],
   "beach-near-clean-floor": defaultPreset,
   "beach-sitting-on": defaultPreset,
   "beach-standing": defaultPreset,

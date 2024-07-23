@@ -19,6 +19,7 @@ import { cheerleader } from "./common/cheerleader.mjs";
 import { chinaDress } from "./common/china-dress.mjs";
 import { cowPrintBikini } from "./common/cow-print-bikini.mjs";
 import { denimBikini } from "./common/denim-bikini.mjs";
+import { dirndl } from "./common/dirndl.mjs";
 import { formalSuit } from "./common/formal-suit.mjs";
 import { gymUniform } from "./common/gym-uniform.mjs";
 import { haremOutfit } from "./common/harem-outfit.mjs";
@@ -193,6 +194,7 @@ export const commonOutfitTable = {
   "china-dress": chinaDress(),
   "cow-print-bikini": cowPrintBikini(),
   "denim-bikini": denimBikini(),
+  "dirndl": dirndl(),
   "formal-suit": formalSuit(`common`),
   "gym-uniform": gymUniform(),
   "harem-outfit": haremOutfit(),
@@ -220,7 +222,7 @@ export const commonOutfitTable = {
   // TODO: gun man
   // TODO: naked apron
   // TODO: naked shirt, dress shirt
-  // TODO: `valentine`} as const satisfies Record<string, OutfitDefine>;
+  // TODO: `valentine`
 } as const satisfies Record<string, OutfitDefine>;
 
 /**

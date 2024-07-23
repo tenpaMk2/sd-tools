@@ -169,6 +169,11 @@ const armpitsVisible = [
   { key: `sweat-white-background-standing-for-armpit` },
 ] as const satisfies BackgroundSetting[];
 
+const bar = [
+  { key: `bar-sitting-on` },
+  { key: `bar-standing` },
+] as const satisfies BackgroundSetting[];
+
 export const backgroundsPreset = {
   "default": [
     { key: `colorful-background-standing` },
@@ -206,6 +211,7 @@ export const backgroundsPreset = {
   "china-dress": [...defaultPreset, ...armpitsVisible],
   "cow-print-bikini": [...grass, ...armpitsVisible],
   "denim-bikini": [...ocean, ...armpitsVisible],
+  "dirndl": [...bar],
   "formal-suit": student,
   "gym-uniform": sports,
   "harem-outfit": [

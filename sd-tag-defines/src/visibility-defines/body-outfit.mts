@@ -940,6 +940,9 @@ const allDistinguishableOutfitVisibilities = {
   "back cutout -> clothing cutout": preset.back,
   "o-ring bikini -> o-ring": preset.dress,
   "frilled bikini -> frills": preset.dress,
+  "cross-laced dress -> cross-laced clothes": preset.dress,
+  "cross-laced top -> cross-laced clothes": preset.shirt,
+  "cross-laced skirt -> cross-laced clothes": preset.skirt,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 export const allBodyOutfitVisibilities = {
@@ -1081,6 +1084,7 @@ export const allBodyOutfitVisibilities = {
   "cropped jacket": preset.shirt,
   "cropped shirt": preset.shirt,
   "cross tie": preset.bowtie,
+  "cross-laced dress": preset.dress,
   "cross-laced footwear": preset.foot,
   "crotch seam": preset.cameltoe,
   "cutoffs": preset.skirt,
@@ -1088,6 +1092,7 @@ export const allBodyOutfitVisibilities = {
   "denim": preset.skirt,
   "detached collar": preset.collar,
   "detached sleeves": preset["wrist cuffs"],
+  "dirndl": preset.dress,
   "dolphin shorts": preset.skirt,
   "dragon print": preset.dress,
   "dress shirt": preset.shirt,
@@ -1116,6 +1121,7 @@ export const allBodyOutfitVisibilities = {
   "fur-trimmed skirt": preset.skirt,
   "garter belt": preset.skirt,
   "garter straps": preset.skirt,
+  "german clothes": preset.dress,
   "gloves": preset["wrist cuffs"],
   "gym shirt": preset.shirt,
   "gym uniform": preset.dress,
