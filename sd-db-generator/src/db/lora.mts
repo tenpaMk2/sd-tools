@@ -590,6 +590,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "honmachi_tone_v1": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/577294/honmachi-tone-dropout-idol-fruit-tart?modelVersionId=643699`,
+    ).toString(),
+    characterTriggerWordsTags: [`honmachi_tone`],
+    outfitTriggerTags: [],
+    creator: `enter741852963`,
+  },
   "honoka-mahouka": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -858,6 +868,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "maehara_nina_v1": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/578080/maehara-nina-dropout-idol-fruit-tart?modelVersionId=644677`,
+    ).toString(),
+    characterTriggerWordsTags: [`maehara_nina`],
+    outfitTriggerTags: [`idol_a`, `idol_b`],
+    creator: `enter741852963`,
+  },
   "Maika_Sakuranomiya_Pony": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
@@ -951,6 +971,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`Megumi Jinno`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
+  },
+  "midori_hemo_v1": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/577978/midori-hemo-dropout-idol-fruit-tart?modelVersionId=644552`,
+    ).toString(),
+    characterTriggerWordsTags: [`midori_hemo`],
+    outfitTriggerTags: [`idol_a`, `idol_b`],
+    creator: `enter741852963`,
   },
   "miko-iino-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
@@ -1170,6 +1200,16 @@ export const loraTable = {
     outfitTriggerTags: [`norn-default`, `norn-schooluniform`],
     creator: `Ibukimakisiko`,
   },
+  "nukui_hayu_v1": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/577316/nukui-hayu-dropout-idol-fruit-tart?modelVersionId=643727`,
+    ).toString(),
+    characterTriggerWordsTags: [`nukui_hayu`],
+    outfitTriggerTags: [`idol_a`, `idol_b`],
+    creator: `enter741852963`,
+  },
   "OGT_Cecilia_Alcott-v1": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -1326,6 +1366,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
   },
+  "sakura_ino_v1": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/577569/sakura-ino-dropout-idol-fruit-tart?modelVersionId=644027`,
+    ).toString(),
+    characterTriggerWordsTags: [`sakura_ino`],
+    outfitTriggerTags: [`idol_a`, `idol_b`],
+    creator: `enter741852963`,
+  },
   "sally_bofuri_PONY_last": {
     recommendedWeight: 1.0,
     supportedBaseModels: [`Pony`],
@@ -1369,6 +1419,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`sayu ogiwara`],
     outfitTriggerTags: [],
     creator: `nochekaiser`,
+  },
+  "sekino_roko_v1": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/577637/sekino-roko-dropout-idol-fruit-tart?modelVersionId=644122`,
+    ).toString(),
+    characterTriggerWordsTags: [`sekino_roko`],
+    outfitTriggerTags: [`idol_a`, `idol_b`],
+    creator: `enter741852963`,
   },
   "sento_isuzu_xl_pony_v1": {
     recommendedWeight: 0.9,

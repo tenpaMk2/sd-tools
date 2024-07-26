@@ -72,7 +72,7 @@ export const backgroundTable = {
   }),
   "bookshelf-sitting-on": bookshelf({ backgroundType: `sitting-on` }),
   "bookshelf-standing": bookshelf({ backgroundType: `standing` }),
-  "cafe-standing": cafe({ backgroundType: `standing` }),
+  "cafe-standing": cafe({ backgroundType: `standing` }), // TODO: Add `cafe-sitting-on` .
   "casino-sitting-on": casino({ backgroundType: `sitting-on` }),
   "casino-standing": casino({ backgroundType: `standing` }),
   "christmas-near-clean-floor": christmas({

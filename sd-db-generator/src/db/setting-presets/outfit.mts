@@ -531,6 +531,83 @@ export const outfitsPreset: OutfitsPreset = {
   "new-game-rin-eternal2kpp": [...defaultPreset],
   "new-game-yun-eternal2kpp": [...defaultPreset],
   "non-non-biyori-hotaru-notekaga": defaultPreset,
+  "ochifuru-hayu-enter": [
+    ...defaultPreset,
+    {
+      key: `ochifuru-idol-jacket-hayu-enter`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `ochifuru-school-uniform-hayu-enter`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "ochifuru-hayu-idol-ribbon-enter": [
+    { key: `ochifuru-idol-sleeveless-hayu-enter` },
+  ],
+  "ochifuru-hemo-enter": [
+    ...defaultPreset,
+    {
+      key: `ochifuru-idol-jacket-hemo-enter`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `ochifuru-school-uniform-hemo-enter`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "ochifuru-hemo-idol-ribbon-enter": [
+    { key: `ochifuru-idol-sleeveless-hemo-enter` },
+  ],
+  "ochifuru-ino-enter": [
+    ...defaultPreset,
+    {
+      key: `ochifuru-idol-jacket-ino-enter`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `ochifuru-school-uniform-ino-enter`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "ochifuru-ino-idol-ribbon-enter": [
+    { key: `ochifuru-idol-sleeveless-ino-enter` },
+  ],
+  "ochifuru-nina-enter": [
+    ...defaultPreset,
+    {
+      key: `ochifuru-idol-jacket-nina-enter`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `ochifuru-school-uniform-nina-enter`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "ochifuru-nina-idol-ribbon-enter": [
+    { key: `ochifuru-idol-sleeveless-nina-enter` },
+  ],
+  "ochifuru-roko-enter": [
+    ...defaultPreset,
+    {
+      key: `ochifuru-idol-jacket-roko-enter`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `ochifuru-school-uniform-roko-enter`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "ochifuru-roko-idol-ribbon-enter": [
+    { key: `ochifuru-idol-sleeveless-roko-enter` },
+  ],
+  "ochifuru-tone-enter": [
+    ...defaultPreset,
+    {
+      key: `ochifuru-school-uniform-tone-enter`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "prisma-illya-chloe-beast-am7coffeelove": [
     ...defaultPreset,
     {

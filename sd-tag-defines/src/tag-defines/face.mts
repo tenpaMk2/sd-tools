@@ -23,14 +23,15 @@ const allEyesColorTags = [
 ] as const satisfies string[];
 
 const allEyesTags = [
+  `+ +`,
+  `heart-shaped pupils`,
+  `heterocromia`,
+  `jitome`,
   `sparkling eyes`,
   `star-shaped pupils`,
-  `+ +`,
   `symbol-shaped pupils`,
-  `heterocromia`,
-  `tsurime`,
   `tareme`,
-  `jitome`,
+  `tsurime`,
 ] as const satisfies string[];
 
 const allEyelashesTags = [

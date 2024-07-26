@@ -44,14 +44,15 @@ const allEyesColorVisibilities = {
 } as const satisfies Partial<Record<FaceTag, Visibility>>;
 
 const allEyesVisibilities = {
+  "+ +": preset.face,
+  "heart-shaped pupils": preset.face,
+  "heterocromia": preset.face,
+  "jitome": preset.face,
   "sparkling eyes": preset.face,
   "star-shaped pupils": preset.face,
-  "+ +": preset.face,
   "symbol-shaped pupils": preset.face,
-  "heterocromia": preset.face,
-  "tsurime": preset.face,
   "tareme": preset.face,
-  "jitome": preset.face,
+  "tsurime": preset.face,
 } as const satisfies Partial<Record<FaceTag, Visibility>>;
 
 const allEyelashesVisibilities = {

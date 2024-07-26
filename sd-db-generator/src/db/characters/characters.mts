@@ -70,6 +70,12 @@ import { newGameNene } from "./new-game/nene.mjs";
 import { newGameRin } from "./new-game/rin.mjs";
 import { newGameYun } from "./new-game/yun.mjs";
 import { nonNonBiyoriHotaru } from "./non-non-biyori/hotaru.mjs";
+import { ochifuruHayu } from "./ochifuru/hayu.mjs";
+import { ochifuruHemo } from "./ochifuru/hemo.mjs";
+import { ochifuruIno } from "./ochifuru/ino.mjs";
+import { ochifuruNina } from "./ochifuru/nina.mjs";
+import { ochifuruRoko } from "./ochifuru/roko.mjs";
+import { ochifuruTone } from "./ochifuru/tone.mjs";
 import { prismaIllyaChloe } from "./prisma-illya/chloe.mjs";
 import { prismaIllyaIllya } from "./prisma-illya/illya.mjs";
 import { prismaIllyaMiyu } from "./prisma-illya/miyu.mjs";
@@ -245,6 +251,17 @@ export const characterTable = {
   "new-game-rin-eternal2kpp": newGameRin(`eternal2kpp`),
   "new-game-yun-eternal2kpp": newGameYun(`eternal2kpp`),
   "non-non-biyori-hotaru-notekaga": nonNonBiyoriHotaru(`notekaga`),
+  "ochifuru-hayu-enter": ochifuruHayu(`enter`),
+  "ochifuru-hayu-idol-ribbon-enter": ochifuruHayu(`idol-ribbon-enter`),
+  "ochifuru-hemo-enter": ochifuruHemo(`enter`),
+  "ochifuru-hemo-idol-ribbon-enter": ochifuruHemo(`idol-ribbon-enter`),
+  "ochifuru-ino-enter": ochifuruIno(`enter`),
+  "ochifuru-ino-idol-ribbon-enter": ochifuruIno(`idol-ribbon-enter`),
+  "ochifuru-nina-enter": ochifuruNina(`enter`),
+  "ochifuru-nina-idol-ribbon-enter": ochifuruNina(`idol-ribbon-enter`),
+  "ochifuru-roko-enter": ochifuruRoko(`enter`),
+  "ochifuru-roko-idol-ribbon-enter": ochifuruRoko(`idol-ribbon-enter`),
+  "ochifuru-tone-enter": ochifuruTone(`enter`),
   "prisma-illya-chloe-beast-am7coffeelove":
     prismaIllyaChloe(`beast-am7coffeelove`),
   "prisma-illya-illya-beast-am7coffeelove":

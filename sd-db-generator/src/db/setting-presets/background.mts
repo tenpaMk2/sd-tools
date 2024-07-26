@@ -8,150 +8,122 @@ export type BackgroundsPreset = Record<
   BackgroundSetting[]
 >;
 
-const defaultPreset = [
+// TODO: Consider naming rule for distinguish each background-part and background-sets.
+
+const colorfulBackground = [
   { key: `colorful-background-standing` },
   { key: `colorful-heart-background-standing` },
   { key: `colorful-background-near-clean-floor` },
   { key: `colorful-heart-background-near-clean-floor` },
-  { key: `bed-sheet-steaming-near-clean-floor`, probability: 3 },
-  // TODO: ↓
-  // { key: `karaoke-box-sitting-on`, probability: 0.2 },
-  // { key: `karaoke-box-standing`, probability: 0.2 },
+] as const satisfies BackgroundSetting[];
+
+const bedSheetSteaming = [
+  { key: `bed-sheet-steaming-near-clean-floor` },
+] as const satisfies BackgroundSetting[];
+
+const defaultPreset = [
+  ...colorfulBackground,
+  ...bedSheetSteaming.map((x) => ({ ...x, probability: 3 })),
 ] as const satisfies BackgroundSetting[];
 
 const ocean = [
-  { key: `bed-sheet-steaming-near-clean-floor` },
   { key: `ocean-standing` },
   { key: `beach-standing` },
   { key: `beach-near-clean-floor` },
   { key: `beach-sitting-on` },
 ] as const satisfies BackgroundSetting[];
 
-const casual = [
-  ...defaultPreset,
-  { key: `city-sitting-on`, probability: defaultPreset.length },
-  { key: `city-standing`, probability: defaultPreset.length },
-  { key: `cafe-standing`, probability: defaultPreset.length },
+const city = [
+  { key: `city-sitting-on`, probability: 0.3 },
+  { key: `city-standing` },
+] as const satisfies BackgroundSetting[];
+
+const cafe = [{ key: `cafe-standing` }] as const satisfies BackgroundSetting[];
+
+const casual = [...city, ...cafe] as const satisfies BackgroundSetting[];
+
+const classroom = [
+  { key: `classroom-chalkboard-sitting-on`, probability: 0.3 },
+  { key: `classroom-chalkboard-standing` },
+  { key: `classroom-window-sitting-on`, probability: 0.3 },
+  { key: `classroom-window-standing` },
+] as const satisfies BackgroundSetting[];
+
+const karaokeBox = [
+  { key: `karaoke-box-sitting-on` },
+  { key: `karaoke-box-standing` },
 ] as const satisfies BackgroundSetting[];
 
 const student = [
-  { key: `classroom-chalkboard-sitting-on` },
-  { key: `classroom-chalkboard-standing` },
-  { key: `classroom-window-sitting-on` },
-  { key: `classroom-window-standing` },
-  { key: `bed-sheet-steaming-near-clean-floor`, probability: 2 },
-  { key: `city-sitting-on`, probability: 0.5 },
-  { key: `city-standing` },
-  { key: `cafe-standing` },
-  { key: `karaoke-box-sitting-on`, probability: 0.2 },
-  { key: `karaoke-box-standing`, probability: 0.2 },
+  ...classroom,
+  ...bedSheetSteaming.map((x) => ({ ...x, probability: 2 })),
+  ...city,
+  ...cafe,
+  ...karaokeBox.map((x) => ({ ...x, probability: 0.2 })),
 ] as const satisfies BackgroundSetting[];
 
 const nearFeatureStudent = [
-  { key: `bed-sheet-steaming-near-clean-floor`, probability: 2 },
-  { key: `city-sitting-on`, probability: 0.5 },
-  { key: `city-standing` },
-  { key: `cafe-standing` },
-  { key: `karaoke-box-sitting-on`, probability: 0.2 },
-  { key: `karaoke-box-standing`, probability: 0.2 },
+  ...bedSheetSteaming.map((x) => ({ ...x, probability: 2 })),
+  ...city,
+  ...cafe,
+  ...karaokeBox.map((x) => ({ ...x, probability: 0.2 })),
+] as const satisfies BackgroundSetting[];
+
+const office = [
+  { key: `office-sitting-on`, probability: 0.3 },
+  { key: `office-standing` },
 ] as const satisfies BackgroundSetting[];
 
 const officeLady = [
-  ...defaultPreset,
-  { key: `city-sitting-on`, probability: defaultPreset.length },
-  { key: `city-standing`, probability: defaultPreset.length },
-  { key: `cafe-standing`, probability: defaultPreset.length },
-  { key: `karaoke-box-sitting-on`, probability: defaultPreset.length / 3 },
-  { key: `karaoke-box-standing`, probability: defaultPreset.length / 3 },
-  { key: `office-sitting-on`, probability: defaultPreset.length * 3 },
-  { key: `office-standing`, probability: defaultPreset.length * 3 },
-] as const satisfies BackgroundSetting[];
-
-const cafe = [
-  ...defaultPreset,
-  { key: `cafe-standing`, probability: defaultPreset.length },
+  ...office,
+  ...bedSheetSteaming.map((x) => ({ ...x, probability: 2 })),
+  ...city,
+  ...cafe,
+  ...karaokeBox.map((x) => ({ ...x, probability: 0.2 })),
 ] as const satisfies BackgroundSetting[];
 
 const grass = [
-  ...defaultPreset,
-  { key: `grass-sitting-on`, probability: defaultPreset.length },
-  { key: `grass-near-clean-floor`, probability: defaultPreset.length },
-  { key: `grass-standing`, probability: defaultPreset.length },
+  { key: `grass-sitting-on`, probability: 0.3 },
+  { key: `grass-near-clean-floor` },
+  { key: `grass-standing` },
 ] as const satisfies BackgroundSetting[];
 
 const bedroom = [
-  {
-    key: `bedroom-near-clean-floor`,
-  },
+  { key: `bedroom-near-clean-floor` },
   {
     key: `bedroom-sitting-on`,
     probability: 0.3,
   },
-  {
-    key: `bedroom-standing`,
-  },
+  { key: `bedroom-standing` },
 ] as const satisfies BackgroundSetting[];
 
 const sports = [
-  ...defaultPreset,
-  {
-    key: `sky-blue-sky-standing`,
-    probability: defaultPreset.length / 3,
-  },
-  {
-    key: `sky-orange-sky-standing`,
-    probability: defaultPreset.length / 3,
-  },
-  {
-    key: `gym-storeroom-near-clean-floor`,
-    probability: defaultPreset.length / 3,
-  },
-  {
-    key: `gym-storeroom-standing`,
-    probability: defaultPreset.length / 3,
-  },
+  { key: `sky-blue-sky-standing` },
+  { key: `sky-orange-sky-standing`, probability: 0.5 },
+  { key: `gym-storeroom-near-clean-floor` },
+  { key: `gym-storeroom-standing` },
+] as const satisfies BackgroundSetting[];
+
+const blueSky = [
+  { key: `sky-blue-sky-standing`, probability: defaultPreset.length },
 ] as const satisfies BackgroundSetting[];
 
 const isekai = [
   { key: `bed-sheet-steaming-near-clean-floor` },
-  { key: `grass-sitting-on` },
-  { key: `grass-near-clean-floor` },
-  { key: `grass-standing` },
-  { key: `sky-blue-sky-standing` },
+  ...grass,
+  ...blueSky,
   // TODO: mountains, forest
 ] as const satisfies BackgroundSetting[];
 
-const blueSky = [
-  ...defaultPreset,
-  { key: `sky-blue-sky-standing`, probability: defaultPreset.length },
-] as const satisfies BackgroundSetting[];
-
 const nightCity = [
-  ...defaultPreset,
-  {
-    key: `night-moon-sitting-on`,
-    probability: defaultPreset.length / 3,
-  },
-  {
-    key: `night-moon-standing`,
-    probability: defaultPreset.length / 3,
-  },
-  {
-    key: `night-rooftop-standing`,
-    probability: defaultPreset.length / 3,
-  },
+  { key: `night-moon-sitting-on`, probability: 0.3 },
+  { key: `night-moon-standing` },
+  { key: `night-rooftop-standing` },
 ] as const satisfies BackgroundSetting[];
 
 const garden = [
-  ...defaultPreset,
-  {
-    key: `garden-sitting-on`,
-    probability: defaultPreset.length / 3,
-  },
-  {
-    key: `garden-standing`,
-    probability: defaultPreset.length / 3,
-  },
+  { key: `garden-sitting-on`, probability: 0.3 },
+  { key: `garden-standing` },
 ] as const satisfies BackgroundSetting[];
 
 const bookshelf = [
@@ -176,17 +148,18 @@ const bar = [
 
 export const backgroundsPreset = {
   "default": [
-    { key: `colorful-background-standing` },
     { key: `colorful-background-near-clean-floor` },
+    { key: `colorful-background-sitting-on` },
+    { key: `colorful-background-standing` },
   ],
 
   /**
    * Common outfits.
    */
   "babydoll": [...defaultPreset, ...armpitsVisible],
-  "bikini-frill": [...ocean, ...armpitsVisible],
-  "bikini-o-ring": [...ocean, ...armpitsVisible],
-  "bikini-tie": [...ocean, ...armpitsVisible],
+  "bikini-frill": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
+  "bikini-o-ring": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
+  "bikini-tie": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
   "bridal-lingerie": [
     ...defaultPreset,
     { key: `wedding-near-clean-floor`, probability: defaultPreset.length / 2 },
@@ -194,23 +167,19 @@ export const backgroundsPreset = {
     ...armpitsVisible,
   ],
   "camisole-denim-shorts": [...casual, ...armpitsVisible],
-  "casual-miniskirt": casual,
+  "casual-miniskirt": [...casual, ...bedSheetSteaming],
   "cheerleader": [
     {
       key: `blue-sky-confetti-standing-for-cheering`,
       probability: 3,
     },
-    {
-      key: `blue-sky-confetti-standing`,
-    },
-    {
-      key: `bed-sheet-steaming-near-clean-floor`,
-    },
+    { key: `blue-sky-confetti-standing` },
+    { key: `bed-sheet-steaming-near-clean-floor` },
     ...armpitsVisible,
   ],
   "china-dress": [...defaultPreset, ...armpitsVisible],
   "cow-print-bikini": [...grass, ...armpitsVisible],
-  "denim-bikini": [...ocean, ...armpitsVisible],
+  "denim-bikini": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
   "dirndl": [...bar],
   "formal-suit": student,
   "gym-uniform": sports,
@@ -223,7 +192,7 @@ export const backgroundsPreset = {
     ...armpitsVisible,
   ],
   "maid-bikini": [...cafe, ...armpitsVisible],
-  "micro-bikini": [...ocean, ...armpitsVisible],
+  "micro-bikini": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
   "naked-towel": [
     ...defaultPreset,
     { key: `onsen-standing`, probability: defaultPreset.length },
@@ -341,11 +310,15 @@ export const backgroundsPreset = {
   /**
    * Character specific outfits.
    */
-  "amaburi-red-uniform-isuzu-h-madoka": casual,
-  "amaburi-red-uniform-isuzu-no-lora": casual,
-  "amaburi-red-uniform-isuzu-nochekaiser": casual, // TODO: `amusement park`
+  "amaburi-red-uniform-isuzu-h-madoka": [...casual, ...bedSheetSteaming],
+  "amaburi-red-uniform-isuzu-no-lora": [...casual, ...bedSheetSteaming],
+  "amaburi-red-uniform-isuzu-nochekaiser": [...casual, ...bedSheetSteaming], // TODO: `amusement park`
   "blend-s-school-uniform-kaho-ibukimakisiko": student,
-  "blend-s-swimsuit-kaho-ibukimakisiko": [...ocean, ...armpitsVisible],
+  "blend-s-swimsuit-kaho-ibukimakisiko": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...armpitsVisible,
+  ],
   "blend-s-waitress-kaho-ibukimakisiko": [...cafe, ...armpitsVisible],
   "blend-s-waitress-maika-shadowxart": cafe,
   "blend-s-waitress-mafuyu-ibukimakisiko": cafe,
@@ -376,20 +349,39 @@ export const backgroundsPreset = {
   "goblin-slayer-outfit-priestess-eternal2kpp": isekai,
   "higehiro-school-uniform-sayu-nochekaiser": student,
   "hyouka-school-uniform-eru-chenkin": student,
-  "hyouka-white-bikini-eru-chenkin": [...ocean, ...armpitsVisible],
-  "is-infinite-stratos-academy-school-uniform-cecilia-nochekaiser": casual,
-  "is-infinite-stratos-academy-school-uniform-charlotte-nochekaiser": casual,
-  "is-infinite-stratos-academy-school-uniform-houki-nochekaiser": casual,
-  "is-infinite-stratos-academy-school-uniform-laura-nochekaiser": casual,
+  "hyouka-white-bikini-eru-chenkin": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...armpitsVisible,
+  ],
+  "is-infinite-stratos-academy-school-uniform-cecilia-nochekaiser": [
+    ...casual,
+    ...bedSheetSteaming,
+  ],
+  "is-infinite-stratos-academy-school-uniform-charlotte-nochekaiser": [
+    ...casual,
+    ...bedSheetSteaming,
+  ],
+  "is-infinite-stratos-academy-school-uniform-houki-nochekaiser": [
+    ...casual,
+    ...bedSheetSteaming,
+  ],
+  "is-infinite-stratos-academy-school-uniform-laura-nochekaiser": [
+    ...casual,
+    ...bedSheetSteaming,
+  ],
   "is-infinite-stratos-academy-school-uniform-lingyin-nochekaiser": [
     ...casual,
     ...armpitsVisible,
   ],
-  "is-infinite-stratos-academy-school-uniform-tatenashi-nochekaiser": casual,
+  "is-infinite-stratos-academy-school-uniform-tatenashi-nochekaiser": [
+    ...casual,
+    ...bedSheetSteaming,
+  ],
   "is-pilot-suit-cecilia-nochekaiser": [...blueSky, ...armpitsVisible],
   "is-pilot-suit-charlotte-nochekaiser": [...blueSky, ...armpitsVisible],
   "is-pilot-suit-houki-nochekaiser": [...blueSky, ...armpitsVisible],
-  "is-yellow-dress-maya-nochekaiser": casual,
+  "is-yellow-dress-maya-nochekaiser": [...casual, ...bedSheetSteaming],
   "isekai-ojisan-outfit-alicia-nochekaiser": isekai,
   "isekai-ojisan-outfit-mabel-nochekaiser": isekai,
   "isekai-ojisan-outfit-sui-nochekaiser": isekai,
@@ -412,8 +404,14 @@ export const backgroundsPreset = {
   "konosuba-outfit-megumin-adventurer-no-lora": isekai,
   "konosuba-outfit-megumin-light-no-lora": [...isekai, ...armpitsVisible],
   "konosuba-outfit-yunyun-no-lora": isekai,
-  "lycoris-recoil-lycoris-uniform-chisato-nochekaiser": casual,
-  "lycoris-recoil-lycoris-uniform-takina-nochekaiser": casual,
+  "lycoris-recoil-lycoris-uniform-chisato-nochekaiser": [
+    ...casual,
+    ...bedSheetSteaming,
+  ],
+  "lycoris-recoil-lycoris-uniform-takina-nochekaiser": [
+    ...casual,
+    ...bedSheetSteaming,
+  ],
   "machikado-mazoku-crisis-management-form-ibukimakisiko": [
     ...casual,
     ...armpitsVisible,
@@ -422,8 +420,11 @@ export const backgroundsPreset = {
     ...sports,
     ...armpitsVisible,
   ],
-  "machikado-mazoku-school-uniform-shamiko-ibukimakisiko": student,
-  "mahoako-outfit-locomusica-notekaga": casual,
+  "machikado-mazoku-school-uniform-shamiko-ibukimakisiko": [
+    ...student,
+    ...bedSheetSteaming,
+  ],
+  "mahoako-outfit-locomusica-notekaga": [...casual, ...bedSheetSteaming],
   "majo-no-tabitabi-witch-elaina-ibukimakisiko": isekai,
   "majo-no-tabitabi-witch-elaina-inner-ibukimakisiko": [
     ...isekai,
@@ -449,6 +450,42 @@ export const backgroundsPreset = {
   "new-game-outfit-aoba-nochekaiser": officeLady,
   "new-game-outfit-hifumi-eternal2kpp": officeLady,
   "new-game-outfit-hifumi-nochekaiser": officeLady,
+  "ochifuru-idol-jacket-hayu-enter": [...casual, ...bedSheetSteaming],
+  "ochifuru-idol-jacket-hemo-enter": [...casual, ...bedSheetSteaming],
+  "ochifuru-idol-jacket-ino-enter": [...casual, ...bedSheetSteaming],
+  "ochifuru-idol-jacket-nina-enter": [...casual, ...bedSheetSteaming],
+  "ochifuru-idol-jacket-roko-enter": [...casual, ...bedSheetSteaming],
+  "ochifuru-idol-sleeveless-hayu-enter": [
+    ...casual,
+    ...bedSheetSteaming,
+    ...armpitsVisible,
+  ],
+  "ochifuru-idol-sleeveless-hemo-enter": [
+    ...casual,
+    ...bedSheetSteaming,
+    ...armpitsVisible,
+  ],
+  "ochifuru-idol-sleeveless-ino-enter": [
+    ...casual,
+    ...bedSheetSteaming,
+    ...armpitsVisible,
+  ],
+  "ochifuru-idol-sleeveless-nina-enter": [
+    ...casual,
+    ...bedSheetSteaming,
+    ...armpitsVisible,
+  ],
+  "ochifuru-idol-sleeveless-roko-enter": [
+    ...casual,
+    ...bedSheetSteaming,
+    ...armpitsVisible,
+  ],
+  "ochifuru-school-uniform-hayu-enter": [...student, ...bedSheetSteaming],
+  "ochifuru-school-uniform-hemo-enter": [...student, ...bedSheetSteaming],
+  "ochifuru-school-uniform-ino-enter": [...student, ...bedSheetSteaming],
+  "ochifuru-school-uniform-nina-enter": [...student, ...bedSheetSteaming],
+  "ochifuru-school-uniform-roko-enter": [...student, ...bedSheetSteaming],
+  "ochifuru-school-uniform-tone-enter": [...student, ...bedSheetSteaming],
   "prisma-illya-beast-chloe-am7coffeelove": [
     ...defaultPreset,
     ...armpitsVisible,
@@ -473,22 +510,22 @@ export const backgroundsPreset = {
     { key: `garden-standing`, probability: defaultPreset.length / 2 },
     ...armpitsVisible,
   ],
-  "pso2-bikini-gene-overnerd": [...ocean, ...armpitsVisible],
-  "rokudenashi-bikini-rumia-little-jelly": [...ocean, ...armpitsVisible],
+  "pso2-bikini-gene-overnerd": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...armpitsVisible,
+  ],
+  "rokudenashi-bikini-rumia-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...armpitsVisible,
+  ],
   "rokudenashi-school-uniform-summer-little-jelly": garden,
   "rokudenashi-school-uniform-winter-little-jelly": garden,
   "ryuuou-outfit-hinatsuru-ai-ibukimakisiko": [...bedroom, ...tatami],
   "ryuuou-outfit-yashajin-ai-ibukimakisiko": [...bedroom, ...tatami],
   "sasuoni-first-high-school-uniform-nochekaiser": nearFeatureStudent,
-  "seirei-outfit-celia-ibukimakisiko": [
-    ...isekai,
-    {
-      key: `garden-sitting-on`,
-    },
-    {
-      key: `garden-standing`,
-    },
-  ], // TODO: Reconsider
+  "seirei-outfit-celia-ibukimakisiko": [...isekai, ...garden], // TODO: Reconsider
   "slow-loop-school-uniform-hiyori-ibukimakisiko": student,
   "slow-loop-school-uniform-koharu-ibukimakisiko": student,
   "slow-loop-school-uniform-koi-ibukimakisiko": student,

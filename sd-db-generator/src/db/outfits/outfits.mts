@@ -76,6 +76,8 @@ import { mushokuTenseiPajamasRoxy } from "./mushoku-tensei/pajamas-roxy.mjs";
 import { mushokuTenseiSchoolUniform } from "./mushoku-tensei/school-uniform.mjs";
 import { newGameOutfitHifumi } from "./new-game/shirt-hifumi.mjs";
 import { newGameOutfitAoba } from "./new-game/suit-aoba.mjs";
+import { ochifuruIdol } from "./ochifuru/idol.mjs";
+import { ochifuruSchoolUniform } from "./ochifuru/school-uniform.mjs";
 import { prismaIllyaBeastChloe } from "./prisma-illya/chloe-beast.mjs";
 import { prismaIllyaBeastIllya } from "./prisma-illya/illya-beast.mjs";
 import { prismaIllyaMagicalGirlIllya } from "./prisma-illya/magical-girl-illya.mjs";
@@ -226,10 +228,142 @@ export const commonOutfitTable = {
 } as const satisfies Record<string, OutfitDefine>;
 
 /**
+ * Character outfit keys.
+ * Define it because of limitation of TypeScript.
+ */
+type CharacterOutfitKey =
+  | "amaburi-red-uniform-isuzu-h-madoka"
+  | "amaburi-red-uniform-isuzu-no-lora"
+  | "amaburi-red-uniform-isuzu-nochekaiser"
+  | "blend-s-school-uniform-kaho-ibukimakisiko"
+  | "blend-s-swimsuit-kaho-ibukimakisiko"
+  | "blend-s-waitress-kaho-ibukimakisiko"
+  | "blend-s-waitress-mafuyu-ibukimakisiko"
+  | "blend-s-waitress-maika-shadowxart"
+  | "blue-archive-gym-uniform-yuuka-ibukimakisiko"
+  | "blue-archive-school-uniform-arona-ibukimakisiko"
+  | "blue-archive-school-uniform-yuuka-ibukimakisiko"
+  | "blue-archive-school-uniform-yuuka-shirt-ibukimakisiko"
+  | "boufuri-outfit-maple-ibukimakisiko"
+  | "boufuri-outfit-sally-ibukimakisiko"
+  | "boufuri-outfit-sally-king-dong"
+  | "boufuri-school-uniform-maple-ibukimakisiko"
+  | "boufuri-school-uniform-sally-ibukimakisiko"
+  | "danmachi-white-dress-hestia-eternal2kpp"
+  | "danmachi-white-dress-hestia-no-lora"
+  | "fate-red-sweater-rin-little-jelly"
+  | "futoku-no-guild-outfit-enome-zedotasco"
+  | "futoku-no-guild-outfit-tokishikko-ibukimakisiko"
+  | "goblin-slayer-outfit-cow-girl-eternal2kpp"
+  | "goblin-slayer-outfit-priestess-eternal2kpp"
+  | "higehiro-school-uniform-sayu-nochekaiser"
+  | "hyouka-school-uniform-eru-chenkin"
+  | "hyouka-white-bikini-eru-chenkin"
+  | "is-infinite-stratos-academy-school-uniform-cecilia-nochekaiser"
+  | "is-infinite-stratos-academy-school-uniform-charlotte-nochekaiser"
+  | "is-infinite-stratos-academy-school-uniform-houki-nochekaiser"
+  | "is-infinite-stratos-academy-school-uniform-laura-nochekaiser"
+  | "is-infinite-stratos-academy-school-uniform-lingyin-nochekaiser"
+  | "is-infinite-stratos-academy-school-uniform-tatenashi-nochekaiser"
+  | "is-pilot-suit-cecilia-nochekaiser"
+  | "is-pilot-suit-charlotte-nochekaiser"
+  | "is-pilot-suit-houki-nochekaiser"
+  | "is-yellow-dress-maya-nochekaiser"
+  | "isekai-ojisan-outfit-alicia-nochekaiser"
+  | "isekai-ojisan-outfit-mabel-nochekaiser"
+  | "isekai-ojisan-outfit-sui-nochekaiser"
+  | "isekai-ojisan-outfit-sumika-nochekaiser"
+  | "kagejitsu-shadow-garden-alpha-nochekaiser"
+  | "kagejitsu-shadow-garden-alpha-novowels"
+  | "kagejitsu-shadow-garden-beta-nochekaiser"
+  | "kagejitsu-shadow-garden-beta-novowels"
+  | "kaguya-sama-maid-hayasaka-nochekaiser"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-ai-no-lora"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-ai-nochekaiser"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-chika-eternal2kpp"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-chika-no-lora"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-chika-nochekaiser"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-kaguya-eternal2kpp"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-kaguya-no-lora"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-kaguya-nochekaiser"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-miko-no-lora"
+  | "kaguya-sama-shuuchiin-academy-school-uniform-miko-nochekaiser"
+  | "konosuba-outfit-megumin-adventurer-no-lora"
+  | "konosuba-outfit-megumin-light-no-lora"
+  | "konosuba-outfit-yunyun-no-lora"
+  | "lycoris-recoil-lycoris-uniform-chisato-nochekaiser"
+  | "lycoris-recoil-lycoris-uniform-takina-nochekaiser"
+  | "machikado-mazoku-crisis-management-form-ibukimakisiko"
+  | "machikado-mazoku-gym-uniform-shamiko-ibukimakisiko"
+  | "machikado-mazoku-school-uniform-shamiko-ibukimakisiko"
+  | "mahoako-outfit-locomusica-notekaga"
+  | "majo-no-tabitabi-witch-elaina-ibukimakisiko"
+  | "majo-no-tabitabi-witch-elaina-inner-ibukimakisiko"
+  | "mushoku-tensei-maid-aisha-ibukimakisiko"
+  | "mushoku-tensei-outfit-norn-ibukimakisiko"
+  | "mushoku-tensei-outfit-roxy-adventurer-indoors-ibukimakisiko"
+  | "mushoku-tensei-outfit-roxy-adventurer-outdoors-ibukimakisiko"
+  | "mushoku-tensei-outfit-roxy-indoors-ibukimakisiko"
+  | "mushoku-tensei-outfit-roxy-outdoors-ibukimakisiko"
+  | "mushoku-tensei-oversized-shirt-roxy-ibukimakisiko"
+  | "mushoku-tensei-pajamas-roxy-ibukimakisiko"
+  | "mushoku-tensei-school-uniform-norn-ibukimakisiko"
+  | "new-game-outfit-aoba-eternal2kpp"
+  | "new-game-outfit-aoba-nochekaiser"
+  | "new-game-outfit-hifumi-eternal2kpp"
+  | "new-game-outfit-hifumi-nochekaiser"
+  | "ochifuru-idol-jacket-hayu-enter"
+  | "ochifuru-idol-jacket-hemo-enter"
+  | "ochifuru-idol-jacket-ino-enter"
+  | "ochifuru-idol-jacket-nina-enter"
+  | "ochifuru-idol-jacket-roko-enter"
+  | "ochifuru-idol-sleeveless-hayu-enter"
+  | "ochifuru-idol-sleeveless-hemo-enter"
+  | "ochifuru-idol-sleeveless-ino-enter"
+  | "ochifuru-idol-sleeveless-nina-enter"
+  | "ochifuru-idol-sleeveless-roko-enter"
+  | "ochifuru-school-uniform-hayu-enter"
+  | "ochifuru-school-uniform-hemo-enter"
+  | "ochifuru-school-uniform-ino-enter"
+  | "ochifuru-school-uniform-nina-enter"
+  | "ochifuru-school-uniform-roko-enter"
+  | "ochifuru-school-uniform-tone-enter"
+  | "prisma-illya-beast-chloe-am7coffeelove"
+  | "prisma-illya-beast-illya-am7coffeelove"
+  | "prisma-illya-beast-miyu-am7coffeelove"
+  | "prisma-illya-magical-girl-illya-flujoru"
+  | "pso2-bikini-gene-overnerd"
+  | "rokudenashi-bikini-rumia-little-jelly"
+  | "rokudenashi-school-uniform-summer-little-jelly"
+  | "rokudenashi-school-uniform-winter-little-jelly"
+  | "ryuuou-outfit-hinatsuru-ai-ibukimakisiko"
+  | "ryuuou-outfit-yashajin-ai-ibukimakisiko"
+  | "sasuoni-first-high-school-uniform-nochekaiser"
+  | "seirei-outfit-celia-ibukimakisiko"
+  | "slow-loop-school-uniform-hiyori-ibukimakisiko"
+  | "slow-loop-school-uniform-koharu-ibukimakisiko"
+  | "slow-loop-school-uniform-koi-ibukimakisiko"
+  | "spy-family-red-sweater-eternal2kpp"
+  | "spy-family-thorn-princess-eternal2kpp"
+  | "strike-witches-outfit-yoshika-gwess"
+  | "tenshi-sama-blazer-jibunsagasinotabi"
+  | "tenshi-tsuki-outfit-towa-eternal2kpp"
+  | "tenshi-tsuki-school-uniform-noel-duongve"
+  | "tenshi-tsuki-school-uniform-noel-eternal2kpp"
+  | "tenshi-tsuki-school-uniform-tsumugi-duongve"
+  | "tenshi-tsuki-school-uniform-tsumugi-eternal2kpp"
+  | "to-love-ru-school-uniform-haruna-nochekaiser"
+  | "to-love-ru-school-uniform-lala-nochekaiser"
+  | "to-love-ru-school-uniform-momo-lancelot"
+  | "to-love-ru-school-uniform-momo-nochekaiser"
+  | "to-love-ru-school-uniform-nana-lancelot"
+  | "to-love-ru-school-uniform-nana-nochekaiser";
+
+/**
  * Character outfit table.
  * @example "series-name-outfit-name-character-name-lora-creator" : seriesNameOutfitNameCharacterNameLoraCreator()
  */
-export const characterOutfitTable = {
+export const characterOutfitTable: Record<CharacterOutfitKey, OutfitDefine> = {
   "amaburi-red-uniform-isuzu-h-madoka": amaburiRedUniformIsuzu(`h-madoka`),
   "amaburi-red-uniform-isuzu-no-lora": amaburiRedUniformIsuzu(`no-lora`),
   "amaburi-red-uniform-isuzu-nochekaiser":
@@ -238,9 +372,9 @@ export const characterOutfitTable = {
     blendSSchoolUniform(`kaho-ibukimakisiko`),
   "blend-s-swimsuit-kaho-ibukimakisiko": blendSSwimsuit(`kaho-ibukimakisiko`),
   "blend-s-waitress-kaho-ibukimakisiko": blendSWaitress(`kaho-ibukimakisiko`),
-  "blend-s-waitress-maika-shadowxart": blendSWaitress(`maika-shadowxart`),
   "blend-s-waitress-mafuyu-ibukimakisiko":
     blendSWaitress(`mafuyu-ibukimakisiko`),
+  "blend-s-waitress-maika-shadowxart": blendSWaitress(`maika-shadowxart`),
   "blue-archive-gym-uniform-yuuka-ibukimakisiko":
     blueArchiveGymUniform(`yuuka-ibukimakisiko`),
   "blue-archive-school-uniform-arona-ibukimakisiko":
@@ -370,6 +504,22 @@ export const characterOutfitTable = {
   "new-game-outfit-aoba-nochekaiser": newGameOutfitAoba(`nochekaiser`),
   "new-game-outfit-hifumi-eternal2kpp": newGameOutfitHifumi(`eternal2kpp`),
   "new-game-outfit-hifumi-nochekaiser": newGameOutfitHifumi(`nochekaiser`),
+  "ochifuru-idol-jacket-hayu-enter": ochifuruIdol(`jacket-hayu-enter`),
+  "ochifuru-idol-jacket-hemo-enter": ochifuruIdol(`jacket-hemo-enter`),
+  "ochifuru-idol-jacket-ino-enter": ochifuruIdol(`jacket-ino-enter`),
+  "ochifuru-idol-jacket-nina-enter": ochifuruIdol(`jacket-nina-enter`),
+  "ochifuru-idol-jacket-roko-enter": ochifuruIdol(`jacket-roko-enter`),
+  "ochifuru-idol-sleeveless-hayu-enter": ochifuruIdol(`sleeveless-hayu-enter`),
+  "ochifuru-idol-sleeveless-hemo-enter": ochifuruIdol(`sleeveless-hemo-enter`),
+  "ochifuru-idol-sleeveless-ino-enter": ochifuruIdol(`sleeveless-ino-enter`),
+  "ochifuru-idol-sleeveless-nina-enter": ochifuruIdol(`sleeveless-nina-enter`),
+  "ochifuru-idol-sleeveless-roko-enter": ochifuruIdol(`sleeveless-roko-enter`),
+  "ochifuru-school-uniform-hayu-enter": ochifuruSchoolUniform(`hayu-enter`),
+  "ochifuru-school-uniform-hemo-enter": ochifuruSchoolUniform(`hemo-enter`),
+  "ochifuru-school-uniform-ino-enter": ochifuruSchoolUniform(`ino-enter`),
+  "ochifuru-school-uniform-nina-enter": ochifuruSchoolUniform(`nina-enter`),
+  "ochifuru-school-uniform-roko-enter": ochifuruSchoolUniform(`roko-enter`),
+  "ochifuru-school-uniform-tone-enter": ochifuruSchoolUniform(`tone-enter`),
   "prisma-illya-beast-chloe-am7coffeelove":
     prismaIllyaBeastChloe(`am7coffeelove`),
   "prisma-illya-beast-illya-am7coffeelove":
@@ -427,7 +577,7 @@ export const characterOutfitTable = {
     toLoveRuSchoolUniform(`nana-lancelot`),
   "to-love-ru-school-uniform-nana-nochekaiser":
     toLoveRuSchoolUniform(`nana-nochekaiser`),
-} as const satisfies Record<string, OutfitDefine>;
+} as const;
 
 export const outfitTable = {
   ...commonOutfitTable,
