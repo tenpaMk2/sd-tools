@@ -24,7 +24,7 @@ export const blueSkyConfetti = ({
   backgroundType,
 }: {
   backgroundType: `standing`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

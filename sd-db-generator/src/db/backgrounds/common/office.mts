@@ -35,7 +35,7 @@ export const office = ({
   backgroundType,
 }: {
   backgroundType: `sitting-on` | `standing`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

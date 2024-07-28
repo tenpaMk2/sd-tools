@@ -46,7 +46,7 @@ export const tennisCourt = ({
   backgroundType,
 }: {
   backgroundType: BackgroundType;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

@@ -32,7 +32,7 @@ export const tatami = ({
   backgroundType,
 }: {
   backgroundType: `near-clean-floor` | `sitting-on`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

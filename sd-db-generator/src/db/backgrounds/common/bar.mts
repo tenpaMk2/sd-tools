@@ -36,7 +36,7 @@ export const bar = ({
   backgroundType,
 }: {
   backgroundType: `sitting-on` | `standing`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType: backgroundType,
     ...cameraAngle[backgroundType],

@@ -39,7 +39,7 @@ export const christmas = ({
   backgroundType,
 }: {
   backgroundType: `standing` | `near-clean-floor`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

@@ -21,7 +21,11 @@ const cameraAngle = {
   >
 >;
 
-export const ocean = ({ backgroundType }: { backgroundType: `standing` }) =>
+export const ocean = ({
+  backgroundType,
+}: {
+  backgroundType: `standing`;
+}): BackgroundDefine =>
   ({
     backgroundType: `standing`,
     ...cameraAngle[backgroundType],

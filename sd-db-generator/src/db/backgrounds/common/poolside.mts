@@ -53,7 +53,7 @@ export const poolside = ({
   backgroundType,
 }: {
   backgroundType: BackgroundType;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

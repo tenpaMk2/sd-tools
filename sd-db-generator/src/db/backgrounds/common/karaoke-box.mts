@@ -34,7 +34,7 @@ export const karaokeBox = ({
   backgroundType,
 }: {
   backgroundType: `standing` | `sitting-on`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

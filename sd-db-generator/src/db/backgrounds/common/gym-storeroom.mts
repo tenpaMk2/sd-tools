@@ -49,7 +49,7 @@ export const gymStoreroom = ({
   backgroundType,
 }: {
   backgroundType: BackgroundType;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

@@ -71,7 +71,7 @@ export const bedSheet = ({
   | {
       variation: `steaming`;
       backgroundType: `near-clean-floor`;
-    }) =>
+    }): BackgroundDefine =>
   ({
     backgroundType,
     ...variations[variation][backgroundType],

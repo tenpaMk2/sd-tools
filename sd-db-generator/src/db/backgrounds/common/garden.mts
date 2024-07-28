@@ -45,7 +45,7 @@ export const garden = ({
   backgroundType,
 }: {
   backgroundType: `sitting-on` | `standing`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

@@ -15,7 +15,11 @@ const cameraAngle = {
   >
 >;
 
-export const cafe = ({ backgroundType }: { backgroundType: `standing` }) =>
+export const cafe = ({
+  backgroundType,
+}: {
+  backgroundType: `standing`;
+}): BackgroundDefine =>
   ({
     backgroundType: backgroundType,
     ...cameraAngle[backgroundType],

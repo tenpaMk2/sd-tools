@@ -4,7 +4,7 @@ export const wedding = ({
   backgroundType,
 }: {
   backgroundType: BackgroundType;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     "from-above": {

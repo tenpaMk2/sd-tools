@@ -28,7 +28,7 @@ export const colorfulBackground = ({
 }: {
   variation: Variation;
   backgroundType: BackgroundType;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     "from-above": {

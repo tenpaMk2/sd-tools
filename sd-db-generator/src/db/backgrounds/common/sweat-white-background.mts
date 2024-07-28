@@ -24,7 +24,7 @@ export const sweatWhiteBackground = ({
 }: {
   variation: Variation;
   backgroundType: BackgroundType;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     "from-above": {

@@ -24,7 +24,7 @@ export const nightRooftop = ({
   backgroundType,
 }: {
   backgroundType: `standing`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

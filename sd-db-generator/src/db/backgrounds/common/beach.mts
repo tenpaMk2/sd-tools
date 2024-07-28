@@ -86,7 +86,11 @@ const cameraAngle = {
   >
 >;
 
-export const beach = ({ backgroundType }: { backgroundType: BackgroundType }) =>
+export const beach = ({
+  backgroundType,
+}: {
+  backgroundType: BackgroundType;
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

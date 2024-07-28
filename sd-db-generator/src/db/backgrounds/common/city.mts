@@ -27,7 +27,7 @@ export const city = ({
   backgroundType,
 }: {
   backgroundType: `sitting-on` | `standing`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

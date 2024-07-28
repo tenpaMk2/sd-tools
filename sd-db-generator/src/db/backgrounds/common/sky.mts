@@ -47,7 +47,7 @@ export const sky = ({
   | {
       variation: `orange-sky`;
       backgroundType: `standing`;
-    }) =>
+    }): BackgroundDefine =>
   ({
     backgroundType,
     ...variations[variation][backgroundType],

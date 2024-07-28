@@ -79,7 +79,7 @@ export const gym = ({
 }: {
   variation: `volleyball`;
   backgroundType: `near-clean-floor` | `standing`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...variations[variation][backgroundType],

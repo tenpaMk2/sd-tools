@@ -28,7 +28,11 @@ const cameraAngle = {
   >
 >;
 
-export const grass = ({ backgroundType }: { backgroundType: BackgroundType }) =>
+export const grass = ({
+  backgroundType,
+}: {
+  backgroundType: BackgroundType;
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

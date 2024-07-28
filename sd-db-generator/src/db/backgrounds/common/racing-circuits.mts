@@ -62,7 +62,7 @@ export const racingCircuit = ({
   backgroundType,
 }: {
   backgroundType: `sitting-on` | `standing`;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

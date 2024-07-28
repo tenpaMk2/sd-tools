@@ -105,7 +105,7 @@ export const classroom = ({
   | {
       variation: `window`;
       backgroundType: `sitting-on` | `standing`;
-    }) =>
+    }): BackgroundDefine =>
   ({
     backgroundType,
     ...variations[variation][backgroundType],

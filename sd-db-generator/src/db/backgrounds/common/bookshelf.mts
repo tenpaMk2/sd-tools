@@ -71,7 +71,7 @@ export const bookshelf = ({
   backgroundType,
 }: {
   backgroundType: BackgroundType;
-}) =>
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],

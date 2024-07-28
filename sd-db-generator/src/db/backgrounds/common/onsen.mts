@@ -42,7 +42,11 @@ const cameraAngle = {
   >
 >;
 
-export const onsen = ({ backgroundType }: { backgroundType: BackgroundType }) =>
+export const onsen = ({
+  backgroundType,
+}: {
+  backgroundType: BackgroundType;
+}): BackgroundDefine =>
   ({
     backgroundType,
     ...cameraAngle[backgroundType],
