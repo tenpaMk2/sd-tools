@@ -19,7 +19,7 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
 
-export const isLingyin = (variation: Variation) =>
+export const isLingyin = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

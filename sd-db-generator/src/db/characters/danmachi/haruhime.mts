@@ -16,7 +16,7 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
 
-export const danmachiHaruhime = (variation: Variation) =>
+export const danmachiHaruhime = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

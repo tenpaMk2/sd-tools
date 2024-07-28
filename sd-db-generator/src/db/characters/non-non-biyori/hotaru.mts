@@ -16,7 +16,7 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
 
-export const nonNonBiyoriHotaru = (variation: Variation) =>
+export const nonNonBiyoriHotaru = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

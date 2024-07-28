@@ -16,7 +16,7 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
 
-export const newGameKou = (variation: Variation) =>
+export const newGameKou = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

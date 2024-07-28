@@ -2,7 +2,7 @@ import type { CharacterDefine } from "../characters.mjs";
 
 type Variation = `zedotasco`;
 
-export const futokuNoGuildEnome = (variation: Variation) =>
+export const futokuNoGuildEnome = (variation: Variation): CharacterDefine =>
   ({
     lora: {
       loraName: `Enome_1`,

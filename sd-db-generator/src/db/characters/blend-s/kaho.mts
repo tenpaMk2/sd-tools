@@ -31,7 +31,7 @@ const characterFeatureEntries = {
   Record<Variation, CharacterDefine["characterFeatureEntries"]>
 >;
 
-export const blendSKaho = (variation: Variation) =>
+export const blendSKaho = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

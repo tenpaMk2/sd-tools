@@ -31,7 +31,7 @@ const characterFeatureEntries = {
   Record<Variation, CharacterDefine[`characterFeatureEntries`]>
 >;
 
-export const ochifuruHemo = (variation: Variation) =>
+export const ochifuruHemo = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

@@ -31,7 +31,7 @@ const characterFeatureEntries = {
   Record<Variation, CharacterDefine[`characterFeatureEntries`]>
 >;
 
-export const machikadoMazokuShamiko = (variation: Variation) =>
+export const machikadoMazokuShamiko = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

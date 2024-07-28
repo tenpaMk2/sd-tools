@@ -35,7 +35,7 @@ const characterFeatureEntries = {
   Record<Variation, CharacterDefine["characterFeatureEntries"]>
 >;
 
-export const newGameAoba = (variation: Variation) =>
+export const newGameAoba = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

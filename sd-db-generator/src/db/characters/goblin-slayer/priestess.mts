@@ -2,7 +2,7 @@ import type { CharacterDefine } from "../characters.mjs";
 
 type Variation = `eternal2kpp`;
 
-export const goblinSlayerPriestess = (variation: Variation) =>
+export const goblinSlayerPriestess = (variation: Variation): CharacterDefine =>
   ({
     lora: {
       loraName: `Onna_Shinkan`,

@@ -16,7 +16,9 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
 
-export const futokuNoGuildTokishikko = (variation: Variation) =>
+export const futokuNoGuildTokishikko = (
+  variation: Variation,
+): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

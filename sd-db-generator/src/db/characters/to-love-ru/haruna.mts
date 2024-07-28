@@ -16,7 +16,7 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine["loraCharacterTriggerWordEntries"]
 >;
 
-export const toLoveRuHaruna = (variation: Variation) =>
+export const toLoveRuHaruna = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

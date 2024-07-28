@@ -57,7 +57,7 @@ const characterFeatureEntries = {
   Record<Variation, CharacterDefine["characterFeatureEntries"]>
 >;
 
-export const prismaIllyaIllya = (variation: Variation) =>
+export const prismaIllyaIllya = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

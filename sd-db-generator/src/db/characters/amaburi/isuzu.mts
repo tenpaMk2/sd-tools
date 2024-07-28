@@ -34,7 +34,7 @@ const characterFeatureEntries = {
   Record<Variation, CharacterDefine["characterFeatureEntries"]>
 >;
 
-export const amaburiIsuzu = (variation: Variation) =>
+export const amaburiIsuzu = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

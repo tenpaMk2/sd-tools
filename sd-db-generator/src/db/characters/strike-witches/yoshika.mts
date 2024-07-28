@@ -31,7 +31,7 @@ const characterFeatureEntries = {
   Record<Variation, CharacterDefine[`characterFeatureEntries`]>
 >;
 
-export const strikeWitchesYoshika = (variation: Variation) =>
+export const strikeWitchesYoshika = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

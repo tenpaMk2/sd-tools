@@ -20,7 +20,7 @@ const loraCharacterTriggerWordEntries = {
   Variation,
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
-export const lycorisRecoilTakina = (variation: Variation) =>
+export const lycorisRecoilTakina = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

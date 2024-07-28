@@ -16,7 +16,9 @@ const loraCharacterTriggerWordEntries = {
   CharacterDefine[`loraCharacterTriggerWordEntries`]
 >;
 
-export const mushokuTenseiSylphiette = (variation: Variation) =>
+export const mushokuTenseiSylphiette = (
+  variation: Variation,
+): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],

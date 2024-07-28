@@ -29,7 +29,7 @@ const characterNameEntries = {
 //   Record<Variation, CharacterDefine[`characterFeatureEntries`]>
 // >;
 
-export const blueArchiveArona = (variation: Variation) =>
+export const blueArchiveArona = (variation: Variation): CharacterDefine =>
   ({
     lora: lora[variation],
     loraCharacterTriggerWordEntries: loraCharacterTriggerWordEntries[variation],
