@@ -68,7 +68,7 @@ const specialVisibility = {
   },
 } as const satisfies Record<Variation, PoseDefine["specialVisibility"]>;
 
-export const standingUndressing = (variation: Variation) =>
+export const standingUndressing = (variation: Variation): PoseDefine =>
   ({
     expectedBackgroundType: `standing`,
     cameraAngle: variation,

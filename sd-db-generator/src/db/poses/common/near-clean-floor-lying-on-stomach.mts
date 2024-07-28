@@ -49,7 +49,9 @@ const specialVisibility = {
   },
 } as const satisfies Record<Variation, PoseDefine["specialVisibility"]>;
 
-export const nearCleanFloorLyingOnStomachFromBehind = (variation: Variation) =>
+export const nearCleanFloorLyingOnStomachFromBehind = (
+  variation: Variation,
+): PoseDefine =>
   ({
     expectedBackgroundType: `near-clean-floor`,
     cameraAngle: variation,

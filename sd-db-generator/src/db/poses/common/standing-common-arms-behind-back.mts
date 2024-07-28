@@ -43,7 +43,7 @@ const specialVisibility = {
   "from-horizontal": baseSpecialVisibility,
 } as const satisfies Record<Variation, PoseDefine["specialVisibility"]>;
 
-export const standingArmsBehindBack = (variation: Variation) =>
+export const standingArmsBehindBack = (variation: Variation): PoseDefine =>
   ({
     expectedBackgroundType: `standing`,
     cameraAngle: variation,

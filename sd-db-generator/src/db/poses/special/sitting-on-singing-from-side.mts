@@ -62,7 +62,7 @@ const specialVisibility = {
   },
 } as const satisfies Record<Variation, PoseDefine["specialVisibility"]>;
 
-export const sittingOnSingingFromSide = (variation: Variation) =>
+export const sittingOnSingingFromSide = (variation: Variation): PoseDefine =>
   ({
     expectedBackgroundType: `sitting-on`,
     cameraAngle: variation,

@@ -68,7 +68,7 @@ const specialVisibility = {
   },
 } as const satisfies Record<Variation, PoseDefine["specialVisibility"]>;
 
-export const standingLeaningForwardVArms = (variation: Variation) =>
+export const standingLeaningForwardVArms = (variation: Variation): PoseDefine =>
   ({
     expectedBackgroundType: `standing`,
     cameraAngle: variation,
