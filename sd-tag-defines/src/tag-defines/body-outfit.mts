@@ -969,6 +969,7 @@ export const allBodyOutfitTags = [
   `latex shorts`,
   `layered bikini`,
   `layered skirt`,
+  `leg belt`,
   `leggings`,
   `leotard`,
   `lingerie`,

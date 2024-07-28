@@ -8,6 +8,7 @@ type Variation =
   | `momo-nochekaiser`
   | `nana-lancelot`
   | `nana-nochekaiser`
+  | `yami-nochekaiser`
   | `yui-nochekaiser`;
 
 const outfitEntries = {
@@ -18,6 +19,7 @@ const outfitEntries = {
     "momo-nochekaiser": [`sweater vest`, `yellow sweater vest`],
     "nana-lancelot": [`sweater vest`, `orange sweater vest`],
     "nana-nochekaiser": [`sweater vest`, `yellow sweater vest`],
+    "yami-nochekaiser": [`sweater vest`, `yellow sweater vest`],
     "yui-nochekaiser": [`sweater vest`, `yellow sweater vest`],
   },
   socks: {
@@ -39,6 +41,7 @@ const outfitEntries = {
     ],
     "nana-lancelot": [`socks`, `white socks`, `loose socks`],
     "nana-nochekaiser": [`socks`, `white socks`, `loose socks`],
+    "yami-nochekaiser": [`leg belt`, `socks`, `black socks`],
     "yui-nochekaiser": [`socks`, `black socks`],
   },
 } as const satisfies Record<
@@ -54,46 +57,46 @@ const specialVisibility = {
     "momo-nochekaiser": true,
     "nana-lancelot": false,
     "nana-nochekaiser": false,
+    "yami-nochekaiser": false,
     "yui-nochekaiser": false,
   },
 } as const satisfies Record<`zettariRyouiki`, Record<Variation, boolean>>;
 
-export const toLoveRuSchoolUniform = (variation: Variation): OutfitDefine =>
-  ({
-    lora: null,
-    loraOutfitTriggerWordEntries: [],
-    outfitEntries: [
-      `sainan high school uniform`,
-      `bowtie`,
-      `green bowtie`,
-      ...outfitEntries.vest[variation],
-      `white shirt`,
-      `collared shirt`,
-      `short sleeves`,
-      `green skirt`,
-      `pleated skirt`,
-      `plaid skirt`,
-      `miniskirt`,
-      ...outfitEntries.socks[variation],
-      `loafers`,
-    ],
-    specialVisibility: {
-      armpits: false,
-      hangingBreasts: false,
-      tautClothes: true,
-      cleavage: false,
-      sideboob: false,
-      backboob: false,
-      underboobLevel: `invisible`,
-      zettaiRyouiki: specialVisibility.zettariRyouiki[variation],
-      insideOfThighs: false,
-    },
-    upskirt: {
-      liftType: `skirt`,
-      entries: upskirtPreset.colorfulPanties,
-    },
-    whenRemoveShoes: {
-      excludeTags: [`loafers`],
-      additionalFootEntriesAfterRemoving: [`no shoes`],
-    },
-  }) as const satisfies OutfitDefine;
+export const toLoveRuSchoolUniform = (variation: Variation): OutfitDefine => ({
+  lora: null,
+  loraOutfitTriggerWordEntries: [],
+  outfitEntries: [
+    `sainan high school uniform`,
+    `bowtie`,
+    `green bowtie`,
+    ...outfitEntries.vest[variation],
+    `white shirt`,
+    `collared shirt`,
+    `short sleeves`,
+    `green skirt`,
+    `pleated skirt`,
+    `plaid skirt`,
+    `miniskirt`,
+    ...outfitEntries.socks[variation],
+    `loafers`,
+  ],
+  specialVisibility: {
+    armpits: false,
+    hangingBreasts: false,
+    tautClothes: true,
+    cleavage: false,
+    sideboob: false,
+    backboob: false,
+    underboobLevel: `invisible`,
+    zettaiRyouiki: specialVisibility.zettariRyouiki[variation],
+    insideOfThighs: false,
+  },
+  upskirt: {
+    liftType: `skirt`,
+    entries: upskirtPreset.colorfulPanties,
+  },
+  whenRemoveShoes: {
+    excludeTags: [`loafers`],
+    additionalFootEntriesAfterRemoving: [`no shoes`],
+  },
+});

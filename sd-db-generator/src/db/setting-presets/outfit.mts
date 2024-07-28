@@ -857,6 +857,27 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "to-love-ru-tearju-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-suit-tearju-nochekaiser`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "to-love-ru-tearju-low-tied-long-hair-nochekaiser": [
+    { key: `to-love-ru-bikini-tearju-nochekaiser` },
+  ],
+  "to-love-ru-yami-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-trans-yami-nochekaiser`,
+      probability: defaultPreset.length / 4,
+    },
+    {
+      key: `to-love-ru-school-uniform-yami-nochekaiser`,
+      probability: defaultPreset.length / 4,
+    },
+  ],
   "to-love-ru-yui-nochekaiser": [
     ...defaultPreset,
     {

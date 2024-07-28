@@ -96,7 +96,10 @@ import { strikeWitchesOutfitYoshika } from "./strike-witches/outfit-yoshika.mjs"
 import { tenshiSamaBlazer } from "./tenshi-sama/blazer.mjs";
 import { tenshiTsukiOutfitTowa } from "./tenshi-tsuki/outfit-towa.mjs";
 import { tenshiTsukiSchoolUniform } from "./tenshi-tsuki/school-uniform.mjs";
+import { toLoveRuBikini } from "./to-love-ru/bikini.mjs";
 import { toLoveRuSchoolUniform } from "./to-love-ru/school-uniform.mjs";
+import { toLoveRuSuitTearju } from "./to-love-ru/suit-tearju.mjs";
+import { toLoveRuTrans } from "./to-love-ru/trans.mjs";
 
 /**
  * Outfit define.
@@ -433,6 +436,7 @@ export const characterOutfitTable = {
     tenshiTsukiSchoolUniform(`tsumugi-duongve`),
   "tenshi-tsuki-school-uniform-tsumugi-eternal2kpp":
     tenshiTsukiSchoolUniform(`tsumugi-eternal2kpp`),
+  "to-love-ru-bikini-tearju-nochekaiser": toLoveRuBikini(`tearju-nochekaiser`),
   "to-love-ru-school-uniform-haruna-nochekaiser":
     toLoveRuSchoolUniform(`haruna-nochekaiser`),
   "to-love-ru-school-uniform-lala-nochekaiser":
@@ -445,8 +449,12 @@ export const characterOutfitTable = {
     toLoveRuSchoolUniform(`nana-lancelot`),
   "to-love-ru-school-uniform-nana-nochekaiser":
     toLoveRuSchoolUniform(`nana-nochekaiser`),
+  "to-love-ru-school-uniform-yami-nochekaiser":
+    toLoveRuSchoolUniform(`yami-nochekaiser`),
   "to-love-ru-school-uniform-yui-nochekaiser":
     toLoveRuSchoolUniform(`yui-nochekaiser`),
+  "to-love-ru-suit-tearju-nochekaiser": toLoveRuSuitTearju(`nochekaiser`),
+  "to-love-ru-trans-yami-nochekaiser": toLoveRuTrans(`yami-nochekaiser`),
 } as const satisfies Record<string, OutfitDefine>;
 
 export const outfitTable = {

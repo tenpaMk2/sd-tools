@@ -1173,6 +1173,7 @@ export const allBodyOutfitVisibilities = {
   "latex shorts": preset.skirt,
   "layered bikini": preset.dress,
   "layered skirt": preset.skirt,
+  "leg belt": preset.thighs,
   "leggings": preset.thighhighs,
   "leotard": preset.dress,
   "lingerie": preset.dress,

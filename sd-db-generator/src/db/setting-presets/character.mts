@@ -105,6 +105,8 @@ const baseCharactersPreset = [
   { key: `to-love-ru-momo-nochekaiser`, probability: 0.5 },
   { key: `to-love-ru-nana-lancelot`, probability: 0.5 },
   { key: `to-love-ru-nana-nochekaiser`, probability: 0.5 },
+  { key: `to-love-ru-tearju-nochekaiser` },
+  { key: `to-love-ru-yami-nochekaiser` },
   { key: `to-love-ru-yui-nochekaiser` },
   { key: `working-popura-ibukimakisiko` },
 ] as const satisfies CharacterSetting[];
@@ -130,6 +132,7 @@ const defaultPreset = [
   { key: `ochifuru-roko-idol-ribbon-enter`, probability: 0.2 },
   { key: `spy-family-yor-eternal2kpp-thorn-princess`, probability: 0.2 },
   { key: `strike-witches-yoshika-witch-gwess`, probability: 0.2 },
+  { key: `to-love-ru-tearju-low-tied-long-hair-nochekaiser`, probability: 0.2 },
 ] as const satisfies CharacterSetting[];
 
 export const charactersPreset: CharactersPreset = {

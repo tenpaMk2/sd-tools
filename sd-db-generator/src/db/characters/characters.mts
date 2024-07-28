@@ -106,6 +106,8 @@ import { toLoveRuHaruna } from "./to-love-ru/haruna.mjs";
 import { toLoveRuLala } from "./to-love-ru/lala.mjs";
 import { toLoveRuMomo } from "./to-love-ru/momo.mjs";
 import { toLoveRuNana } from "./to-love-ru/nana.mjs";
+import { toLoveRuTearju } from "./to-love-ru/tearju.mjs";
+import { toLoveRuYami } from "./to-love-ru/yami.mjs";
 import { toLoveRuYui } from "./to-love-ru/yui.mjs";
 import { workingPopura } from "./working/popura.mjs";
 
@@ -309,6 +311,11 @@ export const characterTable = {
   "to-love-ru-momo-nochekaiser": toLoveRuMomo(`nochekaiser`),
   "to-love-ru-nana-lancelot": toLoveRuNana(`lancelot`),
   "to-love-ru-nana-nochekaiser": toLoveRuNana(`nochekaiser`),
+  "to-love-ru-tearju-low-tied-long-hair-nochekaiser": toLoveRuTearju(
+    `low-tied-long-hair-nochekaiser`,
+  ),
+  "to-love-ru-tearju-nochekaiser": toLoveRuTearju(`nochekaiser`),
+  "to-love-ru-yami-nochekaiser": toLoveRuYami(`nochekaiser`),
   "to-love-ru-yui-nochekaiser": toLoveRuYui(`nochekaiser`),
   "working-popura-ibukimakisiko": workingPopura(`ibukimakisiko`),
 } as const satisfies Record<string, CharacterDefine>;
