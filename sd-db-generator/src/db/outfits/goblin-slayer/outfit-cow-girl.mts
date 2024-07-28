@@ -2,7 +2,7 @@ import type { OutfitDefine } from "../outfits.mjs";
 
 type Variation = `eternal2kpp`;
 
-export const goblinSlayerOutfitCowGirl = (variation: Variation) =>
+export const goblinSlayerOutfitCowGirl = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

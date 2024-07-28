@@ -17,7 +17,7 @@ const outfitEntries = {
   Record<Variation, OutfitDefine["outfitEntries"]>
 >;
 
-export const konosubaOutfitMegumin = (variation: Variation) =>
+export const konosubaOutfitMegumin = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

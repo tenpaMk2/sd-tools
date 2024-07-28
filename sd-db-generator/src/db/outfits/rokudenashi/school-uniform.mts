@@ -15,7 +15,7 @@ const variationParts = {
   },
 } as const satisfies Record<string, Record<Variation, OutfitTag[]>>;
 
-export const rokudenashiSchoolUniform = (variation: Variation) =>
+export const rokudenashiSchoolUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`RumiaSchool`],

@@ -24,7 +24,7 @@ const outfitEntries = {
   Record<Variation, OutfitDefine["outfitEntries"]>
 >;
 
-export const kagejitsuShadowGarden = (variation: Variation) =>
+export const kagejitsuShadowGarden = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

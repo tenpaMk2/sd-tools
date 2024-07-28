@@ -3,7 +3,9 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `eternal2kpp`;
 
-export const goblinSlayerOutfitPriestess = (variation: Variation) =>
+export const goblinSlayerOutfitPriestess = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

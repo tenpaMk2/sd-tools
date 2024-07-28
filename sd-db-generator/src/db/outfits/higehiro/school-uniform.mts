@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `sayu-nochekaiser`;
 
-export const higehiroSchoolUniform = (variation: Variation) =>
+export const higehiroSchoolUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

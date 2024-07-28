@@ -3,7 +3,9 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `eft-pantyhose` | `eft-thighhighs` | `nochekaiser`;
 
-export const sasuoniFirstHighSchoolUniform = (variation: Variation) =>
+export const sasuoniFirstHighSchoolUniform = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

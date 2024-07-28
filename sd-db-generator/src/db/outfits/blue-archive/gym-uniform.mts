@@ -9,7 +9,7 @@ const loraOutfitTriggerWordEntries = {
   OutfitDefine["loraOutfitTriggerWordEntries"]
 >;
 
-export const blueArchiveGymUniform = (variation: Variation) =>
+export const blueArchiveGymUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

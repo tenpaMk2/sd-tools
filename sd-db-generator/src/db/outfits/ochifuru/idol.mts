@@ -299,7 +299,7 @@ const whenRemoveShoes = {
   "sleeveless-roko-enter": commonWhenRemoveShoesLoafers,
 } as const satisfies Record<Variation, OutfitDefine["whenRemoveShoes"]>;
 
-export const ochifuruIdol = (variation: Variation) =>
+export const ochifuruIdol = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

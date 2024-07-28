@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `eternal2kpp`;
 
-export const spyFamilyThornPrincess = (variation: Variation) =>
+export const spyFamilyThornPrincess = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

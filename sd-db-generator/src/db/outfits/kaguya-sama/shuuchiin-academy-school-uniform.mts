@@ -115,7 +115,9 @@ const upskirt = {
   },
 } as const satisfies Record<Variation, OutfitDefine["upskirt"]>;
 
-export const kaguyaSamaShuuchiinAcademySchoolUniform = (variation: Variation) =>
+export const kaguyaSamaShuuchiinAcademySchoolUniform = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

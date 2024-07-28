@@ -1,6 +1,6 @@
 import type { OutfitDefine } from "../outfits.mjs";
 
-export const sportsBikini = () =>
+export const sportsBikini = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

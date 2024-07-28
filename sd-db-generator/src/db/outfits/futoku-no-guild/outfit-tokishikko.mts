@@ -3,7 +3,9 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `ibukimakisiko`;
 
-export const futokuNoGuildOutfitTokishikko = (variation: Variation) =>
+export const futokuNoGuildOutfitTokishikko = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`tokishikko-default`],

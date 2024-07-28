@@ -139,7 +139,9 @@ const whenRemoveShoes = {
   },
 } as const satisfies Record<Variation, OutfitDefine["whenRemoveShoes"]>;
 
-export const isInfiniteStratosAcademySchoolUniform = (variation: Variation) =>
+export const isInfiniteStratosAcademySchoolUniform = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`white military uniform`],

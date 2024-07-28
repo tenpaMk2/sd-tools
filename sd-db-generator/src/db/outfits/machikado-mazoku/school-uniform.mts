@@ -9,7 +9,9 @@ const loraOutfitTriggerWordEntries = {
   OutfitDefine["loraOutfitTriggerWordEntries"]
 >;
 
-export const machikadoMazokuSchoolUniform = (variation: Variation) =>
+export const machikadoMazokuSchoolUniform = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

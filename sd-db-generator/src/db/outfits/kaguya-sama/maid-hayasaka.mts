@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `nochekaiser`;
 
-export const kaguyaSamaMaidHayasaka = (variation: Variation) =>
+export const kaguyaSamaMaidHayasaka = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

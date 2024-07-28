@@ -1,7 +1,7 @@
 import type { OutfitDefine } from "../outfits.mjs";
 import { upskirtPreset } from "../upskirt-preset.mjs";
 
-export const revealingMiko = () =>
+export const revealingMiko = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

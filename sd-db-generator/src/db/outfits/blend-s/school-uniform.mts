@@ -10,7 +10,7 @@ const loraOutfitTriggerWordEntries = {
   OutfitDefine["loraOutfitTriggerWordEntries"]
 >;
 
-export const blendSSchoolUniform = (variation: Variation) =>
+export const blendSSchoolUniform = (variation: Variation):OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

@@ -26,7 +26,7 @@ const outfitEntries = {
   Record<Variation, OutfitDefine["outfitEntries"]>
 >;
 
-export const isPilotSuit = (variation: Variation) =>
+export const isPilotSuit = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

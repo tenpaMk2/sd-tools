@@ -2,7 +2,7 @@ import type { OutfitDefine } from "../outfits.mjs";
 
 type Variation = `chenkin`;
 
-export const hyoukaWhiteBikiniEru = (variation: Variation) =>
+export const hyoukaWhiteBikiniEru = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

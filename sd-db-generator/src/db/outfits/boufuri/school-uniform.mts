@@ -46,7 +46,7 @@ const outfitEntries = {
   Record<Variation, OutfitDefine["outfitEntries"]>
 >;
 
-export const boufuriSchoolUniform = (variation: Variation) =>
+export const boufuriSchoolUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

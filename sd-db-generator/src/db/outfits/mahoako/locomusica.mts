@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `notekaga`;
 
-export const mahoakoOutfitLocomusica = (variation: Variation) =>
+export const mahoakoOutfitLocomusica = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

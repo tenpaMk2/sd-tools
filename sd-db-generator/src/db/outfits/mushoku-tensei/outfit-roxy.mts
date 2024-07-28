@@ -74,7 +74,7 @@ const whenRemoveShoes = {
   },
 } as const satisfies Record<Variation, OutfitDefine["whenRemoveShoes"]>;
 
-export const mushokuTenseiOutfitRoxy = (variation: Variation) =>
+export const mushokuTenseiOutfitRoxy = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

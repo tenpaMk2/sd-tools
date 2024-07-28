@@ -10,7 +10,7 @@ const loraOutfitTriggerWordEntries = {
   OutfitDefine[`loraOutfitTriggerWordEntries`]
 >;
 
-export const fateRedSweaterRin = (variation: Variation) =>
+export const fateRedSweaterRin = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

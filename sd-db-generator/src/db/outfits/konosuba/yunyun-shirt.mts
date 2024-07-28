@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `no-lora`;
 
-export const konosubaOutfitYunyun = (variation: Variation) =>
+export const konosubaOutfitYunyun = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

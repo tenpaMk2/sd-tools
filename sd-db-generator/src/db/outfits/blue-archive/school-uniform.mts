@@ -99,7 +99,7 @@ const whenRemoveShoes = {
   },
 } as const satisfies Record<Variation, OutfitDefine["whenRemoveShoes"]>;
 
-export const blueArchiveSchoolUniform = (variation: Variation) =>
+export const blueArchiveSchoolUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

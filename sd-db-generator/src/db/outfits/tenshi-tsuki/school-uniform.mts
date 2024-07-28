@@ -48,7 +48,7 @@ const whenRemoveShoes = {
   },
 } as const satisfies Record<string, OutfitDefine["whenRemoveShoes"]>;
 
-export const tenshiTsukiSchoolUniform = (variation: Variation) =>
+export const tenshiTsukiSchoolUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

@@ -1,6 +1,6 @@
 import type { OutfitDefine } from "../outfits.mjs";
 
-export const tankTopDolphinShorts = () =>
+export const tankTopDolphinShorts = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

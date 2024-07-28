@@ -58,7 +58,7 @@ const specialVisibility = {
   },
 } as const satisfies Record<`zettariRyouiki`, Record<Variation, boolean>>;
 
-export const toLoveRuSchoolUniform = (variation: Variation) =>
+export const toLoveRuSchoolUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

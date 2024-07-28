@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `zedotasco`;
 
-export const futokuNoGuildOutfitEnome = (variation: Variation) =>
+export const futokuNoGuildOutfitEnome = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

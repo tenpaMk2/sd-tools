@@ -163,7 +163,7 @@ const whenRemoveShoes = {
   "tone-enter": commonWhenRemoveShoes,
 } as const satisfies Record<Variation, OutfitDefine["whenRemoveShoes"]>;
 
-export const ochifuruSchoolUniform = (variation: Variation) =>
+export const ochifuruSchoolUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

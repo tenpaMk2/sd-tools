@@ -1,6 +1,6 @@
 import type { OutfitDefine } from "../outfits.mjs";
 
-export const sukumizuThighhighs = () =>
+export const sukumizuThighhighs = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

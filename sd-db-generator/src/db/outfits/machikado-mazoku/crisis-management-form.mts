@@ -8,7 +8,9 @@ const loraOutfitTriggerWordEntries = {
   OutfitDefine["loraOutfitTriggerWordEntries"]
 >;
 
-export const machikadoMazokuCrisisManagementForm = (variation: Variation) =>
+export const machikadoMazokuCrisisManagementForm = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

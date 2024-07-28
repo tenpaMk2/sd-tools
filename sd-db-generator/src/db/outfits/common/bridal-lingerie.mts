@@ -2,7 +2,7 @@ import type { OutfitDefine } from "../outfits.mjs";
 
 // TODO: Add non-bikini version.
 
-export const bridalLingerie = () =>
+export const bridalLingerie = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

@@ -2,7 +2,7 @@ import type { OutfitDefine } from "../outfits.mjs";
 
 type Variation = `rumia-little-jelly`;
 
-export const rokudenashiBikini = (variation: Variation) =>
+export const rokudenashiBikini = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`RumiaBikini`],

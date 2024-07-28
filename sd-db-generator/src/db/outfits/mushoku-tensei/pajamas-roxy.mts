@@ -9,7 +9,7 @@ const loraOutfitTriggerWordEntries = {
   OutfitDefine["loraOutfitTriggerWordEntries"]
 >;
 
-export const mushokuTenseiPajamasRoxy = (variation: Variation) =>
+export const mushokuTenseiPajamasRoxy = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

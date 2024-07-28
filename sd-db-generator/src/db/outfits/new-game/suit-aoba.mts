@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `eternal2kpp` | `nochekaiser`;
 
-export const newGameOutfitAoba = (variation: Variation) =>
+export const newGameOutfitAoba = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

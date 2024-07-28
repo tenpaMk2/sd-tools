@@ -1,6 +1,6 @@
 import type { OutfitDefine } from "../outfits.mjs";
 
-export const camisoleDenimShorts = () =>
+export const camisoleDenimShorts = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

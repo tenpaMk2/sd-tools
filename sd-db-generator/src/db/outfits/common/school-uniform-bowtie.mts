@@ -1,7 +1,7 @@
 import type { OutfitDefine } from "../outfits.mjs";
 import { upskirtPreset } from "../upskirt-preset.mjs";
 
-export const schoolUniformBowtie = () =>
+export const schoolUniformBowtie = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

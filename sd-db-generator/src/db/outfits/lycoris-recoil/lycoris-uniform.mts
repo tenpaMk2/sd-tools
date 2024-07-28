@@ -21,7 +21,9 @@ const outfitEntries = {
   Record<Variation, OutfitDefine["outfitEntries"]>
 >;
 
-export const lycorisRecoilLycorisUniform = (variation: Variation) =>
+export const lycorisRecoilLycorisUniform = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

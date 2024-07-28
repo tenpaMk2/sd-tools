@@ -1,6 +1,10 @@
 import type { OutfitDefine } from "../outfits.mjs";
 
-export const prismaIllyaBeastIllya = (variation: `am7coffeelove`) =>
+type Variation = `am7coffeelove`;
+
+export const prismaIllyaBeastIllya = (
+  variation: `am7coffeelove`,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`zzillaaa`],

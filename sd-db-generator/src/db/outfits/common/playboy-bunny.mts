@@ -1,6 +1,6 @@
 import type { OutfitDefine } from "../outfits.mjs";
 
-export const playboyBunny = () =>
+export const playboyBunny = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

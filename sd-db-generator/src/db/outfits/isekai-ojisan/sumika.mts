@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `nochekaiser`;
 
-export const isekaiOjisanOutfitSumika = (variation: Variation) =>
+export const isekaiOjisanOutfitSumika = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

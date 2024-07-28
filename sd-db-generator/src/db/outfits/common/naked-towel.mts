@@ -1,6 +1,6 @@
 import type { OutfitDefine } from "../outfits.mjs";
 
-export const nakedTowel = () =>
+export const nakedTowel = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

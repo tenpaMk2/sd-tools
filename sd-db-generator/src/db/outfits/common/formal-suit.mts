@@ -13,7 +13,7 @@ const outfitEntries = {
   Record<Variation, OutfitDefine[`outfitEntries`]>
 >;
 
-export const formalSuit = (variation: Variation) =>
+export const formalSuit = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

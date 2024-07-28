@@ -3,7 +3,9 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `flujoru`;
 
-export const prismaIllyaMagicalGirlIllya = (variation: Variation) =>
+export const prismaIllyaMagicalGirlIllya = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [`ruby`],

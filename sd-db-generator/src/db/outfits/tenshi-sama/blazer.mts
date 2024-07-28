@@ -3,7 +3,7 @@ import { upskirtPreset } from "../upskirt-preset.mjs";
 
 type Variation = `mahiru-jibunsagasinotabi`;
 
-export const tenshiSamaBlazer = (variation: Variation) =>
+export const tenshiSamaBlazer = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

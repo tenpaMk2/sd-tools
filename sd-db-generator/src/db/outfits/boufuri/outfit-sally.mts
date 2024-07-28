@@ -35,7 +35,7 @@ const whenRemoveShoes = {
   },
 } as const satisfies Record<Variation, OutfitDefine["whenRemoveShoes"]>;
 
-export const boufuriOutfitSally = (variation: Variation) =>
+export const boufuriOutfitSally = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

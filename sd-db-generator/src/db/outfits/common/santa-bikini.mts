@@ -2,7 +2,7 @@ import type { OutfitDefine } from "../outfits.mjs";
 
 // TODO: Add skirt version.
 
-export const santaBikini = () =>
+export const santaBikini = (): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

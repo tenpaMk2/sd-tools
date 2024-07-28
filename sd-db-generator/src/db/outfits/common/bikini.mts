@@ -99,7 +99,7 @@ const outfitEntries = {
   ],
 } as const satisfies Record<Variation, OutfitDefine["outfitEntries"]>;
 
-export const bikini = (variation: Variation) =>
+export const bikini = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: [],

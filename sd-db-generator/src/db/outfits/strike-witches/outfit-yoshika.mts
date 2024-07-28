@@ -9,7 +9,9 @@ const loraOutfitTriggerWordEntries = {
   OutfitDefine["loraOutfitTriggerWordEntries"]
 >;
 
-export const strikeWitchesOutfitYoshika = (variation: Variation) =>
+export const strikeWitchesOutfitYoshika = (
+  variation: Variation,
+): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],

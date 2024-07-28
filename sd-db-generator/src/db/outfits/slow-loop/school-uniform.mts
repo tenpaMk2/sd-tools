@@ -78,7 +78,7 @@ const specialVisibility = {
   Record<Variation, OutfitDefine["specialVisibility"]["zettaiRyouiki"]>
 >;
 
-export const slowLoopSchoolUniform = (variation: Variation) =>
+export const slowLoopSchoolUniform = (variation: Variation): OutfitDefine =>
   ({
     lora: null,
     loraOutfitTriggerWordEntries: loraOutfitTriggerWordEntries[variation],
