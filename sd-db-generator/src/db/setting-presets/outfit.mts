@@ -853,8 +853,15 @@ export const outfitsPreset: OutfitsPreset = {
   "to-love-ru-nana-nochekaiser": [
     ...defaultPreset,
     {
-      key: `to-love-ru-school-uniform-nana-lancelot`,
+      key: `to-love-ru-school-uniform-nana-nochekaiser`,
       probability: defaultPreset.length,
+    },
+  ],
+  "to-love-ru-yui-nochekaiser": [
+    ...defaultPreset,
+    {
+      key: `to-love-ru-school-uniform-yui-nochekaiser`,
+      probability: defaultPreset.length / 2,
     },
   ],
   "working-popura-ibukimakisiko": defaultPreset,

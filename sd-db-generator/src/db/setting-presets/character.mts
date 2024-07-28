@@ -103,8 +103,9 @@ const baseCharactersPreset = [
   { key: `to-love-ru-lala-nochekaiser` },
   { key: `to-love-ru-momo-lancelot`, probability: 0.5 },
   { key: `to-love-ru-momo-nochekaiser`, probability: 0.5 },
-  { key: `to-love-ru-nana-lancelot` },
-  { key: `to-love-ru-nana-nochekaiser` },
+  { key: `to-love-ru-nana-lancelot`, probability: 0.5 },
+  { key: `to-love-ru-nana-nochekaiser`, probability: 0.5 },
+  { key: `to-love-ru-yui-nochekaiser` },
   { key: `working-popura-ibukimakisiko` },
 ] as const satisfies CharacterSetting[];
 

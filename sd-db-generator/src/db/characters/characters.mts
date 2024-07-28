@@ -106,6 +106,7 @@ import { toLoveRuHaruna } from "./to-love-ru/haruna.mjs";
 import { toLoveRuLala } from "./to-love-ru/lala.mjs";
 import { toLoveRuMomo } from "./to-love-ru/momo.mjs";
 import { toLoveRuNana } from "./to-love-ru/nana.mjs";
+import { toLoveRuYui } from "./to-love-ru/yui.mjs";
 import { workingPopura } from "./working/popura.mjs";
 
 export type CharacterDefine = Readonly<{
@@ -308,6 +309,7 @@ export const characterTable = {
   "to-love-ru-momo-nochekaiser": toLoveRuMomo(`nochekaiser`),
   "to-love-ru-nana-lancelot": toLoveRuNana(`lancelot`),
   "to-love-ru-nana-nochekaiser": toLoveRuNana(`nochekaiser`),
+  "to-love-ru-yui-nochekaiser": toLoveRuYui(`nochekaiser`),
   "working-popura-ibukimakisiko": workingPopura(`ibukimakisiko`),
 } as const satisfies Record<string, CharacterDefine>;
 

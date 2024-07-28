@@ -357,7 +357,8 @@ type CharacterOutfitKey =
   | "to-love-ru-school-uniform-momo-lancelot"
   | "to-love-ru-school-uniform-momo-nochekaiser"
   | "to-love-ru-school-uniform-nana-lancelot"
-  | "to-love-ru-school-uniform-nana-nochekaiser";
+  | "to-love-ru-school-uniform-nana-nochekaiser"
+  | "to-love-ru-school-uniform-yui-nochekaiser";
 
 /**
  * Character outfit table.
@@ -577,6 +578,8 @@ export const characterOutfitTable: Record<CharacterOutfitKey, OutfitDefine> = {
     toLoveRuSchoolUniform(`nana-lancelot`),
   "to-love-ru-school-uniform-nana-nochekaiser":
     toLoveRuSchoolUniform(`nana-nochekaiser`),
+  "to-love-ru-school-uniform-yui-nochekaiser":
+    toLoveRuSchoolUniform(`yui-nochekaiser`),
 } as const;
 
 export const outfitTable = {

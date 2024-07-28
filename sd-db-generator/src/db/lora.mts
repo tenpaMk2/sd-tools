@@ -460,6 +460,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `overnerd`,
   },
+  "golden-darkness-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/346406?modelVersionId=387658`,
+    ).toString(),
+    characterTriggerWordsTags: [`yami`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
   "Hajime_Shinoda": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],
@@ -1580,6 +1590,16 @@ export const loraTable = {
     outfitTriggerTags: [`white military uniform`],
     creator: `nochekaiser`,
   },
+  "tearju-lunatique-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/353010?modelVersionId=394760`,
+    ).toString(),
+    characterTriggerWordsTags: [`tearju lunatique`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
+  },
   "Towa-15": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`Pony`],
@@ -1729,6 +1749,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`Yousei Yunde`],
     outfitTriggerTags: [],
     creator: `Eternal2kPP`,
+  },
+  "yui-kotegawa-darkness-ponyxl-lora-nochekaiser": {
+    recommendedWeight: 1.0,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/342877?modelVersionId=451506`,
+    ).toString(),
+    characterTriggerWordsTags: [`yui kotegawa`],
+    outfitTriggerTags: [],
+    creator: `nochekaiser881`,
   },
   "yui-loveru": {
     recommendedWeight: 0.8,

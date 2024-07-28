@@ -544,4 +544,5 @@ export const backgroundsPreset = {
   "to-love-ru-school-uniform-momo-nochekaiser": student,
   "to-love-ru-school-uniform-nana-lancelot": student,
   "to-love-ru-school-uniform-nana-nochekaiser": student,
+  "to-love-ru-school-uniform-yui-nochekaiser": student,
 } as const satisfies BackgroundsPreset;

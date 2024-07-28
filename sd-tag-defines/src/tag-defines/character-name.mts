@@ -167,6 +167,7 @@ export const allCharacterNameTags = [
   `takimoto hifumi`,
   `tamaki iroha`,
   `taneshima popura`,
+  `tearju lunatique`,
   `tedeza rize`,
   `tohsaka rin`,
   `tokishikko dana`,

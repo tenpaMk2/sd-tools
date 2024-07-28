@@ -7,7 +7,8 @@ type Variation =
   | `momo-lancelot`
   | `momo-nochekaiser`
   | `nana-lancelot`
-  | `nana-nochekaiser`;
+  | `nana-nochekaiser`
+  | `yui-nochekaiser`;
 
 const outfitEntries = {
   vest: {
@@ -17,6 +18,7 @@ const outfitEntries = {
     "momo-nochekaiser": [`sweater vest`, `yellow sweater vest`],
     "nana-lancelot": [`sweater vest`, `orange sweater vest`],
     "nana-nochekaiser": [`sweater vest`, `yellow sweater vest`],
+    "yui-nochekaiser": [`sweater vest`, `yellow sweater vest`],
   },
   socks: {
     "haruna-nochekaiser": [`socks`, `black socks`],
@@ -37,6 +39,7 @@ const outfitEntries = {
     ],
     "nana-lancelot": [`socks`, `white socks`, `loose socks`],
     "nana-nochekaiser": [`socks`, `white socks`, `loose socks`],
+    "yui-nochekaiser": [`socks`, `black socks`],
   },
 } as const satisfies Record<
   string,
@@ -51,6 +54,7 @@ const specialVisibility = {
     "momo-nochekaiser": true,
     "nana-lancelot": false,
     "nana-nochekaiser": false,
+    "yui-nochekaiser": false,
   },
 } as const satisfies Record<`zettariRyouiki`, Record<Variation, boolean>>;
 
