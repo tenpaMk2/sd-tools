@@ -193,6 +193,7 @@ export const backgroundsPreset = {
   ],
   "maid-bikini": [...cafe, ...armpitsVisible],
   "micro-bikini": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
+  "naked-shirt": [...defaultPreset, ...bedroom],
   "naked-towel": [
     ...defaultPreset,
     { key: `onsen-standing`, probability: defaultPreset.length },

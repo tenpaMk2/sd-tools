@@ -25,6 +25,7 @@ import { gymUniform } from "./common/gym-uniform.mjs";
 import { haremOutfit } from "./common/harem-outfit.mjs";
 import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
+import { nakedShirt } from "./common/naked-shirt.mjs";
 import { nakedTowel } from "./common/naked-towel.mjs";
 import { nun } from "./common/nun.mjs";
 import { openChestSweater } from "./common/open-chest-sweater.mjs";
@@ -205,6 +206,7 @@ export const commonOutfitTable = {
   "harem-outfit": haremOutfit(),
   "maid-bikini": maidBikini(),
   "micro-bikini": microBikini(),
+  "naked-shirt": nakedShirt(),
   "naked-towel": nakedTowel(),
   "nun": nun(),
   "open-chest-sweater": openChestSweater(),
@@ -223,7 +225,6 @@ export const commonOutfitTable = {
   "volleyball-uniform": volleyballUniform(),
   // TODO: competition swimsuit
   // TODO: track uniform, track and field
-  // TODO: dirndl
   // TODO: gun man
   // TODO: naked apron
   // TODO: naked shirt, dress shirt
