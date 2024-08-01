@@ -54,6 +54,9 @@ import { hyoukaWhiteBikiniEru } from "./hyouka/white-bikini.mjs";
 import { isInfiniteStratosAcademySchoolUniform } from "./is/infinite-stratos-academy-school-uniform.mjs";
 import { isPilotSuit } from "./is/is-pilot-suit.mjs";
 import { isYellowDressMaya } from "./is/yellow-dress-maya.mjs";
+import { isekaiNonbiriNoukaOutfitRia } from "./isekai-nonbiri-nouka/outfit-ria.mjs";
+import { isekaiNonbiriNoukaOutfitRurushi } from "./isekai-nonbiri-nouka/outfit-rurushi.mjs";
+import { isekaiNonbiriNoukaOutfitTia } from "./isekai-nonbiri-nouka/outfit-tia.mjs";
 import { isekaiOjisanOutfitAlicia } from "./isekai-ojisan/alicia.mjs";
 import { isekaiOjisanOutfitMabel } from "./isekai-ojisan/mabel.mjs";
 import { isekaiOjisanOutfitSui } from "./isekai-ojisan/sui.mjs";
@@ -294,6 +297,12 @@ export const characterOutfitTable = {
   "is-pilot-suit-charlotte-nochekaiser": isPilotSuit(`charlotte-nochekaiser`),
   "is-pilot-suit-houki-nochekaiser": isPilotSuit(`houki-nochekaiser`),
   "is-yellow-dress-maya-nochekaiser": isYellowDressMaya(`nochekaiser`),
+  "isekai-nonbiri-nouka-outfit-ria-little-jelly":
+    isekaiNonbiriNoukaOutfitRia(`little-jelly`),
+  "isekai-nonbiri-nouka-outfit-rurushi-little-jelly":
+    isekaiNonbiriNoukaOutfitRurushi(`little-jelly`),
+  "isekai-nonbiri-nouka-outfit-tia-little-jelly":
+    isekaiNonbiriNoukaOutfitTia(`little-jelly`),
   "isekai-ojisan-outfit-alicia-nochekaiser":
     isekaiOjisanOutfitAlicia(`nochekaiser`),
   "isekai-ojisan-outfit-mabel-nochekaiser":

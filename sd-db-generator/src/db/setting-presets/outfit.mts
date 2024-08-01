@@ -269,6 +269,27 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length / 2,
     },
   ],
+  "isekai-nonbiri-nouka-ria-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `isekai-nonbiri-nouka-outfit-ria-little-jelly`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "isekai-nonbiri-nouka-rurushi-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `isekai-nonbiri-nouka-outfit-rurushi-little-jelly`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "isekai-nonbiri-nouka-tia-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `isekai-nonbiri-nouka-outfit-tia-little-jelly`,
+      probability: defaultPreset.length,
+    },
+  ],
   "isekai-ojisan-alicia-nochekaiser": [
     ...defaultPreset,
     {

@@ -99,6 +99,7 @@ export const allHairVisibilities = {
   "curtained bangs": preset.bangs,
   "diagonal bangs": preset.bangs,
   "double bun": preset.hair,
+  "double-parted bangs": preset.bangs,
   "doughnut hair bun": preset.hair,
   "dreadlocks": preset.hair,
   "drill hair": preset.hair,

@@ -59,6 +59,7 @@ export const allHairTags = [
   `curtained bangs`,
   `diagonal bangs`,
   `double bun`,
+  `double-parted bangs`,
   `doughnut hair bun`,
   `dreadlocks`,
   `drill hair`,

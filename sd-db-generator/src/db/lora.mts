@@ -698,6 +698,36 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "IsekaiNonbiriNouka_RuuRurushiXL": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/562574/?modelVersionId=62672`,
+    ).toString(),
+    characterTriggerWordsTags: [`RurushiINN`],
+    outfitTriggerTags: [`RuuDress`, `RuuPreg`],
+    creator: `LittleJelly`,
+  },
+  "IsekaiNonbiriNouka_RiaXL": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/562555/?modelVersionId=626702`,
+    ).toString(),
+    characterTriggerWordsTags: [`RiaINN`],
+    outfitTriggerTags: [],
+    creator: `LittleJelly`,
+  },
+  "IsekaiNonbiriNouka_TiaXL": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/562562/?modelVersionId=626706`,
+    ).toString(),
+    characterTriggerWordsTags: [`TiaINN`],
+    outfitTriggerTags: [],
+    creator: `LittleJelly`,
+  },
   "isuzu-sento-ponyxl-lora-nochekaiser": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
