@@ -1,5 +1,4 @@
 import type { CameraAngle } from "../../backgrounds/backgrounds.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 import type { PoseDefine } from "../poses.mjs";
 
 type Variation = CameraAngle;
@@ -88,5 +87,10 @@ export const standingDoubleV = (variation: Variation): PoseDefine =>
     entries: entries[variation],
     visibility: visibility[variation],
     specialVisibility: specialVisibility[variation],
-    emotionProbabilitiesAtPose: emotionPreset["default"],
+    emotionProbabilitiesAtPose: {
+      "smile": 1.0,
+      "light-smile": 1.0,
+      "embarrassed": 1.0,
+      "doyagao": 0.5,
+    },
   }) as const satisfies PoseDefine;
