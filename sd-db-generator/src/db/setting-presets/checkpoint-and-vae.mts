@@ -87,6 +87,10 @@ export const checkpointAndVaePreset = {
     sd_model_checkpoint: `tPonynai3_v51WeightOptimized.safetensors`,
     sd_vae: `None`,
   },
+  snowpony: {
+    sd_model_checkpoint: `snowpony_v10.safetensors`,
+    sd_vae: `None`,
+  },
   aaaautismRestart: {
     sd_model_checkpoint: `aaaautismPonyFinetune_aaaaReStart.safetensors`,
     sd_vae: `None`,
