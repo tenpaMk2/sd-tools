@@ -41,8 +41,9 @@ const portrait = {
     [
       // ...charactersPreset.baseCharacters,
       // { key: `eromanga-sensei-muramasa-little-jelly` },
-      { key: `eromanga-sensei-tomoe-little-jelly` },
+      // { key: `eromanga-sensei-tomoe-little-jelly` },
       // { key: `isekai-nonbiri-nouka-rurushi-little-jelly` },
+      { key: `isekai-nonbiri-nouka-ann-little-jelly` },
     ] satisfies CharacterSetting[]
   ).map(
     (c): CharacterSetting => ({
@@ -115,7 +116,7 @@ export const defaultSetting = {
   optionSettings: [
     ...[
       // checkpointAndVAEPreset.sdxl.autismmixDPO,
-      // checkpointAndVaePreset.ebaraPony2,
+      checkpointAndVaePreset.ebaraPony2,
       // checkpointAndVaePreset.autismmixConfetti,
       // checkpointAndVaePreset.tponynai,
       // checkpointAndVaePreset.hassakuXlHentai,
