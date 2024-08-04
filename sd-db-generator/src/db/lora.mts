@@ -723,6 +723,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "IsekaiNonbiriNouka_AnnXL": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/562563/?modelVersionId=626708`,
+    ).toString(),
+    characterTriggerWordsTags: [`AnnINN`],
+    outfitTriggerTags: [],
+    creator: `LittleJelly`,
+  },
   "IsekaiNonbiriNouka_RuuRurushiXL": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`Pony`],

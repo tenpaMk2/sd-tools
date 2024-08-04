@@ -426,6 +426,21 @@ const allCollarColorVisibilities = {
   "white collar": preset.collar,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allCorsetColorVisibilities = {
+  "aqua corset": preset.underbust,
+  "black corset": preset.underbust,
+  "blue corset": preset.underbust,
+  "brown corset": preset.underbust,
+  "green corset": preset.underbust,
+  "grey corset": preset.underbust,
+  "orange corset": preset.underbust,
+  "pink corset": preset.underbust,
+  "purple corset": preset.underbust,
+  "red corset": preset.underbust,
+  "white corset": preset.underbust,
+  "yellow corset": preset.underbust,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allDressColorVisibilities = {
   "aqua dress": preset.dress,
   "black dress": preset.dress,
@@ -1016,6 +1031,7 @@ export const allBodyOutfitVisibilities = {
   ...allCloakColorVisibilities,
   ...allCoatColorVisibilities,
   ...allCollarColorVisibilities,
+  ...allCorsetColorVisibilities,
   ...allDistinguishableOutfitVisibilities,
   ...allDressColorVisibilities,
   ...allFootwearColorVisibilities,
@@ -1312,6 +1328,7 @@ export const allBodyOutfitVisibilities = {
   "print gloves": preset["wrist cuffs"],
   "print jacket": preset.shirt,
   "print thighhighs": preset.thighhighs,
+  "puffy short sleeves": preset.shoulder,
   "puffy sleeves": preset.shoulder,
   "pumps": preset.foot,
   "rabbit tail": preset.shortTail,

@@ -224,6 +224,21 @@ const allCollarColorTags = [
   `white collar`,
 ] as const satisfies string[];
 
+const allCorsetColorTags = [
+  `aqua corset`,
+  `black corset`,
+  `blue corset`,
+  `brown corset`,
+  `green corset`,
+  `grey corset`,
+  `orange corset`,
+  `pink corset`,
+  `purple corset`,
+  `red corset`,
+  `white corset`,
+  `yellow corset`,
+] as const satisfies string[];
+
 const allDressColorTags = [
   `aqua dress`,
   `black dress`,
@@ -813,6 +828,7 @@ export const allBodyOutfitTags = [
   ...allCloakColorTags,
   ...allCoatColorTags,
   ...allCollarColorTags,
+  ...allCorsetColorTags,
   ...allDressColorTags,
   ...allFootwearColorTags,
   ...allGlovesColorTags,
@@ -1108,6 +1124,7 @@ export const allBodyOutfitTags = [
   `print gloves`,
   `print jacket`,
   `print thighhighs`,
+  `puffy short sleeves`,
   `puffy sleeves`,
   `pumps`,
   `rabbit tail`,

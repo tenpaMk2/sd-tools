@@ -120,6 +120,7 @@ export const allBodyFeatureVisibilities = {
   "rabbit ears": preset.head,
   "rabbit girl": preset.all,
   "rabbit tail": preset.longTail,
+  "single horn": preset.head,
   "tail": preset.shortTail, // TODO: `short tail` and `long tail`
   "tan": preset.all,
   "thick thighs": preset.thighs,

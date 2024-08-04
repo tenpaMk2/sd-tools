@@ -403,6 +403,7 @@ export const backgroundsPreset = {
   "is-pilot-suit-charlotte-nochekaiser": [...blueSky, ...armpitsVisible],
   "is-pilot-suit-houki-nochekaiser": [...blueSky, ...armpitsVisible],
   "is-yellow-dress-maya-nochekaiser": [...casual, ...bedSheetSteaming],
+  "isekai-nonbiri-nouka-maid-ann-little-jelly": [...isekai],
   "isekai-nonbiri-nouka-outfit-ria-little-jelly": [
     ...isekai,
     ...armpitsVisible,

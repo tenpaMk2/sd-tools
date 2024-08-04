@@ -54,6 +54,7 @@ export const allBodyFeatureTags = [
   `rabbit ears`,
   `rabbit girl`,
   `rabbit tail`,
+  `single horn`,
   `tail`,
   `tan`,
   `thick thighs`,
