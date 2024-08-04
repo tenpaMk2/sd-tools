@@ -147,7 +147,33 @@ export const outfitsPreset: OutfitsPreset = {
   "danmachi-ryu-eternal2kpp": [...defaultPreset],
   "eromanga-sensei-elf-eternal2kpp": defaultPreset,
   "eromanga-sensei-megumi-eternal2kpp": defaultPreset,
+  "eromanga-sensei-muramasa-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `eromanga-sensei-bikini-muramasa-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `eromanga-sensei-kimono-muramasa-little-jelly`,
+      probability: defaultPreset.length / 4,
+    },
+    {
+      key: `eromanga-sensei-serafuku-muramasa-little-jelly`,
+      probability: defaultPreset.length / 4,
+    },
+    {
+      key: `eromanga-sensei-sundress-muramasa-little-jelly`,
+      probability: defaultPreset.length / 4,
+    },
+  ],
   "eromanga-sensei-sagiri-eternal2kpp": defaultPreset,
+  "eromanga-sensei-tomoe-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `eromanga-sensei-bookseller-tomoe-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "fate-rin-little-jelly": [
     ...defaultPreset,
     {

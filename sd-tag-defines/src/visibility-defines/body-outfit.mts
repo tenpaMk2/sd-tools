@@ -488,6 +488,21 @@ const allJacketColorVisibilities = {
   "yellow jacket": preset.shirt,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allKimonoColorVisibilities = {
+  "aqua kimono": preset.dress,
+  "black kimono": preset.dress,
+  "blue kimono": preset.dress,
+  "brown kimono": preset.dress,
+  "green kimono": preset.dress,
+  "grey kimono": preset.dress,
+  "orange kimono": preset.dress,
+  "pink kimono": preset.dress,
+  "purple kimono": preset.dress,
+  "red kimono": preset.dress,
+  "white kimono": preset.dress,
+  "yellow kimono": preset.dress,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allLeggingsColorVisibilities = {
   "aqua leggings": preset.thighhighs,
   "black leggings": preset.thighhighs,
@@ -623,6 +638,21 @@ const allSailorCollarColorVisibilities = {
   "red sailor collar": preset.collar,
   "white sailor collar": preset.collar,
   "yellow sailor collar": preset.collar,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
+const allSashColorVisibilities = {
+  "aqua sash": preset.skirt,
+  "black sash": preset.skirt,
+  "blue sash": preset.skirt,
+  "brown sash": preset.skirt,
+  "green sash": preset.skirt,
+  "grey sash": preset.skirt,
+  "orange sash": preset.skirt,
+  "pink sash": preset.skirt,
+  "purple sash": preset.skirt,
+  "red sash": preset.skirt,
+  "white sash": preset.skirt,
+  "yellow sash": preset.skirt,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 const allScarfCollarColorVisibilities = {
@@ -991,6 +1021,7 @@ export const allBodyOutfitVisibilities = {
   ...allFootwearColorVisibilities,
   ...allGlovesColorVisibilities,
   ...allJacketColorVisibilities,
+  ...allKimonoColorVisibilities,
   ...allLeggingsColorVisibilities,
   ...allLeotardColorVisibilities,
   ...allNeckerchiefColorVisibilities,
@@ -1000,6 +1031,7 @@ export const allBodyOutfitVisibilities = {
   ...allPantsColorVisibilities,
   ...allPantyhoseColorVisibilities,
   ...allSailorCollarColorVisibilities,
+  ...allSashColorVisibilities,
   ...allScarfCollarColorVisibilities,
   ...allSerafukuColorVisibilities,
   ...allShirtColorVisibilities,
@@ -1172,9 +1204,11 @@ export const allBodyOutfitVisibilities = {
   "id card": preset.bowtie,
   "infinite stratos academy school uniform": preset.all,
   "jacket": preset.shirt,
+  "japanese clothes": preset.all,
   "jersey": preset.shirt,
   "jewelry": preset.all, // TODO: Move to distinguishables.
   "juliet sleeves": preset.shoulder,
+  "kimono": preset.dress,
   "knee boots": preset.foot,
   "knee pads": preset.thighs,
   "kneehighs": preset.foot,
@@ -1233,6 +1267,7 @@ export const allBodyOutfitVisibilities = {
   "o-ring bikini": preset.dress,
   "o-ring bottom": preset.panties,
   "o-ring top": preset.bowtie,
+  "obi": preset.skirt,
   "off shoulder": preset.shirt,
   "off-shoulder dress": preset.dress,
   "off-shoulder sweater": preset.shirt,
@@ -1270,6 +1305,7 @@ export const allBodyOutfitVisibilities = {
   "pointy footwear": preset.foot,
   "polka dot bikini": preset.dress,
   "polka dot sweater": preset.shirt,
+  "polo shirt": preset.shirt,
   "priestess": preset.all,
   "print bikini": preset.dress,
   "print dress": preset.dress,
@@ -1294,6 +1330,7 @@ export const allBodyOutfitVisibilities = {
   "santa bikini": preset.dress,
   "santa costume": preset.all,
   "sarong": preset.skirt,
+  "sash": preset.skirt, // TODO: Separate to `waist sash` and `shoulder sash` .
   "scarf": preset.collar,
   "school swimsuit": preset.dress,
   "school uniform": preset.dress,
@@ -1336,6 +1373,7 @@ export const allBodyOutfitVisibilities = {
   "strap": preset.all,
   "striped bikini": preset.dress,
   "striped necktie": preset.bowtie,
+  "striped shirt": preset.shirt,
   "striped sweater": preset.shirt,
   "suit": preset.shirt,
   "sundress": preset.dress,
@@ -1346,6 +1384,7 @@ export const allBodyOutfitVisibilities = {
   "sweater": preset.shirt,
   "swimsuit": preset.dress,
   "t-shirt": preset.shirt,
+  "tabi": preset.foot,
   "tank top": preset.shirt,
   "teacher": preset.all,
   "tennis uniform": preset.all,

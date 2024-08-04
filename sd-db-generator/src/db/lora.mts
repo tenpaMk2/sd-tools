@@ -434,6 +434,31 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `eft`,
   },
+  "EromangaSensei_SenjuMuramasaXL": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/592423/?modelVersionId=661611`,
+    ).toString(),
+    characterTriggerWordsTags: [`SenjuMuramasa`],
+    outfitTriggerTags: [
+      `MuramasaKimono`,
+      `MuramasaBikini`,
+      `MuramasaDress`,
+      `MuramasaSchool`,
+    ],
+    creator: `LittleJelly`,
+  },
+  "EromangaSensei_TakasagoTomoeXL": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/592418/?modelVersionId=661607`,
+    ).toString(),
+    characterTriggerWordsTags: [`TakasagoTomoe`],
+    outfitTriggerTags: [],
+    creator: `LittleJelly`,
+  },
   "FateStayNightUBW_TohsakaRin": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`Pony`],

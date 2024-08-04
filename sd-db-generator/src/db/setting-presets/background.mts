@@ -337,6 +337,26 @@ export const backgroundsPreset = {
     ...armpitsVisible,
   ],
   "danmachi-white-dress-hestia-no-lora": [...defaultPreset, ...armpitsVisible],
+  "eromanga-sensei-bikini-muramasa-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...armpitsVisible,
+  ],
+  "eromanga-sensei-bookseller-tomoe-little-jelly": [...bedroom, ...bookshelf],
+  "eromanga-sensei-kimono-muramasa-little-jelly": [
+    ...bedSheetSteaming,
+    ...bedroom, // TODO: Reconsider
+  ],
+  "eromanga-sensei-serafuku-muramasa-little-jelly": [
+    ...bedSheetSteaming,
+    ...student,
+    ...bedroom,
+  ],
+  "eromanga-sensei-sundress-muramasa-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...armpitsVisible,
+  ],
   "fate-red-sweater-rin-little-jelly": [
     ...casual,
     {

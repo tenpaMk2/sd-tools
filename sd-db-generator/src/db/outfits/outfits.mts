@@ -43,6 +43,11 @@ import { tennisUniform } from "./common/tennis-uniform.mjs";
 import { undressingShirt } from "./common/undressing-shirt.mjs";
 import { volleyballUniform } from "./common/volleyball-uniform.mjs";
 import { danmachiWhiteDressHestia } from "./danmachi/white-dress-hestia.mjs";
+import { eromangaSenseiBikini } from "./eromanga-sensei/bikini.mjs";
+import { eromangaSenseiBookseller } from "./eromanga-sensei/bookseller.mjs";
+import { eromangaSenseiKimono } from "./eromanga-sensei/kimono.mjs";
+import { eromangaSenseiSerafuku } from "./eromanga-sensei/serafuku.mjs";
+import { eromangaSenseiSundress } from "./eromanga-sensei/sundress.mjs";
 import { fateRedSweaterRin } from "./fate/red-sweater-rin.mjs";
 import { futokuNoGuildOutfitEnome } from "./futoku-no-guild/outfit-enome.mjs";
 import { futokuNoGuildOutfitTokishikko } from "./futoku-no-guild/outfit-tokishikko.mjs";
@@ -268,6 +273,20 @@ export const characterOutfitTable = {
   "danmachi-white-dress-hestia-eternal2kpp":
     danmachiWhiteDressHestia(`eternal2kpp`),
   "danmachi-white-dress-hestia-no-lora": danmachiWhiteDressHestia(`no-lora`),
+  "eromanga-sensei-bikini-muramasa-little-jelly": eromangaSenseiBikini(
+    `muramasa-little-jelly`,
+  ),
+  "eromanga-sensei-bookseller-tomoe-little-jelly":
+    eromangaSenseiBookseller(`tomoe-little-jelly`),
+  "eromanga-sensei-kimono-muramasa-little-jelly": eromangaSenseiKimono(
+    `muramasa-little-jelly`,
+  ),
+  "eromanga-sensei-serafuku-muramasa-little-jelly": eromangaSenseiSerafuku(
+    `muramasa-little-jelly`,
+  ),
+  "eromanga-sensei-sundress-muramasa-little-jelly": eromangaSenseiSundress(
+    `muramasa-little-jelly`,
+  ),
   "fate-red-sweater-rin-little-jelly": fateRedSweaterRin(`little-jelly`),
   "futoku-no-guild-outfit-enome-zedotasco":
     futokuNoGuildOutfitEnome(`zedotasco`),

@@ -25,7 +25,9 @@ import { danmachiLili } from "./danmachi/lili.mjs";
 import { danmachiRyu } from "./danmachi/ryu.mjs";
 import { eromangaSenseiElf } from "./eromanga-sensei/elf.mjs";
 import { eromangaSenseiMegumi } from "./eromanga-sensei/megumi.mjs";
+import { eromangaSenseiMuramasa } from "./eromanga-sensei/muramasa.mjs";
 import { eromangaSenseiSagiri } from "./eromanga-sensei/sagiri.mjs";
+import { eromangaSenseiTomoe } from "./eromanga-sensei/tomoe.mjs";
 import { fateRin } from "./fate/rin.mjs";
 import { futokuNoGuildEnome } from "./futoku-no-guild/enome.mjs";
 import { futokuNoGuildTokishikko } from "./futoku-no-guild/tokishikko.mjs";
@@ -176,7 +178,10 @@ export const characterTable = {
   "danmachi-ryu-eternal2kpp": danmachiRyu(`eternal2kpp`),
   "eromanga-sensei-elf-eternal2kpp": eromangaSenseiElf(`eternal2kpp`),
   "eromanga-sensei-megumi-eternal2kpp": eromangaSenseiMegumi(`eternal2kpp`),
+  "eromanga-sensei-muramasa-little-jelly":
+    eromangaSenseiMuramasa(`little-jelly`),
   "eromanga-sensei-sagiri-eternal2kpp": eromangaSenseiSagiri(`eternal2kpp`),
+  "eromanga-sensei-tomoe-little-jelly": eromangaSenseiTomoe(`little-jelly`),
   "fate-rin-little-jelly": fateRin(`little-jelly`),
   "futoku-no-guild-enome-zedotasco": futokuNoGuildEnome(`zedotasco`),
   "futoku-no-guild-tokishikko-ibukimakisiko":

@@ -285,6 +285,21 @@ const allJacketColorTags = [
   `yellow jacket`,
 ] as const satisfies string[];
 
+const allKimonoColorTags = [
+  `aqua kimono`,
+  `black kimono`,
+  `blue kimono`,
+  `brown kimono`,
+  `green kimono`,
+  `grey kimono`,
+  `orange kimono`,
+  `pink kimono`,
+  `purple kimono`,
+  `red kimono`,
+  `white kimono`,
+  `yellow kimono`,
+] as const satisfies string[];
+
 const allLeggingsColorTags = [
   `aqua leggings`,
   `black leggings`,
@@ -420,6 +435,21 @@ const allSailorCollarColorTags = [
   `red sailor collar`,
   `white sailor collar`,
   `yellow sailor collar`,
+] as const satisfies string[];
+
+const allSashColorTags = [
+  `aqua sash`,
+  `black sash`,
+  `blue sash`,
+  `brown sash`,
+  `green sash`,
+  `grey sash`,
+  `orange sash`,
+  `pink sash`,
+  `purple sash`,
+  `red sash`,
+  `white sash`,
+  `yellow sash`,
 ] as const satisfies string[];
 
 const allScarfColorTags = [
@@ -787,6 +817,7 @@ export const allBodyOutfitTags = [
   ...allFootwearColorTags,
   ...allGlovesColorTags,
   ...allJacketColorTags,
+  ...allKimonoColorTags,
   ...allLeggingsColorTags,
   ...allLeotardColorTags,
   ...allNeckerchiefColorTags,
@@ -796,6 +827,7 @@ export const allBodyOutfitTags = [
   ...allPantsColorTags,
   ...allPantyhoseColorTags,
   ...allSailorCollarColorTags,
+  ...allSashColorTags,
   ...allScarfColorTags,
   ...allSerafukuColorTags,
   ...allShirtColorTags,
@@ -968,9 +1000,11 @@ export const allBodyOutfitTags = [
   `id card`,
   `infinite stratos academy school uniform`,
   `jacket`,
+  `japanese clothes`,
   `jersey`, // Don't confuse with `track jacket`.
   `jewelry`,
   `juliet sleeves`,
+  `kimono`,
   `knee boots`,
   `knee pads`,
   `kneehighs`,
@@ -1029,6 +1063,7 @@ export const allBodyOutfitTags = [
   `o-ring bikini`,
   `o-ring bottom`,
   `o-ring top`,
+  `obi`,
   `off shoulder`,
   `off-shoulder dress`,
   `off-shoulder sweater`,
@@ -1066,6 +1101,7 @@ export const allBodyOutfitTags = [
   `pointy footwear`,
   `polka dot bikini`,
   `polka dot sweater`,
+  `polo shirt`,
   `priestess`,
   `print bikini`,
   `print dress`,
@@ -1090,6 +1126,7 @@ export const allBodyOutfitTags = [
   `santa bikini`,
   `santa costume`,
   `sarong`,
+  `sash`,
   `scarf`,
   `school swimsuit`,
   `school uniform`,
@@ -1132,6 +1169,7 @@ export const allBodyOutfitTags = [
   `strap`,
   `striped bikini`,
   `striped necktie`,
+  `striped shirt`,
   `striped sweater`,
   `suit`,
   `sundress`,
@@ -1142,6 +1180,7 @@ export const allBodyOutfitTags = [
   `sweater`,
   `swimsuit`,
   `t-shirt`,
+  `tabi`,
   `tank top`,
   `teacher`,
   `tennis uniform`,
