@@ -6,6 +6,7 @@ export type SamplerDefine = Readonly<{}>;
  */
 export const samplerTable = {
   "DPM++ 2M Karras": {},
+  "DPM++ 3M SDE": {},
   "DPM++ 3M SDE Exponential": {},
   "DPM++ 3M SDE Karras": {},
   "Euler a": {},

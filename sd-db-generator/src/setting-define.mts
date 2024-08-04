@@ -1,3 +1,4 @@
+import type { SchedulerName } from "./db/scheduler.mjs";
 import type {
   BackgroundKey,
   CharacterKey,
@@ -40,6 +41,7 @@ export type Txt2ImgSetting = Readonly<{
   txt2imgBodyJson: {
     negative_prompt: string;
     sampler_name: SamplerName;
+    scheduler: SchedulerName;
     steps: number;
     /**
      * Image width.
