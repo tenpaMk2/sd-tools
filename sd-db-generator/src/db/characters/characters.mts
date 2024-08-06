@@ -44,6 +44,7 @@ import { isLingyin } from "./is/lingyin.mjs";
 import { isMaya } from "./is/maya.mjs";
 import { isTatenashi } from "./is/tatenashi.mjs";
 import { isekaiNonbiriNoukaAnn } from "./isekai-nonbiri-nouka/ann.mjs";
+import { isekaiNonbiriNoukaHakuren } from "./isekai-nonbiri-nouka/hakuren.mjs";
 import { isekaiNonbiriNoukaRia } from "./isekai-nonbiri-nouka/ria.mjs";
 import { isekaiNonbiriNoukaRurushi } from "./isekai-nonbiri-nouka/rurushi.mjs";
 import { isekaiNonbiriNoukaTia } from "./isekai-nonbiri-nouka/tia.mjs";
@@ -201,6 +202,8 @@ export const characterTable = {
   "is-tatenashi-nochekaiser": isTatenashi(`nochekaiser`),
   "isekai-nonbiri-nouka-ann-little-jelly":
     isekaiNonbiriNoukaAnn(`little-jelly`),
+  "isekai-nonbiri-nouka-hakuren-little-jelly":
+    isekaiNonbiriNoukaHakuren(`little-jelly`),
   "isekai-nonbiri-nouka-ria-little-jelly":
     isekaiNonbiriNoukaRia(`little-jelly`),
   "isekai-nonbiri-nouka-rurushi-little-jelly":

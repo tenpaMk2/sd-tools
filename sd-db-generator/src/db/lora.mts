@@ -733,14 +733,14 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `LittleJelly`,
   },
-  "IsekaiNonbiriNouka_RuuRurushiXL": {
+  "IsekaiNonbiriNouka_HakurenXL": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`Pony`],
     url: new URL(
-      `https://civitai.com/models/562574/?modelVersionId=62672`,
+      `https://civitai.com/models/562567/?modelVersionId=626715`,
     ).toString(),
-    characterTriggerWordsTags: [`RurushiINN`],
-    outfitTriggerTags: [`RuuDress`, `RuuPreg`],
+    characterTriggerWordsTags: [`HakurenINN`],
+    outfitTriggerTags: [],
     creator: `LittleJelly`,
   },
   "IsekaiNonbiriNouka_RiaXL": {
@@ -751,6 +751,16 @@ export const loraTable = {
     ).toString(),
     characterTriggerWordsTags: [`RiaINN`],
     outfitTriggerTags: [],
+    creator: `LittleJelly`,
+  },
+  "IsekaiNonbiriNouka_RuuRurushiXL": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/562574/?modelVersionId=62672`,
+    ).toString(),
+    characterTriggerWordsTags: [`RurushiINN`],
+    outfitTriggerTags: [`RuuDress`, `RuuPreg`],
     creator: `LittleJelly`,
   },
   "IsekaiNonbiriNouka_TiaXL": {

@@ -60,6 +60,7 @@ import { isInfiniteStratosAcademySchoolUniform } from "./is/infinite-stratos-aca
 import { isPilotSuit } from "./is/is-pilot-suit.mjs";
 import { isYellowDressMaya } from "./is/yellow-dress-maya.mjs";
 import { isekaiNonbiriNoukaMaid } from "./isekai-nonbiri-nouka/maid.mjs";
+import { isekaiNonbiriNoukaOutfitHakuren } from "./isekai-nonbiri-nouka/outfit-hakuren.mjs";
 import { isekaiNonbiriNoukaOutfitRia } from "./isekai-nonbiri-nouka/outfit-ria.mjs";
 import { isekaiNonbiriNoukaOutfitRurushi } from "./isekai-nonbiri-nouka/outfit-rurushi.mjs";
 import { isekaiNonbiriNoukaOutfitTia } from "./isekai-nonbiri-nouka/outfit-tia.mjs";
@@ -319,6 +320,8 @@ export const characterOutfitTable = {
   "is-yellow-dress-maya-nochekaiser": isYellowDressMaya(`nochekaiser`),
   "isekai-nonbiri-nouka-maid-ann-little-jelly":
     isekaiNonbiriNoukaMaid(`ann-little-jelly`),
+  "isekai-nonbiri-nouka-outfit-hakuren-little-jelly":
+    isekaiNonbiriNoukaOutfitHakuren(`little-jelly`),
   "isekai-nonbiri-nouka-outfit-ria-little-jelly":
     isekaiNonbiriNoukaOutfitRia(`little-jelly`),
   "isekai-nonbiri-nouka-outfit-rurushi-little-jelly":

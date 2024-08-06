@@ -48,6 +48,7 @@ const baseCharactersPreset = [
   { key: `is-lingyin-nochekaiser` },
   { key: `is-tatenashi-nochekaiser` },
   { key: `isekai-nonbiri-nouka-ann-little-jelly` },
+  { key: `isekai-nonbiri-nouka-hakuren-little-jelly` },
   { key: `isekai-nonbiri-nouka-ria-little-jelly` },
   { key: `isekai-nonbiri-nouka-rurushi-little-jelly` },
   { key: `isekai-nonbiri-nouka-tia-little-jelly` },
