@@ -9,6 +9,10 @@ import type { CharacterFeatureTag } from "../../tag-defines/adapter.mjs";
 import type { EmotionType } from "../emotions/emotions.mjs";
 import type { LoraCharacterTriggerWordsTag } from "../lora.mjs";
 import { amaburiIsuzu } from "./amaburi/isuzu.mjs";
+import { amaburiKobori } from "./amaburi/kobori.mjs";
+import { amaburiMuse } from "./amaburi/muse.mjs";
+import { amaburiSalama } from "./amaburi/salama.mjs";
+import { amaburiSylphy } from "./amaburi/sylphy.mjs";
 import { atelierRyza } from "./atelier/ryza.mjs";
 import { blendSKaho } from "./blend-s/kaho.mjs";
 import { blendSMafuyu } from "./blend-s/mafuyu.mjs";
@@ -156,8 +160,14 @@ export type CharacterDefine = Readonly<{
 
 export const characterTable = {
   "amaburi-isuzu-h-madoka": amaburiIsuzu(`h-madoka`),
+  "amaburi-isuzu-little-jelly": amaburiIsuzu(`little-jelly`),
   "amaburi-isuzu-no-lora": amaburiIsuzu(`no-lora`),
   "amaburi-isuzu-nochekaiser": amaburiIsuzu(`nochekaiser`),
+  "amaburi-isuzu-pirate-little-jelly": amaburiIsuzu(`pirate-little-jelly`),
+  "amaburi-kobori-little-jelly": amaburiKobori(`little-jelly`),
+  "amaburi-muse-little-jelly": amaburiMuse(`little-jelly`),
+  "amaburi-salama-little-jelly": amaburiSalama(`little-jelly`),
+  "amaburi-sylphy-little-jelly": amaburiSylphy(`little-jelly`),
   "atelier-ryza-nochekaiser": atelierRyza(`nochekaiser`),
   "blend-s-kaho-ibukimakisiko-double-bun": blendSKaho(
     `ibukimakisiko-double-bun`,

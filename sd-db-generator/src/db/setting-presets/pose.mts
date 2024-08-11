@@ -22,6 +22,7 @@ export const posesPreset = {
 
   "default": defaultPreset,
 
+  "amusement-park-standing": [...defaultPreset],
   "bar-sitting-on": [
     { key: `sitting-on-from-above-holding-beer-mug` },
     { key: `sitting-on-from-below-holding-beer-mug` },

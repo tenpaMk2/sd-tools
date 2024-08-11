@@ -1,10 +1,12 @@
 import type {
   CharacterSetting,
+  OutfitSetting,
   Setting,
   Txt2ImgSetting,
 } from "../setting-define.mjs";
 import { checkpointAndVaePreset } from "./setting-presets/checkpoint-and-vae.mjs";
 import { imageResolutionPreset } from "./setting-presets/image-resolution.mjs";
+import { outfitsPreset } from "./setting-presets/outfit.mjs";
 
 const portrait = {
   key: `portrait`,
@@ -18,8 +20,8 @@ const portrait = {
     // sampler_name: `Restart`,
     steps: 35,
     ...imageResolutionPreset["sdxl-portrait"],
-    cfg_scale: 5,
-    denoising_strength: 0.2,
+    cfg_scale: 4,
+    denoising_strength: 0.4,
     enable_hr: true,
     hr_scale: 2,
     hr_upscaler: "4x-AnimeSharp",
@@ -40,55 +42,57 @@ const portrait = {
   characters: (
     [
       // ...charactersPreset.baseCharacters,
-      // { key: `eromanga-sensei-muramasa-little-jelly` },
-      // { key: `eromanga-sensei-tomoe-little-jelly` },
-      // { key: `isekai-nonbiri-nouka-rurushi-little-jelly` },
-      { key: `isekai-nonbiri-nouka-ann-little-jelly` },
+      { key: `amaburi-isuzu-little-jelly` },
+      // { key: `amaburi-isuzu-pirate-little-jelly`, probability: 0.2 },
+      { key: `amaburi-kobori-little-jelly` },
+      { key: `amaburi-muse-little-jelly` },
+      { key: `amaburi-salama-little-jelly` },
+      { key: `amaburi-sylphy-little-jelly` },
     ] satisfies CharacterSetting[]
   ).map(
     (c): CharacterSetting => ({
       ...c,
-      // outfits: (
-      //   [
-      //     // ...outfitsPreset.default,
-      //     // { key: `babydoll` },
-      //     // { key: `bikini-frill` },
-      //     // { key: `bikini-o-ring` },
-      //     // { key: `bikini-tie` },
-      //     // { key: `bridal-lingerie` },
-      //     // { key: `camisole-denim-shorts` },
-      //     // { key: `cheerleader` },
-      //     // { key: `china-dress` },
-      //     // { key: `cow-print-bikini` },
-      //     // { key: `denim-bikini` },
-      //     // { key: `harem-outfit` },
-      //     // { key: `maid-bikini` },
-      //     // { key: `micro-bikini` },
-      //     // { key: `naked-towel` },
-      //     // { key: `playboy-bunny` },
-      //     // { key: `revealing-miko` },
-      //     // { key: `santa-bikini` },
-      //     // { key: `sports-bikini` },
-      //     // { key: `sukumizu-thighhighs` },
-      //     // { key: `sukumizu` },
-      //     // { key: `tank-top-dolphin-shorts` },
-      //     // { key: `sundress` },
-      //     // { key: `dirndl` },
-      //     // { key: `undressing-shirt` },
-      //     // { key: `naked-shirt` },
-      //     { key: `eromanga-sensei-kimono-muramasa-little-jelly` },
-      //     { key: `eromanga-sensei-serafuku-muramasa-little-jelly` },
-      //     { key: `eromanga-sensei-sundress-muramasa-little-jelly` },
-      //   ] satisfies OutfitSetting[]
-      // ).map((o) => ({
-      //   ...o,
-      //   // backgrounds: [
-      //   //   {
-      //   //     key: `sweat-white-background-standing-for-armpit`,
-      //   //     // poses: [{ key: `standing-from-horizontal-arm-up-from-side` }],
-      //   //   },
-      //   // ] satisfies BackgroundSetting[],
-      // })),
+      outfits: (
+        [
+          ...outfitsPreset.default,
+          // { key: `babydoll` },
+          // { key: `bikini-frill` },
+          // { key: `bikini-o-ring` },
+          // { key: `bikini-tie` },
+          // { key: `bridal-lingerie` },
+          // { key: `camisole-denim-shorts` },
+          // { key: `cheerleader` },
+          // { key: `china-dress` },
+          // { key: `cow-print-bikini` },
+          // { key: `denim-bikini` },
+          // { key: `harem-outfit` },
+          // { key: `maid-bikini` },
+          // { key: `micro-bikini` },
+          // { key: `naked-towel` },
+          // { key: `playboy-bunny` },
+          // { key: `revealing-miko` },
+          // { key: `santa-bikini` },
+          // { key: `sports-bikini` },
+          // { key: `sukumizu-thighhighs` },
+          // { key: `sukumizu` },
+          // { key: `tank-top-dolphin-shorts` },
+          // { key: `sundress` },
+          // { key: `dirndl` },
+          // { key: `undressing-shirt` },
+          // { key: `naked-shirt` },
+          // { key: `eromanga-sensei-kimono-muramasa-little-jelly` },
+          // { key: `eromanga-sensei-serafuku-muramasa-little-jelly` },
+          // { key: `eromanga-sensei-sundress-muramasa-little-jelly` },
+        ] satisfies OutfitSetting[]
+      ).map((o) => ({
+        ...o,
+        // backgrounds: [
+        //   {
+        //     key: `sweat-white-background-standing-for-armpit`,
+        //     // poses: [{ key: `standing-from-horizontal-arm-up-from-side` }],
+        //   },
+        // ] satisfies BackgroundSetting[],
+      })),
     }),
   ),
 } as const satisfies Txt2ImgSetting;
@@ -135,5 +139,25 @@ export const defaultSetting = {
       batchGeneration: 100,
       txt2imgSettings: [portrait, landscape],
     })),
+    {
+      optionsBodyJson: { ...checkpointAndVaePreset.snowpony },
+      batchGeneration: 100,
+      txt2imgSettings: [
+        {
+          ...portrait,
+          txt2imgBodyJson: {
+            ...portrait.txt2imgBodyJson,
+            negative_prompt: `realistic, photorealistic`,
+          },
+        },
+        {
+          ...landscape,
+          txt2imgBodyJson: {
+            ...landscape.txt2imgBodyJson,
+            negative_prompt: `realistic, photorealistic`,
+          },
+        },
+      ],
+    },
   ],
 } as const satisfies Setting;

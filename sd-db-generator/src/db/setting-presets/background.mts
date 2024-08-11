@@ -146,6 +146,10 @@ const bar = [
   { key: `bar-standing` },
 ] as const satisfies BackgroundSetting[];
 
+const amusementPark = [
+  { key: `amusement-park-standing` },
+] as const satisfies BackgroundSetting[];
+
 export const backgroundsPreset = {
   "default": [
     { key: `colorful-background-near-clean-floor` },
@@ -311,9 +315,89 @@ export const backgroundsPreset = {
   /**
    * Character specific outfits.
    */
-  "amaburi-red-uniform-isuzu-h-madoka": [...casual, ...bedSheetSteaming],
-  "amaburi-red-uniform-isuzu-no-lora": [...casual, ...bedSheetSteaming],
-  "amaburi-red-uniform-isuzu-nochekaiser": [...casual, ...bedSheetSteaming], // TODO: `amusement park`
+  "amaburi-bikini-kobori-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...armpitsVisible,
+    {
+      key: `blue-sky-confetti-standing-for-cheering`,
+      probability: 3,
+    },
+  ],
+  "amaburi-bikini-muse-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...armpitsVisible,
+    {
+      key: `blue-sky-confetti-standing-for-cheering`,
+      probability: 3,
+    },
+  ],
+  "amaburi-bikini-salama-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...armpitsVisible,
+    {
+      key: `blue-sky-confetti-standing-for-cheering`,
+      probability: 3,
+    },
+  ],
+  "amaburi-bikini-sylphy-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...armpitsVisible,
+    {
+      key: `blue-sky-confetti-standing-for-cheering`,
+      probability: 3,
+    },
+  ],
+  "amaburi-elementario-kobori-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...casual,
+  ],
+  "amaburi-elementario-muse-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...casual,
+    ...armpitsVisible,
+  ],
+  "amaburi-elementario-salama-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...casual,
+    ...armpitsVisible,
+  ],
+  "amaburi-elementario-sylphy-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...casual,
+    ...armpitsVisible,
+  ],
+  "amaburi-pirate-isuzu-little-jelly": [...amusementPark, ...bedSheetSteaming],
+  "amaburi-red-uniform-isuzu-h-madoka": [...amusementPark, ...bedSheetSteaming],
+  "amaburi-red-uniform-isuzu-little-jelly": [
+    ...amusementPark,
+    ...bedSheetSteaming,
+  ],
+  "amaburi-red-uniform-isuzu-no-lora": [...amusementPark, ...bedSheetSteaming],
+  "amaburi-red-uniform-isuzu-nochekaiser": [
+    ...amusementPark,
+    ...bedSheetSteaming,
+  ],
+  "amaburi-red-uniform-isuzu-sleeveless-little-jelly": [
+    ...amusementPark,
+    ...bedSheetSteaming,
+    ...armpitsVisible,
+  ],
   "blend-s-school-uniform-kaho-ibukimakisiko": student,
   "blend-s-swimsuit-kaho-ibukimakisiko": [
     ...bedSheetSteaming,

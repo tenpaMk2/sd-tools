@@ -17,6 +17,7 @@ export const allBackgroundTags = [
   ...allCarpetColorTags,
   `alcohol`,
   `amusement park`,
+  `balloon`,
   `bar \\(place\\)`,
   `beach`,
   `bed sheet`,

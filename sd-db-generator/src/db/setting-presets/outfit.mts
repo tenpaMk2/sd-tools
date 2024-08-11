@@ -16,6 +16,22 @@ const monoOutfitPresetsMap = Object.fromEntries(
 
 const defaultPreset = getKeys(commonOutfitTable).map((key) => ({
   key,
+  probability: (
+    [
+      `babydoll`,
+      `harem-outfit`,
+      `maid-bikini`,
+      `playboy-bunny`,
+      `santa-bikini`,
+      `tank-top-dolphin-shorts`,
+      `undressing-shirt`,
+      `bikini-frill`,
+      `bikini-o-ring`,
+      `bikini-tie`,
+    ] as OutfitKey[]
+  ).includes(key)
+    ? 2
+    : 1,
 })) satisfies OutfitSetting[];
 
 // TODO: Separate each type of presets into files.
@@ -32,12 +48,70 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length / 1,
     },
   ],
+  "amaburi-isuzu-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `amaburi-red-uniform-isuzu-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `amaburi-red-uniform-isuzu-sleeveless-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
   "amaburi-isuzu-no-lora": defaultPreset,
   "amaburi-isuzu-nochekaiser": [
     ...defaultPreset,
     {
       key: `amaburi-red-uniform-isuzu-nochekaiser`,
       probability: defaultPreset.length / 1,
+    },
+  ],
+  "amaburi-isuzu-pirate-little-jelly": [
+    { key: `amaburi-pirate-isuzu-little-jelly` },
+  ],
+  "amaburi-kobori-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `amaburi-bikini-kobori-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `amaburi-elementario-kobori-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "amaburi-muse-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `amaburi-bikini-muse-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `amaburi-elementario-muse-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "amaburi-salama-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `amaburi-bikini-salama-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `amaburi-elementario-salama-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "amaburi-sylphy-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `amaburi-bikini-sylphy-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `amaburi-elementario-sylphy-little-jelly`,
+      probability: defaultPreset.length / 2,
     },
   ],
   "atelier-ryza-nochekaiser": [

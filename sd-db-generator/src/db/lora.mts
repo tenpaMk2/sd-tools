@@ -118,6 +118,57 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `novowels`,
   },
+  "AmagiBrilliantPark_KoboriXL": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/624336?modelVersionId=697992`,
+    ).toString(),
+    characterTriggerWordsTags: [`KoboriABP`],
+    outfitTriggerTags: [`KoboriDress`, `KoboriBikini`],
+    creator: `LittleJelly`,
+  },
+  "AmagiBrilliantPark_MuseXL": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/624632?modelVersionId=698330`,
+    ).toString(),
+    characterTriggerWordsTags: [`MuseABP`],
+    outfitTriggerTags: [`MuseDress`, `MuseBikini`],
+    creator: `LittleJelly`,
+  },
+  "AmagiBrilliantPark_SalamaXL": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/624410?modelVersionId=698075`,
+    ).toString(),
+    characterTriggerWordsTags: [`SalamaABP`],
+    outfitTriggerTags: [`SalamaDress`, `SalamaBikini`],
+    creator: `LittleJelly`,
+  },
+  "AmagiBrilliantPark_SentoIsuzuXL": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/627170?modelVersionId=701101`,
+    ).toString(),
+    characterTriggerWordsTags: [], // > A little change: This one does not have a main activation tag.
+    // This LoRA has no character trigger words. So, cannnot be used only in specific outfits.
+    outfitTriggerTags: [
+      `SentoUniform`,
+      `SentoShirt`,
+      `SentoPirate`,
+      `SentoSchool`,
+      `SentoSchool`,
+      `SentoOffice`,
+      `SentoBikini`,
+      `SentoCasual2`,
+      `SentoCasual`,
+    ],
+    creator: `LittleJelly`,
+  },
   "AmagiBrilliantPark_SentoIsuzu": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -134,6 +185,16 @@ export const loraTable = {
       `SentoBikini`,
       `SentoPirate`,
     ],
+    creator: `LittleJelly`,
+  },
+  "AmagiBrilliantPark_SylphyXL": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/624211/?modelVersionId=697851`,
+    ).toString(),
+    characterTriggerWordsTags: [`SylphyABP`],
+    outfitTriggerTags: [`SylphyDress`, `SylphyBikini`],
     creator: `LittleJelly`,
   },
   "angelina-kudou-shields-s2-ponyxl-lora-nochekaiser": {

@@ -17,6 +17,11 @@ const monoCharacterPresetsMap = Object.fromEntries(
 ) as Record<CharacterKey, CharacterSetting[]>;
 
 const baseCharactersPreset = [
+  { key: `amaburi-isuzu-little-jelly` },
+  { key: `amaburi-kobori-little-jelly` },
+  { key: `amaburi-muse-little-jelly` },
+  { key: `amaburi-salama-little-jelly` },
+  { key: `amaburi-sylphy-little-jelly` },
   { key: `blend-s-kaho-ibukimakisiko` },
   { key: `blue-archive-arona-ibukimakisiko` },
   { key: `blue-archive-yuuka-ibukimakisiko` },
@@ -120,6 +125,7 @@ const baseCharactersPreset = [
 
 const defaultPreset = [
   ...baseCharactersPreset,
+  { key: `amaburi-isuzu-pirate-little-jelly`, probability: 0.2 },
   { key: `blend-s-kaho-ibukimakisiko-double-bun`, probability: 0.2 },
   { key: `blue-archive-yuuka-gym-ibukimakisiko`, probability: 0.2 },
   { key: `machikado-mazoku-shamiko-ponytail-ibukimakisiko`, probability: 0.2 },
