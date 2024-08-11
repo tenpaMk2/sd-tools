@@ -1,4 +1,3 @@
-import { emotionPreset } from "../emotion-preset.mjs";
 import type { PoseDefine } from "../poses.mjs";
 
 type Variation = `from-above` | `from-horizontal`;
@@ -75,5 +74,13 @@ export const nearCleanFloorThePose = (variation: Variation): PoseDefine =>
     entries: entries[variation],
     visibility: visibility[variation],
     specialVisibility: specialVisibility[variation],
-    emotionProbabilitiesAtPose: emotionPreset["default"],
+    emotionProbabilitiesAtPose: {
+      "smile": 1.0,
+      "light-smile": 1.0,
+      "expressionless": 0.8,
+      "surprised": 0.8,
+      "embarrassed": 1.0,
+      "seductive-smile": 1.0,
+      "embarrassed-scowl": 0.5,
+    },
   }) as const satisfies PoseDefine;

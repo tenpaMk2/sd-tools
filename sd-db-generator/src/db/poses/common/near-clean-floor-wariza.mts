@@ -1,5 +1,4 @@
 import type { CameraAngle } from "../../backgrounds/backgrounds.mjs";
-import { emotionPreset } from "../emotion-preset.mjs";
 import type { PoseDefine } from "../poses.mjs";
 
 type Variation = CameraAngle;
@@ -76,5 +75,11 @@ export const nearCleanFloorWariza = (variation: Variation): PoseDefine =>
       aroundBody: true,
     },
     specialVisibility: specialVisibility[variation],
-    emotionProbabilitiesAtPose: emotionPreset["default"],
+    emotionProbabilitiesAtPose: {
+      "smile": 1.0,
+      "light-smile": 1.0,
+      "expressionless": 0.8,
+      "embarrassed": 1.0,
+      "seductive-smile": 1.0,
+    },
   }) as const satisfies PoseDefine;
