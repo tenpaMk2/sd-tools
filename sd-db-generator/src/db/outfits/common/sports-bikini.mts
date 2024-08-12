@@ -19,7 +19,6 @@ export const sportsBikini = (): OutfitDefine =>
         { entries: [`yellow sports bra`, `yellow buruma`] },
         { entries: [`orange sports bra`, `orange buruma`] },
         { entries: [`white sports bra`, `white buruma`] },
-        { entries: [`blue sports bra`, `blue buruma`] },
       ],
       `bare legs`,
       `shoes`,
