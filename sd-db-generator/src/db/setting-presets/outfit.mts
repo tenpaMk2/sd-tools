@@ -51,11 +51,23 @@ export const outfitsPreset: OutfitsPreset = {
   "amaburi-isuzu-little-jelly": [
     ...defaultPreset,
     {
+      key: `amaburi-bikini-isuzu-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
       key: `amaburi-red-uniform-isuzu-little-jelly`,
       probability: defaultPreset.length / 2,
     },
     {
       key: `amaburi-red-uniform-isuzu-sleeveless-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `amaburi-school-uniform-isuzu-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `amaburi-suit-isuzu-little-jelly`,
       probability: defaultPreset.length / 2,
     },
   ],
@@ -78,6 +90,17 @@ export const outfitsPreset: OutfitsPreset = {
     },
     {
       key: `amaburi-elementario-kobori-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "amaburi-latifa-little-jelly": [
+    ...defaultPreset,
+    {
+      key: `amaburi-bikini-latifa-little-jelly`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `amaburi-dress-latifa-little-jelly`,
       probability: defaultPreset.length / 2,
     },
   ],

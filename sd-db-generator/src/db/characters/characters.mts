@@ -10,6 +10,7 @@ import type { EmotionType } from "../emotions/emotions.mjs";
 import type { LoraCharacterTriggerWordsTag } from "../lora.mjs";
 import { amaburiIsuzu } from "./amaburi/isuzu.mjs";
 import { amaburiKobori } from "./amaburi/kobori.mjs";
+import { amaburiLatifa } from "./amaburi/latifa.mjs";
 import { amaburiMuse } from "./amaburi/muse.mjs";
 import { amaburiSalama } from "./amaburi/salama.mjs";
 import { amaburiSylphy } from "./amaburi/sylphy.mjs";
@@ -165,6 +166,7 @@ export const characterTable = {
   "amaburi-isuzu-nochekaiser": amaburiIsuzu(`nochekaiser`),
   "amaburi-isuzu-pirate-little-jelly": amaburiIsuzu(`pirate-little-jelly`),
   "amaburi-kobori-little-jelly": amaburiKobori(`little-jelly`),
+  "amaburi-latifa-little-jelly": amaburiLatifa(`little-jelly`),
   "amaburi-muse-little-jelly": amaburiMuse(`little-jelly`),
   "amaburi-salama-little-jelly": amaburiSalama(`little-jelly`),
   "amaburi-sylphy-little-jelly": amaburiSylphy(`little-jelly`),

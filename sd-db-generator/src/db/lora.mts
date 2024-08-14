@@ -128,6 +128,16 @@ export const loraTable = {
     outfitTriggerTags: [`KoboriDress`, `KoboriBikini`],
     creator: `LittleJelly`,
   },
+  "AmagiBrilliantPark_LatifaFleuranzaXL": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/627093?modelVersionId=701010`,
+    ).toString(),
+    characterTriggerWordsTags: [`LatifaFleuranza`],
+    outfitTriggerTags: [`LatifaDress`, `LatifaBikini`, `LatifaPajamas`],
+    creator: `LittleJelly`,
+  },
   "AmagiBrilliantPark_MuseXL": {
     recommendedWeight: 0.9,
     supportedBaseModels: [`Pony`],

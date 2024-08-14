@@ -2,9 +2,12 @@ import type { LoraEntry, TagEntry } from "../../entry.mjs";
 import type { OutfitTag } from "../../index.mjs";
 import type { LoraOutfitTriggerWordsTag } from "../lora.mjs";
 import { amaburiBikini } from "./amaburi/bikini.mjs";
+import { amaburiDress } from "./amaburi/dress.mjs";
 import { amaburiElementario } from "./amaburi/elementario.mjs";
 import { amaburiPirateIsuzu } from "./amaburi/pirate-isuzu.mjs";
 import { amaburiRedUniformIsuzu } from "./amaburi/red-uniform-isuzu.mjs";
+import { amaburiSchoolUniform } from "./amaburi/school-uniform.mjs";
+import { amaburiSuit } from "./amaburi/suit.mjs";
 import { blendSSchoolUniform } from "./blend-s/school-uniform.mjs";
 import { blendSSwimsuit } from "./blend-s/swimsuit.mjs";
 import { blendSWaitress } from "./blend-s/waitress.mjs";
@@ -249,10 +252,13 @@ export const commonOutfitTable = {
  * @example "series-name-outfit-name-character-name-lora-creator" : seriesNameOutfitNameCharacterNameLoraCreator()
  */
 export const characterOutfitTable = {
+  "amaburi-bikini-isuzu-little-jelly": amaburiBikini(`isuzu-little-jelly`),
   "amaburi-bikini-kobori-little-jelly": amaburiBikini(`kobori-little-jelly`),
+  "amaburi-bikini-latifa-little-jelly": amaburiBikini(`latifa-little-jelly`),
   "amaburi-bikini-muse-little-jelly": amaburiBikini(`muse-little-jelly`),
   "amaburi-bikini-salama-little-jelly": amaburiBikini(`salama-little-jelly`),
   "amaburi-bikini-sylphy-little-jelly": amaburiBikini(`sylphy-little-jelly`),
+  "amaburi-dress-latifa-little-jelly": amaburiDress(`latifa-little-jelly`),
   "amaburi-elementario-kobori-little-jelly":
     amaburiElementario(`kobori-little-jelly`),
   "amaburi-elementario-muse-little-jelly":
@@ -271,6 +277,9 @@ export const characterOutfitTable = {
   "amaburi-red-uniform-isuzu-sleeveless-little-jelly": amaburiRedUniformIsuzu(
     `sleeveless-little-jelly`,
   ),
+  "amaburi-school-uniform-isuzu-little-jelly":
+    amaburiSchoolUniform(`isuzu-little-jelly`),
+  "amaburi-suit-isuzu-little-jelly": amaburiSuit(`isuzu-little-jelly`),
   "blend-s-school-uniform-kaho-ibukimakisiko":
     blendSSchoolUniform(`kaho-ibukimakisiko`),
   "blend-s-swimsuit-kaho-ibukimakisiko": blendSSwimsuit(`kaho-ibukimakisiko`),

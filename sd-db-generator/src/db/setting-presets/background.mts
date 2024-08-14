@@ -315,7 +315,27 @@ export const backgroundsPreset = {
   /**
    * Character specific outfits.
    */
+  "amaburi-bikini-isuzu-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...armpitsVisible,
+    {
+      key: `blue-sky-confetti-standing-for-cheering`,
+      probability: 3,
+    },
+  ],
   "amaburi-bikini-kobori-little-jelly": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...amusementPark,
+    ...armpitsVisible,
+    {
+      key: `blue-sky-confetti-standing-for-cheering`,
+      probability: 3,
+    },
+  ],
+  "amaburi-bikini-latifa-little-jelly": [
     ...bedSheetSteaming,
     ...ocean,
     ...amusementPark,
@@ -354,6 +374,11 @@ export const backgroundsPreset = {
       key: `blue-sky-confetti-standing-for-cheering`,
       probability: 3,
     },
+  ],
+  "amaburi-dress-latifa-little-jelly": [
+    ...bedSheetSteaming,
+    ...amusementPark,
+    ...armpitsVisible,
   ],
   "amaburi-elementario-kobori-little-jelly": [
     ...bedSheetSteaming,
@@ -397,6 +422,13 @@ export const backgroundsPreset = {
     ...amusementPark,
     ...bedSheetSteaming,
     ...armpitsVisible,
+  ],
+  "amaburi-school-uniform-isuzu-little-jelly": [...student],
+  "amaburi-suit-isuzu-little-jelly": [
+    ...bedSheetSteaming,
+    ...cafe,
+    ...amusementPark,
+    ...office,
   ],
   "blend-s-school-uniform-kaho-ibukimakisiko": student,
   "blend-s-swimsuit-kaho-ibukimakisiko": [

@@ -32,7 +32,7 @@ const seriesNameEntries = {
   "little-jelly": [],
   "no-lora": [`amagi brilliant park`],
   "nochekaiser": [`amagi brilliant park`],
-  "pirate-little-jelly": [],
+  "pirate-little-jelly": [], // Do not specify series name for Littye Jelly LoRA because it mixes Isuzu into this character.
 } as const satisfies Record<Variation, CharacterDefine[`seriesNameEntries`]>;
 
 const characterNameEntries = {
@@ -40,7 +40,7 @@ const characterNameEntries = {
   "little-jelly": [],
   "no-lora": [`sento isuzu`],
   "nochekaiser": [`sento isuzu`],
-  "pirate-little-jelly": [],
+  "pirate-little-jelly": [], // Do not specify series name for Littye Jelly LoRA because it mixes Isuzu into this character.
 } as const satisfies Record<Variation, CharacterDefine[`characterNameEntries`]>;
 
 const loraCharacterTriggerWordEntries = {

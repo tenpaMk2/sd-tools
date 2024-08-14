@@ -19,6 +19,7 @@ const monoCharacterPresetsMap = Object.fromEntries(
 const baseCharactersPreset = [
   { key: `amaburi-isuzu-little-jelly` },
   { key: `amaburi-kobori-little-jelly` },
+  { key: `amaburi-latifa-little-jelly` },
   { key: `amaburi-muse-little-jelly` },
   { key: `amaburi-salama-little-jelly` },
   { key: `amaburi-sylphy-little-jelly` },
