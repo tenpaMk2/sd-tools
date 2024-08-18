@@ -95,10 +95,15 @@ import { newGameOutfitHifumi } from "./new-game/shirt-hifumi.mjs";
 import { newGameOutfitAoba } from "./new-game/suit-aoba.mjs";
 import { ochifuruIdol } from "./ochifuru/idol.mjs";
 import { ochifuruSchoolUniform } from "./ochifuru/school-uniform.mjs";
+import { prismaIllyaBeast } from "./prisma-illya/beast.mjs";
+import { prismaIllyaCamisole } from "./prisma-illya/camisole.mjs";
 import { prismaIllyaBeastChloe } from "./prisma-illya/chloe-beast.mjs";
 import { prismaIllyaBeastIllya } from "./prisma-illya/illya-beast.mjs";
 import { prismaIllyaMagicalGirlIllya } from "./prisma-illya/magical-girl-illya.mjs";
+import { prismaIllyaMagicalGirl } from "./prisma-illya/magical-girl.mjs";
+import { prismaIllyaMaid } from "./prisma-illya/maid.mjs";
 import { prismaIllyaBeastMiyu } from "./prisma-illya/miyu-beast.mjs";
+import { prismaIllyaSchoolUniform } from "./prisma-illya/school-uniform.mjs";
 import { pso2BikiniGene } from "./pso2/bikini-gene.mjs";
 import { rokudenashiBikini } from "./rokudenashi/bikini.mjs";
 import { rokudenashiSchoolUniform } from "./rokudenashi/school-uniform.mjs";
@@ -458,12 +463,29 @@ export const characterOutfitTable = {
   "ochifuru-school-uniform-tone-enter": ochifuruSchoolUniform(`tone-enter`),
   "prisma-illya-beast-chloe-am7coffeelove":
     prismaIllyaBeastChloe(`am7coffeelove`),
+  "prisma-illya-beast-chloe-h-madoka": prismaIllyaBeast(`chloe-h-madoka`),
   "prisma-illya-beast-illya-am7coffeelove":
     prismaIllyaBeastIllya(`am7coffeelove`),
+  "prisma-illya-beast-illya-h-madoka": prismaIllyaBeast(`illya-h-madoka`),
   "prisma-illya-beast-miyu-am7coffeelove":
     prismaIllyaBeastMiyu(`am7coffeelove`),
+  "prisma-illya-beast-miyu-h-madoka": prismaIllyaBeast(`miyu-h-madoka`),
+  "prisma-illya-camisole-chloe-h-madoka": prismaIllyaCamisole(`chloe-h-madoka`),
+  "prisma-illya-magical-girl-chloe-h-madoka":
+    prismaIllyaMagicalGirl(`chloe-h-madoka`),
   "prisma-illya-magical-girl-illya-flujoru":
     prismaIllyaMagicalGirlIllya(`flujoru`),
+  "prisma-illya-magical-girl-illya-h-madoka":
+    prismaIllyaMagicalGirl(`illya-h-madoka`),
+  "prisma-illya-magical-girl-miyu-h-madoka":
+    prismaIllyaMagicalGirl(`miyu-h-madoka`),
+  "prisma-illya-maid-miyu-h-madoka": prismaIllyaMaid(`miyu-h-madoka`),
+  "prisma-illya-school-uniform-chloe-h-madoka":
+    prismaIllyaSchoolUniform(`chloe-h-madoka`),
+  "prisma-illya-school-uniform-illya-h-madoka":
+    prismaIllyaSchoolUniform(`illya-h-madoka`),
+  "prisma-illya-school-uniform-miyu-h-madoka":
+    prismaIllyaSchoolUniform(`miyu-h-madoka`),
   "pso2-bikini-gene-overnerd": pso2BikiniGene(`overnerd`),
   "rokudenashi-bikini-rumia-little-jelly":
     rokudenashiBikini(`rumia-little-jelly`),

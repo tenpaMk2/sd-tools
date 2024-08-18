@@ -773,17 +773,27 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "prisma-illya-chloe-h-madoka": [
+    ...defaultPreset,
+    {
+      key: `prisma-illya-camisole-chloe-h-madoka`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `prisma-illya-school-uniform-chloe-h-madoka`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "prisma-illya-chloe-half-updo-h-madoka": [
+    { key: `prisma-illya-magical-girl-chloe-h-madoka` },
+  ],
+  "prisma-illya-chloe-ponytail-h-madoka": [
+    { key: `prisma-illya-beast-chloe-h-madoka` },
+  ],
   "prisma-illya-illya-beast-am7coffeelove": [
     ...defaultPreset,
     {
       key: `prisma-illya-beast-illya-am7coffeelove`,
-      probability: defaultPreset.length,
-    },
-  ],
-  "prisma-illya-miyu-beast-am7coffeelove": [
-    ...defaultPreset,
-    {
-      key: `prisma-illya-beast-miyu-am7coffeelove`,
       probability: defaultPreset.length,
     },
   ],
@@ -793,6 +803,43 @@ export const outfitsPreset: OutfitsPreset = {
       key: `prisma-illya-magical-girl-illya-flujoru`,
       probability: defaultPreset.length,
     },
+  ],
+  "prisma-illya-illya-h-madoka": [
+    ...defaultPreset,
+    {
+      key: `prisma-illya-beast-illya-h-madoka`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `prisma-illya-school-uniform-illya-h-madoka`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "prisma-illya-illya-two-side-up-h-madoka": [
+    { key: `prisma-illya-magical-girl-illya-h-madoka` },
+  ],
+  "prisma-illya-miyu-beast-am7coffeelove": [
+    ...defaultPreset,
+    {
+      key: `prisma-illya-beast-miyu-am7coffeelove`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "prisma-illya-miyu-half-updo-h-madoka": [
+    ...defaultPreset,
+    {
+      key: `prisma-illya-school-uniform-miyu-h-madoka`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "prisma-illya-miyu-ponytail-h-madoka": [
+    { key: `prisma-illya-maid-miyu-h-madoka` },
+  ],
+  "prisma-illya-miyu-twintails-clip-h-madoka": [
+    { key: `prisma-illya-beast-miyu-h-madoka` },
+  ],
+  "prisma-illya-miyu-twintails-x-h-madoka": [
+    { key: `prisma-illya-magical-girl-miyu-h-madoka` },
   ],
   "pso2-gene-bikini-overnerd": [
     ...defaultPreset,

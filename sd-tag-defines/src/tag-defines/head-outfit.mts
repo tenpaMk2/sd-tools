@@ -64,6 +64,8 @@ export const allHeadOutfitTags = [
   ...allHatColorTags,
   ...getKeys(allDistinguishableHeadOutfitTags),
   `anchor hair ornament`,
+  `animal ear fluff`,
+  `animal ears`,
   `bat hair ornament`,
   `beret`,
   `bone hair ornament`,

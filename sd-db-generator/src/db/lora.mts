@@ -357,6 +357,16 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `nochekaiser`,
   },
+  "chloe_von_einzbern_ponyxl_v1": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/628740?modelVersionId=702928`,
+    ).toString(),
+    characterTriggerWordsTags: [`aachloe`],
+    outfitTriggerTags: [],
+    creator: `h_madoka`,
+  },
   "clobeasts_pony": {
     recommendedWeight: 1,
     supportedBaseModels: [`Pony`],
@@ -784,6 +794,16 @@ export const loraTable = {
     outfitTriggerTags: [`zzillaaa`],
     creator: `am7coffeelove`,
   },
+  "illyasviel_von_einzbern_ponyxl_v1": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/599194?modelVersionId=669613`,
+    ).toString(),
+    characterTriggerWordsTags: [`aaillya`],
+    outfitTriggerTags: [],
+    creator: `h_madoka`,
+  },
   "iroha-madomagi-01": {
     recommendedWeight: 0.8,
     supportedBaseModels: [`SD1.5`],
@@ -1205,6 +1225,16 @@ export const loraTable = {
     characterTriggerWordsTags: [`aimiyafuji`],
     outfitTriggerTags: [],
     creator: `Gwess`,
+  },
+  "miyu_edelfelt_ponyxl_v1": {
+    recommendedWeight: 0.9,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/628733?modelVersionId=702919`,
+    ).toString(),
+    characterTriggerWordsTags: [`aamiyu`],
+    outfitTriggerTags: [],
+    creator: `h_madoka`,
   },
   "miyuki-mahouka": {
     recommendedWeight: 0.8,

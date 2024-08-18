@@ -299,11 +299,25 @@ export const characterTable = {
   "ochifuru-tone-enter": ochifuruTone(`enter`),
   "prisma-illya-chloe-beast-am7coffeelove":
     prismaIllyaChloe(`beast-am7coffeelove`),
+  "prisma-illya-chloe-h-madoka": prismaIllyaChloe(`h-madoka`),
+  "prisma-illya-chloe-half-updo-h-madoka":
+    prismaIllyaChloe(`half-updo-h-madoka`),
+  "prisma-illya-chloe-ponytail-h-madoka": prismaIllyaChloe(`ponytail-h-madoka`),
   "prisma-illya-illya-beast-am7coffeelove":
     prismaIllyaIllya(`beast-am7coffeelove`),
   "prisma-illya-illya-flujoru": prismaIllyaIllya(`flujoru`),
+  "prisma-illya-illya-h-madoka": prismaIllyaIllya(`h-madoka`),
+  "prisma-illya-illya-two-side-up-h-madoka":
+    prismaIllyaIllya(`two-side-up-h-madoka`),
   "prisma-illya-miyu-beast-am7coffeelove":
     prismaIllyaMiyu(`beast-am7coffeelove`),
+  "prisma-illya-miyu-half-updo-h-madoka": prismaIllyaMiyu(`half-updo-h-madoka`),
+  "prisma-illya-miyu-ponytail-h-madoka": prismaIllyaMiyu(`ponytail-h-madoka`),
+  "prisma-illya-miyu-twintails-clip-h-madoka": prismaIllyaMiyu(
+    `twintails-clip-h-madoka`,
+  ),
+  "prisma-illya-miyu-twintails-x-h-madoka":
+    prismaIllyaMiyu(`twintails-x-h-madoka`),
   "pso2-gene-bikini-overnerd": pso2Gene(`bikini-overnerd`),
   "re-zero-emilia-eternal2kpp": reZeroEmilia(`eternal2kpp`),
   "re-zero-emilia-no-lora": reZeroEmilia(`no-lora`),
