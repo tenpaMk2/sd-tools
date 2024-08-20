@@ -23,6 +23,10 @@ export const checkpointAndVaePreset = {
     sd_model_checkpoint: `calicomixFlatani_v10.safetensors`,
     sd_vae: `None`,
   },
+  catdash: {
+    sd_model_checkpoint: `catdash_v10.safetensors`,
+    sd_vae: `None`,
+  },
   seventhAnime: {
     sd_model_checkpoint: `7thAnimeXLPonyA_v10.safetensors`,
     sd_vae: `None`,
@@ -101,6 +105,10 @@ export const checkpointAndVaePreset = {
   },
   hentaiCinematicPony2: {
     sd_model_checkpoint: `hentaiCinematicPony_v2.safetensors`,
+    sd_vae: `None`,
+  },
+  isolice: {
+    sd_model_checkpoint: `isolicePonyXL_isolice.safetensors`,
     sd_vae: `None`,
   },
 } as const satisfies Record<string, CheckpointAndVaePresetDefine>;

@@ -65,6 +65,12 @@ export const checkpointTable = {
       `https://civitai.com/models/263765/calicomix-flatani`,
     ).toString(),
   },
+  "catdash_v10.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/658613?modelVersionId=736922`,
+    ).toString(),
+  },
   "chacolebaramixxl_v21.safetensors": {
     baseModel: `Pony`,
     url: new URL(
@@ -101,6 +107,12 @@ export const checkpointTable = {
     baseModel: `Pony`,
     url: new URL(
       `https://civitai.com/models/492705/hentaicinematicpony?modelVersionId=637173`,
+    ).toString(),
+  },
+  "isolicePonyXL_isolice.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/664573?modelVersionId=743719`,
     ).toString(),
   },
   "malaAnimeMixNSFW_v60.safetensors": {
