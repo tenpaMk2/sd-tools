@@ -151,6 +151,12 @@ export const checkpointTable = {
       `https://civitai.com/models/522596?modelVersionId=580625`,
     ).toString(),
   },
+  "sweetMix_xlPonyV11.safetensors": {
+    baseModel: `Pony`,
+    url: new URL(
+      `https://civitai.com/models/18927?modelVersionId=698745`,
+    ).toString(),
+  },
   "tPonynai3_v41OptimizedFromV4.safetensors": {
     baseModel: `Pony`,
     url: new URL(

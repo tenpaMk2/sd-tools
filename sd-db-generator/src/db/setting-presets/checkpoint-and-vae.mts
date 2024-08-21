@@ -111,6 +111,10 @@ export const checkpointAndVaePreset = {
     sd_model_checkpoint: `isolicePonyXL_isolice.safetensors`,
     sd_vae: `None`,
   },
+  // sweetmix: {
+  //   sd_model_checkpoint: `sweetMix_xlPonyV11.safetensors`,
+  //   sd_vae: `flatpiecexlVAE_baseonA1579.safetensors`,
+  // },
 } as const satisfies Record<string, CheckpointAndVaePresetDefine>;
 
 export type CheckpointAndVaePreset = typeof checkpointAndVaePreset;

@@ -7,6 +7,7 @@ export type VaeDefine = Readonly<{}>;
 export const vaeTable = {
   "None": {},
   "blessed2.vae.safetensors": {},
+  "flatpiecexlVAE_baseonA1579.safetensors": {},
 } as const satisfies Record<string, VaeDefine>;
 
 export type VaeTable = typeof vaeTable;
