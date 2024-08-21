@@ -106,6 +106,8 @@ const baseCharactersPreset = [
   { key: `sasuoni-honoka-nochekaiser` },
   { key: `sasuoni-mizuki-nochekaiser` },
   { key: `seirei-celia-ibukimakisiko` },
+  { key: `sematsuka-regina-judge-naegi` },
+  { key: `sematsuka-riselia-judge-naegi` },
   { key: `slow-loop-hiyori-ibukimakisiko` },
   { key: `slow-loop-koharu-ibukimakisiko` },
   { key: `slow-loop-koi-ibukimakisiko` },

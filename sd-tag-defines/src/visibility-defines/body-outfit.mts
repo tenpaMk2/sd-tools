@@ -1230,6 +1230,7 @@ export const allBodyOutfitVisibilities = {
   "elbow gloves": preset["elbow gloves"],
   "elbow pads": preset["elbow gloves"],
   "epaulettes": preset.shoulder,
+  "excalibur academy uniform": preset.all,
   "fairy wings": preset.wings,
   "fingerless gloves": preset["wrist cuffs"],
   "first high school uniform": preset.dress,

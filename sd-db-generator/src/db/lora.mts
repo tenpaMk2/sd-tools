@@ -884,6 +884,26 @@ export const loraTable = {
     outfitTriggerTags: [],
     creator: `ZedoTasco`,
   },
+  "JN_Regina_Mercedes": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/647574/?modelVersionId=724472`,
+    ).toString(),
+    characterTriggerWordsTags: [`Mercedes`],
+    outfitTriggerTags: [],
+    creator: `JudgeNaegi`,
+  },
+  "JN_Riselia_Ray_Crystalia": {
+    recommendedWeight: 0.8,
+    supportedBaseModels: [`Pony`],
+    url: new URL(
+      `https://civitai.com/models/646591/?modelVersionId=723352`,
+    ).toString(),
+    characterTriggerWordsTags: [`Crystalia`],
+    outfitTriggerTags: [],
+    creator: `JudgeNaegi`,
+  },
   "Kaguya_Shinomiya": {
     recommendedWeight: 0.7,
     supportedBaseModels: [`Pony`],

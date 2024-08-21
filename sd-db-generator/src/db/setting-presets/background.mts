@@ -724,6 +724,14 @@ export const backgroundsPreset = {
   "ryuuou-outfit-yashajin-ai-ibukimakisiko": [...bedroom, ...tatami],
   "sasuoni-first-high-school-uniform-nochekaiser": nearFeatureStudent,
   "seirei-outfit-celia-ibukimakisiko": [...isekai, ...garden], // TODO: Reconsider
+  "sematsuka-school-uniform-regina-judge-naegi": [
+    ...nearFeatureStudent,
+    ...garden,
+  ],
+  "sematsuka-school-uniform-riselia-judge-naegi": [
+    ...nearFeatureStudent,
+    ...garden,
+  ],
   "slow-loop-school-uniform-hiyori-ibukimakisiko": student,
   "slow-loop-school-uniform-koharu-ibukimakisiko": student,
   "slow-loop-school-uniform-koi-ibukimakisiko": student,

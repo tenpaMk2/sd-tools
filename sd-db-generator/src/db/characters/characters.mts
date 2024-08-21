@@ -105,6 +105,8 @@ import { sasuoniMiyuki } from "./sasuoni/miyuki.mjs";
 import { sasuoniMizuki } from "./sasuoni/mizuki.mjs";
 import { sasuoniShizuku } from "./sasuoni/shizuku.mjs";
 import { seireiCelia } from "./seirei/celia.mjs";
+import { sematsukaRegina } from "./sematsuka/regina.mjs";
+import { sematsukaRiselia } from "./sematsuka/riselia.mjs";
 import { slowLoopHiyori } from "./slow-loop/hiyori.mjs";
 import { slowLoopKoharu } from "./slow-loop/koharu.mjs";
 import { slowLoopKoi } from "./slow-loop/koi.mjs";
@@ -335,6 +337,8 @@ export const characterTable = {
   "sasuoni-mizuki-nochekaiser": sasuoniMizuki(`nochekaiser`),
   "sasuoni-shizuku-nochekaiser": sasuoniShizuku(`nochekaiser`),
   "seirei-celia-ibukimakisiko": seireiCelia(`ibukimakisiko`),
+  "sematsuka-regina-judge-naegi": sematsukaRegina(`judge-naegi`),
+  "sematsuka-riselia-judge-naegi": sematsukaRiselia(`judge-naegi`),
   "slow-loop-hiyori-ibukimakisiko": slowLoopHiyori(`ibukimakisiko`),
   "slow-loop-koharu-ibukimakisiko": slowLoopKoharu(`ibukimakisiko`),
   "slow-loop-koi-ibukimakisiko": slowLoopKoi(`ibukimakisiko`),

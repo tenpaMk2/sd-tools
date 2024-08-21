@@ -111,6 +111,7 @@ import { ryuuouOutfitHinatsuruAi } from "./ryuuou/outfit-hinatsuru-ai.mjs";
 import { ryuuouOutfitYashajinAi } from "./ryuuou/outfit-yashajin-ai.mjs";
 import { sasuoniFirstHighSchoolUniform } from "./sasuoni/first-high-school-uniform.mjs";
 import { seireiOutfitCelia } from "./seirei/outfit-celia.mjs";
+import { sematsukaSchoolUniform } from "./sematsuka/school-uniform.mjs";
 import { slowLoopSchoolUniform } from "./slow-loop/school-uniform.mjs";
 import { spyFamilyRedSweater } from "./spy-family/red-sweater.mjs";
 import { spyFamilyThornPrincess } from "./spy-family/thorn-princess.mjs";
@@ -500,6 +501,10 @@ export const characterOutfitTable = {
   "sasuoni-first-high-school-uniform-nochekaiser":
     sasuoniFirstHighSchoolUniform(`nochekaiser`),
   "seirei-outfit-celia-ibukimakisiko": seireiOutfitCelia(`ibukimakisiko`),
+  "sematsuka-school-uniform-regina-judge-naegi":
+    sematsukaSchoolUniform(`regina-judge-naegi`),
+  "sematsuka-school-uniform-riselia-judge-naegi":
+    sematsukaSchoolUniform(`riselia-judge-naegi`),
   "slow-loop-school-uniform-hiyori-ibukimakisiko":
     slowLoopSchoolUniform(`hiyori-ibukimakisiko`),
   "slow-loop-school-uniform-koharu-ibukimakisiko":

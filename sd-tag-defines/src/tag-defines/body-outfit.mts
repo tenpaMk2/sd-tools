@@ -1021,6 +1021,7 @@ export const allBodyOutfitTags = [
   `elbow gloves`,
   `elbow pads`,
   `epaulettes`,
+  `excalibur academy uniform`,
   `fairy wings`,
   `fingerless gloves`,
   `first high school uniform`,

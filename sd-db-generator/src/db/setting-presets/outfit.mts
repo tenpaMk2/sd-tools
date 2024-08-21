@@ -932,6 +932,20 @@ export const outfitsPreset: OutfitsPreset = {
       probability: defaultPreset.length,
     },
   ],
+  "sematsuka-regina-judge-naegi": [
+    ...defaultPreset,
+    {
+      key: `sematsuka-school-uniform-regina-judge-naegi`,
+      probability: defaultPreset.length,
+    },
+  ],
+  "sematsuka-riselia-judge-naegi": [
+    ...defaultPreset,
+    {
+      key: `sematsuka-school-uniform-riselia-judge-naegi`,
+      probability: defaultPreset.length,
+    },
+  ],
   "slow-loop-hiyori-ibukimakisiko": [
     ...defaultPreset,
     {
