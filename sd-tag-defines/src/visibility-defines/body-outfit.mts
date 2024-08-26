@@ -252,6 +252,21 @@ const allAscotColorVisibilities = {
   "yellow ascot": preset.bowtie,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
+const allBandeauColorVisibilities = {
+  "aqua bandeau": preset.bra,
+  "black bandeau": preset.bra,
+  "blue bandeau": preset.bra,
+  "brown bandeau": preset.bra,
+  "green bandeau": preset.bra,
+  "grey bandeau": preset.bra,
+  "orange bandeau": preset.bra,
+  "pink bandeau": preset.bra,
+  "purple bandeau": preset.bra,
+  "red bandeau": preset.bra,
+  "white bandeau": preset.bra,
+  "yellow bandeau": preset.bra,
+} as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
+
 const allBeltColorVisibilities = {
   "black belt": preset.skirt,
   "blue belt": preset.skirt,
@@ -1058,12 +1073,14 @@ const allDistinguishableOutfitVisibilities = {
   "white long tail -> white tail": preset["long tail"],
   "yellow long tail -> yellow tail": preset["long tail"],
   "striped shirt -> striped": preset.shirt,
+  "red body ribbon -> red ribbon": preset.all,
 } as const satisfies Partial<Record<BodyOutfitTag, Visibility>>;
 
 export const allBodyOutfitVisibilities = {
   ...allArmbandColorVisibilities,
   ...allArmorColorVisibilities,
   ...allAscotColorVisibilities,
+  ...allBandeauColorVisibilities,
   ...allBeltColorVisibilities,
   ...allBikiniColorVisibilities,
   ...allBodysuitColorVisibilities,
@@ -1177,6 +1194,8 @@ export const allBodyOutfitVisibilities = {
   "cardigan around waist": preset["high-waist skirt"],
   "casual": preset.dress,
   "cat cutout": preset.bowtie,
+  "cat ear panties": preset.panties,
+  "cat lingerie": preset.dress,
   "cat tail": preset["long tail"],
   "center frills": preset["center frills"],
   "center opening": preset["center frills"],
@@ -1235,6 +1254,7 @@ export const allBodyOutfitVisibilities = {
   "fingerless gloves": preset["wrist cuffs"],
   "first high school uniform": preset.dress,
   "flats": preset.foot,
+  "floral print bikini": preset.dress,
   "floral print": preset.dress,
   "formal": preset.all,
   "fox tail": preset["long tail"],
@@ -1329,6 +1349,7 @@ export const allBodyOutfitVisibilities = {
   "multicolored clothes": preset.all,
   "multicolored dress": preset.dress,
   "multicolored skirt": preset.skirt,
+  "naked ribbon": preset.all,
   "naked shirt": preset.shirt,
   "naked towel": preset.dress,
   "navel cutout": preset.navel,
@@ -1442,6 +1463,7 @@ export const allBodyOutfitVisibilities = {
   "side cutout": preset["side stomach"],
   "side slit": preset["side hip"],
   "side-tie bikini bottom": preset["side hip"],
+  "side-tie panties": preset["side hip"],
   "single glove": preset["wrist cuffs"],
   "single wrist cuff": preset["wrist cuffs"],
   "skin tight": preset.dress,
@@ -1505,6 +1527,7 @@ export const allBodyOutfitVisibilities = {
   "underwear": preset.dress,
   "uneven gloves": preset["elbow gloves"],
   "uniform": preset.all,
+  "valentine": preset.all,
   "vest": preset.shirt,
   "volleyball uniform": preset.all,
   "waist apron": preset.skirt,
@@ -1516,4 +1539,6 @@ export const allBodyOutfitVisibilities = {
   "white towel": preset.dress,
   "wide sleeves": preset.shoulder,
   "wrist cuffs": preset["wrist cuffs"],
+  "gyaru": preset.all,
+  "wrist scrunchie": preset["wrist cuffs"],
 } as const satisfies Record<BodyOutfitTag, Visibility>;

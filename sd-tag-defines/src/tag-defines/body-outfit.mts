@@ -45,6 +45,21 @@ const allAscotColorTags = [
   `yellow ascot`,
 ] as const satisfies string[];
 
+const allBandeauColorTags = [
+  `aqua bandeau`,
+  `black bandeau`,
+  `blue bandeau`,
+  `brown bandeau`,
+  `green bandeau`,
+  `grey bandeau`,
+  `orange bandeau`,
+  `pink bandeau`,
+  `purple bandeau`,
+  `red bandeau`,
+  `white bandeau`,
+  `yellow bandeau`,
+] as const satisfies string[];
+
 const allBeltColorTags = [
   `black belt`,
   `blue belt`,
@@ -850,12 +865,14 @@ export const allDistinguishableOutfitTags = {
   "white long tail -> white tail": `white tail`,
   "yellow long tail -> yellow tail": `yellow tail`,
   "striped shirt -> striped": `striped`,
+  "red body ribbon -> red ribbon": `red ribbon`,
 } as const satisfies Record<string, string>;
 
 export const allBodyOutfitTags = [
   ...allArmbandColorTags,
   ...allArmorColorTags,
   ...allAscotColorTags,
+  ...allBandeauColorTags,
   ...allBeltColorTags,
   ...allBikiniColorTags,
   ...allBodysuitColorTags,
@@ -968,6 +985,8 @@ export const allBodyOutfitTags = [
   `cardigan around waist`,
   `casual`,
   `cat cutout`,
+  `cat ear panties`,
+  `cat lingerie`,
   `cat tail`,
   `center frills`,
   `center opening`,
@@ -1026,6 +1045,7 @@ export const allBodyOutfitTags = [
   `fingerless gloves`,
   `first high school uniform`,
   `flats`,
+  `floral print bikini`,
   `floral print`,
   `formal`,
   `fox tail`,
@@ -1120,6 +1140,7 @@ export const allBodyOutfitTags = [
   `multicolored clothes`,
   `multicolored dress`,
   `multicolored skirt`,
+  `naked ribbon`,
   `naked shirt`,
   `naked towel`,
   `navel cutout`,
@@ -1233,6 +1254,7 @@ export const allBodyOutfitTags = [
   `side cutout`,
   `side slit`,
   `side-tie bikini bottom`,
+  `side-tie panties`,
   `single glove`,
   `single wrist cuff`,
   `skin tight`,
@@ -1296,6 +1318,7 @@ export const allBodyOutfitTags = [
   `underwear`,
   `uneven gloves`,
   `uniform`,
+  `valentine`,
   `vest`,
   `volleyball uniform`,
   `waist apron`,
@@ -1307,5 +1330,7 @@ export const allBodyOutfitTags = [
   `white towel`,
   `wide sleeves`,
   `wrist cuffs`,
+  `gyaru`,
+  `wrist scrunchie`,
 ] as const satisfies readonly string[];
 export type BodyOutfitTag = (typeof allBodyOutfitTags)[number];

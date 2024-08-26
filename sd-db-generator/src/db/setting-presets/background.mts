@@ -161,6 +161,7 @@ export const backgroundsPreset = {
    * Common outfits.
    */
   "babydoll": [...defaultPreset, ...armpitsVisible],
+  "bandeau-o-ring-bikini": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
   "bikini-frill": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
   "bikini-o-ring": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
   "bikini-tie": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
@@ -172,6 +173,7 @@ export const backgroundsPreset = {
   ],
   "camisole-denim-shorts": [...casual, ...armpitsVisible],
   "casual-miniskirt": [...casual, ...bedSheetSteaming],
+  "cat-lingerie": [...bedroom, ...bedSheetSteaming, ...armpitsVisible],
   "cheerleader": [
     {
       key: `blue-sky-confetti-standing-for-cheering`,
@@ -185,7 +187,19 @@ export const backgroundsPreset = {
   "cow-print-bikini": [...grass, ...armpitsVisible],
   "denim-bikini": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
   "dirndl": [...bar],
+  "floral-print-bikini-frill": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...armpitsVisible,
+  ],
+  "floral-print-bikini-o-ring": [
+    ...bedSheetSteaming,
+    ...ocean,
+    ...armpitsVisible,
+  ],
+  "floral-print-bikini-tie": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
   "formal-suit": student,
+  "gyaru": [...student],
   "gym-uniform": sports,
   "harem-outfit": [
     ...defaultPreset,
@@ -197,6 +211,7 @@ export const backgroundsPreset = {
   ],
   "maid-bikini": [...cafe, ...armpitsVisible],
   "micro-bikini": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
+  "naked-ribbon": [...defaultPreset, ...armpitsVisible],
   "naked-shirt": [...defaultPreset, ...bedroom],
   "naked-towel": [
     ...defaultPreset,
@@ -266,33 +281,6 @@ export const backgroundsPreset = {
     },
     ...armpitsVisible,
   ],
-  "tank-top-dolphin-shorts": [...bedroom, ...armpitsVisible],
-  "tennis-uniform": [
-    ...defaultPreset,
-    {
-      key: `tennis-court-sitting-on`,
-      probability: defaultPreset.length,
-    },
-    {
-      key: `tennis-court-near-clean-floor`,
-      probability: defaultPreset.length,
-    },
-    {
-      key: `tennis-court-standing`,
-      probability: defaultPreset.length,
-    },
-  ],
-  "volleyball-uniform": [
-    ...defaultPreset,
-    {
-      key: `gym-volleyball-near-clean-floor`,
-      probability: defaultPreset.length / 2,
-    },
-    {
-      key: `gym-volleyball-standing`,
-      probability: defaultPreset.length / 2,
-    },
-  ],
   "sundress": [
     // TODO: sun-flower
     ...defaultPreset,
@@ -310,7 +298,35 @@ export const backgroundsPreset = {
     },
     ...armpitsVisible,
   ],
+  "tank-top-dolphin-shorts": [...bedroom, ...armpitsVisible],
+  "tennis-uniform": [
+    ...defaultPreset,
+    {
+      key: `tennis-court-sitting-on`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `tennis-court-near-clean-floor`,
+      probability: defaultPreset.length,
+    },
+    {
+      key: `tennis-court-standing`,
+      probability: defaultPreset.length,
+    },
+  ],
   "undressing-shirt": [{ key: `bedroom-for-undressing` }],
+  "volleyball-uniform": [
+    ...defaultPreset,
+    {
+      key: `gym-volleyball-near-clean-floor`,
+      probability: defaultPreset.length / 2,
+    },
+    {
+      key: `gym-volleyball-standing`,
+      probability: defaultPreset.length / 2,
+    },
+  ],
+  "white-bikini": [...bedSheetSteaming, ...ocean, ...armpitsVisible],
 
   /**
    * Character specific outfits.

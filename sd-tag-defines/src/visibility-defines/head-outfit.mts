@@ -94,6 +94,7 @@ export const allHeadOutfitVisibilities = {
   "bridal veil": preset.hair,
   "butterfly hair ornament": preset.hair,
   "cabbie hat": preset.hair,
+  "cat ears": preset.hair,
   "cat hair ornament": preset.hair,
   "character hair ornament": preset.hair,
   "clover hair ornament": preset.hair,

@@ -17,20 +17,25 @@ import { boufuriOutfitMaple } from "./boufuri/outfit-maple.mjs";
 import { boufuriOutfitSally } from "./boufuri/outfit-sally.mjs";
 import { boufuriSchoolUniform } from "./boufuri/school-uniform.mjs";
 import { babydoll } from "./common/babydoll.mjs";
+import { bandeauORingBikini } from "./common/bandeau-o-ring-bikini.mjs";
 import { bikini } from "./common/bikini.mjs";
 import { bridalLingerie } from "./common/bridal-lingerie.mjs";
 import { camisoleDenimShorts } from "./common/camisole-denim-shorts.mjs";
 import { casualMiniskirt } from "./common/casual-miniskirt.mjs";
+import { catLingerie } from "./common/cat-lingerie.mjs";
 import { cheerleader } from "./common/cheerleader.mjs";
 import { chinaDress } from "./common/china-dress.mjs";
 import { cowPrintBikini } from "./common/cow-print-bikini.mjs";
 import { denimBikini } from "./common/denim-bikini.mjs";
 import { dirndl } from "./common/dirndl.mjs";
+import { floralPrintBikini } from "./common/floral-print-bikini.mjs";
 import { formalSuit } from "./common/formal-suit.mjs";
+import { gyaru } from "./common/gyaru.mjs";
 import { gymUniform } from "./common/gym-uniform.mjs";
 import { haremOutfit } from "./common/harem-outfit.mjs";
 import { maidBikini } from "./common/maid-bikini.mjs";
 import { microBikini } from "./common/micro-bikini.mjs";
+import { nakedRibbon } from "./common/naked-ribbon.mjs";
 import { nakedShirt } from "./common/naked-shirt.mjs";
 import { nakedTowel } from "./common/naked-towel.mjs";
 import { nun } from "./common/nun.mjs";
@@ -48,6 +53,7 @@ import { tankTopDolphinShorts } from "./common/tank-top-dolphin-shorts.mjs";
 import { tennisUniform } from "./common/tennis-uniform.mjs";
 import { undressingShirt } from "./common/undressing-shirt.mjs";
 import { volleyballUniform } from "./common/volleyball-uniform.mjs";
+import { whiteBikini } from "./common/white-bikini.mjs";
 import { danmachiWhiteDressHestia } from "./danmachi/white-dress-hestia.mjs";
 import { eromangaSenseiBikini } from "./eromanga-sensei/bikini.mjs";
 import { eromangaSenseiBookseller } from "./eromanga-sensei/bookseller.mjs";
@@ -218,16 +224,22 @@ export const commonOutfitTable = {
   "bridal-lingerie": bridalLingerie(),
   "camisole-denim-shorts": camisoleDenimShorts(),
   "casual-miniskirt": casualMiniskirt(),
+  "cat-lingerie": catLingerie(),
   "cheerleader": cheerleader(),
   "china-dress": chinaDress(),
   "cow-print-bikini": cowPrintBikini(),
   "denim-bikini": denimBikini(),
   "dirndl": dirndl(),
+  "floral-print-bikini-frill": floralPrintBikini(`frill`),
+  "floral-print-bikini-o-ring": floralPrintBikini(`o-ring`),
+  "floral-print-bikini-tie": floralPrintBikini(`tie`),
   "formal-suit": formalSuit(`common`),
+  "gyaru": gyaru(),
   "gym-uniform": gymUniform(),
   "harem-outfit": haremOutfit(),
   "maid-bikini": maidBikini(),
   "micro-bikini": microBikini(),
+  "naked-ribbon": nakedRibbon(),
   "naked-shirt": nakedShirt(),
   "naked-towel": nakedTowel(),
   "nun": nun(),
@@ -245,12 +257,15 @@ export const commonOutfitTable = {
   "tennis-uniform": tennisUniform(),
   "undressing-shirt": undressingShirt(),
   "volleyball-uniform": volleyballUniform(),
+  "white-bikini": whiteBikini(`frill`),
+  "bandeau-o-ring-bikini": bandeauORingBikini(),
   // TODO: competition swimsuit
   // TODO: track uniform, track and field
   // TODO: gun man
   // TODO: naked apron
   // TODO: naked shirt, dress shirt
-  // TODO: `valentine`
+  // TODO: sling shot bikini
+  // TODO: off-shoulder bikini
 } as const satisfies Record<string, OutfitDefine>;
 
 /**

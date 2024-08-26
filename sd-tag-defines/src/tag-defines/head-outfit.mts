@@ -73,6 +73,7 @@ export const allHeadOutfitTags = [
   `bridal veil`,
   `butterfly hair ornament`,
   `cabbie hat`,
+  `cat ears`,
   `cat hair ornament`,
   `character hair ornament`,
   `clover hair ornament`,
