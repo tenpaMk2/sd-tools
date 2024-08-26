@@ -12,7 +12,7 @@ const cameraAngle = {
         `outdoors`,
         `beach`,
         [
-          { entries: [`blue sky`], probability: 4 },
+          { entries: [`blue sky`, `sunlight`, `sunbeam`], probability: 4 },
           { entries: [`sunset`, `orange sky`] },
         ],
       ],
@@ -22,7 +22,7 @@ const cameraAngle = {
         `outdoors`,
         `beach`,
         [
-          { entries: [`blue sky`], probability: 4 },
+          { entries: [`blue sky`, `sunlight`, `sunbeam`], probability: 4 },
           { entries: [`sunset`, `orange sky`] },
         ],
       ],
@@ -36,7 +36,7 @@ const cameraAngle = {
         `beach`,
         `palm tree`,
         [
-          { entries: [`blue sky`], probability: 4 },
+          { entries: [`blue sky`, `sunlight`, `sunbeam`], probability: 4 },
           { entries: [`sunset`, `orange sky`] },
         ],
       ],
@@ -47,7 +47,7 @@ const cameraAngle = {
         `beach`,
         `palm tree`,
         [
-          { entries: [`blue sky`], probability: 4 },
+          { entries: [`blue sky`, `sunlight`, `sunbeam`], probability: 4 },
           { entries: [`sunset`, `orange sky`] },
         ],
       ],
@@ -61,7 +61,7 @@ const cameraAngle = {
         `beach`,
         `palm tree`,
         [
-          { entries: [`blue sky`], probability: 4 },
+          { entries: [`blue sky`, `sunlight`, `sunbeam`], probability: 4 },
           { entries: [`sunset`, `orange sky`] },
         ],
       ],
@@ -73,7 +73,7 @@ const cameraAngle = {
         `palm tree`,
         `on ground`,
         [
-          { entries: [`blue sky`], probability: 4 },
+          { entries: [`blue sky`, `sunlight`, `sunbeam`], probability: 4 },
           { entries: [`sunset`, `orange sky`] },
         ],
       ],
