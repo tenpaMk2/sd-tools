@@ -100,3 +100,20 @@ export const pickRandomly = <T extends { probability: number }>(items: T[]) => {
   }
   throw new Error(`Unexpected error: No item was picked.`);
 };
+
+export const fetchWithRetry = async (
+  input: Parameters<typeof fetch>[0],
+  init?: Parameters<typeof fetch>[1],
+) => {
+  let retryCount = 0;
+  do {
+    try {
+      return await fetch(input, init);
+    } catch (error) {
+      console.error(`Failed to fetch: ${error}`);
+      retryCount++;
+    }
+  } while (retryCount < 3);
+
+  throw new Error(`Failed to fetch after 3 retries.`);
+};

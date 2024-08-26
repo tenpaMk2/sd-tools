@@ -1,5 +1,6 @@
 import type { OptionSetting, Setting } from "@tenpamk2/sd-db-generator";
 import type { OptionCollectedData, RootCollectedData } from "./collector.mjs";
+import { fetchWithRetry } from "./libs/utility.mjs";
 import { ProgressBar, log } from "./logger.mjs";
 import {
   Txt2imgGenerator,
@@ -14,12 +15,15 @@ class StatusPoller {
     this.progressBar = new ProgressBar();
 
     this.intervalID = setInterval(async () => {
-      const response = await fetch(`http://${ip}:${port}/sdapi/v1/progress`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetchWithRetry(
+        `http://${ip}:${port}/sdapi/v1/progress`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         },
-      });
+      );
       const json = await response.json();
       this.progressBar.update(json.progress, json.eta_relative);
     }, 10000);
@@ -72,7 +76,7 @@ const postOption = async (
     ...optionsBodyJson,
   };
 
-  await fetch(`http://${ip}:${port}/sdapi/v1/options`, {
+  await fetchWithRetry(`http://${ip}:${port}/sdapi/v1/options`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -106,7 +110,7 @@ const postTxt2img = async (
     ...txt2imgBodyJson,
   };
 
-  await fetch(`http://${ip}:${port}/sdapi/v1/txt2img`, {
+  await fetchWithRetry(`http://${ip}:${port}/sdapi/v1/txt2img`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
